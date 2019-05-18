@@ -16,6 +16,7 @@
     "test": "run-s -c lint"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "browser-sync": "^2.26.5",
     "browser-sync-webpack-plugin": "2.0.1",
     "cross-env": "^5.2.0",
@@ -33,6 +34,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.0",
+    "js-dom-router": "^1.0.0",
     "popper.js": "^1.15.0"
   }
 }
