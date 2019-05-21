@@ -1,4 +1,5 @@
 @import "common/variables";
+@import "skhoop/common/variables";
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -23,3 +24,4 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "skhoop/main";
