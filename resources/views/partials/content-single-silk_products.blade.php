@@ -9,9 +9,13 @@
   </div>
     @php the_content() @endphp
 
-    @foreach($product->images as $image)
-      {!! $image !!}<br/>
-    @endforeach
+    <div>
+      @include('partials.product-images', ['images' => $product->images, 'size' => 'standard', 'limit' => 1] )
+    </div>
+
+    <div>
+      @include('partials.product-images', ['images' => $product->images, 'size' => 'mini', 'limit' => 4] )
+    </div>
 
     {{ $product_information }}
   </div>
