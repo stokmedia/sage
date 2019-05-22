@@ -9,8 +9,7 @@ trait Product
         return get_post_meta( get_the_ID(), 'product_data');
     }
 
-
-    public function product_images( $size='thumb', $args = array() ) {
+    public function product_images( $size = 'thumb', $args = array() ) {
 
     	$product = get_post_meta( get_the_ID(), 'product_data')[0];
 

@@ -6,7 +6,7 @@
   <div class="entry-content">
     @php the_content() @endphp
 
-    @foreach($product_images as $image)
+    @foreach( $product_images as $image)
      {!! $image !!}<br/>
     @endforeach
 
