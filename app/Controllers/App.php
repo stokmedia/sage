@@ -30,4 +30,10 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function renderProductImage( $imageData, $size ) {
+
+        // TODO: Could we use a general function to generate the image tag in the templates for Centra Product Images
+
+    }
 }

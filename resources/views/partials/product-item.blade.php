@@ -1,9 +1,11 @@
-@debug
+<h2>{{ $post->post_title }}</h2>
 
-    {{ TaxonomySilk_category::title() }}
+<div>
+	@include('partials.product-price', ['priceInfo' => $product->price] )
+</div>
 
-    @dump(get_the_ID())
+<div>
 
-    @foreach($product_images as $image)
-     {!! $image !!}<br/>
-    @endforeach
+	@include('partials.product-images', ['images' => $product->images, 'size' => 'thumb'] )
+
+</div>
