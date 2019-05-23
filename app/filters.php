@@ -127,7 +127,7 @@ add_filter( 'pre_get_posts', function ( $query ) {
         $query->set( 'posts_per_page', 5 );
 
         // TODO: Set sorting from filter etc
-        switch ( $_GET[ 'o' ] ) {
+        switch ( !empty($_GET[ 'o' ]) ) {
             case 'price':
                 $query->set( 'meta_key', 'price_sort' );
                 $query->set( 'orderby', 'meta_value_num' );
