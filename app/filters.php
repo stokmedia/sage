@@ -94,7 +94,6 @@ add_filter('comments_template', function ($comments_template) {
  * ACF save json folder
  */
 add_filter( 'acf/settings/save_json', function ( $path ) {
-
     return get_stylesheet_directory() . '/acf-json';
 });
 
@@ -103,7 +102,59 @@ add_filter( 'acf/settings/save_json', function ( $path ) {
  */
 add_filter( 'acf/settings/load_json', function ( $paths ) {
     $paths[] = get_stylesheet_directory() . '/acf-json';
-
     return $paths;
 });
+
+/**
+ * Order Centra Products for Category
+ */
+add_filter( 'pre_get_posts', function ( $query ) {
+
+    $taxonomy = 'silk_category';
+
+    if ( isset( $query->query[ $taxonomy ] ) && $query->is_main_query() ) {
+
+        $term = $query->query[ $taxonomy ];
+
+        // Category sort from Centra
+        if( !empty( $term ) ) {
+            $query->set( 'meta_key', 'category_order_' . $term );
+            $query->set( 'orderby', 'meta_value_num' );
+            $query->set( 'order', 'asc' );
+        }
+
+        // TODO: Set this from Site Wide setting
+        $query->set( 'posts_per_page', 5 );
+
+        // TODO: Set sorting from filter etc
+        switch ( $_GET[ 'o' ] ) {
+            case 'price':
+                $query->set( 'meta_key', 'price_sort' );
+                $query->set( 'orderby', 'meta_value_num' );
+                $query->set( 'order', 'asc' );
+                break;
+            case 'alpha':
+                $query->set( 'orderby', 'title' );
+                $query->set( 'order', 'asc' );
+                break;
+            case 'pop':
+                $query->set( 'meta_key', 'sort_in_' . $query->query[ 'product-categories' ] );
+                $query->set( 'orderby', 'meta_value_num' );
+                $query->set( 'order', 'asc' );
+                break;
+        }
+
+        // TODO: Set sorting from filter etc
+        /*
+        $tax_query = apply_filters( 'esc_product_listing_filter', $_GET );
+        $query->tax_query->queries[ ] = $tax_query;
+        $query->set( 'tax_query', $query->tax_query->queries );
+        */
+ 
+    }
+
+});
+
+
+
 
