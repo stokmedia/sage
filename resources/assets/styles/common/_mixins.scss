@@ -66,9 +66,9 @@
   margin-right: auto;
 }
 
-//mixins for font calculation font-size: @include calcRem(14px)
+//mixins for font calculation
 @mixin calcRem($size) {
-  $finalSize: ($size / 16px) * 1rem;
+  font-size: ($size / 16px) * 1rem;
 }
 
 @mixin background-gradient($start-color, $end-color, $orientation) {
@@ -87,5 +87,111 @@
   @else {
     background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
     background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+
+// fullscreen cover
+@mixin cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+//box-shadow
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $spread $color;
+    -moz-box-shadow: inset $top $left $blur $spread $color;
+    box-shadow: inset $top $left $blur $spread $color;
+  }
+
+  @else {
+    -webkit-box-shadow: $top $left $spread $blur $color;
+    -moz-box-shadow: $top $left $spread $blur $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
+}
+
+// border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// transition
+@mixin transition($param) {
+  -webkit-transition: #{$param};
+  -moz-transition: #{$param};
+  -o-transition: #{$param};
+  transition: #{$param};
+}
+
+//transform
+@mixin transform($attr) {
+  -ms-transform: $attr; // IE 9
+  -webkit-transform: $attr; // Chrome, Safari, Opera
+  transform: $attr;
+}
+
+// Filter
+@mixin filter($attr) {
+  filter: $attr;
+  -webkit-filter: $attr;
+  -moz-filter: $attr;
+  -o-filter: $attr;
+  -ms-filter: $attr;
+}
+
+// Animation
+@mixin animation($attr) {
+  -webkit-animation: $attr;
+  -moz-animation: $attr;
+  -o-animation: $attr;
+  animation: $attr;
+}
+
+//Keyframe
+@mixin keyframes($name) {
+  @-webkit-keyframes $name {
+    @content;
+  }
+
+  @-moz-keyframes $name {
+    @content;
+  }
+
+  @-o-keyframes $name {
+    @content;
+  }
+
+  @keyframes $name {
+    @content;
+  }
+}
+
+/***************************************************************
+* Media Queries
+***************************************************************/
+@mixin media-min($min) {
+  @media screen and (min-width: #{ $min }) {
+    @content;
+  }
+}
+
+// parameter example: $screen-xs-min, $screen-xs-max
+@mixin media-between($min, $max) {
+  @media screen and (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}
+
+// parameter example: $screen-xs
+@mixin media-max($max) {
+  @media screen and (max-width: #{$max}) {
+    @content;
   }
 }
