@@ -1,6 +1,6 @@
 // Mixins
 
-@mixin aspect-ratio-viewport($height, $width){
+@mixin aspect-ratio-viewport($height, $width) {
   position: relative;
   overflow: hidden;
   width: 100vw;
@@ -9,7 +9,7 @@
   > img,
   > video,
   > figure,
-  > iframe{
+  > iframe {
     position: absolute;
     top: 0;
     left: -9999px;
@@ -20,7 +20,6 @@
     height: 100%;
     width: 100%;
     margin: auto; //center left, right
-
     object-fit: cover; //act like background-size: cover if supported
   }
 }
