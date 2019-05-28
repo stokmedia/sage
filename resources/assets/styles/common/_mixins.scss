@@ -1,6 +1,5 @@
 // Mixins
-
-@mixin aspect-ratio-viewport($height, $width){
+@mixin aspect-ratio-viewport($height, $width) {
   position: relative;
   overflow: hidden;
   width: 100vw;
@@ -9,7 +8,7 @@
   > img,
   > video,
   > figure,
-  > iframe{
+  > iframe {
     position: absolute;
     top: 0;
     left: -9999px;
@@ -20,7 +19,73 @@
     height: 100%;
     width: 100%;
     margin: auto; //center left, right
-
     object-fit: cover; //act like background-size: cover if supported
+  }
+}
+
+// Define vertical, horizontal, or both position
+@mixin center($position) {
+  position: absolute;
+
+  @if $position=="vertical" {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+
+  @else if $position=="horizontal" {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+
+  @else if $position=="both" {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+//add ellipsis
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//mixins for font calculation font-size: @include calcRem(14px)
+@mixin calcRem($size) {
+  $finalSize: ($size / 16px) * 1rem;
+}
+
+@mixin background-gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+
+  @if $orientation=="vertical" {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  }
+
+  @else if $orientation=="horizontal" {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  }
+
+  @else {
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
   }
 }
