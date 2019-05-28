@@ -173,6 +173,36 @@
   }
 }
 
+/* box shadow */
+@mixin box-shadow ($bs) {
+  -webkit-box-shadow: $bs;
+  -moz-box-shadow: $bs;
+  box-shadow: $bs;
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin user-select ( $us ) {
+  -webkit-user-select: $us;
+  -moz-user-select: $us;
+  -ms-user-select: $us;
+}
+
+@mixin box-sizing ( $bs ) {
+  -webkit-box-sizing: $bs;
+  -moz-box-sizing: $bs;
+  box-sizing: $bs;
+}
+
+@mixin appearance ( $ap ) {
+  -webkit-appearance: $ap;
+  -moz-appearance: $ap;
+  appearance: $ap;
+}
+
 /***************************************************************
 * Media Queries
 ***************************************************************/
