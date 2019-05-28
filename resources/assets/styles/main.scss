@@ -13,6 +13,7 @@
 // @import "~some-node-module";
 
 /** Import theme styles */
+@import "common/mixins";
 @import "common/global";
 @import "components/buttons";
 @import "components/comments";
