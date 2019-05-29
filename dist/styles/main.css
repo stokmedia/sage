@@ -8,13 +8,6 @@
 
 /** Import everything from autoload */
 
-/*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
 /* line 1, node_modules/bootstrap/scss/_root.scss */
 
 :root {
@@ -700,8 +693,6 @@ mark,
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   max-width: 100%;
   height: auto;
 }
@@ -727,65 +718,6 @@ mark,
 .wp-caption-text {
   font-size: 90%;
   color: #6c757d;
-}
-
-/* line 2, node_modules/bootstrap/scss/_code.scss */
-
-code {
-  font-size: 87.5%;
-  color: #e83e8c;
-  word-break: break-word;
-}
-
-/* line 8, node_modules/bootstrap/scss/_code.scss */
-
-a > code {
-  color: inherit;
-}
-
-/* line 14, node_modules/bootstrap/scss/_code.scss */
-
-kbd {
-  padding: 0.2rem 0.4rem;
-  font-size: 87.5%;
-  color: #fff;
-  background-color: #212529;
-  border-radius: 0.2rem;
-  -webkit-box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.25);
-          box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.25);
-}
-
-/* line 22, node_modules/bootstrap/scss/_code.scss */
-
-kbd kbd {
-  padding: 0;
-  font-size: 100%;
-  font-weight: 700;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-/* line 31, node_modules/bootstrap/scss/_code.scss */
-
-pre {
-  display: block;
-  font-size: 87.5%;
-  color: #212529;
-}
-
-/* line 37, node_modules/bootstrap/scss/_code.scss */
-
-pre code {
-  font-size: inherit;
-  color: inherit;
-  word-break: normal;
-}
-
-/* line 45, node_modules/bootstrap/scss/_code.scss */
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll;
 }
 
 /* line 6, node_modules/bootstrap/scss/_grid.scss */
@@ -3769,8 +3701,6 @@ pre code {
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3817,8 +3747,8 @@ pre code {
   background-color: #fff;
   border-color: #efa2a9;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 /* line 37, node_modules/bootstrap/scss/_forms.scss */
@@ -4796,32 +4726,6 @@ textarea.form-control.is-invalid,
 .comment-form input:disabled[type="submit"],
 .search-form .search-submit:disabled {
   opacity: 0.65;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-/* line 38, node_modules/bootstrap/scss/_buttons.scss */
-
-.btn:not(:disabled):not(.disabled):active,
-.comment-form input:not(:disabled):not(.disabled):active[type="submit"],
-.search-form .search-submit:not(:disabled):not(.disabled):active,
-.btn:not(:disabled):not(.disabled).active,
-.comment-form input:not(:disabled):not(.disabled).active[type="submit"],
-.search-form .search-submit:not(:disabled):not(.disabled).active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-/* line 42, node_modules/bootstrap/scss/_buttons.scss */
-
-.btn:not(:disabled):not(.disabled):active:focus,
-.comment-form input:not(:disabled):not(.disabled):active:focus[type="submit"],
-.search-form .search-submit:not(:disabled):not(.disabled):active:focus,
-.btn:not(:disabled):not(.disabled).active:focus,
-.comment-form input:not(:disabled):not(.disabled).active:focus[type="submit"],
-.search-form .search-submit:not(:disabled):not(.disabled).active:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
-          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
 /* line 49, node_modules/bootstrap/scss/_buttons.scss */
@@ -4840,8 +4744,6 @@ fieldset:disabled .search-form a.search-submit,
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -4856,8 +4758,8 @@ fieldset:disabled .search-form a.search-submit,
 
 .btn-primary:focus,
 .btn-primary.focus {
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
 }
 
 /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -4884,8 +4786,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
 }
 
 /* line 60, node_modules/bootstrap/scss/_buttons.scss */
@@ -4896,8 +4798,6 @@ fieldset:disabled .search-form a.search-submit,
   color: #fff;
   background-color: #e83e8c;
   border-color: #e83e8c;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -4918,8 +4818,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-secondary.focus,
 .comment-form input.focus[type="submit"],
 .search-form .focus.search-submit {
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(235, 91, 157, 0.5);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(235, 91, 157, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(235, 91, 157, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(235, 91, 157, 0.5);
 }
 
 /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -4962,8 +4862,8 @@ fieldset:disabled .search-form a.search-submit,
 .show > .btn-secondary.dropdown-toggle:focus,
 .comment-form .show > input.dropdown-toggle:focus[type="submit"],
 .search-form .show > .dropdown-toggle.search-submit:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(235, 91, 157, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(235, 91, 157, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(235, 91, 157, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(235, 91, 157, 0.5);
 }
 
 /* line 60, node_modules/bootstrap/scss/_buttons.scss */
@@ -4972,8 +4872,6 @@ fieldset:disabled .search-form a.search-submit,
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -4988,8 +4886,8 @@ fieldset:disabled .search-form a.search-submit,
 
 .btn-success:focus,
 .btn-success.focus {
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
 
 /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -5016,8 +4914,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-success:not(:disabled):not(.disabled):active:focus,
 .btn-success:not(:disabled):not(.disabled).active:focus,
 .show > .btn-success.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
 
 /* line 60, node_modules/bootstrap/scss/_buttons.scss */
@@ -5026,8 +4924,6 @@ fieldset:disabled .search-form a.search-submit,
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -5042,8 +4938,8 @@ fieldset:disabled .search-form a.search-submit,
 
 .btn-info:focus,
 .btn-info.focus {
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
 }
 
 /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -5070,8 +4966,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-info:not(:disabled):not(.disabled):active:focus,
 .btn-info:not(:disabled):not(.disabled).active:focus,
 .show > .btn-info.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
 }
 
 /* line 60, node_modules/bootstrap/scss/_buttons.scss */
@@ -5080,8 +4976,6 @@ fieldset:disabled .search-form a.search-submit,
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -5096,8 +4990,8 @@ fieldset:disabled .search-form a.search-submit,
 
 .btn-warning:focus,
 .btn-warning.focus {
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
 }
 
 /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -5124,8 +5018,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-warning:not(:disabled):not(.disabled):active:focus,
 .btn-warning:not(:disabled):not(.disabled).active:focus,
 .show > .btn-warning.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
 }
 
 /* line 60, node_modules/bootstrap/scss/_buttons.scss */
@@ -5134,8 +5028,6 @@ fieldset:disabled .search-form a.search-submit,
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -5150,8 +5042,8 @@ fieldset:disabled .search-form a.search-submit,
 
 .btn-danger:focus,
 .btn-danger.focus {
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
 }
 
 /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -5178,8 +5070,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-danger:not(:disabled):not(.disabled):active:focus,
 .btn-danger:not(:disabled):not(.disabled).active:focus,
 .show > .btn-danger.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
 }
 
 /* line 60, node_modules/bootstrap/scss/_buttons.scss */
@@ -5188,8 +5080,6 @@ fieldset:disabled .search-form a.search-submit,
   color: #212529;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -5204,8 +5094,8 @@ fieldset:disabled .search-form a.search-submit,
 
 .btn-light:focus,
 .btn-light.focus {
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
 }
 
 /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -5232,8 +5122,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-light:not(:disabled):not(.disabled):active:focus,
 .btn-light:not(:disabled):not(.disabled).active:focus,
 .show > .btn-light.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
 }
 
 /* line 60, node_modules/bootstrap/scss/_buttons.scss */
@@ -5242,8 +5132,6 @@ fieldset:disabled .search-form a.search-submit,
   color: #fff;
   background-color: #343a40;
   border-color: #343a40;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -5258,8 +5146,8 @@ fieldset:disabled .search-form a.search-submit,
 
 .btn-dark:focus,
 .btn-dark.focus {
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 
 /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -5286,8 +5174,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-dark:not(:disabled):not(.disabled):active:focus,
 .btn-dark:not(:disabled):not(.disabled).active:focus,
 .show > .btn-dark.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -5336,8 +5224,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-primary.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -5386,8 +5274,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
 .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-secondary.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(232, 62, 140, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(232, 62, 140, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(232, 62, 140, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(232, 62, 140, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -5436,8 +5324,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-success:not(:disabled):not(.disabled):active:focus,
 .btn-outline-success:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-success.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -5486,8 +5374,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-info:not(:disabled):not(.disabled):active:focus,
 .btn-outline-info:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-info.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -5536,8 +5424,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-warning:not(:disabled):not(.disabled):active:focus,
 .btn-outline-warning:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-warning.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -5586,8 +5474,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-danger:not(:disabled):not(.disabled):active:focus,
 .btn-outline-danger:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-danger.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -5636,8 +5524,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-light:not(:disabled):not(.disabled):active:focus,
 .btn-outline-light:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-light.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -5686,8 +5574,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-dark:not(:disabled):not(.disabled):active:focus,
 .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-dark.dropdown-toggle:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
 }
 
 /* line 77, node_modules/bootstrap/scss/_buttons.scss */
@@ -5724,10 +5612,7 @@ fieldset:disabled .search-form a.search-submit,
 
 /* line 107, node_modules/bootstrap/scss/_buttons.scss */
 
-.btn-lg,
-.btn-group-lg > .btn,
-.comment-form .btn-group-lg > input[type="submit"],
-.search-form .btn-group-lg > .search-submit {
+.btn-lg {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -5736,10 +5621,7 @@ fieldset:disabled .search-form a.search-submit,
 
 /* line 111, node_modules/bootstrap/scss/_buttons.scss */
 
-.btn-sm,
-.btn-group-sm > .btn,
-.comment-form .btn-group-sm > input[type="submit"],
-.search-form .btn-group-sm > .search-submit {
+.btn-sm {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -5872,8 +5754,6 @@ input[type="button"].btn-block {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
 }
 
 /* line 42, node_modules/bootstrap/scss/_dropdown.scss */
@@ -6182,259 +6062,6 @@ input[type="button"].btn-block {
   display: block;
   padding: 0.25rem 1.5rem;
   color: #212529;
-}
-
-/* line 4, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group,
-.btn-group-vertical {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  vertical-align: middle;
-}
-
-/* line 10, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group > .btn,
-.comment-form .btn-group > input[type="submit"],
-.search-form .btn-group > .search-submit,
-.btn-group-vertical > .btn,
-.comment-form .btn-group-vertical > input[type="submit"],
-.search-form .btn-group-vertical > .search-submit {
-  position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-.btn-group > .btn:hover,
-.comment-form .btn-group > input:hover[type="submit"],
-.search-form .btn-group > .search-submit:hover,
-.btn-group-vertical > .btn:hover,
-.comment-form .btn-group-vertical > input:hover[type="submit"],
-.search-form .btn-group-vertical > .search-submit:hover {
-  z-index: 1;
-}
-
-/* line 19, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group > .btn:focus,
-.comment-form .btn-group > input:focus[type="submit"],
-.search-form .btn-group > .search-submit:focus,
-.btn-group > .btn:active,
-.comment-form .btn-group > input:active[type="submit"],
-.search-form .btn-group > .search-submit:active,
-.btn-group > .btn.active,
-.comment-form .btn-group > input.active[type="submit"],
-.search-form .btn-group > .active.search-submit,
-.btn-group-vertical > .btn:focus,
-.comment-form .btn-group-vertical > input:focus[type="submit"],
-.search-form .btn-group-vertical > .search-submit:focus,
-.btn-group-vertical > .btn:active,
-.comment-form .btn-group-vertical > input:active[type="submit"],
-.search-form .btn-group-vertical > .search-submit:active,
-.btn-group-vertical > .btn.active,
-.comment-form .btn-group-vertical > input.active[type="submit"],
-.search-form .btn-group-vertical > .active.search-submit {
-  z-index: 1;
-}
-
-/* line 28, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-toolbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-/* line 33, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-toolbar .input-group {
-  width: auto;
-}
-
-/* line 40, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group > .btn:not(:first-child),
-.comment-form .btn-group > input:not(:first-child)[type="submit"],
-.search-form .btn-group > .search-submit:not(:first-child),
-.btn-group > .btn-group:not(:first-child) {
-  margin-left: -1px;
-}
-
-/* line 46, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.comment-form .btn-group > input:not(:last-child):not(.dropdown-toggle)[type="submit"],
-.search-form .btn-group > .search-submit:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn,
-.comment-form .btn-group > .btn-group:not(:last-child) > input[type="submit"],
-.search-form .btn-group > .btn-group:not(:last-child) > .search-submit {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-/* line 51, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group > .btn:not(:first-child),
-.comment-form .btn-group > input:not(:first-child)[type="submit"],
-.search-form .btn-group > .search-submit:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn,
-.comment-form .btn-group > .btn-group:not(:first-child) > input[type="submit"],
-.search-form .btn-group > .btn-group:not(:first-child) > .search-submit {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-/* line 69, node_modules/bootstrap/scss/_button-group.scss */
-
-.dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
-}
-
-/* line 73, node_modules/bootstrap/scss/_button-group.scss */
-
-.dropdown-toggle-split::after,
-.dropup .dropdown-toggle-split::after,
-.dropright .dropdown-toggle-split::after {
-  margin-left: 0;
-}
-
-/* line 79, node_modules/bootstrap/scss/_button-group.scss */
-
-.dropleft .dropdown-toggle-split::before {
-  margin-right: 0;
-}
-
-/* line 84, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-sm + .dropdown-toggle-split,
-.btn-group-sm > .btn + .dropdown-toggle-split,
-.comment-form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split,
-.search-form .btn-group-sm > .search-submit + .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
-}
-
-/* line 89, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-lg + .dropdown-toggle-split,
-.btn-group-lg > .btn + .dropdown-toggle-split,
-.comment-form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split,
-.search-form .btn-group-lg > .search-submit + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
-}
-
-/* line 97, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group.show .dropdown-toggle {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-/* line 101, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group.show .dropdown-toggle.btn-link {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-/* line 111, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group-vertical {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-/* line 116, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group-vertical > .btn,
-.comment-form .btn-group-vertical > input[type="submit"],
-.search-form .btn-group-vertical > .search-submit,
-.btn-group-vertical > .btn-group {
-  width: 100%;
-}
-
-/* line 121, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group-vertical > .btn:not(:first-child),
-.comment-form .btn-group-vertical > input:not(:first-child)[type="submit"],
-.search-form .btn-group-vertical > .search-submit:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) {
-  margin-top: -1px;
-}
-
-/* line 127, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.comment-form .btn-group-vertical > input:not(:last-child):not(.dropdown-toggle)[type="submit"],
-.search-form .btn-group-vertical > .search-submit:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn,
-.comment-form .btn-group-vertical > .btn-group:not(:last-child) > input[type="submit"],
-.search-form .btn-group-vertical > .btn-group:not(:last-child) > .search-submit {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-/* line 132, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group-vertical > .btn:not(:first-child),
-.comment-form .btn-group-vertical > input:not(:first-child)[type="submit"],
-.search-form .btn-group-vertical > .search-submit:not(:first-child),
-.btn-group-vertical > .btn-group:not(:first-child) > .btn,
-.comment-form .btn-group-vertical > .btn-group:not(:first-child) > input[type="submit"],
-.search-form .btn-group-vertical > .btn-group:not(:first-child) > .search-submit {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-/* line 152, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group-toggle > .btn,
-.comment-form .btn-group-toggle > input[type="submit"],
-.search-form .btn-group-toggle > .search-submit,
-.btn-group-toggle > .btn-group > .btn,
-.comment-form .btn-group-toggle > .btn-group > input[type="submit"],
-.search-form .btn-group-toggle > .btn-group > .search-submit {
-  margin-bottom: 0;
-}
-
-/* line 156, node_modules/bootstrap/scss/_button-group.scss */
-
-.btn-group-toggle > .btn input[type="radio"],
-.comment-form .btn-group-toggle > input[type="submit"] input[type="radio"],
-.search-form .btn-group-toggle > .search-submit input[type="radio"],
-.btn-group-toggle > .btn input[type="checkbox"],
-.comment-form .btn-group-toggle > input[type="submit"] input[type="checkbox"],
-.search-form .btn-group-toggle > .search-submit input[type="checkbox"],
-.btn-group-toggle > .btn-group > .btn input[type="radio"],
-.comment-form .btn-group-toggle > .btn-group > input[type="submit"] input[type="radio"],
-.search-form .btn-group-toggle > .btn-group > .search-submit input[type="radio"],
-.btn-group-toggle > .btn-group > .btn input[type="checkbox"],
-.comment-form .btn-group-toggle > .btn-group > input[type="submit"] input[type="checkbox"],
-.search-form .btn-group-toggle > .btn-group > .search-submit input[type="checkbox"] {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  pointer-events: none;
 }
 
 /* line 7, node_modules/bootstrap/scss/_input-group.scss */
@@ -6922,15 +6549,13 @@ input[type="button"].btn-block {
   color: #fff;
   border-color: #dc3545;
   background-color: #dc3545;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 /* line 34, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-control-input:focus ~ .custom-control-label::before {
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 /* line 43, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6945,8 +6570,6 @@ input[type="button"].btn-block {
   color: #fff;
   background-color: #f6cdd1;
   border-color: #f6cdd1;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 /* line 55, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6982,8 +6605,6 @@ input[type="button"].btn-block {
   content: "";
   background-color: #fff;
   border: #adb5bd solid 1px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 90, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -7016,8 +6637,6 @@ input[type="button"].btn-block {
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
   border-color: #dc3545;
   background-color: #dc3545;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 /* line 124, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -7128,8 +6747,6 @@ input[type="button"].btn-block {
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -7140,8 +6757,8 @@ input[type="button"].btn-block {
 .custom-select:focus {
   border-color: #efa2a9;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 /* line 239, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -7256,8 +6873,6 @@ input[type="button"].btn-block {
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 /* line 342, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -7331,8 +6946,6 @@ input[type="button"].btn-block {
   background-color: #dc3545;
   border: 0;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -7368,8 +6981,6 @@ input[type="button"].btn-block {
   background-color: #dee2e6;
   border-color: transparent;
   border-radius: 1rem;
-  -webkit-box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 /* line 414, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -7380,7 +6991,6 @@ input[type="button"].btn-block {
   background-color: #dc3545;
   border: 0;
   border-radius: 1rem;
-  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -7416,7 +7026,6 @@ input[type="button"].btn-block {
   background-color: #dee2e6;
   border-color: transparent;
   border-radius: 1rem;
-  box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 /* line 440, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -7430,7 +7039,6 @@ input[type="button"].btn-block {
   background-color: #dc3545;
   border: 0;
   border-radius: 1rem;
-  box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -7465,7 +7073,6 @@ input[type="button"].btn-block {
   background-color: transparent;
   border-color: transparent;
   border-width: 0.5rem;
-  box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 /* line 469, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -8931,403 +8538,6 @@ input[type="button"].btn-block {
   color: #6c757d;
 }
 
-/* line 1, node_modules/bootstrap/scss/_pagination.scss */
-
-.pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 0;
-  list-style: none;
-  border-radius: 0.25rem;
-}
-
-/* line 7, node_modules/bootstrap/scss/_pagination.scss */
-
-.page-link {
-  position: relative;
-  display: block;
-  padding: 0.5rem 0.75rem;
-  margin-left: -1px;
-  line-height: 1.25;
-  color: #dc3545;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-}
-
-/* line 17, node_modules/bootstrap/scss/_pagination.scss */
-
-.page-link:hover {
-  z-index: 2;
-  color: #a71d2a;
-  text-decoration: none;
-  background-color: #e9ecef;
-  border-color: #dee2e6;
-}
-
-/* line 25, node_modules/bootstrap/scss/_pagination.scss */
-
-.page-link:focus {
-  z-index: 2;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-}
-
-/* line 34, node_modules/bootstrap/scss/_pagination.scss */
-
-.page-item:first-child .page-link {
-  margin-left: 0;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-
-/* line 40, node_modules/bootstrap/scss/_pagination.scss */
-
-.page-item:last-child .page-link {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-
-/* line 45, node_modules/bootstrap/scss/_pagination.scss */
-
-.page-item.active .page-link {
-  z-index: 1;
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
-}
-
-/* line 52, node_modules/bootstrap/scss/_pagination.scss */
-
-.page-item.disabled .page-link {
-  color: #6c757d;
-  pointer-events: none;
-  cursor: auto;
-  background-color: #fff;
-  border-color: #dee2e6;
-}
-
-/* line 4, node_modules/bootstrap/scss/mixins/_pagination.scss */
-
-.pagination-lg .page-link {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-/* line 12, node_modules/bootstrap/scss/mixins/_pagination.scss */
-
-.pagination-lg .page-item:first-child .page-link {
-  border-top-left-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_pagination.scss */
-
-.pagination-lg .page-item:last-child .page-link {
-  border-top-right-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
-}
-
-/* line 4, node_modules/bootstrap/scss/mixins/_pagination.scss */
-
-.pagination-sm .page-link {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
-/* line 12, node_modules/bootstrap/scss/mixins/_pagination.scss */
-
-.pagination-sm .page-item:first-child .page-link {
-  border-top-left-radius: 0.2rem;
-  border-bottom-left-radius: 0.2rem;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_pagination.scss */
-
-.pagination-sm .page-item:last-child .page-link {
-  border-top-right-radius: 0.2rem;
-  border-bottom-right-radius: 0.2rem;
-}
-
-/* line 6, node_modules/bootstrap/scss/_badge.scss */
-
-.badge {
-  display: inline-block;
-  padding: 0.25em 0.4em;
-  font-size: 75%;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25rem;
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  /* line 6, node_modules/bootstrap/scss/_badge.scss */
-
-  .badge {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-a.badge:hover,
-a.badge:focus {
-  text-decoration: none;
-}
-
-/* line 25, node_modules/bootstrap/scss/_badge.scss */
-
-.badge:empty {
-  display: none;
-}
-
-/* line 31, node_modules/bootstrap/scss/_badge.scss */
-
-.btn .badge,
-.comment-form input[type="submit"] .badge,
-.search-form .search-submit .badge {
-  position: relative;
-  top: -1px;
-}
-
-/* line 40, node_modules/bootstrap/scss/_badge.scss */
-
-.badge-pill {
-  padding-right: 0.6em;
-  padding-left: 0.6em;
-  border-radius: 10rem;
-}
-
-/* line 51, node_modules/bootstrap/scss/_badge.scss */
-
-.badge-primary {
-  color: #fff;
-  background-color: #dc3545;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-a.badge-primary:hover,
-a.badge-primary:focus {
-  color: #fff;
-  background-color: #bd2130;
-}
-
-/* line 11, node_modules/bootstrap/scss/mixins/_badge.scss */
-
-a.badge-primary:focus,
-a.badge-primary.focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
-}
-
-/* line 51, node_modules/bootstrap/scss/_badge.scss */
-
-.badge-secondary {
-  color: #fff;
-  background-color: #e83e8c;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-a.badge-secondary:hover,
-a.badge-secondary:focus {
-  color: #fff;
-  background-color: #d91a72;
-}
-
-/* line 11, node_modules/bootstrap/scss/mixins/_badge.scss */
-
-a.badge-secondary:focus,
-a.badge-secondary.focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(232, 62, 140, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(232, 62, 140, 0.5);
-}
-
-/* line 51, node_modules/bootstrap/scss/_badge.scss */
-
-.badge-success {
-  color: #fff;
-  background-color: #28a745;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-a.badge-success:hover,
-a.badge-success:focus {
-  color: #fff;
-  background-color: #1e7e34;
-}
-
-/* line 11, node_modules/bootstrap/scss/mixins/_badge.scss */
-
-a.badge-success:focus,
-a.badge-success.focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
-}
-
-/* line 51, node_modules/bootstrap/scss/_badge.scss */
-
-.badge-info {
-  color: #fff;
-  background-color: #17a2b8;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-a.badge-info:hover,
-a.badge-info:focus {
-  color: #fff;
-  background-color: #117a8b;
-}
-
-/* line 11, node_modules/bootstrap/scss/mixins/_badge.scss */
-
-a.badge-info:focus,
-a.badge-info.focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
-}
-
-/* line 51, node_modules/bootstrap/scss/_badge.scss */
-
-.badge-warning {
-  color: #212529;
-  background-color: #ffc107;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-a.badge-warning:hover,
-a.badge-warning:focus {
-  color: #212529;
-  background-color: #d39e00;
-}
-
-/* line 11, node_modules/bootstrap/scss/mixins/_badge.scss */
-
-a.badge-warning:focus,
-a.badge-warning.focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
-}
-
-/* line 51, node_modules/bootstrap/scss/_badge.scss */
-
-.badge-danger {
-  color: #fff;
-  background-color: #dc3545;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-a.badge-danger:hover,
-a.badge-danger:focus {
-  color: #fff;
-  background-color: #bd2130;
-}
-
-/* line 11, node_modules/bootstrap/scss/mixins/_badge.scss */
-
-a.badge-danger:focus,
-a.badge-danger.focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
-}
-
-/* line 51, node_modules/bootstrap/scss/_badge.scss */
-
-.badge-light {
-  color: #212529;
-  background-color: #f8f9fa;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-a.badge-light:hover,
-a.badge-light:focus {
-  color: #212529;
-  background-color: #dae0e5;
-}
-
-/* line 11, node_modules/bootstrap/scss/mixins/_badge.scss */
-
-a.badge-light:focus,
-a.badge-light.focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-}
-
-/* line 51, node_modules/bootstrap/scss/_badge.scss */
-
-.badge-dark {
-  color: #fff;
-  background-color: #343a40;
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-a.badge-dark:hover,
-a.badge-dark:focus {
-  color: #fff;
-  background-color: #1d2124;
-}
-
-/* line 11, node_modules/bootstrap/scss/mixins/_badge.scss */
-
-a.badge-dark:focus,
-a.badge-dark.focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-}
-
-/* line 1, node_modules/bootstrap/scss/_jumbotron.scss */
-
-.jumbotron {
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  background-color: #e9ecef;
-  border-radius: 0.3rem;
-}
-
-@media (min-width: 576px) {
-  /* line 1, node_modules/bootstrap/scss/_jumbotron.scss */
-
-  .jumbotron {
-    padding: 4rem 2rem;
-  }
-}
-
-/* line 13, node_modules/bootstrap/scss/_jumbotron.scss */
-
-.jumbotron-fluid {
-  padding-right: 0;
-  padding-left: 0;
-  border-radius: 0;
-}
-
 /* line 5, node_modules/bootstrap/scss/_alert.scss */
 
 .alert {
@@ -9524,129 +8734,6 @@ a.badge-dark.focus {
 
 .alert-dark .alert-link {
   color: #040505;
-}
-
-@-webkit-keyframes progress-bar-stripes {
-  from {
-    background-position: 1rem 0;
-  }
-
-  to {
-    background-position: 0 0;
-  }
-}
-
-@-o-keyframes progress-bar-stripes {
-  from {
-    background-position: 1rem 0;
-  }
-
-  to {
-    background-position: 0 0;
-  }
-}
-
-@keyframes progress-bar-stripes {
-  from {
-    background-position: 1rem 0;
-  }
-
-  to {
-    background-position: 0 0;
-  }
-}
-
-/* line 9, node_modules/bootstrap/scss/_progress.scss */
-
-.progress {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 1rem;
-  overflow: hidden;
-  font-size: 0.75rem;
-  background-color: #e9ecef;
-  border-radius: 0.25rem;
-  -webkit-box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
-}
-
-/* line 19, node_modules/bootstrap/scss/_progress.scss */
-
-.progress-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  background-color: #dc3545;
-  -webkit-transition: width 0.6s ease;
-  -o-transition: width 0.6s ease;
-  transition: width 0.6s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  /* line 19, node_modules/bootstrap/scss/_progress.scss */
-
-  .progress-bar {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-}
-
-/* line 30, node_modules/bootstrap/scss/_progress.scss */
-
-.progress-bar-striped {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-size: 1rem 1rem;
-}
-
-/* line 36, node_modules/bootstrap/scss/_progress.scss */
-
-.progress-bar-animated {
-  -webkit-animation: progress-bar-stripes 1s linear infinite;
-       -o-animation: progress-bar-stripes 1s linear infinite;
-          animation: progress-bar-stripes 1s linear infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  /* line 36, node_modules/bootstrap/scss/_progress.scss */
-
-  .progress-bar-animated {
-    -webkit-animation: none;
-         -o-animation: none;
-            animation: none;
-  }
-}
-
-/* line 1, node_modules/bootstrap/scss/_media.scss */
-
-.media {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-/* line 6, node_modules/bootstrap/scss/_media.scss */
-
-.media-body {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 /* line 5, node_modules/bootstrap/scss/_list-group.scss */
@@ -10229,70 +9316,6 @@ a.close.disabled {
   pointer-events: none;
 }
 
-/* line 1, node_modules/bootstrap/scss/_toasts.scss */
-
-.toast {
-  max-width: 350px;
-  overflow: hidden;
-  font-size: 0.875rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  opacity: 0;
-  border-radius: 0.25rem;
-}
-
-/* line 14, node_modules/bootstrap/scss/_toasts.scss */
-
-.toast:not(:last-child) {
-  margin-bottom: 0.75rem;
-}
-
-/* line 18, node_modules/bootstrap/scss/_toasts.scss */
-
-.toast.showing {
-  opacity: 1;
-}
-
-/* line 22, node_modules/bootstrap/scss/_toasts.scss */
-
-.toast.show {
-  display: block;
-  opacity: 1;
-}
-
-/* line 27, node_modules/bootstrap/scss/_toasts.scss */
-
-.toast.hide {
-  display: none;
-}
-
-/* line 32, node_modules/bootstrap/scss/_toasts.scss */
-
-.toast-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0.25rem 0.75rem;
-  color: #6c757d;
-  background-color: rgba(255, 255, 255, 0.85);
-  background-clip: padding-box;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-/* line 42, node_modules/bootstrap/scss/_toasts.scss */
-
-.toast-body {
-  padding: 0.75rem;
-}
-
 /* line 7, node_modules/bootstrap/scss/_modal.scss */
 
 .modal-open {
@@ -10452,8 +9475,6 @@ a.close.disabled {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
-  -webkit-box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
   outline: 0;
 }
 
@@ -10595,13 +9616,6 @@ a.close.disabled {
     height: calc(100vh - 3.5rem);
   }
 
-  /* line 213, node_modules/bootstrap/scss/_modal.scss */
-
-  .modal-content {
-    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-  }
-
   /* line 217, node_modules/bootstrap/scss/_modal.scss */
 
   .modal-sm {
@@ -10624,672 +9638,6 @@ a.close.disabled {
   .modal-xl {
     max-width: 1140px;
   }
-}
-
-/* line 2, node_modules/bootstrap/scss/_tooltip.scss */
-
-.tooltip {
-  position: absolute;
-  z-index: 1070;
-  display: block;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-  text-align: start;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
-  word-break: normal;
-  word-spacing: normal;
-  white-space: normal;
-  line-break: auto;
-  font-size: 0.875rem;
-  word-wrap: break-word;
-  opacity: 0;
-}
-
-/* line 15, node_modules/bootstrap/scss/_tooltip.scss */
-
-.tooltip.show {
-  opacity: 0.9;
-}
-
-/* line 17, node_modules/bootstrap/scss/_tooltip.scss */
-
-.tooltip .arrow {
-  position: absolute;
-  display: block;
-  width: 0.8rem;
-  height: 0.4rem;
-}
-
-/* line 23, node_modules/bootstrap/scss/_tooltip.scss */
-
-.tooltip .arrow::before {
-  position: absolute;
-  content: "";
-  border-color: transparent;
-  border-style: solid;
-}
-
-/* line 32, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-top,
-.bs-tooltip-auto[x-placement^="top"] {
-  padding: 0.4rem 0;
-}
-
-/* line 35, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-top .arrow,
-.bs-tooltip-auto[x-placement^="top"] .arrow {
-  bottom: 0;
-}
-
-/* line 38, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-top .arrow::before,
-.bs-tooltip-auto[x-placement^="top"] .arrow::before {
-  top: 0;
-  border-width: 0.4rem 0.4rem 0;
-  border-top-color: #000;
-}
-
-/* line 46, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-right,
-.bs-tooltip-auto[x-placement^="right"] {
-  padding: 0 0.4rem;
-}
-
-/* line 49, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-right .arrow,
-.bs-tooltip-auto[x-placement^="right"] .arrow {
-  left: 0;
-  width: 0.4rem;
-  height: 0.8rem;
-}
-
-/* line 54, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-right .arrow::before,
-.bs-tooltip-auto[x-placement^="right"] .arrow::before {
-  right: 0;
-  border-width: 0.4rem 0.4rem 0.4rem 0;
-  border-right-color: #000;
-}
-
-/* line 62, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-bottom,
-.bs-tooltip-auto[x-placement^="bottom"] {
-  padding: 0.4rem 0;
-}
-
-/* line 65, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-bottom .arrow,
-.bs-tooltip-auto[x-placement^="bottom"] .arrow {
-  top: 0;
-}
-
-/* line 68, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-bottom .arrow::before,
-.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
-  bottom: 0;
-  border-width: 0 0.4rem 0.4rem;
-  border-bottom-color: #000;
-}
-
-/* line 76, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-left,
-.bs-tooltip-auto[x-placement^="left"] {
-  padding: 0 0.4rem;
-}
-
-/* line 79, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-left .arrow,
-.bs-tooltip-auto[x-placement^="left"] .arrow {
-  right: 0;
-  width: 0.4rem;
-  height: 0.8rem;
-}
-
-/* line 84, node_modules/bootstrap/scss/_tooltip.scss */
-
-.bs-tooltip-left .arrow::before,
-.bs-tooltip-auto[x-placement^="left"] .arrow::before {
-  left: 0;
-  border-width: 0.4rem 0 0.4rem 0.4rem;
-  border-left-color: #000;
-}
-
-/* line 108, node_modules/bootstrap/scss/_tooltip.scss */
-
-.tooltip-inner {
-  max-width: 200px;
-  padding: 0.25rem 0.5rem;
-  color: #fff;
-  text-align: center;
-  background-color: #000;
-  border-radius: 0.25rem;
-}
-
-/* line 1, node_modules/bootstrap/scss/_popover.scss */
-
-.popover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1060;
-  display: block;
-  max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-  text-align: start;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
-  word-break: normal;
-  word-spacing: normal;
-  white-space: normal;
-  line-break: auto;
-  font-size: 0.875rem;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  -webkit-box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-
-/* line 20, node_modules/bootstrap/scss/_popover.scss */
-
-.popover .arrow {
-  position: absolute;
-  display: block;
-  width: 1rem;
-  height: 0.5rem;
-  margin: 0 0.3rem;
-}
-
-/* line 27, node_modules/bootstrap/scss/_popover.scss */
-
-.popover .arrow::before,
-.popover .arrow::after {
-  position: absolute;
-  display: block;
-  content: "";
-  border-color: transparent;
-  border-style: solid;
-}
-
-/* line 38, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-top,
-.bs-popover-auto[x-placement^="top"] {
-  margin-bottom: 0.5rem;
-}
-
-/* line 41, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-top > .arrow,
-.bs-popover-auto[x-placement^="top"] > .arrow {
-  bottom: calc((0.5rem + 1px) * -1);
-}
-
-/* line 44, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-top > .arrow::before,
-.bs-popover-auto[x-placement^="top"] > .arrow::before {
-  bottom: 0;
-  border-width: 0.5rem 0.5rem 0;
-  border-top-color: rgba(0, 0, 0, 0.25);
-}
-
-/* line 50, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-top > .arrow::after,
-.bs-popover-auto[x-placement^="top"] > .arrow::after {
-  bottom: 1px;
-  border-width: 0.5rem 0.5rem 0;
-  border-top-color: #fff;
-}
-
-/* line 58, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-right,
-.bs-popover-auto[x-placement^="right"] {
-  margin-left: 0.5rem;
-}
-
-/* line 61, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-right > .arrow,
-.bs-popover-auto[x-placement^="right"] > .arrow {
-  left: calc((0.5rem + 1px) * -1);
-  width: 0.5rem;
-  height: 1rem;
-  margin: 0.3rem 0;
-}
-
-/* line 67, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-right > .arrow::before,
-.bs-popover-auto[x-placement^="right"] > .arrow::before {
-  left: 0;
-  border-width: 0.5rem 0.5rem 0.5rem 0;
-  border-right-color: rgba(0, 0, 0, 0.25);
-}
-
-/* line 73, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-right > .arrow::after,
-.bs-popover-auto[x-placement^="right"] > .arrow::after {
-  left: 1px;
-  border-width: 0.5rem 0.5rem 0.5rem 0;
-  border-right-color: #fff;
-}
-
-/* line 81, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-bottom,
-.bs-popover-auto[x-placement^="bottom"] {
-  margin-top: 0.5rem;
-}
-
-/* line 84, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-bottom > .arrow,
-.bs-popover-auto[x-placement^="bottom"] > .arrow {
-  top: calc((0.5rem + 1px) * -1);
-}
-
-/* line 87, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-bottom > .arrow::before,
-.bs-popover-auto[x-placement^="bottom"] > .arrow::before {
-  top: 0;
-  border-width: 0 0.5rem 0.5rem 0.5rem;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
-}
-
-/* line 93, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-bottom > .arrow::after,
-.bs-popover-auto[x-placement^="bottom"] > .arrow::after {
-  top: 1px;
-  border-width: 0 0.5rem 0.5rem 0.5rem;
-  border-bottom-color: #fff;
-}
-
-/* line 101, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-bottom .popover-header::before,
-.bs-popover-auto[x-placement^="bottom"] .popover-header::before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  display: block;
-  width: 1rem;
-  margin-left: -0.5rem;
-  content: "";
-  border-bottom: 1px solid #f7f7f7;
-}
-
-/* line 113, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-left,
-.bs-popover-auto[x-placement^="left"] {
-  margin-right: 0.5rem;
-}
-
-/* line 116, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-left > .arrow,
-.bs-popover-auto[x-placement^="left"] > .arrow {
-  right: calc((0.5rem + 1px) * -1);
-  width: 0.5rem;
-  height: 1rem;
-  margin: 0.3rem 0;
-}
-
-/* line 122, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-left > .arrow::before,
-.bs-popover-auto[x-placement^="left"] > .arrow::before {
-  right: 0;
-  border-width: 0.5rem 0 0.5rem 0.5rem;
-  border-left-color: rgba(0, 0, 0, 0.25);
-}
-
-/* line 128, node_modules/bootstrap/scss/_popover.scss */
-
-.bs-popover-left > .arrow::after,
-.bs-popover-auto[x-placement^="left"] > .arrow::after {
-  right: 1px;
-  border-width: 0.5rem 0 0.5rem 0.5rem;
-  border-left-color: #fff;
-}
-
-/* line 153, node_modules/bootstrap/scss/_popover.scss */
-
-.popover-header {
-  padding: 0.5rem 0.75rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
-  border-top-left-radius: calc(0.3rem - 1px);
-  border-top-right-radius: calc(0.3rem - 1px);
-}
-
-/* line 163, node_modules/bootstrap/scss/_popover.scss */
-
-.popover-header:empty {
-  display: none;
-}
-
-/* line 168, node_modules/bootstrap/scss/_popover.scss */
-
-.popover-body {
-  padding: 0.5rem 0.75rem;
-  color: #000;
-}
-
-/* line 14, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel {
-  position: relative;
-}
-
-/* line 18, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel.pointer-event {
-  -ms-touch-action: pan-y;
-      touch-action: pan-y;
-}
-
-/* line 22, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-/* line 2, node_modules/bootstrap/scss/mixins/_clearfix.scss */
-
-.carousel-inner::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-
-/* line 29, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-item {
-  position: relative;
-  display: none;
-  float: left;
-  width: 100%;
-  margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.6s ease-in-out;
-  transition: -webkit-transform 0.6s ease-in-out;
-  -o-transition: -o-transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out;
-  transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out, -o-transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  /* line 29, node_modules/bootstrap/scss/_carousel.scss */
-
-  .carousel-item {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-}
-
-/* line 39, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-item.active,
-.carousel-item-next,
-.carousel-item-prev {
-  display: block;
-}
-
-/* line 45, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-item-next:not(.carousel-item-left),
-.active.carousel-item-right {
-  -webkit-transform: translateX(100%);
-       -o-transform: translateX(100%);
-          transform: translateX(100%);
-}
-
-/* line 50, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-item-prev:not(.carousel-item-right),
-.active.carousel-item-left {
-  -webkit-transform: translateX(-100%);
-       -o-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-/* line 61, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-fade .carousel-item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-
-/* line 67, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-fade .carousel-item.active,
-.carousel-fade .carousel-item-next.carousel-item-left,
-.carousel-fade .carousel-item-prev.carousel-item-right {
-  z-index: 1;
-  opacity: 1;
-}
-
-/* line 74, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-fade .active.carousel-item-left,
-.carousel-fade .active.carousel-item-right {
-  z-index: 0;
-  opacity: 0;
-  -webkit-transition: 0s 0.6s opacity;
-  -o-transition: 0s 0.6s opacity;
-  transition: 0s 0.6s opacity;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  /* line 74, node_modules/bootstrap/scss/_carousel.scss */
-
-  .carousel-fade .active.carousel-item-left,
-  .carousel-fade .active.carousel-item-right {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-}
-
-/* line 87, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 15%;
-  color: #fff;
-  text-align: center;
-  opacity: 0.5;
-  -webkit-transition: opacity 0.15s ease;
-  -o-transition: opacity 0.15s ease;
-  transition: opacity 0.15s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  /* line 87, node_modules/bootstrap/scss/_carousel.scss */
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-}
-
-/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
-
-.carousel-control-prev:hover,
-.carousel-control-prev:focus,
-.carousel-control-next:hover,
-.carousel-control-next:focus {
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-  opacity: 0.9;
-}
-
-/* line 111, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-control-prev {
-  left: 0;
-}
-
-/* line 117, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-control-next {
-  right: 0;
-}
-
-/* line 125, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: no-repeat 50% / 100% 100%;
-}
-
-/* line 132, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
-}
-
-/* line 135, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
-}
-
-/* line 145, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-indicators {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 15;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-left: 0;
-  margin-right: 15%;
-  margin-left: 15%;
-  list-style: none;
-}
-
-/* line 159, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-indicators li {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  width: 30px;
-  height: 3px;
-  margin-right: 3px;
-  margin-left: 3px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #fff;
-  background-clip: padding-box;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  opacity: .5;
-  -webkit-transition: opacity 0.6s ease;
-  -o-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  /* line 159, node_modules/bootstrap/scss/_carousel.scss */
-
-  .carousel-indicators li {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-  }
-}
-
-/* line 177, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-indicators .active {
-  opacity: 1;
-}
-
-/* line 187, node_modules/bootstrap/scss/_carousel.scss */
-
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
 }
 
 @-webkit-keyframes spinner-border {
@@ -19171,143 +17519,6 @@ a.text-dark:focus {
 
 .invisible {
   visibility: hidden !important;
-}
-
-@media print {
-  /* line 13, node_modules/bootstrap/scss/_print.scss */
-
-  *,
-  *::before,
-  *::after {
-    text-shadow: none !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-  }
-
-  /* line 24, node_modules/bootstrap/scss/_print.scss */
-
-  a:not(.btn) {
-    text-decoration: underline;
-  }
-
-  /* line 34, node_modules/bootstrap/scss/_print.scss */
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /* line 49, node_modules/bootstrap/scss/_print.scss */
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  /* line 52, node_modules/bootstrap/scss/_print.scss */
-
-  pre,
-  blockquote {
-    border: 1px solid #adb5bd;
-    page-break-inside: avoid;
-  }
-
-  /* line 63, node_modules/bootstrap/scss/_print.scss */
-
-  thead {
-    display: table-header-group;
-  }
-
-  /* line 67, node_modules/bootstrap/scss/_print.scss */
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  /* line 72, node_modules/bootstrap/scss/_print.scss */
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  /* line 79, node_modules/bootstrap/scss/_print.scss */
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-
-@page {
-    size: a3;
-}
-
-  /* line 92, node_modules/bootstrap/scss/_print.scss */
-
-  body {
-    min-width: 992px !important;
-  }
-
-  /* line 95, node_modules/bootstrap/scss/_print.scss */
-
-  .container {
-    min-width: 992px !important;
-  }
-
-  /* line 100, node_modules/bootstrap/scss/_print.scss */
-
-  .navbar {
-    display: none;
-  }
-
-  /* line 103, node_modules/bootstrap/scss/_print.scss */
-
-  .badge {
-    border: 1px solid #000;
-  }
-
-  /* line 107, node_modules/bootstrap/scss/_print.scss */
-
-  .table {
-    border-collapse: collapse !important;
-  }
-
-  /* line 110, node_modules/bootstrap/scss/_print.scss */
-
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
-
-  /* line 117, node_modules/bootstrap/scss/_print.scss */
-
-  .table-bordered th,
-  .table-bordered td {
-    border: 1px solid #dee2e6 !important;
-  }
-
-  /* line 123, node_modules/bootstrap/scss/_print.scss */
-
-  .table-dark {
-    color: inherit;
-  }
-
-  /* line 126, node_modules/bootstrap/scss/_print.scss */
-
-  .table-dark th,
-  .table-dark td,
-  .table-dark thead th,
-  .table-dark tbody + tbody {
-    border-color: #dee2e6;
-  }
-
-  /* line 134, node_modules/bootstrap/scss/_print.scss */
-
-  .table .thead-dark th {
-    color: inherit;
-    border-color: #dee2e6;
-  }
 }
 
 /**
