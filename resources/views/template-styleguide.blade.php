@@ -21,119 +21,26 @@
           </div>
           <div class="row">
             <div class="col-sm-8">
-              <p class="bs-component"><button class="btn btn-primary" type="button">Primary</button>
-                <button class="btn btn-secondary" type="button">Secondary</button>
-                <button class="btn btn-success" type="button">Success</button>
-                <button class="btn btn-info" type="button">Info</button>
-                <button class="btn btn-warning" type="button">Warning</button>
-                <button class="btn btn-danger" type="button">Danger</button>
-                <button class="btn btn-link" type="button">Link</button></p>
-              <p class="bs-component"><button class="btn btn-primary disabled" type="button">Primary</button>
-                <button class="btn btn-secondary disabled" type="button">Secondary</button>
-                <button class="btn btn-success disabled" type="button">Success</button>
-                <button class="btn btn-info disabled" type="button">Info</button>
-                <button class="btn btn-warning disabled" type="button">Warning</button>
-                <button class="btn btn-danger disabled" type="button">Danger</button>
-                <button class="btn btn-link disabled" type="button">Link</button></p>
-              <p class="bs-component"><button class="btn btn-outline-primary" type="button">Primary</button>
-                <button class="btn btn-outline-secondary" type="button">Secondary</button>
-                <button class="btn btn-outline-success" type="button">Success</button>
-                <button class="btn btn-outline-info" type="button">Info</button>
-                <button class="btn btn-outline-warning" type="button">Warning</button>
-                <button class="btn btn-outline-danger" type="button">Danger</button></p>
+              <p class="bs-component">
+                <h3>Small</h3>
+                <button class="btn btn-sm btn-primary" type="button">Call to action</button>
+                <button class="btn btn-sm btn-outline-primary" type="button">Call to action</button>
+                <a class="btn btn-sm btn-link" href="#" role="button">Call to action</a>
+              </p>
 
               <p class="bs-component">
-                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-
-                  <button class="btn btn-primary" type="button">Primary</button>
-                  <div class="btn-group" role="group">
-
-                    &nbsp;
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" href="#">Dropdown
-                        link</a>
-                      <a class="dropdown-item" href="#">Dropdown link</a></div>
-                  </div>
-                </div>
-                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-
-                  <button class="btn btn-success" type="button">Success</button>
-                  <div class="btn-group" role="group">
-
-                    &nbsp;
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop2"><a class="dropdown-item" href="#">Dropdown
-                        link</a>
-                      <a class="dropdown-item" href="#">Dropdown link</a></div>
-                  </div>
-                </div>
-                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-
-                  <button class="btn btn-info" type="button">Info</button>
-                  <div class="btn-group" role="group">
-
-                    &nbsp;
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop3"><a class="dropdown-item" href="#">Dropdown
-                        link</a>
-                      <a class="dropdown-item" href="#">Dropdown link</a></div>
-                  </div>
-                </div>
-                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-
-                  <button class="btn btn-danger" type="button">Danger</button>
-                  <div class="btn-group" role="group">
-
-                    &nbsp;
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop4"><a class="dropdown-item" href="#">Dropdown
-                        link</a>
-                      <a class="dropdown-item" href="#">Dropdown link</a></div>
-                  </div>
-                </div>
+                <h3>Normal</h3>
+                <button class="btn btn-primary" type="button">CALL TO ACTION</button>
+                <button class="btn btn-outline-primary" type="button">CALL TO ACTION</button>
+                <a class="btn btn-link" href="#" role="button">CALL TO ACTION</a>
               </p>
-              <p class="bs-component"><button class="btn btn-primary btn-lg" type="button">Large button</button>
-                <button class="btn btn-primary" type="button">Default button</button>
-                <button class="btn btn-primary btn-sm" type="button">Small button</button>
+
+              <p class="bs-component">
+                <h3>Large</h3>
+                <button class="btn btn-lg btn-primary" type="button">CALL TO ACTION</button>
+                <button class="btn btn-lg btn-outline-primary" type="button">CALL TO ACTION</button>
+                <a class="btn btn-lg btn-link" href="#" role="button">CALL TO ACTION</a>
               </p>
-            </div>
-            <div class="col-sm-4">
-              <div class="bs-component" style="margin-bottom: 15px;">
-                <div class="btn-group btn-group-toggle" data-toggle="buttons"><label class="btn btn-primary active">
-                    <input autocomplete="off" checked="checked" type="checkbox" /> Active
-                  </label>
-                  <label class="btn btn-primary">
-                    <input autocomplete="off" type="checkbox" /> Check
-                  </label>
-                  <label class="btn btn-primary">
-                    <input autocomplete="off" type="checkbox" /> Check
-                  </label></div>
-              </div>
-              <div class="bs-component" style="margin-bottom: 15px;">
-                <div class="btn-group btn-group-toggle" data-toggle="buttons"><label class="btn btn-primary active">
-                    <input id="option1" autocomplete="off" checked="checked" name="options" type="radio" /> Active
-                  </label>
-                  <label class="btn btn-primary">
-                    <input id="option2" autocomplete="off" name="options" type="radio" /> Radio
-                  </label>
-                  <label class="btn btn-primary">
-                    <input id="option3" autocomplete="off" name="options" type="radio" /> Radio
-                  </label></div>
-              </div>
-              <div class="bs-component" style="margin-bottom: 15px;">
-                <div class="btn-group" role="group" aria-label="Basic example"><button class="btn btn-secondary"
-                    type="button">Left</button>
-                  <button class="btn btn-secondary" type="button">Middle</button>
-                  <button class="btn btn-secondary" type="button">Right</button></div>
-              </div>
-              <div class="bs-component" style="margin-bottom: 15px;">
-                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                  <div class="btn-group mr-2" role="group" aria-label="First group"><button class="btn btn-secondary"
-                      type="button">1</button>
-                    <button class="btn btn-secondary" type="button">2</button>
-                    <button class="btn btn-secondary" type="button">3</button>
-                    <button class="btn btn-secondary" type="button">4</button></div>
-                  <div class="btn-group mr-2" role="group" aria-label="Second group"><button class="btn btn-secondary"
-                      type="button">5</button>
-                    <button class="btn btn-secondary" type="button">6</button></div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

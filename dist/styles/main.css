@@ -3830,8 +3830,8 @@ select.form-control:focus::-ms-value,
 /* line 90, node_modules/bootstrap/scss/_forms.scss */
 
 .col-form-label-lg {
-  padding-top: calc(0.5rem + 1px);
-  padding-bottom: calc(0.5rem + 1px);
+  padding-top: calc(0.9375rem + 1px);
+  padding-bottom: calc(0.9375rem + 1px);
   font-size: 1.25rem;
   line-height: 1.5;
 }
@@ -3839,9 +3839,9 @@ select.form-control:focus::-ms-value,
 /* line 97, node_modules/bootstrap/scss/_forms.scss */
 
 .col-form-label-sm {
-  padding-top: calc(0.25rem + 1px);
-  padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.8725rem;
+  padding-top: calc(0.3125rem + 1px);
+  padding-bottom: calc(0.3125rem + 1px);
+  font-size: 0.75rem;
   line-height: 1.5;
 }
 
@@ -3871,9 +3871,9 @@ select.form-control:focus::-ms-value,
 /* line 137, node_modules/bootstrap/scss/_forms.scss */
 
 .form-control-sm {
-  height: calc(1.5em + 0.5rem + 2px);
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8725rem;
+  height: calc(1.5em + 0.625rem + 2px);
+  padding: 0.3125rem 0.5rem;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -3881,11 +3881,11 @@ select.form-control:focus::-ms-value,
 /* line 145, node_modules/bootstrap/scss/_forms.scss */
 
 .form-control-lg {
-  height: calc(1.5em + 1rem + 2px);
-  padding: 0.5rem 1rem;
+  height: calc(1.5em + 1.875rem + 2px);
+  padding: 0.9375rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 0.3rem;
+  border-radius: 9.375rem;
 }
 
 /* line 155, node_modules/bootstrap/scss/_forms.scss */
@@ -4662,7 +4662,7 @@ textarea.form-control.is-invalid,
 .comment-form input[type="submit"],
 .search-form .search-submit {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 500;
   color: #031532;
   text-align: center;
   vertical-align: middle;
@@ -5616,10 +5616,10 @@ fieldset:disabled .search-form a.search-submit,
 .btn-group-lg > .btn,
 .comment-form .btn-group-lg > input[type="submit"],
 .search-form .btn-group-lg > .search-submit {
-  padding: 0.5rem 1rem;
+  padding: 0.9375rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 0.3rem;
+  border-radius: 9.375rem;
 }
 
 /* line 111, node_modules/bootstrap/scss/_buttons.scss */
@@ -5628,8 +5628,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-group-sm > .btn,
 .comment-form .btn-group-sm > input[type="submit"],
 .search-form .btn-group-sm > .search-submit {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8725rem;
+  padding: 0.3125rem 0.5rem;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -6419,7 +6419,7 @@ input[type="button"].btn-block {
 .comment-form .input-group-lg > textarea:not(textarea),
 .search-form .input-group-lg > .search-field:not(textarea),
 .input-group-lg > .custom-select {
-  height: calc(1.5em + 1rem + 2px);
+  height: calc(1.5em + 1.875rem + 2px);
 }
 
 /* line 135, node_modules/bootstrap/scss/_input-group.scss */
@@ -6439,10 +6439,10 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-append > .btn,
 .comment-form .input-group-lg > .input-group-append > input[type="submit"],
 .search-form .input-group-lg > .input-group-append > .search-submit {
-  padding: 0.5rem 1rem;
+  padding: 0.9375rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 0.3rem;
+  border-radius: 9.375rem;
 }
 
 /* line 147, node_modules/bootstrap/scss/_input-group.scss */
@@ -6454,7 +6454,7 @@ input[type="button"].btn-block {
 .comment-form .input-group-sm > textarea:not(textarea),
 .search-form .input-group-sm > .search-field:not(textarea),
 .input-group-sm > .custom-select {
-  height: calc(1.5em + 0.5rem + 2px);
+  height: calc(1.5em + 0.625rem + 2px);
 }
 
 /* line 152, node_modules/bootstrap/scss/_input-group.scss */
@@ -6474,8 +6474,8 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-append > .btn,
 .comment-form .input-group-sm > .input-group-append > input[type="submit"],
 .search-form .input-group-sm > .input-group-append > .search-submit {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8725rem;
+  padding: 0.3125rem 0.5rem;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -6799,19 +6799,19 @@ input[type="button"].btn-block {
 /* line 268, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-select-sm {
-  height: calc(1.5em + 0.5rem + 2px);
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  height: calc(1.5em + 0.625rem + 2px);
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   padding-left: 0.5rem;
-  font-size: 0.8725rem;
+  font-size: 0.75rem;
 }
 
 /* line 276, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-select-lg {
-  height: calc(1.5em + 1rem + 2px);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  height: calc(1.5em + 1.875rem + 2px);
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
   padding-left: 1rem;
   font-size: 1.25rem;
 }
@@ -9480,7 +9480,7 @@ a.close.disabled {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 9.375rem;
   outline: 0;
 }
 
@@ -9522,8 +9522,8 @@ a.close.disabled {
           justify-content: space-between;
   padding: 1rem 1rem;
   border-bottom: 1px solid #dee2e6;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
+  border-top-left-radius: 9.375rem;
+  border-top-right-radius: 9.375rem;
 }
 
 /* line 143, node_modules/bootstrap/scss/_modal.scss */
@@ -9564,8 +9564,8 @@ a.close.disabled {
           justify-content: flex-end;
   padding: 1rem;
   border-top: 1px solid #dee2e6;
-  border-bottom-right-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 9.375rem;
+  border-bottom-left-radius: 9.375rem;
 }
 
 /* line 176, node_modules/bootstrap/scss/_modal.scss */
@@ -10072,7 +10072,7 @@ button.bg-dark:focus {
 /* line 61, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-lg {
-  border-radius: 0.3rem !important;
+  border-radius: 9.375rem !important;
 }
 
 /* line 65, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -18105,12 +18105,89 @@ small,
   line-height: 1.25rem;
 }
 
-/* line 1, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 7, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn,
 .comment-form input[type="submit"],
 .search-form .search-submit {
-  border-radius: 0;
+  color: #031532;
+  font-size: 0.8125rem;
+  letter-spacing: 1.86px;
+  min-width: 270px;
+}
+
+/* line 13, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn.btn-lg,
+.btn-group-lg > .btn,
+.comment-form .btn-group-lg > input[type="submit"],
+.search-form .btn-group-lg > .search-submit,
+.comment-form input.btn-lg[type="submit"],
+.search-form .btn-lg.search-submit {
+  border-radius: 9.375rem;
+}
+
+/* line 17, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn.btn-sm,
+.btn-group-sm > .btn,
+.comment-form .btn-group-sm > input[type="submit"],
+.search-form .btn-group-sm > .search-submit,
+.comment-form input.btn-sm[type="submit"],
+.search-form .btn-sm.search-submit {
+  letter-spacing: 0.5px;
+  font-weight: normal;
+}
+
+@media (min-width: 992px) {
+  /* line 17, resources/assets/styles/skhoop/components/_buttons.scss */
+
+  .btn.btn-sm,
+  .btn-group-sm > .btn,
+  .comment-form .btn-group-sm > input[type="submit"],
+  .search-form .btn-group-sm > .search-submit,
+  .comment-form input.btn-sm[type="submit"],
+  .search-form .btn-sm.search-submit {
+    min-width: 145px;
+  }
+}
+
+/* line 32, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-primary {
+  color: #fff;
+}
+
+/* line 36, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-primary:hover {
+  color: #031532;
+  background-color: #fff;
+  border-color: #7e7e7e;
+}
+
+/* line 46, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-outline-primary {
+  border-color: #7e7e7e;
+  color: #031532;
+}
+
+/* line 51, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-outline-primary:hover {
+  color: #fff;
+}
+
+/* line 6, resources/assets/styles/skhoop/components/_button-group.scss */
+
+.btn-group > .btn,
+.comment-form .btn-group > input[type="submit"],
+.search-form .btn-group > .search-submit,
+.btn-group-vertical > .btn,
+.comment-form .btn-group-vertical > input[type="submit"],
+.search-form .btn-group-vertical > .search-submit {
+  min-width: auto;
 }
 
 /* line 5, resources/assets/styles/skhoop/components/_comments.scss */
