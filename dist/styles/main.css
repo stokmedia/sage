@@ -16652,13 +16652,19 @@ small,
 
 /* line 199, resources/assets/styles/skhoop/common/_typography.scss */
 
+a {
+  text-decoration: underline;
+}
+
+/* line 203, resources/assets/styles/skhoop/common/_typography.scss */
+
 b,
 strong,
 .strong {
   font-weight: 700;
 }
 
-/* line 209, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 213, resources/assets/styles/skhoop/common/_typography.scss */
 
 ul ul,
 ul ol,
@@ -16667,7 +16673,7 @@ ol ol {
   margin-bottom: 0;
 }
 
-/* line 217, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 221, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote,
 .blockquote {
@@ -16679,7 +16685,7 @@ blockquote,
   line-height: 2.5rem;
 }
 
-/* line 229, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 233, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -16690,7 +16696,7 @@ blockquote ol:last-child,
   margin-bottom: 0;
 }
 
-/* line 234, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 238, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote footer,
 .blockquote footer {
@@ -16701,7 +16707,7 @@ blockquote footer,
   line-height: 1.5625rem;
 }
 
-/* line 241, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 245, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote footer::before,
 .blockquote footer::before {

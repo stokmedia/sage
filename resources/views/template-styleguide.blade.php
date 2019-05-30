@@ -291,38 +291,22 @@
             <input id="inputInvalid" class="form-control is-invalid" type="text" value="wrong value" />
             <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
           </div>
-<<<<<<< HEAD
           <div class="row">
             <div class="col-sm-12">
               <div class="bs-component">
                 <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis. Rivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
               </div>
             </div>
-=======
-          <div class="form-group"><label class="col-form-label col-form-label-lg" for="inputLarge">Large input</label>
-            <input id="inputLarge" class="form-control form-control-lg" type="text" placeholder=".form-control-lg" />
->>>>>>> d50301252e6fe4304bd9cdc523478a88b7df2180
           </div>
           <div class="form-group"><label class="col-form-label" for="inputDefault">Default input</label>
             <input id="inputDefault" class="form-control" type="text" placeholder="Default input" /></div>
           <div class="form-group"><label class="col-form-label col-form-label-sm" for="inputSmall">Small input</label>
             <input id="inputSmall" class="form-control form-control-sm" type="text" placeholder=".form-control-sm" />
           </div>
-<<<<<<< HEAD
           <div class="row">
             <div class="col-sm-12">
               <div class="bs-component">
                 <p><em>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis. Rivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</em></p>
-=======
-          <div class="form-group">
-
-            <label class="control-label">Input addons</label>
-            <div class="form-group">
-              <div class="input-group mb-3">
-                <div class="input-group-prepend"><span class="input-group-text">$</span></div>
-                <input class="form-control" type="text" aria-label="Amount (to the nearest dollar)" />
-                <div class="input-group-append"><span class="input-group-text">.00</span></div>
->>>>>>> d50301252e6fe4304bd9cdc523478a88b7df2180
               </div>
             </div>
           </div>
@@ -370,7 +354,6 @@
                 <div class="input-group-append"><span id="" class="input-group-text">Upload</span></div>
               </div>
             </div>
-<<<<<<< HEAD
           </div>
           <br />
           <!-- Unorder & Ordered List -->
@@ -422,9 +405,6 @@
               </div>
             </div>
           </div>
-=======
-          </fieldset>
->>>>>>> d50301252e6fe4304bd9cdc523478a88b7df2180
         </div>
       </div>
     </div>
