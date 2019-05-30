@@ -17,3 +17,12 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+.form-control {
+  min-width: 300px;
+  letter-spacing: 1.86px;
+
+  @include media-breakpoint-up(lg) {
+    width: auto;
+  }
+}

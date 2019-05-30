@@ -1,3 +1,57 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
 .btn {
-  border-radius: 0;
+  color: $body-color;
+  font-size: 0.8125rem;
+  letter-spacing: 1.86px;
+  min-width: 270px;
+
+  &.btn-lg {
+    border-radius: $btn-border-radius-lg;
+  }
+
+  &.btn-sm {
+    font-size: $input-btn-font-size-sm;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+
+    @include media-breakpoint-up(lg) {
+      min-width: 145px;
+    }
+  }
+}
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @if ($color == "primary") {
+      color: $white;
+
+      &:hover {
+        color: $body-color;
+        background-color: $white;
+        border-color: #7e7e7e;
+      }
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @if ($color == "primary") {
+      border-color: #7e7e7e;
+      color: $body-color;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
 }
