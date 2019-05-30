@@ -2,48 +2,98 @@
 @import "~bootstrap/scss/functions";
 
 // Color System
-$blue: #007bff;
-$indigo: #6610f2;
-$purple: #6f42c1;
-$pink: #e83e8c;
-$red: #dab4b4;
-$orange: #fd7e14;
-$yellow: #ece4d0;
-$green: #b7cad0;
-$teal: #20c997;
-$cyan: #17a2b8;
-$black: #000;
-$white: #fff;
-$primary: $green;
-$secondary: #b2b2b2;
-$success: $green;
-$info: $cyan;
-$warning: $yellow;
-$danger: $red;
+$blue:                        #007bff;
+$indigo:                      #6610f2;
+$purple:                      #6f42c1;
+$pink:                        #e83e8c;
+$red:                         #dab4b4;
+$orange:                      #fd7e14;
+$yellow:                      #ece4d0;
+$green:                       #b7cad0;
+$teal:                        #20c997;
+$cyan:                        #17a2b8;
+$black:                       #000;
+$white:                       #fff;
+$primary:                      $green;
+$secondary:                   #b2b2b2;
+$success:                      $green;
+$info:                         $cyan;
+$warning:                      $yellow;
+$danger:                       $red;
 
 $theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary,
-  "success": $success,
-  "info": $info,
-  "warning": $warning,
-  "danger": $danger
+  "primary":                   $primary,
+  "secondary":                 $secondary,
+  "success":                   $success,
+  "info":                      $info,
+  "warning":                   $warning,
+  "danger":                    $danger
 );
 
+// Responsive font size breakpoint
+$enable-responsive-font-sizes: false;
+$rfs-breakpoint:               1440px;
+
 /** Bootstrap navbar fix (https://git.io/fADqW) */
-$navbar-dark-toggler-icon-bg: none;
+$navbar-dark-toggler-icon-bg:  none;
 $navbar-light-toggler-icon-bg: none;
 
 // Body
-$body-bg: $white;
-$body-color: $black;
+$body-bg:                      $white;
+$body-color:                 #031532;
 
+//
 // Typography
-$font-weight-lighter: lighter !default;
-$font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-bold: 700 !default;
-$font-weight-bolder: bolder !default;
+//
+$font-family-roboto:          "Roboto", sans-serif;
+$font-family-cbyg:            "Covered By Your Grace", cursive;
+$font-family-source-serif :   "Source Serif Pro", serif;
+$font-family-special-elite:   "Special Elite", cursive;
+
+// Font Base
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25;
+$font-size-sm:                $font-size-base * 0.8725;
+
+// Font Weight
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-medium:          500;
+$font-weight-semibold:        600;
+$font-weight-bold:            700;
+$font-weight-bolder:          800;
+$font-weight-black:           900;
+$font-weight-base:            $font-weight-light;
+$line-height-base:            1.5;
+
+// Header
+$h1-font-size:                $font-size-base * 3.125;
+$h2-font-size:                $font-size-base * 1.75;
+$h3-font-size:                $font-size-base * 1.25;
+$h4-font-size:                $font-size-base * 0.875;
+$h5-font-size:                $font-size-base * 0.812;
+$h6-font-size:                $font-size-base * 0.75;
+$h1-line-height:              $font-size-base * 5;
+$h2-line-height:              $font-size-base * 2.8125;
+$h3-line-height:              $font-size-base * 3.125;
+$h4-line-height:              $font-size-base * 1.5625;
+$h5-line-height:              $font-size-base * 1.5625;
+$h6-line-height:              $font-size-base * 1.5625;
+
+// Header Touch
+$h1-font-size-touch:          $font-size-base * 2.25;
+$h2-font-size-touch:          $font-size-base * 1.5;
+$h3-font-size-touch:          $font-size-base * 1.25;
+$h4-font-size-touch:          $font-size-base * 0.8125;
+$h5-font-size-touch:          $font-size-base * 0.75;
+$h6-font-size-touch:          $font-size-base * 0.6875;
+$h1-line-height-touch:        $font-size-base * 2.8125;
+$h2-line-height-touch:        $font-size-base * 1.875;
+$h3-line-height-touch:        $font-size-base * 1.5;
+$h4-line-height-touch:        $font-size-base * 1.25;
+$h5-line-height-touch:        $font-size-base * 1.5625;
+$h6-line-height-touch:        $font-size-base * 1.5625;
 
 // Grid breakpoints
 $grid-breakpoints: (

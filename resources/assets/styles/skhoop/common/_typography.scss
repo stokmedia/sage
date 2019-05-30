@@ -1,0 +1,186 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+h1,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-family-roboto;
+}
+
+h1,
+.h1 {
+  font-size: $h1-font-size-touch;
+  font-weight: $font-weight-bold;
+  line-height: $h1-line-height-touch;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(lg) {
+    @include font-size($h1-font-size);
+
+    font-weight: $font-weight-black;
+    line-height: $h1-line-height;
+  }
+}
+
+h2,
+.h2 {
+  font-family: $font-family-source-serif;
+  font-size: $h2-font-size-touch;
+  font-weight: $font-weight-semibold;
+  line-height: $h2-line-height-touch;
+
+  @include media-breakpoint-up(lg) {
+    @include font-size($h2-font-size);
+
+    line-height: $h2-line-height;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $h3-font-size-touch;
+  font-weight: $font-weight-light;
+  letter-spacing: 0.5px;
+  line-height: $h3-line-height-touch;
+
+  @include media-breakpoint-up(lg) {
+    @include font-size($h3-font-size);
+
+    letter-spacing: -0.16px;
+    line-height: $h3-line-height;
+  }
+}
+
+h4,
+.h4 {
+  font-size: $h4-font-size-touch;
+  font-weight: $font-weight-medium;
+  letter-spacing: 1.86px;
+  line-height: $h4-line-height-touch;
+
+  @include media-breakpoint-up(lg) {
+    @include font-size($h4-font-size);
+
+    letter-spacing: 1px;
+    line-height: $h4-line-height;
+  }
+}
+
+h5,
+.h5 {
+  font-size: $h5-font-size-touch;
+  font-weight: $font-weight-normal;
+  letter-spacing: 0.5px;
+  line-height: $h5-line-height-touch;
+
+  @include media-breakpoint-up(lg) {
+    @include font-size($h5-font-size);
+
+    line-height: $h5-line-height;
+  }
+}
+
+h6,
+.h6 {
+  font-size: $h6-font-size-touch;
+  font-weight: $font-weight-normal;
+  letter-spacing: 0.5px;
+  line-height: $h6-line-height-touch;
+
+  @include media-breakpoint-up(lg) {
+    @include font-size($h6-font-size);
+
+    line-height: $h6-line-height;
+  }
+}
+
+// Body text
+// -------------------------
+body {
+  font-family: $font-family-roboto;
+  font-size: 0.8125rem;
+  font-weight: $font-weight-base;
+  letter-spacing: 0.5px;
+  line-height: 1.25rem;
+  color: $body-color;
+
+  @include media-breakpoint-up(lg) {
+    @include font-size(0.875rem);
+
+    line-height: 1.375rem;
+  }
+}
+
+em {
+  font-family: $font-family-source-serif;
+  font-style: normal;
+  font-weight: $font-weight-normal;
+}
+
+.preamble {
+  font-family: $font-family-source-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: $font-weight-normal;
+  line-height: 1.5rem;
+
+  @include media-breakpoint-up(lg) {
+    @include font-size(1.25rem);
+
+    line-height: 1.625rem;
+  }
+}
+
+p {
+  em {
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    @include media-breakpoint-up(lg) {
+      @include font-size(1.25rem);
+
+      line-height: 1.625rem;
+    }
+  }
+}
+
+blockquote,
+.blockquote {
+  padding-left: 20px;
+  border-left: 8px solid $body-color;
+  font-family: $font-family-cbyg;
+  font-size: 1.875rem;
+  letter-spacing: 1.25px;
+  line-height: 2.5rem;
+
+  footer {
+    font-family: $font-family-roboto;
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: -0.13px;
+    line-height: 1.5625rem;
+
+    &::before {
+      content: "\2014\A0";
+    }
+  }
+}
+
+small,
+.small {
+  font-size: 0.75rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 1.25rem;
+}
