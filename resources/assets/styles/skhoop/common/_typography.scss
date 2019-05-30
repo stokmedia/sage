@@ -2,6 +2,30 @@
 // Typography
 // --------------------------------------------------
 
+// Spacing
+// -------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 1.625rem;
+}
+
+ol,
+ul,
+p,
+blockquote {
+  margin-bottom: 1.625rem;
+}
+
 // Headings
 // -------------------------
 h1,
@@ -38,6 +62,7 @@ h2,
   font-family: $font-family-source-serif;
   font-size: $h2-font-size-touch;
   font-weight: $font-weight-semibold;
+  letter-spacing: 0.03px;
   line-height: $h2-line-height-touch;
 
   @include media-breakpoint-up(lg) {
@@ -51,13 +76,13 @@ h3,
 .h3 {
   font-size: $h3-font-size-touch;
   font-weight: $font-weight-light;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.16px;
   line-height: $h3-line-height-touch;
 
   @include media-breakpoint-up(lg) {
     @include font-size($h3-font-size);
 
-    letter-spacing: -0.16px;
+    letter-spacing: 0.5px;
     line-height: $h3-line-height;
   }
 }
@@ -66,13 +91,14 @@ h4,
 .h4 {
   font-size: $h4-font-size-touch;
   font-weight: $font-weight-medium;
-  letter-spacing: 1.86px;
+  letter-spacing: 1px;
   line-height: $h4-line-height-touch;
+  text-transform: uppercase;
 
   @include media-breakpoint-up(lg) {
     @include font-size($h4-font-size);
 
-    letter-spacing: 1px;
+    letter-spacing: 1.86px;
     line-height: $h4-line-height;
   }
 }
@@ -153,16 +179,57 @@ p {
       line-height: 1.625rem;
     }
   }
+
+  img {
+    &.aligncenter,
+    &.alignnone {
+      margin: 2.875rem auto;
+    }
+  }
 }
 
+small,
+.small {
+  font-size: 0.75rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 1.25rem;
+}
+
+b,
+strong,
+.strong {
+  font-weight: $font-weight-bold;
+}
+
+// Lists
+// -------------------------
+ul,
+ol {
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+// blockquote
+// -------------------------
 blockquote,
 .blockquote {
-  padding-left: 20px;
+  padding-left: 18px;
   border-left: 8px solid $body-color;
   font-family: $font-family-cbyg;
   font-size: 1.875rem;
   letter-spacing: 1.25px;
   line-height: 2.5rem;
+
+  p,
+  ul,
+  ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   footer {
     font-family: $font-family-roboto;
@@ -175,12 +242,4 @@ blockquote,
       content: "\2014\A0";
     }
   }
-}
-
-small,
-.small {
-  font-size: 0.75rem;
-  font-style: italic;
-  letter-spacing: 1px;
-  line-height: 1.25rem;
 }

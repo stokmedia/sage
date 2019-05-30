@@ -17866,6 +17866,32 @@ body#tinymce {
 /* line 7, resources/assets/styles/skhoop/common/_typography.scss */
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-bottom: 1.625rem;
+}
+
+/* line 22, resources/assets/styles/skhoop/common/_typography.scss */
+
+ol,
+ul,
+p,
+blockquote {
+  margin-bottom: 1.625rem;
+}
+
+/* line 31, resources/assets/styles/skhoop/common/_typography.scss */
+
+h1,
 h3,
 h4,
 h5,
@@ -17878,7 +17904,7 @@ h6,
   font-family: "Roboto", sans-serif;
 }
 
-/* line 20, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 44, resources/assets/styles/skhoop/common/_typography.scss */
 
 h1,
 .h1 {
@@ -17890,7 +17916,7 @@ h1,
 }
 
 @media (min-width: 992px) {
-  /* line 20, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 44, resources/assets/styles/skhoop/common/_typography.scss */
 
   h1,
   .h1 {
@@ -17900,18 +17926,19 @@ h1,
   }
 }
 
-/* line 36, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 60, resources/assets/styles/skhoop/common/_typography.scss */
 
 h2,
 .h2 {
   font-family: "Source Serif Pro", serif;
   font-size: 1.5rem;
   font-weight: 600;
+  letter-spacing: 0.03px;
   line-height: 1.875rem;
 }
 
 @media (min-width: 992px) {
-  /* line 36, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 60, resources/assets/styles/skhoop/common/_typography.scss */
 
   h2,
   .h2 {
@@ -17920,49 +17947,50 @@ h2,
   }
 }
 
-/* line 50, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 75, resources/assets/styles/skhoop/common/_typography.scss */
 
 h3,
 .h3 {
   font-size: 1.25rem;
   font-weight: 300;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.16px;
   line-height: 1.5rem;
 }
 
 @media (min-width: 992px) {
-  /* line 50, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 75, resources/assets/styles/skhoop/common/_typography.scss */
 
   h3,
   .h3 {
     font-size: 1.25rem;
-    letter-spacing: -0.16px;
+    letter-spacing: 0.5px;
     line-height: 3.125rem;
   }
 }
 
-/* line 65, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 90, resources/assets/styles/skhoop/common/_typography.scss */
 
 h4,
 .h4 {
   font-size: 0.8125rem;
   font-weight: 500;
-  letter-spacing: 1.86px;
+  letter-spacing: 1px;
   line-height: 1.25rem;
+  text-transform: uppercase;
 }
 
 @media (min-width: 992px) {
-  /* line 65, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 90, resources/assets/styles/skhoop/common/_typography.scss */
 
   h4,
   .h4 {
     font-size: 0.875rem;
-    letter-spacing: 1px;
+    letter-spacing: 1.86px;
     line-height: 1.5625rem;
   }
 }
 
-/* line 80, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 106, resources/assets/styles/skhoop/common/_typography.scss */
 
 h5,
 .h5 {
@@ -17973,7 +18001,7 @@ h5,
 }
 
 @media (min-width: 992px) {
-  /* line 80, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 106, resources/assets/styles/skhoop/common/_typography.scss */
 
   h5,
   .h5 {
@@ -17982,7 +18010,7 @@ h5,
   }
 }
 
-/* line 94, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 120, resources/assets/styles/skhoop/common/_typography.scss */
 
 h6,
 .h6 {
@@ -17993,7 +18021,7 @@ h6,
 }
 
 @media (min-width: 992px) {
-  /* line 94, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 120, resources/assets/styles/skhoop/common/_typography.scss */
 
   h6,
   .h6 {
@@ -18002,7 +18030,7 @@ h6,
   }
 }
 
-/* line 110, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 136, resources/assets/styles/skhoop/common/_typography.scss */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -18014,7 +18042,7 @@ body {
 }
 
 @media (min-width: 992px) {
-  /* line 110, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 136, resources/assets/styles/skhoop/common/_typography.scss */
 
   body {
     font-size: 0.875rem;
@@ -18022,7 +18050,7 @@ body {
   }
 }
 
-/* line 125, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 151, resources/assets/styles/skhoop/common/_typography.scss */
 
 em {
   font-family: "Source Serif Pro", serif;
@@ -18030,7 +18058,7 @@ em {
   font-weight: 400;
 }
 
-/* line 131, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 157, resources/assets/styles/skhoop/common/_typography.scss */
 
 .preamble {
   font-family: "Source Serif Pro", serif;
@@ -18041,7 +18069,7 @@ em {
 }
 
 @media (min-width: 992px) {
-  /* line 131, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 157, resources/assets/styles/skhoop/common/_typography.scss */
 
   .preamble {
     font-size: 1.25rem;
@@ -18049,7 +18077,7 @@ em {
   }
 }
 
-/* line 146, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 172, resources/assets/styles/skhoop/common/_typography.scss */
 
 p em {
   font-size: 1rem;
@@ -18057,7 +18085,7 @@ p em {
 }
 
 @media (min-width: 992px) {
-  /* line 146, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 172, resources/assets/styles/skhoop/common/_typography.scss */
 
   p em {
     font-size: 1.25rem;
@@ -18065,11 +18093,45 @@ p em {
   }
 }
 
-/* line 158, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 184, resources/assets/styles/skhoop/common/_typography.scss */
+
+p img.aligncenter,
+p img.alignnone {
+  margin: 2.875rem auto;
+}
+
+/* line 191, resources/assets/styles/skhoop/common/_typography.scss */
+
+small,
+.small {
+  font-size: 0.75rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 1.25rem;
+}
+
+/* line 199, resources/assets/styles/skhoop/common/_typography.scss */
+
+b,
+strong,
+.strong {
+  font-weight: 700;
+}
+
+/* line 209, resources/assets/styles/skhoop/common/_typography.scss */
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: 0;
+}
+
+/* line 217, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote,
 .blockquote {
-  padding-left: 20px;
+  padding-left: 18px;
   border-left: 8px solid #031532;
   font-family: "Covered By Your Grace", cursive;
   font-size: 1.875rem;
@@ -18077,7 +18139,18 @@ blockquote,
   line-height: 2.5rem;
 }
 
-/* line 167, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 229, resources/assets/styles/skhoop/common/_typography.scss */
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child,
+.blockquote p:last-child,
+.blockquote ul:last-child,
+.blockquote ol:last-child {
+  margin-bottom: 0;
+}
+
+/* line 234, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote footer,
 .blockquote footer {
@@ -18088,21 +18161,11 @@ blockquote footer,
   line-height: 1.5625rem;
 }
 
-/* line 174, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 241, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote footer::before,
 .blockquote footer::before {
   content: "\2014\A0";
-}
-
-/* line 180, resources/assets/styles/skhoop/common/_typography.scss */
-
-small,
-.small {
-  font-size: 0.75rem;
-  font-style: italic;
-  letter-spacing: 1px;
-  line-height: 1.25rem;
 }
 
 /* line 1, resources/assets/styles/skhoop/components/_buttons.scss */
@@ -18125,6 +18188,42 @@ small,
 
 .search-form label {
   font-weight: normal;
+}
+
+/* line 12, resources/assets/styles/skhoop/components/_section.scss */
+
+.section {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 992px) {
+  /* line 12, resources/assets/styles/skhoop/components/_section.scss */
+
+  .section {
+    margin-bottom: 100px;
+  }
+}
+
+/* line 27, resources/assets/styles/skhoop/components/_section.scss */
+
+.section.is-small-mb,
+.section.is-small-mb-next-section {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+  /* line 27, resources/assets/styles/skhoop/components/_section.scss */
+
+  .section.is-small-mb,
+  .section.is-small-mb-next-section {
+    margin-bottom: 70px;
+  }
+}
+
+/* line 36, resources/assets/styles/skhoop/components/_section.scss */
+
+.section.no-mb {
+  margin-bottom: 0;
 }
 
 /**
