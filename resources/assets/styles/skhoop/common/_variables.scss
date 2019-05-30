@@ -120,7 +120,9 @@ $input-btn-padding-y-lg:      0.9375rem;
 $input-btn-padding-x-lg:      1rem;
 
 // Allows for customizing button radius independently from global border radius
+$border-radius:                1.1875rem;
 $border-radius-lg:            9.375rem;
+$border-radius-sm:            0.9375rem;
 
 $input-btn-font-size-sm:      0.75rem;
 $input-btn-padding-y-sm:      0.3125rem;
@@ -130,7 +132,11 @@ $btn-font-weight:             500;
 
 // Forms & Form Controls
 $input-height-lg:              3.125rem;
+
+$input-padding-x:              2.0625rem;
+$input-padding-x-sm:           2.0625rem;
 $input-padding-x-lg:           2.0625rem;
+
 $input-placeholder-color:      $body-color;
 $input-border-color:         #7e7e7e;
 $input-font-size-lg:           0.8125rem;
