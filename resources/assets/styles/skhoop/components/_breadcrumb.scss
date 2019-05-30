@@ -1,0 +1,12 @@
+.breadcrumb-item {
+  color: $breadcrumb-active-color;
+  letter-spacing: 0.5px;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5625rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-right: 0.6875rem;
+}

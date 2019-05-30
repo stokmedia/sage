@@ -8507,7 +8507,7 @@ input[type="button"].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: #fff;
   border-radius: 0.25rem;
 }
 
@@ -8541,7 +8541,7 @@ input[type="button"].btn-block {
 /* line 38, node_modules/bootstrap/scss/_breadcrumb.scss */
 
 .breadcrumb-item.active {
-  color: #6c757d;
+  color: #031532;
 }
 
 /* line 5, node_modules/bootstrap/scss/_alert.scss */
@@ -18135,8 +18135,9 @@ small,
 .search-form .btn-group-sm > .search-submit,
 .comment-form input.btn-sm[type="submit"],
 .search-form .btn-sm.search-submit {
-  letter-spacing: 0.5px;
+  font-size: 0.75rem;
   font-weight: normal;
+  letter-spacing: 0.5px;
 }
 
 @media (min-width: 992px) {
@@ -18152,13 +18153,13 @@ small,
   }
 }
 
-/* line 32, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 33, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary {
   color: #fff;
 }
 
-/* line 36, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 37, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary:hover {
   color: #031532;
@@ -18166,14 +18167,14 @@ small,
   border-color: #7e7e7e;
 }
 
-/* line 46, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 47, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary {
   border-color: #7e7e7e;
   color: #031532;
 }
 
-/* line 51, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 52, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary:hover {
   color: #fff;
@@ -18188,6 +18189,25 @@ small,
 .comment-form .btn-group-vertical > input[type="submit"],
 .search-form .btn-group-vertical > .search-submit {
   min-width: auto;
+}
+
+/* line 1, resources/assets/styles/skhoop/components/_breadcrumb.scss */
+
+.breadcrumb-item {
+  color: #031532;
+  letter-spacing: 0.5px;
+}
+
+/* line 6, resources/assets/styles/skhoop/components/_breadcrumb.scss */
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5625rem;
+}
+
+/* line 10, resources/assets/styles/skhoop/components/_breadcrumb.scss */
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-right: 0.6875rem;
 }
 
 /* line 5, resources/assets/styles/skhoop/components/_comments.scss */
