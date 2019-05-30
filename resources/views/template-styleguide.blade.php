@@ -20,9 +20,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-12">
         <p class="bs-component">
-          <h3>Small</h3>
+          <h3 class="mb-0"mall</h3>
           <button class="btn btn-sm btn-primary" type="button">Call to action</button>
           <button class="btn btn-sm btn-outline-primary" type="button">Call to action</button>
           <a class="btn btn-sm btn-link" href="#" role="button">Call to action</a>
@@ -40,7 +40,7 @@
           <button class="btn btn-lg btn-primary" type="button">CALL TO ACTION</button>
           <button class="btn btn-lg btn-outline-primary" type="button">CALL TO ACTION</button>
           <a class="btn btn-lg btn-link" href="#" role="button">CALL TO ACTION</a>
-          <div class="breadcrumb d-inline">
+          <div class="breadcrumb d-inline-block">
             <a class="breadcrumb-item" href="#">Home</a>
             <a class="breadcrumb-item" href="#">Level 2</a>
             <span class="breadcrumb-item active">Level 3</span>
@@ -59,18 +59,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-12">
         <p class="bs-component">
-          <h3>Normal</h3>
+          <h3 class="mb-0">Normal</h3>
           <div class="form-group">
             <input type="text" class="form-control form-control-lg" placeholder="HINT">
           </div>
 
-          <h3>Has error</h3>
+          <h3 class="mb-0">Has error</h3>
           <div class="form-group">
             <input type="text" class="form-control form-control-lg is-invalid">
             <div class="invalid-feedback">
-              Validation message
+              Your email is not valid
             </div>
           </div>
 
@@ -406,12 +406,12 @@
           <br />
           <!-- Text Sample -->
           <div class="row justify-content-center">
-            <div class="col-sm-8">
+            <div class="col-sm-12">
               <h5>Blockquote</h5>
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-sm-8">
+            <div class="col-sm-12">
               <div class="bs-component">
                 <p><em>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis. Rivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</em></p>
                 <blockquote>

@@ -3888,7 +3888,7 @@ textarea.form-control.is-valid,
   width: 100%;
   margin-top: 0.25rem;
   font-size: 80%;
-  color: #dab4b4;
+  color: #d45656;
 }
 
 /* line 38, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3903,8 +3903,8 @@ textarea.form-control.is-valid,
   margin-top: .1rem;
   font-size: 0.8725rem;
   line-height: 1.5;
-  color: #212529;
-  background-color: rgba(218, 180, 180, 0.9);
+  color: #fff;
+  background-color: rgba(212, 86, 86, 0.9);
   border-radius: 0.25rem;
 }
 
@@ -3927,9 +3927,9 @@ textarea.form-control.is-valid,
 .comment-form input.is-invalid[type="url"],
 .comment-form textarea.is-invalid,
 .search-form .is-invalid.search-field {
-  border-color: #dab4b4;
+  border-color: #d45656;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dab4b4' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dab4b4' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d45656' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d45656' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -3954,9 +3954,9 @@ textarea.form-control.is-valid,
 .comment-form input.is-invalid:focus[type="url"],
 .comment-form textarea.is-invalid:focus,
 .search-form .is-invalid.search-field:focus {
-  border-color: #dab4b4;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
+  border-color: #d45656;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
 }
 
 /* line 71, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4016,18 +4016,18 @@ textarea.form-control.is-invalid,
 
 .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
-  border-color: #dab4b4;
+  border-color: #d45656;
   padding-right: calc((1em + 0.75rem) * 3 / 4 + 1.75rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dab4b4' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dab4b4' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d45656' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d45656' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
 /* line 99, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-select:invalid:focus,
 .custom-select.is-invalid:focus {
-  border-color: #dab4b4;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
+  border-color: #d45656;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
 }
 
 /* line 104, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4052,7 +4052,7 @@ textarea.form-control.is-invalid,
 
 .was-validated .form-check-input:invalid ~ .form-check-label,
 .form-check-input.is-invalid ~ .form-check-label {
-  color: #dab4b4;
+  color: #d45656;
 }
 
 /* line 129, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4068,14 +4068,14 @@ textarea.form-control.is-invalid,
 
 .was-validated .custom-control-input:invalid ~ .custom-control-label,
 .custom-control-input.is-invalid ~ .custom-control-label {
-  color: #dab4b4;
+  color: #d45656;
 }
 
 /* line 142, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-control-input:invalid ~ .custom-control-label::before,
 .custom-control-input.is-invalid ~ .custom-control-label::before {
-  border-color: #dab4b4;
+  border-color: #d45656;
 }
 
 /* line 147, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4091,30 +4091,30 @@ textarea.form-control.is-invalid,
 
 .was-validated .custom-control-input:invalid:checked ~ .custom-control-label::before,
 .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
-  border-color: #ebd6d6;
-  background-color: #ebd6d6;
+  border-color: #de7f7f;
+  background-color: #de7f7f;
 }
 
 /* line 160, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before,
 .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
 }
 
 /* line 164, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-control-input:invalid:focus:not(:checked) ~ .custom-control-label::before,
 .custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before {
-  border-color: #dab4b4;
+  border-color: #d45656;
 }
 
 /* line 175, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-file-input:invalid ~ .custom-file-label,
 .custom-file-input.is-invalid ~ .custom-file-label {
-  border-color: #dab4b4;
+  border-color: #d45656;
 }
 
 /* line 179, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4130,9 +4130,9 @@ textarea.form-control.is-invalid,
 
 .was-validated .custom-file-input:invalid:focus ~ .custom-file-label,
 .custom-file-input.is-invalid:focus ~ .custom-file-label {
-  border-color: #dab4b4;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
+  border-color: #d45656;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
 }
 
 /* line 258, node_modules/bootstrap/scss/_forms.scss */
@@ -16850,6 +16850,15 @@ blockquote footer::before,
   .search-form .search-field {
     width: auto;
   }
+}
+
+/* line 30, resources/assets/styles/skhoop/components/_forms.scss */
+
+.invalid-feedback {
+  font-size: 0.75rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 20px;
 }
 
 /* line 12, resources/assets/styles/skhoop/components/_section.scss */
