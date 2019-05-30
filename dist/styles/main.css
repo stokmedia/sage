@@ -3694,12 +3694,12 @@ mark,
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #7e7e7e;
   border-radius: 0.25rem;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -3759,7 +3759,7 @@ mark,
 .comment-form input[type="url"]::-webkit-input-placeholder,
 .comment-form textarea::-webkit-input-placeholder,
 .search-form .search-field::-webkit-input-placeholder {
-  color: #6c757d;
+  color: #031532;
   opacity: 1;
 }
 
@@ -3769,7 +3769,7 @@ mark,
 .comment-form input[type="url"]::-ms-input-placeholder,
 .comment-form textarea::-ms-input-placeholder,
 .search-form .search-field::-ms-input-placeholder {
-  color: #6c757d;
+  color: #031532;
   opacity: 1;
 }
 
@@ -3779,7 +3779,7 @@ mark,
 .comment-form input[type="url"]::placeholder,
 .comment-form textarea::placeholder,
 .search-form .search-field::placeholder {
-  color: #6c757d;
+  color: #031532;
   opacity: 1;
 }
 
@@ -3832,7 +3832,7 @@ select.form-control:focus::-ms-value,
 .col-form-label-lg {
   padding-top: calc(0.9375rem + 1px);
   padding-bottom: calc(0.9375rem + 1px);
-  font-size: 1.25rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
 }
 
@@ -3881,9 +3881,9 @@ select.form-control:focus::-ms-value,
 /* line 145, node_modules/bootstrap/scss/_forms.scss */
 
 .form-control-lg {
-  height: calc(1.5em + 1.875rem + 2px);
-  padding: 0.9375rem 1rem;
-  font-size: 1.25rem;
+  height: 3.125rem;
+  padding: 0.9375rem 2.0625rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   border-radius: 9.375rem;
 }
@@ -6399,7 +6399,7 @@ input[type="button"].btn-block {
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
-  border: 1px solid #ced4da;
+  border: 1px solid #7e7e7e;
   border-radius: 0.25rem;
 }
 
@@ -6419,7 +6419,7 @@ input[type="button"].btn-block {
 .comment-form .input-group-lg > textarea:not(textarea),
 .search-form .input-group-lg > .search-field:not(textarea),
 .input-group-lg > .custom-select {
-  height: calc(1.5em + 1.875rem + 2px);
+  height: 3.125rem;
 }
 
 /* line 135, node_modules/bootstrap/scss/_input-group.scss */
@@ -6439,8 +6439,8 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-append > .btn,
 .comment-form .input-group-lg > .input-group-append > input[type="submit"],
 .search-form .input-group-lg > .input-group-append > .search-submit {
-  padding: 0.9375rem 1rem;
-  font-size: 1.25rem;
+  padding: 0.9375rem 2.0625rem;
+  font-size: 0.8125rem;
   line-height: 1.5;
   border-radius: 9.375rem;
 }
@@ -6745,13 +6745,13 @@ input[type="button"].btn-block {
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.5;
   color: #495057;
   vertical-align: middle;
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
   background-color: #fff;
-  border: 1px solid #ced4da;
+  border: 1px solid #7e7e7e;
   border-radius: 0.25rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -6809,11 +6809,11 @@ input[type="button"].btn-block {
 /* line 276, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-select-lg {
-  height: calc(1.5em + 1.875rem + 2px);
+  height: 3.125rem;
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
-  padding-left: 1rem;
-  font-size: 1.25rem;
+  padding-left: 2.0625rem;
+  font-size: 0.8125rem;
 }
 
 /* line 289, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6873,11 +6873,11 @@ input[type="button"].btn-block {
   z-index: 1;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
-  border: 1px solid #ced4da;
+  border: 1px solid #7e7e7e;
   border-radius: 0.25rem;
 }
 
@@ -18222,6 +18222,31 @@ small,
 
 .search-form label {
   font-weight: normal;
+}
+
+/* line 21, resources/assets/styles/skhoop/components/_forms.scss */
+
+.form-control,
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea,
+.search-form .search-field {
+  min-width: 300px;
+  letter-spacing: 1.86px;
+}
+
+@media (min-width: 992px) {
+  /* line 21, resources/assets/styles/skhoop/components/_forms.scss */
+
+  .form-control,
+  .comment-form input[type="text"],
+  .comment-form input[type="email"],
+  .comment-form input[type="url"],
+  .comment-form textarea,
+  .search-form .search-field {
+    width: auto;
+  }
 }
 
 /**
