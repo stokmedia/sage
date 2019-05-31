@@ -36,7 +36,7 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
-  --breakpoint-xl: 1210px;
+  --breakpoint-xl: 1240px;
   --breakpoint-xxl: 1480px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -753,11 +753,11 @@ mark,
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 6, node_modules/bootstrap/scss/_grid.scss */
 
   .container {
-    max-width: 1180px;
+    max-width: 1210px;
   }
 }
 
@@ -2182,7 +2182,7 @@ mark,
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 31, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
 
   .col-xl {
@@ -3269,7 +3269,7 @@ mark,
   }
 }
 
-@media (max-width: 1209.98px) {
+@media (max-width: 1239.98px) {
   /* line 171, node_modules/bootstrap/scss/_tables.scss */
 
   .table-responsive-xl {
@@ -5461,7 +5461,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 42, node_modules/bootstrap/scss/_dropdown.scss */
 
   .dropdown-menu-xl-left {
@@ -7288,7 +7288,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (max-width: 1209.98px) {
+@media (max-width: 1239.98px) {
   /* line 142, node_modules/bootstrap/scss/_navbar.scss */
 
   .navbar-expand-xl > .container,
@@ -7298,7 +7298,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 140, node_modules/bootstrap/scss/_navbar.scss */
 
   .navbar-expand-xl {
@@ -8512,7 +8512,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 88, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-xl {
@@ -9152,7 +9152,7 @@ a.close.disabled {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 228, node_modules/bootstrap/scss/_modal.scss */
 
   .modal-xl {
@@ -9853,7 +9853,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
 
   .d-xl-none {
@@ -11128,7 +11128,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 11, node_modules/bootstrap/scss/utilities/_flex.scss */
 
   .flex-xl-row {
@@ -11726,7 +11726,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 7, node_modules/bootstrap/scss/utilities/_float.scss */
 
   .float-xl-left {
@@ -14460,7 +14460,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
   .m-xl-0 {
@@ -15798,7 +15798,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 22, node_modules/bootstrap/scss/utilities/_text.scss */
 
   .text-xl-left {
