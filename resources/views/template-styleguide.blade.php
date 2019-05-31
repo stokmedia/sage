@@ -49,7 +49,10 @@
       </div>
     </div>
   </div>
+  <br />
   <!-- Buttons ================================================== -->
+
+  <!-- Inputs ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
       <div class="row">
@@ -79,7 +82,73 @@
     </div>
   </div>
   <br />
+  <!-- Inputs ================================================== -->
+
+  <!-- Custom Forms ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 id="buttons">Custom forms</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="bs-component">
+          <div class="bs-component">
+            <fieldset>
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input id="customRadio1" class="custom-control-input" checked="checked" name="customRadio" type="radio">
+                  <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label></div>
+                <div class="custom-control custom-radio">
+                  <input id="customRadio2" class="custom-control-input" name="customRadio" type="radio" checked>
+                  <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label></div>
+                <div class="custom-control custom-radio"><input id="customRadio3" class="custom-control-input" disabled="disabled"
+                    name="customRadio" type="radio">
+                  <label class="custom-control-label" for="customRadio3">Disabled custom radio</label></div>
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-checkbox"><input id="customCheck1" class="custom-control-input"
+                    checked="checked" type="checkbox">
+                  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label></div>
+                <div class="custom-control custom-checkbox"><input id="customCheck2" class="custom-control-input"
+                    disabled="disabled" type="checkbox">
+                  <label class="custom-control-label" for="customCheck2">Disabled custom checkbox</label></div>
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-switch"><input id="customSwitch1" class="custom-control-input" checked="checked"
+                    type="checkbox">
+                  <label class="custom-control-label" for="customSwitch1">Toggle this Switch element</label></div>
+                <div class="custom-control custom-switch"><input id="customSwitch2" class="custom-control-input"
+                    disabled="disabled" type="checkbox">
+                  <label class="custom-control-label" for="customSwitch2">Disabled Switch element</label></div>
+              </div>
+              <div class="form-group"><select class="custom-select">
+                  <option selected="selected">Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select></div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="custom-file"><input id="inputGroupFile02" class="custom-file-input" type="file">
+                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label></div>
+                  <div class="input-group-append"><span id="" class="input-group-text">Upload</span></div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        </p>
+      </div>
+    </div>
+  </div>
   <br />
+  <!-- Custom Forms ================================================== -->
+
+
   <!-- Typography ================================================== -->
   <div class="bs-docs-section">
     <div class="row">
@@ -203,57 +272,65 @@
             <fieldset>
               <legend>Legend</legend>
               <div class="form-group row">
-
                 <label class="col-sm-2 col-form-label" for="staticEmail">Email</label>
-                <div class="col-sm-10"><input id="staticEmail" class="form-control-plaintext" readonly="readonly"
-                    type="text" value="email@example.com" /></div>
+                <div class="col-sm-10">
+                  <input id="staticEmail" class="form-control-plaintext" readonly="readonly" type="text" value="email@example.com" />
+                </div>
               </div>
               <div class="form-group"><label for="exampleInputEmail1">Email address</label>
-                <input id="exampleInputEmail1" class="form-control" type="email" placeholder="Enter email"
-                  aria-describedby="emailHelp" />
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                  else.</small></div>
+                <input id="exampleInputEmail1" class="form-control" type="email" placeholder="Enter email" aria-describedby="emailHelp" />
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
               <div class="form-group"><label for="exampleInputPassword1">Password</label>
                 <input id="exampleInputPassword1" class="form-control" type="password" placeholder="Password" /></div>
-              <div class="form-group"><label for="exampleSelect1">Example select</label>
+              <div class="form-group">
+                <label for="exampleSelect1">Example select</label>
                 <select id="exampleSelect1" class="form-control">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
                   <option>5</option>
-                </select></div>
-              <div class="form-group"><label for="exampleSelect2">Example multiple select</label>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleSelect2">Example multiple select</label>
                 <select id="exampleSelect2" class="form-control" multiple="multiple">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
                   <option>5</option>
-                </select></div>
-              <div class="form-group"><label for="exampleTextarea">Example textarea</label>
-                <textarea id="exampleTextarea" class="form-control" rows="3"></textarea></div>
-              <div class="form-group"><label for="exampleInputFile">File input</label>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleTextarea">Example textarea</label>
+                <textarea id="exampleTextarea" class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputFile">File input</label>
                 <input id="exampleInputFile" class="form-control-file" type="file" aria-describedby="fileHelp" />
-                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for
-                  the above input. It's a bit lighter and easily wraps to a new line.</small></div>
+                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for  the above input. It is a bit lighter and easily wraps to a new line.</small>
+              </div>
               <fieldset class="form-group">
                 <legend>Radio buttons</legend>
                 <div class="form-check"><label class="form-check-label">
-                    <input id="optionsRadios1" class="form-check-input" checked="checked" name="optionsRadios"
-                      type="radio" value="option1" />
+                    <input id="optionsRadios1" class="form-check-input" checked="checked" name="optionsRadios" type="radio" value="option1" />
                     Option one is this and that—be sure to include why it's great
-                  </label></div>
-                <div class="form-check"><label class="form-check-label">
-                    <input id="optionsRadios2" class="form-check-input" name="optionsRadios" type="radio"
-                      value="option2" />
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input id="optionsRadios2" class="form-check-input" name="optionsRadios" type="radio" value="option2" />
                     Option two can be something else and selecting it will deselect option one
-                  </label></div>
-                <div class="form-check disabled"><label class="form-check-label">
-                    <input id="optionsRadios3" class="form-check-input" disabled="disabled" name="optionsRadios"
-                      type="radio" value="option3" />
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                  <label class="form-check-label">
+                    <input id="optionsRadios3" class="form-check-input" disabled="disabled" name="optionsRadios" type="radio" value="option3" />
                     Option three is disabled
-                  </label></div>
+                  </label>
+                </div>
               </fieldset>
               <fieldset class="form-group">
                 <legend>Checkboxes</legend>
@@ -336,10 +413,10 @@
             <div class="form-group">
               <div class="custom-control custom-switch"><input id="customSwitch1" class="custom-control-input"
                   checked="checked" type="checkbox" />
-                <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label></div>
+                <label class="custom-control-label" for="customSwitch1">Toggle this Switch element</label></div>
               <div class="custom-control custom-switch"><input id="customSwitch2" class="custom-control-input"
                   disabled="disabled" type="checkbox" />
-                <label class="custom-control-label" for="customSwitch2">Disabled switch element</label></div>
+                <label class="custom-control-label" for="customSwitch2">Disabled Switch element</label></div>
             </div>
             <div class="form-group"><select class="custom-select">
                 <option selected="selected">Open this select menu</option>
