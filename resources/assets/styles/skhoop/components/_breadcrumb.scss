@@ -1,3 +1,12 @@
+.breadcrumb {
+  padding: 0.5625rem 1rem;
+
+  &.is-vertical {
+    transform: rotate(90deg);
+    transform-origin: center;
+  }
+}
+
 .breadcrumb-item {
   color: $breadcrumb-active-color;
   letter-spacing: 0.5px;

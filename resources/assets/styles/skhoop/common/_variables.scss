@@ -15,6 +15,7 @@ $teal:                        #20c997;
 $cyan:                        #17a2b8;
 $black:                       #000;
 $white:                       #fff;
+$ash:                        #f1f1f1;
 $primary:                      $green;
 $secondary:                   #b2b2b2;
 $success:                      $green;
@@ -28,7 +29,8 @@ $theme-colors: (
   "success":                   $success,
   "info":                      $info,
   "warning":                   $warning,
-  "danger":                    $danger
+  "danger":                    $danger,
+  "ash":                       $ash,
 );
 
 // Responsive font size breakpoint
@@ -116,6 +118,9 @@ $container-max-widths: (
   xl: 1210px,
   xxl: 1450px
 );
+
+// Alert
+$alert-bg-level:             0;
 
 // Buttons
 //
