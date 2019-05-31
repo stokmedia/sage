@@ -16819,6 +16819,57 @@ blockquote footer::before,
   padding-right: 0.6875rem;
 }
 
+/* line 1, resources/assets/styles/skhoop/components/_dropdown.scss */
+
+.dropdown {
+  min-width: 300px;
+}
+
+/* line 5, resources/assets/styles/skhoop/components/_dropdown.scss */
+
+.dropdown-toggle {
+  width: 100%;
+  padding-left: 2.0625rem;
+  position: relative;
+}
+
+/* line 10, resources/assets/styles/skhoop/components/_dropdown.scss */
+
+.dropdown-toggle::after {
+  content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDBweCIgaGVpZ2h0PSI0MHB4IiB2aWV3Qm94PSIwIDAgNDAgNDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU1ICg3ODA3NikgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+QlROL0Fycm93PC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciB4PSItMjYuMiUiIHk9Ii0yNi4yJSIgd2lkdGg9IjE1Mi41JSIgaGVpZ2h0PSIxNTIuNSUiIGZpbHRlclVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgaWQ9ImZpbHRlci0xIj4KICAgICAgICAgICAgPGZlT2Zmc2V0IGR4PSIwIiBkeT0iMCIgaW49IlNvdXJjZUFscGhhIiByZXN1bHQ9InNoYWRvd09mZnNldE91dGVyMSI+PC9mZU9mZnNldD4KICAgICAgICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMi41IiBpbj0ic2hhZG93T2Zmc2V0T3V0ZXIxIiByZXN1bHQ9InNoYWRvd0JsdXJPdXRlcjEiPjwvZmVHYXVzc2lhbkJsdXI+CiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwICAgMCAwIDAgMCAwICAgMCAwIDAgMCAwICAwIDAgMCAwLjEgMCIgdHlwZT0ibWF0cml4IiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiPjwvZmVDb2xvck1hdHJpeD4KICAgICAgICAgICAgPGZlTWVyZ2U+CiAgICAgICAgICAgICAgICA8ZmVNZXJnZU5vZGUgaW49InNoYWRvd01hdHJpeE91dGVyMSI+PC9mZU1lcmdlTm9kZT4KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyI+PC9mZU1lcmdlTm9kZT4KICAgICAgICAgICAgPC9mZU1lcmdlPgogICAgICAgIDwvZmlsdGVyPgogICAgPC9kZWZzPgogICAgPGcgaWQ9IkJUTi9BcnJvdyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlci0xKSIgZmlsbD0iI0ZGRkZGRiIgaWQ9Ik92YWwiPgogICAgICAgICAgICA8Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCI+PC9jaXJjbGU+CiAgICAgICAgPC9nPgogICAgICAgIDxnIGlkPSJyaWdodC1hcnJvdyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAuMDAwMDAwLCAxOC41MDAwMDApIHJvdGF0ZSgtMjcwLjAwMDAwMCkgdHJhbnNsYXRlKC0yMC4wMDAwMDAsIC0xOC41MDAwMDApIHRyYW5zbGF0ZSgxMS41MDAwMDAsIDEyLjUwMDAwMCkiIGZpbGw9IiMxRTIwMUQiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMS40NDc2MDI0LDAuMTgwNDcxNTAyIEMxMS4yMTYwMDUxLC0wLjA2MDE1NzE2NzQgMTAuODMwNTQ5NCwtMC4wNjAxNTcxNjc0IDEwLjU5MDg1NDIsMC4xODA0NzE1MDIgQzEwLjM1OTI1NjksMC40MTI5NzA4MjUgMTAuMzU5MjU2OSwwLjc5OTkyNzczOSAxMC41OTA4NTQyLDEuMDMxODg1MTEgTDE0LjkzNTA1ODcsNS4zOTMwMDg3NiBMMC41OTk3Nzc3MDcsNS4zOTMwMDg3NiBDMC4yNjU2MDgxMyw1LjM5MzU1MDcyIDAsNS42NjAxOTMzIDAsNS45OTU2NjQzNSBDMCw2LjMzMTEzNTQgMC4yNjU2MDgxMyw2LjYwNjQ0OTI4IDAuNTk5Nzc3NzA3LDYuNjA2NDQ5MjggTDE0LjkzNTA1ODcsNi42MDY0NDkyOCBMMTAuNTkwODU0MiwxMC45NTk0NDM2IEMxMC4zNTkyNTY5LDExLjIwMDA3MjMgMTAuMzU5MjU2OSwxMS41ODc1NzExIDEwLjU5MDg1NDIsMTEuODE5NTI4NSBDMTAuODMwNTQ5NCwxMi4wNjAxNTcyIDExLjIxNjU0NDksMTIuMDYwMTU3MiAxMS40NDc2MDI0LDExLjgxOTUyODUgTDE2LjgyMDIyODYsNi40MjU5Nzc3OCBDMTcuMDU5OTIzOCw2LjE5MzQ3ODQ2IDE3LjA1OTkyMzgsNS44MDY1MjE1NCAxNi44MjAyMjg2LDUuNTc0NTY0MTggTDExLjQ0NzYwMjQsMC4xODA0NzE1MDIgWiIgaWQ9IlBhdGgiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+  border: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 10px;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: auto;
+}
+
+/* line 24, resources/assets/styles/skhoop/components/_dropdown.scss */
+
+.dropdown-menu {
+  border-radius: 0;
+}
+
+/* line 28, resources/assets/styles/skhoop/components/_dropdown.scss */
+
+.dropdown-item {
+  padding: 0.6875rem 1.5rem;
+}
+
+/* line 32, resources/assets/styles/skhoop/components/_dropdown.scss */
+
+.show > .dropdown-menu {
+  right: 0 !important;
+  left: 0 !important;
+  width: 85%;
+  margin: auto;
+  padding: 0;
+}
+
 /* line 5, resources/assets/styles/skhoop/components/_comments.scss */
 
 .comment-list ol {
@@ -16833,8 +16884,8 @@ blockquote footer::before,
 .comment-form input[type="url"],
 .comment-form textarea,
 .search-form .search-field {
-  min-width: 300px;
   letter-spacing: 1.86px;
+  min-width: 300px;
 }
 
 @media (min-width: 992px) {

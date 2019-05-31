@@ -1,6 +1,6 @@
 .form-control {
-  min-width: 300px;
   letter-spacing: 1.86px;
+  min-width: 300px;
 
   @include media-breakpoint-up(lg) {
     width: auto;
