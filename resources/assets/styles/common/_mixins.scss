@@ -1,9 +1,16 @@
 // Mixins
-@mixin aspect-ratio-viewport($width, $height) {
+@mixin aspect-ratio-viewport($width, $height, $min) {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: calc(100vw * ( #{$width} / #{$height} ));
+
+  @if $min=="min-height" {
+    min-height: calc(100vw * ( #{$width} / #{$height} ));
+  }
+
+  @else {
+    height: calc(100vw * ( #{$width} / #{$height} ));
+  }
 
   > img,
   > video,

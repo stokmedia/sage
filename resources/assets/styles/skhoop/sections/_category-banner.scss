@@ -1,23 +1,43 @@
 .category-banner {
-  @include aspect-ratio-viewport(5,18);
+  @include aspect-ratio-viewport(15,16, min-height);
 
-  padding: 2.8125rem 0;
+  padding: 1.25rem 0.3125rem;
   background-color: $primary;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 
+  @include media-breakpoint-up(sm) {
+    @include aspect-ratio-viewport(5,18, min-height);
+
+    padding: 2.8125rem 1.875rem;
+  }
+
   &-info {
-    width: 475px;
-    padding: 0.9375rem 1.563rem 1.563rem 2.5rem;
+    width: 100%;
+    padding: 1.25rem;
     border-radius: 0.3125rem;
     background-color: $white;
 
+    @include media-breakpoint-up(sm) {
+      width: 475px;
+      padding: 0.8125rem 1.563rem 1.25rem 2.5rem;
+    }
+
     .title {
-      margin-bottom: 0;
+      margin-bottom: 0.5rem;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
     }
 
     .content {
+      @include media-breakpoint-up(lg) {
+        position: relative;
+        top: -3px;
+      }
+
       > *:last-child {
         margin-bottom: 0;
       }
