@@ -20,9 +20,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-12">
         <p class="bs-component">
-          <h3>Small</h3>
+          <h3 class="mb-0"mall</h3>
           <button class="btn btn-sm btn-primary" type="button">Call to action</button>
           <button class="btn btn-sm btn-outline-primary" type="button">Call to action</button>
           <a class="btn btn-sm btn-link" href="#" role="button">Call to action</a>
@@ -40,7 +40,7 @@
           <button class="btn btn-lg btn-primary" type="button">CALL TO ACTION</button>
           <button class="btn btn-lg btn-outline-primary" type="button">CALL TO ACTION</button>
           <a class="btn btn-lg btn-link" href="#" role="button">CALL TO ACTION</a>
-          <div class="breadcrumb d-inline">
+          <div class="breadcrumb d-inline-block">
             <a class="breadcrumb-item" href="#">Home</a>
             <a class="breadcrumb-item" href="#">Level 2</a>
             <span class="breadcrumb-item active">Level 3</span>
@@ -49,7 +49,10 @@
       </div>
     </div>
   </div>
+  <br />
   <!-- Buttons ================================================== -->
+
+  <!-- Inputs ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
       <div class="row">
@@ -59,18 +62,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-12">
         <p class="bs-component">
-          <h3>Normal</h3>
+          <h3 class="mb-0">Normal</h3>
           <div class="form-group">
             <input type="text" class="form-control form-control-lg" placeholder="HINT">
           </div>
 
-          <h3>Has error</h3>
+          <h3 class="mb-0">Has error</h3>
           <div class="form-group">
             <input type="text" class="form-control form-control-lg is-invalid">
             <div class="invalid-feedback">
-              Validation message
+              Your email is not valid
             </div>
           </div>
 
@@ -79,7 +82,93 @@
     </div>
   </div>
   <br />
+  <!-- Inputs ================================================== -->
+
+  <!-- Custom Forms ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 id="buttons">Custom forms</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="bs-component">
+          <div class="bs-component">
+            <fieldset>
+              <div class="form-group">
+                <div class="custom-control custom-radio d-inline-block">
+                  <input id="customRadio1" class="custom-control-input" name="customRadio" type="radio" checked>
+                  <label class="custom-control-label" for="customRadio1"></label>
+                </div>
+                <div class="custom-control custom-radio d-inline-block"><input id="customRadio3" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
+                  <label class="custom-control-label" for="customRadio3"></label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="custom-control custom-radio">
+                  <input id="customRadio2" class="custom-control-input" name="customRadio" type="radio" checked>
+                  <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+                </div>
+                <div class="custom-control custom-radio"><input id="customRadio3" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
+                  <label class="custom-control-label" for="customRadio3">Disabled custom radio</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="custom-control custom-checkbox d-inline-block">
+                  <input id="customCheck01" class="custom-control-input" checked="checked" type="checkbox">
+                  <label class="custom-control-label" for="customCheck01"></label>
+                </div>
+                <div class="custom-control custom-checkbox d-inline-block">
+                  <input id="customCheck02" class="custom-control-input" disabled="disabled" type="checkbox">
+                  <label class="custom-control-label" for="customCheck02"></label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="custom-control custom-checkbox"><input id="customCheck1" class="custom-control-input"
+                    checked="checked" type="checkbox">
+                  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label></div>
+                <div class="custom-control custom-checkbox"><input id="customCheck2" class="custom-control-input"
+                    disabled="disabled" type="checkbox">
+                  <label class="custom-control-label" for="customCheck2">Disabled custom checkbox</label></div>
+              </div>
+              <div class="form-group">
+                <div class="custom-control custom-switch"><input id="customSwitch1" class="custom-control-input" checked="checked"
+                    type="checkbox">
+                  <label class="custom-control-label" for="customSwitch1">Toggle this Switch element</label></div>
+                <div class="custom-control custom-switch"><input id="customSwitch2" class="custom-control-input"
+                    disabled="disabled" type="checkbox">
+                  <label class="custom-control-label" for="customSwitch2">Disabled Switch element</label></div>
+              </div>
+              <div class="form-group"><select class="custom-select">
+                  <option selected="selected">Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select></div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="custom-file"><input id="inputGroupFile02" class="custom-file-input" type="file">
+                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label></div>
+                  <div class="input-group-append"><span id="" class="input-group-text">Upload</span></div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        </p>
+      </div>
+    </div>
+  </div>
   <br />
+  <!-- Custom Forms ================================================== -->
+
+
   <!-- Typography ================================================== -->
   <div class="bs-docs-section">
     <div class="row">
@@ -203,57 +292,65 @@
             <fieldset>
               <legend>Legend</legend>
               <div class="form-group row">
-
                 <label class="col-sm-2 col-form-label" for="staticEmail">Email</label>
-                <div class="col-sm-10"><input id="staticEmail" class="form-control-plaintext" readonly="readonly"
-                    type="text" value="email@example.com" /></div>
+                <div class="col-sm-10">
+                  <input id="staticEmail" class="form-control-plaintext" readonly="readonly" type="text" value="email@example.com" />
+                </div>
               </div>
               <div class="form-group"><label for="exampleInputEmail1">Email address</label>
-                <input id="exampleInputEmail1" class="form-control" type="email" placeholder="Enter email"
-                  aria-describedby="emailHelp" />
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                  else.</small></div>
+                <input id="exampleInputEmail1" class="form-control" type="email" placeholder="Enter email" aria-describedby="emailHelp" />
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
               <div class="form-group"><label for="exampleInputPassword1">Password</label>
                 <input id="exampleInputPassword1" class="form-control" type="password" placeholder="Password" /></div>
-              <div class="form-group"><label for="exampleSelect1">Example select</label>
+              <div class="form-group">
+                <label for="exampleSelect1">Example select</label>
                 <select id="exampleSelect1" class="form-control">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
                   <option>5</option>
-                </select></div>
-              <div class="form-group"><label for="exampleSelect2">Example multiple select</label>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleSelect2">Example multiple select</label>
                 <select id="exampleSelect2" class="form-control" multiple="multiple">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
                   <option>5</option>
-                </select></div>
-              <div class="form-group"><label for="exampleTextarea">Example textarea</label>
-                <textarea id="exampleTextarea" class="form-control" rows="3"></textarea></div>
-              <div class="form-group"><label for="exampleInputFile">File input</label>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleTextarea">Example textarea</label>
+                <textarea id="exampleTextarea" class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputFile">File input</label>
                 <input id="exampleInputFile" class="form-control-file" type="file" aria-describedby="fileHelp" />
-                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for
-                  the above input. It's a bit lighter and easily wraps to a new line.</small></div>
+                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for  the above input. It is a bit lighter and easily wraps to a new line.</small>
+              </div>
               <fieldset class="form-group">
                 <legend>Radio buttons</legend>
                 <div class="form-check"><label class="form-check-label">
-                    <input id="optionsRadios1" class="form-check-input" checked="checked" name="optionsRadios"
-                      type="radio" value="option1" />
+                    <input id="optionsRadios1" class="form-check-input" checked="checked" name="optionsRadios" type="radio" value="option1" />
                     Option one is this and that—be sure to include why it's great
-                  </label></div>
-                <div class="form-check"><label class="form-check-label">
-                    <input id="optionsRadios2" class="form-check-input" name="optionsRadios" type="radio"
-                      value="option2" />
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input id="optionsRadios2" class="form-check-input" name="optionsRadios" type="radio" value="option2" />
                     Option two can be something else and selecting it will deselect option one
-                  </label></div>
-                <div class="form-check disabled"><label class="form-check-label">
-                    <input id="optionsRadios3" class="form-check-input" disabled="disabled" name="optionsRadios"
-                      type="radio" value="option3" />
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                  <label class="form-check-label">
+                    <input id="optionsRadios3" class="form-check-input" disabled="disabled" name="optionsRadios" type="radio" value="option3" />
                     Option three is disabled
-                  </label></div>
+                  </label>
+                </div>
               </fieldset>
               <fieldset class="form-group">
                 <legend>Checkboxes</legend>
@@ -291,22 +388,22 @@
             <input id="inputInvalid" class="form-control is-invalid" type="text" value="wrong value" />
             <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
           </div>
-          <div class="form-group"><label class="col-form-label col-form-label-lg" for="inputLarge">Large input</label>
-            <input id="inputLarge" class="form-control form-control-lg" type="text" placeholder=".form-control-lg" />
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="bs-component">
+                <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis. Rivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+              </div>
+            </div>
           </div>
           <div class="form-group"><label class="col-form-label" for="inputDefault">Default input</label>
             <input id="inputDefault" class="form-control" type="text" placeholder="Default input" /></div>
           <div class="form-group"><label class="col-form-label col-form-label-sm" for="inputSmall">Small input</label>
             <input id="inputSmall" class="form-control form-control-sm" type="text" placeholder=".form-control-sm" />
           </div>
-          <div class="form-group">
-
-            <label class="control-label">Input addons</label>
-            <div class="form-group">
-              <div class="input-group mb-3">
-                <div class="input-group-prepend"><span class="input-group-text">$</span></div>
-                <input class="form-control" type="text" aria-label="Amount (to the nearest dollar)" />
-                <div class="input-group-append"><span class="input-group-text">.00</span></div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="bs-component">
+                <p><em>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis. Rivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</em></p>
               </div>
             </div>
           </div>
@@ -336,10 +433,10 @@
             <div class="form-group">
               <div class="custom-control custom-switch"><input id="customSwitch1" class="custom-control-input"
                   checked="checked" type="checkbox" />
-                <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label></div>
+                <label class="custom-control-label" for="customSwitch1">Toggle this Switch element</label></div>
               <div class="custom-control custom-switch"><input id="customSwitch2" class="custom-control-input"
                   disabled="disabled" type="checkbox" />
-                <label class="custom-control-label" for="customSwitch2">Disabled switch element</label></div>
+                <label class="custom-control-label" for="customSwitch2">Disabled Switch element</label></div>
             </div>
             <div class="form-group"><select class="custom-select">
                 <option selected="selected">Open this select menu</option>
@@ -354,7 +451,57 @@
                 <div class="input-group-append"><span id="" class="input-group-text">Upload</span></div>
               </div>
             </div>
-          </fieldset>
+          </div>
+          <br />
+          <!-- Unorder & Ordered List -->
+          <div class="row">
+            <div class="col-sm-12">
+              <h5>Unorder & Ordered List</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="bs-component">
+                <ul>
+                  <li>Cras justo odio</li>
+                  <li>Dapibus ac facilisis in</li>
+                  <li>Morbi leo risus</li>
+                  <li>Porta ac consectetur ac</li>
+                  <li>Vestibulum at eros</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="bs-component">
+                <ol>
+                  <li>Cras justo odio</li>
+                  <li>Dapibus ac facilisis in</li>
+                  <li>Morbi leo risus</li>
+                  <li>Porta ac consectetur ac</li>
+                  <li>Vestibulum at eros</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <br />
+          <!-- Text Sample -->
+          <div class="row justify-content-center">
+            <div class="col-sm-12">
+              <h5>Blockquote</h5>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-sm-12">
+              <div class="bs-component">
+                <p><em>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis. Rivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</em></p>
+                <blockquote>
+                  In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper
+                  <footer>Erik Björkgren, Grundare av OneLab</footer>
+                </blockquote>
+                <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis. Rivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

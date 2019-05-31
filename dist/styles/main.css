@@ -36,7 +36,7 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
-  --breakpoint-xl: 1210px;
+  --breakpoint-xl: 1240px;
   --breakpoint-xxl: 1480px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -691,7 +691,7 @@ mark,
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
   max-width: 100%;
   height: auto;
 }
@@ -753,11 +753,11 @@ mark,
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 6, node_modules/bootstrap/scss/_grid.scss */
 
   .container {
-    max-width: 1180px;
+    max-width: 1210px;
   }
 }
 
@@ -2182,7 +2182,7 @@ mark,
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 31, node_modules/bootstrap/scss/mixins/_grid-framework.scss */
 
   .col-xl {
@@ -3269,7 +3269,7 @@ mark,
   }
 }
 
-@media (max-width: 1209.98px) {
+@media (max-width: 1239.98px) {
   /* line 171, node_modules/bootstrap/scss/_tables.scss */
 
   .table-responsive-xl {
@@ -3329,7 +3329,7 @@ mark,
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 2.0625rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
@@ -3337,7 +3337,7 @@ mark,
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #7e7e7e;
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3509,10 +3509,10 @@ select.form-control:focus::-ms-value,
 
 .form-control-sm {
   height: calc(1.5em + 0.625rem + 2px);
-  padding: 0.3125rem 0.5rem;
+  padding: 0.3125rem 2.0625rem;
   font-size: 0.75rem;
   line-height: 1.5;
-  border-radius: 0.2rem;
+  border-radius: 0.9375rem;
 }
 
 /* line 145, node_modules/bootstrap/scss/_forms.scss */
@@ -3651,7 +3651,7 @@ textarea.form-control,
   line-height: 1.5;
   color: #212529;
   background-color: rgba(183, 202, 208, 0.9);
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
 }
 
 /* line 54, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3763,8 +3763,8 @@ textarea.form-control.is-valid,
 .was-validated .custom-select:valid,
 .custom-select.is-valid {
   border-color: #b7cad0;
-  padding-right: calc((1em + 0.75rem) * 3 / 4 + 1.75rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23b7cad0' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  padding-right: calc((1em + 0.75rem) * 3 / 4 + 3.0625rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23b7cad0' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 3.0625rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
 /* line 99, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3888,7 +3888,7 @@ textarea.form-control.is-valid,
   width: 100%;
   margin-top: 0.25rem;
   font-size: 80%;
-  color: #dab4b4;
+  color: #d45656;
 }
 
 /* line 38, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3903,9 +3903,9 @@ textarea.form-control.is-valid,
   margin-top: .1rem;
   font-size: 0.8725rem;
   line-height: 1.5;
-  color: #212529;
-  background-color: rgba(218, 180, 180, 0.9);
-  border-radius: 0.25rem;
+  color: #fff;
+  background-color: rgba(212, 86, 86, 0.9);
+  border-radius: 1.1875rem;
 }
 
 /* line 54, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3927,9 +3927,9 @@ textarea.form-control.is-valid,
 .comment-form input.is-invalid[type="url"],
 .comment-form textarea.is-invalid,
 .search-form .is-invalid.search-field {
-  border-color: #dab4b4;
+  border-color: #d45656;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dab4b4' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dab4b4' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d45656' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d45656' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -3954,9 +3954,9 @@ textarea.form-control.is-valid,
 .comment-form input.is-invalid:focus[type="url"],
 .comment-form textarea.is-invalid:focus,
 .search-form .is-invalid.search-field:focus {
-  border-color: #dab4b4;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
+  border-color: #d45656;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
 }
 
 /* line 71, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4016,18 +4016,18 @@ textarea.form-control.is-invalid,
 
 .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
-  border-color: #dab4b4;
-  padding-right: calc((1em + 0.75rem) * 3 / 4 + 1.75rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dab4b4' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23dab4b4' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right 1.75rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  border-color: #d45656;
+  padding-right: calc((1em + 0.75rem) * 3 / 4 + 3.0625rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d45656' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d45656' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right 3.0625rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
 /* line 99, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-select:invalid:focus,
 .custom-select.is-invalid:focus {
-  border-color: #dab4b4;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
+  border-color: #d45656;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
 }
 
 /* line 104, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4052,7 +4052,7 @@ textarea.form-control.is-invalid,
 
 .was-validated .form-check-input:invalid ~ .form-check-label,
 .form-check-input.is-invalid ~ .form-check-label {
-  color: #dab4b4;
+  color: #d45656;
 }
 
 /* line 129, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4068,14 +4068,14 @@ textarea.form-control.is-invalid,
 
 .was-validated .custom-control-input:invalid ~ .custom-control-label,
 .custom-control-input.is-invalid ~ .custom-control-label {
-  color: #dab4b4;
+  color: #d45656;
 }
 
 /* line 142, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-control-input:invalid ~ .custom-control-label::before,
 .custom-control-input.is-invalid ~ .custom-control-label::before {
-  border-color: #dab4b4;
+  border-color: #d45656;
 }
 
 /* line 147, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4091,30 +4091,30 @@ textarea.form-control.is-invalid,
 
 .was-validated .custom-control-input:invalid:checked ~ .custom-control-label::before,
 .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
-  border-color: #ebd6d6;
-  background-color: #ebd6d6;
+  border-color: #de7f7f;
+  background-color: #de7f7f;
 }
 
 /* line 160, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before,
 .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
 }
 
 /* line 164, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-control-input:invalid:focus:not(:checked) ~ .custom-control-label::before,
 .custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before {
-  border-color: #dab4b4;
+  border-color: #d45656;
 }
 
 /* line 175, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-file-input:invalid ~ .custom-file-label,
 .custom-file-input.is-invalid ~ .custom-file-label {
-  border-color: #dab4b4;
+  border-color: #d45656;
 }
 
 /* line 179, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4130,9 +4130,9 @@ textarea.form-control.is-invalid,
 
 .was-validated .custom-file-input:invalid:focus ~ .custom-file-label,
 .custom-file-input.is-invalid:focus ~ .custom-file-label {
-  border-color: #dab4b4;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(218, 180, 180, 0.25);
+  border-color: #d45656;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.25);
 }
 
 /* line 258, node_modules/bootstrap/scss/_forms.scss */
@@ -4312,7 +4312,7 @@ textarea.form-control.is-invalid,
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -5268,7 +5268,7 @@ fieldset:disabled .search-form a.search-submit,
   padding: 0.3125rem 0.5rem;
   font-size: 0.75rem;
   line-height: 1.5;
-  border-radius: 0.2rem;
+  border-radius: 0.9375rem;
 }
 
 /* line 120, node_modules/bootstrap/scss/_buttons.scss */
@@ -5396,7 +5396,7 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
 }
 
 /* line 42, node_modules/bootstrap/scss/_dropdown.scss */
@@ -5461,7 +5461,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 42, node_modules/bootstrap/scss/_dropdown.scss */
 
   .dropdown-menu-xl-left {
@@ -6011,7 +6011,7 @@ input[type="button"].btn-block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 2.0625rem;
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: 400;
@@ -6021,7 +6021,7 @@ input[type="button"].btn-block {
   white-space: nowrap;
   background-color: #e9ecef;
   border: 1px solid #7e7e7e;
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
 }
 
 /* line 118, node_modules/bootstrap/scss/_input-group.scss */
@@ -6095,17 +6095,17 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-append > .btn,
 .comment-form .input-group-sm > .input-group-append > input[type="submit"],
 .search-form .input-group-sm > .input-group-append > .search-submit {
-  padding: 0.3125rem 0.5rem;
+  padding: 0.3125rem 2.0625rem;
   font-size: 0.75rem;
   line-height: 1.5;
-  border-radius: 0.2rem;
+  border-radius: 0.9375rem;
 }
 
 /* line 164, node_modules/bootstrap/scss/_input-group.scss */
 
 .input-group-lg > .custom-select,
 .input-group-sm > .custom-select {
-  padding-right: 1.75rem;
+  padding-right: 3.0625rem;
 }
 
 /* line 177, node_modules/bootstrap/scss/_input-group.scss */
@@ -6150,7 +6150,7 @@ input[type="button"].btn-block {
   position: relative;
   display: block;
   min-height: 1.5rem;
-  padding-left: 1.5rem;
+  padding-left: 2.375rem;
 }
 
 /* line 17, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6174,8 +6174,8 @@ input[type="button"].btn-block {
 
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
-  border-color: #b7cad0;
-  background-color: #b7cad0;
+  border-color: #7e7e7e;
+  background-color: #fff;
 }
 
 /* line 34, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6223,26 +6223,26 @@ input[type="button"].btn-block {
 
 .custom-control-label::before {
   position: absolute;
-  top: 0.25rem;
-  left: -1.5rem;
+  top: -0.1875rem;
+  left: -2.375rem;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.875rem;
+  height: 1.875rem;
   pointer-events: none;
   content: "";
   background-color: #fff;
-  border: #adb5bd solid 1px;
+  border: #7e7e7e solid 1px;
 }
 
 /* line 90, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-control-label::after {
   position: absolute;
-  top: 0.25rem;
-  left: -1.5rem;
+  top: -0.1875rem;
+  left: -2.375rem;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.875rem;
+  height: 1.875rem;
   content: "";
   background: no-repeat 50% / 50% 50%;
 }
@@ -6250,19 +6250,19 @@ input[type="button"].btn-block {
 /* line 108, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-checkbox .custom-control-label::before {
-  border-radius: 0.25rem;
+  border-radius: 0;
 }
 
 /* line 113, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%237e7e7e' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
 /* line 119, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
-  border-color: #b7cad0;
+  border-color: #7e7e7e;
   background-color: #b7cad0;
 }
 
@@ -6275,13 +6275,13 @@ input[type="button"].btn-block {
 /* line 130, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(183, 202, 208, 0.5);
+  background-color: #fff;
 }
 
 /* line 133, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
-  background-color: rgba(183, 202, 208, 0.5);
+  background-color: #fff;
 }
 
 /* line 144, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6293,39 +6293,39 @@ input[type="button"].btn-block {
 /* line 150, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4' fill='%237E7E7E'/%3e%3c/svg%3e");
 }
 
 /* line 156, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(183, 202, 208, 0.5);
+  background-color: #fff;
 }
 
 /* line 167, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-switch {
-  padding-left: 2.25rem;
+  padding-left: 3.78125rem;
 }
 
 /* line 171, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-switch .custom-control-label::before {
-  left: -2.25rem;
-  width: 1.75rem;
+  left: -3.78125rem;
+  width: 3.28125rem;
   pointer-events: all;
-  border-radius: 0.5rem;
+  border-radius: 0.9375rem;
 }
 
 /* line 179, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-switch .custom-control-label::after {
-  top: calc(0.25rem + 2px);
-  left: calc(-2.25rem + 2px);
-  width: calc(1rem - 4px);
-  height: calc(1rem - 4px);
-  background-color: #adb5bd;
-  border-radius: 0.5rem;
+  top: calc(-0.1875rem + 2px);
+  left: calc(-3.78125rem + 2px);
+  width: calc(1.875rem - 4px);
+  height: calc(1.875rem - 4px);
+  background-color: #7e7e7e;
+  border-radius: 0.9375rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -o-transform 0.15s ease-in-out;
@@ -6347,15 +6347,15 @@ input[type="button"].btn-block {
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #fff;
-  -webkit-transform: translateX(0.75rem);
-       -o-transform: translateX(0.75rem);
-          transform: translateX(0.75rem);
+  -webkit-transform: translateX(1.40625rem);
+       -o-transform: translateX(1.40625rem);
+          transform: translateX(1.40625rem);
 }
 
 /* line 199, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
-  background-color: rgba(183, 202, 208, 0.5);
+  background-color: #fff;
 }
 
 /* line 212, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6364,16 +6364,16 @@ input[type="button"].btn-block {
   display: inline-block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  padding: 0.375rem 3.0625rem 0.375rem 2.0625rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
   color: #495057;
   vertical-align: middle;
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px;
   background-color: #fff;
   border: 1px solid #7e7e7e;
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -6400,7 +6400,7 @@ input[type="button"].btn-block {
 .custom-select[multiple],
 .custom-select[size]:not([size="1"]) {
   height: auto;
-  padding-right: 0.75rem;
+  padding-right: 2.0625rem;
   background-image: none;
 }
 
@@ -6423,7 +6423,7 @@ input[type="button"].btn-block {
   height: calc(1.5em + 0.625rem + 2px);
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  padding-left: 0.5rem;
+  padding-left: 2.0625rem;
   font-size: 0.75rem;
 }
 
@@ -6493,13 +6493,13 @@ input[type="button"].btn-block {
   left: 0;
   z-index: 1;
   height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 2.0625rem;
   font-weight: 500;
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
   border: 1px solid #7e7e7e;
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
 }
 
 /* line 342, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6512,13 +6512,13 @@ input[type="button"].btn-block {
   z-index: 3;
   display: block;
   height: calc(1.5em + 0.75rem);
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 2.0625rem;
   line-height: 1.5;
   color: #495057;
   content: "Browse";
   background-color: #e9ecef;
   border-left: inherit;
-  border-radius: 0 0.25rem 0.25rem 0;
+  border-radius: 0 1.1875rem 1.1875rem 0;
 }
 
 /* line 366, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6830,8 +6830,8 @@ input[type="button"].btn-block {
 .nav-tabs .banner .nav a,
 .banner .nav .nav-tabs a {
   border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 1.1875rem;
+  border-top-right-radius: 1.1875rem;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -6885,7 +6885,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link,
 .nav-pills .banner .nav a,
 .banner .nav .nav-pills a {
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
 }
 
 /* line 81, node_modules/bootstrap/scss/_nav.scss */
@@ -7050,7 +7050,7 @@ input[type="button"].btn-block {
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -7288,7 +7288,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (max-width: 1209.98px) {
+@media (max-width: 1239.98px) {
   /* line 142, node_modules/bootstrap/scss/_navbar.scss */
 
   .navbar-expand-xl > .container,
@@ -7298,7 +7298,7 @@ input[type="button"].btn-block {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 140, node_modules/bootstrap/scss/_navbar.scss */
 
   .navbar-expand-xl {
@@ -7694,7 +7694,7 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
 }
 
 /* line 16, node_modules/bootstrap/scss/_card.scss */
@@ -7707,15 +7707,15 @@ input[type="button"].btn-block {
 /* line 22, node_modules/bootstrap/scss/_card.scss */
 
 .card > .list-group:first-child .list-group-item:first-child {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 1.1875rem;
+  border-top-right-radius: 1.1875rem;
 }
 
 /* line 28, node_modules/bootstrap/scss/_card.scss */
 
 .card > .list-group:last-child .list-group-item:last-child {
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 1.1875rem;
+  border-bottom-left-radius: 1.1875rem;
 }
 
 /* line 34, node_modules/bootstrap/scss/_card.scss */
@@ -7770,7 +7770,7 @@ input[type="button"].btn-block {
 /* line 76, node_modules/bootstrap/scss/_card.scss */
 
 .card-header:first-child {
-  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  border-radius: calc(1.1875rem - 1px) calc(1.1875rem - 1px) 0 0;
 }
 
 /* line 81, node_modules/bootstrap/scss/_card.scss */
@@ -7790,7 +7790,7 @@ input[type="button"].btn-block {
 /* line 92, node_modules/bootstrap/scss/_card.scss */
 
 .card-footer:last-child {
-  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+  border-radius: 0 0 calc(1.1875rem - 1px) calc(1.1875rem - 1px);
 }
 
 /* line 102, node_modules/bootstrap/scss/_card.scss */
@@ -7824,23 +7824,23 @@ input[type="button"].btn-block {
 
 .card-img {
   width: 100%;
-  border-radius: calc(0.25rem - 1px);
+  border-radius: calc(1.1875rem - 1px);
 }
 
 /* line 130, node_modules/bootstrap/scss/_card.scss */
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
+  border-top-left-radius: calc(1.1875rem - 1px);
+  border-top-right-radius: calc(1.1875rem - 1px);
 }
 
 /* line 135, node_modules/bootstrap/scss/_card.scss */
 
 .card-img-bottom {
   width: 100%;
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
+  border-bottom-right-radius: calc(1.1875rem - 1px);
+  border-bottom-left-radius: calc(1.1875rem - 1px);
 }
 
 /* line 143, node_modules/bootstrap/scss/_card.scss */
@@ -8057,7 +8057,7 @@ input[type="button"].btn-block {
   margin-bottom: 1rem;
   list-style: none;
   background-color: #fff;
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
 }
 
 /* line 13, node_modules/bootstrap/scss/_breadcrumb.scss */
@@ -8100,7 +8100,7 @@ input[type="button"].btn-block {
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 1.1875rem;
 }
 
 /* line 14, node_modules/bootstrap/scss/_alert.scss */
@@ -8344,16 +8344,16 @@ input[type="button"].btn-block {
 /* line 54, node_modules/bootstrap/scss/_list-group.scss */
 
 .list-group-item:first-child {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 1.1875rem;
+  border-top-right-radius: 1.1875rem;
 }
 
 /* line 58, node_modules/bootstrap/scss/_list-group.scss */
 
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 1.1875rem;
+  border-bottom-left-radius: 1.1875rem;
 }
 
 /* line 63, node_modules/bootstrap/scss/_list-group.scss */
@@ -8393,8 +8393,8 @@ input[type="button"].btn-block {
 /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
 .list-group-horizontal .list-group-item:first-child {
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 1.1875rem;
+  border-bottom-left-radius: 1.1875rem;
   border-top-right-radius: 0;
 }
 
@@ -8402,8 +8402,8 @@ input[type="button"].btn-block {
 
 .list-group-horizontal .list-group-item:last-child {
   margin-right: 0;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 1.1875rem;
+  border-bottom-right-radius: 1.1875rem;
   border-bottom-left-radius: 0;
 }
 
@@ -8427,8 +8427,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-sm .list-group-item:first-child {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 1.1875rem;
+    border-bottom-left-radius: 1.1875rem;
     border-top-right-radius: 0;
   }
 
@@ -8436,8 +8436,8 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-sm .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 1.1875rem;
+    border-bottom-right-radius: 1.1875rem;
     border-bottom-left-radius: 0;
   }
 }
@@ -8462,8 +8462,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-md .list-group-item:first-child {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 1.1875rem;
+    border-bottom-left-radius: 1.1875rem;
     border-top-right-radius: 0;
   }
 
@@ -8471,8 +8471,8 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-md .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 1.1875rem;
+    border-bottom-right-radius: 1.1875rem;
     border-bottom-left-radius: 0;
   }
 }
@@ -8497,8 +8497,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-lg .list-group-item:first-child {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 1.1875rem;
+    border-bottom-left-radius: 1.1875rem;
     border-top-right-radius: 0;
   }
 
@@ -8506,13 +8506,13 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-lg .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 1.1875rem;
+    border-bottom-right-radius: 1.1875rem;
     border-bottom-left-radius: 0;
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 88, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-xl {
@@ -8532,8 +8532,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-xl .list-group-item:first-child {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 1.1875rem;
+    border-bottom-left-radius: 1.1875rem;
     border-top-right-radius: 0;
   }
 
@@ -8541,8 +8541,8 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-xl .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 1.1875rem;
+    border-bottom-right-radius: 1.1875rem;
     border-bottom-left-radius: 0;
   }
 }
@@ -8567,8 +8567,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-xxl .list-group-item:first-child {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 1.1875rem;
+    border-bottom-left-radius: 1.1875rem;
     border-top-right-radius: 0;
   }
 
@@ -8576,8 +8576,8 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-xxl .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 1.1875rem;
+    border-bottom-right-radius: 1.1875rem;
     border-bottom-left-radius: 0;
   }
 }
@@ -9152,7 +9152,7 @@ a.close.disabled {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 228, node_modules/bootstrap/scss/_modal.scss */
 
   .modal-xl {
@@ -9546,41 +9546,41 @@ button.bg-dark:focus {
 /* line 33, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-sm {
-  border-radius: 0.2rem !important;
+  border-radius: 0.9375rem !important;
 }
 
 /* line 37, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 1.1875rem !important;
 }
 
 /* line 41, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-top {
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 1.1875rem !important;
+  border-top-right-radius: 1.1875rem !important;
 }
 
 /* line 46, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-right {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-top-right-radius: 1.1875rem !important;
+  border-bottom-right-radius: 1.1875rem !important;
 }
 
 /* line 51, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-bottom {
-  border-bottom-right-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 1.1875rem !important;
+  border-bottom-left-radius: 1.1875rem !important;
 }
 
 /* line 56, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-left {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 1.1875rem !important;
+  border-bottom-left-radius: 1.1875rem !important;
 }
 
 /* line 61, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -9853,7 +9853,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 12, node_modules/bootstrap/scss/utilities/_display.scss */
 
   .d-xl-none {
@@ -11128,7 +11128,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 11, node_modules/bootstrap/scss/utilities/_flex.scss */
 
   .flex-xl-row {
@@ -11726,7 +11726,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 7, node_modules/bootstrap/scss/utilities/_float.scss */
 
   .float-xl-left {
@@ -14460,7 +14460,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
   .m-xl-0 {
@@ -15798,7 +15798,7 @@ button.bg-dark:focus {
   }
 }
 
-@media (min-width: 1210px) {
+@media (min-width: 1240px) {
   /* line 22, node_modules/bootstrap/scss/utilities/_text.scss */
 
   .text-xl-left {
@@ -16825,15 +16825,7 @@ blockquote footer::before,
   list-style: none;
 }
 
-/** Search form */
-
-/* line 6, resources/assets/styles/skhoop/components/_forms.scss */
-
-.search-form label {
-  font-weight: normal;
-}
-
-/* line 21, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 1, resources/assets/styles/skhoop/components/_forms.scss */
 
 .form-control,
 .comment-form input[type="text"],
@@ -16846,7 +16838,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 21, resources/assets/styles/skhoop/components/_forms.scss */
+  /* line 1, resources/assets/styles/skhoop/components/_forms.scss */
 
   .form-control,
   .comment-form input[type="text"],
@@ -16856,6 +16848,68 @@ blockquote footer::before,
   .search-form .search-field {
     width: auto;
   }
+}
+
+/* line 10, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-control {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+/* line 19, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-radio .custom-control-label::after {
+  background: no-repeat 50% / 20px;
+}
+
+/* line 28, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-switch .custom-control-label::after {
+  background-color: #fff;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 1.4375rem;
+  left: calc(-3.78125rem + 5px);
+  top: calc(-0.1875rem + 5px);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* line 38, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-switch .custom-control-label::before {
+  height: 0.9375rem;
+  top: 0.25rem;
+  width: 2.375rem;
+  left: -3.375rem;
+  border-color: #fff;
+  background-color: #fff;
+}
+
+/* line 48, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #292929;
+  left: calc(-3.78125rem + 2px);
+}
+
+/* line 53, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #b7cad0;
+  background-color: #b7cad0;
+}
+
+/* line 61, resources/assets/styles/skhoop/components/_forms.scss */
+
+.invalid-feedback,
+.valid-feedback {
+  font-size: 0.75rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 20px;
 }
 
 /* line 12, resources/assets/styles/skhoop/components/_section.scss */
