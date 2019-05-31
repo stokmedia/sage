@@ -186,6 +186,10 @@ p {
       margin: 2.875rem auto;
     }
   }
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 small,
@@ -194,10 +198,6 @@ small,
   font-style: italic;
   letter-spacing: 1px;
   line-height: 1.25rem;
-}
-
-a {
-  text-decoration: underline;
 }
 
 b,
