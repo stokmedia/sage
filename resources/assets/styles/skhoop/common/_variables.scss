@@ -10,6 +10,7 @@ $red:                         #dab4b4;
 $orange:                      #fd7e14;
 $yellow:                      #ece4d0;
 $green:                       #b7cad0;
+$lightGreen:                  #dbe4e7;
 $teal:                        #20c997;
 $cyan:                        #17a2b8;
 $black:                       #000;
@@ -100,7 +101,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1240px,
+  xl: 1210px,
   xxl: 1480px
 );
 
@@ -109,7 +110,7 @@ $container-max-widths: (
   sm: 100%,
   md: 100%,
   lg: 100%,
-  xl: 1210px,
+  xl: 1180px,
   xxl: 1450px
 );
 

@@ -52,6 +52,36 @@
   <br />
   <!-- Buttons ================================================== -->
 
+  <!-- Dropdown ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 id="buttons">Dropdown</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="bs-component">
+          <div class="form-group">
+            <div class="dropdown d-inline-block">
+              <button class="btn btn-lg btn-outline-primary dropdown-toggle text-left" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+              </button>
+              <div class="dropdown-menu" aria-labelledby="triggerId">
+                <a class="dropdown-item" href="#">Option One</a>
+                <a class="dropdown-item disabled" href="#">Disabled action</a>
+              </div>
+            </div>
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+  <br />
+  <!-- Dropdown ================================================== -->
+
   <!-- Inputs ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
