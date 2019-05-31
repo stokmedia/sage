@@ -32,6 +32,7 @@
   --danger: #dab4b4;
   --light: #f8f9fa;
   --dark: #343a40;
+  --ash: #f1f1f1;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -3149,6 +3150,36 @@ mark,
 
 /* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
 
+.table-ash,
+.table-ash > th,
+.table-ash > td {
+  background-color: #fbfbfb;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-ash th,
+.table-ash td,
+.table-ash thead th,
+.table-ash tbody + tbody {
+  border-color: #f8f8f8;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.table-hover .table-ash:hover {
+  background-color: #eeeeee;
+}
+
+/* line 32, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-hover .table-ash:hover > td,
+.table-hover .table-ash:hover > th {
+  background-color: #eeeeee;
+}
+
+/* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -4815,6 +4846,58 @@ fieldset:disabled .search-form a.search-submit,
           box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 
+/* line 60, node_modules/bootstrap/scss/_buttons.scss */
+
+.btn-ash {
+  color: #212529;
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-ash:hover {
+  color: #212529;
+  background-color: #dedede;
+  border-color: #d8d8d8;
+}
+
+/* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-ash:focus,
+.btn-ash.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(210, 210, 211, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(210, 210, 211, 0.5);
+}
+
+/* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-ash.disabled,
+.btn-ash:disabled {
+  color: #212529;
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+}
+
+/* line 40, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-ash:not(:disabled):not(.disabled):active,
+.btn-ash:not(:disabled):not(.disabled).active,
+.show > .btn-ash.dropdown-toggle {
+  color: #212529;
+  background-color: #d8d8d8;
+  border-color: #d1d1d1;
+}
+
+/* line 50, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-ash:not(:disabled):not(.disabled):active:focus,
+.btn-ash:not(:disabled):not(.disabled).active:focus,
+.show > .btn-ash.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(210, 210, 211, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(210, 210, 211, 0.5);
+}
+
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
 
 .btn-outline-primary {
@@ -5213,6 +5296,56 @@ fieldset:disabled .search-form a.search-submit,
 .show > .btn-outline-dark.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+/* line 66, node_modules/bootstrap/scss/_buttons.scss */
+
+.btn-outline-ash {
+  color: #f1f1f1;
+  border-color: #f1f1f1;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-outline-ash:hover {
+  color: #212529;
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+}
+
+/* line 71, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-ash:focus,
+.btn-outline-ash.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(241, 241, 241, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(241, 241, 241, 0.5);
+}
+
+/* line 76, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-ash.disabled,
+.btn-outline-ash:disabled {
+  color: #f1f1f1;
+  background-color: transparent;
+}
+
+/* line 82, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-ash:not(:disabled):not(.disabled):active,
+.btn-outline-ash:not(:disabled):not(.disabled).active,
+.show > .btn-outline-ash.dropdown-toggle {
+  color: #212529;
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+}
+
+/* line 89, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-ash:not(:disabled):not(.disabled):active:focus,
+.btn-outline-ash:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-ash.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(241, 241, 241, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(241, 241, 241, 0.5);
 }
 
 /* line 77, node_modules/bootstrap/scss/_buttons.scss */
@@ -8135,7 +8268,7 @@ input[type="button"].btn-block {
 
 .alert-primary {
   color: #5f696c;
-  background-color: #f1f4f6;
+  background-color: #b7cad0;
   border-color: #ebf0f2;
 }
 
@@ -8155,7 +8288,7 @@ input[type="button"].btn-block {
 
 .alert-secondary {
   color: #5d5d5d;
-  background-color: #f0f0f0;
+  background-color: #b2b2b2;
   border-color: #e9e9e9;
 }
 
@@ -8175,7 +8308,7 @@ input[type="button"].btn-block {
 
 .alert-success {
   color: #5f696c;
-  background-color: #f1f4f6;
+  background-color: #b7cad0;
   border-color: #ebf0f2;
 }
 
@@ -8195,7 +8328,7 @@ input[type="button"].btn-block {
 
 .alert-info {
   color: #0c5460;
-  background-color: #d1ecf1;
+  background-color: #17a2b8;
   border-color: #bee5eb;
 }
 
@@ -8215,7 +8348,7 @@ input[type="button"].btn-block {
 
 .alert-warning {
   color: #7b776c;
-  background-color: #fbfaf6;
+  background-color: #ece4d0;
   border-color: #faf7f2;
 }
 
@@ -8235,7 +8368,7 @@ input[type="button"].btn-block {
 
 .alert-danger {
   color: #715e5e;
-  background-color: #f8f0f0;
+  background-color: #dab4b4;
   border-color: #f5eaea;
 }
 
@@ -8255,7 +8388,7 @@ input[type="button"].btn-block {
 
 .alert-light {
   color: #818182;
-  background-color: #fefefe;
+  background-color: #f8f9fa;
   border-color: #fdfdfe;
 }
 
@@ -8275,7 +8408,7 @@ input[type="button"].btn-block {
 
 .alert-dark {
   color: #1b1e21;
-  background-color: #d6d8d9;
+  background-color: #343a40;
   border-color: #c6c8ca;
 }
 
@@ -8289,6 +8422,26 @@ input[type="button"].btn-block {
 
 .alert-dark .alert-link {
   color: #040505;
+}
+
+/* line 48, node_modules/bootstrap/scss/_alert.scss */
+
+.alert-ash {
+  color: #7d7d7d;
+  background-color: #f1f1f1;
+  border-color: #fbfbfb;
+}
+
+/* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-ash hr {
+  border-top-color: #eeeeee;
+}
+
+/* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-ash .alert-link {
+  color: #646464;
 }
 
 /* line 5, node_modules/bootstrap/scss/_list-group.scss */
@@ -8791,6 +8944,29 @@ input[type="button"].btn-block {
   color: #fff;
   background-color: #1b1e21;
   border-color: #1b1e21;
+}
+
+/* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-ash {
+  color: #7d7d7d;
+  background-color: #fbfbfb;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.list-group-item-ash.list-group-item-action:hover,
+.list-group-item-ash.list-group-item-action:focus {
+  color: #7d7d7d;
+  background-color: #eeeeee;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-ash.list-group-item-action.active {
+  color: #fff;
+  background-color: #7d7d7d;
+  border-color: #7d7d7d;
 }
 
 /* line 1, node_modules/bootstrap/scss/_close.scss */
@@ -9417,6 +9593,21 @@ button.bg-dark:focus {
   background-color: #1d2124 !important;
 }
 
+/* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
+
+.bg-ash {
+  background-color: #f1f1f1 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.bg-ash:hover,
+a.bg-ash:focus,
+button.bg-ash:hover,
+button.bg-ash:focus {
+  background-color: #d8d8d8 !important;
+}
+
 /* line 13, node_modules/bootstrap/scss/utilities/_background.scss */
 
 .bg-white {
@@ -9535,6 +9726,12 @@ button.bg-dark:focus {
 
 .border-dark {
   border-color: #343a40 !important;
+}
+
+/* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
+
+.border-ash {
+  border-color: #f1f1f1 !important;
 }
 
 /* line 25, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -16002,6 +16199,19 @@ a.text-dark:focus {
   color: #121416 !important;
 }
 
+/* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
+
+.text-ash {
+  color: #f1f1f1 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.text-ash:hover,
+a.text-ash:focus {
+  color: #cbcbcb !important;
+}
+
 /* line 51, node_modules/bootstrap/scss/utilities/_text.scss */
 
 .text-body {
@@ -16906,6 +17116,77 @@ blockquote footer::before,
   color: #212529;
   background-color: #fff;
   border-color: #7e7e7e;
+}
+
+/* line 1, resources/assets/styles/skhoop/components/_alert.scss */
+
+.alert {
+  padding: 1.25rem;
+  border-radius: 0;
+}
+
+@media (min-width: 576px) {
+  /* line 1, resources/assets/styles/skhoop/components/_alert.scss */
+
+  .alert {
+    padding: 0.5625rem 1.25rem;
+  }
+}
+
+/* line 9, resources/assets/styles/skhoop/components/_alert.scss */
+
+.alert-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* line 13, resources/assets/styles/skhoop/components/_alert.scss */
+
+.alert-container img {
+  width: 40px;
+  height: 40px;
+}
+
+/* line 19, resources/assets/styles/skhoop/components/_alert.scss */
+
+.alert-text {
+  color: #031532;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 992px) {
+  /* line 19, resources/assets/styles/skhoop/components/_alert.scss */
+
+  .alert-text {
+    font-size: 1.25rem;
+    min-width: 145px;
+  }
+}
+
+@media (min-width: 576px) {
+  /* line 19, resources/assets/styles/skhoop/components/_alert.scss */
+
+  .alert-text {
+    margin: 0 2.75rem;
+  }
+}
+
+/* line 36, resources/assets/styles/skhoop/components/_alert.scss */
+
+.alert .btn.btn-sm,
+.alert .btn-group-sm > .btn,
+.alert .comment-form .btn-group-sm > input[type="submit"],
+.comment-form .alert .btn-group-sm > input[type="submit"],
+.alert .search-form .btn-group-sm > .search-submit,
+.search-form .alert .btn-group-sm > .search-submit,
+.alert .comment-form input.btn-sm[type="submit"],
+.comment-form .alert input.btn-sm[type="submit"],
+.alert .search-form .btn-sm.search-submit,
+.search-form .alert .btn-sm.search-submit {
+  min-width: 127px;
 }
 
 /* line 5, resources/assets/styles/skhoop/components/_comments.scss */

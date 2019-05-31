@@ -1,0 +1,39 @@
+.alert {
+  padding: 1.25rem;
+  border-radius: 0;
+
+  @include media-breakpoint-up(sm) {
+    padding: 0.5625rem 1.25rem;
+  }
+
+  &-container {
+    max-width: 900px;
+    margin: 0 auto;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &-text {
+    color: $body-color;
+    font-size: 0.9375rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    letter-spacing: 0.5px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+      min-width: 145px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin: 0 2.75rem;
+    }
+  }
+
+  .btn.btn-sm {
+    min-width: 127px;
+  }
+}

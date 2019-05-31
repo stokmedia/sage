@@ -87,6 +87,66 @@
   <br />
   <!-- Dropdown ================================================== -->
 
+  <!-- Alert ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 id="buttons">Alert</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="bs-component">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
+                <div class="col d-flex align-items-center p-0 flex-column flex-sm-row">
+                  <img src="https://img.icons8.com/ios/50/000000/sad.png" alt="Alert">
+                  <span class="alert-text text-center text-sm-left">Allrignt, you are on track</span>
+                </div>
+                <button class="btn btn-sm btn-primary bg-white text-body" type="button" data-dismiss="alert">Call to action</button>
+              </div>
+            </div>
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
+                <div class="col d-flex align-items-center flex-column flex-sm-row p-0">
+                  <img src="https://img.icons8.com/ios/50/000000/sad.png" alt="Alert">
+                  <span class="alert-text">Information - Dont forget lorem ipsum</span>
+                </div>
+                <button class="btn btn-sm btn-primary text-body" type="button" data-dismiss="alert">Call to action</button>
+              </div>
+            </div>
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
+                <div class="col d-flex align-items-center p-0 flex-column flex-sm-row">
+                  <img src="https://img.icons8.com/ios/50/000000/sad.png" alt="Alert">
+                  <span class="alert-text">Something went terrible wrong</span>
+                </div>
+                <button class="btn btn-sm btn-primary text-body" type="button" data-dismiss="alert">Call to action</button>
+              </div>
+            </div>
+
+            <div class="alert alert-ash alert-dismissible fade show" role="alert">
+              <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
+                <div class="col d-flex align-items-center p-0 flex-column flex-sm-row">
+                  <img src="https://img.icons8.com/ios/50/000000/sad.png" alt="Alert">
+                  <span class="alert-text">Cookies - We use cookies. Read more.</span>
+                </div>
+                <button class="btn btn-sm btn-primary text-body" type="button" data-dismiss="alert">Call to action</button>
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <!-- Dropdown ================================================== -->
+
   <!-- Inputs ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
