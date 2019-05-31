@@ -1,9 +1,9 @@
 // Mixins
-@mixin aspect-ratio-viewport($height, $width) {
+@mixin aspect-ratio-viewport($width, $height) {
   position: relative;
   overflow: hidden;
-  width: 100vw;
-  height: calc(100vw * ($height/$width));
+  width: 100%;
+  height: calc(100vw * ( #{$width} / #{$height} ));
 
   > img,
   > video,

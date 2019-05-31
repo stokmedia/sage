@@ -1,0 +1,26 @@
+.category-banner {
+  @include aspect-ratio-viewport(5,18);
+
+  padding: 2.8125rem 0;
+  background-color: $primary;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+
+  &-info {
+    width: 475px;
+    padding: 0.9375rem 1.563rem 1.563rem 2.5rem;
+    border-radius: 0.3125rem;
+    background-color: $white;
+
+    .title {
+      margin-bottom: 0;
+    }
+
+    .content {
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
