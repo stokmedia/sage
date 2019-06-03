@@ -6283,7 +6283,7 @@ input[type="button"].btn-block {
   position: relative;
   display: block;
   min-height: 1.5rem;
-  padding-left: 2.375rem;
+  padding-left: 1.75rem;
 }
 
 /* line 17, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6356,11 +6356,11 @@ input[type="button"].btn-block {
 
 .custom-control-label::before {
   position: absolute;
-  top: -0.1875rem;
-  left: -2.375rem;
+  top: 0.125rem;
+  left: -1.75rem;
   display: block;
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.25rem;
+  height: 1.25rem;
   pointer-events: none;
   content: "";
   background-color: #fff;
@@ -6371,11 +6371,11 @@ input[type="button"].btn-block {
 
 .custom-control-label::after {
   position: absolute;
-  top: -0.1875rem;
-  left: -2.375rem;
+  top: 0.125rem;
+  left: -1.75rem;
   display: block;
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.25rem;
+  height: 1.25rem;
   content: "";
   background: no-repeat 50% / 50% 50%;
 }
@@ -6438,27 +6438,27 @@ input[type="button"].btn-block {
 /* line 167, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-switch {
-  padding-left: 3.78125rem;
+  padding-left: 2.6875rem;
 }
 
 /* line 171, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-switch .custom-control-label::before {
-  left: -3.78125rem;
-  width: 3.28125rem;
+  left: -2.6875rem;
+  width: 2.1875rem;
   pointer-events: all;
-  border-radius: 0.9375rem;
+  border-radius: 0.625rem;
 }
 
 /* line 179, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-switch .custom-control-label::after {
-  top: calc(-0.1875rem + 2px);
-  left: calc(-3.78125rem + 2px);
-  width: calc(1.875rem - 4px);
-  height: calc(1.875rem - 4px);
+  top: calc(0.125rem + 2px);
+  left: calc(-2.6875rem + 2px);
+  width: calc(1.25rem - 4px);
+  height: calc(1.25rem - 4px);
   background-color: #7e7e7e;
-  border-radius: 0.9375rem;
+  border-radius: 0.625rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -o-transform 0.15s ease-in-out;
@@ -6480,9 +6480,9 @@ input[type="button"].btn-block {
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #fff;
-  -webkit-transform: translateX(1.40625rem);
-       -o-transform: translateX(1.40625rem);
-          transform: translateX(1.40625rem);
+  -webkit-transform: translateX(0.9375rem);
+       -o-transform: translateX(0.9375rem);
+          transform: translateX(0.9375rem);
 }
 
 /* line 199, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -17249,51 +17249,89 @@ blockquote footer::before,
   }
 }
 
-/* line 10, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 11, resources/assets/styles/skhoop/components/_forms.scss */
 
-.custom-control {
-  margin-top: 0.625rem;
-  margin-bottom: 0.625rem;
+.custom-control .custom-control-label > span {
+  display: inline-block;
+  margin-top: 0.0625rem;
 }
 
-/* line 19, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 21, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio .custom-control-label::after {
-  background: no-repeat 50% / 20px;
+  background: no-repeat 50% / 0.875rem;
 }
 
-/* line 28, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 29, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::after {
   background-color: #fff;
-  height: 1.25rem;
-  width: 1.25rem;
-  border-radius: 1.4375rem;
-  left: calc(-3.78125rem + 5px);
-  top: calc(-0.1875rem + 5px);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-/* line 38, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 34, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::before {
-  height: 0.9375rem;
-  top: 0.25rem;
-  width: 2.375rem;
-  left: -3.375rem;
+  height: 0.75rem;
+  width: 1.9375rem;
+  top: 0.375rem;
+  left: -2.5rem;
   border-color: #fff;
   background-color: #fff;
 }
 
-/* line 48, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 44, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-control.custom-control-lg {
+  margin: 0.3125rem 0;
+}
+
+/* line 47, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-control.custom-control-lg .custom-control-label::before {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+/* line 54, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-radio.custom-control-lg .custom-control-label::before {
+  top: -0.1875rem;
+  left: -2.0625rem;
+}
+
+/* line 59, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-radio.custom-control-lg .custom-control-label::after {
+  background: no-repeat 50% / 20px;
+}
+
+/* line 65, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-checkbox.custom-control-lg .custom-control-label::before {
+  width: 1.875rem;
+  height: 1.875rem;
+  top: -0.1875rem;
+  left: -2.0625rem;
+}
+
+/* line 72, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-checkbox.custom-control-lg .custom-control-label::after {
+  width: 1.875rem;
+  height: 1.875rem;
+  top: -0.1875rem;
+  left: -2.0625rem;
+}
+
+/* line 82, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #292929;
-  left: calc(-3.78125rem + 2px);
 }
 
-/* line 53, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 86, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
@@ -17301,7 +17339,7 @@ blockquote footer::before,
   background-color: #b7cad0;
 }
 
-/* line 61, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 94, resources/assets/styles/skhoop/components/_forms.scss */
 
 .invalid-feedback,
 .valid-feedback {
@@ -17398,6 +17436,40 @@ blockquote footer::before,
 /** Captions */
 
 /** Text meant only for screen readers */
+
+/* line 2, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-cover {
+  height: 300px;
+  width: 600px;
+  background: red;
+}
+
+/* line 8, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-content {
+  background-color: #ece4d0;
+}
+
+/* line 12, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-title {
+  font-family: "Covered By Your Grace", cursive;
+  color: #031532;
+  font-size: 2.1875rem;
+  letter-spacing: 0.8704px;
+  line-height: 50px;
+}
+
+/* line 20, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-body {
+  color: #292929;
+  font-size: 0.75rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
 
 /* line 1, resources/assets/styles/skhoop/layouts/_tinymce.scss */
 

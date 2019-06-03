@@ -213,18 +213,29 @@
                   <input id="customRadio1" class="custom-control-input" name="customRadio" type="radio" checked>
                   <label class="custom-control-label" for="customRadio1"></label>
                 </div>
-                <div class="custom-control custom-radio d-inline-block"><input id="customRadio3" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
+                <div class="custom-control custom-control-lg custom-radio d-inline-block">
+                  <input id="customRadio2" class="custom-control-input" name="customRadio" type="radio" checked>
+                  <label class="custom-control-label" for="customRadio2"></label>
+                </div>
+                <div class="custom-control custom-radio d-inline-block">
+                  <input id="customRadio3" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
                   <label class="custom-control-label" for="customRadio3"></label>
                 </div>
               </div>
 
               <div class="form-group">
                 <div class="custom-control custom-radio">
-                  <input id="customRadio2" class="custom-control-input" name="customRadio" type="radio" checked>
-                  <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+                  <input id="customRadio4" class="custom-control-input" name="customRadio" type="radio" checked>
+                  <label class="custom-control-label" for="customRadio4">
+                    <span>Or toggle this other custom radio</span>
+                  </label>
                 </div>
-                <div class="custom-control custom-radio"><input id="customRadio3" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
-                  <label class="custom-control-label" for="customRadio3">Disabled custom radio</label>
+                <div class="custom-control custom-control-lg  custom-radio">
+                  <input id="customRadio6" class="custom-control-input" name="customRadio" type="radio" checked>
+                  <label class="custom-control-label" for="customRadio6">Or toggle this other custom radio</label>
+                </div>
+                <div class="custom-control custom-radio"><input id="customRadio5" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
+                  <label class="custom-control-label" for="customRadio5">Disabled custom radio</label>
                 </div>
               </div>
 
@@ -232,6 +243,10 @@
                 <div class="custom-control custom-checkbox d-inline-block">
                   <input id="customCheck01" class="custom-control-input" checked="checked" type="checkbox">
                   <label class="custom-control-label" for="customCheck01"></label>
+                </div>
+                <div class="custom-control custom-control-lg custom-checkbox d-inline-block">
+                  <input id="customCheck001" class="custom-control-input" checked="checked" type="checkbox">
+                  <label class="custom-control-label" for="customCheck001"></label>
                 </div>
                 <div class="custom-control custom-checkbox d-inline-block">
                   <input id="customCheck02" class="custom-control-input" disabled="disabled" type="checkbox">
@@ -242,10 +257,16 @@
               <div class="form-group">
                 <div class="custom-control custom-checkbox"><input id="customCheck1" class="custom-control-input"
                     checked="checked" type="checkbox">
-                  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label></div>
+                  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                </div>
+                <div class="custom-control custom-control-lg custom-checkbox">
+                  <input id="customCheck100" class="custom-control-input" checked="checked" type="checkbox">
+                  <label class="custom-control-label" for="customCheck100">Check this custom checkbox</label>
+                </div>
                 <div class="custom-control custom-checkbox"><input id="customCheck2" class="custom-control-input"
                     disabled="disabled" type="checkbox">
-                  <label class="custom-control-label" for="customCheck2">Disabled custom checkbox</label></div>
+                  <label class="custom-control-label" for="customCheck2">Disabled custom checkbox</label>
+                </div>
               </div>
               <div class="form-group">
                 <div class="custom-control custom-switch"><input id="customSwitch1" class="custom-control-input" checked="checked"
