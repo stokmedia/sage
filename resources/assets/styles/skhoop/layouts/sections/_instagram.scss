@@ -1,0 +1,46 @@
+@mixin flex($par...) {
+  -webkit-box-flex: $par;
+  -moz-flex: $par;
+  -ms-flex: $par;
+  -o-flex: $par;
+  flex: $par;
+}
+
+@mixin display-flex {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
+}
+
+@mixin align-items($par...) {
+  -webkit-box-align: $par;
+  -moz-box-align: $par;
+  -ms-flex-align: $par;
+  -webkit-align-items: $par;
+  align-items: $par;
+}
+
+.instagram-gallery {
+  .col-group {
+    @include display-flex;
+  }
+
+  .col-side {
+    @include flex( 1 0 0 );
+  }
+
+  .tile-group {
+    @include display-flex;
+  }
+
+  .tile {
+    @include flex( 0 0 calc(25% - 30px) );
+
+    padding-top: calc(25% - 30px);
+    margin: 15px;
+    background-color: #f1f1f1;
+  }
+}
+

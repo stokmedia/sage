@@ -30,6 +30,13 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public static function currentLang( $value='slug' )
+    {
+        $defaultValue = $value == 'locale' ? 'en_GB' : 'en';
+
+		return function_exists('pll_current_language') ? pll_current_language( $value ) : $defaultValue;
+    }    
 /*
     // TODO: Could we use a general function to generate the image tag in the templates for Centra Product Images
     public function renderProductImage( $imageData, $size ) {
