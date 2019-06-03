@@ -51,6 +51,21 @@
             <span class="breadcrumb-item active">Level 3</span>
           </div>
         </p>
+
+        <p class="bs-component">
+          <h3>Button Icon</h3>
+          <button class="btn btn-icon btn-icon-sm btn-primary" type="button">
+            <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+          </button>
+
+          <button class="btn btn-icon btn-primary" type="button">
+            <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+          </button>
+
+          <button class="btn btn-lg btn-icon btn-icon-lg btn-primary" type="button">
+            <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+          </button>
+        </p>
       </div>
     </div>
   </div>
