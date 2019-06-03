@@ -17651,61 +17651,22 @@ body#tinymce {
 
 /* line 52, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
-.products .product.is-big {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  max-width: 50%;
-}
-
-@media (min-width: 992px) {
-  /* line 52, resources/assets/styles/skhoop/sections/_product-listing.scss */
-
-  .products .product.is-big {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.33333%;
-            flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-  }
-}
-
-/* line 56, resources/assets/styles/skhoop/sections/_product-listing.scss */
-
-.products .product.is-small {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
-  max-width: 50%;
-}
-
-@media (min-width: 992px) {
-  /* line 56, resources/assets/styles/skhoop/sections/_product-listing.scss */
-
-  .products .product.is-small {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
-    max-width: 25%;
-  }
-}
-
-/* line 60, resources/assets/styles/skhoop/sections/_product-listing.scss */
-
 .products .product-wrapper {
+  position: relative;
   padding: 6.25rem 2.5rem 4.6875rem;
   border-top-right-radius: 0.3125rem;
   border-top-left-radius: 0.3125rem;
 }
 
-/* line 66, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 59, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
-.products .product-details {
-  color: #031532;
-  border-bottom-right-radius: 0.3125rem;
-  border-bottom-left-radius: 0.3125rem;
+.products .product-status {
+  position: absolute;
+  top: 1.25rem;
+  right: 0;
 }
 
-/* line 72, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 65, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-image {
   position: relative;
@@ -17754,10 +17715,78 @@ body#tinymce {
   width: 100%;
 }
 
-/* line 75, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 68, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-image .visible-on-hover {
   display: none;
+}
+
+/* line 73, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product-details {
+  color: #031532;
+  border-bottom-right-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+}
+
+/* line 80, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product.is-big {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@media (min-width: 992px) {
+  /* line 80, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .products .product.is-big {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+/* line 84, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product.is-small {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@media (min-width: 992px) {
+  /* line 84, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .products .product.is-small {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* line 90, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product.is-sale .product-status {
+  background-color: #d45656;
+  color: #fff;
+}
+
+/* line 97, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product.is-oos .product-status {
+  background-color: #b7cad0;
+  color: #fff;
+}
+
+/* line 102, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product.is-oos .product-image {
+  opacity: 0.5;
 }
 
 
