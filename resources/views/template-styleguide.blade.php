@@ -179,9 +179,17 @@
             <input type="text" class="form-control form-control-lg" placeholder="HINT">
           </div>
 
-          <h3 class="mb-0">Has error</h3>
+          <h3 class="mb-0">Invalid</h3>
           <div class="form-group">
             <input type="text" class="form-control form-control-lg is-invalid">
+            <div class="invalid-feedback">
+              Your email is not valid
+            </div>
+          </div>
+
+          <h3 class="mb-0">Valid</h3>
+          <div class="form-group">
+            <input type="text" class="form-control form-control-lg is-valid">
             <div class="invalid-feedback">
               Your email is not valid
             </div>
