@@ -3359,8 +3359,8 @@ mark,
 .search-form .search-field {
   display: block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 2.0625rem;
+  height: calc(1.5em + 1.1876rem + 2px);
+  padding: 0.5938rem 2.0625rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
@@ -3488,8 +3488,8 @@ select.form-control:focus::-ms-value,
 /* line 82, node_modules/bootstrap/scss/_forms.scss */
 
 .col-form-label {
-  padding-top: calc(0.375rem + 1px);
-  padding-bottom: calc(0.375rem + 1px);
+  padding-top: calc(0.5938rem + 1px);
+  padding-bottom: calc(0.5938rem + 1px);
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.5;
@@ -3518,8 +3518,8 @@ select.form-control:focus::-ms-value,
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
+  padding-top: 0.5938rem;
+  padding-bottom: 0.5938rem;
   margin-bottom: 0;
   line-height: 1.5;
   color: #031532;
@@ -3705,11 +3705,11 @@ textarea.form-control,
 .comment-form textarea.is-valid,
 .search-form .is-valid.search-field {
   border-color: #28a745;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.5em + 1.1876rem);
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAyMEMwIDguOTcyMTcgOC45NzIxNyAwIDIwIDBDMzEuMDI3OCAwIDQwIDguOTcyMTcgNDAgMjBDNDAgMzEuMDI3OCAzMS4wMjc4IDQwIDIwIDQwQzguOTcyMTcgNDAgMCAzMS4wMjc4IDAgMjBaTTEuNzM5MTMgMjBDMS43MzkxMyAzMC4wNjk2IDkuOTMwNDQgMzguMjYwOSAyMCAzOC4yNjA5QzMwLjA2OTYgMzguMjYwOSAzOC4yNjA5IDMwLjA2OTYgMzguMjYwOSAyMEMzOC4yNjA5IDkuOTMwNDQgMzAuMDY5NiAxLjczOTEzIDIwIDEuNzM5MTNDOS45MzA0NCAxLjczOTEzIDEuNzM5MTMgOS45MzA0NCAxLjczOTEzIDIwWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMy4wNDM1IDEzLjkxMzFDMTQuNDgxOCAxMy45MTMxIDE1LjY1MjIgMTUuMDgzNSAxNS42NTIyIDE2LjUyMThDMTUuNjUyMiAxNy45NiAxNC40ODE4IDE5LjEzMDUgMTMuMDQzNSAxOS4xMzA1QzExLjYwNTIgMTkuMTMwNSAxMC40MzQ4IDE3Ljk2IDEwLjQzNDggMTYuNTIxOEMxMC40MzQ4IDE1LjA4MzUgMTEuNjA1MiAxMy45MTMxIDEzLjA0MzUgMTMuOTEzMVpNMTMuMDQzNSAxNS42NTIyQzEyLjU2NDQgMTUuNjUyMiAxMi4xNzM5IDE2LjA0MjcgMTIuMTczOSAxNi41MjE4QzEyLjE3MzkgMTcuMDAwOSAxMi41NjQ0IDE3LjM5MTMgMTMuMDQzNSAxNy4zOTEzQzEzLjUyMjYgMTcuMzkxMyAxMy45MTMxIDE3LjAwMDkgMTMuOTEzMSAxNi41MjE4QzEzLjkxMzEgMTYuMDQyNyAxMy41MjI2IDE1LjY1MjIgMTMuMDQzNSAxNS42NTIyWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNC4zNDc4IDE2LjUyMThDMjQuMzQ3OCAxNS4wODM1IDI1LjUxODIgMTMuOTEzMSAyNi45NTY1IDEzLjkxMzFDMjguMzk0NyAxMy45MTMxIDI5LjU2NTIgMTUuMDgzNSAyOS41NjUyIDE2LjUyMThDMjkuNTY1MiAxNy45NiAyOC4zOTQ3IDE5LjEzMDUgMjYuOTU2NSAxOS4xMzA1QzI1LjUxODIgMTkuMTMwNSAyNC4zNDc4IDE3Ljk2IDI0LjM0NzggMTYuNTIxOFpNMjYuMDg2OSAxNi41MjE4QzI2LjA4NjkgMTcuMDAwOSAyNi40NzczIDE3LjM5MTMgMjYuOTU2NSAxNy4zOTEzQzI3LjQzNTYgMTcuMzkxMyAyNy44MjYgMTcuMDAwOSAyNy44MjYgMTYuNTIxOEMyNy44MjYgMTYuMDQyNyAyNy40MzU2IDE1LjY1MjIgMjYuOTU2NSAxNS42NTIyQzI2LjQ3NzMgMTUuNjUyMiAyNi4wODY5IDE2LjA0MjcgMjYuMDg2OSAxNi41MjE4WiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZD0iTTI4LjQwNjEgMjQuNTY5NEMyOC4wNDc4IDI0LjI0ODYgMjcuNDk3NCAyNC4yNzk5IDI3LjE3ODIgMjQuNjM3M0MyNS4zNjQzIDI2LjY2NDIgMjIuNzQ4NyAyNy44MjYgMjAgMjcuODI2QzE3LjI1MjIgMjcuODI2IDE0LjYzNTYgMjYuNjY0MiAxMi44MjE3IDI0LjYzNzNDMTIuNTAwOCAyNC4yNzk5IDExLjk1MjIgMjQuMjQ4NiAxMS41OTM5IDI0LjU2OTRDMTEuMjM1NiAyNC44ODk0IDExLjIwNjEgMjUuNDM5IDExLjUyNjEgMjUuNzk3M0MxMy42Njk1IDI4LjE5MjEgMTYuNzU4MiAyOS41NjUxIDIwIDI5LjU2NTFDMjMuMjQyNiAyOS41NjUxIDI2LjMzMTMgMjguMTkxMiAyOC40NzM5IDI1Ljc5NzNDMjguNzkzOSAyNS40MzkgMjguNzYzNSAyNC44ODk0IDI4LjQwNjEgMjQuNTY5NFoiIGZpbGw9IiMyOGE3NDUiLz4NCjwvc3ZnPg0K);
   background-repeat: no-repeat;
-  background-position: center right calc(0.375em + 0.1875rem);
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: center right calc(0.375em + 0.2969rem);
+  background-size: calc(0.75em + 0.5938rem) calc(0.75em + 0.5938rem);
 }
 
 /* line 66, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3785,8 +3785,8 @@ textarea.form-control,
 textarea.form-control.is-valid,
 .comment-form textarea.is-valid,
 .search-form textarea.is-valid.search-field {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1.5em + 1.1876rem);
+  background-position: top calc(0.375em + 0.2969rem) right calc(0.375em + 0.2969rem);
 }
 
 /* line 90, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3794,8 +3794,8 @@ textarea.form-control.is-valid,
 .was-validated .custom-select:valid,
 .custom-select.is-valid {
   border-color: #28a745;
-  padding-right: calc((1em + 0.75rem) * 3 / 4 + 3.0625rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAyMEMwIDguOTcyMTcgOC45NzIxNyAwIDIwIDBDMzEuMDI3OCAwIDQwIDguOTcyMTcgNDAgMjBDNDAgMzEuMDI3OCAzMS4wMjc4IDQwIDIwIDQwQzguOTcyMTcgNDAgMCAzMS4wMjc4IDAgMjBaTTEuNzM5MTMgMjBDMS43MzkxMyAzMC4wNjk2IDkuOTMwNDQgMzguMjYwOSAyMCAzOC4yNjA5QzMwLjA2OTYgMzguMjYwOSAzOC4yNjA5IDMwLjA2OTYgMzguMjYwOSAyMEMzOC4yNjA5IDkuOTMwNDQgMzAuMDY5NiAxLjczOTEzIDIwIDEuNzM5MTNDOS45MzA0NCAxLjczOTEzIDEuNzM5MTMgOS45MzA0NCAxLjczOTEzIDIwWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMy4wNDM1IDEzLjkxMzFDMTQuNDgxOCAxMy45MTMxIDE1LjY1MjIgMTUuMDgzNSAxNS42NTIyIDE2LjUyMThDMTUuNjUyMiAxNy45NiAxNC40ODE4IDE5LjEzMDUgMTMuMDQzNSAxOS4xMzA1QzExLjYwNTIgMTkuMTMwNSAxMC40MzQ4IDE3Ljk2IDEwLjQzNDggMTYuNTIxOEMxMC40MzQ4IDE1LjA4MzUgMTEuNjA1MiAxMy45MTMxIDEzLjA0MzUgMTMuOTEzMVpNMTMuMDQzNSAxNS42NTIyQzEyLjU2NDQgMTUuNjUyMiAxMi4xNzM5IDE2LjA0MjcgMTIuMTczOSAxNi41MjE4QzEyLjE3MzkgMTcuMDAwOSAxMi41NjQ0IDE3LjM5MTMgMTMuMDQzNSAxNy4zOTEzQzEzLjUyMjYgMTcuMzkxMyAxMy45MTMxIDE3LjAwMDkgMTMuOTEzMSAxNi41MjE4QzEzLjkxMzEgMTYuMDQyNyAxMy41MjI2IDE1LjY1MjIgMTMuMDQzNSAxNS42NTIyWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNC4zNDc4IDE2LjUyMThDMjQuMzQ3OCAxNS4wODM1IDI1LjUxODIgMTMuOTEzMSAyNi45NTY1IDEzLjkxMzFDMjguMzk0NyAxMy45MTMxIDI5LjU2NTIgMTUuMDgzNSAyOS41NjUyIDE2LjUyMThDMjkuNTY1MiAxNy45NiAyOC4zOTQ3IDE5LjEzMDUgMjYuOTU2NSAxOS4xMzA1QzI1LjUxODIgMTkuMTMwNSAyNC4zNDc4IDE3Ljk2IDI0LjM0NzggMTYuNTIxOFpNMjYuMDg2OSAxNi41MjE4QzI2LjA4NjkgMTcuMDAwOSAyNi40NzczIDE3LjM5MTMgMjYuOTU2NSAxNy4zOTEzQzI3LjQzNTYgMTcuMzkxMyAyNy44MjYgMTcuMDAwOSAyNy44MjYgMTYuNTIxOEMyNy44MjYgMTYuMDQyNyAyNy40MzU2IDE1LjY1MjIgMjYuOTU2NSAxNS42NTIyQzI2LjQ3NzMgMTUuNjUyMiAyNi4wODY5IDE2LjA0MjcgMjYuMDg2OSAxNi41MjE4WiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZD0iTTI4LjQwNjEgMjQuNTY5NEMyOC4wNDc4IDI0LjI0ODYgMjcuNDk3NCAyNC4yNzk5IDI3LjE3ODIgMjQuNjM3M0MyNS4zNjQzIDI2LjY2NDIgMjIuNzQ4NyAyNy44MjYgMjAgMjcuODI2QzE3LjI1MjIgMjcuODI2IDE0LjYzNTYgMjYuNjY0MiAxMi44MjE3IDI0LjYzNzNDMTIuNTAwOCAyNC4yNzk5IDExLjk1MjIgMjQuMjQ4NiAxMS41OTM5IDI0LjU2OTRDMTEuMjM1NiAyNC44ODk0IDExLjIwNjEgMjUuNDM5IDExLjUyNjEgMjUuNzk3M0MxMy42Njk1IDI4LjE5MjEgMTYuNzU4MiAyOS41NjUxIDIwIDI5LjU2NTFDMjMuMjQyNiAyOS41NjUxIDI2LjMzMTMgMjguMTkxMiAyOC40NzM5IDI1Ljc5NzNDMjguNzkzOSAyNS40MzkgMjguNzYzNSAyNC44ODk0IDI4LjQwNjEgMjQuNTY5NFoiIGZpbGw9IiMyOGE3NDUiLz4NCjwvc3ZnPg0K) #fff no-repeat center right 3.0625rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  padding-right: calc((1em + 1.1876rem) * 3 / 4 + 3.0625rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAyMEMwIDguOTcyMTcgOC45NzIxNyAwIDIwIDBDMzEuMDI3OCAwIDQwIDguOTcyMTcgNDAgMjBDNDAgMzEuMDI3OCAzMS4wMjc4IDQwIDIwIDQwQzguOTcyMTcgNDAgMCAzMS4wMjc4IDAgMjBaTTEuNzM5MTMgMjBDMS43MzkxMyAzMC4wNjk2IDkuOTMwNDQgMzguMjYwOSAyMCAzOC4yNjA5QzMwLjA2OTYgMzguMjYwOSAzOC4yNjA5IDMwLjA2OTYgMzguMjYwOSAyMEMzOC4yNjA5IDkuOTMwNDQgMzAuMDY5NiAxLjczOTEzIDIwIDEuNzM5MTNDOS45MzA0NCAxLjczOTEzIDEuNzM5MTMgOS45MzA0NCAxLjczOTEzIDIwWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMy4wNDM1IDEzLjkxMzFDMTQuNDgxOCAxMy45MTMxIDE1LjY1MjIgMTUuMDgzNSAxNS42NTIyIDE2LjUyMThDMTUuNjUyMiAxNy45NiAxNC40ODE4IDE5LjEzMDUgMTMuMDQzNSAxOS4xMzA1QzExLjYwNTIgMTkuMTMwNSAxMC40MzQ4IDE3Ljk2IDEwLjQzNDggMTYuNTIxOEMxMC40MzQ4IDE1LjA4MzUgMTEuNjA1MiAxMy45MTMxIDEzLjA0MzUgMTMuOTEzMVpNMTMuMDQzNSAxNS42NTIyQzEyLjU2NDQgMTUuNjUyMiAxMi4xNzM5IDE2LjA0MjcgMTIuMTczOSAxNi41MjE4QzEyLjE3MzkgMTcuMDAwOSAxMi41NjQ0IDE3LjM5MTMgMTMuMDQzNSAxNy4zOTEzQzEzLjUyMjYgMTcuMzkxMyAxMy45MTMxIDE3LjAwMDkgMTMuOTEzMSAxNi41MjE4QzEzLjkxMzEgMTYuMDQyNyAxMy41MjI2IDE1LjY1MjIgMTMuMDQzNSAxNS42NTIyWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNC4zNDc4IDE2LjUyMThDMjQuMzQ3OCAxNS4wODM1IDI1LjUxODIgMTMuOTEzMSAyNi45NTY1IDEzLjkxMzFDMjguMzk0NyAxMy45MTMxIDI5LjU2NTIgMTUuMDgzNSAyOS41NjUyIDE2LjUyMThDMjkuNTY1MiAxNy45NiAyOC4zOTQ3IDE5LjEzMDUgMjYuOTU2NSAxOS4xMzA1QzI1LjUxODIgMTkuMTMwNSAyNC4zNDc4IDE3Ljk2IDI0LjM0NzggMTYuNTIxOFpNMjYuMDg2OSAxNi41MjE4QzI2LjA4NjkgMTcuMDAwOSAyNi40NzczIDE3LjM5MTMgMjYuOTU2NSAxNy4zOTEzQzI3LjQzNTYgMTcuMzkxMyAyNy44MjYgMTcuMDAwOSAyNy44MjYgMTYuNTIxOEMyNy44MjYgMTYuMDQyNyAyNy40MzU2IDE1LjY1MjIgMjYuOTU2NSAxNS42NTIyQzI2LjQ3NzMgMTUuNjUyMiAyNi4wODY5IDE2LjA0MjcgMjYuMDg2OSAxNi41MjE4WiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZD0iTTI4LjQwNjEgMjQuNTY5NEMyOC4wNDc4IDI0LjI0ODYgMjcuNDk3NCAyNC4yNzk5IDI3LjE3ODIgMjQuNjM3M0MyNS4zNjQzIDI2LjY2NDIgMjIuNzQ4NyAyNy44MjYgMjAgMjcuODI2QzE3LjI1MjIgMjcuODI2IDE0LjYzNTYgMjYuNjY0MiAxMi44MjE3IDI0LjYzNzNDMTIuNTAwOCAyNC4yNzk5IDExLjk1MjIgMjQuMjQ4NiAxMS41OTM5IDI0LjU2OTRDMTEuMjM1NiAyNC44ODk0IDExLjIwNjEgMjUuNDM5IDExLjUyNjEgMjUuNzk3M0MxMy42Njk1IDI4LjE5MjEgMTYuNzU4MiAyOS41NjUxIDIwIDI5LjU2NTFDMjMuMjQyNiAyOS41NjUxIDI2LjMzMTMgMjguMTkxMiAyOC40NzM5IDI1Ljc5NzNDMjguNzkzOSAyNS40MzkgMjguNzYzNSAyNC44ODk0IDI4LjQwNjEgMjQuNTY5NFoiIGZpbGw9IiMyOGE3NDUiLz4NCjwvc3ZnPg0K) #fff no-repeat center right 3.0625rem/calc(0.75em + 0.5938rem) calc(0.75em + 0.5938rem);
 }
 
 /* line 99, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3959,11 +3959,11 @@ textarea.form-control.is-valid,
 .comment-form textarea.is-invalid,
 .search-form .is-invalid.search-field {
   border-color: #d45656;
-  padding-right: calc(1.5em + 0.75rem);
+  padding-right: calc(1.5em + 1.1876rem);
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDE1QzAgNi43MjkxMyA2LjcyOTEzIDAgMTUgMEMyMy4yNzE1IDAgMzAgNi43MjkxMyAzMCAxNUMzMCAyMy4yNzA5IDIzLjI3MTUgMzAgMTUgMzBDNi43MjkxMyAzMCAwIDIzLjI3MDkgMCAxNVpNMS4zMDQzNSAxNUMxLjMwNDM1IDIyLjU1MjIgNy40NDc4MyAyOC42OTU3IDE1IDI4LjY5NTdDMjIuNTUxNSAyOC42OTU3IDI4LjY5NTcgMjIuNTUyMiAyOC42OTU3IDE1QzI4LjY5NTcgNy40NDc4MyAyMi41NTE1IDEuMzA0MzUgMTUgMS4zMDQzNUM3LjQ0NzgzIDEuMzA0MzUgMS4zMDQzNSA3LjQ0NzgzIDEuMzA0MzUgMTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS44MDc2NyAxMC4zODQ4QzEwLjc2MTkgMTAuMzg0OCAxMS41Mzg0IDExLjE2MTMgMTEuNTM4NCAxMi4xMTU1QzExLjUzODQgMTMuMDY5OCAxMC43NjE5IDEzLjg0NjMgOS44MDc2NyAxMy44NDYzQzguODUzNDQgMTMuODQ2MyA4LjA3NjkgMTMuMDY5OCA4LjA3NjkgMTIuMTE1NUM4LjA3NjkgMTEuMTYxMyA4Ljg1MzQ0IDEwLjM4NDggOS44MDc2NyAxMC4zODQ4Wk05LjgwNzY3IDExLjUzODZDOS40ODk3OSAxMS41Mzg2IDkuMjMwNzUgMTEuNzk3NyA5LjIzMDc1IDEyLjExNTVDOS4yMzA3NSAxMi40MzM0IDkuNDg5NzkgMTIuNjkyNSA5LjgwNzY3IDEyLjY5MjVDMTAuMTI1NiAxMi42OTI1IDEwLjM4NDYgMTIuNDMzNCAxMC4zODQ2IDEyLjExNTVDMTAuMzg0NiAxMS43OTc3IDEwLjEyNTYgMTEuNTM4NiA5LjgwNzY3IDExLjUzODZaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTguNDYxNSAxMi4xMTU1QzE4LjQ2MTUgMTEuMTYxMyAxOS4yMzgxIDEwLjM4NDggMjAuMTkyMyAxMC4zODQ4QzIxLjE0NjUgMTAuMzg0OCAyMS45MjMxIDExLjE2MTMgMjEuOTIzMSAxMi4xMTU1QzIxLjkyMzEgMTMuMDY5OCAyMS4xNDY1IDEzLjg0NjMgMjAuMTkyMyAxMy44NDYzQzE5LjIzODEgMTMuODQ2MyAxOC40NjE1IDEzLjA2OTggMTguNDYxNSAxMi4xMTU1Wk0xOS42MTU0IDEyLjExNTVDMTkuNjE1NCAxMi40MzM0IDE5Ljg3MzkgMTIuNjkyNSAyMC4xOTIzIDEyLjY5MjVDMjAuNTEwOCAxMi42OTI1IDIwLjc2OTIgMTIuNDMzNCAyMC43NjkyIDEyLjExNTVDMjAuNzY5MiAxMS43OTc3IDIwLjUxMDggMTEuNTM4NiAyMC4xOTIzIDExLjUzODZDMTkuODczOSAxMS41Mzg2IDE5LjYxNTQgMTEuNzk3NyAxOS42MTU0IDEyLjExNTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGQ9Ik0xNC40MjMxIDE4LjQ2MTRDMTIuMDU3MSAxOC40NjE0IDkuODAyOSAxOS4zNzI0IDguMjM4NTIgMjAuOTYxMkM4LjAwNDk3IDIxLjE5ODkgOC4wMjcxOSAyMS41NjM1IDguMjg4MDIgMjEuNzc1OEM4LjU0OTQ5IDIxLjk4ODcgOC45NTA1OCAyMS45Njc5IDkuMTg0MTMgMjEuNzMwOEMxMC41MDggMjAuMzg2IDEyLjQxNzYgMTkuNjE1MyAxNC40MjMxIDE5LjYxNTNDMTYuNDI4NSAxOS42MTUzIDE4LjMzODEgMjAuMzg2IDE5LjY2MiAyMS43MzA4QzE5Ljc4NyAyMS44NTgzIDE5Ljk2MDkgMjEuOTIyOSAyMC4xMzQ4IDIxLjkyMjlDMjAuMjg1MiAyMS45MjI5IDIwLjQzNzUgMjEuODc0NSAyMC41NTgxIDIxLjc3NThDMjAuODE4OSAyMS41NjM1IDIwLjg0MTEgMjEuMTk4OSAyMC42MDc2IDIwLjk2MTJDMTkuMDQzMiAxOS4zNzMgMTYuNzg5NiAxOC40NjE0IDE0LjQyMzEgMTguNDYxNFoiIGZpbGw9IiNkNDU2NTYiLz4NCjwvc3ZnPg0K);
   background-repeat: no-repeat;
-  background-position: center right calc(0.375em + 0.1875rem);
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background-position: center right calc(0.375em + 0.2969rem);
+  background-size: calc(0.75em + 0.5938rem) calc(0.75em + 0.5938rem);
 }
 
 /* line 66, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4039,8 +4039,8 @@ textarea.form-control.is-valid,
 textarea.form-control.is-invalid,
 .comment-form textarea.is-invalid,
 .search-form textarea.is-invalid.search-field {
-  padding-right: calc(1.5em + 0.75rem);
-  background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
+  padding-right: calc(1.5em + 1.1876rem);
+  background-position: top calc(0.375em + 0.2969rem) right calc(0.375em + 0.2969rem);
 }
 
 /* line 90, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4048,8 +4048,8 @@ textarea.form-control.is-invalid,
 .was-validated .custom-select:invalid,
 .custom-select.is-invalid {
   border-color: #d45656;
-  padding-right: calc((1em + 0.75rem) * 3 / 4 + 3.0625rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDE1QzAgNi43MjkxMyA2LjcyOTEzIDAgMTUgMEMyMy4yNzE1IDAgMzAgNi43MjkxMyAzMCAxNUMzMCAyMy4yNzA5IDIzLjI3MTUgMzAgMTUgMzBDNi43MjkxMyAzMCAwIDIzLjI3MDkgMCAxNVpNMS4zMDQzNSAxNUMxLjMwNDM1IDIyLjU1MjIgNy40NDc4MyAyOC42OTU3IDE1IDI4LjY5NTdDMjIuNTUxNSAyOC42OTU3IDI4LjY5NTcgMjIuNTUyMiAyOC42OTU3IDE1QzI4LjY5NTcgNy40NDc4MyAyMi41NTE1IDEuMzA0MzUgMTUgMS4zMDQzNUM3LjQ0NzgzIDEuMzA0MzUgMS4zMDQzNSA3LjQ0NzgzIDEuMzA0MzUgMTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS44MDc2NyAxMC4zODQ4QzEwLjc2MTkgMTAuMzg0OCAxMS41Mzg0IDExLjE2MTMgMTEuNTM4NCAxMi4xMTU1QzExLjUzODQgMTMuMDY5OCAxMC43NjE5IDEzLjg0NjMgOS44MDc2NyAxMy44NDYzQzguODUzNDQgMTMuODQ2MyA4LjA3NjkgMTMuMDY5OCA4LjA3NjkgMTIuMTE1NUM4LjA3NjkgMTEuMTYxMyA4Ljg1MzQ0IDEwLjM4NDggOS44MDc2NyAxMC4zODQ4Wk05LjgwNzY3IDExLjUzODZDOS40ODk3OSAxMS41Mzg2IDkuMjMwNzUgMTEuNzk3NyA5LjIzMDc1IDEyLjExNTVDOS4yMzA3NSAxMi40MzM0IDkuNDg5NzkgMTIuNjkyNSA5LjgwNzY3IDEyLjY5MjVDMTAuMTI1NiAxMi42OTI1IDEwLjM4NDYgMTIuNDMzNCAxMC4zODQ2IDEyLjExNTVDMTAuMzg0NiAxMS43OTc3IDEwLjEyNTYgMTEuNTM4NiA5LjgwNzY3IDExLjUzODZaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTguNDYxNSAxMi4xMTU1QzE4LjQ2MTUgMTEuMTYxMyAxOS4yMzgxIDEwLjM4NDggMjAuMTkyMyAxMC4zODQ4QzIxLjE0NjUgMTAuMzg0OCAyMS45MjMxIDExLjE2MTMgMjEuOTIzMSAxMi4xMTU1QzIxLjkyMzEgMTMuMDY5OCAyMS4xNDY1IDEzLjg0NjMgMjAuMTkyMyAxMy44NDYzQzE5LjIzODEgMTMuODQ2MyAxOC40NjE1IDEzLjA2OTggMTguNDYxNSAxMi4xMTU1Wk0xOS42MTU0IDEyLjExNTVDMTkuNjE1NCAxMi40MzM0IDE5Ljg3MzkgMTIuNjkyNSAyMC4xOTIzIDEyLjY5MjVDMjAuNTEwOCAxMi42OTI1IDIwLjc2OTIgMTIuNDMzNCAyMC43NjkyIDEyLjExNTVDMjAuNzY5MiAxMS43OTc3IDIwLjUxMDggMTEuNTM4NiAyMC4xOTIzIDExLjUzODZDMTkuODczOSAxMS41Mzg2IDE5LjYxNTQgMTEuNzk3NyAxOS42MTU0IDEyLjExNTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGQ9Ik0xNC40MjMxIDE4LjQ2MTRDMTIuMDU3MSAxOC40NjE0IDkuODAyOSAxOS4zNzI0IDguMjM4NTIgMjAuOTYxMkM4LjAwNDk3IDIxLjE5ODkgOC4wMjcxOSAyMS41NjM1IDguMjg4MDIgMjEuNzc1OEM4LjU0OTQ5IDIxLjk4ODcgOC45NTA1OCAyMS45Njc5IDkuMTg0MTMgMjEuNzMwOEMxMC41MDggMjAuMzg2IDEyLjQxNzYgMTkuNjE1MyAxNC40MjMxIDE5LjYxNTNDMTYuNDI4NSAxOS42MTUzIDE4LjMzODEgMjAuMzg2IDE5LjY2MiAyMS43MzA4QzE5Ljc4NyAyMS44NTgzIDE5Ljk2MDkgMjEuOTIyOSAyMC4xMzQ4IDIxLjkyMjlDMjAuMjg1MiAyMS45MjI5IDIwLjQzNzUgMjEuODc0NSAyMC41NTgxIDIxLjc3NThDMjAuODE4OSAyMS41NjM1IDIwLjg0MTEgMjEuMTk4OSAyMC42MDc2IDIwLjk2MTJDMTkuMDQzMiAxOS4zNzMgMTYuNzg5NiAxOC40NjE0IDE0LjQyMzEgMTguNDYxNFoiIGZpbGw9IiNkNDU2NTYiLz4NCjwvc3ZnPg0K) #fff no-repeat center right 3.0625rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  padding-right: calc((1em + 1.1876rem) * 3 / 4 + 3.0625rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDE1QzAgNi43MjkxMyA2LjcyOTEzIDAgMTUgMEMyMy4yNzE1IDAgMzAgNi43MjkxMyAzMCAxNUMzMCAyMy4yNzA5IDIzLjI3MTUgMzAgMTUgMzBDNi43MjkxMyAzMCAwIDIzLjI3MDkgMCAxNVpNMS4zMDQzNSAxNUMxLjMwNDM1IDIyLjU1MjIgNy40NDc4MyAyOC42OTU3IDE1IDI4LjY5NTdDMjIuNTUxNSAyOC42OTU3IDI4LjY5NTcgMjIuNTUyMiAyOC42OTU3IDE1QzI4LjY5NTcgNy40NDc4MyAyMi41NTE1IDEuMzA0MzUgMTUgMS4zMDQzNUM3LjQ0NzgzIDEuMzA0MzUgMS4zMDQzNSA3LjQ0NzgzIDEuMzA0MzUgMTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS44MDc2NyAxMC4zODQ4QzEwLjc2MTkgMTAuMzg0OCAxMS41Mzg0IDExLjE2MTMgMTEuNTM4NCAxMi4xMTU1QzExLjUzODQgMTMuMDY5OCAxMC43NjE5IDEzLjg0NjMgOS44MDc2NyAxMy44NDYzQzguODUzNDQgMTMuODQ2MyA4LjA3NjkgMTMuMDY5OCA4LjA3NjkgMTIuMTE1NUM4LjA3NjkgMTEuMTYxMyA4Ljg1MzQ0IDEwLjM4NDggOS44MDc2NyAxMC4zODQ4Wk05LjgwNzY3IDExLjUzODZDOS40ODk3OSAxMS41Mzg2IDkuMjMwNzUgMTEuNzk3NyA5LjIzMDc1IDEyLjExNTVDOS4yMzA3NSAxMi40MzM0IDkuNDg5NzkgMTIuNjkyNSA5LjgwNzY3IDEyLjY5MjVDMTAuMTI1NiAxMi42OTI1IDEwLjM4NDYgMTIuNDMzNCAxMC4zODQ2IDEyLjExNTVDMTAuMzg0NiAxMS43OTc3IDEwLjEyNTYgMTEuNTM4NiA5LjgwNzY3IDExLjUzODZaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTguNDYxNSAxMi4xMTU1QzE4LjQ2MTUgMTEuMTYxMyAxOS4yMzgxIDEwLjM4NDggMjAuMTkyMyAxMC4zODQ4QzIxLjE0NjUgMTAuMzg0OCAyMS45MjMxIDExLjE2MTMgMjEuOTIzMSAxMi4xMTU1QzIxLjkyMzEgMTMuMDY5OCAyMS4xNDY1IDEzLjg0NjMgMjAuMTkyMyAxMy44NDYzQzE5LjIzODEgMTMuODQ2MyAxOC40NjE1IDEzLjA2OTggMTguNDYxNSAxMi4xMTU1Wk0xOS42MTU0IDEyLjExNTVDMTkuNjE1NCAxMi40MzM0IDE5Ljg3MzkgMTIuNjkyNSAyMC4xOTIzIDEyLjY5MjVDMjAuNTEwOCAxMi42OTI1IDIwLjc2OTIgMTIuNDMzNCAyMC43NjkyIDEyLjExNTVDMjAuNzY5MiAxMS43OTc3IDIwLjUxMDggMTEuNTM4NiAyMC4xOTIzIDExLjUzODZDMTkuODczOSAxMS41Mzg2IDE5LjYxNTQgMTEuNzk3NyAxOS42MTU0IDEyLjExNTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGQ9Ik0xNC40MjMxIDE4LjQ2MTRDMTIuMDU3MSAxOC40NjE0IDkuODAyOSAxOS4zNzI0IDguMjM4NTIgMjAuOTYxMkM4LjAwNDk3IDIxLjE5ODkgOC4wMjcxOSAyMS41NjM1IDguMjg4MDIgMjEuNzc1OEM4LjU0OTQ5IDIxLjk4ODcgOC45NTA1OCAyMS45Njc5IDkuMTg0MTMgMjEuNzMwOEMxMC41MDggMjAuMzg2IDEyLjQxNzYgMTkuNjE1MyAxNC40MjMxIDE5LjYxNTNDMTYuNDI4NSAxOS42MTUzIDE4LjMzODEgMjAuMzg2IDE5LjY2MiAyMS43MzA4QzE5Ljc4NyAyMS44NTgzIDE5Ljk2MDkgMjEuOTIyOSAyMC4xMzQ4IDIxLjkyMjlDMjAuMjg1MiAyMS45MjI5IDIwLjQzNzUgMjEuODc0NSAyMC41NTgxIDIxLjc3NThDMjAuODE4OSAyMS41NjM1IDIwLjg0MTEgMjEuMTk4OSAyMC42MDc2IDIwLjk2MTJDMTkuMDQzMiAxOS4zNzMgMTYuNzg5NiAxOC40NjE0IDE0LjQyMzEgMTguNDYxNFoiIGZpbGw9IiNkNDU2NTYiLz4NCjwvc3ZnPg0K) #fff no-repeat center right 3.0625rem/calc(0.75em + 0.5938rem) calc(0.75em + 0.5938rem);
 }
 
 /* line 99, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4340,7 +4340,7 @@ textarea.form-control.is-invalid,
           user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
+  padding: 0.5938rem 0.5938rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 1.1875rem;
@@ -6144,7 +6144,7 @@ input[type="button"].btn-block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.375rem 2.0625rem;
+  padding: 0.5938rem 2.0625rem;
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: 400;
@@ -6496,8 +6496,8 @@ input[type="button"].btn-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 3.0625rem 0.375rem 2.0625rem;
+  height: calc(1.5em + 1.1876rem + 2px);
+  padding: 0.5938rem 3.0625rem 0.5938rem 2.0625rem;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
@@ -6576,7 +6576,7 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: calc(1.5em + 1.1876rem + 2px);
   margin-bottom: 0;
 }
 
@@ -6586,7 +6586,7 @@ input[type="button"].btn-block {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: calc(1.5em + 1.1876rem + 2px);
   margin: 0;
   opacity: 0;
 }
@@ -6625,8 +6625,8 @@ input[type="button"].btn-block {
   right: 0;
   left: 0;
   z-index: 1;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 2.0625rem;
+  height: calc(1.5em + 1.1876rem + 2px);
+  padding: 0.5938rem 2.0625rem;
   font-weight: 500;
   line-height: 1.5;
   color: #495057;
@@ -6644,8 +6644,8 @@ input[type="button"].btn-block {
   bottom: 0;
   z-index: 3;
   display: block;
-  height: calc(1.5em + 0.75rem);
-  padding: 0.375rem 2.0625rem;
+  height: calc(1.5em + 1.1876rem);
+  padding: 0.5938rem 2.0625rem;
   line-height: 1.5;
   color: #495057;
   content: "Browse";
@@ -16391,8 +16391,8 @@ a.text-ash:focus {
 /* line 69, node_modules/bootstrap/scss/_button-group.scss */
 
 .dropdown-toggle-split {
-  padding-right: 0.5625rem;
-  padding-left: 0.5625rem;
+  padding-right: 0.44535rem;
+  padding-left: 0.44535rem;
 }
 
 /* line 73, node_modules/bootstrap/scss/_button-group.scss */
@@ -17006,23 +17006,25 @@ blockquote footer::before,
   padding: 0;
   height: 2.0625rem;
   width: 2.0625rem;
+  -webkit-box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 65, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 66, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-sm {
   height: 1.875rem;
   width: 1.875rem;
 }
 
-/* line 70, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 71, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-lg {
   height: 2.5rem;
   width: 2.5rem;
 }
 
-/* line 75, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 76, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > img {
   width: 100%;
@@ -17063,13 +17065,19 @@ blockquote footer::before,
   letter-spacing: 0.5px;
 }
 
-/* line 15, resources/assets/styles/skhoop/components/_breadcrumb.scss */
+/* line 14, resources/assets/styles/skhoop/components/_breadcrumb.scss */
+
+.breadcrumb-item.active {
+  color: rgba(3, 21, 50, 0.5);
+}
+
+/* line 19, resources/assets/styles/skhoop/components/_breadcrumb.scss */
 
 .breadcrumb-item + .breadcrumb-item {
   padding-left: 0.5625rem;
 }
 
-/* line 19, resources/assets/styles/skhoop/components/_breadcrumb.scss */
+/* line 23, resources/assets/styles/skhoop/components/_breadcrumb.scss */
 
 .breadcrumb-item + .breadcrumb-item::before {
   padding-right: 0.6875rem;
@@ -17607,7 +17615,23 @@ body#tinymce {
   }
 }
 
-/* line 26, resources/assets/styles/skhoop/sections/_category-banner.scss */
+@media (min-width: 1240px) {
+  /* line 25, resources/assets/styles/skhoop/sections/_category-banner.scss */
+
+  .category-banner .box-wrapper > .container {
+    max-width: 1210px;
+  }
+}
+
+@media (min-width: 1480px) {
+  /* line 25, resources/assets/styles/skhoop/sections/_category-banner.scss */
+
+  .category-banner .box-wrapper > .container {
+    max-width: 1210px;
+  }
+}
+
+/* line 36, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
 .category-banner-info {
   width: 100%;
@@ -17617,7 +17641,7 @@ body#tinymce {
 }
 
 @media (min-width: 576px) {
-  /* line 26, resources/assets/styles/skhoop/sections/_category-banner.scss */
+  /* line 36, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
   .category-banner-info {
     width: 475px;
@@ -17625,14 +17649,14 @@ body#tinymce {
   }
 }
 
-/* line 37, resources/assets/styles/skhoop/sections/_category-banner.scss */
+/* line 47, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
 .category-banner-info .title {
   margin-bottom: 0.5rem;
 }
 
 @media (min-width: 992px) {
-  /* line 37, resources/assets/styles/skhoop/sections/_category-banner.scss */
+  /* line 47, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
   .category-banner-info .title {
     margin-bottom: 0;
@@ -17640,7 +17664,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 45, resources/assets/styles/skhoop/sections/_category-banner.scss */
+  /* line 55, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
   .category-banner-info .content {
     position: relative;
@@ -17648,7 +17672,7 @@ body#tinymce {
   }
 }
 
-/* line 51, resources/assets/styles/skhoop/sections/_category-banner.scss */
+/* line 61, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
 .category-banner-info .content > *:last-child {
   margin-bottom: 0;
@@ -17710,7 +17734,7 @@ body#tinymce {
      transform: translate(-50%);
   top: 5.625rem;
   width: calc(100% + 1.5rem);
-  max-width: 1200px;
+  max-width: 75rem;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -17783,7 +17807,90 @@ body#tinymce {
   }
 }
 
-/* line 69, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 67, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-header-title {
+  margin-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  /* line 67, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-header-title {
+    margin-bottom: -1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 75, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-header > .container {
+    max-width: calc(100% - 60px);
+  }
+}
+
+@media (min-width: 1240px) {
+  /* line 75, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-header > .container {
+    max-width: 1210px;
+  }
+}
+
+@media (min-width: 1480px) {
+  /* line 75, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-header > .container {
+    max-width: 1210px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 90, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-header .product-breadcrumbs .breadcrumb {
+    margin-left: 0.4375rem;
+  }
+}
+
+/* line 98, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-header .product-filter-toggle .js-filter-toggle {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 1.86px;
+  line-height: 1.5625rem;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  /* line 98, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-header .product-filter-toggle .js-filter-toggle {
+    margin-right: 1.125rem;
+  }
+}
+
+/* line 109, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-header .product-filter-toggle .js-filter-toggle button {
+  margin-left: 0.75rem;
+}
+
+/* line 115, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-header .js-filter {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -o-transform: translate(-50%);
+     transform: translate(-50%);
+  z-index: 2;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* line 125, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products {
   margin-left: -0.7813rem;
@@ -17791,7 +17898,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 69, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 125, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products {
     margin-left: -1.5625rem;
@@ -17799,7 +17906,7 @@ body#tinymce {
   }
 }
 
-/* line 78, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 134, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product {
   position: relative;
@@ -17810,7 +17917,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 78, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 134, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product {
     padding-left: 1.5625rem;
@@ -17819,14 +17926,14 @@ body#tinymce {
   }
 }
 
-/* line 92, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 148, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product a:hover,
 .products .product a:focus {
   text-decoration: none;
 }
 
-/* line 98, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 154, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-image {
   position: relative;
@@ -17876,19 +17983,19 @@ body#tinymce {
   width: 100%;
 }
 
-/* line 103, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 159, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-image .visible-on-hover {
   opacity: 0;
 }
 
-/* line 110, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 166, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product:hover .product-image .visible-on-hover {
   opacity: 1;
 }
 
-/* line 116, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 172, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-wrapper {
   position: relative;
@@ -17896,7 +18003,7 @@ body#tinymce {
   border-top-left-radius: 0.3125rem;
 }
 
-/* line 122, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 178, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-status {
   position: absolute;
@@ -17913,7 +18020,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 122, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 178, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product-status {
     top: 1.375rem;
@@ -17923,7 +18030,7 @@ body#tinymce {
   }
 }
 
-/* line 143, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 199, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-details {
   color: #031532;
@@ -17931,7 +18038,7 @@ body#tinymce {
   border-bottom-left-radius: 0.3125rem;
 }
 
-/* line 149, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 205, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-name {
   margin-bottom: 0;
@@ -17941,7 +18048,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 149, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 205, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product-name {
     font-size: 0.8125rem;
@@ -17949,7 +18056,7 @@ body#tinymce {
   }
 }
 
-/* line 161, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 217, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-price {
   margin-top: -0.4375rem;
@@ -17958,7 +18065,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 161, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 217, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product-price {
     margin-top: -0.1875rem;
@@ -17967,7 +18074,7 @@ body#tinymce {
   }
 }
 
-/* line 174, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 230, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-big {
   -webkit-box-flex: 0;
@@ -17977,7 +18084,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 174, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 230, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-big {
     -webkit-box-flex: 0;
@@ -17987,35 +18094,35 @@ body#tinymce {
   }
 }
 
-/* line 177, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 233, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-big .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 177, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 233, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-big .product-wrapper {
     padding: 6.25rem 2.5rem 4.6875rem;
   }
 }
 
-/* line 185, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 241, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-big .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 185, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 241, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-big .product-details {
     padding: 0 2.5rem 1.5625rem;
   }
 }
 
-/* line 194, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 250, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-small {
   -webkit-box-flex: 0;
@@ -18025,7 +18132,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 194, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 250, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-small {
     -webkit-box-flex: 0;
@@ -18035,48 +18142,48 @@ body#tinymce {
   }
 }
 
-/* line 197, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 253, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-small .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 197, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 253, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-small .product-wrapper {
     padding: 4.6875rem 2.3438rem 2.8125rem;
   }
 }
 
-/* line 205, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 261, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-small .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 205, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 261, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-small .product-details {
     padding: 0 2.3438rem 1.5625rem;
   }
 }
 
-/* line 216, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 272, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-sale .product-status {
   background-color: #d45656;
   color: #fff;
 }
 
-/* line 221, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 277, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-sale .product-price {
   color: #d45656;
 }
 
-/* line 224, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 280, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-sale .product-price span {
   margin-right: 0.3125rem;
@@ -18085,24 +18192,204 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 224, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 280, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-sale .product-price span {
     margin-right: 1.25rem;
   }
 }
 
-/* line 237, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 293, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-oos .product-status {
   background-color: #b7cad0;
   color: #fff;
 }
 
-/* line 242, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 298, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-oos .product-image {
   opacity: 0.5;
+}
+
+@media (min-width: 992px) {
+  /* line 2, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter > .container {
+    max-width: calc(100% - 60px);
+  }
+}
+
+@media (min-width: 1240px) {
+  /* line 2, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter > .container {
+    max-width: 1210px;
+  }
+}
+
+@media (min-width: 1480px) {
+  /* line 2, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter > .container {
+    max-width: 1210px;
+  }
+}
+
+/* line 16, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .filter-container,
+.product-filter .sort-container {
+  border-top: 0.0625rem solid #b7cad0;
+}
+
+/* line 20, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .filter-container .column,
+.product-filter .sort-container .column {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+/* line 27, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .filter-container .column {
+  float: left;
+  width: auto;
+  margin-right: 3.125rem;
+}
+
+/* line 32, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .filter-container .column:last-of-type {
+  margin-right: 0;
+}
+
+/* line 38, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .sort-container {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+/* line 43, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .sort-container .btn-group .btn,
+.product-filter .sort-container .btn-group .comment-form input[type="submit"],
+.comment-form .product-filter .sort-container .btn-group input[type="submit"],
+.product-filter .sort-container .btn-group .search-form .search-submit,
+.search-form .product-filter .sort-container .btn-group .search-submit {
+  border-radius: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+
+/* line 54, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector,
+.color-selector {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* line 60, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector .custom-control,
+.color-selector .custom-control {
+  padding-left: 0;
+  margin-right: 0.5625rem;
+}
+
+/* line 66, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector .custom-checkbox .custom-control-label,
+.color-selector .custom-checkbox .custom-control-label {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  border: 1px solid #e4e4e4;
+  cursor: pointer;
+}
+
+/* line 73, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector .custom-checkbox .custom-control-label::before,
+.size-selector .custom-checkbox .custom-control-label::after,
+.color-selector .custom-checkbox .custom-control-label::before,
+.color-selector .custom-checkbox .custom-control-label::after {
+  display: none;
+}
+
+/* line 80, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector li,
+.color-selector li {
+  display: inline-block;
+}
+
+/* line 84, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector li:last-child .custom-control,
+.color-selector li:last-child .custom-control {
+  margin-right: 0;
+}
+
+/* line 94, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector .custom-checkbox .custom-control-label span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+/* line 102, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
+  background-color: #031532;
+}
+
+/* line 105, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label span {
+  color: #fff;
+}
+
+/* line 110, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label {
+  cursor: default;
+}
+
+/* line 113, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  width: 100%;
+  display: block;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(40%, #292929), color-stop(20%, rgba(3, 21, 50, 0)));
+  background-image: -webkit-linear-gradient(left, #292929 40%, rgba(3, 21, 50, 0) 20%);
+  background-image: -o-linear-gradient(left, #292929 40%, rgba(3, 21, 50, 0) 20%);
+  background-image: linear-gradient(to right, #292929 40%, rgba(3, 21, 50, 0) 20%);
+  background-position: top;
+  background-size: 3px 1px;
+  background-repeat: repeat-x;
+  opacity: 0.5;
+  -webkit-transform: translate(-50%, -50%) rotate(225deg);
+       -o-transform: translate(-50%, -50%) rotate(225deg);
+          transform: translate(-50%, -50%) rotate(225deg);
 }
 
 

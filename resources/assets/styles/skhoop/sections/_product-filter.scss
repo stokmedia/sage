@@ -1,0 +1,131 @@
+.product-filter {
+  & > .container {
+    @include media-breakpoint-up(lg) {
+      max-width: calc(100% - 60px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 1210px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 1210px;
+    }
+  }
+
+  .filter-container,
+  .sort-container {
+    border-top: 0.0625rem solid $green;
+
+    .column {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+    }
+  }
+
+  .filter-container {
+    .column {
+      float: left;
+      width: auto;
+      margin-right: 3.125rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .sort-container {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+
+    .btn-group {
+      .btn {
+        border-radius: 1.25rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-left: 0.3125rem;
+        margin-right: 0.3125rem;
+      }
+    }
+  }
+}
+
+.size-selector,
+.color-selector {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  .custom-control {
+    padding-left: 0;
+    margin-right: 0.5625rem;
+  }
+
+  .custom-checkbox {
+    .custom-control-label {
+      width: 3.125rem;
+      height: 3.125rem;
+      border-radius: 50%;
+      border: 1px solid #e4e4e4;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  li {
+    display: inline-block;
+
+    &:last-child {
+      .custom-control {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.size-selector {
+  .custom-checkbox {
+    .custom-control-label {
+      span {
+        @include center(both);
+
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    .custom-control-input:checked ~ .custom-control-label {
+      background-color: $body-color;
+
+      span {
+        color: $white;
+      }
+    }
+
+    .custom-control-input:disabled ~ .custom-control-label {
+      cursor: default;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 1px;
+        width: 100%;
+        display: block;
+        border: none;
+        background-image: linear-gradient(to right, #292929 40%, rgba($body-color, 0) 20%);
+        background-position: top;
+        background-size: 3px 1px;
+        background-repeat: repeat-x;
+        opacity: 0.5;
+        transform: translate(-50%, -50%) rotate(225deg);
+      }
+    }
+  }
+}
