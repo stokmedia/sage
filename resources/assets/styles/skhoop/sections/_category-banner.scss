@@ -1,16 +1,26 @@
 .category-banner {
-  @include aspect-ratio-viewport(15,16, min-height);
+  @include aspect-ratio(16,15);
 
-  padding: 1.25rem 0.3125rem;
   background-color: $primary;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 
   @include media-breakpoint-up(sm) {
-    @include aspect-ratio-viewport(5,18, min-height);
+    @include aspect-ratio(18,5);
+  }
 
-    padding: 2.8125rem 1.875rem;
+  .box-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 1.25rem 0.3125rem;
+
+    @include media-breakpoint-up(sm) {
+      padding: 2.8125rem 1.875rem;
+    }
   }
 
   &-info {

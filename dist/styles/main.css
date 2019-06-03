@@ -17410,21 +17410,27 @@ body#tinymce {
 .category-banner {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  min-height: calc(100vw * ( 15 / 16 ));
-  padding: 1.25rem 0.3125rem;
   background-color: #b7cad0;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
 
-/* line 15, resources/assets/styles/common/_mixins.scss */
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.category-banner::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 93.75%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
 
 .category-banner > img,
 .category-banner > video,
 .category-banner > figure,
-.category-banner > iframe {
+.category-banner > .ratio-content {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -17439,23 +17445,42 @@ body#tinymce {
      object-fit: cover;
 }
 
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.category-banner > .ratio-iframe,
+.category-banner > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
 @media (min-width: 576px) {
   /* line 1, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
   .category-banner {
     position: relative;
     overflow: hidden;
-    width: 100%;
-    min-height: calc(100vw * ( 5 / 18 ));
-    padding: 2.8125rem 1.875rem;
   }
 
-  /* line 15, resources/assets/styles/common/_mixins.scss */
+  /* line 6, resources/assets/styles/common/_mixins.scss */
+
+  .category-banner::before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 27.77778%;
+  }
+
+  /* line 13, resources/assets/styles/common/_mixins.scss */
 
   .category-banner > img,
   .category-banner > video,
   .category-banner > figure,
-  .category-banner > iframe {
+  .category-banner > .ratio-content {
     position: absolute;
     top: 0;
     left: -9999px;
@@ -17469,9 +17494,41 @@ body#tinymce {
     -o-object-fit: cover;
        object-fit: cover;
   }
+
+  /* line 30, resources/assets/styles/common/_mixins.scss */
+
+  .category-banner > .ratio-iframe,
+  .category-banner > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 
-/* line 16, resources/assets/styles/skhoop/sections/_category-banner.scss */
+/* line 13, resources/assets/styles/skhoop/sections/_category-banner.scss */
+
+.category-banner .box-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 1.25rem 0.3125rem;
+}
+
+@media (min-width: 576px) {
+  /* line 13, resources/assets/styles/skhoop/sections/_category-banner.scss */
+
+  .category-banner .box-wrapper {
+    padding: 2.8125rem 1.875rem;
+  }
+}
+
+/* line 26, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
 .category-banner-info {
   width: 100%;
@@ -17481,7 +17538,7 @@ body#tinymce {
 }
 
 @media (min-width: 576px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_category-banner.scss */
+  /* line 26, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
   .category-banner-info {
     width: 475px;
@@ -17489,14 +17546,14 @@ body#tinymce {
   }
 }
 
-/* line 27, resources/assets/styles/skhoop/sections/_category-banner.scss */
+/* line 37, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
 .category-banner-info .title {
   margin-bottom: 0.5rem;
 }
 
 @media (min-width: 992px) {
-  /* line 27, resources/assets/styles/skhoop/sections/_category-banner.scss */
+  /* line 37, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
   .category-banner-info .title {
     margin-bottom: 0;
@@ -17504,7 +17561,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 35, resources/assets/styles/skhoop/sections/_category-banner.scss */
+  /* line 45, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
   .category-banner-info .content {
     position: relative;
@@ -17512,10 +17569,224 @@ body#tinymce {
   }
 }
 
-/* line 41, resources/assets/styles/skhoop/sections/_category-banner.scss */
+/* line 51, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
 .category-banner-info .content > *:last-child {
   margin-bottom: 0;
+}
+
+/* line 11, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-listing {
+  position: relative;
+  overflow: hidden;
+  padding-top: 3.125rem;
+  padding-left: 2.1875rem;
+  padding-right: 2.1875rem;
+  background-color: #dbe4e7;
+}
+
+@media (min-width: 576px) {
+  /* line 19, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-listing .container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1480px) {
+  /* line 19, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-listing .container {
+    max-width: 1370px;
+  }
+}
+
+/* line 29, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-listing .bg-image {
+  position: relative;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -o-transform: translate(-50%);
+     transform: translate(-50%);
+  width: 100%;
+  max-width: 1200px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.product-listing .bg-image::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.product-listing .bg-image > img,
+.product-listing .bg-image > video,
+.product-listing .bg-image > figure,
+.product-listing .bg-image > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.product-listing .bg-image > .ratio-iframe,
+.product-listing .bg-image > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 41, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products {
+  margin-left: -1.5625rem;
+  margin-right: -1.5625rem;
+}
+
+/* line 45, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product {
+  position: relative;
+  width: 100%;
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
+  margin-bottom: 3.125rem;
+}
+
+/* line 52, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product.is-big {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@media (min-width: 992px) {
+  /* line 52, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .products .product.is-big {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+/* line 56, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product.is-small {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+
+@media (min-width: 992px) {
+  /* line 56, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .products .product.is-small {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* line 60, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product-wrapper {
+  padding: 6.25rem 2.5rem 4.6875rem;
+  border-top-right-radius: 0.3125rem;
+  border-top-left-radius: 0.3125rem;
+}
+
+/* line 66, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product-details {
+  color: #031532;
+  border-bottom-right-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+}
+
+/* line 72, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.products .product-image::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 115.03067%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.products .product-image > img,
+.products .product-image > video,
+.products .product-image > figure,
+.products .product-image > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.products .product-image > .ratio-iframe,
+.products .product-image > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 75, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product-image .visible-on-hover {
+  display: none;
 }
 
 

@@ -1,0 +1,1 @@
+<h2>Text and image</h2>
