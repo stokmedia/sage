@@ -84,7 +84,7 @@
       width: 75%;
 
       @include media-breakpoint-up(md) {
-        width: 327px;
+        width: 80%;
       }
     }
 
@@ -93,6 +93,7 @@
     }
 
     .btn {
+      background-color: $white;
       margin-left: 1.1875rem;
     }
   }

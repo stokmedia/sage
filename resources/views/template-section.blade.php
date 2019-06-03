@@ -26,7 +26,7 @@
                   Your email is not valid
                 </div>
               </div>
-              <button class="btn btn-lg btn-icon btn-icon-lg bg-white btn-outline-primary" type="button">
+              <button class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary shadow-sm border-0" type="button">
                 <img src="@asset('images/icon/arrow-right.svg')" alt="" srcset="">
               </button>
             </div>

@@ -17578,7 +17578,7 @@ blockquote footer::before,
   .comment-form .newsletter-form p,
   .newsletter-form .search-form label,
   .search-form .newsletter-form label {
-    width: 327px;
+    width: 80%;
   }
 }
 
@@ -17599,10 +17599,11 @@ blockquote footer::before,
 .comment-form .newsletter-form input[type="submit"],
 .newsletter-form .search-form .search-submit,
 .search-form .newsletter-form .search-submit {
+  background-color: #fff;
   margin-left: 1.1875rem;
 }
 
-/* line 100, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 101, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter .custom-checkbox {
   text-align: left;
@@ -17610,7 +17611,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 100, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 101, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter .custom-checkbox {
     padding-left: 1.875rem;
