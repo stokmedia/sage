@@ -17647,7 +17647,7 @@ body#tinymce {
   margin-bottom: 0;
 }
 
-/* line 11, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 12, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-listing {
   position: relative;
@@ -17655,23 +17655,28 @@ body#tinymce {
   padding-top: 2.5rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  background-image: -webkit-linear-gradient(bottom, #fff, #fff 250px, #dbe4e7 250px, #dbe4e7 100%);
-  background-image: -o-linear-gradient(bottom, #fff, #fff 250px, #dbe4e7 250px, #dbe4e7 100%);
-  background-image: linear-gradient(to top, #fff, #fff 250px, #dbe4e7 250px, #dbe4e7 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(9.375rem, #fff), color-stop(9.375rem, #dbe4e7), to(#dbe4e7));
+  background-image: -webkit-linear-gradient(bottom, #fff, #fff 9.375rem, #dbe4e7 9.375rem, #dbe4e7 100%);
+  background-image: -o-linear-gradient(bottom, #fff, #fff 9.375rem, #dbe4e7 9.375rem, #dbe4e7 100%);
+  background-image: linear-gradient(to top, #fff, #fff 9.375rem, #dbe4e7 9.375rem, #dbe4e7 100%);
 }
 
 @media (min-width: 992px) {
-  /* line 11, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 12, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-listing {
     padding-top: 3.125rem;
     padding-left: 3.125rem;
     padding-right: 3.125rem;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(15.625rem, #fff), color-stop(15.625rem, #dbe4e7), to(#dbe4e7));
+    background-image: -webkit-linear-gradient(bottom, #fff, #fff 15.625rem, #dbe4e7 15.625rem, #dbe4e7 100%);
+    background-image: -o-linear-gradient(bottom, #fff, #fff 15.625rem, #dbe4e7 15.625rem, #dbe4e7 100%);
+    background-image: linear-gradient(to top, #fff, #fff 15.625rem, #dbe4e7 15.625rem, #dbe4e7 100%);
   }
 }
 
 @media (min-width: 576px) {
-  /* line 25, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 27, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-listing .container {
     max-width: 100%;
@@ -17679,14 +17684,14 @@ body#tinymce {
 }
 
 @media (min-width: 1480px) {
-  /* line 25, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 27, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-listing .container {
     max-width: 1370px;
   }
 }
 
-/* line 35, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 37, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-listing .bg-image {
   position: relative;
@@ -17696,7 +17701,8 @@ body#tinymce {
   -webkit-transform: translateX(-50%);
   -o-transform: translate(-50%);
      transform: translate(-50%);
-  width: 100%;
+  top: 5.625rem;
+  width: calc(100% + 1.5rem);
   max-width: 1200px;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -17745,7 +17751,32 @@ body#tinymce {
   width: 100%;
 }
 
-/* line 47, resources/assets/styles/skhoop/sections/_product-listing.scss */
+@media (min-width: 992px) {
+  /* line 37, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-listing .bg-image {
+    top: 3.125rem;
+    width: calc(100% - 15rem);
+  }
+}
+
+/* line 57, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-header-actionbox {
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+
+@media (min-width: 992px) {
+  /* line 57, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .product-header-actionbox {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+/* line 69, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products {
   margin-left: -0.7813rem;
@@ -17753,7 +17784,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 47, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 69, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products {
     margin-left: -1.5625rem;
@@ -17761,7 +17792,7 @@ body#tinymce {
   }
 }
 
-/* line 56, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 78, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product {
   position: relative;
@@ -17772,7 +17803,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 56, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 78, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product {
     padding-left: 1.5625rem;
@@ -17781,14 +17812,14 @@ body#tinymce {
   }
 }
 
-/* line 70, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 92, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product a:hover,
 .products .product a:focus {
   text-decoration: none;
 }
 
-/* line 76, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 98, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-image {
   position: relative;
@@ -17838,19 +17869,19 @@ body#tinymce {
   width: 100%;
 }
 
-/* line 81, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 103, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-image .visible-on-hover {
   opacity: 0;
 }
 
-/* line 88, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 110, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product:hover .product-image .visible-on-hover {
   opacity: 1;
 }
 
-/* line 94, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 116, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-wrapper {
   position: relative;
@@ -17858,11 +17889,11 @@ body#tinymce {
   border-top-left-radius: 0.3125rem;
 }
 
-/* line 100, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 122, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-status {
   position: absolute;
-  top: 1.25rem;
+  top: 0.9375rem;
   right: 0;
   z-index: 1;
   min-width: 75px;
@@ -17875,16 +17906,17 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 100, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 122, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product-status {
+    top: 1.375rem;
     padding: 0.375rem 1.125rem;
     font-size: 0.8125rem;
     line-height: 0.9375rem;
   }
 }
 
-/* line 120, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 143, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-details {
   color: #031532;
@@ -17892,13 +17924,43 @@ body#tinymce {
   border-bottom-left-radius: 0.3125rem;
 }
 
-/* line 126, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 149, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-name {
   margin-bottom: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: none;
 }
 
-/* line 131, resources/assets/styles/skhoop/sections/_product-listing.scss */
+@media (min-width: 992px) {
+  /* line 149, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .products .product-name {
+    font-size: 0.8125rem;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* line 161, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product-price {
+  margin-top: -0.4375rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 992px) {
+  /* line 161, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .products .product-price {
+    margin-top: -0.1875rem;
+    font-size: 0.8125rem;
+    letter-spacing: 1.86px;
+  }
+}
+
+/* line 174, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-big {
   -webkit-box-flex: 0;
@@ -17908,7 +17970,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 131, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 174, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-big {
     -webkit-box-flex: 0;
@@ -17918,35 +17980,35 @@ body#tinymce {
   }
 }
 
-/* line 134, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 177, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-big .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 134, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 177, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-big .product-wrapper {
     padding: 6.25rem 2.5rem 4.6875rem;
   }
 }
 
-/* line 142, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 185, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-big .product-details {
-  padding: 0 0.9375rem 0;
+  padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 142, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 185, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-big .product-details {
     padding: 0 2.5rem 1.5625rem;
   }
 }
 
-/* line 151, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 194, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-small {
   -webkit-box-flex: 0;
@@ -17956,7 +18018,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 151, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 194, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-small {
     -webkit-box-flex: 0;
@@ -17966,55 +18028,71 @@ body#tinymce {
   }
 }
 
-/* line 154, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 197, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-small .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 154, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 197, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-small .product-wrapper {
     padding: 4.6875rem 2.3438rem 2.8125rem;
   }
 }
 
-/* line 162, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 205, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-small .product-details {
-  padding: 0 0.9375rem 0;
+  padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 162, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 205, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-small .product-details {
     padding: 0 2.3438rem 1.5625rem;
   }
 }
 
-/* line 173, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 216, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-sale .product-status {
   background-color: #d45656;
   color: #fff;
 }
 
-/* line 179, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 221, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.products .product.is-sale .product-price {
+  color: #d45656;
+}
+
+/* line 224, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-sale .product-price span {
+  margin-right: 0.3125rem;
+  color: #031532;
   text-decoration: line-through;
 }
 
-/* line 186, resources/assets/styles/skhoop/sections/_product-listing.scss */
+@media (min-width: 992px) {
+  /* line 224, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+  .products .product.is-sale .product-price span {
+    margin-right: 1.25rem;
+  }
+}
+
+/* line 237, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-oos .product-status {
   background-color: #b7cad0;
   color: #fff;
 }
 
-/* line 191, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 242, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-oos .product-image {
   opacity: 0.5;
