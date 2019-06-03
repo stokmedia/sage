@@ -55,3 +55,24 @@
     }
   }
 }
+
+.btn-icon {
+  min-width: auto;
+  padding: 0;
+  height: 2.0625rem;
+  width: 2.0625rem;
+
+  &-sm {
+    height: 1.875rem;
+    width: 1.875rem;
+  }
+
+  &-lg {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  & > img {
+    width: 100%;
+  }
+}

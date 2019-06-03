@@ -16999,6 +16999,35 @@ blockquote footer::before,
   color: #fff;
 }
 
+/* line 59, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-icon {
+  min-width: auto;
+  padding: 0;
+  height: 2.0625rem;
+  width: 2.0625rem;
+}
+
+/* line 65, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-icon-sm {
+  height: 1.875rem;
+  width: 1.875rem;
+}
+
+/* line 70, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-icon-lg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/* line 75, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-icon > img {
+  width: 100%;
+}
+
 /* line 6, resources/assets/styles/skhoop/components/_button-group.scss */
 
 .btn-group > .btn,
