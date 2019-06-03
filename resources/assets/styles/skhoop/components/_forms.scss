@@ -7,9 +7,18 @@
   }
 }
 
-.custom-control {  // <--- Customize margins if needed
-  margin-top: 0.625rem;
-  margin-bottom: 0.625rem;
+.form-control-lg {
+  &.is-invalid,
+  &.is-valid {
+    background-size: 1.875rem;
+  }
+}
+
+.custom-control {
+  .custom-control-label > span {
+    display: inline-block;
+    margin-top: 0.125rem;
+  }
 }
 
 // Radios
@@ -17,47 +26,78 @@
 // Tweak just a few things for radios.
 .custom-radio {
   .custom-control-label::after {
-    background: no-repeat 50% / 20px;
+    background: no-repeat 50% / 0.875rem;
   }
 }
 
 // switches
 //
 // Tweak a few things for switches
-.custom-switch {
-  .custom-control-label::after {
-    background-color: $white;
-    height: 1.25rem;
-    width: 1.25rem;
-    border-radius: 1.4375rem;
-    left: calc(-3.78125rem + 5px);
-    top: calc(-0.1875rem + 5px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  }
+.custom-switch .custom-control-label::after {
+  background-color: $white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.custom-switch .custom-control-label::before {
+  height: 0.75rem;
+  width: 1.9375rem;
+  top: 0.375rem;
+  left: -2.5rem;
+  border-color: $white;
+  background-color: $white;
+}
+
+// Sizes
+.custom-control.custom-control-lg {
+  margin: 0.3125rem 0;
 
   .custom-control-label::before {
-    height: 0.9375rem;
-    top: 0.25rem;
-    width: 2.375rem;
-    left: -3.375rem;
-    border-color: $white;
-    background-color: $white;
-  }
-
-  .custom-control-input:checked {
-    & ~ .custom-control-label::after {
-      background-color: #292929;
-      left: calc(-3.78125rem + 2px);
-    }
-
-    & ~ .custom-control-label::before {
-      color: #fff;
-      border-color: $primary;
-      background-color: $primary;
-    }
+    width: 1.875rem;
+    height: 1.875rem;
   }
 }
 
+.custom-radio.custom-control-lg {
+  .custom-control-label::before {
+    top: -0.1875rem;
+    left: -2.0625rem;
+  }
+
+  .custom-control-label::after {
+    background: no-repeat 50% / 20px;
+  }
+}
+
+.custom-checkbox.custom-control-lg {
+  .custom-control-label::before {
+    width: 1.875rem;
+    height: 1.875rem;
+    top: -0.1875rem;
+    left: -2.0625rem;
+  }
+
+  .custom-control-label::after {
+    width: 1.875rem;
+    height: 1.875rem;
+    top: -0.1875rem;
+    left: -2.0625rem;
+  }
+}
+
+// Event Toggled
+.custom-switch .custom-control-input:checked {
+  & ~ .custom-control-label::after {
+    background-color: #292929;
+  }
+
+  & ~ .custom-control-label::before {
+    color: #fff;
+    border-color: $primary;
+    background-color: $primary;
+  }
+}
+
+// Validations
 .invalid-feedback,
 .valid-feedback {
   font-size: 0.75rem;
@@ -65,3 +105,4 @@
   letter-spacing: 1px;
   line-height: 20px;
 }
+

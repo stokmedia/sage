@@ -16,6 +16,254 @@
                 "id": ""
             },
             "layouts": {
+                "layout_5cf0ee2514c4d": {
+                    "key": "layout_5cf0ee2514c4d",
+                    "name": "hero-banner",
+                    "label": "Hero Banner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf0efa2752b9",
+                            "label": "Hero banner",
+                            "name": "hero_banner",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cf0e9963f82a"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cf0ee7114c4e": {
+                    "key": "layout_5cf0ee7114c4e",
+                    "name": "promo-boxes",
+                    "label": "Promo boxes",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf0efbf752ba",
+                            "label": "Promo boxes",
+                            "name": "promo_boxes",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cf0ec0360705"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cf0ee7d14c4f": {
+                    "key": "layout_5cf0ee7d14c4f",
+                    "name": "popular-products",
+                    "label": "Popular products",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf0efd9752bb",
+                            "label": "Popular products",
+                            "name": "popular_products",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cf0ec33991e2"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cf0ee8814c50": {
+                    "key": "layout_5cf0ee8814c50",
+                    "name": "newsletter-signup",
+                    "label": "Newsletter signup",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf0eff0752bc",
+                            "label": "Newsletter signup",
+                            "name": "newsletter_signup",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cf0ec6bd0a64"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cf0eea014c51": {
+                    "key": "layout_5cf0eea014c51",
+                    "name": "text-with-button",
+                    "label": "Text with button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf0f011752bd",
+                            "label": "Text with button",
+                            "name": "text_with_button",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cf0ec88dc8f6"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cf0eeb914c52": {
+                    "key": "layout_5cf0eeb914c52",
+                    "name": "instagram-grid",
+                    "label": "Instagram Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf0f026752be",
+                            "label": "Instagram grid",
+                            "name": "instagram_grid",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cf0ec9e4e678"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cf0eec214c53": {
+                    "key": "layout_5cf0eec214c53",
+                    "name": "text-and-image",
+                    "label": "Text and image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf0f03a752bf",
+                            "label": "Text and image",
+                            "name": "text_and_image",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cf0ecaf607a4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cf0eed014c54": {
+                    "key": "layout_5cf0eed014c54",
+                    "name": "three-promo",
+                    "label": "Three promo section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf0f064752c0",
+                            "label": "Three promo section",
+                            "name": "three_promo_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5cf0ecbd51c08"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "5ad76c806f8eb": {
                     "key": "5ad76c806f8eb",
                     "name": "usp",
@@ -72,5 +320,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1558718977
+    "modified": 1559294080
 }

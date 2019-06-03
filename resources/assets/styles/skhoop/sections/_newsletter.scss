@@ -1,0 +1,27 @@
+.newsletter {
+  &-cover {
+    height: 300px;
+    width: 600px;
+    background: red;
+  }
+
+  &-content {
+    background-color: #ece4d0;
+  }
+
+  &-title {
+    font-family: $font-family-cbyg;
+    color: #031532;
+    font-size: 2.1875rem;
+    letter-spacing: 0.8704px;
+    line-height: 50px;
+  }
+
+  &-body {
+    color: #292929;
+    font-size: 0.75rem;
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+}

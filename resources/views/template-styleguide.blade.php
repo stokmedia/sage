@@ -51,6 +51,21 @@
             <span class="breadcrumb-item active">Level 3</span>
           </div>
         </p>
+
+        <p class="bs-component">
+          <h3>Button Icon</h3>
+          <button class="btn btn-icon btn-icon-sm btn-primary" type="button">
+            <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+          </button>
+
+          <button class="btn btn-icon btn-primary" type="button">
+            <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+          </button>
+
+          <button class="btn btn-lg btn-icon btn-icon-lg btn-primary" type="button">
+            <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+          </button>
+        </p>
       </div>
     </div>
   </div>
@@ -87,6 +102,66 @@
   <br />
   <!-- Dropdown ================================================== -->
 
+  <!-- Alert ================================================== -->
+  <div class="bs-docs-section">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 id="buttons">Alert</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="bs-component">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
+                <div class="col d-flex align-items-center p-0 flex-column flex-sm-row">
+                  <img src="https://img.icons8.com/ios/50/000000/sad.png" alt="Alert">
+                  <span class="alert-text text-center text-sm-left">Allrignt, you are on track</span>
+                </div>
+                <button class="btn btn-sm btn-primary bg-white text-body" type="button" data-dismiss="alert">Call to action</button>
+              </div>
+            </div>
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
+                <div class="col d-flex align-items-center flex-column flex-sm-row p-0">
+                  <img src="https://img.icons8.com/ios/50/000000/sad.png" alt="Alert">
+                  <span class="alert-text">Information - Dont forget lorem ipsum</span>
+                </div>
+                <button class="btn btn-sm btn-primary text-body" type="button" data-dismiss="alert">Call to action</button>
+              </div>
+            </div>
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
+                <div class="col d-flex align-items-center p-0 flex-column flex-sm-row">
+                  <img src="https://img.icons8.com/ios/50/000000/sad.png" alt="Alert">
+                  <span class="alert-text">Something went terrible wrong</span>
+                </div>
+                <button class="btn btn-sm btn-primary text-body" type="button" data-dismiss="alert">Call to action</button>
+              </div>
+            </div>
+
+            <div class="alert alert-ash alert-dismissible fade show" role="alert">
+              <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
+                <div class="col d-flex align-items-center p-0 flex-column flex-sm-row">
+                  <img src="https://img.icons8.com/ios/50/000000/sad.png" alt="Alert">
+                  <span class="alert-text">Cookies - We use cookies. Read more.</span>
+                </div>
+                <button class="btn btn-sm btn-primary text-body" type="button" data-dismiss="alert">Call to action</button>
+              </div>
+            </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <!-- Dropdown ================================================== -->
+
   <!-- Inputs ================================================== -->
   <div class="bs-docs-section">
     <div class="page-header">
@@ -104,11 +179,19 @@
             <input type="text" class="form-control form-control-lg" placeholder="HINT">
           </div>
 
-          <h3 class="mb-0">Has error</h3>
+          <h3 class="mb-0">Invalid</h3>
           <div class="form-group">
             <input type="text" class="form-control form-control-lg is-invalid">
             <div class="invalid-feedback">
               Your email is not valid
+            </div>
+          </div>
+
+          <h3 class="mb-0">Valid</h3>
+          <div class="form-group">
+            <input type="text" class="form-control form-control-lg is-valid">
+            <div class="invalid-feedback">
+              <span>Your email is not valid</span>
             </div>
           </div>
 
@@ -138,18 +221,33 @@
                   <input id="customRadio1" class="custom-control-input" name="customRadio" type="radio" checked>
                   <label class="custom-control-label" for="customRadio1"></label>
                 </div>
-                <div class="custom-control custom-radio d-inline-block"><input id="customRadio3" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
+                <div class="custom-control custom-control-lg custom-radio d-inline-block">
+                  <input id="customRadio2" class="custom-control-input" name="customRadio" type="radio" checked>
+                  <label class="custom-control-label" for="customRadio2"></label>
+                </div>
+                <div class="custom-control custom-radio d-inline-block">
+                  <input id="customRadio3" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
                   <label class="custom-control-label" for="customRadio3"></label>
                 </div>
               </div>
 
               <div class="form-group">
                 <div class="custom-control custom-radio">
-                  <input id="customRadio2" class="custom-control-input" name="customRadio" type="radio" checked>
-                  <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+                  <input id="customRadio4" class="custom-control-input" name="customRadio" type="radio" checked>
+                  <label class="custom-control-label" for="customRadio4">
+                    <span>Or toggle this other custom radio</span>
+                  </label>
                 </div>
-                <div class="custom-control custom-radio"><input id="customRadio3" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
-                  <label class="custom-control-label" for="customRadio3">Disabled custom radio</label>
+                <div class="custom-control custom-control-lg  custom-radio">
+                  <input id="customRadio6" class="custom-control-input" name="customRadio" type="radio" checked>
+                  <label class="custom-control-label" for="customRadio6">
+                    <span>Or toggle this other custom radio</span>
+                  </label>
+                </div>
+                <div class="custom-control custom-radio"><input id="customRadio5" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
+                  <label class="custom-control-label" for="customRadio5">
+                    <span>Disabled custom radio</span>
+                  </label>
                 </div>
               </div>
 
@@ -157,6 +255,10 @@
                 <div class="custom-control custom-checkbox d-inline-block">
                   <input id="customCheck01" class="custom-control-input" checked="checked" type="checkbox">
                   <label class="custom-control-label" for="customCheck01"></label>
+                </div>
+                <div class="custom-control custom-control-lg custom-checkbox d-inline-block">
+                  <input id="customCheck001" class="custom-control-input" checked="checked" type="checkbox">
+                  <label class="custom-control-label" for="customCheck001"></label>
                 </div>
                 <div class="custom-control custom-checkbox d-inline-block">
                   <input id="customCheck02" class="custom-control-input" disabled="disabled" type="checkbox">
@@ -167,10 +269,22 @@
               <div class="form-group">
                 <div class="custom-control custom-checkbox"><input id="customCheck1" class="custom-control-input"
                     checked="checked" type="checkbox">
-                  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label></div>
+                  <label class="custom-control-label" for="customCheck1">
+                    <span>Check this custom checkbox</span>
+                  </label>
+                </div>
+                <div class="custom-control custom-control-lg custom-checkbox">
+                  <input id="customCheck100" class="custom-control-input" checked="checked" type="checkbox">
+                  <label class="custom-control-label" for="customCheck100">
+                    <span>Check this custom checkbox</span>
+                  </label>
+                </div>
                 <div class="custom-control custom-checkbox"><input id="customCheck2" class="custom-control-input"
                     disabled="disabled" type="checkbox">
-                  <label class="custom-control-label" for="customCheck2">Disabled custom checkbox</label></div>
+                  <label class="custom-control-label" for="customCheck2">
+                    <span>Disabled custom checkbox</span>
+                  </label>
+                </div>
               </div>
               <div class="form-group">
                 <div class="custom-control custom-switch"><input id="customSwitch1" class="custom-control-input" checked="checked"

@@ -1,0 +1,245 @@
+{
+    "key": "group_5cf0ec33991e2",
+    "title": "Section part: Popular products",
+    "fields": [
+        {
+            "key": "field_5cf0ef7b140d5",
+            "label": "Section title",
+            "name": "section_title",
+            "type": "text",
+            "instructions": "This field is used as the section's label.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cf0f6a6654c9",
+            "label": "Show section title?",
+            "name": "show_section_title",
+            "type": "true_false",
+            "instructions": "Determines if the section title is shown in the front end.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cf0f6fd654ca",
+            "label": "Preamble",
+            "name": "preamble",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5cf0f7706caa6",
+            "label": "Section displays",
+            "name": "section_displays",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "category": "Products from a category",
+                "handpick": "Handpicked products"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5cf0f83f6caa7",
+            "label": "Select category",
+            "name": "select_category",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cf0f7706caa6",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "silk_category",
+            "field_type": "select",
+            "allow_null": 1,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0
+        },
+        {
+            "key": "field_5cf0f88e6caa8",
+            "label": "Items to display",
+            "name": "items_to_display",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cf0f7706caa6",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "latest": "Latest products from the selected category",
+                "random": "Random"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5cf0f9016caa9",
+            "label": "Number of products to display",
+            "name": "count",
+            "type": "number",
+            "instructions": "If no value, the section will display all products from the selected category.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cf0f7706caa6",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_5cf0fac668af1",
+            "label": "Handpicked products",
+            "name": "handpicked_products",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cf0f7706caa6",
+                        "operator": "==",
+                        "value": "handpick"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "silk_products"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_5cf0f722998ab",
+            "label": "Link",
+            "name": "link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1559299039
+}
