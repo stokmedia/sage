@@ -11,10 +11,16 @@
 .product-listing {
   position: relative;
   overflow: hidden;
-  padding-top: 3.125rem;
-  padding-left: 2.1875rem;
-  padding-right: 2.1875rem;
-  background-color: $lightGreen;
+  padding-top: 2.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-image: linear-gradient(to top, $body-bg, $body-bg 250px, $lightGreen 250px, $lightGreen 100%);
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 3.125rem;
+    padding-left: 3.125rem;
+    padding-right: 3.125rem;
+  }
 
   .container {
     @include media-breakpoint-up(sm) {
@@ -39,19 +45,54 @@
 }
 
 .products {
-  margin-left: -1.5625rem;
-  margin-right: -1.5625rem;
+  margin-left: -0.7813rem;
+  margin-right: -0.7813rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: -1.5625rem;
+    margin-right: -1.5625rem;
+  }
 
   .product {
     position: relative;
     width: 100%;
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
-    margin-bottom: 3.125rem;
+    padding-left: 0.7813rem;
+    padding-right: 0.7813rem;
+    margin-bottom: 1.25rem;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 1.5625rem;
+      padding-right: 1.5625rem;
+      margin-bottom: 3.125rem;
+    }
+
+    a {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &-image {
+      @include aspect-ratio(326,375);
+
+      margin-bottom: 0;
+
+      .visible-on-hover {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      .product-image {
+        .visible-on-hover {
+          opacity: 1;
+        }
+      }
+    }
 
     &-wrapper {
       position: relative;
-      padding: 6.25rem 2.5rem 4.6875rem;
       border-top-right-radius: 0.3125rem;
       border-top-left-radius: 0.3125rem;
     }
@@ -60,13 +101,19 @@
       position: absolute;
       top: 1.25rem;
       right: 0;
-    }
+      z-index: 1;
+      min-width: 75px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.6875rem;
+      letter-spacing: 1.86px;
+      line-height: 0.8125rem;
+      border-top-left-radius: 0.1875rem;
+      border-bottom-left-radius: 0.1875rem;
 
-    &-image {
-      @include aspect-ratio(326,375);
-
-      .visible-on-hover {
-        display: none;
+      @include media-breakpoint-up(lg) {
+        padding: 0.375rem 1.125rem;
+        font-size: 0.8125rem;
+        line-height: 0.9375rem;
       }
     }
 
@@ -76,13 +123,49 @@
       border-bottom-left-radius: 0.3125rem;
     }
 
+    &-name {
+      margin-bottom: 0;
+    }
+
     // Size Modifiers
     &.is-big {
       @include col-image-width(33.333333%, 50%);
+
+      .product-wrapper {
+        padding: 2.5rem 0.9375rem 0.9375rem;
+
+        @include media-breakpoint-up(lg) {
+          padding: 6.25rem 2.5rem 4.6875rem;
+        }
+      }
+
+      .product-details {
+        padding: 0 0.9375rem 0;
+
+        @include media-breakpoint-up(lg) {
+          padding: 0 2.5rem 1.5625rem;
+        }
+      }
     }
 
     &.is-small {
       @include col-image-width(25%, 50%);
+
+      .product-wrapper {
+        padding: 2.5rem 0.9375rem 0.9375rem;
+
+        @include media-breakpoint-up(lg) {
+          padding: 4.6875rem 2.3438rem 2.8125rem;
+        }
+      }
+
+      .product-details {
+        padding: 0 0.9375rem 0;
+
+        @include media-breakpoint-up(lg) {
+          padding: 0 2.3438rem 1.5625rem;
+        }
+      }
     }
 
     // Product Status Modifiers
@@ -90,6 +173,12 @@
       .product-status {
         background-color: $saleColor;
         color: $white;
+      }
+
+      .product-price {
+        span {
+          text-decoration: line-through;
+        }
       }
     }
 
