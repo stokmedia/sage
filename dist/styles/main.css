@@ -3665,7 +3665,7 @@ textarea.form-control,
   width: 100%;
   margin-top: 0.25rem;
   font-size: 80%;
-  color: #b7cad0;
+  color: #28a745;
 }
 
 /* line 38, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3680,8 +3680,8 @@ textarea.form-control,
   margin-top: .1rem;
   font-size: 0.8725rem;
   line-height: 1.5;
-  color: #212529;
-  background-color: rgba(183, 202, 208, 0.9);
+  color: #fff;
+  background-color: rgba(40, 167, 69, 0.9);
   border-radius: 1.1875rem;
 }
 
@@ -3704,9 +3704,9 @@ textarea.form-control,
 .comment-form input.is-valid[type="url"],
 .comment-form textarea.is-valid,
 .search-form .is-valid.search-field {
-  border-color: #b7cad0;
+  border-color: #28a745;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23b7cad0' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAyMEMwIDguOTcyMTcgOC45NzIxNyAwIDIwIDBDMzEuMDI3OCAwIDQwIDguOTcyMTcgNDAgMjBDNDAgMzEuMDI3OCAzMS4wMjc4IDQwIDIwIDQwQzguOTcyMTcgNDAgMCAzMS4wMjc4IDAgMjBaTTEuNzM5MTMgMjBDMS43MzkxMyAzMC4wNjk2IDkuOTMwNDQgMzguMjYwOSAyMCAzOC4yNjA5QzMwLjA2OTYgMzguMjYwOSAzOC4yNjA5IDMwLjA2OTYgMzguMjYwOSAyMEMzOC4yNjA5IDkuOTMwNDQgMzAuMDY5NiAxLjczOTEzIDIwIDEuNzM5MTNDOS45MzA0NCAxLjczOTEzIDEuNzM5MTMgOS45MzA0NCAxLjczOTEzIDIwWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMy4wNDM1IDEzLjkxMzFDMTQuNDgxOCAxMy45MTMxIDE1LjY1MjIgMTUuMDgzNSAxNS42NTIyIDE2LjUyMThDMTUuNjUyMiAxNy45NiAxNC40ODE4IDE5LjEzMDUgMTMuMDQzNSAxOS4xMzA1QzExLjYwNTIgMTkuMTMwNSAxMC40MzQ4IDE3Ljk2IDEwLjQzNDggMTYuNTIxOEMxMC40MzQ4IDE1LjA4MzUgMTEuNjA1MiAxMy45MTMxIDEzLjA0MzUgMTMuOTEzMVpNMTMuMDQzNSAxNS42NTIyQzEyLjU2NDQgMTUuNjUyMiAxMi4xNzM5IDE2LjA0MjcgMTIuMTczOSAxNi41MjE4QzEyLjE3MzkgMTcuMDAwOSAxMi41NjQ0IDE3LjM5MTMgMTMuMDQzNSAxNy4zOTEzQzEzLjUyMjYgMTcuMzkxMyAxMy45MTMxIDE3LjAwMDkgMTMuOTEzMSAxNi41MjE4QzEzLjkxMzEgMTYuMDQyNyAxMy41MjI2IDE1LjY1MjIgMTMuMDQzNSAxNS42NTIyWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNC4zNDc4IDE2LjUyMThDMjQuMzQ3OCAxNS4wODM1IDI1LjUxODIgMTMuOTEzMSAyNi45NTY1IDEzLjkxMzFDMjguMzk0NyAxMy45MTMxIDI5LjU2NTIgMTUuMDgzNSAyOS41NjUyIDE2LjUyMThDMjkuNTY1MiAxNy45NiAyOC4zOTQ3IDE5LjEzMDUgMjYuOTU2NSAxOS4xMzA1QzI1LjUxODIgMTkuMTMwNSAyNC4zNDc4IDE3Ljk2IDI0LjM0NzggMTYuNTIxOFpNMjYuMDg2OSAxNi41MjE4QzI2LjA4NjkgMTcuMDAwOSAyNi40NzczIDE3LjM5MTMgMjYuOTU2NSAxNy4zOTEzQzI3LjQzNTYgMTcuMzkxMyAyNy44MjYgMTcuMDAwOSAyNy44MjYgMTYuNTIxOEMyNy44MjYgMTYuMDQyNyAyNy40MzU2IDE1LjY1MjIgMjYuOTU2NSAxNS42NTIyQzI2LjQ3NzMgMTUuNjUyMiAyNi4wODY5IDE2LjA0MjcgMjYuMDg2OSAxNi41MjE4WiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZD0iTTI4LjQwNjEgMjQuNTY5NEMyOC4wNDc4IDI0LjI0ODYgMjcuNDk3NCAyNC4yNzk5IDI3LjE3ODIgMjQuNjM3M0MyNS4zNjQzIDI2LjY2NDIgMjIuNzQ4NyAyNy44MjYgMjAgMjcuODI2QzE3LjI1MjIgMjcuODI2IDE0LjYzNTYgMjYuNjY0MiAxMi44MjE3IDI0LjYzNzNDMTIuNTAwOCAyNC4yNzk5IDExLjk1MjIgMjQuMjQ4NiAxMS41OTM5IDI0LjU2OTRDMTEuMjM1NiAyNC44ODk0IDExLjIwNjEgMjUuNDM5IDExLjUyNjEgMjUuNzk3M0MxMy42Njk1IDI4LjE5MjEgMTYuNzU4MiAyOS41NjUxIDIwIDI5LjU2NTFDMjMuMjQyNiAyOS41NjUxIDI2LjMzMTMgMjguMTkxMiAyOC40NzM5IDI1Ljc5NzNDMjguNzkzOSAyNS40MzkgMjguNzYzNSAyNC44ODk0IDI4LjQwNjEgMjQuNTY5NFoiIGZpbGw9IiMyOGE3NDUiLz4NCjwvc3ZnPg0K);
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -3731,9 +3731,9 @@ textarea.form-control,
 .comment-form input.is-valid:focus[type="url"],
 .comment-form textarea.is-valid:focus,
 .search-form .is-valid.search-field:focus {
-  border-color: #b7cad0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(183, 202, 208, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(183, 202, 208, 0.25);
+  border-color: #28a745;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 /* line 71, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3793,18 +3793,18 @@ textarea.form-control.is-valid,
 
 .was-validated .custom-select:valid,
 .custom-select.is-valid {
-  border-color: #b7cad0;
+  border-color: #28a745;
   padding-right: calc((1em + 0.75rem) * 3 / 4 + 3.0625rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23b7cad0' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 3.0625rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAyMEMwIDguOTcyMTcgOC45NzIxNyAwIDIwIDBDMzEuMDI3OCAwIDQwIDguOTcyMTcgNDAgMjBDNDAgMzEuMDI3OCAzMS4wMjc4IDQwIDIwIDQwQzguOTcyMTcgNDAgMCAzMS4wMjc4IDAgMjBaTTEuNzM5MTMgMjBDMS43MzkxMyAzMC4wNjk2IDkuOTMwNDQgMzguMjYwOSAyMCAzOC4yNjA5QzMwLjA2OTYgMzguMjYwOSAzOC4yNjA5IDMwLjA2OTYgMzguMjYwOSAyMEMzOC4yNjA5IDkuOTMwNDQgMzAuMDY5NiAxLjczOTEzIDIwIDEuNzM5MTNDOS45MzA0NCAxLjczOTEzIDEuNzM5MTMgOS45MzA0NCAxLjczOTEzIDIwWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMy4wNDM1IDEzLjkxMzFDMTQuNDgxOCAxMy45MTMxIDE1LjY1MjIgMTUuMDgzNSAxNS42NTIyIDE2LjUyMThDMTUuNjUyMiAxNy45NiAxNC40ODE4IDE5LjEzMDUgMTMuMDQzNSAxOS4xMzA1QzExLjYwNTIgMTkuMTMwNSAxMC40MzQ4IDE3Ljk2IDEwLjQzNDggMTYuNTIxOEMxMC40MzQ4IDE1LjA4MzUgMTEuNjA1MiAxMy45MTMxIDEzLjA0MzUgMTMuOTEzMVpNMTMuMDQzNSAxNS42NTIyQzEyLjU2NDQgMTUuNjUyMiAxMi4xNzM5IDE2LjA0MjcgMTIuMTczOSAxNi41MjE4QzEyLjE3MzkgMTcuMDAwOSAxMi41NjQ0IDE3LjM5MTMgMTMuMDQzNSAxNy4zOTEzQzEzLjUyMjYgMTcuMzkxMyAxMy45MTMxIDE3LjAwMDkgMTMuOTEzMSAxNi41MjE4QzEzLjkxMzEgMTYuMDQyNyAxMy41MjI2IDE1LjY1MjIgMTMuMDQzNSAxNS42NTIyWiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yNC4zNDc4IDE2LjUyMThDMjQuMzQ3OCAxNS4wODM1IDI1LjUxODIgMTMuOTEzMSAyNi45NTY1IDEzLjkxMzFDMjguMzk0NyAxMy45MTMxIDI5LjU2NTIgMTUuMDgzNSAyOS41NjUyIDE2LjUyMThDMjkuNTY1MiAxNy45NiAyOC4zOTQ3IDE5LjEzMDUgMjYuOTU2NSAxOS4xMzA1QzI1LjUxODIgMTkuMTMwNSAyNC4zNDc4IDE3Ljk2IDI0LjM0NzggMTYuNTIxOFpNMjYuMDg2OSAxNi41MjE4QzI2LjA4NjkgMTcuMDAwOSAyNi40NzczIDE3LjM5MTMgMjYuOTU2NSAxNy4zOTEzQzI3LjQzNTYgMTcuMzkxMyAyNy44MjYgMTcuMDAwOSAyNy44MjYgMTYuNTIxOEMyNy44MjYgMTYuMDQyNyAyNy40MzU2IDE1LjY1MjIgMjYuOTU2NSAxNS42NTIyQzI2LjQ3NzMgMTUuNjUyMiAyNi4wODY5IDE2LjA0MjcgMjYuMDg2OSAxNi41MjE4WiIgZmlsbD0iIzI4YTc0NSIvPg0KPHBhdGggZD0iTTI4LjQwNjEgMjQuNTY5NEMyOC4wNDc4IDI0LjI0ODYgMjcuNDk3NCAyNC4yNzk5IDI3LjE3ODIgMjQuNjM3M0MyNS4zNjQzIDI2LjY2NDIgMjIuNzQ4NyAyNy44MjYgMjAgMjcuODI2QzE3LjI1MjIgMjcuODI2IDE0LjYzNTYgMjYuNjY0MiAxMi44MjE3IDI0LjYzNzNDMTIuNTAwOCAyNC4yNzk5IDExLjk1MjIgMjQuMjQ4NiAxMS41OTM5IDI0LjU2OTRDMTEuMjM1NiAyNC44ODk0IDExLjIwNjEgMjUuNDM5IDExLjUyNjEgMjUuNzk3M0MxMy42Njk1IDI4LjE5MjEgMTYuNzU4MiAyOS41NjUxIDIwIDI5LjU2NTFDMjMuMjQyNiAyOS41NjUxIDI2LjMzMTMgMjguMTkxMiAyOC40NzM5IDI1Ljc5NzNDMjguNzkzOSAyNS40MzkgMjguNzYzNSAyNC44ODk0IDI4LjQwNjEgMjQuNTY5NFoiIGZpbGw9IiMyOGE3NDUiLz4NCjwvc3ZnPg0K) #fff no-repeat center right 3.0625rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
 /* line 99, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-select:valid:focus,
 .custom-select.is-valid:focus {
-  border-color: #b7cad0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(183, 202, 208, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(183, 202, 208, 0.25);
+  border-color: #28a745;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 /* line 104, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3829,7 +3829,7 @@ textarea.form-control.is-valid,
 
 .was-validated .form-check-input:valid ~ .form-check-label,
 .form-check-input.is-valid ~ .form-check-label {
-  color: #b7cad0;
+  color: #28a745;
 }
 
 /* line 129, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3845,14 +3845,14 @@ textarea.form-control.is-valid,
 
 .was-validated .custom-control-input:valid ~ .custom-control-label,
 .custom-control-input.is-valid ~ .custom-control-label {
-  color: #b7cad0;
+  color: #28a745;
 }
 
 /* line 142, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-control-input:valid ~ .custom-control-label::before,
 .custom-control-input.is-valid ~ .custom-control-label::before {
-  border-color: #b7cad0;
+  border-color: #28a745;
 }
 
 /* line 147, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3868,30 +3868,30 @@ textarea.form-control.is-valid,
 
 .was-validated .custom-control-input:valid:checked ~ .custom-control-label::before,
 .custom-control-input.is-valid:checked ~ .custom-control-label::before {
-  border-color: #d6e1e4;
-  background-color: #d6e1e4;
+  border-color: #34ce57;
+  background-color: #34ce57;
 }
 
 /* line 160, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-control-input:valid:focus ~ .custom-control-label::before,
 .custom-control-input.is-valid:focus ~ .custom-control-label::before {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(183, 202, 208, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(183, 202, 208, 0.25);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 /* line 164, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before,
 .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {
-  border-color: #b7cad0;
+  border-color: #28a745;
 }
 
 /* line 175, node_modules/bootstrap/scss/mixins/_forms.scss */
 
 .was-validated .custom-file-input:valid ~ .custom-file-label,
 .custom-file-input.is-valid ~ .custom-file-label {
-  border-color: #b7cad0;
+  border-color: #28a745;
 }
 
 /* line 179, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3907,9 +3907,9 @@ textarea.form-control.is-valid,
 
 .was-validated .custom-file-input:valid:focus ~ .custom-file-label,
 .custom-file-input.is-valid:focus ~ .custom-file-label {
-  border-color: #b7cad0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(183, 202, 208, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(183, 202, 208, 0.25);
+  border-color: #28a745;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 /* line 30, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3960,7 +3960,7 @@ textarea.form-control.is-valid,
 .search-form .is-invalid.search-field {
   border-color: #d45656;
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d45656' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d45656' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E");
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDE1QzAgNi43MjkxMyA2LjcyOTEzIDAgMTUgMEMyMy4yNzE1IDAgMzAgNi43MjkxMyAzMCAxNUMzMCAyMy4yNzA5IDIzLjI3MTUgMzAgMTUgMzBDNi43MjkxMyAzMCAwIDIzLjI3MDkgMCAxNVpNMS4zMDQzNSAxNUMxLjMwNDM1IDIyLjU1MjIgNy40NDc4MyAyOC42OTU3IDE1IDI4LjY5NTdDMjIuNTUxNSAyOC42OTU3IDI4LjY5NTcgMjIuNTUyMiAyOC42OTU3IDE1QzI4LjY5NTcgNy40NDc4MyAyMi41NTE1IDEuMzA0MzUgMTUgMS4zMDQzNUM3LjQ0NzgzIDEuMzA0MzUgMS4zMDQzNSA3LjQ0NzgzIDEuMzA0MzUgMTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS44MDc2NyAxMC4zODQ4QzEwLjc2MTkgMTAuMzg0OCAxMS41Mzg0IDExLjE2MTMgMTEuNTM4NCAxMi4xMTU1QzExLjUzODQgMTMuMDY5OCAxMC43NjE5IDEzLjg0NjMgOS44MDc2NyAxMy44NDYzQzguODUzNDQgMTMuODQ2MyA4LjA3NjkgMTMuMDY5OCA4LjA3NjkgMTIuMTE1NUM4LjA3NjkgMTEuMTYxMyA4Ljg1MzQ0IDEwLjM4NDggOS44MDc2NyAxMC4zODQ4Wk05LjgwNzY3IDExLjUzODZDOS40ODk3OSAxMS41Mzg2IDkuMjMwNzUgMTEuNzk3NyA5LjIzMDc1IDEyLjExNTVDOS4yMzA3NSAxMi40MzM0IDkuNDg5NzkgMTIuNjkyNSA5LjgwNzY3IDEyLjY5MjVDMTAuMTI1NiAxMi42OTI1IDEwLjM4NDYgMTIuNDMzNCAxMC4zODQ2IDEyLjExNTVDMTAuMzg0NiAxMS43OTc3IDEwLjEyNTYgMTEuNTM4NiA5LjgwNzY3IDExLjUzODZaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTguNDYxNSAxMi4xMTU1QzE4LjQ2MTUgMTEuMTYxMyAxOS4yMzgxIDEwLjM4NDggMjAuMTkyMyAxMC4zODQ4QzIxLjE0NjUgMTAuMzg0OCAyMS45MjMxIDExLjE2MTMgMjEuOTIzMSAxMi4xMTU1QzIxLjkyMzEgMTMuMDY5OCAyMS4xNDY1IDEzLjg0NjMgMjAuMTkyMyAxMy44NDYzQzE5LjIzODEgMTMuODQ2MyAxOC40NjE1IDEzLjA2OTggMTguNDYxNSAxMi4xMTU1Wk0xOS42MTU0IDEyLjExNTVDMTkuNjE1NCAxMi40MzM0IDE5Ljg3MzkgMTIuNjkyNSAyMC4xOTIzIDEyLjY5MjVDMjAuNTEwOCAxMi42OTI1IDIwLjc2OTIgMTIuNDMzNCAyMC43NjkyIDEyLjExNTVDMjAuNzY5MiAxMS43OTc3IDIwLjUxMDggMTEuNTM4NiAyMC4xOTIzIDExLjUzODZDMTkuODczOSAxMS41Mzg2IDE5LjYxNTQgMTEuNzk3NyAxOS42MTU0IDEyLjExNTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGQ9Ik0xNC40MjMxIDE4LjQ2MTRDMTIuMDU3MSAxOC40NjE0IDkuODAyOSAxOS4zNzI0IDguMjM4NTIgMjAuOTYxMkM4LjAwNDk3IDIxLjE5ODkgOC4wMjcxOSAyMS41NjM1IDguMjg4MDIgMjEuNzc1OEM4LjU0OTQ5IDIxLjk4ODcgOC45NTA1OCAyMS45Njc5IDkuMTg0MTMgMjEuNzMwOEMxMC41MDggMjAuMzg2IDEyLjQxNzYgMTkuNjE1MyAxNC40MjMxIDE5LjYxNTNDMTYuNDI4NSAxOS42MTUzIDE4LjMzODEgMjAuMzg2IDE5LjY2MiAyMS43MzA4QzE5Ljc4NyAyMS44NTgzIDE5Ljk2MDkgMjEuOTIyOSAyMC4xMzQ4IDIxLjkyMjlDMjAuMjg1MiAyMS45MjI5IDIwLjQzNzUgMjEuODc0NSAyMC41NTgxIDIxLjc3NThDMjAuODE4OSAyMS41NjM1IDIwLjg0MTEgMjEuMTk4OSAyMC42MDc2IDIwLjk2MTJDMTkuMDQzMiAxOS4zNzMgMTYuNzg5NiAxOC40NjE0IDE0LjQyMzEgMTguNDYxNFoiIGZpbGw9IiNkNDU2NTYiLz4NCjwvc3ZnPg0K);
   background-repeat: no-repeat;
   background-position: center right calc(0.375em + 0.1875rem);
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -4049,7 +4049,7 @@ textarea.form-control.is-invalid,
 .custom-select.is-invalid {
   border-color: #d45656;
   padding-right: calc((1em + 0.75rem) * 3 / 4 + 3.0625rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d45656' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d45656' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right 3.0625rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px, url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDE1QzAgNi43MjkxMyA2LjcyOTEzIDAgMTUgMEMyMy4yNzE1IDAgMzAgNi43MjkxMyAzMCAxNUMzMCAyMy4yNzA5IDIzLjI3MTUgMzAgMTUgMzBDNi43MjkxMyAzMCAwIDIzLjI3MDkgMCAxNVpNMS4zMDQzNSAxNUMxLjMwNDM1IDIyLjU1MjIgNy40NDc4MyAyOC42OTU3IDE1IDI4LjY5NTdDMjIuNTUxNSAyOC42OTU3IDI4LjY5NTcgMjIuNTUyMiAyOC42OTU3IDE1QzI4LjY5NTcgNy40NDc4MyAyMi41NTE1IDEuMzA0MzUgMTUgMS4zMDQzNUM3LjQ0NzgzIDEuMzA0MzUgMS4zMDQzNSA3LjQ0NzgzIDEuMzA0MzUgMTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOS44MDc2NyAxMC4zODQ4QzEwLjc2MTkgMTAuMzg0OCAxMS41Mzg0IDExLjE2MTMgMTEuNTM4NCAxMi4xMTU1QzExLjUzODQgMTMuMDY5OCAxMC43NjE5IDEzLjg0NjMgOS44MDc2NyAxMy44NDYzQzguODUzNDQgMTMuODQ2MyA4LjA3NjkgMTMuMDY5OCA4LjA3NjkgMTIuMTE1NUM4LjA3NjkgMTEuMTYxMyA4Ljg1MzQ0IDEwLjM4NDggOS44MDc2NyAxMC4zODQ4Wk05LjgwNzY3IDExLjUzODZDOS40ODk3OSAxMS41Mzg2IDkuMjMwNzUgMTEuNzk3NyA5LjIzMDc1IDEyLjExNTVDOS4yMzA3NSAxMi40MzM0IDkuNDg5NzkgMTIuNjkyNSA5LjgwNzY3IDEyLjY5MjVDMTAuMTI1NiAxMi42OTI1IDEwLjM4NDYgMTIuNDMzNCAxMC4zODQ2IDEyLjExNTVDMTAuMzg0NiAxMS43OTc3IDEwLjEyNTYgMTEuNTM4NiA5LjgwNzY3IDExLjUzODZaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTguNDYxNSAxMi4xMTU1QzE4LjQ2MTUgMTEuMTYxMyAxOS4yMzgxIDEwLjM4NDggMjAuMTkyMyAxMC4zODQ4QzIxLjE0NjUgMTAuMzg0OCAyMS45MjMxIDExLjE2MTMgMjEuOTIzMSAxMi4xMTU1QzIxLjkyMzEgMTMuMDY5OCAyMS4xNDY1IDEzLjg0NjMgMjAuMTkyMyAxMy44NDYzQzE5LjIzODEgMTMuODQ2MyAxOC40NjE1IDEzLjA2OTggMTguNDYxNSAxMi4xMTU1Wk0xOS42MTU0IDEyLjExNTVDMTkuNjE1NCAxMi40MzM0IDE5Ljg3MzkgMTIuNjkyNSAyMC4xOTIzIDEyLjY5MjVDMjAuNTEwOCAxMi42OTI1IDIwLjc2OTIgMTIuNDMzNCAyMC43NjkyIDEyLjExNTVDMjAuNzY5MiAxMS43OTc3IDIwLjUxMDggMTEuNTM4NiAyMC4xOTIzIDExLjUzODZDMTkuODczOSAxMS41Mzg2IDE5LjYxNTQgMTEuNzk3NyAxOS42MTU0IDEyLjExNTVaIiBmaWxsPSIjZDQ1NjU2Ii8+DQogIDxwYXRoIGQ9Ik0xNC40MjMxIDE4LjQ2MTRDMTIuMDU3MSAxOC40NjE0IDkuODAyOSAxOS4zNzI0IDguMjM4NTIgMjAuOTYxMkM4LjAwNDk3IDIxLjE5ODkgOC4wMjcxOSAyMS41NjM1IDguMjg4MDIgMjEuNzc1OEM4LjU0OTQ5IDIxLjk4ODcgOC45NTA1OCAyMS45Njc5IDkuMTg0MTMgMjEuNzMwOEMxMC41MDggMjAuMzg2IDEyLjQxNzYgMTkuNjE1MyAxNC40MjMxIDE5LjYxNTNDMTYuNDI4NSAxOS42MTUzIDE4LjMzODEgMjAuMzg2IDE5LjY2MiAyMS43MzA4QzE5Ljc4NyAyMS44NTgzIDE5Ljk2MDkgMjEuOTIyOSAyMC4xMzQ4IDIxLjkyMjlDMjAuMjg1MiAyMS45MjI5IDIwLjQzNzUgMjEuODc0NSAyMC41NTgxIDIxLjc3NThDMjAuODE4OSAyMS41NjM1IDIwLjg0MTEgMjEuMTk4OSAyMC42MDc2IDIwLjk2MTJDMTkuMDQzMiAxOS4zNzMgMTYuNzg5NiAxOC40NjE0IDE0LjQyMzEgMTguNDYxNFoiIGZpbGw9IiNkNDU2NTYiLz4NCjwvc3ZnPg0K) #fff no-repeat center right 3.0625rem/calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
 /* line 99, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -6389,7 +6389,7 @@ input[type="button"].btn-block {
 /* line 113, node_modules/bootstrap/scss/_custom-forms.scss */
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%237e7e7e' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xMy43OTUgMC4xOTk0MjZDMTMuNTIxNiAtMC4wNjY0NzU0IDEzLjA3ODQgLTAuMDY2NDc1NCAxMi44MDUgMC4xOTk0MjZMNC40MTg1OSA4LjM1NjQ1TDEuMTk0OTkgNS4yMjEwNUMwLjkyMTYzNCA0Ljk1NTE1IDAuNDc4NDQ3IDQuOTU1MTggMC4yMDUwMzcgNS4yMjEwNUMtMC4wNjgzNDU2IDUuNDg2OTMgLTAuMDY4MzQ1NiA1LjkxNzk5IDAuMjA1MDM3IDYuMTgzODlMMy45MjM2MiA5LjgwMDY2QzQuMTk2ODkgMTAuMDY2NSA0LjY0MDQxIDEwLjA2NjQgNC45MTM1NyA5LjgwMDY2TDEzLjc5NSAxLjE2MjI5QzE0LjA2ODQgMC44OTY0MTQgMTQuMDY4MyAwLjQ2NTMyOCAxMy43OTUgMC4xOTk0MjZaIiBmaWxsPSIjN0U3RTdFIi8+DQo8L3N2Zz4NCg==);
 }
 
 /* line 119, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -17094,7 +17094,7 @@ blockquote footer::before,
 /* line 12, resources/assets/styles/skhoop/components/_dropdown.scss */
 
 .dropdown-toggle::after {
-  content: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMCAwIDQwIDQwIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPg0KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNTUgKDc4MDc2KSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4NCiAgICA8dGl0bGU+QlROL0Fycm93PC90aXRsZT4NCiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4NCiAgICA8ZGVmcz4NCiAgICAgICAgPGZpbHRlciB4PSItMjYuMiUiIHk9Ii0yNi4yJSIgd2lkdGg9IjE1Mi41JSIgaGVpZ2h0PSIxNTIuNSUiIGZpbHRlclVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgaWQ9ImZpbHRlci0xIj4NCiAgICAgICAgICAgIDxmZU9mZnNldCBkeD0iMCIgZHk9IjAiIGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJzaGFkb3dPZmZzZXRPdXRlcjEiPjwvZmVPZmZzZXQ+DQogICAgICAgICAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyLjUiIGluPSJzaGFkb3dPZmZzZXRPdXRlcjEiIHJlc3VsdD0ic2hhZG93Qmx1ck91dGVyMSI+PC9mZUdhdXNzaWFuQmx1cj4NCiAgICAgICAgICAgIDxmZUNvbG9yTWF0cml4IHZhbHVlcz0iMCAwIDAgMCAwICAgMCAwIDAgMCAwICAgMCAwIDAgMCAwICAwIDAgMCAwLjEgMCIgdHlwZT0ibWF0cml4IiBpbj0ic2hhZG93Qmx1ck91dGVyMSIgcmVzdWx0PSJzaGFkb3dNYXRyaXhPdXRlcjEiPjwvZmVDb2xvck1hdHJpeD4NCiAgICAgICAgICAgIDxmZU1lcmdlPg0KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0ic2hhZG93TWF0cml4T3V0ZXIxIj48L2ZlTWVyZ2VOb2RlPg0KICAgICAgICAgICAgICAgIDxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyI+PC9mZU1lcmdlTm9kZT4NCiAgICAgICAgICAgIDwvZmVNZXJnZT4NCiAgICAgICAgPC9maWx0ZXI+DQogICAgPC9kZWZzPg0KICAgIDxnIGlkPSJCVE4vQXJyb3ciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgICA8ZyBmaWx0ZXI9InVybCgjZmlsdGVyLTEpIiBmaWxsPSIjRkZGRkZGIiBpZD0iT3ZhbCI+DQogICAgICAgICAgICA8Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyMCI+PC9jaXJjbGU+DQogICAgICAgIDwvZz4NCiAgICAgICAgPGcgaWQ9InJpZ2h0LWFycm93IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMC4wMDAwMDAsIDE4LjUwMDAwMCkgcm90YXRlKC0yNzAuMDAwMDAwKSB0cmFuc2xhdGUoLTIwLjAwMDAwMCwgLTE4LjUwMDAwMCkgdHJhbnNsYXRlKDExLjUwMDAwMCwgMTIuNTAwMDAwKSIgZmlsbD0iIzFFMjAxRCIgZmlsbC1ydWxlPSJub256ZXJvIj4NCiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMS40NDc2MDI0LDAuMTgwNDcxNTAyIEMxMS4yMTYwMDUxLC0wLjA2MDE1NzE2NzQgMTAuODMwNTQ5NCwtMC4wNjAxNTcxNjc0IDEwLjU5MDg1NDIsMC4xODA0NzE1MDIgQzEwLjM1OTI1NjksMC40MTI5NzA4MjUgMTAuMzU5MjU2OSwwLjc5OTkyNzczOSAxMC41OTA4NTQyLDEuMDMxODg1MTEgTDE0LjkzNTA1ODcsNS4zOTMwMDg3NiBMMC41OTk3Nzc3MDcsNS4zOTMwMDg3NiBDMC4yNjU2MDgxMyw1LjM5MzU1MDcyIDAsNS42NjAxOTMzIDAsNS45OTU2NjQzNSBDMCw2LjMzMTEzNTQgMC4yNjU2MDgxMyw2LjYwNjQ0OTI4IDAuNTk5Nzc3NzA3LDYuNjA2NDQ5MjggTDE0LjkzNTA1ODcsNi42MDY0NDkyOCBMMTAuNTkwODU0MiwxMC45NTk0NDM2IEMxMC4zNTkyNTY5LDExLjIwMDA3MjMgMTAuMzU5MjU2OSwxMS41ODc1NzExIDEwLjU5MDg1NDIsMTEuODE5NTI4NSBDMTAuODMwNTQ5NCwxMi4wNjAxNTcyIDExLjIxNjU0NDksMTIuMDYwMTU3MiAxMS40NDc2MDI0LDExLjgxOTUyODUgTDE2LjgyMDIyODYsNi40MjU5Nzc3OCBDMTcuMDU5OTIzOCw2LjE5MzQ3ODQ2IDE3LjA1OTkyMzgsNS44MDY1MjE1NCAxNi44MjAyMjg2LDUuNTc0NTY0MTggTDExLjQ0NzYwMjQsMC4xODA0NzE1MDIgWiIgaWQ9IlBhdGgiPjwvcGF0aD4NCiAgICAgICAgPC9nPg0KICAgIDwvZz4NCjwvc3ZnPg==);
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0yNS44MTk1IDIxLjQ0NzZDMjYuMDYwMiAyMS4yMTYgMjYuMDYwMiAyMC44MzA1IDI1LjgxOTUgMjAuNTkwOUMyNS41ODcgMjAuMzU5MyAyNS4yMDAxIDIwLjM1OTMgMjQuOTY4MSAyMC41OTA5TDIwLjYwNyAyNC45MzUxTDIwLjYwNyAxMC41OTk4QzIwLjYwNjQgMTAuMjY1NiAyMC4zMzk4IDEwIDIwLjAwNDMgMTBDMTkuNjY4OSAxMCAxOS4zOTM2IDEwLjI2NTYgMTkuMzkzNiAxMC41OTk4TDE5LjM5MzYgMjQuOTM1MUwxNS4wNDA2IDIwLjU5MDlDMTQuNzk5OSAyMC4zNTkzIDE0LjQxMjQgMjAuMzU5MyAxNC4xODA1IDIwLjU5MDlDMTMuOTM5OCAyMC44MzA1IDEzLjkzOTggMjEuMjE2NSAxNC4xODA1IDIxLjQ0NzZMMTkuNTc0IDI2LjgyMDJDMTkuODA2NSAyNy4wNTk5IDIwLjE5MzUgMjcuMDU5OSAyMC40MjU0IDI2LjgyMDJMMjUuODE5NSAyMS40NDc2WiIgZmlsbD0iIzFFMjAxRCIvPg0KPC9zdmc+DQo=);
   border: none;
   position: absolute;
   top: 0;
@@ -17251,18 +17251,25 @@ blockquote footer::before,
 
 /* line 11, resources/assets/styles/skhoop/components/_forms.scss */
 
-.custom-control .custom-control-label > span {
-  display: inline-block;
-  margin-top: 0.0625rem;
+.form-control-lg.is-invalid,
+.form-control-lg.is-valid {
+  background-size: 1.875rem;
 }
 
-/* line 21, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 18, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-control .custom-control-label > span {
+  display: inline-block;
+  margin-top: 0.125rem;
+}
+
+/* line 28, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio .custom-control-label::after {
   background: no-repeat 50% / 0.875rem;
 }
 
-/* line 29, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 36, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::after {
   background-color: #fff;
@@ -17270,7 +17277,7 @@ blockquote footer::before,
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-/* line 34, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 41, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::before {
   height: 0.75rem;
@@ -17281,33 +17288,33 @@ blockquote footer::before,
   background-color: #fff;
 }
 
-/* line 44, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 51, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control.custom-control-lg {
   margin: 0.3125rem 0;
 }
 
-/* line 47, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 54, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control.custom-control-lg .custom-control-label::before {
   width: 1.875rem;
   height: 1.875rem;
 }
 
-/* line 54, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 61, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio.custom-control-lg .custom-control-label::before {
   top: -0.1875rem;
   left: -2.0625rem;
 }
 
-/* line 59, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 66, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio.custom-control-lg .custom-control-label::after {
   background: no-repeat 50% / 20px;
 }
 
-/* line 65, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 72, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-checkbox.custom-control-lg .custom-control-label::before {
   width: 1.875rem;
@@ -17316,7 +17323,7 @@ blockquote footer::before,
   left: -2.0625rem;
 }
 
-/* line 72, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 79, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-checkbox.custom-control-lg .custom-control-label::after {
   width: 1.875rem;
@@ -17325,13 +17332,13 @@ blockquote footer::before,
   left: -2.0625rem;
 }
 
-/* line 82, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 89, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #292929;
 }
 
-/* line 86, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 93, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
@@ -17339,7 +17346,7 @@ blockquote footer::before,
   background-color: #b7cad0;
 }
 
-/* line 94, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 101, resources/assets/styles/skhoop/components/_forms.scss */
 
 .invalid-feedback,
 .valid-feedback {

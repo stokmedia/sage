@@ -26,7 +26,9 @@
 
           <div class="custom-control custom-checkbox">
             <input id="customCheck1" class="custom-control-input" checked="checked" type="checkbox">
-            <label class="custom-control-label" for="customCheck1">I Agree to the GDPR things</label>
+            <label class="custom-control-label" for="customCheck1">
+              <span>I Agree to the GDPR things</span>
+            </label>
           </div>
         </div>
       </div>
