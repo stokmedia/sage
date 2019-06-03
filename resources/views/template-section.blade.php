@@ -19,6 +19,9 @@
 
           <div class="form-group">
             <input type="text" class="form-control form-control-lg is-invalid">
+            <button class="btn btn-lg btn-icon btn-icon-lg bg-white btn-outline-primary" type="button">
+              <img src="@asset('images/icon/arrow-right.svg')" alt="" srcset="">
+            </button>
             <div class="invalid-feedback">
               Your email is not valid
             </div>
