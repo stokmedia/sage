@@ -17260,7 +17260,7 @@ blockquote footer::before,
 
 .custom-control .custom-control-label > span {
   display: inline-block;
-  margin-top: 0.0625rem;
+  margin-top: 0.125rem;
 }
 
 /* line 28, resources/assets/styles/skhoop/components/_forms.scss */

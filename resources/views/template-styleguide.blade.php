@@ -191,7 +191,7 @@
           <div class="form-group">
             <input type="text" class="form-control form-control-lg is-valid">
             <div class="invalid-feedback">
-              Your email is not valid
+              <span>Your email is not valid</span>
             </div>
           </div>
 
@@ -240,10 +240,14 @@
                 </div>
                 <div class="custom-control custom-control-lg  custom-radio">
                   <input id="customRadio6" class="custom-control-input" name="customRadio" type="radio" checked>
-                  <label class="custom-control-label" for="customRadio6">Or toggle this other custom radio</label>
+                  <label class="custom-control-label" for="customRadio6">
+                    <span>Or toggle this other custom radio</span>
+                  </label>
                 </div>
                 <div class="custom-control custom-radio"><input id="customRadio5" class="custom-control-input" disabled="disabled" name="customRadio" type="radio">
-                  <label class="custom-control-label" for="customRadio5">Disabled custom radio</label>
+                  <label class="custom-control-label" for="customRadio5">
+                    <span>Disabled custom radio</span>
+                  </label>
                 </div>
               </div>
 
@@ -265,15 +269,21 @@
               <div class="form-group">
                 <div class="custom-control custom-checkbox"><input id="customCheck1" class="custom-control-input"
                     checked="checked" type="checkbox">
-                  <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                  <label class="custom-control-label" for="customCheck1">
+                    <span>Check this custom checkbox</span>
+                  </label>
                 </div>
                 <div class="custom-control custom-control-lg custom-checkbox">
                   <input id="customCheck100" class="custom-control-input" checked="checked" type="checkbox">
-                  <label class="custom-control-label" for="customCheck100">Check this custom checkbox</label>
+                  <label class="custom-control-label" for="customCheck100">
+                    <span>Check this custom checkbox</span>
+                  </label>
                 </div>
                 <div class="custom-control custom-checkbox"><input id="customCheck2" class="custom-control-input"
                     disabled="disabled" type="checkbox">
-                  <label class="custom-control-label" for="customCheck2">Disabled custom checkbox</label>
+                  <label class="custom-control-label" for="customCheck2">
+                    <span>Disabled custom checkbox</span>
+                  </label>
                 </div>
               </div>
               <div class="form-group">
