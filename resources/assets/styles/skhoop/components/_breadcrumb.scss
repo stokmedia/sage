@@ -10,6 +10,10 @@
 .breadcrumb-item {
   color: $breadcrumb-active-color;
   letter-spacing: 0.5px;
+
+  &.active {
+    color: rgba($body-color, 0.5);
+  }
 }
 
 .breadcrumb-item + .breadcrumb-item {
