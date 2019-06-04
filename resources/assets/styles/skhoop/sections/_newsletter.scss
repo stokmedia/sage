@@ -1,7 +1,7 @@
 .newsletter {
   border-radius: 0.625rem;
   overflow: hidden;
-  background-color: #ece4d0;
+  background-color: $yellow;
   min-height: 300px;
 
   .newsletter-modal & {
@@ -9,7 +9,6 @@
   }
 
   &-cover {
-    background: #9a9a9a;
     height: 221px;
     background-size: cover;
     background-position: center;

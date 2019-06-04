@@ -9,7 +9,9 @@
 @include('partials.page-header')
 
 <div class="container-fluid">
-
+  <div class="container">
+    <div class="h2">Newsletter</div>
+  </div>
   <!-- Newsletter -->
   @include('sections.section-newsletter')
 
@@ -21,6 +23,15 @@
       </button>
     </div>
   </section>
+
+  <!-- 50/50 layout -->
+  <div class="container">
+    <div class="h2">50/50 layout</div>
+    <div class="row">
+
+    </div>
+  </div>
+
 </div>
 
 @include('partials.content-page')
