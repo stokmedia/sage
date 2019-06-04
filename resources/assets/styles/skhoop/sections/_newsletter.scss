@@ -58,10 +58,10 @@
     @include media-breakpoint-up(md) {
       padding-bottom: 0;
       padding-top: 0;
+    }
 
-      .newsletter-modal & {
-        padding-bottom: 3.125rem !important; // <---- overides the padding
-      }
+    .newsletter-modal & {
+      padding-bottom: 50px !important; // <---- overides the padding
     }
   }
 

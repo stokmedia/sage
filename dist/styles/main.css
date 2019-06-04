@@ -17548,12 +17548,12 @@ blockquote footer::before,
     padding-bottom: 0;
     padding-top: 0;
   }
+}
 
-  /* line 62, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 63, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
-  .newsletter-modal .newsletter-content {
-    padding-bottom: 3.125rem !important;
-  }
+.newsletter-modal .newsletter-content {
+  padding-bottom: 50px !important;
 }
 
 /* line 68, resources/assets/styles/skhoop/sections/_newsletter.scss */

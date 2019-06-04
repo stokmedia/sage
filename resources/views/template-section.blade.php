@@ -14,10 +14,12 @@
   @include('sections.section-newsletter')
 
   <section class="section">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalNewsletter">
-      Launch newsletter modal
-    </button>
+    <div class="container">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalNewsletter">
+        Launch newsletter modal
+      </button>
+    </div>
   </section>
 </div>
 
