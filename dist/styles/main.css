@@ -17572,56 +17572,51 @@ blockquote footer::before,
 
 /* line 85, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
-.newsletter-form .form-group,
-.newsletter-form .comment-form p,
-.comment-form .newsletter-form p,
-.newsletter-form .search-form label,
-.search-form .newsletter-form label {
-  width: 75%;
-}
-
-@media (min-width: 768px) {
-  /* line 85, resources/assets/styles/skhoop/sections/_newsletter.scss */
-
-  .newsletter-form .form-group,
-  .newsletter-form .comment-form p,
-  .comment-form .newsletter-form p,
-  .newsletter-form .search-form label,
-  .search-form .newsletter-form label {
-    width: 80%;
-  }
-}
-
-/* line 93, resources/assets/styles/skhoop/sections/_newsletter.scss */
-
-.newsletter-form .form-group [type="text"],
-.newsletter-form .comment-form p [type="text"],
-.comment-form .newsletter-form p [type="text"],
-.newsletter-form .search-form label [type="text"],
-.search-form .newsletter-form label [type="text"] {
-  min-width: 100%;
-}
-
-/* line 97, resources/assets/styles/skhoop/sections/_newsletter.scss */
-
 .newsletter-form .btn,
 .newsletter-form .comment-form input[type="submit"],
 .comment-form .newsletter-form input[type="submit"],
 .newsletter-form .search-form .search-submit,
 .search-form .newsletter-form .search-submit {
   background-color: #fff;
-  margin-left: 0.375rem;
+}
+
+/* line 89, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-form .input-group {
+  margin-bottom: 0;
+}
+
+/* line 93, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-form .input-group [type="text"] {
+  min-width: auto;
+  margin-right: 0.625rem;
+  border-radius: 9.375rem;
+}
+
+@media (min-width: 768px) {
+  /* line 93, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+  .newsletter-form .input-group [type="text"] {
+    margin-right: 1.875rem;
+  }
 }
 
 /* line 103, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
+.newsletter-form .input-group.is-invalid + .invalid-feedback {
+  display: block;
+}
+
+/* line 108, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
 .newsletter .custom-checkbox {
   text-align: left;
-  padding-left: 3.75rem;
+  padding-left: 3.125rem;
 }
 
 @media (min-width: 768px) {
-  /* line 103, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 108, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter .custom-checkbox {
     padding-left: 1.875rem;
