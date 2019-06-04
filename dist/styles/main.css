@@ -9170,7 +9170,7 @@ a.close.disabled {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 9.375rem;
+  border-radius: 0.3125rem;
   outline: 0;
 }
 
@@ -9212,8 +9212,8 @@ a.close.disabled {
           justify-content: space-between;
   padding: 1rem 1rem;
   border-bottom: 1px solid #dee2e6;
-  border-top-left-radius: 9.375rem;
-  border-top-right-radius: 9.375rem;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
 }
 
 /* line 143, node_modules/bootstrap/scss/_modal.scss */
@@ -9254,8 +9254,8 @@ a.close.disabled {
           justify-content: flex-end;
   padding: 1rem;
   border-top: 1px solid #dee2e6;
-  border-bottom-right-radius: 9.375rem;
-  border-bottom-left-radius: 9.375rem;
+  border-bottom-right-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
 }
 
 /* line 176, node_modules/bootstrap/scss/_modal.scss */
@@ -17455,13 +17455,19 @@ blockquote footer::before,
 /* line 1, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter {
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
   background-color: #ece4d0;
   min-height: 300px;
 }
 
 /* line 7, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-modal .newsletter {
+  border-radius: 0.3125rem;
+}
+
+/* line 11, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-cover {
   background: #9a9a9a;
@@ -17473,22 +17479,27 @@ blockquote footer::before,
   padding: 0;
 }
 
-/* line 16, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 20, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-modal .newsletter-cover {
+  height: 300px;
+}
+
+/* line 24, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-cover::before {
   content: " ";
   position: absolute;
   height: 100%;
   width: 110%;
-  left: -10px;
-  right: -10px;
+  left: -5%;
   bottom: -1px;
   top: auto;
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzU1IiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMzU1IDIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZD0iTTAgMjBIMzU1VjBDMjE2LjgzMiAyNi4zMDUzIDEzOS42NzcgMjYuMzkwMSAwIDBWMjBaIiBmaWxsPSIjRUNFNEQwIi8+DQo8L3N2Zz4NCg==) no-repeat bottom/contain transparent;
 }
 
 @media (min-width: 768px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 24, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-cover::before {
     left: auto;
@@ -17500,8 +17511,14 @@ blockquote footer::before,
   }
 }
 
+/* line 43, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-modal .newsletter-cover::before {
+  display: none;
+}
+
 @media (min-width: 768px) {
-  /* line 7, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 11, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-cover {
     background-size: cover;
@@ -17509,7 +17526,7 @@ blockquote footer::before,
   }
 }
 
-/* line 43, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 54, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-content {
   padding-bottom: 72px;
@@ -17517,15 +17534,21 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 43, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 54, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-content {
     padding-bottom: 0;
     padding-top: 0;
   }
+
+  /* line 62, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+  .newsletter-modal .newsletter-content {
+    padding-bottom: 3.125rem !important;
+  }
 }
 
-/* line 53, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 68, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-inner {
   max-width: 395px;
@@ -17533,24 +17556,40 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 53, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 68, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-inner {
     text-align: left;
   }
+
+  /* line 75, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+  .newsletter-modal .newsletter-inner {
+    text-align: center;
+  }
 }
 
-/* line 62, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 81, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-title {
   font-family: "Covered By Your Grace", cursive;
   color: #031532;
-  font-size: 2.1875rem;
-  letter-spacing: 0.8704px;
+  font-size: 28px;
+  letter-spacing: 0.7px;
   line-height: 50px;
 }
 
-/* line 70, resources/assets/styles/skhoop/sections/_newsletter.scss */
+@media (min-width: 768px) {
+  /* line 81, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+  .newsletter-title {
+    font-size: 2.1875rem;
+    letter-spacing: 0.8704px;
+    line-height: 50px;
+  }
+}
+
+/* line 95, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-body {
   color: #292929;
@@ -17563,14 +17602,20 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 70, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 95, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-body {
     margin-bottom: 0;
   }
+
+  /* line 107, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+  .newsletter-modal .newsletter-body {
+    padding-bottom: 1.25rem;
+  }
 }
 
-/* line 85, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 114, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .btn,
 .newsletter-form .comment-form input[type="submit"],
@@ -17580,13 +17625,13 @@ blockquote footer::before,
   background-color: #fff;
 }
 
-/* line 89, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 118, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group {
   margin-bottom: 0;
 }
 
-/* line 93, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 122, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group [type="text"] {
   min-width: auto;
@@ -17595,20 +17640,26 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 93, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 122, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-form .input-group [type="text"] {
     margin-right: 1.875rem;
   }
 }
 
-/* line 103, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 132, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group.is-invalid + .invalid-feedback {
   display: block;
 }
 
-/* line 108, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 136, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-form form {
+  width: 100%;
+}
+
+/* line 141, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter .custom-checkbox {
   text-align: left;
@@ -17616,7 +17667,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 108, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 141, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter .custom-checkbox {
     padding-left: 1.875rem;
