@@ -33,6 +33,7 @@
   --light: #f8f9fa;
   --dark: #343a40;
   --ash: #f1f1f1;
+  --lightgreen: #dbe4e7;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -3180,6 +3181,36 @@ mark,
 
 /* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
 
+.table-lightgreen,
+.table-lightgreen > th,
+.table-lightgreen > td {
+  background-color: #f5f7f8;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-lightgreen th,
+.table-lightgreen td,
+.table-lightgreen thead th,
+.table-lightgreen tbody + tbody {
+  border-color: #ecf1f3;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.table-hover .table-lightgreen:hover {
+  background-color: #e6ebee;
+}
+
+/* line 32, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-hover .table-lightgreen:hover > td,
+.table-hover .table-lightgreen:hover > th {
+  background-color: #e6ebee;
+}
+
+/* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -4898,6 +4929,58 @@ fieldset:disabled .search-form a.search-submit,
           box-shadow: 0 0 0 0.2rem rgba(210, 210, 211, 0.5);
 }
 
+/* line 60, node_modules/bootstrap/scss/_buttons.scss */
+
+.btn-lightgreen {
+  color: #212529;
+  background-color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-lightgreen:hover {
+  color: #212529;
+  background-color: #c4d3d8;
+  border-color: #bccdd3;
+}
+
+/* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-lightgreen:focus,
+.btn-lightgreen.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 199, 203, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(191, 199, 203, 0.5);
+}
+
+/* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-lightgreen.disabled,
+.btn-lightgreen:disabled {
+  color: #212529;
+  background-color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 40, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-lightgreen:not(:disabled):not(.disabled):active,
+.btn-lightgreen:not(:disabled):not(.disabled).active,
+.show > .btn-lightgreen.dropdown-toggle {
+  color: #212529;
+  background-color: #bccdd3;
+  border-color: #b5c7ce;
+}
+
+/* line 50, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-lightgreen:not(:disabled):not(.disabled):active:focus,
+.btn-lightgreen:not(:disabled):not(.disabled).active:focus,
+.show > .btn-lightgreen.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 199, 203, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(191, 199, 203, 0.5);
+}
+
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
 
 .btn-outline-primary {
@@ -5346,6 +5429,56 @@ fieldset:disabled .search-form a.search-submit,
 .show > .btn-outline-ash.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(241, 241, 241, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(241, 241, 241, 0.5);
+}
+
+/* line 66, node_modules/bootstrap/scss/_buttons.scss */
+
+.btn-outline-lightgreen {
+  color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-outline-lightgreen:hover {
+  color: #212529;
+  background-color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 71, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-lightgreen:focus,
+.btn-outline-lightgreen.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
+}
+
+/* line 76, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-lightgreen.disabled,
+.btn-outline-lightgreen:disabled {
+  color: #dbe4e7;
+  background-color: transparent;
+}
+
+/* line 82, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-lightgreen:not(:disabled):not(.disabled):active,
+.btn-outline-lightgreen:not(:disabled):not(.disabled).active,
+.show > .btn-outline-lightgreen.dropdown-toggle {
+  color: #212529;
+  background-color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 89, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-lightgreen:not(:disabled):not(.disabled):active:focus,
+.btn-outline-lightgreen:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-lightgreen.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
 }
 
 /* line 77, node_modules/bootstrap/scss/_buttons.scss */
@@ -8444,6 +8577,26 @@ input[type="button"].btn-block {
   color: #646464;
 }
 
+/* line 48, node_modules/bootstrap/scss/_alert.scss */
+
+.alert-lightgreen {
+  color: #727778;
+  background-color: #dbe4e7;
+  border-color: #f5f7f8;
+}
+
+/* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-lightgreen hr {
+  border-top-color: #e6ebee;
+}
+
+/* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-lightgreen .alert-link {
+  color: #595d5e;
+}
+
 /* line 5, node_modules/bootstrap/scss/_list-group.scss */
 
 .list-group {
@@ -8967,6 +9120,29 @@ input[type="button"].btn-block {
   color: #fff;
   background-color: #7d7d7d;
   border-color: #7d7d7d;
+}
+
+/* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-lightgreen {
+  color: #727778;
+  background-color: #f5f7f8;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.list-group-item-lightgreen.list-group-item-action:hover,
+.list-group-item-lightgreen.list-group-item-action:focus {
+  color: #727778;
+  background-color: #e6ebee;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-lightgreen.list-group-item-action.active {
+  color: #fff;
+  background-color: #727778;
+  border-color: #727778;
 }
 
 /* line 1, node_modules/bootstrap/scss/_close.scss */
@@ -9608,6 +9784,21 @@ button.bg-ash:focus {
   background-color: #d8d8d8 !important;
 }
 
+/* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
+
+.bg-lightgreen {
+  background-color: #dbe4e7 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.bg-lightgreen:hover,
+a.bg-lightgreen:focus,
+button.bg-lightgreen:hover,
+button.bg-lightgreen:focus {
+  background-color: #bccdd3 !important;
+}
+
 /* line 13, node_modules/bootstrap/scss/utilities/_background.scss */
 
 .bg-white {
@@ -9732,6 +9923,12 @@ button.bg-ash:focus {
 
 .border-ash {
   border-color: #f1f1f1 !important;
+}
+
+/* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
+
+.border-lightgreen {
+  border-color: #dbe4e7 !important;
 }
 
 /* line 25, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -16212,6 +16409,19 @@ a.text-ash:focus {
   color: #cbcbcb !important;
 }
 
+/* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
+
+.text-lightgreen {
+  color: #dbe4e7 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.text-lightgreen:hover,
+a.text-lightgreen:focus {
+  color: #adc2c8 !important;
+}
+
 /* line 51, node_modules/bootstrap/scss/utilities/_text.scss */
 
 .text-body {
@@ -16609,6 +16819,55 @@ a.text-ash:focus {
 
 body#tinymce {
   margin: 12px !important;
+}
+
+/* line 3, resources/assets/styles/sections/_fifty-fifthy-section.scss */
+
+.fifty-fifthy-item figure {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.fifty-fifthy-item figure::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.fifty-fifthy-item figure > img,
+.fifty-fifthy-item figure > video,
+.fifty-fifthy-item figure > figure,
+.fifty-fifthy-item figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.fifty-fifthy-item figure > .ratio-iframe,
+.fifty-fifthy-item figure > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
 }
 
 /* line 1, resources/assets/styles/sections/_newsletter.scss */
