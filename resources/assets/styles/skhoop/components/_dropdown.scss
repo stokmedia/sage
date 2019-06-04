@@ -1,13 +1,17 @@
 .dropdown {
-  @include media-breakpoint-up(md) {
-    min-width: 300px;
-  }
+  width: 100%;
 }
 
 .dropdown-toggle {
   width: 100%;
+  min-width: inherit;
+  max-width: initial;
   padding-left: 2.0625rem;
   position: relative;
+
+  @include media-breakpoint-up(md) {
+    max-width: 270px;
+  }
 
   &::after {
     content: url(../images/icon/arrow-down.svg);
