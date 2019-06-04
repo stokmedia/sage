@@ -7,8 +7,16 @@
             <img src="@asset('images/temp/company-logo.svg')" class="" alt=""/>
           </a>
           <ul class="group-links d-none d-md-block">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+              <li>
+                <a href="#">
+                  <img src="@asset('images/icon/icon-insta.svg')" class="" alt=""/>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="@asset('images/icon/icon-facebook.svg')" class="" alt=""/>
+                </a>
+              </li>
           </ul>
         </div>
       </div>
@@ -36,8 +44,16 @@
           </ul>
         </div>
         <ul class="group-links text-center d-md-none d-lg-none">
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
+          <li>
+            <a href="#">
+              <img src="@asset('images/icon/icon-insta.svg')" class="" alt=""/>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="@asset('images/icon/icon-facebook.svg')" class="" alt=""/>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="col-lg-2 col-md-4 d-none d-md-block">

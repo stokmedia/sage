@@ -87,7 +87,6 @@
       display: block;
       width: 2.5rem;
       height: 2.5rem;
-      background-color: red;
 
       @include border-radius( 50% );
     }
@@ -97,15 +96,25 @@
 .trust-bar {
   background-color: $primary;
   text-align: center;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-top: 1.375rem;
+  padding-bottom: 1.375rem;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
 
   .trust-item {
     padding-left: 3.75rem;
     min-height: 4.1875rem;
     position: relative;
     width: 14.375rem;
-    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+    }
 
     .info {
       text-align: left;
@@ -115,19 +124,29 @@
       }
 
       .small {
-        margin-top: -0.4375rem;
+        @include media-breakpoint-up(md) {
+          margin-top: -0.4375rem;
+        }
       }
     }
 
     & + .trust-item {
-      margin-left: 20px;
+      margin-top: 0.625rem;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+        margin-left: 2rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-left: 4.5rem;
+      }
     }
   }
 
   .icon-block {
     width: 2.5rem;
     height: 2.5rem;
-    background-color: red;
     position: absolute;
     top: 50%;
     left: 0;
