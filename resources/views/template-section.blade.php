@@ -27,10 +27,8 @@
   <!-- 50/50 layout -->
   <div class="container">
     <div class="h2">50/50 layout</div>
-    <div class="row">
-
-    </div>
   </div>
+  @include('sections.fifty-fifthy-section')
 
 </div>
 
