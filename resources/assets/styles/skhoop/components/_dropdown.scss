@@ -9,10 +9,6 @@
   padding-left: 2.0625rem;
   position: relative;
 
-  @include media-breakpoint-up(md) {
-    max-width: 270px;
-  }
-
   &::after {
     content: url(../images/icon/arrow-down.svg);
     border: none;

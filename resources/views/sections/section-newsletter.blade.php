@@ -5,7 +5,7 @@
       <div class="col-lg-6 col-md-6 col-sm-12  newsletter-cover"
         style="background-image: url(@asset('images/temp/newsletter.png')">
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 p-4  d-flex justify-content-center align-items-center newsletter-content">
+      <div class="col-lg-6 col-md-6 col-sm-12 p-4 d-flex justify-content-center align-items-center newsletter-content">
         <div class="newsletter-inner">
           <div class="newsletter-title">Håll dig uppdaterad</div>
           <div class="newsletter-body">
@@ -19,7 +19,7 @@
           </div>
           <div class="row m-0 align-items-center justify-content-center justify-content-lg-around newsletter-form">
             <div class="input-group is-invalid">
-              <input type="text" class="form-control is-invalid" name="name" id="name" placeholder="" aria-label="">
+              <input type="email" class="form-control is-invalid" name="name" id="name" placeholder="" aria-label="">
               <span class="input-group-btn">
                 <button class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary shadow-sm border-0" type="button">
                   <img src="@asset('images/icon/arrow-right.svg')" alt="" srcset="">

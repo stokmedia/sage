@@ -82,7 +82,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-3">
         <p class="bs-component">
           <div class="form-group">
             <div class="dropdown d-inline-block">
@@ -95,6 +95,11 @@
               </div>
             </div>
           </div>
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <p class="bs-component">
+
         </p>
       </div>
     </div>
