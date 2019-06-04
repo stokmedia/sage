@@ -19,7 +19,7 @@
     height: 100%;
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 0.625rem;
+      margin-bottom: 10px;
     }
   }
 
@@ -227,8 +227,8 @@
   // Filter Container
   .filter-container {
     @include media-breakpoint-up(lg) {
-      padding-top: 1.25rem;
-      padding-bottom: 1.25rem;
+      padding-top: 1.4375rem;
+      padding-bottom: 1.4375rem;
     }
 
     @include media-breakpoint-up(xl) {
@@ -294,6 +294,7 @@
   // Button Container
   .button-container {
     .row .column {
+      position: relative;
       padding: 0.9375rem 0;
       width: 100%;
     }
@@ -302,6 +303,58 @@
       margin-top: 0;
       margin-bottom: 0;
       border-top: 1px solid $green;
+    }
+
+    .btn-clear {
+      color: $body-color;
+      font-size: 0.875rem;
+      letter-spacing: 0.44px;
+      line-height: 1.875rem;
+      text-decoration: underline;
+    }
+
+    .btn-icon {
+      margin-left: 0.625rem;
+
+      @include media-min(370px) {
+        position: absolute;
+        right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// JS Filter
+.js-filter-toggle {
+  .filter-close {
+    display: none;
+  }
+}
+
+.js-filter-collapse {
+  display: none;
+}
+
+.filter-is-open {
+  @include media-breakpoint-down(md) {
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+  }
+}
+
+.js-accordion-body {
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
+}
+
+.js-accordion-toggle {
+  &.is-open {
+    & + .js-accordion-body {
+      @include media-breakpoint-down(md) {
+        display: block !important;
+      }
     }
   }
 }

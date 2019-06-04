@@ -74,7 +74,7 @@ module.exports = jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(13);
 
 
 /***/ }),
@@ -102,6 +102,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+// Require Components
+__webpack_require__(12);
+
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
   // All pages
@@ -114,7 +117,6 @@ var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
 
 // Load Events
 jQuery(document).ready(function () { return routes.loadEvents(); });
-
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
@@ -7333,6 +7335,54 @@ Router.prototype.loadEvents = function loadEvents () {
 
 /***/ }),
 /* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {var Filter = {};
+
+Filter.toggle = function() {
+  var openFilter = $('.js-filter-open');
+  var closeFilter = $('.js-filter-close');
+  var openFilterButtons = $('.filter-open');
+  var closeFilterButtons = $('.filter-close');
+  var collapseFilter = $('.js-filter-collapse');
+
+  openFilter.click(function () {
+    collapseFilter.show();
+    openFilterButtons.hide();
+    closeFilterButtons.show();
+    $('body').addClass('filter-is-open');
+  });
+
+  closeFilter.click(function () {
+    collapseFilter.hide();
+    closeFilterButtons.hide();
+    openFilterButtons.show();
+    $('body').removeClass('filter-is-open');
+  });
+};
+
+Filter.accordion = function() {
+  var toggleAccordion = $('.js-accordion-toggle');
+  var accordionBody = $('.js-accordion-body');
+
+  toggleAccordion.click(function() {
+    var thisAccordion = $(this);
+    if (thisAccordion.hasClass('is-open')) {
+      thisAccordion.siblings(accordionBody).removeClass('is-open');
+      thisAccordion.removeClass('is-open');
+    } else {
+      thisAccordion.siblings(accordionBody).addClass('is-open');
+      thisAccordion.addClass('is-open');
+    }
+  });
+};
+
+Filter.toggle();
+Filter.accordion();
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
