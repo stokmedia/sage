@@ -1,0 +1,44 @@
+.newsletter {
+  overflow: hidden;
+  background-color: $secondary;
+  min-height: 300px;
+
+  &-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 0;
+    height: 300px;
+
+    @include media-breakpoint-up(md) {
+      background-size: cover;
+      height: inherit;
+    }
+  }
+
+  &-content {
+    // Stuffs here
+  }
+
+  &-inner {
+    // Stuffs here
+  }
+
+  &-title {
+    // Stuffs here
+  }
+
+  &-body {
+    // Stuffs here
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-form {
+    form {
+      width: 100%;
+    }
+  }
+}

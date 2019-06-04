@@ -1,11 +1,14 @@
 .newsletter {
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
-  background-color: #ece4d0;
+  background-color: $yellow;
   min-height: 300px;
 
+  .newsletter-modal & {
+    border-radius: 0.3125rem;
+  }
+
   &-cover {
-    background: #9a9a9a;
     height: 221px;
     background-size: cover;
     background-position: center;
@@ -13,13 +16,16 @@
     overflow: hidden;
     padding: 0;
 
+    .newsletter-modal & {
+      height: 300px;
+    }
+
     &::before {
       content: " ";
       position: absolute;
       height: 100%;
       width: 110%;
-      left: -10px;
-      right: -10px;
+      left: -5%;
       bottom: -1px;
       top: auto;
       background: url(../images/graphics/newsletter-curve-h.svg) no-repeat bottom/contain transparent;
@@ -31,6 +37,10 @@
         top: -5%;
         height: 110%;
         background: url(../images/graphics/newsletter-curve-v.svg) no-repeat right/contain transparent;
+      }
+
+      .newsletter-modal & {
+        display: none;
       }
     }
 
@@ -48,6 +58,10 @@
       padding-bottom: 0;
       padding-top: 0;
     }
+
+    .newsletter-modal & {
+      padding-bottom: 50px !important; // <---- overides the padding
+    }
   }
 
   &-inner {
@@ -56,15 +70,25 @@
 
     @include media-breakpoint-up(md) {
       text-align: left;
+
+      .newsletter-modal & {
+        text-align: center;
+      }
     }
   }
 
   &-title {
     font-family: $font-family-cbyg;
     color: #031532;
-    font-size: 2.1875rem;
-    letter-spacing: 0.8704px;
+    font-size: 28px;
+    letter-spacing: 0.7px;
     line-height: 50px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 2.1875rem;
+      letter-spacing: 0.8704px;
+      line-height: 50px;
+    }
   }
 
   &-body {
@@ -78,6 +102,10 @@
 
     @include media-breakpoint-up(md) {
       margin-bottom: 0;
+
+      .newsletter-modal & {
+        padding-bottom: 1.25rem; // <---- overides the padding
+      }
     }
   }
 
@@ -102,6 +130,10 @@
 
     .input-group.is-invalid + .invalid-feedback {
       display: block;
+    }
+
+    form {
+      width: 100%;
     }
   }
 
