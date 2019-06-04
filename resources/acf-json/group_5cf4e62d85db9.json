@@ -41,10 +41,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5cf4e65e1ad2d",
-            "label": "Type",
-            "name": "type",
-            "type": "radio",
+            "key": "field_5cf62ded664c3",
+            "label": "Website",
+            "name": "website",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,17 +53,27 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "reseller": "Reseller",
-                "agent": "Agent",
-                "distributor": "Distributor"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
             "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
+            "placeholder": ""
+        },
+        {
+            "key": "field_5cf4e65e1ad2d",
+            "label": "Is Agent or Distributor?",
+            "name": "type",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -83,5 +93,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559553693
+    "modified": 1559638306
 }

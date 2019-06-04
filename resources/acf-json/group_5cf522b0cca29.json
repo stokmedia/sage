@@ -1,6 +1,6 @@
 {
     "key": "group_5cf522b0cca29",
-    "title": "Options Page: Sitewide global",
+    "title": "Sitewide global",
     "fields": [
         {
             "key": "field_5cf522ea9f789",
@@ -276,5 +276,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559569443
+    "modified": 1559637344
 }
