@@ -17,17 +17,19 @@
       content: " ";
       position: absolute;
       height: 100%;
-      width: 100%;
-      left: 0;
-      right: 0;
-      bottom: -2px;
+      width: 110%;
+      left: -10px;
+      right: -10px;
+      bottom: -1px;
       top: auto;
-      background: url(../images/graphics/newsletter-curve-h.svg) no-repeat bottom/100% transparent;
+      background: url(../images/graphics/newsletter-curve-h.svg) no-repeat bottom/contain transparent;
 
       @include media-breakpoint-up(md) {
         left: auto;
-        right: 0;
-        bottom: 0;
+        right: -1px;
+        bottom: -5%;
+        top: -5%;
+        height: 110%;
         background: url(../images/graphics/newsletter-curve-v.svg) no-repeat right/contain transparent;
       }
     }
@@ -94,7 +96,7 @@
 
     .btn {
       background-color: $white;
-      margin-left: 1.1875rem;
+      margin-left: 0.375rem;
     }
   }
 
