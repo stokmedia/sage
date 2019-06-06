@@ -17977,6 +17977,8 @@ blockquote footer::before,
 
 .fifty-fifthy-content {
   width: 95%;
+  padding-top: 2.125rem;
+  padding-bottom: 4.5625rem;
 }
 
 @media (min-width: 768px) {
@@ -17987,7 +17989,7 @@ blockquote footer::before,
   }
 }
 
-/* line 13, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+/* line 15, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
 
 .fifty-fifthy-content h2 {
   font-family: "Source Serif Pro", serif;
@@ -17997,7 +17999,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 13, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 15, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
 
   .fifty-fifthy-content h2 {
     font-size: 2.25rem;
@@ -18006,7 +18008,7 @@ blockquote footer::before,
   }
 }
 
-/* line 26, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+/* line 28, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
 
 .fifty-fifthy-content p {
   font-family: "Source Serif Pro", serif;
@@ -18014,11 +18016,11 @@ blockquote footer::before,
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.625rem;
 }
 
 @media (min-width: 992px) {
-  /* line 26, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 28, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
 
   .fifty-fifthy-content p {
     font-size: 1.25rem;

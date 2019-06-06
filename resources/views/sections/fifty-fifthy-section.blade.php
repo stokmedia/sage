@@ -6,7 +6,7 @@
         <img src="@asset('images/temp/newsletter.png')" alt="" srcset="">
       </figure>
     </div>
-    <div class="fifty-fifthy-item bg-lightgreen d-flex justify-content-center align-items-center col-md-6 order-2 order-md-1 p-4 pb-5 p-md-0">
+    <div class="fifty-fifthy-item bg-lightgreen d-flex justify-content-center align-items-center col-md-6 order-2 order-md-1">
       <div class="fifty-fifthy-content">
         <h2>Om Skhoop och våra fabulösa och rara proukter</h2>
 
@@ -25,7 +25,7 @@
         <img src="@asset('images/temp/newsletter.png')" alt="" srcset="">
       </figure>
     </div>
-    <div class="fifty-fifthy-item bg-lightgreen d-flex justify-content-center align-items-center col-md-6 order-2 order-md-2 p-4 pb-5 p-md-0">
+    <div class="fifty-fifthy-item bg-lightgreen d-flex justify-content-center align-items-center col-md-6 order-2 order-md-2">
       <div class="fifty-fifthy-content">
         <h2>Om Skhoop och våra fabulösa och rara proukter</h2>
 

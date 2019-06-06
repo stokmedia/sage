@@ -5,6 +5,8 @@
 
   &-content {
     width: 95%;
+    padding-top: 2.125rem;
+    padding-bottom: 4.5625rem;
 
     @include media-breakpoint-up(md) {
       width: 65%;
@@ -29,7 +31,7 @@
       font-weight: 600;
       letter-spacing: 0.5px;
       line-height: 24px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.625rem;
 
       @include media-breakpoint-up(lg) {
         font-size: 1.25rem;
