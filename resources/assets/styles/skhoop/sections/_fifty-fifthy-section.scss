@@ -1,6 +1,7 @@
 .fifty-fifthy {
   &-item {
-    //
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   &-content {
@@ -9,7 +10,9 @@
     padding-bottom: 4.5625rem;
 
     @include media-breakpoint-up(md) {
-      width: 65%;
+      width: 85%;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
     }
 
     h2 {
