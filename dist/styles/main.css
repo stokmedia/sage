@@ -18509,7 +18509,7 @@ blockquote footer::before,
     bottom: 0;
     width: 100%;
     max-width: 23.4375rem;
-    height: 100vh;
+    height: 100vh !important;
     margin-top: 3.75rem;
     background-color: #fff;
     border: none;
