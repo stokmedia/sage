@@ -63,6 +63,7 @@ array_map(function ($file) use ($sage_error) {
     'setup', 
     'filters', 
     'admin',
+    'custom',
     'Post-types/Reseller',
     'Post-types/Instagram',
     'Classes/AcfOptions'
