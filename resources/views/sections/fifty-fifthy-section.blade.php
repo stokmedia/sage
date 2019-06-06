@@ -1,5 +1,5 @@
-<section class="section fifty-fifthy-section">
-  <div class="row fifty-fifthy">
+<section class="section fifty-fifthy mb-0">
+  <div class="row m-0">
     <!-- use `.order-md-*` to reorder the grid -->
     <div class="fifty-fifthy-item col-md-6 p-0 order-1 order-md-2">
       <figure class="mb-0">
@@ -18,7 +18,9 @@
       </div>
     </div>
   </div>
-  <div class="row fifty-fifthy">
+</section>
+<section class="section fifty-fifthy mb-0">
+  <div class="row m-0">
     <!-- use `.order-md-*` to reorder the grid -->
     <div class="fifty-fifthy-item col-md-6 p-0 order-1 order-md-1">
       <figure class="mb-0">
