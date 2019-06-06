@@ -19754,7 +19754,7 @@ body#tinymce {
   overflow: hidden;
   text-overflow: -o-ellipsis-lastline;
   text-overflow: ellipsis;
-  line-height: 1.25;
+  line-height: 1.25rem;
   display: block;
   /*! autoprefixer: off */
   display: -webkit-box;
@@ -19771,7 +19771,7 @@ body#tinymce {
     overflow: hidden;
     text-overflow: -o-ellipsis-lastline;
     text-overflow: ellipsis;
-    line-height: 1.375;
+    line-height: 1.375rem;
     display: block;
     /*! autoprefixer: off */
     display: -webkit-box;
