@@ -266,6 +266,28 @@
   /*! autoprefixer: on */
 }
 
+@mixin display-flex {
+  display: -webkit-box; 
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex; 
+  display: flex;
+}
+
+@mixin align-items( $ap: center) {
+  -webkit-box-align: $ap;
+  -moz-box-align: $ap;
+  -ms-flex-align: $ap;
+  -webkit-align-items: $ap;
+  align-items: $ap;
+}
+
+@mixin flex($fl: 1) {
+  -webkit-flex: $fl;
+  -ms-flex: $fl;
+  flex: $fl;
+}
+
 /***************************************************************
 * Media Queries
 ***************************************************************/
