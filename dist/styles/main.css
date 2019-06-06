@@ -19858,6 +19858,7 @@ body#tinymce {
 
   .card-block.is-inline .info {
     margin-left: 0;
+    margin-bottom: 0;
     text-align: left;
   }
 }
