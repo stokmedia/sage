@@ -1,0 +1,116 @@
+.three-promo {
+  padding-top: 3.3125rem;
+  padding-bottom: 2.0625rem;
+  background-color: $lightGreen;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+  }
+
+  .title {
+    margin-bottom: 2.75rem;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 3.25rem;
+    }
+
+    .h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card-block {
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  .image {
+    margin-bottom: 1.5rem;
+  }
+
+  figure {
+    margin-bottom: 0;
+
+    @include aspect-ratio(378, 378);
+    @include border-radius( 0.3125rem );
+  }
+
+  .h4,
+  p {
+    color: $body-color;
+  }
+
+  .h4 {
+    margin-bottom: 0.5625rem;
+  }
+
+  p {
+    margin-bottom: 0;
+
+    @include line-clamp(1.25, 3, "rem");
+
+    @include media-breakpoint-up(md) {
+      @include line-clamp(1.375, 3, "rem");
+    }
+  }
+
+  .info {
+    margin: 0 auto 0.875rem;
+    max-width: 300px;
+  }
+
+  .btn {
+    min-width: 14.375rem;
+    margin: 0 auto;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &.is-inline {
+    @include media-breakpoint-down(sm) {
+      padding-left: 140px;
+      position: relative;
+      min-height: 120px;
+
+      .image {
+        margin-bottom: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 120px;
+        height: 120px;
+      }
+
+      figure {
+        @include border-radius( 0.3125rem );
+      }
+
+      .info {
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+  }
+}
+
