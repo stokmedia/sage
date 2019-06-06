@@ -6,7 +6,6 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
 
     <section class="section category-banner no-mb" style="background-image:url( @asset('images/temp/category-banner.jpg') );">
       <div class="box-wrapper d-flex align-items-end">
