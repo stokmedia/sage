@@ -1,14 +1,8 @@
-@if ($section->usp)
-	@php ($list = $section->usp)
-@else
-	@php ($list = $default_usp)
-@endif
-
-@if (!empty($list))
+@if (!empty($section->usp))
 	<div class="trust-bar">
 		<div class="container">
 			
-			@foreach ($list as $item)
+			@foreach ($section->usp as $item)
 				<div class="trust-item">
 
 					@if ($item->image)

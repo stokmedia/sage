@@ -16,8 +16,6 @@ trait General
         $defaultUsp = get_field( 'default_usp',self::currentLang() );
         $list = $defaultUsp['usp'] ?? []; 
 
-        return array_map(function($item) {
-            return (object) $item;
-        }, $list );    
+        return $list;
     }  
 }
