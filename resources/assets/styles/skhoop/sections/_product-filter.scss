@@ -2,9 +2,18 @@
 .category-selector {
   float: left;
   padding-left: 2.1875rem;
-  margin-right: 1.5625rem;
   margin-bottom: 0;
+  width: 100%;
   list-style: none;
+
+  @include media-min(370px) {
+    width: 50%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-right: 1.5625rem;
+    width: auto;
+  }
 
   @include media-breakpoint-up(xl) {
     margin-right: 3.75rem;
@@ -19,7 +28,7 @@
     height: 100%;
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
     }
   }
 
@@ -29,6 +38,12 @@
 
   .custom-control-label {
     padding-left: 0.5625rem;
+  }
+
+  .custom-checkbox {
+    .custom-control-input:disabled ~ .custom-control-label {
+      cursor: not-allowed;
+    }
   }
 }
 
@@ -59,7 +74,12 @@
       width: 3.125rem;
       height: 3.125rem;
       border-radius: 50%;
-      border: 1px solid #e4e4e4;
+      border: 0.0625rem solid #e4e4e4;
+      cursor: pointer;
+    }
+
+    .custom-control-input:disabled ~ .custom-control-label {
+      cursor: not-allowed;
     }
   }
 
@@ -131,13 +151,13 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        height: 1px;
+        height: 0.0625rem;
         width: 100%;
         display: block;
         border: none;
         background-image: linear-gradient(to right, #292929 40%, rgba($body-color, 0) 20%);
         background-position: top;
-        background-size: 3px 1px;
+        background-size: 0.1875rem 0.0625rem;
         background-repeat: repeat-x;
         opacity: 0.5;
         transform: translate(-50%, -50%) rotate(225deg);
@@ -169,15 +189,15 @@
 
   & > .container {
     @include media-breakpoint-up(lg) {
-      max-width: calc(100% - 60px);
+      max-width: calc(100% - 3.75rem);
     }
 
     @include media-breakpoint-up(xl) {
-      max-width: 1210px;
+      max-width: 75.625rem;
     }
 
     @include media-breakpoint-up(xxl) {
-      max-width: 1210px;
+      max-width: 75.625rem;
     }
   }
 
@@ -258,6 +278,10 @@
 
     .color-selector {
       @include media-breakpoint-up(lg) {
+        max-width: 13.75rem;
+      }
+
+      @include media-min(1200px) {
         max-width: 21.25rem;
       }
 
@@ -307,7 +331,7 @@
     hr {
       margin-top: 0;
       margin-bottom: 0;
-      border-top: 1px solid $green;
+      border-top: 0.0625rem solid $green;
     }
 
     .btn-clear {
@@ -321,7 +345,7 @@
     .btn-icon {
       margin-left: 0.625rem;
 
-      @include media-min(370px) {
+      @include media-min(23.125rem) {
         position: absolute;
         right: 0;
         margin-left: 0;
@@ -360,6 +384,23 @@
       @include media-breakpoint-down(md) {
         display: block !important;
       }
+    }
+  }
+}
+
+.admin-bar {
+  .product-filter {
+    top: 2.875rem;
+    height: calc(100% - 2.875rem);
+
+    @include media-min(48.9375rem) {
+      top: 2rem;
+      height: calc(100% - 2rem);
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: auto;
+      height: auto;
     }
   }
 }
