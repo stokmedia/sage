@@ -83,8 +83,61 @@ trait Content
     }     
 
     public static function cms_three_promo( $data )
-    {   
-        return (object) $data;
+    {  
+        $newData = (object) $data;
+        $hasTitle = ($newData->section_title && $newData->show_section_title);
+        $items = [];
+
+        foreach( $newData->items as $item ) {
+            $item = (object) $item;
+            
+            $cardImageSize = 'large';
+            $postImage = null;
+            $postTitle = null;
+            $postText = null;
+            $postLink = (object) [
+                'url' => null,
+                'title' => $newData->item_link_text,
+                'target' => '_blank',
+            ]; 
+            
+            if( $item->get_content_from === 'category' && $item->category ) {
+                $categoryImage = get_field( 'featured_image', $item->category->taxonomy . '_' . $item->category->term_id ); 
+                $postImage = $categoryImage ? wp_get_attachment_image( $categoryImage['ID'], 'full' ) : null;
+                $postTitle = $item->category->name;
+                $postText = $item->category->description;
+                $postLink->url = get_term_link( $item->category, $item->category->taxonomy ); 
+
+            } elseif( $item->get_content_from === 'post' && $item->post ) {
+                $postImage = has_post_thumbnail( $item->post ) ? get_the_post_thumbnail( $item->post->ID, $cardImageSize ) : null;
+                $postTitle = $item->post->post_title;
+                $postText = $item->post->post_content;
+                $postLink->url = get_permalink( $item->post->ID );
+            }
+
+            $itemLink = !empty($item->link) ? (object) $item->link : $postLink;
+
+            if (empty($itemLink->title)) {
+                $itemLink->title = $newData->item_link_text;
+            }
+
+            $newItem = [
+                'image' => !empty($item->image) ? wp_get_attachment_image( $item->image['ID'], 'full' ) : $postImage,
+                'title' => !empty($item->title) ? $item->title : $postTitle,
+                'text' => !empty($item->text) ? $item->text : wp_trim_words( $postText, 50 ),
+                'link' => $itemLink,
+            ];
+
+            if( empty(array_filter($newItem)) ) { continue; }
+
+            array_push( $items, (object) $newItem );
+        }
+
+        return (object) [
+            'acf_fc_layout' => $newData->acf_fc_layout,
+            'title' => $hasTitle ? $newData->section_title : '',
+            'items' => $items
+        ];
     }  
     
     public static function cms_usp( $data )
