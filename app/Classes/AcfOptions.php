@@ -17,8 +17,10 @@ class AcfOptions
             return;
         }
 
-        if( pll_languages_list( 'slug' ) ) {
-            array_push(  $this->options, pll_languages_list( 'slug' ) );
+        $languages = pll_languages_list( 'slug' );
+
+        if( !empty($languages) ) {
+            $this->options = array_merge( $this->options, $languages );
         }
 
         $this->renderOptionsPage();
@@ -39,8 +41,8 @@ class AcfOptions
             
         foreach ($this->options as $option) {
             acf_add_options_sub_page( array(
-                'page_title' 	=> 'Site Options ('. ucfirst($option) .')',
-                'menu_title'	=> 'Site Options ('. ucfirst($option) .')',
+                'page_title' 	=> 'Site Options ('. strtoupper($option) .')',
+                'menu_title'	=> 'Site Options ('. strtoupper($option) .')',
                 'menu_slug'  	=> $this->menuSlug . '-' .$option,
                 'post_id'    	=> $option,	
                 'parent_slug'	=> $this->menuSlug,

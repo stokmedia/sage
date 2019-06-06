@@ -30,7 +30,7 @@
     }
 
     @include media-breakpoint-up(xxl) {
-      max-width: 1370px;
+      max-width: 85.625rem;
     }
   }
 
@@ -74,16 +74,35 @@
 
   & > .container {
     @include media-breakpoint-up(lg) {
-      max-width: calc(100% - 60px);
+      max-width: calc(100% - 3.75rem);
     }
 
     @include media-breakpoint-up(xl) {
-      max-width: 1210px;
+      max-width: 75.625rem;
     }
 
     @include media-breakpoint-up(xxl) {
-      max-width: 1210px;
+      max-width: 75.625rem;
     }
+  }
+
+  .btn:not(.btn-icon) {
+    border-radius: 1.25rem;
+  }
+
+  .btn-clear {
+    color: $body-color;
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.44px;
+    line-height: 1.875rem;
+    text-decoration: underline;
+    text-transform: none;
+  }
+
+  .btn.btn-primary.js-filter-close {
+    min-width: 12.8125rem;
+    max-width: 12.8125rem;
   }
 
   .product-breadcrumbs {
@@ -107,17 +126,9 @@
       }
 
       button {
-        margin-left: 0.75rem;
+        margin-left: 1.5625rem;
       }
     }
-  }
-
-  .js-filter {
-    @include center(horizontal);
-
-    z-index: 2;
-    width: 100%;
-    background-color: $body-bg;
   }
 }
 

@@ -33,6 +33,7 @@
   --light: #f8f9fa;
   --dark: #343a40;
   --ash: #f1f1f1;
+  --lightgreen: #dbe4e7;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -3180,6 +3181,36 @@ mark,
 
 /* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
 
+.table-lightgreen,
+.table-lightgreen > th,
+.table-lightgreen > td {
+  background-color: #f5f7f8;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-lightgreen th,
+.table-lightgreen td,
+.table-lightgreen thead th,
+.table-lightgreen tbody + tbody {
+  border-color: #ecf1f3;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.table-hover .table-lightgreen:hover {
+  background-color: #e6ebee;
+}
+
+/* line 32, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-hover .table-lightgreen:hover > td,
+.table-hover .table-lightgreen:hover > th {
+  background-color: #e6ebee;
+}
+
+/* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -4898,6 +4929,58 @@ fieldset:disabled .search-form a.search-submit,
           box-shadow: 0 0 0 0.2rem rgba(210, 210, 211, 0.5);
 }
 
+/* line 60, node_modules/bootstrap/scss/_buttons.scss */
+
+.btn-lightgreen {
+  color: #212529;
+  background-color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-lightgreen:hover {
+  color: #212529;
+  background-color: #c4d3d8;
+  border-color: #bccdd3;
+}
+
+/* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-lightgreen:focus,
+.btn-lightgreen.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 199, 203, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(191, 199, 203, 0.5);
+}
+
+/* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-lightgreen.disabled,
+.btn-lightgreen:disabled {
+  color: #212529;
+  background-color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 40, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-lightgreen:not(:disabled):not(.disabled):active,
+.btn-lightgreen:not(:disabled):not(.disabled).active,
+.show > .btn-lightgreen.dropdown-toggle {
+  color: #212529;
+  background-color: #bccdd3;
+  border-color: #b5c7ce;
+}
+
+/* line 50, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-lightgreen:not(:disabled):not(.disabled):active:focus,
+.btn-lightgreen:not(:disabled):not(.disabled).active:focus,
+.show > .btn-lightgreen.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 199, 203, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(191, 199, 203, 0.5);
+}
+
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
 
 .btn-outline-primary {
@@ -5346,6 +5429,56 @@ fieldset:disabled .search-form a.search-submit,
 .show > .btn-outline-ash.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(241, 241, 241, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(241, 241, 241, 0.5);
+}
+
+/* line 66, node_modules/bootstrap/scss/_buttons.scss */
+
+.btn-outline-lightgreen {
+  color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-outline-lightgreen:hover {
+  color: #212529;
+  background-color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 71, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-lightgreen:focus,
+.btn-outline-lightgreen.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
+}
+
+/* line 76, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-lightgreen.disabled,
+.btn-outline-lightgreen:disabled {
+  color: #dbe4e7;
+  background-color: transparent;
+}
+
+/* line 82, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-lightgreen:not(:disabled):not(.disabled):active,
+.btn-outline-lightgreen:not(:disabled):not(.disabled).active,
+.show > .btn-outline-lightgreen.dropdown-toggle {
+  color: #212529;
+  background-color: #dbe4e7;
+  border-color: #dbe4e7;
+}
+
+/* line 89, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-lightgreen:not(:disabled):not(.disabled):active:focus,
+.btn-outline-lightgreen:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-lightgreen.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
 }
 
 /* line 77, node_modules/bootstrap/scss/_buttons.scss */
@@ -8444,6 +8577,26 @@ input[type="button"].btn-block {
   color: #646464;
 }
 
+/* line 48, node_modules/bootstrap/scss/_alert.scss */
+
+.alert-lightgreen {
+  color: #727778;
+  background-color: #dbe4e7;
+  border-color: #f5f7f8;
+}
+
+/* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-lightgreen hr {
+  border-top-color: #e6ebee;
+}
+
+/* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-lightgreen .alert-link {
+  color: #595d5e;
+}
+
 /* line 5, node_modules/bootstrap/scss/_list-group.scss */
 
 .list-group {
@@ -8969,6 +9122,29 @@ input[type="button"].btn-block {
   border-color: #7d7d7d;
 }
 
+/* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-lightgreen {
+  color: #727778;
+  background-color: #f5f7f8;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.list-group-item-lightgreen.list-group-item-action:hover,
+.list-group-item-lightgreen.list-group-item-action:focus {
+  color: #727778;
+  background-color: #e6ebee;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-lightgreen.list-group-item-action.active {
+  color: #fff;
+  background-color: #727778;
+  border-color: #727778;
+}
+
 /* line 1, node_modules/bootstrap/scss/_close.scss */
 
 .close {
@@ -9170,7 +9346,7 @@ a.close.disabled {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 9.375rem;
+  border-radius: 0.3125rem;
   outline: 0;
 }
 
@@ -9212,8 +9388,8 @@ a.close.disabled {
           justify-content: space-between;
   padding: 1rem 1rem;
   border-bottom: 1px solid #dee2e6;
-  border-top-left-radius: 9.375rem;
-  border-top-right-radius: 9.375rem;
+  border-top-left-radius: 0.3125rem;
+  border-top-right-radius: 0.3125rem;
 }
 
 /* line 143, node_modules/bootstrap/scss/_modal.scss */
@@ -9254,8 +9430,8 @@ a.close.disabled {
           justify-content: flex-end;
   padding: 1rem;
   border-top: 1px solid #dee2e6;
-  border-bottom-right-radius: 9.375rem;
-  border-bottom-left-radius: 9.375rem;
+  border-bottom-right-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
 }
 
 /* line 176, node_modules/bootstrap/scss/_modal.scss */
@@ -9608,6 +9784,21 @@ button.bg-ash:focus {
   background-color: #d8d8d8 !important;
 }
 
+/* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
+
+.bg-lightgreen {
+  background-color: #dbe4e7 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.bg-lightgreen:hover,
+a.bg-lightgreen:focus,
+button.bg-lightgreen:hover,
+button.bg-lightgreen:focus {
+  background-color: #bccdd3 !important;
+}
+
 /* line 13, node_modules/bootstrap/scss/utilities/_background.scss */
 
 .bg-white {
@@ -9732,6 +9923,12 @@ button.bg-ash:focus {
 
 .border-ash {
   border-color: #f1f1f1 !important;
+}
+
+/* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
+
+.border-lightgreen {
+  border-color: #dbe4e7 !important;
 }
 
 /* line 25, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -16212,6 +16409,19 @@ a.text-ash:focus {
   color: #cbcbcb !important;
 }
 
+/* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
+
+.text-lightgreen {
+  color: #dbe4e7 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.text-lightgreen:hover,
+a.text-lightgreen:focus {
+  color: #adc2c8 !important;
+}
+
 /* line 51, node_modules/bootstrap/scss/utilities/_text.scss */
 
 .text-body {
@@ -16611,6 +16821,95 @@ body#tinymce {
   margin: 12px !important;
 }
 
+/* line 3, resources/assets/styles/sections/_fifty-fifthy-section.scss */
+
+.fifty-fifthy-item figure {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.fifty-fifthy-item figure::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.fifty-fifthy-item figure > img,
+.fifty-fifthy-item figure > video,
+.fifty-fifthy-item figure > figure,
+.fifty-fifthy-item figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.fifty-fifthy-item figure > .ratio-iframe,
+.fifty-fifthy-item figure > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 1, resources/assets/styles/sections/_newsletter.scss */
+
+.newsletter {
+  overflow: hidden;
+  background-color: #b2b2b2;
+  min-height: 300px;
+}
+
+/* line 6, resources/assets/styles/sections/_newsletter.scss */
+
+.newsletter-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 0;
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  /* line 6, resources/assets/styles/sections/_newsletter.scss */
+
+  .newsletter-cover {
+    background-size: cover;
+    height: inherit;
+  }
+}
+
+/* line 34, resources/assets/styles/sections/_newsletter.scss */
+
+.newsletter-body > *:last-child {
+  margin-bottom: 0;
+}
+
+/* line 40, resources/assets/styles/sections/_newsletter.scss */
+
+.newsletter-form form {
+  width: 100%;
+}
+
 /** Import theme styles */
 
 /* line 7, resources/assets/styles/skhoop/common/_typography.scss */
@@ -16932,10 +17231,22 @@ blockquote footer::before,
   color: #031532;
   font-size: 0.8125rem;
   letter-spacing: 1.86px;
-  min-width: 270px;
+  max-width: 270px;
+  width: 100%;
 }
 
-/* line 13, resources/assets/styles/skhoop/components/_buttons.scss */
+@media (min-width: 768px) {
+  /* line 7, resources/assets/styles/skhoop/components/_buttons.scss */
+
+  .btn,
+  .comment-form input[type="submit"],
+  .search-form .search-submit {
+    width: auto;
+    min-width: 270px;
+  }
+}
+
+/* line 19, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn.btn-lg,
 .btn-group-lg > .btn,
@@ -16946,7 +17257,7 @@ blockquote footer::before,
   border-radius: 9.375rem;
 }
 
-/* line 17, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 23, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn.btn-sm,
 .btn-group-sm > .btn,
@@ -16959,8 +17270,8 @@ blockquote footer::before,
   letter-spacing: 0.5px;
 }
 
-@media (min-width: 992px) {
-  /* line 17, resources/assets/styles/skhoop/components/_buttons.scss */
+@media (min-width: 768px) {
+  /* line 23, resources/assets/styles/skhoop/components/_buttons.scss */
 
   .btn.btn-sm,
   .btn-group-sm > .btn,
@@ -16968,17 +17279,18 @@ blockquote footer::before,
   .search-form .btn-group-sm > .search-submit,
   .comment-form input.btn-sm[type="submit"],
   .search-form .btn-sm.search-submit {
+    width: auto;
     min-width: 145px;
   }
 }
 
-/* line 33, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 40, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary {
   color: #fff;
 }
 
-/* line 37, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 44, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary:hover {
   color: #031532;
@@ -16986,45 +17298,46 @@ blockquote footer::before,
   border-color: #7e7e7e;
 }
 
-/* line 47, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 54, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary {
   border-color: #7e7e7e;
   color: #031532;
 }
 
-/* line 52, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 59, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary:hover {
   color: #fff;
 }
 
-/* line 59, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 66, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon {
   min-width: auto;
   padding: 0;
   height: 2.0625rem;
   width: 2.0625rem;
+  overflow: hidden;
   -webkit-box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 66, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 74, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-sm {
   height: 1.875rem;
   width: 1.875rem;
 }
 
-/* line 71, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 79, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-lg {
   height: 2.5rem;
   width: 2.5rem;
 }
 
-/* line 76, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 84, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > img {
   width: 100%;
@@ -17083,18 +17396,18 @@ blockquote footer::before,
   padding-right: 0.6875rem;
 }
 
-@media (min-width: 768px) {
-  /* line 1, resources/assets/styles/skhoop/components/_dropdown.scss */
+/* line 1, resources/assets/styles/skhoop/components/_dropdown.scss */
 
-  .dropdown {
-    min-width: 300px;
-  }
+.dropdown {
+  width: 100%;
 }
 
-/* line 7, resources/assets/styles/skhoop/components/_dropdown.scss */
+/* line 5, resources/assets/styles/skhoop/components/_dropdown.scss */
 
 .dropdown-toggle {
   width: 100%;
+  min-width: inherit;
+  max-width: initial;
   padding-left: 2.0625rem;
   position: relative;
 }
@@ -17223,7 +17536,8 @@ blockquote footer::before,
 .comment-form .alert input.btn-sm[type="submit"],
 .alert .search-form .btn-sm.search-submit,
 .search-form .alert .btn-sm.search-submit {
-  min-width: 127px;
+  max-width: 127px;
+  width: 100%;
 }
 
 /* line 5, resources/assets/styles/skhoop/components/_comments.scss */
@@ -17241,43 +17555,29 @@ blockquote footer::before,
 .comment-form textarea,
 .search-form .search-field {
   letter-spacing: 1.86px;
-  min-width: 300px;
 }
 
-@media (min-width: 992px) {
-  /* line 1, resources/assets/styles/skhoop/components/_forms.scss */
-
-  .form-control,
-  .comment-form input[type="text"],
-  .comment-form input[type="email"],
-  .comment-form input[type="url"],
-  .comment-form textarea,
-  .search-form .search-field {
-    width: auto;
-  }
-}
-
-/* line 11, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 6, resources/assets/styles/skhoop/components/_forms.scss */
 
 .form-control-lg.is-invalid,
 .form-control-lg.is-valid {
   background-size: 1.875rem;
 }
 
-/* line 18, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 13, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control .custom-control-label > span {
   display: inline-block;
   margin-top: 0.125rem;
 }
 
-/* line 28, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 23, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio .custom-control-label::after {
   background: no-repeat 50% / 0.875rem;
 }
 
-/* line 36, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 31, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::after {
   background-color: #fff;
@@ -17285,7 +17585,7 @@ blockquote footer::before,
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-/* line 41, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 36, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::before {
   height: 0.75rem;
@@ -17296,33 +17596,33 @@ blockquote footer::before,
   background-color: #fff;
 }
 
-/* line 51, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 46, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control.custom-control-lg {
   margin: 0.3125rem 0;
 }
 
-/* line 54, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 49, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control.custom-control-lg .custom-control-label::before {
   width: 1.875rem;
   height: 1.875rem;
 }
 
-/* line 61, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 56, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio.custom-control-lg .custom-control-label::before {
   top: -0.1875rem;
   left: -2.0625rem;
 }
 
-/* line 66, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 61, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio.custom-control-lg .custom-control-label::after {
   background: no-repeat 50% / 20px;
 }
 
-/* line 72, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 67, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-checkbox.custom-control-lg .custom-control-label::before {
   width: 1.875rem;
@@ -17331,7 +17631,7 @@ blockquote footer::before,
   left: -2.0625rem;
 }
 
-/* line 79, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 74, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-checkbox.custom-control-lg .custom-control-label::after {
   width: 1.875rem;
@@ -17340,13 +17640,13 @@ blockquote footer::before,
   left: -2.0625rem;
 }
 
-/* line 89, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 84, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #292929;
 }
 
-/* line 93, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 88, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
@@ -17354,7 +17654,7 @@ blockquote footer::before,
   background-color: #b7cad0;
 }
 
-/* line 101, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 96, resources/assets/styles/skhoop/components/_forms.scss */
 
 .invalid-feedback,
 .valid-feedback {
@@ -17455,7 +17755,7 @@ blockquote footer::before,
 /* line 1, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter {
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
   background-color: #ece4d0;
   min-height: 300px;
@@ -17463,8 +17763,13 @@ blockquote footer::before,
 
 /* line 7, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
+.newsletter-modal .newsletter {
+  border-radius: 0.3125rem;
+}
+
+/* line 11, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
 .newsletter-cover {
-  background: #9a9a9a;
   height: 221px;
   background-size: cover;
   background-position: center;
@@ -17473,22 +17778,27 @@ blockquote footer::before,
   padding: 0;
 }
 
-/* line 16, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 19, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-modal .newsletter-cover {
+  height: 300px;
+}
+
+/* line 23, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-cover::before {
   content: " ";
   position: absolute;
   height: 100%;
   width: 110%;
-  left: -10px;
-  right: -10px;
+  left: -5%;
   bottom: -1px;
   top: auto;
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzU1IiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMzU1IDIwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZD0iTTAgMjBIMzU1VjBDMjE2LjgzMiAyNi4zMDUzIDEzOS42NzcgMjYuMzkwMSAwIDBWMjBaIiBmaWxsPSIjRUNFNEQwIi8+DQo8L3N2Zz4NCg==) no-repeat bottom/contain transparent;
 }
 
 @media (min-width: 768px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 23, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-cover::before {
     left: auto;
@@ -17500,8 +17810,14 @@ blockquote footer::before,
   }
 }
 
+/* line 42, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-modal .newsletter-cover::before {
+  display: none;
+}
+
 @media (min-width: 768px) {
-  /* line 7, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 11, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-cover {
     background-size: cover;
@@ -17509,7 +17825,7 @@ blockquote footer::before,
   }
 }
 
-/* line 43, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 53, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-content {
   padding-bottom: 72px;
@@ -17517,7 +17833,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 43, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 53, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-content {
     padding-bottom: 0;
@@ -17525,7 +17841,13 @@ blockquote footer::before,
   }
 }
 
-/* line 53, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 62, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-modal .newsletter-content {
+  padding-bottom: 50px !important;
+}
+
+/* line 67, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-inner {
   max-width: 395px;
@@ -17533,24 +17855,40 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 53, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 67, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-inner {
     text-align: left;
   }
+
+  /* line 74, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+  .newsletter-modal .newsletter-inner {
+    text-align: center;
+  }
 }
 
-/* line 62, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 80, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-title {
   font-family: "Covered By Your Grace", cursive;
   color: #031532;
-  font-size: 2.1875rem;
-  letter-spacing: 0.8704px;
+  font-size: 28px;
+  letter-spacing: 0.7px;
   line-height: 50px;
 }
 
-/* line 70, resources/assets/styles/skhoop/sections/_newsletter.scss */
+@media (min-width: 768px) {
+  /* line 80, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+  .newsletter-title {
+    font-size: 2.1875rem;
+    letter-spacing: 0.8704px;
+    line-height: 50px;
+  }
+}
+
+/* line 94, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-body {
   color: #292929;
@@ -17563,14 +17901,20 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 70, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 94, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-body {
     margin-bottom: 0;
   }
+
+  /* line 106, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+  .newsletter-modal .newsletter-body {
+    padding-bottom: 1.25rem;
+  }
 }
 
-/* line 85, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 113, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .btn,
 .newsletter-form .comment-form input[type="submit"],
@@ -17580,13 +17924,13 @@ blockquote footer::before,
   background-color: #fff;
 }
 
-/* line 89, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 117, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group {
   margin-bottom: 0;
 }
 
-/* line 93, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 121, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group [type="text"] {
   min-width: auto;
@@ -17595,20 +17939,26 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 93, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 121, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-form .input-group [type="text"] {
     margin-right: 1.875rem;
   }
 }
 
-/* line 103, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 131, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group.is-invalid + .invalid-feedback {
   display: block;
 }
 
-/* line 108, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 135, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.newsletter-form form {
+  width: 100%;
+}
+
+/* line 140, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter .custom-checkbox {
   text-align: left;
@@ -17616,10 +17966,76 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 108, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 140, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter .custom-checkbox {
     padding-left: 1.875rem;
+  }
+}
+
+/* line 2, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+
+.fifty-fifthy-item {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* line 7, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+
+.fifty-fifthy-content {
+  width: 95%;
+  padding-top: 2.125rem;
+  padding-bottom: 4.5625rem;
+}
+
+@media (min-width: 768px) {
+  /* line 7, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+
+  .fifty-fifthy-content {
+    width: 85%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+}
+
+/* line 18, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+
+.fifty-fifthy-content h2 {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+@media (min-width: 992px) {
+  /* line 18, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+
+  .fifty-fifthy-content h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 45px;
+  }
+}
+
+/* line 31, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+
+.fifty-fifthy-content p {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  margin-bottom: 2.625rem;
+}
+
+@media (min-width: 992px) {
+  /* line 31, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+
+  .fifty-fifthy-content p {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    margin-bottom: 1.5625rem;
   }
 }
 
@@ -18093,7 +18509,7 @@ body#tinymce {
   /* line 27, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-listing .container {
-    max-width: 1370px;
+    max-width: 85.625rem;
   }
 }
 
@@ -18200,7 +18616,7 @@ body#tinymce {
   /* line 75, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-header > .container {
-    max-width: calc(100% - 60px);
+    max-width: calc(100% - 3.75rem);
   }
 }
 
@@ -18208,7 +18624,7 @@ body#tinymce {
   /* line 75, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-header > .container {
-    max-width: 1210px;
+    max-width: 75.625rem;
   }
 }
 
@@ -18216,19 +18632,52 @@ body#tinymce {
   /* line 75, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-header > .container {
-    max-width: 1210px;
+    max-width: 75.625rem;
   }
 }
 
+/* line 89, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-header .btn:not(.btn-icon),
+.product-header .comment-form input:not(.btn-icon)[type="submit"],
+.comment-form .product-header input:not(.btn-icon)[type="submit"],
+.product-header .search-form .search-submit:not(.btn-icon),
+.search-form .product-header .search-submit:not(.btn-icon) {
+  border-radius: 1.25rem;
+}
+
+/* line 93, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-header .btn-clear {
+  color: #031532;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.44px;
+  line-height: 1.875rem;
+  text-decoration: underline;
+  text-transform: none;
+}
+
+/* line 103, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-header .btn.btn-primary.js-filter-close,
+.product-header .comment-form input.btn-primary.js-filter-close[type="submit"],
+.comment-form .product-header input.btn-primary.js-filter-close[type="submit"],
+.product-header .search-form .btn-primary.js-filter-close.search-submit,
+.search-form .product-header .btn-primary.js-filter-close.search-submit {
+  min-width: 12.8125rem;
+  max-width: 12.8125rem;
+}
+
 @media (min-width: 992px) {
-  /* line 90, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 109, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-header .product-breadcrumbs .breadcrumb {
     margin-left: 0.4375rem;
   }
 }
 
-/* line 98, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 117, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-header .product-filter-toggle .js-filter-toggle {
   font-size: 0.8125rem;
@@ -18239,33 +18688,20 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 98, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 117, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-header .product-filter-toggle .js-filter-toggle {
     margin-right: 1.125rem;
   }
 }
 
-/* line 109, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 128, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-header .product-filter-toggle .js-filter-toggle button {
-  margin-left: 0.75rem;
+  margin-left: 1.5625rem;
 }
 
-/* line 115, resources/assets/styles/skhoop/sections/_product-listing.scss */
-
-.product-header .js-filter {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -o-transform: translate(-50%);
-     transform: translate(-50%);
-  z-index: 2;
-  width: 100%;
-  background-color: #fff;
-}
-
-/* line 125, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 136, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products {
   margin-left: -0.7813rem;
@@ -18273,7 +18709,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 125, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 136, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products {
     margin-left: -1.5625rem;
@@ -18281,7 +18717,7 @@ body#tinymce {
   }
 }
 
-/* line 134, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 145, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product {
   position: relative;
@@ -18292,7 +18728,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 134, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 145, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product {
     padding-left: 1.5625rem;
@@ -18301,14 +18737,14 @@ body#tinymce {
   }
 }
 
-/* line 148, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 159, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product a:hover,
 .products .product a:focus {
   text-decoration: none;
 }
 
-/* line 154, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 165, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-image {
   position: relative;
@@ -18358,19 +18794,19 @@ body#tinymce {
   width: 100%;
 }
 
-/* line 159, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 170, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-image .visible-on-hover {
   opacity: 0;
 }
 
-/* line 166, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 177, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product:hover .product-image .visible-on-hover {
   opacity: 1;
 }
 
-/* line 172, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 183, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-wrapper {
   position: relative;
@@ -18378,7 +18814,7 @@ body#tinymce {
   border-top-left-radius: 0.3125rem;
 }
 
-/* line 178, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 189, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-status {
   position: absolute;
@@ -18395,7 +18831,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 178, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 189, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product-status {
     top: 1.375rem;
@@ -18405,7 +18841,7 @@ body#tinymce {
   }
 }
 
-/* line 199, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 210, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-details {
   color: #031532;
@@ -18413,7 +18849,7 @@ body#tinymce {
   border-bottom-left-radius: 0.3125rem;
 }
 
-/* line 205, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 216, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-name {
   margin-bottom: 0;
@@ -18423,7 +18859,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 205, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 216, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product-name {
     font-size: 0.8125rem;
@@ -18431,7 +18867,7 @@ body#tinymce {
   }
 }
 
-/* line 217, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 228, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product-price {
   margin-top: -0.4375rem;
@@ -18440,7 +18876,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 217, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 228, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product-price {
     margin-top: -0.1875rem;
@@ -18449,7 +18885,7 @@ body#tinymce {
   }
 }
 
-/* line 230, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 241, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-big {
   -webkit-box-flex: 0;
@@ -18459,7 +18895,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 230, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 241, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-big {
     -webkit-box-flex: 0;
@@ -18469,35 +18905,35 @@ body#tinymce {
   }
 }
 
-/* line 233, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 244, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-big .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 233, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 244, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-big .product-wrapper {
     padding: 6.25rem 2.5rem 4.6875rem;
   }
 }
 
-/* line 241, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 252, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-big .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 241, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 252, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-big .product-details {
     padding: 0 2.5rem 1.5625rem;
   }
 }
 
-/* line 250, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 261, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-small {
   -webkit-box-flex: 0;
@@ -18507,7 +18943,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 250, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 261, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-small {
     -webkit-box-flex: 0;
@@ -18517,48 +18953,48 @@ body#tinymce {
   }
 }
 
-/* line 253, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 264, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-small .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 253, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 264, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-small .product-wrapper {
     padding: 4.6875rem 2.3438rem 2.8125rem;
   }
 }
 
-/* line 261, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 272, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-small .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 261, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 272, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-small .product-details {
     padding: 0 2.3438rem 1.5625rem;
   }
 }
 
-/* line 272, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 283, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-sale .product-status {
   background-color: #d45656;
   color: #fff;
 }
 
-/* line 277, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 288, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-sale .product-price {
   color: #d45656;
 }
 
-/* line 280, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 291, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-sale .product-price span {
   margin-right: 0.3125rem;
@@ -18567,152 +19003,220 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 280, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 291, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .products .product.is-sale .product-price span {
     margin-right: 1.25rem;
   }
 }
 
-/* line 293, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 304, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-oos .product-status {
   background-color: #b7cad0;
   color: #fff;
 }
 
-/* line 298, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 309, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .products .product.is-oos .product-image {
   opacity: 0.5;
 }
 
+/* line 2, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.category-selector {
+  float: left;
+  padding-left: 2.1875rem;
+  margin-bottom: 0;
+  width: 100%;
+  list-style: none;
+}
+
+@media screen and (min-width: 370px) {
+  /* line 2, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .category-selector {
+    width: 50%;
+  }
+}
+
 @media (min-width: 992px) {
   /* line 2, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
-  .product-filter > .container {
-    max-width: calc(100% - 60px);
+  .category-selector {
+    margin-right: 1.5625rem;
+    width: auto;
   }
 }
 
 @media (min-width: 1240px) {
   /* line 2, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
-  .product-filter > .container {
-    max-width: 1210px;
+  .category-selector {
+    margin-right: 3.75rem;
   }
 }
 
-@media (min-width: 1480px) {
-  /* line 2, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 22, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
-  .product-filter > .container {
-    max-width: 1210px;
-  }
-}
-
-/* line 16, resources/assets/styles/skhoop/sections/_product-filter.scss */
-
-.product-filter .filter-container,
-.product-filter .sort-container {
-  border-top: 0.0625rem solid #b7cad0;
-}
-
-/* line 20, resources/assets/styles/skhoop/sections/_product-filter.scss */
-
-.product-filter .filter-container .column,
-.product-filter .sort-container .column {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-}
-
-/* line 27, resources/assets/styles/skhoop/sections/_product-filter.scss */
-
-.product-filter .filter-container .column {
-  float: left;
-  width: auto;
-  margin-right: 3.125rem;
-}
-
-/* line 32, resources/assets/styles/skhoop/sections/_product-filter.scss */
-
-.product-filter .filter-container .column:last-of-type {
+.category-selector:last-of-type {
   margin-right: 0;
 }
 
-/* line 38, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 26, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
-.product-filter .sort-container {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.category-selector li {
+  margin-bottom: 0.9375rem;
+  height: 100%;
 }
 
-/* line 43, resources/assets/styles/skhoop/sections/_product-filter.scss */
+@media (min-width: 992px) {
+  /* line 26, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
-.product-filter .sort-container .btn-group .btn,
-.product-filter .sort-container .btn-group .comment-form input[type="submit"],
-.comment-form .product-filter .sort-container .btn-group input[type="submit"],
-.product-filter .sort-container .btn-group .search-form .search-submit,
-.search-form .product-filter .sort-container .btn-group .search-submit {
-  border-radius: 1.25rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  margin-left: 0.3125rem;
-  margin-right: 0.3125rem;
+  .category-selector li {
+    margin-bottom: 0.625rem;
+  }
 }
 
-/* line 54, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 35, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.category-selector .custom-control {
+  padding-left: 0;
+}
+
+/* line 39, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.category-selector .custom-control-label {
+  padding-left: 0.5625rem;
+}
+
+/* line 44, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.category-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label {
+  cursor: not-allowed;
+}
+
+/* line 50, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .size-selector,
 .color-selector {
   padding-left: 0;
+  margin-left: -0.625rem;
+  margin-right: -0.625rem;
   margin-bottom: 0;
   list-style: none;
 }
 
-/* line 60, resources/assets/styles/skhoop/sections/_product-filter.scss */
+@media (min-width: 992px) {
+  /* line 50, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .size-selector,
+  .color-selector {
+    margin-left: -0.1563rem;
+    margin-right: -0.1563rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  /* line 50, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .size-selector,
+  .color-selector {
+    margin-left: -0.3125rem;
+    margin-right: -0.3125rem;
+  }
+}
+
+/* line 68, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .size-selector .custom-control,
 .color-selector .custom-control {
   padding-left: 0;
-  margin-right: 0.5625rem;
 }
 
-/* line 66, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 73, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .size-selector .custom-checkbox .custom-control-label,
 .color-selector .custom-checkbox .custom-control-label {
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 50%;
-  border: 1px solid #e4e4e4;
+  border: 0.0625rem solid #e4e4e4;
   cursor: pointer;
 }
 
-/* line 73, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 81, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
-.size-selector .custom-checkbox .custom-control-label::before,
-.size-selector .custom-checkbox .custom-control-label::after,
-.color-selector .custom-checkbox .custom-control-label::before,
-.color-selector .custom-checkbox .custom-control-label::after {
-  display: none;
+.size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label,
+.color-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label {
+  cursor: not-allowed;
 }
 
-/* line 80, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 86, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .size-selector li,
 .color-selector li {
-  display: inline-block;
+  margin: 0 0.625rem 1.25rem;
+  float: left;
 }
 
-/* line 84, resources/assets/styles/skhoop/sections/_product-filter.scss */
+@media (min-width: 992px) {
+  /* line 86, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .size-selector li,
+  .color-selector li {
+    margin: 0.1563rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  /* line 86, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .size-selector li,
+  .color-selector li {
+    margin: 0.3125rem;
+  }
+}
+
+/* line 99, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .size-selector li:last-child .custom-control,
 .color-selector li:last-child .custom-control {
   margin-right: 0;
 }
 
-/* line 94, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 109, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.color-selector .custom-checkbox .custom-control-label {
+  border: none;
+}
+
+/* line 112, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.color-selector .custom-checkbox .custom-control-label::before {
+  display: none;
+}
+
+/* line 116, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.color-selector .custom-checkbox .custom-control-label::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+}
+
+/* line 127, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.size-selector .custom-checkbox .custom-control-label::before,
+.size-selector .custom-checkbox .custom-control-label::after {
+  display: none;
+}
+
+/* line 132, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .size-selector .custom-checkbox .custom-control-label span {
   position: absolute;
@@ -18725,32 +19229,26 @@ body#tinymce {
   line-height: 1.25rem;
 }
 
-/* line 102, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 140, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
   background-color: #031532;
 }
 
-/* line 105, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 143, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label span {
   color: #fff;
 }
 
-/* line 110, resources/assets/styles/skhoop/sections/_product-filter.scss */
-
-.size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label {
-  cursor: default;
-}
-
-/* line 113, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 149, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 1px;
+  height: 0.0625rem;
   width: 100%;
   display: block;
   border: none;
@@ -18759,12 +19257,593 @@ body#tinymce {
   background-image: -o-linear-gradient(left, #292929 40%, rgba(3, 21, 50, 0) 20%);
   background-image: linear-gradient(to right, #292929 40%, rgba(3, 21, 50, 0) 20%);
   background-position: top;
-  background-size: 3px 1px;
+  background-size: 0.1875rem 0.0625rem;
   background-repeat: repeat-x;
   opacity: 0.5;
   -webkit-transform: translate(-50%, -50%) rotate(225deg);
        -o-transform: translate(-50%, -50%) rotate(225deg);
           transform: translate(-50%, -50%) rotate(225deg);
+}
+
+/* line 172, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 0 1.875rem 1.25rem;
+  background-color: #fff;
+}
+
+@media (min-width: 992px) {
+  /* line 172, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translate(-50%);
+       transform: translate(-50%);
+    top: auto;
+    height: auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 190, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter > .container {
+    max-width: calc(100% - 3.75rem);
+  }
+}
+
+@media (min-width: 1240px) {
+  /* line 190, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter > .container {
+    max-width: 75.625rem;
+  }
+}
+
+@media (min-width: 1480px) {
+  /* line 190, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter > .container {
+    max-width: 75.625rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 204, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container,
+  .product-filter .sort-container {
+    border-top: 0.0625rem solid #b7cad0;
+  }
+}
+
+/* line 210, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .filter-container .column,
+.product-filter .sort-container .column {
+  width: 100%;
+  border-bottom: 0.0625rem solid #b7cad0;
+}
+
+@media (min-width: 992px) {
+  /* line 210, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container .column,
+  .product-filter .sort-container .column {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: auto;
+    border-bottom: none;
+  }
+}
+
+/* line 221, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .filter-container .column .title,
+.product-filter .sort-container .column .title {
+  position: relative;
+  padding: 1.25rem 0;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  /* line 221, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container .column .title,
+  .product-filter .sort-container .column .title {
+    padding: 0;
+    margin-bottom: 0.5rem;
+    cursor: default;
+  }
+}
+
+/* line 233, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .filter-container .column .title::after,
+.product-filter .sort-container .column .title::after {
+  content: "+";
+  position: absolute;
+  right: 0.25rem;
+}
+
+@media (min-width: 992px) {
+  /* line 233, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container .column .title::after,
+  .product-filter .sort-container .column .title::after {
+    display: none;
+  }
+}
+
+/* line 244, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .filter-container .column .title.is-open::after,
+.product-filter .sort-container .column .title.is-open::after {
+  content: "-";
+}
+
+@media (min-width: 992px) {
+  /* line 253, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container {
+    padding-top: 1.4375rem;
+    padding-bottom: 1.4375rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  /* line 253, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 264, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container .column {
+    float: left;
+    margin-right: 0.9375rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  /* line 264, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container .column {
+    margin-right: 3.125rem;
+  }
+}
+
+/* line 274, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .filter-container .column:last-of-type {
+  margin-right: 0;
+}
+
+@media (min-width: 992px) {
+  /* line 279, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container .color-selector {
+    max-width: 13.75rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* line 279, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container .color-selector {
+    max-width: 21.25rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  /* line 279, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container .color-selector {
+    max-width: 22.8125rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 293, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .filter-container .size-selector {
+    max-width: 19.0625rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 301, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .sort-container {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+/* line 308, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .sort-container .btn-group .btn,
+.product-filter .sort-container .btn-group .comment-form input[type="submit"],
+.comment-form .product-filter .sort-container .btn-group input[type="submit"],
+.product-filter .sort-container .btn-group .search-form .search-submit,
+.search-form .product-filter .sort-container .btn-group .search-submit {
+  border-radius: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  /* line 308, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .sort-container .btn-group .btn,
+  .product-filter .sort-container .btn-group .comment-form input[type="submit"],
+  .comment-form .product-filter .sort-container .btn-group input[type="submit"],
+  .product-filter .sort-container .btn-group .search-form .search-submit,
+  .search-form .product-filter .sort-container .btn-group .search-submit {
+    margin-bottom: 0;
+  }
+}
+
+/* line 325, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .button-container .row .column {
+  position: relative;
+  padding: 0.9375rem 0;
+  width: 100%;
+}
+
+/* line 331, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .button-container hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 0.0625rem solid #b7cad0;
+}
+
+/* line 337, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .button-container .btn-clear {
+  color: #031532;
+  font-size: 0.875rem;
+  letter-spacing: 0.44px;
+  line-height: 1.875rem;
+  text-decoration: underline;
+}
+
+/* line 345, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.product-filter .button-container .btn-icon {
+  margin-left: 0.625rem;
+}
+
+@media screen and (min-width: 23.125rem) {
+  /* line 345, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .product-filter .button-container .btn-icon {
+    position: absolute;
+    right: 0;
+    margin-left: 0;
+  }
+}
+
+/* line 359, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.js-filter-toggle .filter-close {
+  display: none;
+}
+
+/* line 364, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.js-filter-collapse {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  /* line 368, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .filter-is-open {
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* line 375, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .js-accordion-body {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* line 383, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .js-accordion-toggle.is-open + .js-accordion-body {
+    display: block !important;
+  }
+}
+
+/* line 392, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+.admin-bar .product-filter {
+  top: 2.875rem;
+  height: calc(100% - 2.875rem);
+}
+
+@media screen and (min-width: 48.9375rem) {
+  /* line 392, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .admin-bar .product-filter {
+    top: 2rem;
+    height: calc(100% - 2rem);
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 392, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  .admin-bar .product-filter {
+    top: auto;
+    height: auto;
+  }
+}
+
+/* line 1, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.three-promo {
+  padding-top: 3.3125rem;
+  padding-bottom: 2.0625rem;
+  background-color: #dbe4e7;
+}
+
+@media (min-width: 768px) {
+  /* line 1, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .three-promo {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+  }
+}
+
+/* line 11, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.three-promo .title {
+  margin-bottom: 2.75rem;
+}
+
+@media (min-width: 768px) {
+  /* line 11, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .three-promo .title {
+    margin-bottom: 3.25rem;
+  }
+}
+
+/* line 18, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.three-promo .title .h2 {
+  margin-bottom: 0;
+}
+
+/* line 24, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block {
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  /* line 24, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* line 24, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 41, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block:hover,
+.card-block:active {
+  text-decoration: none;
+}
+
+/* line 46, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .image {
+  margin-bottom: 1.5rem;
+}
+
+/* line 50, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block figure {
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.3125rem;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.card-block figure::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.card-block figure > img,
+.card-block figure > video,
+.card-block figure > figure,
+.card-block figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.card-block figure > .ratio-iframe,
+.card-block figure > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 57, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .h4,
+.card-block p {
+  color: #031532;
+}
+
+/* line 62, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .h4 {
+  margin-bottom: 0.5625rem;
+}
+
+/* line 66, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block p {
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+  display: block;
+  /*! autoprefixer: off */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 3.75rem;
+  /*! autoprefixer: on */
+}
+
+@media (min-width: 768px) {
+  /* line 66, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block p {
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    line-height: 1.375;
+    display: block;
+    /*! autoprefixer: off */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 4.125rem;
+    /*! autoprefixer: on */
+  }
+}
+
+/* line 76, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .info {
+  margin: 0 auto 0.875rem;
+  max-width: 300px;
+}
+
+/* line 81, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .btn,
+.card-block .comment-form input[type="submit"],
+.comment-form .card-block input[type="submit"],
+.card-block .search-form .search-submit,
+.search-form .card-block .search-submit {
+  min-width: 14.375rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  /* line 81, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block .btn,
+  .card-block .comment-form input[type="submit"],
+  .comment-form .card-block input[type="submit"],
+  .card-block .search-form .search-submit,
+  .search-form .card-block .search-submit {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* line 90, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block.is-inline {
+    padding-left: 140px;
+    position: relative;
+    min-height: 120px;
+  }
+
+  /* line 96, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block.is-inline .image {
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 120px;
+  }
+
+  /* line 105, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block.is-inline figure {
+    border-radius: 0.3125rem;
+  }
+
+  /* line 109, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block.is-inline .info {
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 

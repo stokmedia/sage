@@ -97,6 +97,30 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5cf679da0d679",
+            "label": "Layout",
+            "name": "layout",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "text_first": "Display text first",
+                "image_first": "Display image first"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -116,5 +140,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1559306530
+    "modified": 1559659966
 }

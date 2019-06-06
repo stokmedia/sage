@@ -41,6 +41,7 @@ $theme-colors: (
   "warning":                   $warning,
   "danger":                    $danger,
   "ash":                       $ash,
+  "lightgreen":                $lightGreen,
 );
 
 // Responsive font size breakpoint
@@ -183,3 +184,6 @@ $custom-control-indicator-checked-border-color:         #7e7e7e;
 // Breadcrumbs
 $breadcrumb-bg:               $white;
 $breadcrumb-active-color:     $body-color;
+
+// Modals
+$modal-content-border-radius: 0.3125rem;

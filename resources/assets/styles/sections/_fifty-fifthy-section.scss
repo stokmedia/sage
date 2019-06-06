@@ -1,0 +1,8 @@
+.fifty-fifthy {
+  &-item {
+    figure {
+      @include aspect-ratio(1, 1);
+    }
+  }
+}
+

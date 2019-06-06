@@ -82,7 +82,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-3">
         <p class="bs-component">
           <div class="form-group">
             <div class="dropdown d-inline-block">
@@ -95,6 +95,11 @@
               </div>
             </div>
           </div>
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <p class="bs-component">
+
         </p>
       </div>
     </div>
@@ -172,13 +177,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <p class="bs-component">
           <h3 class="mb-0">Normal</h3>
           <div class="form-group">
             <input type="text" class="form-control form-control-lg" placeholder="HINT">
           </div>
-
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <p class="bs-component">
           <h3 class="mb-0">Invalid</h3>
           <div class="form-group">
             <input type="text" class="form-control form-control-lg is-invalid">
@@ -186,7 +194,10 @@
               Your email is not valid
             </div>
           </div>
-
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <p class="bs-component">
           <h3 class="mb-0">Valid</h3>
           <div class="form-group">
             <input type="text" class="form-control form-control-lg is-valid">
@@ -194,7 +205,6 @@
               <span>Your email is not valid</span>
             </div>
           </div>
-
         </p>
       </div>
     </div>

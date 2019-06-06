@@ -1,39 +1,34 @@
-@php
+@if ($section->usp)
+	@php ($list = $section->usp)
+@else
+	@php ($list = $default_usp)
+@endif
 
-// TODO: This is just copied from SysterP as a test
-// Should be rewritten to clean Blade code
-
-if( get_sub_field('usp') ) {
-	$list = get_sub_field('usp');
-} else {
-	// Get Default USP from Sitewide
-	$usp = get_field('default_usp', App::currentLang() );
-	$list = $usp['usp'];
-}
-@endphp
-
-@if ($list)
-
-	<section class="section is-large">
+@if (!empty($list))
+	<div class="trust-bar">
 		<div class="container">
-			<div class="level">
-
+			
 			@foreach ($list as $item)
-				<div class="level-item has-text-centered">
-					<div class="level-head">
-						<img src="{{ wp_get_attachment_image_url( $item['image'], 'full' ) }}">
-						<p>{{ $item['title'] }}</p>
-					</div>
-					<div class="level-content">
-						<p>{{ $item['text'] }}</p>
+				<div class="trust-item">
+
+					@if ($item->image)
+						<div class="icon-block">
+							<img width="40" height="40" src="{{ wp_get_attachment_image_url( $item->image ) }}" class="" alt=""/>
+						</div>
+					@endif
+
+					<div class="info">
+						@if ($item->title)
+							<h4 class="h4">{{ $item->title }}</h4>
+						@endif
+
+						@if ($item->text)
+							<div class="small">{{ $item->text }}</div>
+						@endif
 					</div>
 				</div>
 			@endforeach
-
-
-			</div>
 		</div>
-	</section>
-
+	</div>
 @endif
 
