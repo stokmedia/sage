@@ -1,0 +1,44 @@
+.fifty-fifthy {
+  &-item {
+    //
+  }
+
+  &-content {
+    width: 95%;
+    padding-top: 2.125rem;
+    padding-bottom: 4.5625rem;
+
+    @include media-breakpoint-up(md) {
+      width: 65%;
+    }
+
+    h2 {
+      font-family: $font-family-source-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 30px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 2.25rem;
+        font-weight: 600;
+        line-height: 45px;
+      }
+    }
+
+    p {
+      font-family: $font-family-source-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      line-height: 24px;
+      margin-bottom: 2.625rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+        line-height: 26px;
+        margin-bottom: 1.5625rem;
+      }
+    }
+  }
+}

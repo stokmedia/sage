@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
-  @while(have_posts()) @php the_post() @endphp
+  {{-- @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
     @include('partials.content-page')
-  @endwhile
+  @endwhile --}}
 
   @include('partials.sections')
 
-  @include('partials.page-header')
-  @debug
+  {{-- @include('partials.page-header') --}}
+  {{-- @debug --}}
 @endsection
