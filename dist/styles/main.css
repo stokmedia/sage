@@ -16821,7 +16821,7 @@ body#tinymce {
   margin: 12px !important;
 }
 
-/* line 5, resources/assets/styles/sections/_fifty-fifthy-section.scss */
+/* line 3, resources/assets/styles/sections/_fifty-fifthy-section.scss */
 
 .fifty-fifthy-item figure {
   position: relative;
@@ -18036,6 +18036,116 @@ blockquote footer::before,
     letter-spacing: 0.5px;
     line-height: 26px;
     margin-bottom: 1.5625rem;
+  }
+}
+
+/* line 2, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-container {
+  max-width: 48.5625rem;
+}
+
+/* line 5, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-container .h3 {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  margin: 0 0.75rem 0.5625rem;
+}
+
+@media (min-width: 768px) {
+  /* line 5, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+  .resellers-container .h3 {
+    margin: 0 0 1.125rem;
+  }
+}
+
+/* line 17, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-table {
+  border-collapse: collapse;
+  margin-bottom: 4.625rem;
+}
+
+/* line 21, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-table:last-child {
+  margin-bottom: 0;
+}
+
+/* line 25, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-table .btn,
+.resellers-table .comment-form input[type="submit"],
+.comment-form .resellers-table input[type="submit"],
+.resellers-table .search-form .search-submit,
+.search-form .resellers-table .search-submit {
+  margin: 0 0.75rem;
+  width: 145px;
+}
+
+@media (min-width: 768px) {
+  /* line 17, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+  .resellers-table {
+    margin-bottom: 3.1875rem;
+  }
+}
+
+/* line 34, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-table-row {
+  border-top: 1px solid #b7cad0;
+}
+
+/* line 37, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-table-row:first-child {
+  border: none;
+}
+
+/* line 42, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-table-cell {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  padding: 0 0.75rem;
+}
+
+/* line 48, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-table-cell.head {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 991.98px) {
+  /* line 54, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+  .resellers-table-cell:first-child {
+    padding-top: 0.5625rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* line 60, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+  .resellers-table-cell:last-child {
+    padding-bottom: 0.5625rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 42, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+  .resellers-table-cell {
+    width: 33.33333%;
+    font-size: 14px;
+    padding: 0.5625rem 0;
   }
 }
 

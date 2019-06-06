@@ -74,7 +74,7 @@ module.exports = jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(13);
+module.exports = __webpack_require__(14);
 
 
 /***/ }),
@@ -83,7 +83,7 @@ module.exports = __webpack_require__(13);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_bootstrap_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Router__ = __webpack_require__(7);
@@ -104,6 +104,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // Require Components
 __webpack_require__(12);
+__webpack_require__(13);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -116,8 +117,12 @@ var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
 });
 
 // Load Events
-jQuery(document).ready(function () { return routes.loadEvents(); });
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+jQuery(document).ready(function () {
+  routes.loadEvents();
+  $('.resellers-table').resellersTable();
+});
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -7383,6 +7388,47 @@ Filter.accordion();
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {  $.fn.resellersTable = function () {
+    this.each(function() {
+      var $tableRows = $(this).find((".resellers-table-row:gt(" + (($(this).data('limit') - 1)) + ")"));
+      var $btnMore = $(this).find('.js-more');
+
+      // On window load
+      if ($(window).innerWidth() < 768) {
+        $tableRows.removeClass('d-md-table-row').addClass('d-none');
+      } else {
+        $tableRows.removeClass('d-none').addClass('d-md-table-row');
+      }
+
+      // On window resize
+      $(window).resize(function() {
+        if ($(window).innerWidth() < 768) {
+          $tableRows.removeClass('d-md-table-row').addClass('d-none');
+        } else {
+          $tableRows.removeClass('d-none').addClass('d-md-table-row');
+        }
+      });
+
+      // Button more
+      $btnMore.click(function() {
+        $tableRows.each(function() {
+          var this$1 = this;
+
+          setTimeout(function () {
+            $(this$1).removeClass('d-none').addClass('d-md-table-row').fadeIn('slow');
+          }, $(this).index() * 50);
+        });
+        $btnMore.fadeOut();
+      });
+    });
+  };
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

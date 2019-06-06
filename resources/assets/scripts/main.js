@@ -12,6 +12,7 @@ import aboutUs from './routes/about';
 
 // Require Components
 require('./components/filter');
+require('./components/resellers');
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -24,4 +25,7 @@ const routes = new Router({
 });
 
 // Load Events
-jQuery(document).ready(() => routes.loadEvents());
+jQuery(document).ready(() => {
+  routes.loadEvents();
+  $('.resellers-table').resellersTable();
+});
