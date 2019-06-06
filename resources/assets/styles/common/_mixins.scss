@@ -266,6 +266,28 @@
   /*! autoprefixer: on */
 }
 
+@mixin display-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin align-items( $ap: center) {
+  -webkit-box-align: $ap;
+  -moz-box-align: $ap;
+  -ms-flex-align: $ap;
+  -webkit-align-items: $ap;
+  align-items: $ap;
+}
+
+@mixin flex($fl: 1) {
+  -webkit-flex: $fl;
+  -ms-flex: $fl;
+  flex: $fl;
+}
+
 /***************************************************************
 * Media Queries
 ***************************************************************/
@@ -288,3 +310,59 @@
     @content;
   }
 }
+
+// Hamburger Menu for Mobile
+@mixin hamburger($width, $height) {
+  cursor: pointer;
+  display: block;
+  height: $height;
+  position: relative;
+  width: $width;
+
+  span {
+    background-color: currentColor;
+    display: block;
+    height: 0.125rem;
+    left: calc(50% - 14px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: 0.5ms;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: ease-out;
+    width: 28px;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: calc(50% - 1px);
+    }
+
+    &:nth-child(3) {
+      top: calc(50% + 8px);
+    }
+  }
+
+  &:hover {
+    background-color: rgba(black, 0.05);
+  }
+
+  // Modifers
+  &[aria-expanded=true] {
+    span {
+      &:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+  }
+}
+

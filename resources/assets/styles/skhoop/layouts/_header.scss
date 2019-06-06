@@ -34,7 +34,7 @@ $mobile-margin-top-menu: 3.75rem;
 }
 
 .navbar-toggler {
-  // @include hamburger(28px, 22px);
+  @include hamburger(28px, 22px);
 
   &:hover,
   &:focus {
