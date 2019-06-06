@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 
 // Require Components
+require('./components/auto-padding');
 require('./components/filter');
 
 /** Populate Router instance with DOM routes */

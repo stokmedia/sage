@@ -85,7 +85,7 @@
       <div class="col-sm-3">
         <p class="bs-component">
           <div class="form-group">
-            <div class="dropdown d-inline-block">
+            <div class="dropdown custom-dropdown d-inline-block">
               <button class="btn btn-lg btn-outline-primary dropdown-toggle text-left" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Dropdown
               </button>

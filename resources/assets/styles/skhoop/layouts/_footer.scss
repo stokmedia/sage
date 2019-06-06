@@ -87,8 +87,12 @@
       display: block;
       width: 2.5rem;
       height: 2.5rem;
-
+      @include transition(all 0.5s ease);
       @include border-radius( 50% );
+
+      &:hover {
+        background-color: $green;
+      }
     }
   }
 }
@@ -114,6 +118,7 @@
 
     @include media-breakpoint-up(md) {
       display: inline-block;
+      vertical-align: middle;
     }
 
     .info {
