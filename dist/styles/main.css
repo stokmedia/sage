@@ -19621,5 +19621,262 @@ body#tinymce {
   }
 }
 
+/* line 1, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.three-promo {
+  padding-top: 3.3125rem;
+  padding-bottom: 2.0625rem;
+  background-color: #dbe4e7;
+}
+
+@media (min-width: 768px) {
+  /* line 1, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .three-promo {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+  }
+}
+
+/* line 11, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.three-promo .title {
+  margin-bottom: 2.75rem;
+}
+
+@media (min-width: 768px) {
+  /* line 11, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .three-promo .title {
+    margin-bottom: 3.25rem;
+  }
+}
+
+/* line 18, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.three-promo .title .h2 {
+  margin-bottom: 0;
+}
+
+/* line 24, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block {
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  /* line 24, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* line 24, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 41, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block:hover,
+.card-block:active {
+  text-decoration: none;
+}
+
+/* line 46, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .image {
+  margin-bottom: 1.5rem;
+}
+
+/* line 50, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block figure {
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.3125rem;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.card-block figure::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.card-block figure > img,
+.card-block figure > video,
+.card-block figure > figure,
+.card-block figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.card-block figure > .ratio-iframe,
+.card-block figure > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 57, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .h4,
+.card-block p {
+  color: #031532;
+}
+
+/* line 62, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .h4 {
+  margin-bottom: 0.5625rem;
+}
+
+/* line 66, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block p {
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  line-height: 1.25rem;
+  display: block;
+  /*! autoprefixer: off */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-height: 3.75rem;
+  /*! autoprefixer: on */
+}
+
+@media (min-width: 768px) {
+  /* line 66, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block p {
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    line-height: 1.375rem;
+    display: block;
+    /*! autoprefixer: off */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 4.125rem;
+    /*! autoprefixer: on */
+  }
+}
+
+/* line 76, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .info {
+  margin: 0 auto 0.875rem;
+  max-width: 300px;
+}
+
+/* line 81, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+.card-block .btn,
+.card-block .comment-form input[type="submit"],
+.comment-form .card-block input[type="submit"],
+.card-block .search-form .search-submit,
+.search-form .card-block .search-submit {
+  min-width: 14.375rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  /* line 81, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block .btn,
+  .card-block .comment-form input[type="submit"],
+  .comment-form .card-block input[type="submit"],
+  .card-block .search-form .search-submit,
+  .search-form .card-block .search-submit {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* line 90, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block.is-inline {
+    padding-left: 140px;
+    position: relative;
+    min-height: 120px;
+  }
+
+  /* line 96, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block.is-inline .h4 {
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    line-height: 1.25rem;
+    display: block;
+    /*! autoprefixer: off */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 2.5rem;
+    /*! autoprefixer: on */
+  }
+
+  /* line 100, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block.is-inline .image {
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 120px;
+  }
+
+  /* line 109, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block.is-inline figure {
+    border-radius: 0.3125rem;
+  }
+
+  /* line 113, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
+  .card-block.is-inline .info {
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
 
 /*# sourceMappingURL=main.css.map*/

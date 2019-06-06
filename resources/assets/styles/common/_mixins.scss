@@ -250,6 +250,22 @@
   appearance: $ap;
 }
 
+@mixin line-clamp($lineHeight: 1.2, $numLines: 1, $unit: "em") {
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  line-height: $lineHeight + unquote($unit);
+  display: block;
+
+  /*! autoprefixer: off */
+  display: -webkit-box;
+  -webkit-line-clamp: $numLines;
+  -webkit-box-orient: vertical;
+  max-height: $numLines * $lineHeight + unquote($unit);
+
+  /*! autoprefixer: on */
+}
+
 /***************************************************************
 * Media Queries
 ***************************************************************/
