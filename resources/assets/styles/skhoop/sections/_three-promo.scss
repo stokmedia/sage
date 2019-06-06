@@ -93,6 +93,10 @@
       position: relative;
       min-height: 120px;
 
+      .h4 {
+        @include line-clamp(1.25, 2, "rem");
+      }
+
       .image {
         margin-bottom: 0;
         position: absolute;

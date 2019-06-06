@@ -19823,6 +19823,22 @@ body#tinymce {
 
   /* line 96, resources/assets/styles/skhoop/sections/_three-promo.scss */
 
+  .card-block.is-inline .h4 {
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    text-overflow: ellipsis;
+    line-height: 1.25rem;
+    display: block;
+    /*! autoprefixer: off */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 2.5rem;
+    /*! autoprefixer: on */
+  }
+
+  /* line 100, resources/assets/styles/skhoop/sections/_three-promo.scss */
+
   .card-block.is-inline .image {
     margin-bottom: 0;
     position: absolute;
@@ -19832,13 +19848,13 @@ body#tinymce {
     height: 120px;
   }
 
-  /* line 105, resources/assets/styles/skhoop/sections/_three-promo.scss */
+  /* line 109, resources/assets/styles/skhoop/sections/_three-promo.scss */
 
   .card-block.is-inline figure {
     border-radius: 0.3125rem;
   }
 
-  /* line 109, resources/assets/styles/skhoop/sections/_three-promo.scss */
+  /* line 113, resources/assets/styles/skhoop/sections/_three-promo.scss */
 
   .card-block.is-inline .info {
     margin-left: 0;
