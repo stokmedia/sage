@@ -7,6 +7,7 @@ use Sober\Controller\Controller;
 class App extends Controller
 {
     use Partials\General;
+    use Partials\Content;
 
     protected $acf = true;
     
