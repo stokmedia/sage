@@ -60,7 +60,6 @@
       height: 3.125rem;
       border-radius: 50%;
       border: 1px solid #e4e4e4;
-      cursor: pointer;
     }
   }
 
@@ -218,6 +217,12 @@
 
           @include media-breakpoint-up(lg) {
             display: none;
+          }
+        }
+
+        &.is-open {
+          &::after {
+            content: "-";
           }
         }
       }
