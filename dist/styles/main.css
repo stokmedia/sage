@@ -21194,18 +21194,16 @@ body#tinymce {
   .checkout-container .checkout-col {
     width: 50%;
     min-height: 76.625rem;
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 
-/* line 13, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 11, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .checkout-col.has-bg {
   background-color: #dbe4e7;
 }
 
-/* line 18, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 16, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .product-shipping,
 .checkout-container .delivery-payment {
@@ -21215,7 +21213,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 18, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 16, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .product-shipping,
   .checkout-container .delivery-payment {
@@ -21223,19 +21221,19 @@ body#tinymce {
   }
 }
 
-/* line 29, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 27, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .product-shipping {
   max-width: 29.875rem;
 }
 
-/* line 33, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 31, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .delivery-payment {
   max-width: 21.875rem;
 }
 
-/* line 37, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 35, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .h3 {
   line-height: normal;
@@ -21244,7 +21242,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 37, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 35, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .h3 {
     margin-top: 2.5rem;
@@ -21252,7 +21250,7 @@ body#tinymce {
   }
 }
 
-/* line 48, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 46, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .checkout-items {
   padding: 0;
@@ -21260,7 +21258,7 @@ body#tinymce {
   list-style: none;
 }
 
-/* line 53, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 51, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .checkout-items .item {
   padding-top: 1.25rem;
@@ -21268,28 +21266,28 @@ body#tinymce {
   border-top: 1px solid #fff;
 }
 
-/* line 60, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 58, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .summary-group {
   margin-top: 0;
   margin-bottom: 1.25rem;
 }
 
-/* line 65, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 63, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .discount-code {
   padding-bottom: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  /* line 65, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 63, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .discount-code {
     border-bottom: 1px solid #fff;
   }
 }
 
-/* line 72, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 70, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .discount-code .btn,
 .checkout-container .discount-code .comment-form input[type="submit"],
@@ -21299,7 +21297,7 @@ body#tinymce {
   min-width: 11.3125rem;
 }
 
-/* line 76, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 74, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .discount-code .form-control,
 .checkout-container .discount-code .comment-form input[type="text"],
@@ -21315,7 +21313,7 @@ body#tinymce {
   margin-top: 1.25rem;
 }
 
-/* line 81, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 79, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .get-newsletter {
   margin-bottom: 2.625rem;
@@ -21323,7 +21321,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 81, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 79, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .get-newsletter {
     border-bottom: 1px solid #fff;
@@ -21333,21 +21331,21 @@ body#tinymce {
   }
 }
 
-/* line 93, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 91, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .appointment-radios {
   margin-top: 1.5625rem;
 }
 
 @media (min-width: 768px) {
-  /* line 93, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 91, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .appointment-radios {
     margin-top: 1.3125rem;
   }
 }
 
-/* line 100, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 98, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .appointment-radios .item {
   padding-top: 0.5rem;
@@ -21356,7 +21354,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 100, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 98, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .appointment-radios .item {
     padding-top: 0.875rem;
