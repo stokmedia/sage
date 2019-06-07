@@ -3,6 +3,11 @@ module.exports = {
   'rules': {
     'no-empty-source': null,
     'string-quotes': 'double',
+  
+    'no-descending-specificity': null,
+    'selector-pseudo-element-colon-notation': null,
+    'indentation': null,
+
     'at-rule-no-unknown': [
       true,
       {

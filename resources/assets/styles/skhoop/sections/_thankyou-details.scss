@@ -48,6 +48,7 @@
 
   .product-details-inline {
     margin-bottom: 2.1875rem;
+
     @include media-breakpoint-down(sm) {
       margin-bottom: 3.125rem;
     }

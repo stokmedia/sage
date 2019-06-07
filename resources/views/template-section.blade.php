@@ -8,7 +8,6 @@
 @while(have_posts()) @php the_post() @endphp
 @include('partials.page-header')
 
-<div class="container-fluid">
   <div class="container">
     <div class="h2">Newsletter</div>
   </div>
@@ -30,7 +29,12 @@
   </div>
   @include('sections.section-fifty-fifthy')
 
-</div>
+  <!-- Promo box -->
+  <div class="container">
+    <div class="h2">Promo boxes</div>
+  </div>
+  @include('sections.section-promo-box')
+
 
 @include('partials.content-page')
 @endwhile
