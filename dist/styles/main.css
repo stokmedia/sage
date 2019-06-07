@@ -18101,6 +18101,243 @@ blockquote footer::before,
   }
 }
 
+/* line 1, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline {
+  position: relative;
+}
+
+/* line 4, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .image-wrap,
+.product-details-inline .info {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+/* line 10, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .info {
+  margin-left: 1rem;
+  color: #031532;
+  max-width: 8.75rem;
+}
+
+/* line 15, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .info .name {
+  text-decoration: none;
+  color: #031532;
+}
+
+/* line 21, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .image {
+  background-color: #fff;
+  height: 8.4375rem;
+  width: 5.625rem;
+  padding: 1.125rem;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+@media (min-width: 576px) {
+  /* line 21, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+  .product-details-inline .image {
+    height: 11rem;
+    width: 7.3125rem;
+    padding: 1.125rem;
+  }
+}
+
+/* line 39, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline figure {
+  margin-bottom: 0;
+  height: auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.product-details-inline figure::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 113.6%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.product-details-inline figure > img,
+.product-details-inline figure > video,
+.product-details-inline figure > figure,
+.product-details-inline figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.product-details-inline figure > .ratio-iframe,
+.product-details-inline figure > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 49, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .price.is-sale .old-price {
+  text-decoration: line-through;
+}
+
+/* line 53, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .price.is-sale .new-price {
+  color: #d45656;
+}
+
+@media (min-width: 992px) {
+  /* line 60, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+  .product-details-inline.is-large .image {
+    width: 11.25rem;
+    height: 16.875rem;
+    padding: 1.6875rem;
+  }
+}
+
+/* line 69, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .close-pos {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 75, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .close-btn {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  line-height: normal;
+  display: block;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+/* line 86, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .close-btn::before,
+.product-details-inline .close-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 15px;
+  width: 2px;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+/* line 98, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .close-btn::before {
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+     transform: rotate(45deg);
+}
+
+/* line 102, resources/assets/styles/skhoop/components/_product-details-inline.scss */
+
+.product-details-inline .close-btn::after {
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+     transform: rotate(-45deg);
+}
+
+/* line 1, resources/assets/styles/skhoop/components/_summary-group.scss */
+
+.summary-group {
+  margin-top: 1.6875rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  /* line 1, resources/assets/styles/skhoop/components/_summary-group.scss */
+
+  .summary-group {
+    margin-top: 2rem;
+    margin-bottom: 0.625rem;
+  }
+}
+
+/* line 11, resources/assets/styles/skhoop/components/_summary-group.scss */
+
+.summary-item {
+  border-top: 1px solid #fff;
+  padding: 0.4375rem 0;
+  line-height: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  /* line 11, resources/assets/styles/skhoop/components/_summary-group.scss */
+
+  .summary-item {
+    padding: 0.375rem;
+  }
+}
+
+/* line 22, resources/assets/styles/skhoop/components/_summary-group.scss */
+
+.summary-item:last-child {
+  border-bottom: 1px solid #fff;
+}
+
+/* line 26, resources/assets/styles/skhoop/components/_summary-group.scss */
+
+.summary-item .title,
+.summary-item .price {
+  -ms-flex: 1 50%;
+  -webkit-box-flex: 1;
+          flex: 1 50%;
+}
+
+/* line 31, resources/assets/styles/skhoop/components/_summary-group.scss */
+
+.summary-item .price {
+  text-align: right;
+}
+
 /* line 1, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter {
@@ -20941,6 +21178,189 @@ body#tinymce {
   .promo-box-figure {
     max-width: 129px;
     max-height: 160px;
+  }
+}
+
+/* line 2, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .checkout-col {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  /* line 2, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+  .checkout-container .checkout-col {
+    width: 50%;
+    min-height: 76.625rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/* line 13, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .checkout-col.has-bg {
+  background-color: #dbe4e7;
+}
+
+/* line 18, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .product-shipping,
+.checkout-container .delivery-payment {
+  margin: 0 auto;
+  padding-top: 0.3125rem;
+  padding-bottom: 1.625rem;
+}
+
+@media (min-width: 768px) {
+  /* line 18, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+  .checkout-container .product-shipping,
+  .checkout-container .delivery-payment {
+    padding-bottom: 2.9375rem;
+  }
+}
+
+/* line 29, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .product-shipping {
+  max-width: 29.875rem;
+}
+
+/* line 33, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .delivery-payment {
+  max-width: 21.875rem;
+}
+
+/* line 37, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .h3 {
+  line-height: normal;
+  margin-top: 1.3125rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  /* line 37, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+  .checkout-container .h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 0.1875rem;
+  }
+}
+
+/* line 48, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .checkout-items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 53, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .checkout-items .item {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-top: 1px solid #fff;
+}
+
+/* line 60, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .summary-group {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+/* line 65, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .discount-code {
+  padding-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  /* line 65, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+  .checkout-container .discount-code {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+/* line 72, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .discount-code .btn,
+.checkout-container .discount-code .comment-form input[type="submit"],
+.comment-form .checkout-container .discount-code input[type="submit"],
+.checkout-container .discount-code .search-form .search-submit,
+.search-form .checkout-container .discount-code .search-submit {
+  min-width: 11.3125rem;
+}
+
+/* line 76, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .discount-code .form-control,
+.checkout-container .discount-code .comment-form input[type="text"],
+.comment-form .checkout-container .discount-code input[type="text"],
+.checkout-container .discount-code .comment-form input[type="email"],
+.comment-form .checkout-container .discount-code input[type="email"],
+.checkout-container .discount-code .comment-form input[type="url"],
+.comment-form .checkout-container .discount-code input[type="url"],
+.checkout-container .discount-code .comment-form textarea,
+.comment-form .checkout-container .discount-code textarea,
+.checkout-container .discount-code .search-form .search-field,
+.search-form .checkout-container .discount-code .search-field {
+  margin-top: 1.25rem;
+}
+
+/* line 81, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .get-newsletter {
+  margin-bottom: 2.625rem;
+  padding: 0 0.625rem;
+}
+
+@media (min-width: 768px) {
+  /* line 81, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+  .checkout-container .get-newsletter {
+    border-bottom: 1px solid #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* line 93, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .appointment-radios {
+  margin-top: 1.5625rem;
+}
+
+@media (min-width: 768px) {
+  /* line 93, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+  .checkout-container .appointment-radios {
+    margin-top: 1.3125rem;
+  }
+}
+
+/* line 100, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .appointment-radios .item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid #fff;
+}
+
+@media (min-width: 768px) {
+  /* line 100, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+  .checkout-container .appointment-radios .item {
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
   }
 }
 
