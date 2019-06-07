@@ -296,3 +296,15 @@ $mobile-margin-top-menu: 3.75rem;
     z-index: 3;
 	}
 }
+
+.admin-bar {
+  .navbar {
+    &.fixed-top {
+      top: 2.875rem;
+
+      @include media-min(783px) {
+        top: 2rem;
+      }
+    }
+  }
+}

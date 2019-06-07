@@ -1,0 +1,26 @@
+.popular-products {
+  background-image: linear-gradient(to top, $body-bg, $body-bg 15.625rem, $lightGreen 15.625rem, $lightGreen 100%);
+
+  & > .container {
+    position: relative;
+  }
+
+  &-header {
+    width: 100%;
+    max-width: 880px;
+  }
+
+  &-nav {
+    position: absolute;
+    right: 0.3125rem;
+    bottom: 0;
+
+    .btn {
+      margin: 0 0.625rem;
+    }
+  }
+
+  // &-grid-slider {
+
+  // }
+}
