@@ -21378,6 +21378,14 @@ body#tinymce {
   }
 }
 
+@media (min-width: 768px) {
+  /* line 116, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+  .checkout-container .appointment-radios .item:last-child {
+    border-bottom: 1px solid #fff;
+  }
+}
+
 /* line 1, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
 
 .thankyou-details {

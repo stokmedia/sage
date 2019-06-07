@@ -112,6 +112,12 @@
         padding-top: 0.875rem;
         padding-bottom: 0.875rem;
       }
+
+      &:last-child {
+        @include media-breakpoint-up(md) {
+          border-bottom: 1px solid $white;
+        }
+      }
     }
   }
 }
