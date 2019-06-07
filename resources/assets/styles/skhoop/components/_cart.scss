@@ -1,0 +1,126 @@
+.cart {
+  position: absolute;
+  top: 100%;
+  right: -1.25rem;
+  overflow: hidden;
+  padding-top: 0.8125rem;
+  width: 100%;
+  max-width: 12.5rem;
+  max-height: 0;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 23.4375rem;
+    right: 0.9375rem;
+    padding-top: 0.625rem;
+  }
+
+  &-wrapper {
+    padding: 1.375rem 1.25rem 2.0625rem;
+    background-color: $lightGreen;
+    border-radius: 0.3125rem;
+
+    &.is-mobile {
+      .cart-title {
+        margin-bottom: 0;
+        font-size: 1rem;
+        letter-spacing: 0.4px;
+        line-height: 3.125rem;
+      }
+
+      .cart-items {
+        .item {
+          padding: 0.625rem 0;
+        }
+
+        .product-details-inline {
+          text-align: center;
+
+          .image-wrap {
+            display: block;
+
+            .image {
+              margin: auto;
+            }
+          }
+
+          .info {
+            top: 0;
+            margin-top: 1rem;
+            margin-left: 0;
+            max-width: 100%;
+            width: 100%;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+          }
+        }
+      }
+
+      .cart-buttons {
+        padding-top: 0.625rem;
+
+        .btn {
+          margin-top: 0.625rem;
+        }
+      }
+    }
+  }
+
+  &-title {
+    margin-bottom: 0.6875rem;
+  }
+
+  &-items {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 31.25rem);
+    list-style: none;
+
+    .item {
+      padding: 1.25rem 0;
+      border-bottom: 0.0625rem solid $white;
+
+      &:first-child {
+        border-top: 0.0625rem solid $white;
+      }
+    }
+
+    .product-details-inline {
+      .info {
+        position: relative;
+        top: -0.25rem;
+      }
+    }
+  }
+
+  &-summary {
+    padding: 0.9375rem 0.625rem 0.3125rem;
+
+    .summary {
+      line-height: 1.25rem;
+    }
+  }
+
+  &-buttons {
+    .btn {
+      max-width: 100%;
+      min-width: 100%;
+      margin-top: 1.25rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.cart-overlay {
+	&:after {
+    @include media-breakpoint-up(lg) {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(41,41,41,0.8);
+      z-index: 3;
+    }
+	}
+}

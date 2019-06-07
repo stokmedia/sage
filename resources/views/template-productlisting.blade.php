@@ -323,6 +323,17 @@
         </div>
     </section>
 
+    <section class="section popular-products">
+      <div class="container">
+        <div class="h2">Populära produkter</div>
+        <div class="content">
+          <p>
+              In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat. non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis. Rivamus adipiscing fermentum quam volutpat
+          </p>
+        </div>
+      </div>
+    </section>
+
     @include('partials.content-page')
   @endwhile
 @endsection

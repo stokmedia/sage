@@ -3,8 +3,9 @@
 // --------------------------------------------------
 $section-margin-bottom:             100px;
 $section-margin-bottom-touch:       50px;
-// $section-padding-bottom:            100px;
-// $section-padding-bottom-touch:      50px;
+
+$section-padding-bottom:            100px;
+$section-padding-bottom-touch:      50px;
 
 $section-margin-bottom-sm:          70px;
 $section-margin-bottom-sm-touch:    40px;
@@ -24,6 +25,7 @@ $section-margin-bottom-sm-touch:    40px;
   //     }
   // }
 
+
   &.is-small-mb,
   &.is-small-mb-next-section {
     margin-bottom: $section-margin-bottom-sm-touch;
@@ -35,6 +37,14 @@ $section-margin-bottom-sm-touch:    40px;
 
   &.no-mb {
     margin-bottom: 0;
+  }
+
+  &.has-padding-top {
+    padding-bottom: $section-padding-bottom-touch;
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: $section-padding-bottom;
+    }
   }
 
   // &.is-last {

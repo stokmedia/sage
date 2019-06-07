@@ -44,7 +44,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'header_navigation' => __('Header Navigation', 'sage'),
+        'header_navigation' => __('Header Navigation (ONLY TOP-LEVEL ITEMS ARE SHOWN)', 'sage'),
         'header_navigation_mobile' => __('Additional Header Navigation (Mobile)', 'sage'),
         'footer_navigation' => __('Footer Navigation', 'sage'),
         'footer_navigation_mobile' => __('Footer Navigation (Mobile)', 'sage'),

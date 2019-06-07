@@ -1,1 +1,0 @@
-<h2>Promo boxes</h2>

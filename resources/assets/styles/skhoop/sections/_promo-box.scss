@@ -1,0 +1,58 @@
+.promo-box {
+    &-name {
+      margin-bottom: 0.3125rem;
+    }
+
+    &-item {
+      $i: 0;
+      @each $color in $promo-box-colors {
+        $i: $i + 1;
+        &:nth-child(#{$i}) {
+          background-color: $color;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    &-item-row {
+      min-height: 210px;
+
+      @include media-breakpoint-up(sm) {
+        min-height: 270px;
+      }
+
+      .btn-icon {
+        background-color: $white;
+      }
+    }
+
+    &-description {
+      font-size: 0.75rem;
+      font-style: italic;
+      letter-spacing: 1px;
+      line-height: 20px;
+      margin-bottom: 2.4375rem;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 2.625rem;
+      }
+    }
+
+    &-image {
+      @include aspect-ratio(129,160);
+    }
+
+    &-figure {
+      max-width: 100px;
+      max-height: 125px;
+
+      @include media-breakpoint-up(xl) {
+        max-width: 129px;
+        max-height: 160px;
+      }
+    }
+}

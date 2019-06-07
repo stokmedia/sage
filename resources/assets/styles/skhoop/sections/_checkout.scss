@@ -1,0 +1,132 @@
+.checkout-container {
+  .checkout-col {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @include media-breakpoint-up(md) {
+      width: 50%;
+      min-height: 76.625rem;
+    }
+
+    &.has-bg {
+      background-color: $lightGreen;
+    }
+  }
+
+  .product-shipping,
+  .delivery-payment {
+    margin: 0 auto;
+    padding-top: 0.3125rem;
+    padding-bottom: 1.625rem;
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: 2.9375rem;
+    }
+  }
+
+  .product-shipping {
+    max-width: 20rem;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 29.875rem;
+    }
+  }
+
+  .delivery-payment {
+    max-width: 20rem;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 21.875rem;
+    }
+  }
+
+  .checkout-iframe {
+    width: 100%;
+    margin-top: 1.875rem;
+    
+    @include media-breakpoint-up(md) {
+      margin-top: 1.875rem;
+    }
+  }
+
+  .h3 {
+    line-height: normal;
+    margin-top: 1.3125rem;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 2.5rem;
+      margin-bottom: 0.1875rem;
+    }
+  }
+
+  .checkout-items {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .item {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-top: 1px solid $white;
+    }
+  }
+
+  .summary-group {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .discount-code {
+    padding-bottom: 1.25rem;
+
+    @include media-breakpoint-up(md) {
+      border-bottom: 1px solid $white;
+    }
+
+    .btn {
+      min-width: 11.3125rem;
+    }
+
+    .form-control {
+      margin-top: 1.25rem;
+    }
+  }
+
+  .get-newsletter {
+    margin-bottom: 2.625rem;
+    padding: 0 0.625rem;
+
+    @include media-breakpoint-up(md) {
+      border-bottom: 1px solid $white;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .appointment-radios {
+    margin-top: 1.5625rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 1.3125rem;
+    }
+
+    .item {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-top: 1px solid $white;
+
+      @include media-breakpoint-up(md) {
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+      }
+
+      &:last-child {
+        @include media-breakpoint-up(md) {
+          border-bottom: 1px solid $white;
+        }
+      }
+    }
+  }
+}
