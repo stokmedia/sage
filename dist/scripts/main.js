@@ -74,7 +74,7 @@ module.exports = jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(15);
+module.exports = __webpack_require__(16);
 
 
 /***/ }),
@@ -106,6 +106,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 __webpack_require__(12);
 __webpack_require__(13);
 __webpack_require__(14);
+__webpack_require__(15);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -7367,6 +7368,36 @@ AutoPadding.update = changePadding;
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function($) {var Nav = {};
+
+Nav.overlay = function() {
+  var cartOverlay = $('.js-cart-overlay');
+  var navBarCollapse = $('#navbarNav');
+
+  // Cart Overlay
+  cartOverlay.hover(function() {
+    $('body').addClass('cart-overlay');
+  }, function(){
+    $('body').removeClass('cart-overlay');
+  });
+
+  navBarCollapse.on('show.bs.collapse', function () {
+    $('body').addClass('nav-overlay');
+  })
+
+  navBarCollapse.on('hidden.bs.collapse', function () {
+    $('body').removeClass('nav-overlay');
+  })
+};
+
+Nav.overlay();
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* WEBPACK VAR INJECTION */(function($) {var Filter = {};
 
 Filter.toggle = function() {
@@ -7412,7 +7443,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {  $.fn.resellersTable = function () {
@@ -7453,7 +7484,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

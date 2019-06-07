@@ -1,5 +1,5 @@
 .product-details-inline {
-  text-decoration: none;
+  position: relative;
 
   .image-wrap,
   .info {
@@ -11,6 +11,11 @@
     margin-left: 1rem;
     color: $body-color;
     max-width: 8.75rem;
+
+    .name {
+      text-decoration: none;
+      color: $body-color;
+    }
   }
 
   .image {
@@ -18,6 +23,7 @@
     height: 8.4375rem;
     width: 5.625rem;
     padding: 1.125rem;
+    text-decoration: none;
 
     @include media-breakpoint-up(sm) {
       height: 11rem;
@@ -57,6 +63,44 @@
         height: 16.875rem;
         padding: 1.6875rem;
       }
+    }
+  }
+
+  .close-pos {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .close-btn {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    line-height: normal;
+    display: block;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 15px;
+      width: 2px;
+      background-color: $black;
+
+      @include border-radius( 5px );
+    }
+
+    &::before {
+      @include transform( rotate(45deg) );
+    }
+
+    &::after {
+      @include transform( rotate(-45deg) );
     }
   }
 }

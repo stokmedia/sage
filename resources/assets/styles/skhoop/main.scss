@@ -10,6 +10,10 @@
 @import "components/forms";
 @import "components/section";
 @import "components/wp-classes";
+@import "components/picker";
+@import "components/cart";
+@import "components/product-details-inline";
+@import "components/summary-group";
 @import "sections/newsletter";
 @import "sections/fifty-fifthy-section";
 @import "layouts/header";
@@ -23,3 +27,7 @@
 @import "sections/product-filter";
 @import "sections/three-promo";
 @import "sections/hero";
+@import "sections/resellers";
+@import "sections/promo-box";
+@import "sections/checkout";
+@import "sections/thankyou-details";

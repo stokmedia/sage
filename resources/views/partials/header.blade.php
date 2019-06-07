@@ -4,8 +4,8 @@
             <img src="@asset('images/company-logo.svg')" alt="" srcset="">
             <img src="@asset('images/company-logo-mobile.svg')" class="mobile-logo" alt="" srcset="">
         </a>
-        <button class="navbar-toggler order-0" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler order-0 js-nav-toggle" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             {{-- <span class="navbar-toggler-icon"></span> --}}
             <span></span>
             <span></span>
@@ -28,10 +28,8 @@
 
             <div class="navbar-nav-touch m-auto d-block d-lg-none">
                 @if($mobile_menu)
-                    <ul class="navbar-nav m-auto">
+                    <ul class="navbar-nav">
                         @foreach($mobile_menu as $menuItem)
-                            @php App::cl($menuItem) @endphp
-
                             @if($menuItem->menu_item_parent !== '0')
                                 @continue
                             @endif
@@ -43,7 +41,7 @@
                                     <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="btn-back" href="#" role="button">Back</a>
+                                    <a class="nav-link" href="#">Klänningar</a>
                                     <ul class="navbar-nav m-auto">
                                         @foreach($mobile_menu as $subMenuItem)
                                             @if($menuItem->ID != $subMenuItem->menu_item_parent)
@@ -51,7 +49,8 @@
                                             @endif
 
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{ $subMenuItem->url }}">{{ $subMenuItem->title }}</a>
+                                                <a class="nav-link"
+                                                   href="{{ $subMenuItem->url }}">{{ $subMenuItem->title }}</a>
                                             </li>
                                         @endforeach
                                     </ul>
@@ -61,7 +60,7 @@
                     </ul>
                 @endif
 
-                <div class="content-info">
+                <div class="dropdown-menu">
                     <div class="brand-container">
                         <a href="#" class="brand-footer">
                             <img src="@asset('images/company-logo-mobile.svg')" class="" alt=""/>

@@ -28,4 +28,35 @@ add_filter( 'acf/fields/flexible_content/layout_title/name=sections', function( 
 	}	
 	
 	return $title;
-}, 10, 4); 
+}, 10, 4);
+
+
+// Map section to specific template that they should appear.
+// If layout does not exists in the mapping, then the layout will always appear in the section
+add_filter( 'acf/prepare_field/name=sections', function( $field ) {
+    global $post;
+
+    $mapping =  array( 
+        'resellers' => array( 'views/template-resellers.blade.php' ) 
+    );
+
+    $layouts = $field['layouts'];
+    $field['layouts'] = [];
+
+    foreach ($layouts as $layout) {
+
+        $key = $layout['name'];
+
+        // if the layout name isn't in our mapping array
+        if ( ! array_key_exists($key, $mapping)) {
+            $field['layouts'][] = $layout;
+            continue;
+        }
+        
+        if( in_array( get_page_template_slug($post), $mapping[$key] ) ) {
+            $field['layouts'][] = $layout;
+        }
+    }
+
+    return $field;
+});
