@@ -130,10 +130,10 @@
                 <div class="cart-list">
                   <ul class="cart-items p-0">
                     <li class="item">
-                        @include('partials.product-details-inline')
+                        @include('partials.product-details-inline', ['is_link'=>true, 'has_close'=>true])
                     </li>
                     <li class="item">
-                        @include('partials.product-details-inline')
+                        @include('partials.product-details-inline', ['is_link'=>true, 'has_close'=>true])
                     </li>
                   </ul>
                 </div>
