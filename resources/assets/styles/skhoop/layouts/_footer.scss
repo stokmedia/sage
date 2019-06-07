@@ -118,7 +118,7 @@
 
     @include media-breakpoint-up(md) {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
     }
 
     .info {
@@ -153,9 +153,9 @@
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
-    top: 50%;
+    top: 0.875rem;
     left: 0;
-    margin-top: -1.25rem;
+    margin-top: 0;
 
     @include border-radius( 50% );
   }

@@ -12,6 +12,7 @@ import aboutUs from './routes/about';
 
 // Require Components
 require('./components/auto-padding');
+require('./components/nav');
 require('./components/filter');
 require('./components/resellers');
 
