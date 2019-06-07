@@ -30,6 +30,75 @@ trait Content
     {
         return ($data->section_title && $data->show_section_title);
     }
+
+    public static function getPromoData( $data )
+    {
+        $items = [];
+
+        if (empty($data->items)) {
+            return $items;
+        }
+
+        foreach( $data->items as $item ) {
+            $item = (object) $item;
+            
+            $cardImageSize = 'large';
+            $postImage = null;
+            $postTitle = null;
+            $postText = null;
+            $postPreHeader = null;
+            $postLink = (object) [
+                'url' => null,
+                'title' => $data->item_link_text,
+                'target' => '_blank',
+            ]; 
+            
+            if( $item->get_content_from === 'category' && $item->category ) {
+                $categoryImage = get_field( 'featured_image', $item->category->taxonomy . '_' . $item->category->term_id ); 
+                $postImage = $categoryImage ? wp_get_attachment_image( $categoryImage['ID'], 'full' ) : null;
+                $postTitle = $item->category->name;
+                $postText = $item->category->description;
+                $postLink->url = get_term_link( $item->category, $item->category->taxonomy ); 
+
+
+            } elseif( $item->get_content_from === 'post' && $item->post ) {
+                $postImage = has_post_thumbnail( $item->post ) ? get_the_post_thumbnail( $item->post->ID, $cardImageSize ) : null;
+                $postTitle = $item->post->post_title;
+                $postText = $item->post->post_content;
+                $postLink->url = get_permalink( $item->post->ID );
+
+                if( $data->acf_fc_layout === 'promo-boxes' && get_post_type($item->post) === 'post' ) {
+                    $categoryNames = wp_list_pluck( get_the_category( $item->post->ID ), 'name' );
+                    $postPreHeader = !empty($categoryNames) ? $categoryNames[0] : null;
+                }
+
+                $postPreHeader = null;
+            }
+
+            $itemLink = !empty($item->link) ? (object) $item->link : $postLink;
+
+            if (empty($itemLink->title)) {
+                $itemLink->title = $data->item_link_text;
+            }
+
+            $newItem = [
+                'image' => !empty($item->image) ? wp_get_attachment_image( $item->image['ID'], 'full' ) : $postImage,
+                'title' => !empty($item->title) ? $item->title : $postTitle,
+                'text' => !empty($item->text) ? $item->text : wp_trim_words( $postText, 50 ),
+                'link' => $itemLink,
+            ];
+
+            if( $data->acf_fc_layout === 'promo-boxes' ) {
+                $newItem['pre_header'] = !empty($item->pre_header) ? $item->pre_header : $postPreHeader;
+            }
+
+            if( empty(array_filter($newItem)) ) { continue; }
+
+            array_push( $items, (object) $newItem );
+        }
+        
+        return $items;
+    }
     
     public static function cms_hero_banner( $data )
     {   
@@ -58,7 +127,14 @@ trait Content
     
     public static function cms_promo_boxes( $data )
     {   
-        return (object) $data;
+        $newData = (object) $data;
+
+        $items = self::getPromoData($newData);
+
+        return (object) [
+            'acf_fc_layout' => $newData->acf_fc_layout,
+            'items' => $items
+        ];
     }  
     
     public static function cms_text_and_image( $data )
@@ -89,52 +165,8 @@ trait Content
     public static function cms_three_promo( $data )
     {  
         $newData = (object) $data;
-        $items = [];
 
-        foreach( $newData->items as $item ) {
-            $item = (object) $item;
-            
-            $cardImageSize = 'large';
-            $postImage = null;
-            $postTitle = null;
-            $postText = null;
-            $postLink = (object) [
-                'url' => null,
-                'title' => $newData->item_link_text,
-                'target' => '_blank',
-            ]; 
-            
-            if( $item->get_content_from === 'category' && $item->category ) {
-                $categoryImage = get_field( 'featured_image', $item->category->taxonomy . '_' . $item->category->term_id ); 
-                $postImage = $categoryImage ? wp_get_attachment_image( $categoryImage['ID'], 'full' ) : null;
-                $postTitle = $item->category->name;
-                $postText = $item->category->description;
-                $postLink->url = get_term_link( $item->category, $item->category->taxonomy ); 
-
-            } elseif( $item->get_content_from === 'post' && $item->post ) {
-                $postImage = has_post_thumbnail( $item->post ) ? get_the_post_thumbnail( $item->post->ID, $cardImageSize ) : null;
-                $postTitle = $item->post->post_title;
-                $postText = $item->post->post_content;
-                $postLink->url = get_permalink( $item->post->ID );
-            }
-
-            $itemLink = !empty($item->link) ? (object) $item->link : $postLink;
-
-            if (empty($itemLink->title)) {
-                $itemLink->title = $newData->item_link_text;
-            }
-
-            $newItem = [
-                'image' => !empty($item->image) ? wp_get_attachment_image( $item->image['ID'], 'full' ) : $postImage,
-                'title' => !empty($item->title) ? $item->title : $postTitle,
-                'text' => !empty($item->text) ? $item->text : wp_trim_words( $postText, 50 ),
-                'link' => $itemLink,
-            ];
-
-            if( empty(array_filter($newItem)) ) { continue; }
-
-            array_push( $items, (object) $newItem );
-        }
+        $items = self::getPromoData( $newData );
 
         return (object) [
             'acf_fc_layout' => $newData->acf_fc_layout,
