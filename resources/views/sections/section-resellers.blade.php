@@ -26,21 +26,22 @@
   </div>
 </section> --}}
 
-<section class="section resellers">
+@if ($section->title || $section->preamble || $section->items)
+    <section class="section resellers">
         <div class="resellers-container p-3 m-auto">
-    
+
             @if ($section->title || $section->preamble)
                 <div class="d-block">
                     @if ($section->title)
                         <h2 class="text-center">{{ $section->title }}</h2>
                     @endif
-    
+
                     @if ($section->preamble)
                         <p  class="preamble text-center">{!! $section->preamble !!}</p>
                     @endif
                 </div>
             @endif
-    
+
             @if ($section->items)
                 @foreach ($section->items as $item)
                     <div class="h3">{!! $item->label !!}</div>
@@ -66,6 +67,7 @@
                     </div>
                 @endforeach
             @endif
-    
+
         </div>
     </section>
+@endif
