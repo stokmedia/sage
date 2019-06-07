@@ -40,6 +40,15 @@
     }
   }
 
+  .checkout-iframe {
+    width: 100%;
+    margin-top: 1.875rem;
+    
+    @include media-breakpoint-up(md) {
+      margin-top: 1.875rem;
+    }
+  }
+
   .h3 {
     line-height: normal;
     margin-top: 1.3125rem;
