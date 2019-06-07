@@ -10,11 +10,10 @@
 @import "components/forms";
 @import "components/section";
 @import "components/wp-classes";
-@import "components/product-details-inline";
-@import "components/summary-group";
+@import "components/picker";
+@import "components/cart";
 @import "sections/newsletter";
 @import "sections/fifty-fifthy-section";
-@import "sections/resellers";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
@@ -25,6 +24,6 @@
 @import "sections/product-listing";
 @import "sections/product-filter";
 @import "sections/three-promo";
-@import "sections/thankyou-details";
-@import "sections/text-header";
-@import "sections/checkout";
+@import "sections/hero";
+@import "sections/resellers";
+@import "sections/promo-box";
