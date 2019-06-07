@@ -12,22 +12,24 @@ namespace App\Classes;
  * All navigation related code goes here
  * @package App\Classes
  */
-class Navigation {
-    public static function desktopMenu()
+class Navigation
+{
+    public static function getMenu( $menuName )
     {
-        if ( !has_nav_menu( 'header_navigation' ) ) {
+        if ( !has_nav_menu( $menuName ) ) {
             return null;
         }
 
-        return wp_get_nav_menu_items(get_nav_menu_locations()['header_navigation']);
+        return wp_get_nav_menu_items( get_nav_menu_locations()[ $menuName ] );
+    }
+
+    public static function desktopMenu()
+    {
+        return self::getMenu( 'header_navigation' );
     }
 
     public static function mobileMenu()
     {
-        if ( !has_nav_menu( 'header_navigation_mobile' ) ) {
-            return null;
-        }
-
-        return wp_get_nav_menu_items(get_nav_menu_locations()['header_navigation_mobile']);
+        return self::getMenu( 'header_navigation_mobile' );
     }
 }
