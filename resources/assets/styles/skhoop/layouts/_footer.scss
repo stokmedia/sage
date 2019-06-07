@@ -87,6 +87,7 @@
       display: block;
       width: 2.5rem;
       height: 2.5rem;
+
       @include transition(all 0.5s ease);
       @include border-radius( 50% );
 

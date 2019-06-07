@@ -18900,13 +18900,13 @@ blockquote footer::before,
   border-radius: 50%;
 }
 
-/* line 93, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 94, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .content-info .group-links a:hover {
   background-color: #b7cad0;
 }
 
-/* line 100, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 101, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar {
   background-color: #b7cad0;
@@ -18916,7 +18916,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 100, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 101, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar {
     padding-top: 1.25rem;
@@ -18924,7 +18924,7 @@ blockquote footer::before,
   }
 }
 
-/* line 111, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 112, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item {
   padding-left: 3.75rem;
@@ -18936,7 +18936,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 768px) {
-  /* line 111, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 112, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item {
     display: inline-block;
@@ -18944,34 +18944,34 @@ blockquote footer::before,
   }
 }
 
-/* line 124, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 125, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item .info {
   text-align: left;
 }
 
-/* line 127, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 128, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item .info .h4 {
   margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 131, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 132, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item .info .small {
     margin-top: -0.4375rem;
   }
 }
 
-/* line 138, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 139, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item + .trust-item {
   margin-top: 0.625rem;
 }
 
 @media (min-width: 768px) {
-  /* line 138, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 139, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item + .trust-item {
     margin-top: 0;
@@ -18980,14 +18980,14 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 138, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 139, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item + .trust-item {
     margin-left: 4.5rem;
   }
 }
 
-/* line 152, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 153, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .icon-block {
   width: 2.5rem;
