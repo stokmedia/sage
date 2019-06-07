@@ -194,7 +194,8 @@ trait Content
             'title' => self::hasTitle($newData) ? $newData->section_title : '',
             'preamble' => $newData->preamble,
             'items' => $newData->content,
-            'count' => $newData->count
+            'count' => $newData->count,
+            'view_all_btn' => get_field( 'translate_view_all', self::currentLang() )
         ];        
     }      
     
