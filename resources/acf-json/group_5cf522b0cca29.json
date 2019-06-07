@@ -58,30 +58,6 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5cf523249f78d",
-                    "label": "Logo inverted",
-                    "name": "logo_inverted",
-                    "type": "image",
-                    "instructions": "Recommended to use .svg but beware: SVG files are extremely unsecure as they can contain harmful scripts. Only upload svgs that come from a trusted source!",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
                     "key": "field_5cf5233a9f78e",
                     "label": "Width",
                     "name": "width",
@@ -108,6 +84,89 @@
                     "name": "height",
                     "type": "number",
                     "instructions": "The height of the original image in pixels, as svgs don't come with this value.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5cfa642e7af94",
+            "label": "Logo (mobile)",
+            "name": "logo_mobile",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_5cf523249f78d",
+                    "label": "Logo",
+                    "name": "logo",
+                    "type": "image",
+                    "instructions": "Recommended to use .svg but beware: SVG files are extremely unsecure as they can contain harmful scripts. Only upload svgs that come from a trusted source!",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5cfa63e453e06",
+                    "label": "Height",
+                    "name": "height",
+                    "type": "number",
+                    "instructions": "The height of the original image in pixels, as svgs don't come with this value.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5cfa63e253e05",
+                    "label": "Width",
+                    "name": "width",
+                    "type": "number",
+                    "instructions": "The width of the original image in pixels, as svgs don't come with this value.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -276,5 +335,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559637344
+    "modified": 1559913767
 }

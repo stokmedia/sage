@@ -12,12 +12,24 @@ class App extends Controller
 
     protected $acf = true;
 
-    public function desktopMenu() {
+    public function desktopMenu()
+    {
+        self::pr(get_fields('global'));
         return Navigation::desktopMenu();
     }
 
-    public function mobileMenu(){
+    public function mobileMenu()
+    {
         return Navigation::mobileMenu();
+    }
+
+    public function logo()
+    {
+        $logo = get_field( 'logo', 'global' );
+
+        if( $logo['logo'] ) {
+            $logo['logo'] = wp_get_attachment_image( $logo['logo'] );
+        }
     }
 
     public function siteName()
