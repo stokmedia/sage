@@ -16842,7 +16842,9 @@ body#tinymce {
 .fifty-fifthy-item figure > img,
 .fifty-fifthy-item figure > video,
 .fifty-fifthy-item figure > figure,
-.fifty-fifthy-item figure > .ratio-content {
+.fifty-fifthy-item figure > .ratio-content,
+.fifty-fifthy-item figure > iframe,
+.fifty-fifthy-item figure > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -16857,17 +16859,11 @@ body#tinymce {
      object-fit: cover;
 }
 
-/* line 30, resources/assets/styles/common/_mixins.scss */
+/* line 32, resources/assets/styles/common/_mixins.scss */
 
-.fifty-fifthy-item figure > .ratio-iframe,
 .fifty-fifthy-item figure > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
+  min-height: 200%;
+  min-width: 200%;
 }
 
 /* line 1, resources/assets/styles/sections/_newsletter.scss */
@@ -17341,6 +17337,13 @@ blockquote footer::before,
 
 .btn-icon > img {
   width: 100%;
+}
+
+/* line 88, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-icon > svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* line 6, resources/assets/styles/skhoop/components/_button-group.scss */
@@ -18102,7 +18105,7 @@ blockquote footer::before,
   width: 28px;
 }
 
-/* line 346, resources/assets/styles/common/_mixins.scss */
+/* line 353, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span {
   background-color: currentColor;
@@ -18127,31 +18130,31 @@ blockquote footer::before,
   width: 28px;
 }
 
-/* line 358, resources/assets/styles/common/_mixins.scss */
+/* line 365, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span:nth-child(1) {
   top: 0;
 }
 
-/* line 362, resources/assets/styles/common/_mixins.scss */
+/* line 369, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span:nth-child(2) {
   top: calc(50% - 1px);
 }
 
-/* line 366, resources/assets/styles/common/_mixins.scss */
+/* line 373, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span:nth-child(3) {
   top: calc(50% + 8px);
 }
 
-/* line 371, resources/assets/styles/common/_mixins.scss */
+/* line 378, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* line 378, resources/assets/styles/common/_mixins.scss */
+/* line 385, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler[aria-expanded=true] span:nth-child(1) {
   -webkit-transform: translateY(9px) rotate(45deg);
@@ -18159,13 +18162,13 @@ blockquote footer::before,
           transform: translateY(9px) rotate(45deg);
 }
 
-/* line 382, resources/assets/styles/common/_mixins.scss */
+/* line 389, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler[aria-expanded=true] span:nth-child(2) {
   opacity: 0;
 }
 
-/* line 386, resources/assets/styles/common/_mixins.scss */
+/* line 393, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler[aria-expanded=true] span:nth-child(3) {
   -webkit-transform: translateY(-9px) rotate(-45deg);
@@ -18798,7 +18801,9 @@ body#tinymce {
 .category-banner > img,
 .category-banner > video,
 .category-banner > figure,
-.category-banner > .ratio-content {
+.category-banner > .ratio-content,
+.category-banner > iframe,
+.category-banner > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -18813,17 +18818,11 @@ body#tinymce {
      object-fit: cover;
 }
 
-/* line 30, resources/assets/styles/common/_mixins.scss */
+/* line 32, resources/assets/styles/common/_mixins.scss */
 
-.category-banner > .ratio-iframe,
 .category-banner > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
+  min-height: 200%;
+  min-width: 200%;
 }
 
 @media (min-width: 576px) {
@@ -18848,7 +18847,9 @@ body#tinymce {
   .category-banner > img,
   .category-banner > video,
   .category-banner > figure,
-  .category-banner > .ratio-content {
+  .category-banner > .ratio-content,
+  .category-banner > iframe,
+  .category-banner > .ratio-iframe {
     position: absolute;
     top: 0;
     left: -9999px;
@@ -18863,17 +18864,11 @@ body#tinymce {
        object-fit: cover;
   }
 
-  /* line 30, resources/assets/styles/common/_mixins.scss */
+  /* line 32, resources/assets/styles/common/_mixins.scss */
 
-  .category-banner > .ratio-iframe,
   .category-banner > iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
+    min-height: 200%;
+    min-width: 200%;
   }
 }
 
@@ -19027,7 +19022,9 @@ body#tinymce {
 .product-listing .bg-image > img,
 .product-listing .bg-image > video,
 .product-listing .bg-image > figure,
-.product-listing .bg-image > .ratio-content {
+.product-listing .bg-image > .ratio-content,
+.product-listing .bg-image > iframe,
+.product-listing .bg-image > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -19042,17 +19039,11 @@ body#tinymce {
      object-fit: cover;
 }
 
-/* line 30, resources/assets/styles/common/_mixins.scss */
+/* line 32, resources/assets/styles/common/_mixins.scss */
 
-.product-listing .bg-image > .ratio-iframe,
 .product-listing .bg-image > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
+  min-height: 200%;
+  min-width: 200%;
 }
 
 @media (min-width: 992px) {
@@ -19248,7 +19239,9 @@ body#tinymce {
 .products .product-image > img,
 .products .product-image > video,
 .products .product-image > figure,
-.products .product-image > .ratio-content {
+.products .product-image > .ratio-content,
+.products .product-image > iframe,
+.products .product-image > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -19263,17 +19256,11 @@ body#tinymce {
      object-fit: cover;
 }
 
-/* line 30, resources/assets/styles/common/_mixins.scss */
+/* line 32, resources/assets/styles/common/_mixins.scss */
 
-.products .product-image > .ratio-iframe,
 .products .product-image > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
+  min-height: 200%;
+  min-width: 200%;
 }
 
 /* line 174, resources/assets/styles/skhoop/sections/_product-listing.scss */
@@ -20189,7 +20176,9 @@ body#tinymce {
 .card-block figure > img,
 .card-block figure > video,
 .card-block figure > figure,
-.card-block figure > .ratio-content {
+.card-block figure > .ratio-content,
+.card-block figure > iframe,
+.card-block figure > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -20204,17 +20193,11 @@ body#tinymce {
      object-fit: cover;
 }
 
-/* line 30, resources/assets/styles/common/_mixins.scss */
+/* line 32, resources/assets/styles/common/_mixins.scss */
 
-.card-block figure > .ratio-iframe,
 .card-block figure > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
+  min-height: 200%;
+  min-width: 200%;
 }
 
 /* line 57, resources/assets/styles/skhoop/sections/_three-promo.scss */
@@ -20346,7 +20329,13 @@ body#tinymce {
   }
 }
 
-/* line 2, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 1, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner {
+  background-color: #dbe4e7;
+}
+
+/* line 4, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap {
   position: relative;
@@ -20368,7 +20357,9 @@ body#tinymce {
 .section-hero-banner .hero-wrap > img,
 .section-hero-banner .hero-wrap > video,
 .section-hero-banner .hero-wrap > figure,
-.section-hero-banner .hero-wrap > .ratio-content {
+.section-hero-banner .hero-wrap > .ratio-content,
+.section-hero-banner .hero-wrap > iframe,
+.section-hero-banner .hero-wrap > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -20383,22 +20374,94 @@ body#tinymce {
      object-fit: cover;
 }
 
-/* line 30, resources/assets/styles/common/_mixins.scss */
+/* line 32, resources/assets/styles/common/_mixins.scss */
 
-.section-hero-banner .hero-wrap > .ratio-iframe,
 .section-hero-banner .hero-wrap > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
+  min-height: 200%;
+  min-width: 200%;
 }
 
-/* line 6, resources/assets/styles/skhoop/sections/_hero.scss */
+@media (max-width: 767.98px) {
+  /* line 4, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text {
+  .section-hero-banner .hero-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* line 6, resources/assets/styles/common/_mixins.scss */
+
+  .section-hero-banner .hero-wrap::before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 149.33333%;
+  }
+
+  /* line 13, resources/assets/styles/common/_mixins.scss */
+
+  .section-hero-banner .hero-wrap > img,
+  .section-hero-banner .hero-wrap > video,
+  .section-hero-banner .hero-wrap > figure,
+  .section-hero-banner .hero-wrap > .ratio-content,
+  .section-hero-banner .hero-wrap > iframe,
+  .section-hero-banner .hero-wrap > .ratio-iframe {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    right: -9999px;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  /* line 32, resources/assets/styles/common/_mixins.scss */
+
+  .section-hero-banner .hero-wrap > iframe {
+    min-height: 200%;
+    min-width: 200%;
+  }
+
+  /* line 10, resources/assets/styles/skhoop/sections/_hero.scss */
+
+  .section-hero-banner .hero-wrap iframe {
+    min-height: 300%;
+    min-width: 300%;
+  }
+}
+
+/* line 17, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-play-btn button {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* line 21, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-play-btn button img {
+  width: 30%;
+  height: 30%;
+  left: 3px;
+  position: relative;
+}
+
+/* line 28, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-play-btn button:hover {
+  background-color: #031532;
+  border-color: #031532;
+}
+
+/* line 35, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text,
+.section-hero-banner .hero-wrap .hero-play-btn {
   height: 100%;
   width: 100%;
   padding: 2rem;
@@ -20423,44 +20486,137 @@ body#tinymce {
   color: #fff;
 }
 
-/* line 23, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 52, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-title,
-.section-hero-banner .hero-wrap .hero-text .hero-subtitle {
+.section-hero-banner .hero-wrap .hero-text .hero-subtitle,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-title,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
   text-align: center;
+  line-height: normal;
 }
 
-/* line 27, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 57, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-title {
-  margin-bottom: 1rem;
+.section-hero-banner .hero-wrap .hero-text .hero-title,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-title {
+  margin-bottom: -1rem;
   font-size: calc(2.13rem + 2.5vw);
 }
 
-/* line 33, resources/assets/styles/skhoop/sections/_hero.scss */
+@media (max-width: 767.98px) {
+  /* line 57, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-subtitle {
+  .section-hero-banner .hero-wrap .hero-text .hero-title,
+  .section-hero-banner .hero-wrap .hero-play-btn .hero-title {
+    margin-bottom: -0.5rem;
+    font-size: calc(1.65rem + 2vw);
+  }
+}
+
+/* line 68, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text .hero-subtitle,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
   font-family: "Covered By Your Grace", cursive;
-  margin-bottom: 5rem;
+  margin-bottom: calc(0.1rem + 5vw);
   font-size: calc(0.9rem + 2.5vw);
 }
 
-/* line 40, resources/assets/styles/skhoop/sections/_hero.scss */
+@media (max-width: 767.98px) {
+  /* line 68, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-btn {
+  .section-hero-banner .hero-wrap .hero-text .hero-subtitle,
+  .section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
+    font-size: calc(1.5rem + 2vw);
+    letter-spacing: 0.1px;
+    word-spacing: 3px;
+  }
+}
+
+/* line 80, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text .hero-btn,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn {
   position: relative;
 }
 
-/* line 43, resources/assets/styles/skhoop/sections/_hero.scss */
+@media (max-width: 767.98px) {
+  /* line 80, resources/assets/styles/skhoop/sections/_hero.scss */
+
+  .section-hero-banner .hero-wrap .hero-text .hero-btn,
+  .section-hero-banner .hero-wrap .hero-play-btn .hero-btn {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: calc(3rem + 6vw);
+  }
+}
+
+/* line 89, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
 .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
 .comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input[type="submit"],
 .section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit,
-.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit {
+.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input[type="submit"],
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit,
+.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit {
   background-color: #fff;
   border-color: #fff;
+  color: #031532;
   text-transform: uppercase;
+  max-width: calc(7.6rem + 10vw);
+  min-width: calc(7.6rem + 10vw);
+  font-size: calc(.4rem + .45vw);
+}
+
+@media (max-width: 767.98px) {
+  /* line 89, resources/assets/styles/skhoop/sections/_hero.scss */
+
+  .section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
+  .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
+  .comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input[type="submit"],
+  .section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit,
+  .search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit,
+  .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn,
+  .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input[type="submit"],
+  .comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input[type="submit"],
+  .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit,
+  .search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit {
+    max-width: calc(14.3rem + 10vw);
+    min-width: calc(14.3rem + 10vw);
+    font-size: calc(0.7rem + .5vw);
+  }
+}
+
+/* line 104, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text .hero-btn .btn:hover,
+.section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:hover[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:hover[type="submit"],
+.section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:hover,
+.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:hover,
+.section-hero-banner .hero-wrap .hero-text .hero-btn .btn:active,
+.section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:active[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:active[type="submit"],
+.section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:active,
+.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:active,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn:hover,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:hover[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:hover[type="submit"],
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit:hover,
+.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:hover,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn:active,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:active[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:active[type="submit"],
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit:active,
+.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:active {
+  background-color: #031532;
+  border-color: #031532;
+  color: #fff;
 }
 
 
