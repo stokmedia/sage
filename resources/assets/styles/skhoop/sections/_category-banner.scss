@@ -21,16 +21,6 @@
     @include media-breakpoint-up(sm) {
       padding: 2.8125rem 1.875rem;
     }
-
-    & > .container {
-      @include media-breakpoint-up(xl) {
-        max-width: 1210px;
-      }
-
-      @include media-breakpoint-up(xxl) {
-        max-width: 1210px;
-      }
-    }
   }
 
   &-info {
@@ -39,7 +29,7 @@
     border-radius: 0.3125rem;
     background-color: $white;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
       width: 475px;
       padding: 0.8125rem 1.563rem 1.25rem 2.5rem;
     }

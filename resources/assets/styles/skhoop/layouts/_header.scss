@@ -1,7 +1,260 @@
-.banner .nav li {
-  @extend .nav-item;
+$mobile-margin-top-menu: 3.75rem;
+
+.navbar {
+  background-color: $white;
+  padding: 0.5rem 1.875rem 0.4375rem;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0.9063rem 1rem 0.6563rem;
+  }
 }
 
-.banner .nav a {
-  @extend .nav-link;
+.navbar-brand {
+  img {
+    max-width: 5.8125rem;
+    height: auto;
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      max-width: 8.75rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: inline;
+    }
+
+    &.mobile-logo {
+      display: inline;
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  @include hamburger(28px, 22px);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: transparent;
+  }
+}
+
+.navbar-brand,
+.navbar-helper {
+  margin-left: 0;
+  margin-right: 0;
+
+  @include media-breakpoint-up(lg) {
+    width: 8.75rem;
+  }
+}
+
+.navbar-nav {
+  background-color: $white;
+
+  @include media-breakpoint-down(md) {
+    padding: 0.9375rem 1.875rem 0;
+  }
+
+  .nav-item {
+    @include media-breakpoint-down(md) {
+      border-bottom: 1px solid $green;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.dropdown {
+
+      .dropdown-toggle {
+        &::after {
+          @include media-breakpoint-down(md) {
+            display: none;
+          }
+        }
+      }
+
+      .btn-icon {
+        display: none;
+
+        @include media-breakpoint-down(md) {
+          display: block;
+          position: absolute;
+          top: 0.75rem;
+          right: 0.625rem;
+          margin: 0;
+          width: 1.5625rem;
+          height: 1.5625rem;
+          background-color: $white;
+        }
+      }
+
+      .dropdown-menu {
+        @include media-breakpoint-down(md) {
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          max-width: 23.4375rem;
+          height: 100vh !important;
+          margin-top: $mobile-margin-top-menu;
+          background-color: $white;
+          border: none;
+          border-radius: 0;
+        }
+
+        .btn-back {
+          display: none;
+
+          @include media-breakpoint-down(md) {
+            display: block;
+            padding: 0.625rem 2.5rem;
+            color: #89a8b2;
+            font-size: 1.25rem;
+            letter-spacing: 0;
+            line-height: 25px;
+            text-decoration: underline;
+          }
+        }
+
+        .navbar-nav {
+          @include media-breakpoint-down(md) {
+            background-color: $white;
+          }
+
+          .nav-item {
+            @include media-breakpoint-down(md) {
+              border-bottom: 1px solid $green;
+            }
+          }
+        }
+      }
+    }
+
+    .nav-link {
+      padding: 0.75rem 0.625rem;
+      color: $body-color;
+      font-size: 1.25rem;
+      letter-spacing: 0;
+      line-height: 25px;
+
+      @include media-breakpoint-up(lg) {
+        padding: 0 1.25rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        line-height: 24px;
+      }
+
+      &-cart {
+        position: relative;
+        top: -0.0625rem;
+        right: 0.1875rem;
+
+        img {
+          width: 1.5313rem;
+          height: auto;
+
+          @include media-breakpoint-up(lg) {
+            width: 1.7344rem;
+          }
+        }
+
+        .cart-item-count {
+          position: absolute;
+          top: 0.0625rem;
+          right: -0.75rem;
+          width: 1.25rem;
+          height: 1.25rem;
+          font-size: 0.75rem;
+          letter-spacing: 0.5px;
+          line-height: 1.25rem;
+          background-color: $lightRed;
+          border-radius: 100%;
+
+          @include media-breakpoint-up(lg) {
+            top: -1rem;
+            right: 0.3125rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 23.4375rem;
+    height: 100vh;
+    margin-top: $mobile-margin-top-menu;
+    background-color: $green;
+  }
+
+  .navbar-nav-touch {
+    padding-bottom: 1.875rem;
+
+    .navbar-nav {
+      padding-top: 0;
+      background-color: $green;
+
+      .nav-item {
+        border-bottom: 1px solid $white;
+
+        .btn-checkout {
+          max-width: 100%;
+          min-width: 100%;
+          margin: 20px 0;
+          background-color: $white;
+          border-color: $white;
+          text-transform: uppercase;
+
+          &:hover,
+          &:focus {
+            background-color: transparent;
+            border-color: $body-color;
+            color: $body-color;
+          }
+        }
+      }
+    }
+
+    .content-info {
+      padding-top: 3.125rem;
+      padding-bottom: 3.125rem;
+      background-color: $green;
+
+      .brand-footer {
+        img {
+          max-width: 5.8125rem;
+        }
+      }
+
+      .group-links {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+}
+
+.overlay-body {
+	&:after {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($black, 0.5);
+		z-index: 3;
+	}
 }

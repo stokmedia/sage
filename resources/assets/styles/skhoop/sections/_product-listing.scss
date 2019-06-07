@@ -29,8 +29,12 @@
       max-width: 100%;
     }
 
-    @include media-breakpoint-up(xxl) {
+    @include media-breakpoint-up(xl) {
       max-width: 85.625rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 98.125rem;
     }
   }
 
@@ -82,7 +86,7 @@
     }
 
     @include media-breakpoint-up(xxl) {
-      max-width: 75.625rem;
+      max-width: 90.625rem;
     }
   }
 

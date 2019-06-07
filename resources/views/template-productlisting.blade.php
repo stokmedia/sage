@@ -6,9 +6,8 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
 
-    <section class="section category-banner no-mb" style="background-image:url( <?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/category-banner.jpg );">
+    <section class="section category-banner no-mb" style="background-image:url( @asset('images/temp/category-banner.jpg') );">
       <div class="box-wrapper d-flex align-items-end">
         <div class="container">
           <div class="category-banner-info text-center text-sm-left">
@@ -43,14 +42,14 @@
                   <div class="filter-open js-filter-open">
                       Filtrera & Sortera
                       <button class="btn btn-lg btn-icon btn-icon-lg btn-default" type="button">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon/arrow-down.svg" alt="" srcset="">
+                        <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                       </button>
                   </div>
                   <div class="filter-close">
                       <a class="btn-clear" href="#" role="button">Rensa Alla</a>
                       <button class="btn btn-primary text-uppercase js-filter-close" type="button">Uppdatera</button>
                       <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon/filter-close.svg" alt="" srcset="">
+                        <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
                       </button>
                   </div>
               </div>
@@ -65,7 +64,7 @@
                 <div class="column">
                     <button class="btn btn-primary js-filter-close" type="button">Uppdatera</button>
                     <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
-                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon/filter-close.svg" alt="" srcset="">
+                      <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
                     </button>
                 </div>
                 <hr />
@@ -246,8 +245,8 @@
               <div class="product is-big">
                 <a href="#" class="product-wrapper bg-white d-block">
                   <figure class="product-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt.jpeg" />
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt1.jpeg" class="visible-on-hover"/>
+                    <img src="@asset('images/temp/erika-skirt.jpeg')" />
+                    <img src="@asset('images/temp/erika-skirt1.jpeg')" class="visible-on-hover"/>
                   </figure>
                 </a>
                 <a href="#" class="product-details bg-white d-block text-center">
@@ -259,8 +258,8 @@
             <div class="product is-small">
               <a href="#" class="product-wrapper bg-white d-block">
                 <figure class="product-image">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt.jpeg" />
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt1.jpeg" class="visible-on-hover"/>
+                  <img src="@asset('images/temp/erika-skirt.jpeg')" />
+                  <img src="@asset('images/temp/erika-skirt1.jpeg')" class="visible-on-hover"/>
                 </figure>
               </a>
               <a href="#" class="product-details bg-white d-block text-center">
@@ -272,8 +271,8 @@
               <a href="#" class="product-wrapper bg-white d-block">
                 <div class="product-status text-center"><span>REA</span></div>
                 <figure class="product-image">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt.jpeg" />
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt1.jpeg" class="visible-on-hover"/>
+                  <img src="@asset('images/temp/erika-skirt.jpeg')" />
+                  <img src="@asset('images/temp/erika-skirt1.jpeg')" class="visible-on-hover"/>
                 </figure>
               </a>
               <a href="#" class="product-details bg-white d-block text-center">
@@ -285,8 +284,8 @@
               <a href="#" class="product-wrapper bg-white d-block">
                 <div class="product-status text-center"><span>Slutsåld</span></div>
                 <figure class="product-image">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt.jpeg" />
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt1.jpeg" class="visible-on-hover"/>
+                  <img src="@asset('images/temp/erika-skirt.jpeg')" />
+                  <img src="@asset('images/temp/erika-skirt1.jpeg')" class="visible-on-hover"/>
                 </figure>
               </a>
               <a href="#" class="product-details bg-white d-block text-center">
@@ -297,8 +296,8 @@
             <div class="product is-small">
               <a href="#" class="product-wrapper bg-white d-block">
                 <figure class="product-image">
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt.jpeg" />
-                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt1.jpeg" class="visible-on-hover"/>
+                  <img src="@asset('images/temp/erika-skirt.jpeg')" />
+                  <img src="@asset('images/temp/erika-skirt1.jpeg')" class="visible-on-hover"/>
                 </figure>
               </a>
               <a href="#" class="product-details bg-white d-block text-center">
@@ -310,8 +309,8 @@
               <div class="product is-small">
                 <a href="#" class="product-wrapper bg-white d-block">
                   <figure class="product-image">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt.jpeg" />
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/erika-skirt1.jpeg" class="visible-on-hover"/>
+                    <img src="@asset('images/temp/erika-skirt.jpeg')" />
+                    <img src="@asset('images/temp/erika-skirt1.jpeg')" class="visible-on-hover"/>
                   </figure>
                 </a>
                 <a href="#" class="product-details bg-white d-block text-center">
