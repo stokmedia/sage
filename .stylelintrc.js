@@ -4,9 +4,9 @@ module.exports = {
     'no-empty-source': null,
     'string-quotes': 'double',
   
-    'no-descending-specificity': 'never',
-    'selector-pseudo-element-colon-notation': 'never',
-    'indentation': 'never',
+    'no-descending-specificity': null,
+    'selector-pseudo-element-colon-notation': null,
+    'indentation': null,
 
     'at-rule-no-unknown': [
       true,
