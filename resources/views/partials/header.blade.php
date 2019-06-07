@@ -12,105 +12,55 @@
             <span></span>
         </button>
         <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarNav">
-            {!! App::desktopNavigation() !!}
-            
-            {{--TODO: Remove comments when done--}}
-            {{--<ul class="navbar-nav m-auto">--}}
-                {{--<li class="nav-item dropdown">--}}
-                    {{--<a class="nav-link dropdown-toggle" href="http://localhost:8080" role="button">--}}
-                        {{--Kjolar--}}
-                    {{--</a>--}}
-                    {{--<button class="btn btn-icon btn-icon-sm" type="button" data-toggle="dropdown">--}}
-                        {{--<img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">--}}
-                    {{--</button>--}}
-                    {{--<div class="dropdown-menu">--}}
-                        {{--<a class="btn-back" href="#" role="button">Back</a>--}}
-                        {{--<ul class="navbar-nav m-auto">--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="#">Toppar</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="#">Klänningar</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="#">Byxor</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="nav-item">--}}
-                                {{--<a class="nav-link" href="#">Funktion & Regn</a>--}}
-                            {{--</li>--}}
-                        {{--</ul>--}}
-                    {{--</div>--}}
-                {{--</li>--}}
-                {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="#">Toppar</a>--}}
-                {{--</li>--}}
-                {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="#">Klänningar</a>--}}
-                {{--</li>--}}
-                {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="#">Byxor</a>--}}
-                {{--</li>--}}
-                {{--<li class="nav-item">--}}
-                    {{--<a class="nav-link" href="#">Funktion & Regn</a>--}}
-                {{--</li>--}}
-            {{--</ul>--}}
-            <div class="navbar-nav-touch m-auto d-block d-lg-none">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://localhost:8080" role="button">
-                            About Us
-                        </a>
-                        <button class="btn btn-icon btn-icon-sm" type="button" data-toggle="dropdown">
-                            <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="btn-back" href="#" role="button">Back</a>
-                            <ul class="navbar-nav m-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Toppar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Klänningar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Byxor</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Funktion & Regn</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://localhost:8080" role="button">
-                            Contact
-                        </a>
-                        <button class="btn btn-icon btn-icon-sm" type="button" data-toggle="dropdown">
-                            <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="btn-back" href="#" role="button">Back</a>
-                            <ul class="navbar-nav m-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Toppar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Klänningar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Byxor</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Funktion & Regn</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-lg btn-outline-primary btn-checkout" type="button">Go to Check out
-                        </button>
-                    </li>
+            @if($desktop_menu)
+                <ul class="navbar-nav m-auto">
+                    @foreach($desktop_menu as $menuItem)
+                        @if($menuItem->menu_item_parent !== '0')
+                            @continue
+                        @endif
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ $menuItem->url  }}">{{ $menuItem->title }}</a>
+                        </li>
+                    @endforeach
                 </ul>
+            @endif
+
+            <div class="navbar-nav-touch m-auto d-block d-lg-none">
+                @if($mobile_menu)
+                    <ul class="navbar-nav m-auto">
+                        @foreach($mobile_menu as $menuItem)
+                            @php App::cl($menuItem) @endphp
+
+                            @if($menuItem->menu_item_parent !== '0')
+                                @continue
+                            @endif
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="{{ $menuItem->url  }}"
+                                   role="button">{{ $menuItem->title }}</a>
+                                <button class="btn btn-icon btn-icon-sm" type="button" data-toggle="dropdown">
+                                    <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="btn-back" href="#" role="button">Back</a>
+                                    <ul class="navbar-nav m-auto">
+                                        @foreach($mobile_menu as $subMenuItem)
+                                            @if($menuItem->ID != $subMenuItem->menu_item_parent)
+                                                @continue
+                                            @endif
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ $subMenuItem->url }}">{{ $subMenuItem->title }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
+
                 <div class="content-info">
                     <div class="brand-container">
                         <a href="#" class="brand-footer">

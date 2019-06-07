@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use App\Classes\Navigation;
 
 class App extends Controller
 {
@@ -10,6 +11,14 @@ class App extends Controller
     use Partials\Content;
 
     protected $acf = true;
+
+    public function desktopMenu() {
+        return Navigation::desktopMenu();
+    }
+
+    public function mobileMenu(){
+        return Navigation::mobileMenu();
+    }
 
     public function siteName()
     {
@@ -34,26 +43,6 @@ class App extends Controller
             return __( 'Not Found', 'sage' );
         }
         return get_the_title();
-    }
-
-    public static function desktopNavigation()
-    {
-        if ( !has_nav_menu( 'header_navigation' ) ) {
-            return null;
-
-        }
-
-        // Add or modify classes
-        $menu = wp_nav_menu( [
-            'theme_location' => 'header_navigation',
-            'depth' => 1,
-            'echo' => false,
-            'menu_class' => 'navbar-nav m-auto' ] );
-
-        $menu = str_replace( 'menu-item', 'nav-item menu-item', $menu );
-        $menu = str_replace( 'href', 'class="nav-link" href', $menu );
-
-        return $menu;
     }
     /*
         // TODO: Could we use a general function to generate the image tag in the templates for Centra Product Images
