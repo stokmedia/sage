@@ -19846,5 +19846,122 @@ body#tinymce {
   }
 }
 
+/* line 2, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap {
+  position: relative;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.section-hero-banner .hero-wrap::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 38.88889%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.section-hero-banner .hero-wrap > img,
+.section-hero-banner .hero-wrap > video,
+.section-hero-banner .hero-wrap > figure,
+.section-hero-banner .hero-wrap > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.section-hero-banner .hero-wrap > .ratio-iframe,
+.section-hero-banner .hero-wrap > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 6, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+}
+
+/* line 23, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text .hero-title,
+.section-hero-banner .hero-wrap .hero-text .hero-subtitle {
+  text-align: center;
+}
+
+/* line 27, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text .hero-title {
+  margin-bottom: 1rem;
+  font-size: calc(2.13rem + 2.5vw);
+}
+
+/* line 33, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text .hero-subtitle {
+  font-family: "Covered By Your Grace", cursive;
+  margin-bottom: 5rem;
+  font-size: calc(0.9rem + 2.5vw);
+}
+
+/* line 40, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text .hero-btn {
+  position: relative;
+}
+
+/* line 43, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
+.section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input[type="submit"],
+.section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit,
+.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit {
+  background-color: #fff;
+  border-color: #fff;
+  text-transform: uppercase;
+}
+
 
 /*# sourceMappingURL=main.css.map*/

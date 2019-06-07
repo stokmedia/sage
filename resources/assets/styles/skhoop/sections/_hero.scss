@@ -1,0 +1,51 @@
+.section-hero-banner {
+    .hero-wrap {
+        position: relative;
+        @include aspect-ratio(1440, 560);
+
+        .hero-text {
+            height: 100%;
+            width: 100%;
+            padding: 2rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            color: $white;
+    
+            .hero-title, .hero-subtitle {
+                text-align: center;
+            }
+    
+            .hero-title {
+                margin-bottom: 1rem;
+                // @include calcRem(70px);
+                font-size: calc(2.13rem + 2.5vw);
+            }
+    
+            .hero-subtitle {
+                font-family: $font-family-cbyg;
+                margin-bottom: 5rem;
+                // @include calcRem(50px);
+                font-size: calc(0.9rem + 2.5vw);
+            }
+
+            .hero-btn {
+                position: relative;
+
+                .btn {
+                    background-color: $body-bg;
+                    border-color: $body-bg;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
