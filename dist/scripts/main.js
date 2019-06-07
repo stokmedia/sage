@@ -7374,6 +7374,7 @@ Nav.overlay = function() {
   var cartOverlay = $('.js-cart-overlay');
   var navBarCollapse = $('#navbarNav');
 
+  // Cart Overlay
   cartOverlay.hover(function() {
     $('body').addClass('cart-overlay');
   }, function(){
