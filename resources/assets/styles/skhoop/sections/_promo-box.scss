@@ -11,6 +11,11 @@
           background-color: $color;
         }
       }
+
+      @include media-breakpoint-down(sm) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
     }
 
     &-item-row {

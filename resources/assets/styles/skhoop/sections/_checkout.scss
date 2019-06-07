@@ -6,8 +6,6 @@
     @include media-breakpoint-up(md) {
       width: 50%;
       min-height: 76.625rem;
-      padding-right: 0;
-      padding-left: 0;
     }
 
     &.has-bg {
@@ -27,11 +25,28 @@
   }
 
   .product-shipping {
-    max-width: 29.875rem;
+    max-width: 20rem;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 29.875rem;
+    }
   }
 
   .delivery-payment {
-    max-width: 21.875rem;
+    max-width: 20rem;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 21.875rem;
+    }
+  }
+
+  .checkout-iframe {
+    width: 100%;
+    margin-top: 1.875rem;
+    
+    @include media-breakpoint-up(md) {
+      margin-top: 1.875rem;
+    }
   }
 
   .h3 {
@@ -105,6 +120,12 @@
       @include media-breakpoint-up(md) {
         padding-top: 0.875rem;
         padding-bottom: 0.875rem;
+      }
+
+      &:last-child {
+        @include media-breakpoint-up(md) {
+          border-bottom: 1px solid $white;
+        }
       }
     }
   }

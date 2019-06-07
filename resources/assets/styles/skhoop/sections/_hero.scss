@@ -1,9 +1,38 @@
 .section-hero-banner {
+    background-color: $lightGreen;
+
     .hero-wrap {
         position: relative;
         @include aspect-ratio(1440, 560);
+        @include media-breakpoint-down(sm) {
+            @include aspect-ratio(375, 560);
 
-        .hero-text {
+            iframe {
+                min-height: 300%;
+                min-width: 300%;
+            }
+        }
+
+        .hero-play-btn {
+            button {
+                width: 5rem;
+                height: 5rem;
+
+                img {
+                    width: 30%;
+                    height: 30%;
+                    left: 3px;
+                    position: relative;
+                }
+
+                &:hover {
+                    background-color: $body-color;
+                        border-color: $body-color;
+                }
+            }
+        }
+
+        .hero-text, .hero-play-btn {
             height: 100%;
             width: 100%;
             padding: 2rem;
@@ -22,28 +51,62 @@
     
             .hero-title, .hero-subtitle {
                 text-align: center;
+                line-height: normal;
             }
     
             .hero-title {
-                margin-bottom: 1rem;
-                // @include calcRem(70px);
+                margin-bottom: -1rem;
                 font-size: calc(2.13rem + 2.5vw);
+
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: -0.5rem;
+                    font-size: calc(1.65rem + 2vw);
+                }               
             }
     
             .hero-subtitle {
                 font-family: $font-family-cbyg;
-                margin-bottom: 5rem;
-                // @include calcRem(50px);
+                margin-bottom: calc(0.1rem + 5vw);
                 font-size: calc(0.9rem + 2.5vw);
+                
+                @include media-breakpoint-down(sm) {
+                    font-size: calc(1.5rem + 2vw);
+                    letter-spacing: 0.1px;
+                    word-spacing: 3px;
+                }
             }
 
             .hero-btn {
                 position: relative;
 
+                @include media-breakpoint-down(sm) {
+                    position: absolute;
+                    bottom: 0;
+                    margin-bottom: calc(3rem + 6vw);
+                }
+
                 .btn {
                     background-color: $body-bg;
                     border-color: $body-bg;
+                    color: $body-color;
                     text-transform: uppercase;
+                    max-width: calc(7.6rem + 10vw);
+                    min-width: calc(7.6rem + 10vw);
+                    font-size: calc(.4rem + .45vw);
+                    border-radius: 50px;
+
+                    @include media-breakpoint-down(sm) {
+                        max-width: calc(14.3rem + 10vw);
+                        min-width: calc(14.3rem + 10vw);
+                        font-size: calc(0.7rem + .5vw);
+                    }
+
+                    &:hover, &:active {
+                        background-color: $body-color;
+                        border-color: $body-color;
+                        color: $body-bg;
+                    }
                 }
             }
         }
