@@ -25,6 +25,11 @@ trait Content
         }
         return $data;
     }
+
+    public static function hasTitle( $data ) 
+    {
+        return ($data->section_title && $data->show_section_title);
+    }
     
     public static function cms_hero_banner( $data )
     {   
@@ -59,8 +64,7 @@ trait Content
     public static function cms_text_and_image( $data )
     {
         $newData = (object) $data;
-        $hasTitle = ($newData->section_title && $newData->show_section_title);
-        $hasContent = ( $hasTitle
+        $hasContent = ( self::hasTitle($newData)
             || $newData->text
             || $newData->link
             || $newData->image
@@ -69,7 +73,7 @@ trait Content
         return (object) [
             'acf_fc_layout' => $newData->acf_fc_layout,
             'hasContent' => $hasContent,
-            'title' => $hasTitle ? $newData->section_title : '',
+            'title' => self::hasTitle($newData) ? $newData->section_title : '',
             'text' => $newData->text ?? '',
             'link' => is_array($newData->link) ? (object) $newData->link : false,
             'image' => $newData->image ? wp_get_attachment_image( $newData->image['ID'], 'full' ) : '',
@@ -85,7 +89,6 @@ trait Content
     public static function cms_three_promo( $data )
     {  
         $newData = (object) $data;
-        $hasTitle = ($newData->section_title && $newData->show_section_title);
         $items = [];
 
         foreach( $newData->items as $item ) {
@@ -135,7 +138,7 @@ trait Content
 
         return (object) [
             'acf_fc_layout' => $newData->acf_fc_layout,
-            'title' => $hasTitle ? $newData->section_title : '',
+            'title' => self::hasTitle($newData) ? $newData->section_title : '',
             'items' => $items
         ];
     }  
@@ -154,6 +157,46 @@ trait Content
 
         return $data;
     }
+
+    public static function cms_resellers( $data )
+    {
+        $newData = (object) $data;
+       
+        // Get reseller lists
+        $resellers = self::resellerLists();
+        
+        // Add items to $newData
+        if( $resellers ) {
+            $newData->content[0] = (object) array(
+                'label' => $newData->sweden_label,
+                'posts' => (object) array_filter( array_map(function($post) {
+                    return ( strtolower($post['country']) === 'sweden' ) ? $post : null;
+                }, $resellers ))
+            );
+
+            $newData->content[1] = (object) array(
+                'label' => $newData->global_label,
+                'posts' => (object) array_filter( array_map(function($post) {
+                    return ( strtolower($post['country']) !== 'sweden' ) ? $post : null;
+                }, $resellers ))
+            );
+
+            $newData->content[2] = (object) array(
+                'label' => $newData->agent_and_distributor_label,
+                'posts' => (object) array_filter( array_map(function($post) {
+                    return ( !empty($post['is_agent']) ) ? $post : null;
+                }, $resellers ))
+            );       
+        }
+
+        return (object) [
+            'acf_fc_layout' => $newData->acf_fc_layout,
+            'title' => self::hasTitle($newData) ? $newData->section_title : '',
+            'preamble' => $newData->preamble,
+            'items' => $newData->content,
+            'count' => $newData->count
+        ];        
+    }      
     
     // Delete this after dev
     public static function pr($data) {
