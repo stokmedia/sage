@@ -21078,27 +21078,38 @@ body#tinymce {
   background-color: rgba(218, 180, 180, 0.25);
 }
 
-/* line 16, resources/assets/styles/skhoop/sections/_promo-box.scss */
+@media (max-width: 767.98px) {
+  /* line 6, resources/assets/styles/skhoop/sections/_promo-box.scss */
+
+  .promo-box-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* line 21, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item-row {
   min-height: 210px;
 }
 
 @media (min-width: 576px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 21, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-item-row {
     min-height: 270px;
   }
 }
 
-/* line 23, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 28, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item-row .btn-icon {
   background-color: #fff;
 }
 
-/* line 28, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 33, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-description {
   font-size: 0.75rem;
@@ -21109,14 +21120,14 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 28, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 33, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-description {
     margin-bottom: 2.625rem;
   }
 }
 
-/* line 40, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 45, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-image {
   position: relative;
@@ -21165,7 +21176,7 @@ body#tinymce {
   width: 100%;
 }
 
-/* line 44, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 49, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-figure {
   max-width: 100px;
@@ -21173,7 +21184,7 @@ body#tinymce {
 }
 
 @media (min-width: 1240px) {
-  /* line 44, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 49, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-figure {
     max-width: 129px;
