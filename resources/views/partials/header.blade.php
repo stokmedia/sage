@@ -41,7 +41,7 @@
                                     <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="nav-link" href="#">Klänningar</a>
+                                    <a class="btn-back" href="#">Back</a>
                                     <ul class="navbar-nav m-auto">
                                         @foreach($mobile_menu as $subMenuItem)
                                             @if($menuItem->ID != $subMenuItem->menu_item_parent)
@@ -57,23 +57,30 @@
                                 </div>
                             </li>
                         @endforeach
+                        <li class="nav-item">
+                            <button class="btn btn-lg btn-outline-primary btn-checkout" type="button">Go to Check out
+                            </button>
+                        </li>
                     </ul>
                 @endif
 
-                <div class="dropdown-menu">
+                <div class="content-info">
                     <div class="brand-container">
                         <a href="#" class="brand-footer">
-                            <img src="@asset('images/company-logo-mobile.svg')" class="" alt=""/>
+                            <img src="http://skhoop.stage.stokmedia.eu/wp-content/themes/skhoop/dist/images/company-logo-mobile.svg"
+                                 class="" alt="">
                         </a>
                         <ul class="group-links">
                             <li>
                                 <a href="#">
-                                    <img src="@asset('images/icon/icon-insta.svg')" class="" alt=""/>
+                                    <img src="http://skhoop.stage.stokmedia.eu/wp-content/themes/skhoop/dist/images/icon/icon-insta.svg"
+                                         class="" alt="">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="@asset('images/icon/icon-facebook.svg')" class="" alt=""/>
+                                    <img src="http://skhoop.stage.stokmedia.eu/wp-content/themes/skhoop/dist/images/icon/icon-facebook.svg"
+                                         class="" alt="">
                                 </a>
                             </li>
                         </ul>
@@ -83,11 +90,71 @@
         </div>
         <div class="navbar-helper order-2 order-lg-2">
             <ul class="navbar-nav float-lg-right p-0">
-                <li class="nav-item">
+                <li class="nav-item nav-item-cart js-cart-overlay">
                     <a class="nav-link nav-link-cart" href="#">
                         <img src="@asset('images/icon/icon_cart.svg')" alt="" srcset="">
                         <span class="cart-item-count text-center">1</span>
                     </a>
+
+                    <div class="cart">
+
+                        {{-- Desktop Cart --}}
+                        <div class="cart-wrapper d-none d-lg-block">
+                            <div class="cart-title h3 text-center">Varan är tillagd!</div>
+                            <div class="cart-list">
+                                <ul class="cart-items p-0">
+                                    <li class="item">
+                                        @include('partials.product-details-inline', ['is_link'=>true, 'has_close'=>true])
+                                    </li>
+                                    <li class="item">
+                                        @include('partials.product-details-inline', ['is_link'=>true, 'has_close'=>true])
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cart-summary">
+                                <div class="summary">
+                                    <div class="summary-group">
+                                        <div class="summary-item d-flex">
+                                            <div class="title w-50">Totalt</div>
+                                            <div class="price w-50 text-right">799 kr</div>
+                                        </div>
+                                        <div class="summary-item d-flex">
+                                            <div class="title w-50">Moms</div>
+                                            <div class="price w-50 text-right">46 kr</div>
+                                        </div>
+                                        <div class="summary-item d-flex">
+                                            <div class="title w-50">Frakt</div>
+                                            <div class="price w-50 text-right">0 kr</div>
+                                        </div>
+                                        <div class="summary-item d-flex">
+                                            <div class="title w-50">Sub Totalt</div>
+                                            <div class="price w-50 text-right"><strong>799 kr</strong></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-buttons">
+                                <button class="btn btn-lg btn-primary" type="button">Till kassan</button>
+                                <button class="btn btn-lg btn-outline-primary" type="button">Shoppa mer</button>
+                            </div>
+                        </div>
+
+                        {{-- Mobile Cart --}}
+                        <div class="cart-wrapper is-mobile d-block d-lg-none">
+                            <div class="cart-title h3 text-center">Varan är tillagd!</div>
+                            <div class="cart-list">
+                                <ul class="cart-items p-0">
+                                    <li class="item">
+                                        @include('partials.product-details-inline')
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cart-buttons">
+                                <button class="btn btn-lg btn-primary" type="button">Till kassan</button>
+                                <button class="btn btn-lg btn-outline-primary" type="button">Shoppa mer</button>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
