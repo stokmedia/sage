@@ -6,7 +6,7 @@
   @endif
     <div class="image">
       <figure>
-        <img src="@asset('images/temp/erika-skirt1.jpeg')" alt="">
+        <img src="@asset('images/temp/erika-skirt.jpeg')" alt="">
       </figure>
     </div>
   @if($is_link)

@@ -21364,5 +21364,126 @@ body#tinymce {
   }
 }
 
+/* line 1, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+.thankyou-details {
+  position: relative;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+/* line 6, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+.thankyou-details::after,
+.thankyou-details::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+}
+
+/* line 15, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+.thankyou-details .h3 {
+  line-height: normal;
+  margin-bottom: 1.4375rem;
+}
+
+@media (max-width: 991.98px) {
+  /* line 15, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+  .thankyou-details .h3 {
+    margin-bottom: 0.625rem;
+  }
+}
+
+/* line 24, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+.thankyou-details::after {
+  background-color: #dbe4e7;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 767.98px) {
+  /* line 24, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+  .thankyou-details::after {
+    display: none;
+  }
+}
+
+/* line 34, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+.thankyou-details::before {
+  background-color: #b7cad0;
+  right: 0;
+  top: 0;
+}
+
+@media (max-width: 767.98px) {
+  /* line 34, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+  .thankyou-details::before {
+    width: 100%;
+  }
+}
+
+/* line 44, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+.thankyou-details .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 49, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+.thankyou-details .product-details-inline {
+  margin-bottom: 2.1875rem;
+}
+
+@media (max-width: 767.98px) {
+  /* line 49, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+  .thankyou-details .product-details-inline {
+    margin-bottom: 3.125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 57, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+  .thankyou-details .summary {
+    max-width: 19.0625rem;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 57, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+  .thankyou-details .summary {
+    max-width: 30.3125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 68, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+  .thankyou-details .summary-small {
+    max-width: 19.25rem;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 68, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
+
+  .thankyou-details .summary-small {
+    max-width: 31.375rem;
+  }
+}
+
 
 /*# sourceMappingURL=main.css.map*/
