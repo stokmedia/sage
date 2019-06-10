@@ -12,6 +12,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
+import { carousels } from './components/carousels';
 
 // Require Components
 require('./components/auto-padding');
@@ -34,6 +35,6 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => {
   routes.loadEvents();
-  $('.selected-product-carousel').flickity();
+  carousels.init();
   $('.resellers-table').resellersTable();
 });
