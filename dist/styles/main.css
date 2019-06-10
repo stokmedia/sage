@@ -19042,7 +19042,7 @@ https://flickity.metafizzy.co
   width: 1.75rem;
 }
 
-/* line 353, resources/assets/styles/common/_mixins.scss */
+/* line 382, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span {
   background-color: currentColor;
@@ -19067,31 +19067,31 @@ https://flickity.metafizzy.co
   width: 28px;
 }
 
-/* line 365, resources/assets/styles/common/_mixins.scss */
+/* line 394, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span:nth-child(1) {
   top: 0;
 }
 
-/* line 369, resources/assets/styles/common/_mixins.scss */
+/* line 398, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span:nth-child(2) {
   top: calc(50% - 1px);
 }
 
-/* line 373, resources/assets/styles/common/_mixins.scss */
+/* line 402, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span:nth-child(3) {
   top: calc(50% + 8px);
 }
 
-/* line 378, resources/assets/styles/common/_mixins.scss */
+/* line 407, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* line 385, resources/assets/styles/common/_mixins.scss */
+/* line 414, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler[aria-expanded=true] span:nth-child(1) {
   -webkit-transform: translateY(9px) rotate(45deg);
@@ -19099,13 +19099,13 @@ https://flickity.metafizzy.co
           transform: translateY(9px) rotate(45deg);
 }
 
-/* line 389, resources/assets/styles/common/_mixins.scss */
+/* line 418, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler[aria-expanded=true] span:nth-child(2) {
   opacity: 0;
 }
 
-/* line 393, resources/assets/styles/common/_mixins.scss */
+/* line 422, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler[aria-expanded=true] span:nth-child(3) {
   -webkit-transform: translateY(-9px) rotate(-45deg);
@@ -20368,7 +20368,6 @@ body#tinymce {
 .product-price {
   margin-top: -0.4375rem;
   font-size: 0.75rem;
-  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
@@ -20382,7 +20381,7 @@ body#tinymce {
   }
 }
 
-/* line 247, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 246, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big {
   -webkit-box-flex: 0;
@@ -20392,7 +20391,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 247, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 246, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big {
     -webkit-box-flex: 0;
@@ -20402,35 +20401,35 @@ body#tinymce {
   }
 }
 
-/* line 250, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 249, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 250, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 249, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big .product-wrapper {
     padding: 6.25rem 2.5rem 4.6875rem;
   }
 }
 
-/* line 258, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 257, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 258, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 257, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big .product-details {
     padding: 0 2.5rem 1.5625rem;
   }
 }
 
-/* line 267, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 266, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small {
   -webkit-box-flex: 0;
@@ -20440,7 +20439,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 267, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 266, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small {
     -webkit-box-flex: 0;
@@ -20450,48 +20449,48 @@ body#tinymce {
   }
 }
 
-/* line 270, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 269, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 270, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 269, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small .product-wrapper {
     padding: 4.6875rem 2.3438rem 2.8125rem;
   }
 }
 
-/* line 278, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 277, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 278, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 277, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small .product-details {
     padding: 0 2.3438rem 1.5625rem;
   }
 }
 
-/* line 289, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 288, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-status {
   background-color: #d45656;
   color: #fff;
 }
 
-/* line 294, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 293, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-price {
   color: #d45656;
 }
 
-/* line 297, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 296, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-price span {
   margin-right: 0.3125rem;
@@ -20500,21 +20499,21 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 297, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 296, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-sale .product-price span {
     margin-right: 1.25rem;
   }
 }
 
-/* line 310, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 309, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-oos .product-status {
   background-color: #b7cad0;
   color: #fff;
 }
 
-/* line 315, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 314, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-oos .product-image {
   opacity: 0.5;
@@ -21199,20 +21198,10 @@ body#tinymce {
 
 .section-hero-banner .hero-wrap {
   position: relative;
-  position: relative;
   overflow: hidden;
 }
 
-/* line 6, resources/assets/styles/common/_mixins.scss */
-
-.section-hero-banner .hero-wrap::before {
-  display: block;
-  content: " ";
-  width: 100%;
-  padding-top: 38.88889%;
-}
-
-/* line 13, resources/assets/styles/common/_mixins.scss */
+/* line 53, resources/assets/styles/common/_mixins.scss */
 
 .section-hero-banner .hero-wrap > img,
 .section-hero-banner .hero-wrap > video,
@@ -21234,7 +21223,7 @@ body#tinymce {
      object-fit: cover;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 72, resources/assets/styles/common/_mixins.scss */
 
 .section-hero-banner .hero-wrap > iframe {
   min-height: 200%;
@@ -21242,16 +21231,76 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 4, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 7, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap {
+  .section-hero-banner .hero-wrap iframe {
+    min-height: 300%;
+    min-width: 300%;
+  }
+}
+
+/* line 13, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-background {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.section-hero-banner .hero-wrap .hero-background::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 38.88889%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.section-hero-banner .hero-wrap .hero-background > img,
+.section-hero-banner .hero-wrap .hero-background > video,
+.section-hero-banner .hero-wrap .hero-background > figure,
+.section-hero-banner .hero-wrap .hero-background > .ratio-content,
+.section-hero-banner .hero-wrap .hero-background > iframe,
+.section-hero-banner .hero-wrap .hero-background > .ratio-iframe {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 32, resources/assets/styles/common/_mixins.scss */
+
+.section-hero-banner .hero-wrap .hero-background > iframe {
+  min-height: 200%;
+  min-width: 200%;
+}
+
+@media (max-width: 767.98px) {
+  /* line 13, resources/assets/styles/skhoop/sections/_hero.scss */
+
+  .section-hero-banner .hero-wrap .hero-background {
     position: relative;
     overflow: hidden;
   }
 
   /* line 6, resources/assets/styles/common/_mixins.scss */
 
-  .section-hero-banner .hero-wrap::before {
+  .section-hero-banner .hero-wrap .hero-background::before {
     display: block;
     content: " ";
     width: 100%;
@@ -21260,12 +21309,12 @@ body#tinymce {
 
   /* line 13, resources/assets/styles/common/_mixins.scss */
 
-  .section-hero-banner .hero-wrap > img,
-  .section-hero-banner .hero-wrap > video,
-  .section-hero-banner .hero-wrap > figure,
-  .section-hero-banner .hero-wrap > .ratio-content,
-  .section-hero-banner .hero-wrap > iframe,
-  .section-hero-banner .hero-wrap > .ratio-iframe {
+  .section-hero-banner .hero-wrap .hero-background > img,
+  .section-hero-banner .hero-wrap .hero-background > video,
+  .section-hero-banner .hero-wrap .hero-background > figure,
+  .section-hero-banner .hero-wrap .hero-background > .ratio-content,
+  .section-hero-banner .hero-wrap .hero-background > iframe,
+  .section-hero-banner .hero-wrap .hero-background > .ratio-iframe {
     position: absolute;
     top: 0;
     left: -9999px;
@@ -21282,46 +21331,22 @@ body#tinymce {
 
   /* line 32, resources/assets/styles/common/_mixins.scss */
 
-  .section-hero-banner .hero-wrap > iframe {
+  .section-hero-banner .hero-wrap .hero-background > iframe {
     min-height: 200%;
     min-width: 200%;
   }
 
-  /* line 10, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 26, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap iframe {
+  .section-hero-banner .hero-wrap .hero-background iframe {
     min-height: 300%;
     min-width: 300%;
   }
 }
 
-/* line 17, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 34, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-play-btn button {
-  width: 5rem;
-  height: 5rem;
-}
-
-/* line 21, resources/assets/styles/skhoop/sections/_hero.scss */
-
-.section-hero-banner .hero-wrap .hero-play-btn button img {
-  width: 30%;
-  height: 30%;
-  left: 3px;
-  position: relative;
-}
-
-/* line 28, resources/assets/styles/skhoop/sections/_hero.scss */
-
-.section-hero-banner .hero-wrap .hero-play-btn button:hover {
-  background-color: #031532;
-  border-color: #031532;
-}
-
-/* line 35, resources/assets/styles/skhoop/sections/_hero.scss */
-
-.section-hero-banner .hero-wrap .hero-text,
-.section-hero-banner .hero-wrap .hero-play-btn {
+.section-hero-banner .hero-wrap .hero-text {
   height: 100%;
   width: 100%;
   padding: 2rem;
@@ -21346,29 +21371,25 @@ body#tinymce {
   color: #fff;
 }
 
-/* line 52, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 51, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-title,
-.section-hero-banner .hero-wrap .hero-text .hero-subtitle,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-title,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
+.section-hero-banner .hero-wrap .hero-text .hero-subtitle {
   text-align: center;
   line-height: normal;
 }
 
-/* line 57, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 56, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-title,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-title {
+.section-hero-banner .hero-wrap .hero-text .hero-title {
   margin-bottom: -1rem;
   font-size: calc(2.13rem + 2.5vw);
 }
 
 @media (max-width: 767.98px) {
-  /* line 57, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 56, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap .hero-text .hero-title,
-  .section-hero-banner .hero-wrap .hero-play-btn .hero-title {
+  .section-hero-banner .hero-wrap .hero-text .hero-title {
     margin-bottom: -0.5rem;
     font-size: calc(1.65rem + 2vw);
   }
@@ -21376,8 +21397,7 @@ body#tinymce {
 
 /* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-subtitle,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
+.section-hero-banner .hero-wrap .hero-text .hero-subtitle {
   font-family: "Covered By Your Grace", cursive;
   margin-bottom: calc(0.1rem + 5vw);
   font-size: calc(0.9rem + 2.5vw);
@@ -21386,8 +21406,7 @@ body#tinymce {
 @media (max-width: 767.98px) {
   /* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap .hero-text .hero-subtitle,
-  .section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
+  .section-hero-banner .hero-wrap .hero-text .hero-subtitle {
     font-size: calc(1.5rem + 2vw);
     letter-spacing: 0.1px;
     word-spacing: 3px;
@@ -21396,16 +21415,14 @@ body#tinymce {
 
 /* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-btn,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn {
+.section-hero-banner .hero-wrap .hero-text .hero-btn {
   position: relative;
 }
 
 @media (max-width: 767.98px) {
   /* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap .hero-text .hero-btn,
-  .section-hero-banner .hero-wrap .hero-play-btn .hero-btn {
+  .section-hero-banner .hero-wrap .hero-text .hero-btn {
     position: absolute;
     bottom: 0;
     margin-bottom: calc(3rem + 6vw);
@@ -21418,12 +21435,7 @@ body#tinymce {
 .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
 .comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input[type="submit"],
 .section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit,
-.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input[type="submit"],
-.comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input[type="submit"],
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit,
-.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit {
+.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit {
   background-color: #fff;
   border-color: #fff;
   color: #031532;
@@ -21441,12 +21453,7 @@ body#tinymce {
   .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
   .comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input[type="submit"],
   .section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit,
-  .search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit,
-  .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn,
-  .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input[type="submit"],
-  .comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input[type="submit"],
-  .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit,
-  .search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit {
+  .search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit {
     max-width: calc(14.3rem + 10vw);
     min-width: calc(14.3rem + 10vw);
     font-size: calc(0.7rem + .5vw);
@@ -21464,30 +21471,62 @@ body#tinymce {
 .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:active[type="submit"],
 .comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:active[type="submit"],
 .section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:active,
-.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:active,
-.section-hero-banner .hero-wrap .hero-text .hero-btn .btn:focus,
-.section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:focus[type="submit"],
-.comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:focus[type="submit"],
-.section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:focus,
-.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:focus,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn:hover,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:hover[type="submit"],
-.comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:hover[type="submit"],
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit:hover,
-.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:hover,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn:active,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:active[type="submit"],
-.comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:active[type="submit"],
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit:active,
-.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:active,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn:focus,
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:focus[type="submit"],
-.comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:focus[type="submit"],
-.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit:focus,
-.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:focus {
+.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:active {
   background-color: #031532;
   border-color: #031532;
   color: #fff;
+}
+
+/* line 114, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-play-btn {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+  z-index: 3;
+}
+
+/* line 133, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-play-btn button {
+  width: 5rem;
+  height: 5rem;
+  z-index: 3;
+}
+
+/* line 138, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-play-btn button img {
+  width: 30%;
+  height: 30%;
+  left: 3px;
+  position: relative;
+}
+
+/* line 145, resources/assets/styles/skhoop/sections/_hero.scss */
+
+.section-hero-banner .hero-wrap .hero-play-btn button:hover {
+  background-color: #031532;
+  border-color: #031532;
 }
 
 /* line 2, resources/assets/styles/skhoop/sections/_resellers.scss */
@@ -22078,255 +22117,167 @@ body#tinymce {
 /* line 1, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(22%, #fff), color-stop(22%, #dbe4e7), to(#dbe4e7));
-  background-image: -webkit-linear-gradient(bottom, #fff, #fff 22%, #dbe4e7 22%, #dbe4e7 100%);
-  background-image: -o-linear-gradient(bottom, #fff, #fff 22%, #dbe4e7 22%, #dbe4e7 100%);
-  background-image: linear-gradient(to top, #fff, #fff 22%, #dbe4e7 22%, #dbe4e7 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(15.625rem, #fff), color-stop(15.625rem, #dbe4e7), to(#dbe4e7));
+  background-image: -webkit-linear-gradient(bottom, #fff, #fff 15.625rem, #dbe4e7 15.625rem, #dbe4e7 100%);
+  background-image: -o-linear-gradient(bottom, #fff, #fff 15.625rem, #dbe4e7 15.625rem, #dbe4e7 100%);
+  background-image: linear-gradient(to top, #fff, #fff 15.625rem, #dbe4e7 15.625rem, #dbe4e7 100%);
 }
 
-@media (min-width: 992px) {
-  /* line 1, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-  .popular-products {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(30%, #fff), color-stop(30%, #dbe4e7), to(#dbe4e7));
-    background-image: -webkit-linear-gradient(bottom, #fff, #fff 30%, #dbe4e7 30%, #dbe4e7 100%);
-    background-image: -o-linear-gradient(bottom, #fff, #fff 30%, #dbe4e7 30%, #dbe4e7 100%);
-    background-image: linear-gradient(to top, #fff, #fff 30%, #dbe4e7 30%, #dbe4e7 100%);
-  }
-}
-
-@media (min-width: 1240px) {
-  /* line 1, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-  .popular-products {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(13.75rem, #fff), color-stop(13.75rem, #dbe4e7), to(#dbe4e7));
-    background-image: -webkit-linear-gradient(bottom, #fff, #fff 13.75rem, #dbe4e7 13.75rem, #dbe4e7 100%);
-    background-image: -o-linear-gradient(bottom, #fff, #fff 13.75rem, #dbe4e7 13.75rem, #dbe4e7 100%);
-    background-image: linear-gradient(to top, #fff, #fff 13.75rem, #dbe4e7 13.75rem, #dbe4e7 100%);
-  }
-}
-
-@media (min-width: 1480px) {
-  /* line 1, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-  .popular-products {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(15.625rem, #fff), color-stop(15.625rem, #dbe4e7), to(#dbe4e7));
-    background-image: -webkit-linear-gradient(bottom, #fff, #fff 15.625rem, #dbe4e7 15.625rem, #dbe4e7 100%);
-    background-image: -o-linear-gradient(bottom, #fff, #fff 15.625rem, #dbe4e7 15.625rem, #dbe4e7 100%);
-    background-image: linear-gradient(to top, #fff, #fff 15.625rem, #dbe4e7 15.625rem, #dbe4e7 100%);
-  }
-}
-
-/* line 16, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-.popular-products.has-button {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(33%, #fff), color-stop(33%, #dbe4e7), to(#dbe4e7));
-  background-image: -webkit-linear-gradient(bottom, #fff, #fff 33%, #dbe4e7 33%, #dbe4e7 100%);
-  background-image: -o-linear-gradient(bottom, #fff, #fff 33%, #dbe4e7 33%, #dbe4e7 100%);
-  background-image: linear-gradient(to top, #fff, #fff 33%, #dbe4e7 33%, #dbe4e7 100%);
-}
-
-@media (min-width: 992px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-  .popular-products.has-button {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(40%, #fff), color-stop(40%, #dbe4e7), to(#dbe4e7));
-    background-image: -webkit-linear-gradient(bottom, #fff, #fff 40%, #dbe4e7 40%, #dbe4e7 100%);
-    background-image: -o-linear-gradient(bottom, #fff, #fff 40%, #dbe4e7 40%, #dbe4e7 100%);
-    background-image: linear-gradient(to top, #fff, #fff 40%, #dbe4e7 40%, #dbe4e7 100%);
-  }
-}
-
-@media (min-width: 1240px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-  .popular-products.has-button {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(20rem, #fff), color-stop(20rem, #dbe4e7), to(#dbe4e7));
-    background-image: -webkit-linear-gradient(bottom, #fff, #fff 20rem, #dbe4e7 20rem, #dbe4e7 100%);
-    background-image: -o-linear-gradient(bottom, #fff, #fff 20rem, #dbe4e7 20rem, #dbe4e7 100%);
-    background-image: linear-gradient(to top, #fff, #fff 20rem, #dbe4e7 20rem, #dbe4e7 100%);
-  }
-}
-
-@media (min-width: 1480px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-  .popular-products.has-button {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(21.875rem, #fff), color-stop(21.875rem, #dbe4e7), to(#dbe4e7));
-    background-image: -webkit-linear-gradient(bottom, #fff, #fff 21.875rem, #dbe4e7 21.875rem, #dbe4e7 100%);
-    background-image: -o-linear-gradient(bottom, #fff, #fff 21.875rem, #dbe4e7 21.875rem, #dbe4e7 100%);
-    background-image: linear-gradient(to top, #fff, #fff 21.875rem, #dbe4e7 21.875rem, #dbe4e7 100%);
-  }
-}
-
-/* line 32, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 4, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products > .container {
   position: relative;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
-@media (min-width: 1240px) {
-  /* line 32, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 8, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
-  .popular-products > .container {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-  }
-}
-
-/* line 43, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-.popular-products .section-header {
+.popular-products-header {
   width: 100%;
+  max-width: 880px;
 }
 
-@media (min-width: 992px) {
-  /* line 43, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 13, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
-  .popular-products .section-header {
-    max-width: 810px;
-  }
-}
-
-@media (min-width: 1240px) {
-  /* line 43, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-  .popular-products .section-header {
-    max-width: 880px;
-  }
-}
-
-/* line 54, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-.popular-products .section-header .title {
-  margin-bottom: 0.625rem;
-}
-
-/* line 59, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-.popular-products .section-header .content > *:last-child {
-  margin-bottom: 0;
-}
-
-/* line 65, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-.popular-products .section-nav {
+.popular-products-nav {
   position: absolute;
   right: 0.3125rem;
-  bottom: 0.4375rem;
+  bottom: 0;
 }
 
-/* line 70, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 18, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
-.popular-products .section-nav .btn,
-.popular-products .section-nav .comment-form input[type="submit"],
-.comment-form .popular-products .section-nav input[type="submit"],
-.popular-products .section-nav .search-form .search-submit,
-.search-form .popular-products .section-nav .search-submit {
+.popular-products-nav .btn,
+.popular-products-nav .comment-form input[type="submit"],
+.comment-form .popular-products-nav input[type="submit"],
+.popular-products-nav .search-form .search-submit,
+.search-form .popular-products-nav .search-submit {
   margin: 0 0.625rem;
 }
 
-/* line 75, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 7, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.popular-products .section-footer {
-  margin-top: 2.1875rem;
+.selected-product-slider .item {
+  width: 100%;
 }
 
-@media (min-width: 992px) {
-  /* line 75, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 10, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-  .popular-products .section-footer {
-    margin-top: 3.125rem;
-  }
+.selected-product-slider .item figure {
+  position: relative;
+  overflow: hidden;
 }
 
-/* line 83, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 6, resources/assets/styles/common/_mixins.scss */
 
-.popular-products-grid-slider {
-  margin-top: 1.25rem;
-}
-
-/* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-.popular-products-grid-slider .grid-slider-item:first-child {
-  padding-left: 20px;
-}
-
-@media (min-width: 1240px) {
-  /* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-  .popular-products-grid-slider .grid-slider-item:first-child {
-    padding-left: calc(( 100vw - 1200px) / 2);
-  }
-}
-
-@media (min-width: 1480px) {
-  /* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-  .popular-products-grid-slider .grid-slider-item:first-child {
-    padding-left: calc(( 100vw - 1440px) / 2);
-  }
-}
-
-/* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
-
-.popular-products-grid-slider .grid-slider-item .grid-item {
+.selected-product-slider .item figure::before {
   display: block;
-  width: calc( 100vw / 2.586);
-  margin-top: 0.3125rem;
-  margin-right: 0.625rem;
-  margin-bottom: 0.3125rem;
+  content: " ";
+  width: 100%;
+  padding-top: 149.91304%;
 }
 
-@media (min-width: 768px) {
-  /* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 13, resources/assets/styles/common/_mixins.scss */
 
-  .popular-products-grid-slider .grid-slider-item .grid-item {
-    width: calc( 100vw / 4);
-    margin-right: 1.25rem;
-  }
+.selected-product-slider .item figure > img,
+.selected-product-slider .item figure > video,
+.selected-product-slider .item figure > figure,
+.selected-product-slider .item figure > .ratio-content,
+.selected-product-slider .item figure > iframe,
+.selected-product-slider .item figure > .ratio-iframe {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-@media (min-width: 1240px) {
-  /* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 32, resources/assets/styles/common/_mixins.scss */
 
-  .popular-products-grid-slider .grid-slider-item .grid-item {
-    width: calc( 1120px / 4);
-  }
+.selected-product-slider .item figure > iframe {
+  min-height: 200%;
+  min-width: 200%;
 }
 
-@media (min-width: 1480px) {
-  /* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 20, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-  .popular-products-grid-slider .grid-slider-item .grid-item {
-    width: calc( 1360px / 4);
-  }
+.selected-product-thumbnail {
+  max-height: 862px;
 }
 
-/* line 119, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 23, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.popular-products-grid-slider .grid-slider-item .grid-item:hover {
-  text-decoration: none;
+.selected-product-thumbnail .item {
+  width: 70px;
+  height: 106px;
+  margin: 0.625rem auto;
+  padding: 1.4375rem 0.9375rem 1.4375rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 124, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 31, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.popular-products-grid-slider .grid-slider-item .product {
+.selected-product-thumbnail .item:first-child {
+  margin-top: 0;
+}
+
+/* line 35, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-thumbnail .item:last-child {
   margin-bottom: 0;
-  border-radius: 0.3125rem;
-  -webkit-box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 129, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 39, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.popular-products-grid-slider .grid-slider-item .product.is-small {
-  -webkit-box-flex: initial;
-      -ms-flex: initial;
-          flex: initial;
-  max-width: 100%;
+.selected-product-thumbnail .item figure {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.selected-product-thumbnail .item figure::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 162.85714%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.selected-product-thumbnail .item figure > img,
+.selected-product-thumbnail .item figure > video,
+.selected-product-thumbnail .item figure > figure,
+.selected-product-thumbnail .item figure > .ratio-content,
+.selected-product-thumbnail .item figure > iframe,
+.selected-product-thumbnail .item figure > .ratio-iframe {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 32, resources/assets/styles/common/_mixins.scss */
+
+.selected-product-thumbnail .item figure > iframe {
+  min-height: 200%;
+  min-width: 200%;
 }
 
 @media (min-width: 992px) {

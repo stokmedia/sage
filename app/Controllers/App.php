@@ -14,7 +14,6 @@ class App extends Controller
 
     public function socialLinks()
     {
-        //        self::pr(get_fields('global'));
         return get_field( 'links', 'global' );
     }
 
@@ -42,7 +41,8 @@ class App extends Controller
     {
         $logo = get_field( 'logo', 'global' );
         $mobileLogo = get_field( 'logo_mobile', 'global' );
-        $output = array( 'desktop' => '', 'mobile' => '' );
+        $footerLogo = get_field( 'logo_footer', 'global' );
+        $output = array( 'desktop' => '', 'mobile' => '', 'mobile_menu' => '', 'footerLogo' => '' );
 
         if ( $logo[ 'logo' ] ) {
             $output[ 'desktop' ] = wp_get_attachment_image( $logo[ 'logo' ], 'main-logo-desktop' );
@@ -53,13 +53,21 @@ class App extends Controller
         }
 
         if ( $mobileLogo[ 'logo' ] ) {
-            $output[ 'mobile' ] = wp_get_attachment_image( $logo[ 'logo' ], 'main-logo-mobile', false, array( 'class' => 'mobile-logo' ) );
+            $output[ 'mobile' ] = wp_get_attachment_image( $mobileLogo[ 'logo' ], 'main-logo-mobile', false, array( 'class' => 'mobile-logo' ) );
 
-            if ( strpos( $output[ 'mobile' ], '.svg' ) !== false && $logo[ 'width' ] && $logo[ 'height' ] ) {
+            if ( strpos( $output[ 'mobile' ], '.svg' ) !== false && $mobileLogo[ 'width' ] && $mobileLogo[ 'height' ] ) {
                 $output[ 'mobile' ] = '<img src="' . wp_get_attachment_image_url( $mobileLogo[ 'logo' ] ) . '" class="mobile-logo" alt="" width="' . $mobileLogo[ 'width' ] . '" height="' . $mobileLogo[ 'height' ] . '">';
             }
 
             $output[ 'mobile_menu' ] = str_replace( 'class="mobile-logo"', '', $output[ 'mobile' ] );
+        }
+
+        if ( $footerLogo[ 'logo' ] ) {
+            $output[ 'footerLogo' ] = wp_get_attachment_image( $footerLogo[ 'logo' ], 'footer-logo-desktop' );
+
+            if ( strpos( $output[ 'footerLogo' ], '.svg' ) !== false && $footerLogo[ 'width' ] && $footerLogo[ 'height' ] ) {
+                $output[ 'footerLogo' ] = '<img src="' . wp_get_attachment_image_url( $footerLogo[ 'logo' ] ) . '" class="mobile-logo" alt="" width="' . $footerLogo[ 'width' ] . '" height="' . $footerLogo[ 'height' ] . '">';
+            }
         }
 
         return $output;

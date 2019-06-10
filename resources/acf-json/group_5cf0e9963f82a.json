@@ -137,6 +137,25 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5cfe4e750dd46",
+            "label": "Is Autoplay?",
+            "name": "is_autoplay",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -156,5 +175,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1559307478
+    "modified": 1560170121
 }

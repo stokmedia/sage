@@ -3,8 +3,10 @@
     //
   }
 
-  &-carousel {
+  &-slider {
     .item {
+      width: 100%;
+
       figure {
         @include aspect-ratio(575, 862);
       }
@@ -16,7 +18,24 @@
   }
 
   &-thumbnail {
+    max-height: 862px;
+
     .item {
+      width: 70px;
+      height: 106px;
+      margin: 0.625rem auto;
+      padding: 1.4375rem 0.9375rem 1.4375rem;
+      border-radius: 5px;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
       figure {
         @include aspect-ratio(35, 57);
       }

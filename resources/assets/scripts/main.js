@@ -1,9 +1,6 @@
 // import external dependencies
 import 'jquery';
 
-// Require/Import vendors
-require('../../../node_modules/flickity/dist/flickity.pkgd');
-
 // Import everything from autoload
 import './autoload/**/*'
 
@@ -13,10 +10,10 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
-import { sliders } from './components/sliders';
 
 // Require Components
 // window.stokpress = require('./util/helper');
+
 // require('./components/helper');
 // require('./util/helper');
 require('./components/auto-padding');
@@ -39,6 +36,5 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => {
   routes.loadEvents();
-  sliders.init();
   $('.resellers-table').resellersTable();
 });

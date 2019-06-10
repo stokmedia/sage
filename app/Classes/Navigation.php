@@ -25,6 +25,8 @@ class Navigation
 
         // Group by menu parent
         foreach ( $menu as $menuItem ) {
+            $menuItem->isLink = $menuItem->url !== '#';
+
             if ( $menuItem->menu_item_parent === '0' ) {
                 $newMenu[ $menuItem->ID ] = $menuItem;
                 $newMenu[ $menuItem->ID ]->children = array();
@@ -55,7 +57,7 @@ class Navigation
         // Return only 3 parent menu items
         $menu = self::getMenu( 'footer_navigation' );
 
-        return array_splice( $menu, 0, 3 );
+        return $menu ? array_splice( $menu, 0, 3 ) : [];
     }
 
     public static function mobileFooterMenu()
@@ -63,6 +65,6 @@ class Navigation
         // Return only 1 parent menu item
         $menu = self::getMenu( 'footer_navigation_mobile' );
 
-        return array_splice( $menu, 0, 1 );
+        return $menu ? array_splice( $menu, 0, 1 ) : [];
     }
 }
