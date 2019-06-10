@@ -58,7 +58,6 @@
                 margin-bottom: -1rem;
                 font-size: calc(2.13rem + 2.5vw);
 
-
                 @include media-breakpoint-down(sm) {
                     margin-bottom: -0.5rem;
                     font-size: calc(1.65rem + 2vw);
@@ -102,7 +101,7 @@
                         font-size: calc(0.7rem + .5vw);
                     }
 
-                    &:hover, &:active {
+                    &:hover, &:active, &:focus {
                         background-color: $body-color;
                         border-color: $body-color;
                         color: $body-bg;
