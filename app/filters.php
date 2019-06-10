@@ -127,6 +127,7 @@ add_filter( 'pre_get_posts', function ( $query ) {
         $query->set( 'posts_per_page', 5 );
 
         // TODO: Set sorting from filter etc
+        /*
         switch ( !empty($_GET[ 'o' ]) ) {
             case 'price':
                 $query->set( 'meta_key', 'price_sort' );
@@ -143,6 +144,7 @@ add_filter( 'pre_get_posts', function ( $query ) {
                 $query->set( 'order', 'asc' );
                 break;
         }
+        */
 
         // TODO: Set sorting from filter etc
         /*
@@ -172,7 +174,6 @@ add_filter( 'register_post_type_args', function ( $args, $post_type ) {
     return $args;
 }, 10, 2 );
 
-
 /**
  * Add REST API support to an already registered taxonomy.
  */
@@ -186,4 +187,67 @@ add_filter( 'register_taxonomy_args', function ( $args, $taxonomy ) {
  
     return $args;
 }, 10, 2 );
+
+/**
+ * Check the orderby param for the particular REST API for hte custom post type. 
+ */
+add_filter( 'rest_silk_products_collection_params', function ( $params ) {
+
+    $params['orderby']['enum'][] = 'price_low';
+
+    return $params;
+}, 10, 1 );
+
+/**
+ * Check the orderby param for the particular REST API for hte custom post type. 
+ */
+add_filter( 'rest_silk_products_query', function ( $query_vars, $request ) {
+
+    $orderby = $request->get_param('orderby');
+
+    if (isset($orderby) && $orderby === 'price_low') {
+
+        $market = $_SESSION['esc_store']['market'];
+        $priceList = $_SESSION['esc_store']['pricelist'];
+
+        // TODO: Add support for asc/desc
+        $query_vars["orderby"] = "meta_value_num";
+        $query_vars['meta_key'] = 'price_' . $market . '_' . $priceList;
+        $query_vars["order"] = "asc";
+
+    } else {
+
+        // TODO: Make REST API and regular product listing use same query
+        $term_id = $request->get_param('silk_category')[0];
+
+        $term = get_term_by('id', $term_id, 'silk_category');
+
+        /** The taxonomy we want to parse */
+        $taxonomy = "silk_category";
+
+        /** Get terms that have children */
+        $hierarchy = _get_term_hierarchy($taxonomy);
+
+        $termSlug = $term->slug;
+
+        while( !empty($term->parent) ) {
+            $term = get_term_by('id', $term->parent, 'silk_category');
+            $termSlug =  $term->slug . '/' . $termSlug;
+        }
+
+        if( $$termSlug ) {
+            // Category sort from Centra
+            if( !empty( $term ) ) {
+                $query_vars["orderby"] = "meta_value_num";
+                $query_vars['meta_key'] = 'category_order_' . $term->slug;
+                $query_vars["order"] = "asc";
+            }
+        }
+    }
+
+    return $query_vars;
+
+}, 10, 2);
+
+
 
