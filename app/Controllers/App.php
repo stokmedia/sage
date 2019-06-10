@@ -14,7 +14,6 @@ class App extends Controller
 
     public function desktopMenu()
     {
-        self::pr(get_fields('global'));
         return Navigation::desktopMenu();
     }
 
@@ -26,10 +25,26 @@ class App extends Controller
     public function logo()
     {
         $logo = get_field( 'logo', 'global' );
+        $mobileLogo = get_field( 'logo_mobile', 'global' );
+        $output = array( 'desktop' => '', 'mobile' => '' );
 
-        if( $logo['logo'] ) {
-            $logo['logo'] = wp_get_attachment_image( $logo['logo'] );
+        if ( $logo[ 'logo' ] ) {
+            $output[ 'desktop' ] = wp_get_attachment_image( $logo[ 'logo' ], 'main-logo-desktop' );
+
+            if ( strpos( $output[ 'desktop' ], '.svg' ) !== false && $logo[ 'width' ] && $logo[ 'height' ] ) {
+                $output[ 'desktop' ] = '<img src="' . wp_get_attachment_image_url( $logo[ 'logo' ] ) . '" alt="" width="' . $logo[ 'width' ] . '" height="' . $logo[ 'height' ] . '">';
+            }
         }
+
+        if ( $mobileLogo[ 'logo' ] ) {
+            $output[ 'mobile' ] = wp_get_attachment_image( $logo[ 'logo' ], 'main-logo-mobile', false, array( 'class' => 'mobile-logo' ) );
+
+            if ( strpos( $output[ 'mobile' ], '.svg' ) !== false && $logo[ 'width' ] && $logo[ 'height' ] ) {
+                $output[ 'mobile' ] = '<img src="' . wp_get_attachment_image_url( $mobileLogo[ 'logo' ] ) . '" class="mobile-logo" alt="" width="' . $logo[ 'width' ] . '" height="' . $logo[ 'height' ] . '">';
+            }
+        }
+
+        return $output;
     }
 
     public function siteName()
