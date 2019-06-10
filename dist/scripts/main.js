@@ -74,7 +74,7 @@ module.exports = jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(19);
+module.exports = __webpack_require__(18);
 
 
 /***/ }),
@@ -90,6 +90,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_common__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_home__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_about__ = __webpack_require__(11);
+throw new Error("Cannot find module \"./util\"");
 // import external dependencies
 
 
@@ -105,6 +106,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // Require Components
 // window.stokpress = require('./util/helper');
+
+
 // require('./components/helper');
 // require('./util/helper');
 __webpack_require__(12);
@@ -127,6 +130,9 @@ var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
 // Load Events
 jQuery(document).ready(function () {
   routes.loadEvents();
+  __WEBPACK_IMPORTED_MODULE_6__util__["stokpress"].init();
+  __WEBPACK_IMPORTED_MODULE_6__util__["stokpressViewPort"].init();
+  __WEBPACK_IMPORTED_MODULE_6__util__["stokpressEvent"].init();
   $('.resellers-table').resellersTable();
 });
 
@@ -7566,39 +7572,35 @@ Filter.accordion();
 
 /***/ }),
 /* 17 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(18);
-
-
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 var Video = {};
 
-// function onPlayerStateChange( event ) {
-// 	if ( event.data === YT.PlayerState.PLAYING ) {
-// 		var target = event.target.a;
+function onPlayerStateChange( event ) {
+	if ( event.data === YT.PlayerState.PLAYING ) {
+		var target = event.target.a;
 
-// 		Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-// 			element.parentNode.removeChild( element );
-// 		} );
+		Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+			element.parentNode.removeChild( element );
+		} );
 
-// 		target.style.opacity = 1;
-// 		target.classList.remove( 'is-video-hidden' );
-// 	}
-// }
+		target.style.opacity = 1;
+		target.classList.remove( 'is-video-hidden' );
+	}
+}
 
 // Youtube callbacks
-// function onYouTubeIframeAPIReady() {
-// 	for ( var i = 0; i < Video.iframes.length; i++ ) {
-// 		new YT.Player( Video.iframes[i].id, {
-// 			events: {
-// 				'onStateChange': onPlayerStateChange,
-// 			},
-// 		} );
-// 	}
-// }
+function onYouTubeIframeAPIReady() {
+	for ( var i = 0; i < Video.iframes.length; i++ ) {
+		new YT.Player( Video.iframes[i].id, {
+			events: {
+				'onStateChange': onPlayerStateChange,
+			},
+		} );
+	}
+}
 
 Video.initializeVimeo = function ( iframes ) {
 	if ( iframes.length === 0 ) { return; }
@@ -7678,6 +7680,9 @@ Video.initializeYoutube = function ( iframe ) {
 
 	playVideo.addEventListener( 'click', function (event) {
 		event.preventDefault();
+
+		console.log('clicked')
+
 		// this.parentNode.parentNode.classList.add( 'no-after' );
 
 		Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
@@ -7685,7 +7690,7 @@ Video.initializeYoutube = function ( iframe ) {
 		} );
 
 		iframe.style.opacity = 1;
-		iframe.classList.remove( 'is-video-hidden' );
+		iframe.style.zIndex = 10;
 		iframe.src += '&autoplay=1';
 	} );
 };
@@ -7698,13 +7703,13 @@ Video.iframeProcess = function () {
 
 		var source = Video.iframes[i].getAttribute( 'data-source' );
 
-		if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {
+		if(stokpress.isMobile()) {
 			Video.autoPlayChecker(Video.iframes[i], 'mobile', source);
 		} else {
 			Video.autoPlayChecker(Video.iframes[i], 'desktop', source);
 		}
 
-		if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) || __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
+		if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) || stokpress.isMobile() ) {
 			if ( source === 'vimeo' ) {
 				includeVimeoScript = true;
 				// if ( systerpHelper.isMobile() ) {
@@ -7717,7 +7722,7 @@ Video.iframeProcess = function () {
 				// }
 				
 			} else if ( source === 'youtube' ) {
-				if ( __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
+				if ( stokpress.isMobile() ) {
 					// Video.iframes[i].style.zIndex = 10;
 					// Video.iframes[i].parentNode.style.zIndex = 10;
 					// Video.iframes[i].classList.remove( 'is-video-hidden' );
@@ -7737,13 +7742,13 @@ Video.iframeProcess = function () {
 	}
 
 	if ( includeVimeoScript ) {
-		__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://player.vimeo.com/api/player.js', function () {
+		stokpress.getScript( 'https://player.vimeo.com/api/player.js', function () {
 			Video.initializeVimeo( Video.iframes );
 		} );
 	}
 
 	if ( includeYoutubeScript ) {
-		__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://www.youtube.com/iframe_api' );
+		stokpress.getScript( 'https://www.youtube.com/iframe_api' );
 	}
 };
 
@@ -7764,6 +7769,7 @@ Video.autoPlayChecker = function (e, isCurrStatus, source) {
 				e.parentNode.style.zIndex = 10;
 				e.classList.remove( 'is-video-hidden' );
 				// e.style.opacity = 1;
+				console.log('tae')
 				Video.initializeYoutube( e );
 			}
 		} else {
@@ -7777,7 +7783,7 @@ Video.autoPlayChecker = function (e, isCurrStatus, source) {
 				e.style.opacity = 1;
 				e.classList.remove( 'is-video-hidden' );
 			} else {
-				// e.style.zIndex = 10;
+				// e.style.zIndex = 1;
 				// e.parentNode.style.zIndex = 10;
 				// e.classList.remove( 'is-video-hidden' );
 				// e.style.opacity = 1;
@@ -7787,17 +7793,11 @@ Video.autoPlayChecker = function (e, isCurrStatus, source) {
 	} else {
 		//if desktop
 		var currStatusDesk = e.getAttribute( 'data-autoplay' );
+		console.log(currStatusDesk)
 		if(!currStatusDesk) {
 			if(isKindVideo === 'vimeo') {
-				// e.style.opacity = 1;
-				// e.style.zIndex = 10;
-				// e.parentNode.style.zIndex = 10;
-				// e.classList.remove( 'is-video-hidden' );
 				Video.initializeVimeo( e );
 			} else if (isKindVideo === 'youtube') {
-				// e.style.zIndex = 10;
-				// e.parentNode.style.zIndex = 10;
-				// e.style.opacity = 1;
 				e.classList.remove( 'is-video-hidden' );
 				Video.initializeYoutube( e );
 			}
@@ -7828,7 +7828,7 @@ Video.init = function () {
 
 	if ( Video.tags.length ) {
 		for ( var i = 0; i < Video.tags.length; i++ ) {
-			if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {a
+			if(stokpress.isMobile()) {
 				console.log(Video.tags[i].getAttribute( 'data-autoplaymobile' ));
 				if ( Video.tags[i].getAttribute( 'data-autoplaymobile' ) ) {
 					// Put video to the front
@@ -7885,178 +7885,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
 /***/ }),
 /* 18 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return stokpress; });
-/* unused harmony export stokpressViewPort */
-/* unused harmony export stokpressEvent */
-// Create Element.remove() function if not exist // BECAUSE IE 11
-if (!('remove' in Element.prototype)) {
-    Element.prototype.remove = function() {
-        if (this.parentNode) {
-            this.parentNode.removeChild(this);
-        }
-    };
-}
-
-// var stokpress = {};
-
-var stokpress = {
-  strToBool: function strToBool(str) {
-    console.log(typeof str);
-    if(typeof str == 'boolean') {
-      return str;
-    }
-    switch(str.toLowerCase().trim()){
-      case 'true': case 'yes': case '1': return true;
-      case 'false': case 'no': case '0': case null: return false;
-      default: return Boolean(str);
-    }
-  },
-
-  findAncestor: function findAncestor(el, cls) {
-    while ((el = el.parentElement) && !el.classList.contains(cls)){ ; }
-    return el;
-  },
-
-  isMobile: function isMobile() {
-      var result = false;
-      ( function ( a ) {
-        result = /Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test( a );
-      } )( navigator.userAgent || navigator.vendor || window.opera );
-    
-      return result;  
-  },
-
-  isInView: function isInView(el, view) {
-    var rect = el.getBoundingClientRect();
-    var html = document.documentElement;
-
-    if(view == 'completely') {
-      // to check if completely visible
-      return (
-        rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || html.clientHeight)
-      );
-    } else if(view == 'partially') {
-      // to check if partially visible
-      return (
-        rect.bottom >= 0 && 
-        rect.top < (window.innerHeight || html.clientHeight)
-      );
-    } else {
-      // if partially visible or above current fold,
-      return (
-        rect.top < (window.innerHeight || html.clientHeight)
-      );
-    }
-  },
-
-  getScript: function getScript(source, callback) {
-      var script = document.createElement( 'script' );
-      var prior = document.getElementsByTagName( 'script' )[0];
-      script.async = 1;
-
-      script.onload = script.onreadystatechange = function ( _, isAbort ) {
-        if ( isAbort || !script.readyState || /loaded|complete/.test( script.readyState ) ) {
-          script.onload = script.onreadystatechange = null;
-          script = undefined;
-
-          if ( !isAbort ) { 
-            if ( callback ) {
-              callback(); 
-            }
-          }
-        }
-      };
-
-      script.src = source;
-      prior.parentNode.insertBefore( script, prior );
-  },
-}
-
-var stokpressViewPort = {
-  documentWidth: function documentWidth() {
-    var e = window, a = 'inner';
-    
-    if( !( 'innerWidth' in window ) ) {
-      a = 'client';
-      e = document.documentElement || document.body;
-    }
-
-    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
-  },
-}
-
-var stokpressEvent = {
-  debounce: function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) { func.apply(context, args); }
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) { func.apply(context, args); }
-    };
-  },
-
-  throttle: function throttle(fn, threshhold, scope) {
-    threshhold || (threshhold = 250);
-    var last, deferTimer;
-    return function () {
-      var context = scope || this;
-
-      var now = +new Date,
-          args = arguments;
-      if (last && now < last + threshhold) {
-        // hold on to it
-        clearTimeout(deferTimer);
-        deferTimer = setTimeout(function () {
-          last = now;
-          fn.apply(context, args);
-        }, threshhold);
-      } else {
-        last = now;
-        fn.apply(context, args);
-      }
-    };
-  },
-
-  addListener: function addListener( element, eventNames, listener ) {
-    var events = eventNames.split(' ');
-      for ( var i = 0; i < events.length; i++ ) {
-        element.addEventListener( events[i], listener );
-      }
-  },
-}
-
-// stokpress.cartItems; 
-
-// stokpress.cartHeight = function() {
-//   var e = window, a = 'inner';
-  
-//   if( !( 'innerHeight' in window ) ) {
-//     a = 'client';
-//     e = document.documentElement || document.body;
-//   }
-
-//   (function () {
-//       if ( typeof NodeList.prototype.forEach === 'function' ) return false;
-//       NodeList.prototype.forEach = Array.prototype.forEach;
-//   })();  
-
-//   stokpress.cartItems.forEach(function(element) {
-//     element.style.setProperty('--cartheight', e[ a+'Height' ]+'px');
-//   });
-// }
-
-/***/ }),
-/* 19 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

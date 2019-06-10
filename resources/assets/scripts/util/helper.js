@@ -10,6 +10,10 @@ if (!('remove' in Element.prototype)) {
 // var stokpress = {};
 
 export const stokpress = {
+  init() {
+    return true
+  },
+
   strToBool(str) {
     console.log(typeof str);
     if(typeof str == 'boolean') {
@@ -84,6 +88,10 @@ export const stokpress = {
 }
 
 export const stokpressViewPort = {
+  init() {
+    return true
+  },
+
   documentWidth() {
     let e = window, a = 'inner';
     
@@ -97,6 +105,10 @@ export const stokpressViewPort = {
 }
 
 export const stokpressEvent = {
+  init() {
+    return true
+  },
+  
   debounce(func, wait, immediate) {
     var timeout;
     return function() {
