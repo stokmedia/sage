@@ -13,7 +13,7 @@ import aboutUs from './routes/about';
 
 // Require Components
 // window.stokpress = require('./util/helper');
-import { stokpress, stokpressEvent, stokpressViewPort } from './util';
+import { stokpress, stokpressEvent, stokpressViewPort } from './util/helper';
 
 // require('./components/helper');
 // require('./util/helper');

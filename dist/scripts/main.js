@@ -74,7 +74,7 @@ module.exports = jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(18);
+module.exports = __webpack_require__(19);
 
 
 /***/ }),
@@ -90,7 +90,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_common__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_home__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_about__ = __webpack_require__(11);
-throw new Error("Cannot find module \"./util\"");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util_helper__ = __webpack_require__(12);
 // import external dependencies
 
 
@@ -110,12 +110,12 @@ throw new Error("Cannot find module \"./util\"");
 
 // require('./components/helper');
 // require('./util/helper');
-__webpack_require__(12);
 __webpack_require__(13);
 __webpack_require__(14);
 __webpack_require__(15);
 __webpack_require__(16);
 __webpack_require__(17);
+__webpack_require__(18);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -130,9 +130,9 @@ var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
 // Load Events
 jQuery(document).ready(function () {
   routes.loadEvents();
-  __WEBPACK_IMPORTED_MODULE_6__util__["stokpress"].init();
-  __WEBPACK_IMPORTED_MODULE_6__util__["stokpressViewPort"].init();
-  __WEBPACK_IMPORTED_MODULE_6__util__["stokpressEvent"].init();
+  __WEBPACK_IMPORTED_MODULE_6__util_helper__["a" /* stokpress */].init();
+  __WEBPACK_IMPORTED_MODULE_6__util_helper__["c" /* stokpressViewPort */].init();
+  __WEBPACK_IMPORTED_MODULE_6__util_helper__["b" /* stokpressEvent */].init();
   $('.resellers-table').resellersTable();
 });
 
@@ -7354,6 +7354,190 @@ Router.prototype.loadEvents = function loadEvents () {
 
 /***/ }),
 /* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return stokpress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return stokpressViewPort; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return stokpressEvent; });
+// Create Element.remove() function if not exist // BECAUSE IE 11
+if (!('remove' in Element.prototype)) {
+    Element.prototype.remove = function() {
+        if (this.parentNode) {
+            this.parentNode.removeChild(this);
+        }
+    };
+}
+
+// var stokpress = {};
+
+var stokpress = {
+  init: function init() {
+    return true
+  },
+
+  strToBool: function strToBool(str) {
+    console.log(typeof str);
+    if(typeof str == 'boolean') {
+      return str;
+    }
+    switch(str.toLowerCase().trim()){
+      case 'true': case 'yes': case '1': return true;
+      case 'false': case 'no': case '0': case null: return false;
+      default: return Boolean(str);
+    }
+  },
+
+  findAncestor: function findAncestor(el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls)){ ; }
+    return el;
+  },
+
+  isMobile: function isMobile() {
+      var result = false;
+      ( function ( a ) {
+        result = /Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test( a );
+      } )( navigator.userAgent || navigator.vendor || window.opera );
+    
+      return result;  
+  },
+
+  isInView: function isInView(el, view) {
+    var rect = el.getBoundingClientRect();
+    var html = document.documentElement;
+
+    if(view == 'completely') {
+      // to check if completely visible
+      return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || html.clientHeight)
+      );
+    } else if(view == 'partially') {
+      // to check if partially visible
+      return (
+        rect.bottom >= 0 && 
+        rect.top < (window.innerHeight || html.clientHeight)
+      );
+    } else {
+      // if partially visible or above current fold,
+      return (
+        rect.top < (window.innerHeight || html.clientHeight)
+      );
+    }
+  },
+
+  getScript: function getScript(source, callback) {
+      var script = document.createElement( 'script' );
+      var prior = document.getElementsByTagName( 'script' )[0];
+      script.async = 1;
+
+      script.onload = script.onreadystatechange = function ( _, isAbort ) {
+        if ( isAbort || !script.readyState || /loaded|complete/.test( script.readyState ) ) {
+          script.onload = script.onreadystatechange = null;
+          script = undefined;
+
+          if ( !isAbort ) { 
+            if ( callback ) {
+              callback(); 
+            }
+          }
+        }
+      };
+
+      script.src = source;
+      prior.parentNode.insertBefore( script, prior );
+  },
+}
+
+var stokpressViewPort = {
+  init: function init() {
+    return true
+  },
+
+  documentWidth: function documentWidth() {
+    var e = window, a = 'inner';
+    
+    if( !( 'innerWidth' in window ) ) {
+      a = 'client';
+      e = document.documentElement || document.body;
+    }
+
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+  },
+}
+
+var stokpressEvent = {
+  init: function init() {
+    return true
+  },
+  
+  debounce: function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) { func.apply(context, args); }
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) { func.apply(context, args); }
+    };
+  },
+
+  throttle: function throttle(fn, threshhold, scope) {
+    threshhold || (threshhold = 250);
+    var last, deferTimer;
+    return function () {
+      var context = scope || this;
+
+      var now = +new Date,
+          args = arguments;
+      if (last && now < last + threshhold) {
+        // hold on to it
+        clearTimeout(deferTimer);
+        deferTimer = setTimeout(function () {
+          last = now;
+          fn.apply(context, args);
+        }, threshhold);
+      } else {
+        last = now;
+        fn.apply(context, args);
+      }
+    };
+  },
+
+  addListener: function addListener( element, eventNames, listener ) {
+    var events = eventNames.split(' ');
+      for ( var i = 0; i < events.length; i++ ) {
+        element.addEventListener( events[i], listener );
+      }
+  },
+}
+
+// stokpress.cartItems; 
+
+// stokpress.cartHeight = function() {
+//   var e = window, a = 'inner';
+  
+//   if( !( 'innerHeight' in window ) ) {
+//     a = 'client';
+//     e = document.documentElement || document.body;
+//   }
+
+//   (function () {
+//       if ( typeof NodeList.prototype.forEach === 'function' ) return false;
+//       NodeList.prototype.forEach = Array.prototype.forEach;
+//   })();  
+
+//   stokpress.cartItems.forEach(function(element) {
+//     element.style.setProperty('--cartheight', e[ a+'Height' ]+'px');
+//   });
+// }
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var AutoPadding = {};
@@ -7377,7 +7561,7 @@ AutoPadding.update = changePadding;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Nav = {};
@@ -7402,12 +7586,30 @@ Nav.overlay = function() {
   })
 };
 
+Nav.menuPosition = function() {
+  var header = $('.js-header');
+  var menu = $('.navbar-collapse');
+  var headerPosition = header.position().top + header.outerHeight(true);
+
+  changePosition(menu, headerPosition);
+
+  window.onresize = function () {
+    headerPosition = header.position().top + header.outerHeight(true);
+    changePosition(menu, headerPosition);
+  };
+
+  function changePosition(menu, headerPosition) {
+    menu.css('margin-top', headerPosition + 'px');
+  }
+}
+
 Nav.overlay();
+Nav.menuPosition();
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
@@ -7482,7 +7684,7 @@ Nav.overlay();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Filter = {};
@@ -7530,7 +7732,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {  $.fn.resellersTable = function () {
@@ -7571,7 +7773,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 /* eslint-disable no-unused-vars */
@@ -7884,7 +8086,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
