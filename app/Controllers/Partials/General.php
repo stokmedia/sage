@@ -11,6 +11,15 @@ trait General
 		return function_exists('pll_current_language') ? pll_current_language( $value ) : $defaultValue;
     }
 
+    public static function renderTitle( $title, $class='', $isH1=false )
+    {
+        if ($isH1) {
+            return '<h1 class="'.$class.'">'.$title.'</h1>';
+        } else {
+            return '<h2 class="'.$class.'">'.$title.'</h2>';
+        }
+    }
+
     public function defaultUsp()
     {
         $defaultUsp = get_field( 'default_usp',self::currentLang() );

@@ -11,13 +11,14 @@ trait Content
         $flexibleContent = get_field('sections');
 
         if( $flexibleContent ) {
-            foreach ($flexibleContent as $content) {
+            foreach ($flexibleContent as $key=>$content) {
                 $functionName = 'cms_' . str_replace( '-', '_', $content['acf_fc_layout'] );
 
                 if( method_exists( $this, $functionName ) ) {
                     $thisContent = (object) self::$functionName( $content );
 
                     if( !empty($thisContent) ) {
+                        $thisContent->is_h1 = $key===0;
                         array_push( $data, $thisContent );
                     }
                 }
@@ -101,8 +102,35 @@ trait Content
     }
     
     public static function cms_hero_banner( $data )
-    {   
-        return (object) $data;
+    { 
+        $newData = (object) $data;
+        $hasContent = true;
+        $image = null;
+        $imageMobile = null;
+        $imgAttr = [
+            'class' => 'hero-image',
+            'width' => null,
+            'height' => null
+        ];
+
+        if ($newData->image_desktop) {
+            $image = wp_get_attachment_image( $newData->image_desktop['ID'], 'hero-banner', false, $imgAttr );
+            $imageMobile = wp_get_attachment_image( $newData->image_desktop['ID'], 'hero-banner-mobile', false, $imgAttr );
+        }
+
+        if ($newData->image_mobile) {
+            $imageMobile = wp_get_attachment_image( $newData->image_mobile['ID'], 'hero-banner-mobile', false, $imgAttr );
+        }        
+
+        return (object) [
+            'acf_fc_layout' => $newData->acf_fc_layout,
+            'title' => self::hasTitle($newData) ? $newData->section_title : '',
+            'text' => $newData->text ?? '',
+            'link' => is_array($newData->link) ? (object) $newData->link : false,
+            'image' => $image,
+            'image_mobile' => $imageMobile,
+            'video_url' => $newData->video_url
+        ];
     }
 
     public static function cms_instagram_grid( $data )

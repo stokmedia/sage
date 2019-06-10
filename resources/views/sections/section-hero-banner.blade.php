@@ -2,16 +2,21 @@
     <div class='hero-wrap'>
         
         <div class='hero-background'>
-            <!-- Image Tag -->
-            <img class='hero-image' src="@asset('images/temp/hero_banner.png')" alt="">
+            {{-- Image Tag --}}
+            {{-- <img class='hero-image' src="@asset('images/temp/hero_banner.png')" alt=""> --}}
+            {!! $section->image !!}            
 
-            <!-- Play button -->
-            <!-- <div class='hero-play-btn js-hide-on-play js-playvideo'>
-                <button id='js-playvideo' class='btn btn-lg btn-icon btn-icon-lg btn-primary'>
-                    <img src="@asset('images/icon/icon-play.svg')" alt="">
-                </button>
-            </div> -->
+            {{-- Play button --}}
+            @if ($section->video_url)
+                <div class='hero-play-btn js-hide-on-play js-playvideo'>
+                    <button id='js-playvideo' class='btn btn-lg btn-icon btn-icon-lg btn-primary'>
+                        <img src="@asset('images/icon/icon-play.svg')" alt="">
+                    </button>
+                </div>
+            @endif
         </div>
+
+        {!! $section->video !!}
 
         <!-- Video Tag -->
         <!-- <video class='hero-video js-video-tag' autoplay='autoplay' muted='muted' loop='loop' playsinline='playsinline'>
@@ -23,24 +28,28 @@
         <!-- Youtube -->
         <!-- <iframe id="video-iframe-ScMzIvxBSi4" data-autoplayMobile='1' data-autoplay='' class='hero-iframe-video is-yt js-video-iframe' style='z-index:10;opacity:0.000001;background-color:black'; data-source='youtube' src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&showinfo=0&controls=0&enablejsapi=1" frameborder="0" allow="autoplay; fullscreen"></iframe> -->
         
+        @if ($section->title || $section->text || $section->link)
+            <div class='hero-text'>
+                @if ($section->title)
+                    {!! App::renderTitle( $section->title, 'h1 hero-title', $section->is_h1 ) !!}
+                @endif
 
-        <div class='hero-text'>
-            <h1 class='h1 hero-title'><?php echo $section_title ?></h1>
-            <div class='hero-subtitle'>
-            För en aktiv livsstil
-            </div>
-            <div class='hero-btn'>
-        
-                <a href="#">
-                    <button class="btn btn-outline-primary d-md-none" type="button">Visa produkter</button>
-                </a>
+                @if ($section->text)
+                    <div class='hero-subtitle'>{!! $section->text !!}</div>
+                @endif
 
-            
-                <a href="#">
-                    <button class="btn btn-lg btn-outline-primary d-none d-md-inline-block" type="button">Visa produkter</button>
-                </a>
+                @if ($section->link)
+                    <div class='hero-btn'>
+                        <a href="{{ $section->link->url }}" target="{{ $section->link->target }}">
+                            <button class="btn btn-outline-primary d-md-none" type="button">{{ $section->link->title }}</button>
+                        </a>
+                        <a href="{{ $section->link->url }}" target="{{ $section->link->target }}">
+                            <button class="btn btn-lg btn-outline-primary d-none d-md-inline-block" type="button">{{ $section->link->title }}</button>
+                        </a>
+                    </div>
+                @endif
             </div>
-        </div>
+        @endif
 
     </div>
 </section>
