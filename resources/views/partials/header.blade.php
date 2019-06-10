@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg fixed-top js-header">
     <div class="container">
         <a class="navbar-brand order-1 order-lg-0" href="#">
-            <img src="@asset('images/company-logo.svg')" alt="" srcset="">
-            <img src="@asset('images/company-logo-mobile.svg')" class="mobile-logo" alt="" srcset="">
+            {!! $logo['desktop'] !!}
+            {!! $logo['mobile'] !!}
         </a>
         <button class="navbar-toggler order-0 js-nav-toggle" type="button" data-toggle="collapse"
                 data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,10 +15,6 @@
             @if($desktop_menu)
                 <ul class="navbar-nav m-auto">
                     @foreach($desktop_menu as $menuItem)
-                        @if($menuItem->menu_item_parent !== '0')
-                            @continue
-                        @endif
-
                         <li class="nav-item">
                             <a class="nav-link" href="{{ $menuItem->url  }}">{{ $menuItem->title }}</a>
                         </li>
@@ -30,31 +26,25 @@
                 @if($mobile_menu)
                     <ul class="navbar-nav">
                         @foreach($mobile_menu as $menuItem)
-                            @if($menuItem->menu_item_parent !== '0')
-                                @continue
-                            @endif
-
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="{{ $menuItem->url  }}"
                                    role="button">{{ $menuItem->title }}</a>
-                                <button class="btn btn-icon btn-icon-sm" type="button" data-toggle="dropdown">
-                                    <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="btn-back" href="#">Back</a>
-                                    <ul class="navbar-nav m-auto">
-                                        @foreach($mobile_menu as $subMenuItem)
-                                            @if($menuItem->ID != $subMenuItem->menu_item_parent)
-                                                @continue
-                                            @endif
-
-                                            <li class="nav-item">
-                                                <a class="nav-link"
-                                                   href="{{ $subMenuItem->url }}">{{ $subMenuItem->title }}</a>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
+                                @if( isset($menuItem->children) && count($menuItem->children) )
+                                    <button class="btn btn-icon btn-icon-sm" type="button" data-toggle="dropdown">
+                                        <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="btn-back" href="#">Back</a>
+                                        <ul class="navbar-nav m-auto">
+                                            @foreach($menuItem->children as $subMenuItem)
+                                                <li class="nav-item">
+                                                    <a class="nav-link"
+                                                       href="{{ $subMenuItem->url }}">{{ $subMenuItem->title }}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
                             </li>
                         @endforeach
                         <li class="nav-item">
@@ -67,23 +57,24 @@
                 <div class="content-info">
                     <div class="brand-container">
                         <a href="#" class="brand-footer">
-                            <img src="http://skhoop.stage.stokmedia.eu/wp-content/themes/skhoop/dist/images/company-logo-mobile.svg"
-                                 class="" alt="">
+                            {!! $logo['mobile_menu'] !!}
                         </a>
-                        <ul class="group-links">
-                            <li>
-                                <a href="#">
-                                    <img src="http://skhoop.stage.stokmedia.eu/wp-content/themes/skhoop/dist/images/icon/icon-insta.svg"
-                                         class="" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="http://skhoop.stage.stokmedia.eu/wp-content/themes/skhoop/dist/images/icon/icon-facebook.svg"
-                                         class="" alt="">
-                                </a>
-                            </li>
-                        </ul>
+
+                        @if($social_links)
+                            <ul class="group-links">
+                                @foreach($social_links as $link)
+                                    <li>
+                                        <a href="{{ $link['url']  }}">
+                                            @if($link['media'] === 'instagram')
+                                                <img src="@asset('images/icon/icon-insta.svg')" class="" alt="">
+                                            @else
+                                                <img src="@asset('images/icon/icon-facebook.svg')" class="" alt="">
+                                            @endif
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
                     </div>
                 </div>
             </div>
