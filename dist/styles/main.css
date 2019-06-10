@@ -21246,6 +21246,7 @@ body#tinymce {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   position: relative;
   overflow: hidden;
@@ -21335,7 +21336,7 @@ body#tinymce {
     min-width: 200%;
   }
 
-  /* line 25, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 26, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-background iframe {
     min-height: 300%;
@@ -21343,7 +21344,7 @@ body#tinymce {
   }
 }
 
-/* line 33, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 34, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text {
   height: 100%;
@@ -21370,7 +21371,7 @@ body#tinymce {
   color: #fff;
 }
 
-/* line 50, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 51, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-title,
 .section-hero-banner .hero-wrap .hero-text .hero-subtitle {
@@ -21378,7 +21379,7 @@ body#tinymce {
   line-height: normal;
 }
 
-/* line 55, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 56, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-title {
   margin-bottom: -1rem;
@@ -21386,7 +21387,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 55, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 56, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-title {
     margin-bottom: -0.5rem;
@@ -21394,7 +21395,7 @@ body#tinymce {
   }
 }
 
-/* line 66, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-subtitle {
   font-family: "Covered By Your Grace", cursive;
@@ -21403,7 +21404,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 66, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-subtitle {
     font-size: calc(1.5rem + 2vw);
@@ -21412,14 +21413,14 @@ body#tinymce {
   }
 }
 
-/* line 78, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn {
   position: relative;
 }
 
 @media (max-width: 767.98px) {
-  /* line 78, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-btn {
     position: absolute;
@@ -21428,7 +21429,7 @@ body#tinymce {
   }
 }
 
-/* line 87, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 88, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
 .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
@@ -21446,7 +21447,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 87, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 88, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
   .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
@@ -21459,7 +21460,7 @@ body#tinymce {
   }
 }
 
-/* line 103, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 104, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn .btn:hover,
 .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:hover[type="submit"],
@@ -21476,10 +21477,9 @@ body#tinymce {
   color: #fff;
 }
 
-/* line 113, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 114, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-play-btn {
-  z-index: 3;
   height: 100%;
   width: 100%;
   padding: 2rem;
@@ -21502,9 +21502,10 @@ body#tinymce {
   right: 0;
   z-index: 1;
   color: #fff;
+  z-index: 3;
 }
 
-/* line 131, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 133, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-play-btn button {
   width: 5rem;
@@ -21512,7 +21513,7 @@ body#tinymce {
   z-index: 3;
 }
 
-/* line 136, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 138, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-play-btn button img {
   width: 30%;
@@ -21521,7 +21522,7 @@ body#tinymce {
   position: relative;
 }
 
-/* line 143, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 145, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-play-btn button:hover {
   background-color: #031532;

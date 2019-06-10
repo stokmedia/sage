@@ -13,7 +13,6 @@ import aboutUs from './routes/about';
 
 // Require Components
 // window.stokpress = require('./util/helper');
-import { stokpress, stokpressEvent, stokpressViewPort } from './util/helper';
 
 // require('./components/helper');
 // require('./util/helper');
@@ -37,8 +36,5 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => {
   routes.loadEvents();
-  stokpress.init();
-  stokpressViewPort.init();
-  stokpressEvent.init();
   $('.resellers-table').resellersTable();
 });

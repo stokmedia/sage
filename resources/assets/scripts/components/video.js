@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+
+import { stokpress } from '../util/helper';
 /* eslint-disable no-undef */
 var Video = {};
 
