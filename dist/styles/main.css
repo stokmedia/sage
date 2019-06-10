@@ -19221,6 +19221,18 @@ blockquote footer::before,
   }
 }
 
+/* line 312, resources/assets/styles/skhoop/layouts/_header.scss */
+
+.nav-checkout {
+  display: none;
+}
+
+/* line 317, resources/assets/styles/skhoop/layouts/_header.scss */
+
+.is-checkout .nav-checkout {
+  display: block;
+}
+
 /* line 1, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .content-info {

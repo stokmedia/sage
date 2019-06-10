@@ -158,6 +158,16 @@
                 </li>
             </ul>
         </div>
+
+
+        <div class="navbar-spacer is-checkout">
+            <a href="#" class="navbar-back">Fortsätt shoppa</a>
+        </div>
+        <a class="navbar-brand is-checkout order-1" href="#">
+            <img src="@asset('images/company-logo.svg')" alt="" srcset="">
+            <img src="@asset('images/company-logo-mobile.svg')" class="mobile-logo" alt="" srcset="">
+        </a>
+        <div class="navbar-spacer is-checkout"></div>
     </div>
 </nav>
 
