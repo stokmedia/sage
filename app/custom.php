@@ -68,8 +68,9 @@ add_filter( 'mce_buttons_2', function( $buttons ) {
 } );
 
 // Attach callback to 'tiny_mce_before_init' 
-add_filter( 'tiny_mce_before_init', function( $init_array ) {  
-	$style_formats = array(  
+add_filter( 'tiny_mce_before_init', function( $initArray ) {
+    // Add style format 
+	$styleFormats = array(  
 		array(  
 			'title' => 'Indent',  
 			'block' => 'p',  
@@ -78,12 +79,20 @@ add_filter( 'tiny_mce_before_init', function( $init_array ) {
 			
 		),  
 	);  
-	// Insert the array, JSON ENCODED, into 'style_formats'
-	$init_array['style_formats'] = wp_json_encode( $style_formats );  
+    $initArray['style_formats'] = wp_json_encode( $styleFormats );  
+    
+    // Update Indent Format style
+    $styles = 'p.has-padding { padding-left: 4.875rem; }';
+    if ( isset( $initArray['content_style'] ) ) {
+        $initArray['content_style'] .= ' ' . $styles . ' ';
+    } else {
+        $initArray['content_style'] = $styles . ' ';
+    }
 	
-	return $init_array;  
+	return $initArray;
   
 }  );  
+
 
 /**
  * Image sizes
