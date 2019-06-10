@@ -18700,15 +18700,37 @@ blockquote footer::before,
   position: relative;
 }
 
+/* line 16, resources/assets/styles/skhoop/layouts/_header.scss */
+
+.navbar.is-checkout .nav-checkout {
+  display: block !important;
+}
+
 @media (min-width: 992px) {
   /* line 16, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .navbar.is-checkout .nav-checkout {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+/* line 24, resources/assets/styles/skhoop/layouts/_header.scss */
+
+.navbar.is-checkout .container:not(.nav-checkout) {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  /* line 30, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-brand {
     padding: 1.125rem 0 1.0625rem;
   }
 }
 
-/* line 21, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 35, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-brand img {
   max-width: 5.8125rem;
@@ -18717,7 +18739,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 21, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 35, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-brand img {
     display: inline;
@@ -18725,21 +18747,21 @@ blockquote footer::before,
   }
 }
 
-/* line 31, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 45, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-brand img.mobile-logo {
   display: inline;
 }
 
 @media (min-width: 992px) {
-  /* line 31, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 45, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-brand img.mobile-logo {
     display: none;
   }
 }
 
-/* line 42, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 56, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-helper .nav-item,
 .navbar-helper .banner .nav li,
@@ -18748,7 +18770,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 42, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 56, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-helper .nav-item,
   .navbar-helper .banner .nav li,
@@ -18758,7 +18780,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 49, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 63, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-helper .nav-item:hover,
   .navbar-helper .banner .nav li:hover,
@@ -18768,20 +18790,20 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 56, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 70, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-helper .nav-item-cart:hover .cart {
     max-height: calc(100vh - 5rem);
   }
 }
 
-/* line 62, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 76, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-helper .nav-item-cart.is-open .cart {
   max-height: calc(100vh - 5rem);
 }
 
-/* line 67, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 81, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-toggler {
   cursor: pointer;
@@ -18862,7 +18884,7 @@ blockquote footer::before,
           transform: translateY(-9px) rotate(-45deg);
 }
 
-/* line 70, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 84, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-toggler:hover,
 .navbar-toggler:focus {
@@ -18870,7 +18892,7 @@ blockquote footer::before,
   background-color: transparent;
 }
 
-/* line 77, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 91, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-brand,
 .navbar-helper {
@@ -18879,7 +18901,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 77, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 91, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-brand,
   .navbar-helper {
@@ -18887,14 +18909,14 @@ blockquote footer::before,
   }
 }
 
-/* line 88, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 102, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-nav {
   background-color: #fff;
 }
 
 @media (max-width: 991.98px) {
-  /* line 88, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 102, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav {
     padding: 0.9375rem 1.875rem 0;
@@ -18902,7 +18924,7 @@ blockquote footer::before,
 }
 
 @media (max-width: 991.98px) {
-  /* line 95, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 109, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item,
   .navbar-nav .banner .nav li,
@@ -18911,7 +18933,7 @@ blockquote footer::before,
   }
 }
 
-/* line 100, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 114, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-nav .nav-item:last-child,
 .navbar-nav .banner .nav li:last-child,
@@ -18920,7 +18942,7 @@ blockquote footer::before,
 }
 
 @media (max-width: 991.98px) {
-  /* line 107, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 121, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item.dropdown .dropdown-toggle::after,
   .navbar-nav .banner .nav li.dropdown .dropdown-toggle::after,
@@ -18929,7 +18951,7 @@ blockquote footer::before,
   }
 }
 
-/* line 114, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 128, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-nav .nav-item.dropdown .btn-icon,
 .navbar-nav .banner .nav li.dropdown .btn-icon,
@@ -18938,7 +18960,7 @@ blockquote footer::before,
 }
 
 @media (max-width: 991.98px) {
-  /* line 114, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 128, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item.dropdown .btn-icon,
   .navbar-nav .banner .nav li.dropdown .btn-icon,
@@ -18955,7 +18977,7 @@ blockquote footer::before,
 }
 
 @media (max-width: 991.98px) {
-  /* line 129, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 143, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item.dropdown .dropdown-menu,
   .navbar-nav .banner .nav li.dropdown .dropdown-menu,
@@ -18975,7 +18997,7 @@ blockquote footer::before,
   }
 }
 
-/* line 145, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 159, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-nav .nav-item.dropdown .dropdown-menu .btn-back,
 .navbar-nav .banner .nav li.dropdown .dropdown-menu .btn-back,
@@ -18984,7 +19006,7 @@ blockquote footer::before,
 }
 
 @media (max-width: 991.98px) {
-  /* line 145, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 159, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item.dropdown .dropdown-menu .btn-back,
   .navbar-nav .banner .nav li.dropdown .dropdown-menu .btn-back,
@@ -19000,7 +19022,7 @@ blockquote footer::before,
 }
 
 @media (max-width: 991.98px) {
-  /* line 159, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 173, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item.dropdown .dropdown-menu .navbar-nav,
   .navbar-nav .banner .nav li.dropdown .dropdown-menu .navbar-nav,
@@ -19010,7 +19032,7 @@ blockquote footer::before,
 }
 
 @media (max-width: 991.98px) {
-  /* line 164, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 178, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item.dropdown .dropdown-menu .navbar-nav .nav-item,
   .navbar-nav .banner .nav li.dropdown .dropdown-menu .navbar-nav .nav-item,
@@ -19023,7 +19045,7 @@ blockquote footer::before,
   }
 }
 
-/* line 173, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 187, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-nav .nav-item .nav-link,
 .navbar-nav .banner .nav li .nav-link,
@@ -19040,7 +19062,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 173, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 187, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item .nav-link,
   .navbar-nav .banner .nav li .nav-link,
@@ -19055,7 +19077,7 @@ blockquote footer::before,
     line-height: 24px;
   }
 
-  /* line 186, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 200, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item .nav-link:hover,
   .navbar-nav .banner .nav li .nav-link:hover,
@@ -19068,7 +19090,7 @@ blockquote footer::before,
   }
 }
 
-/* line 191, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 205, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-nav .nav-item .nav-link-cart,
 .navbar-nav .banner .nav li .nav-link-cart,
@@ -19078,7 +19100,7 @@ blockquote footer::before,
   right: 0.1875rem;
 }
 
-/* line 196, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 210, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-nav .nav-item .nav-link-cart img,
 .navbar-nav .banner .nav li .nav-link-cart img,
@@ -19088,7 +19110,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 196, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 210, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item .nav-link-cart img,
   .navbar-nav .banner .nav li .nav-link-cart img,
@@ -19097,7 +19119,7 @@ blockquote footer::before,
   }
 }
 
-/* line 205, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 219, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-nav .nav-item .nav-link-cart .cart-item-count,
 .navbar-nav .banner .nav li .nav-link-cart .cart-item-count,
@@ -19115,7 +19137,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 205, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 219, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-nav .nav-item .nav-link-cart .cart-item-count,
   .navbar-nav .banner .nav li .nav-link-cart .cart-item-count,
@@ -19126,7 +19148,7 @@ blockquote footer::before,
 }
 
 @media (max-width: 991.98px) {
-  /* line 227, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 241, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-collapse {
     position: fixed;
@@ -19142,20 +19164,20 @@ blockquote footer::before,
   }
 }
 
-/* line 241, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 255, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch {
   padding-bottom: 1.875rem;
 }
 
-/* line 244, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 258, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav {
   padding-top: 0;
   background-color: #b7cad0;
 }
 
-/* line 248, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 262, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li,
@@ -19163,7 +19185,7 @@ blockquote footer::before,
   border-bottom: 1px solid #fff;
 }
 
-/* line 251, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 265, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item .btn-checkout,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li .btn-checkout,
@@ -19176,7 +19198,7 @@ blockquote footer::before,
   text-transform: uppercase;
 }
 
-/* line 259, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 273, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item .btn-checkout:hover,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li .btn-checkout:hover,
@@ -19189,7 +19211,7 @@ blockquote footer::before,
   color: #031532;
 }
 
-/* line 269, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 283, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info {
   padding-top: 3.125rem;
@@ -19197,19 +19219,19 @@ blockquote footer::before,
   background-color: #b7cad0;
 }
 
-/* line 275, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 289, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info .brand-footer img {
   max-width: 5.8125rem;
 }
 
-/* line 280, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 294, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info .group-links {
   margin-top: 1.25rem;
 }
 
-/* line 288, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 302, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-overlay:after {
   content: "";
@@ -19222,14 +19244,68 @@ blockquote footer::before,
   z-index: 3;
 }
 
-/* line 302, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 314, resources/assets/styles/skhoop/layouts/_header.scss */
+
+.nav-checkout {
+  display: none !important;
+}
+
+@media (max-width: 991.98px) {
+  /* line 314, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .nav-checkout {
+    text-align: center;
+  }
+}
+
+/* line 321, resources/assets/styles/skhoop/layouts/_header.scss */
+
+.nav-checkout .navbar-checkout {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  /* line 321, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .nav-checkout .navbar-checkout {
+    padding-bottom: 1.1875rem;
+  }
+}
+
+/* line 329, resources/assets/styles/skhoop/layouts/_header.scss */
+
+.nav-checkout .navbar-spacer {
+  width: 12.5rem;
+  padding: 0;
+}
+
+@media (max-width: 991.98px) {
+  /* line 329, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .nav-checkout .navbar-spacer {
+    width: auto;
+    padding: 0.3125rem 0;
+  }
+}
+
+/* line 339, resources/assets/styles/skhoop/layouts/_header.scss */
+
+.nav-checkout .navbar-back {
+  color: #031532;
+  font-size: 0.875rem;
+  letter-spacing: 0.44px;
+  line-height: 1.875rem;
+  text-decoration: underline;
+}
+
+/* line 350, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .admin-bar .navbar.fixed-top {
   top: 2.875rem;
 }
 
 @media screen and (min-width: 783px) {
-  /* line 302, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 350, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .admin-bar .navbar.fixed-top {
     top: 2rem;
@@ -21060,7 +21136,7 @@ body#tinymce {
   }
 }
 
-/* line 68, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-subtitle,
 .section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
@@ -21070,7 +21146,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 68, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-subtitle,
   .section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
@@ -21080,7 +21156,7 @@ body#tinymce {
   }
 }
 
-/* line 80, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn,
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn {
@@ -21088,7 +21164,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 80, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-btn,
   .section-hero-banner .hero-wrap .hero-play-btn .hero-btn {
@@ -21098,7 +21174,7 @@ body#tinymce {
   }
 }
 
-/* line 89, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 88, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
 .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
@@ -21121,7 +21197,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 89, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 88, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
   .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
@@ -21139,7 +21215,7 @@ body#tinymce {
   }
 }
 
-/* line 105, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 104, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn .btn:hover,
 .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:hover[type="submit"],
@@ -21151,6 +21227,11 @@ body#tinymce {
 .comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:active[type="submit"],
 .section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:active,
 .search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:active,
+.section-hero-banner .hero-wrap .hero-text .hero-btn .btn:focus,
+.section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:focus[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:focus[type="submit"],
+.section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:focus,
+.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:focus,
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn:hover,
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:hover[type="submit"],
 .comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:hover[type="submit"],
@@ -21160,7 +21241,12 @@ body#tinymce {
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:active[type="submit"],
 .comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:active[type="submit"],
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit:active,
-.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:active {
+.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:active,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn:focus,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:focus[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:focus[type="submit"],
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit:focus,
+.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:focus {
   background-color: #031532;
   border-color: #031532;
   color: #fff;
