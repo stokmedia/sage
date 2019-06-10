@@ -97,9 +97,22 @@ add_filter( 'tiny_mce_before_init', function( $initArray ) {
 /**
  * Image sizes
  */
+update_option( 'large_size_w', 1200 );
+update_option( 'large_size_h', 1200 );
+update_option( 'large_crop', 0 );
+update_option( 'medium_size_w', 640 );
+update_option( 'medium_size_h', 640 );
+update_option( 'large_crop', 0 );
+
 add_image_size( 'main-logo-desktop', 120, 45 );
 add_image_size( 'main-logo-mobile', 93, 35 );
 add_image_size( 'footer-logo-desktop', 180, 68 );
-add_image_size( 'category-banner', 1920, 535 );
+add_image_size( 'category-banner', 1920, 535, true );
+add_image_size( 'hero-banner', 1920, 745, true );
+add_image_size( 'hero-banner-mobile', 640, 955, true );
+add_image_size( 'instagram-bg', 640, 955, true );
+add_image_size( 'newsletter', 960, 480, true );
+add_image_size( 'newsletter-modal', 540, 435, true );
+
 
 // TODO: add custom size for category-banner-mobile
