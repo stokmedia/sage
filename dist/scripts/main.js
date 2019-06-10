@@ -86,17 +86,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_bootstrap_js__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__autoload_helper_js__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__autoload_helper_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__autoload_helper_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_Router__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_common__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_home__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__routes_about__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Router__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_common__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_home__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_about__ = __webpack_require__(11);
 // import external dependencies
 
 
 // Import everything from autoload
- 
+
 
 
 // import local dependencies
@@ -109,6 +107,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // window.stokpress = require('./util/helper');
 // require('./components/helper');
 // require('./util/helper');
+__webpack_require__(12);
 __webpack_require__(13);
 __webpack_require__(14);
 __webpack_require__(15);
@@ -116,13 +115,13 @@ __webpack_require__(16);
 __webpack_require__(17);
 
 /** Populate Router instance with DOM routes */
-var routes = new __WEBPACK_IMPORTED_MODULE_3__util_Router__["a" /* default */]({
+var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
   // All pages
-  common: __WEBPACK_IMPORTED_MODULE_4__routes_common__["a" /* default */],
+  common: __WEBPACK_IMPORTED_MODULE_3__routes_common__["a" /* default */],
   // Home page
-  home: __WEBPACK_IMPORTED_MODULE_5__routes_home__["a" /* default */],
+  home: __WEBPACK_IMPORTED_MODULE_4__routes_home__["a" /* default */],
   // About Us page, note the change from about-us to aboutUs.
-  aboutUs: __WEBPACK_IMPORTED_MODULE_6__routes_about__["a" /* default */],
+  aboutUs: __WEBPACK_IMPORTED_MODULE_5__routes_about__["a" /* default */],
 });
 
 // Load Events
@@ -7215,183 +7214,10 @@ module.exports = g;
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports) {
-
-// Create Element.remove() function if not exist // BECAUSE IE 11
-if (!('remove' in Element.prototype)) {
-    Element.prototype.remove = function() {
-        if (this.parentNode) {
-            this.parentNode.removeChild(this);
-        }
-    };
-}
-
-var stokpress = {};
-
-
-
-stokpress.strToBool = function(str) {
-  console.log(typeof str);
-  if(typeof str == 'boolean') {
-    return str;
-  }
-  switch(str.toLowerCase().trim()){
-    case 'true': case 'yes': case '1': return true;
-    case 'false': case 'no': case '0': case null: return false;
-    default: return Boolean(str);
-  }
-}
-
-stokpress.findAncestor =function (el, cls) {
-  while ((el = el.parentElement) && !el.classList.contains(cls)){ ; }
-  return el;
-}
-
-stokpress.cartItems; 
-
-stokpress.cartHeight = function() {
-  var e = window, a = 'inner';
-  
-  if( !( 'innerHeight' in window ) ) {
-    a = 'client';
-    e = document.documentElement || document.body;
-  }
-
-  (function () {
-      if ( typeof NodeList.prototype.forEach === 'function' ) { return false; }
-      NodeList.prototype.forEach = Array.prototype.forEach;
-  })();  
-
-  stokpress.cartItems.forEach(function(element) {
-    element.style.setProperty('--cartheight', e[ a+'Height' ]+'px');
-  });
-}
-
-stokpress.isInView = function(el,view) {
-  var rect = el.getBoundingClientRect();
-  var html = document.documentElement;
-
-  if(view == 'completely') {
-    // to check if completely visible
-    return (
-      rect.top >= 0 &&
-      rect.bottom <= (window.innerHeight || html.clientHeight)
-    );
-  } else if(view == 'partially') {
-    // to check if partially visible
-    return (
-      rect.bottom >= 0 && 
-      rect.top < (window.innerHeight || html.clientHeight)
-    );
-  } else {
-    // if partially visible or above current fold,
-    return (
-      rect.top < (window.innerHeight || html.clientHeight)
-    );
-  }
-};
-
-stokpress.isMobile = function() {
-  var result = false;
-
-  ( function ( a ) {
-    result = /Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test( a );
-  } )( navigator.userAgent || navigator.vendor || window.opera );
-
-  return result;  
-};
-
-stokpress.getScript = function ( source, callback ) {
-  var script = document.createElement( 'script' );
-  var prior = document.getElementsByTagName( 'script' )[0];
-  script.async = 1;
-
-  script.onload = script.onreadystatechange = function ( _, isAbort ) {
-    if ( isAbort || !script.readyState || /loaded|complete/.test( script.readyState ) ) {
-      script.onload = script.onreadystatechange = null;
-      script = undefined;
-
-      if ( !isAbort ) { 
-        if ( callback ) {
-          callback(); 
-        }
-      }
-    }
-  };
-
-  script.src = source;
-  prior.parentNode.insertBefore( script, prior );
-};
-
-var stokpressViewport = {};
-
-stokpressViewport.documentWidth = function(){
-  var e = window, a = 'inner';
-  
-  if( !( 'innerWidth' in window ) ) {
-    a = 'client';
-    e = document.documentElement || document.body;
-  }
-
-   return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
-};
-
-/* EVENTS */
-
-var stokpressEvent = {};
-
-stokpressEvent.debounce = function(func, wait, immediate) {
-  var timeout;
-  return function() {
-    var context = this, args = arguments;
-    var later = function() {
-      timeout = null;
-      if (!immediate) { func.apply(context, args); }
-    };
-    var callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) { func.apply(context, args); }
-  };
-};
-
-stokpressEvent.throttle = function (fn, threshhold, scope) {
-  threshhold || (threshhold = 250);
-  var last,
-      deferTimer;
-  return function () {
-    var context = scope || this;
-
-    var now = +new Date,
-        args = arguments;
-    if (last && now < last + threshhold) {
-      // hold on to it
-      clearTimeout(deferTimer);
-      deferTimer = setTimeout(function () {
-        last = now;
-        fn.apply(context, args);
-      }, threshhold);
-    } else {
-      last = now;
-      fn.apply(context, args);
-    }
-  };
-}
-
-//systerpEvent.addListener( window, 'click keypress', function() {...} );
-stokpressEvent.addListener = function( element, eventNames, listener ) {
-	var events = eventNames.split(' ');
-	for ( var i = 0; i < events.length; i++ ) {
-		element.addEventListener( events[i], listener );
-	}
-};
-
-/***/ }),
-/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(8);
 
 
 /**
@@ -7463,7 +7289,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7479,7 +7305,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7494,7 +7320,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7509,7 +7335,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7521,7 +7347,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var AutoPadding = {};
@@ -7545,7 +7371,7 @@ AutoPadding.update = changePadding;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Nav = {};
@@ -7572,6 +7398,81 @@ Nav.overlay = function() {
 
 Nav.overlay();
 
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
+
+(function ( $ ) {
+
+	var siteCookie = {};
+
+	siteCookie.set = function( cname, cvalue, exdays ) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		var expires = 'expires=' +d.toUTCString();
+		document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+	};
+
+	siteCookie.get = function( cname ) {
+		var name = cname + '=';
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) === ' ') {
+				c = c.substring(1);
+			}
+
+			if (c.indexOf(name) === 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return '';
+	};
+
+	siteCookie.init = function( wrapperID, btnClass ) {
+		var wrapper = $( wrapperID );
+
+		if( !wrapper ) { return; }
+
+		var cookieName = wrapper.attr( 'data-cookie' );
+
+		// if cookies allowed but not yet saved
+		if( document.cookie.indexOf(cookieName) < 0 && navigator.cookieEnabled ) {
+
+			//show cookie
+			wrapper.css( 'display' , 'block' );
+
+			//init approval buttons
+			// var button = wrapper.find( btnClass );
+
+			wrapper.on( 'click keydown', btnClass, function(e) {
+				var etype = e.type;
+
+				if(etype === 'keydown' && (e.keyCode !== 13 && e.keyCode !== 32)) {
+					return true;
+				}
+
+				e.preventDefault();	
+
+				siteCookie.set( cookieName, true, 365 );
+
+				wrapper.slideUp( 'slow' );
+
+			} );
+		}
+	};
+
+	$( document ).ready( function() {
+		siteCookie.init( '#js-cookie', '.js-cookie-approve' );
+	});
+
+})( jQuery );
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -7793,8 +7694,6 @@ Video.iframeProcess = function () {
 	var includeYoutubeScript = false,
 		includeVimeoScript = false;
 
-		console.log('here')
-
 	for ( var i = 0; i < Video.iframes.length; i++ ) {
 
 		var source = Video.iframes[i].getAttribute( 'data-source' );
@@ -7981,7 +7880,6 @@ Video.init = function () {
 
 document.addEventListener( 'DOMContentLoaded', function () {
 	Video.init();
-
 	// console.log(stokpress.isMobile())
 } );
 

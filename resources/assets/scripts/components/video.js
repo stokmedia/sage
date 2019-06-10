@@ -119,8 +119,6 @@ Video.iframeProcess = function () {
 	var includeYoutubeScript = false,
 		includeVimeoScript = false;
 
-		console.log('here')
-
 	for ( var i = 0; i < Video.iframes.length; i++ ) {
 
 		var source = Video.iframes[i].getAttribute( 'data-source' );
