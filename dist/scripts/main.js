@@ -11966,7 +11966,10 @@ var sliders = {
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$('.selected-product-carousel').flickity();
+/* WEBPACK VAR INJECTION */(function($) {$('.selected-product-slider').flickity({
+  prevNextButtons: false,
+  pageDots: false,
+});
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
