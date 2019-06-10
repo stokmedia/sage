@@ -159,7 +159,12 @@ trait Content
     
     public static function cms_text_with_button( $data )
     {   
-        return (object) $data;
+        $data = (object) $data;
+        $data->title = self::hasTitle($data) ? $data->section_title : '';
+        $data->link = $data->link ? (object) $data->link : $data->link;
+        $data->has_content = ( $data->title || $data->preamble || $data->content || $data->link );
+
+        return $data;
     }     
 
     public static function cms_three_promo( $data )

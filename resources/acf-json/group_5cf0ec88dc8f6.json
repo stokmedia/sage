@@ -64,7 +64,7 @@
             "label": "Content",
             "name": "content",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Recommended image width: <br\/>\r\n800px or above <br\/><br\/>\r\n<strong>Note:<\/strong><br\/>\r\n1. You can use \"Formats > Indent\" from the toolbar to indent a paragraph. <br\/>\r\n2. Make sure that the image display setting is set to \"Full size\" to avoid cropping of the added image.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -111,5 +111,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1559300089
+    "modified": 1560160579
 }
