@@ -141,11 +141,11 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_5cfa63e453e06",
-                    "label": "Height",
-                    "name": "height",
+                    "key": "field_5cfa63e253e05",
+                    "label": "Width",
+                    "name": "width",
                     "type": "number",
-                    "instructions": "The height of the original image in pixels, as svgs don't come with this value.",
+                    "instructions": "The width of the original image in pixels, as svgs don't come with this value.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -162,11 +162,11 @@
                     "step": ""
                 },
                 {
-                    "key": "field_5cfa63e253e05",
-                    "label": "Width",
-                    "name": "width",
+                    "key": "field_5cfa63e453e06",
+                    "label": "Height",
+                    "name": "height",
                     "type": "number",
-                    "instructions": "The width of the original image in pixels, as svgs don't come with this value.",
+                    "instructions": "The height of the original image in pixels, as svgs don't come with this value.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -234,8 +234,7 @@
                     },
                     "choices": {
                         "facebook": "Facebook",
-                        "instagram": "Instagram",
-                        "pinterest": "Pinterest"
+                        "instagram": "Instagram"
                     },
                     "default_value": [],
                     "allow_null": 0,
@@ -335,5 +334,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559913767
+    "modified": 1560156449
 }

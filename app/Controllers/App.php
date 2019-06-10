@@ -12,6 +12,12 @@ class App extends Controller
 
     protected $acf = true;
 
+    public function socialLinks()
+    {
+        //        self::pr(get_fields('global'));
+        return get_field( 'links', 'global' );
+    }
+
     public function desktopMenu()
     {
         return Navigation::desktopMenu();
@@ -20,6 +26,16 @@ class App extends Controller
     public function mobileMenu()
     {
         return Navigation::mobileMenu();
+    }
+
+    public function desktopFooterMenu()
+    {
+        return Navigation::desktopFooterMenu();
+    }
+
+    public function mobileFooterMenu()
+    {
+        return Navigation::mobileFooterMenu();
     }
 
     public function logo()
@@ -40,8 +56,10 @@ class App extends Controller
             $output[ 'mobile' ] = wp_get_attachment_image( $logo[ 'logo' ], 'main-logo-mobile', false, array( 'class' => 'mobile-logo' ) );
 
             if ( strpos( $output[ 'mobile' ], '.svg' ) !== false && $logo[ 'width' ] && $logo[ 'height' ] ) {
-                $output[ 'mobile' ] = '<img src="' . wp_get_attachment_image_url( $mobileLogo[ 'logo' ] ) . '" class="mobile-logo" alt="" width="' . $logo[ 'width' ] . '" height="' . $logo[ 'height' ] . '">';
+                $output[ 'mobile' ] = '<img src="' . wp_get_attachment_image_url( $mobileLogo[ 'logo' ] ) . '" class="mobile-logo" alt="" width="' . $mobileLogo[ 'width' ] . '" height="' . $mobileLogo[ 'height' ] . '">';
             }
+
+            $output[ 'mobile_menu' ] = str_replace( 'class="mobile-logo"', '', $output[ 'mobile' ] );
         }
 
         return $output;
