@@ -64,7 +64,7 @@
                             <ul class="group-links">
                                 @foreach($social_links as $link)
                                     <li>
-                                        <a href="{{ $link['url']  }}">
+                                        <a href="{{ $link['url']  }}" target="_blank" rel="nofollow noreferrer">
                                             @if($link['media'] === 'instagram')
                                                 <img src="@asset('images/icon/icon-insta.svg')" class="" alt="">
                                             @else

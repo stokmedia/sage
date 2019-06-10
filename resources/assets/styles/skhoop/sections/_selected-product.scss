@@ -3,8 +3,16 @@
     //
   }
 
-  &-carousel {
+  &-slider {
+    border-radius: 5px;
+
+    .flickity-viewport {
+      height: 100%;
+    }
+
     .item {
+      width: 100%;
+
       figure {
         @include aspect-ratio(575, 862);
       }
@@ -16,10 +24,46 @@
   }
 
   &-thumbnail {
+    max-height: 862px;
+
     .item {
+      width: 70px;
+      height: 106px;
+      margin: 0.625rem auto;
+      padding: 1.4375rem 0.9375rem 1.4375rem;
+      border-radius: 5px;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+      cursor: pointer;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      } 
+
       figure {
         @include aspect-ratio(35, 57);
       }
+    }
+  }
+
+  .fullscreen {
+    background: rgba(247, 247, 247, 0.4);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: $zindex-modal;
+
+    &.inactive {
+      display: none;
     }
   }
 }
