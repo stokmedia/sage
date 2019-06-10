@@ -18392,6 +18392,206 @@ blockquote footer::before,
   margin-bottom: 0;
 }
 
+/*! Flickity v2.2.0
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+/* line 5, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-enabled {
+  position: relative;
+}
+
+/* line 9, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+/* line 11, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+/* line 17, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+
+/* line 25, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 34, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+/* line 40, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- flickity-button ---- */
+
+/* line 47, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  border: none;
+  color: #333;
+}
+
+/* line 54, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-button:hover {
+  background: white;
+  cursor: pointer;
+}
+
+/* line 59, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-button:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 5px #19F;
+          box-shadow: 0 0 0 5px #19F;
+}
+
+/* line 64, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-button:active {
+  opacity: 0.6;
+}
+
+/* line 68, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+  /* prevent disabled button from capturing pointer up event. #716 */
+  pointer-events: none;
+}
+
+/* line 75, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-button-icon {
+  fill: currentColor;
+}
+
+/* ---- previous/next buttons ---- */
+
+/* line 81, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-prev-next-button {
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* line 90, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+
+/* line 91, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+
+/* right to left */
+
+/* line 93, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+
+/* line 97, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+/* line 102, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+/* ---- page dots ---- */
+
+/* line 112, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+/* line 123, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-rtl .flickity-page-dots {
+  direction: rtl;
+}
+
+/* line 125, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+/* line 136, resources/assets/styles/skhoop/vendor/_flickity.scss */
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+
 /* line 1, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter {

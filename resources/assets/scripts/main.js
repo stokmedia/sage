@@ -1,6 +1,9 @@
 // import external dependencies
 import 'jquery';
 
+// Require/Import vendors
+require('../../../node_modules/flickity/dist/flickity.pkgd');
+
 // Import everything from autoload
 import './autoload/**/*'
 
@@ -16,6 +19,7 @@ require('./components/nav');
 require('./components/cookie');
 require('./components/filter');
 require('./components/resellers');
+require('./components/carousels');
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -30,5 +34,6 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => {
   routes.loadEvents();
+  $('.selected-product-carousel').flickity();
   $('.resellers-table').resellersTable();
 });

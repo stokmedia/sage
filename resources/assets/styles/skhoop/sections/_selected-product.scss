@@ -1,0 +1,25 @@
+.selected-product {
+  &-preview {
+    //
+  }
+
+  &-carousel {
+    .item {
+      figure {
+        @include aspect-ratio(575, 862);
+      }
+    }
+  }
+
+  &-options {
+    //
+  }
+
+  &-thumbnail {
+    .item {
+      figure {
+        @include aspect-ratio(35, 57);
+      }
+    }
+  }
+}

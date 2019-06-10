@@ -13,13 +13,19 @@
     <div class="row">
       <div class="selected-product-preview col-md-6 bg-lightgreen">
         <div class="row mx-0">
-          <div class="col-md-11 px-0 selected-product-slider">
-            <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
+          <div class="col-md-11 selected-product-carousel">
+            <div class="item">
+              <figure class="">
+                <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
+              </figure>
+            </div>
           </div>
-          <div class="col-md-1 px-0 selected-product-thumbnail">
+          <div class="col-md-1 selected-product-thumbnail">
             @for ($thumbnail = 0; $thumbnail < 3; $thumbnail++)
               <div class="item">
-                <img src="@asset('images/temp/selected-product-thumb.png')" alt="" srcset="">
+                <figure class="">
+                  <img src="@asset('images/temp/selected-product-thumb.png')" alt="" srcset="">
+                </figure>
               </div>
             @endfor
           </div>
