@@ -21045,7 +21045,7 @@ body#tinymce {
   }
 }
 
-/* line 68, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-subtitle,
 .section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
@@ -21055,7 +21055,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 68, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-subtitle,
   .section-hero-banner .hero-wrap .hero-play-btn .hero-subtitle {
@@ -21065,7 +21065,7 @@ body#tinymce {
   }
 }
 
-/* line 80, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn,
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn {
@@ -21073,7 +21073,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 80, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-btn,
   .section-hero-banner .hero-wrap .hero-play-btn .hero-btn {
@@ -21083,7 +21083,7 @@ body#tinymce {
   }
 }
 
-/* line 89, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 88, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
 .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
@@ -21106,7 +21106,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 89, resources/assets/styles/skhoop/sections/_hero.scss */
+  /* line 88, resources/assets/styles/skhoop/sections/_hero.scss */
 
   .section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
   .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
@@ -21124,7 +21124,7 @@ body#tinymce {
   }
 }
 
-/* line 105, resources/assets/styles/skhoop/sections/_hero.scss */
+/* line 104, resources/assets/styles/skhoop/sections/_hero.scss */
 
 .section-hero-banner .hero-wrap .hero-text .hero-btn .btn:hover,
 .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:hover[type="submit"],
@@ -21136,6 +21136,11 @@ body#tinymce {
 .comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:active[type="submit"],
 .section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:active,
 .search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:active,
+.section-hero-banner .hero-wrap .hero-text .hero-btn .btn:focus,
+.section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:focus[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:focus[type="submit"],
+.section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:focus,
+.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:focus,
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn:hover,
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:hover[type="submit"],
 .comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:hover[type="submit"],
@@ -21145,7 +21150,12 @@ body#tinymce {
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:active[type="submit"],
 .comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:active[type="submit"],
 .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit:active,
-.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:active {
+.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:active,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .btn:focus,
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .comment-form input:focus[type="submit"],
+.comment-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn input:focus[type="submit"],
+.section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-form .search-submit:focus,
+.search-form .section-hero-banner .hero-wrap .hero-play-btn .hero-btn .search-submit:focus {
   background-color: #031532;
   border-color: #031532;
   color: #fff;
