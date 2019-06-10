@@ -308,3 +308,13 @@ $mobile-margin-top-menu: 3.75rem;
     }
   }
 }
+
+.nav-checkout {
+  display: none;
+}
+
+.is-checkout {
+  .nav-checkout {
+    display: block;
+  }
+}

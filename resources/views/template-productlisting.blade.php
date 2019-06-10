@@ -326,7 +326,7 @@
     <section class="section text-button">
       <div class="container">
         <div class="row">
-            <div class="offset-lg-3 col-lg-8">
+            <div class="offset-lg-2 col-lg-8">
                 <div class="title h2">Textmodule</div>
                 <div class="preamble">
                     In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus
@@ -335,6 +335,7 @@
                   <p>
                       In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis. Rivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.
                   </p>
+                  <p><img class="aligncenter wp-image-141 size-full" src="http://localhost:8080/wp-content/uploads/2019/05/lookbooks1911.jpg" alt="" width="940" height="666" srcset="/wp-content/uploads/2019/05/lookbooks1911.jpg 940w, /wp-content/uploads/2019/05/lookbooks1911-300x213.jpg 300w, /wp-content/uploads/2019/05/lookbooks1911-768x544.jpg 768w" sizes="(max-width: 940px) 100vw, 940px"></p>
                 </div>
             </div>
         </div>
