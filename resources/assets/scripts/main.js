@@ -13,7 +13,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
-import { carousels } from './components/carousels';
+import { sliders } from './components/sliders';
 
 // Require Components
 // window.stokpress = require('./util/helper');
@@ -24,7 +24,6 @@ require('./components/nav');
 require('./components/cookie');
 require('./components/filter');
 require('./components/resellers');
-require('./components/carousels');
 require('./components/video');
 
 /** Populate Router instance with DOM routes */
@@ -40,6 +39,6 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => {
   routes.loadEvents();
-  carousels.init();
+  sliders.init();
   $('.resellers-table').resellersTable();
 });

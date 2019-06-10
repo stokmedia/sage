@@ -1,4 +1,4 @@
-export const carousels = {
+export const sliders = {
   init() {
     require('./product-selected');
   },
