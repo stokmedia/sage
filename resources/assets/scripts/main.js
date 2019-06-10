@@ -3,6 +3,7 @@ import 'jquery';
 
 // Require/Import vendors
 require('../../../node_modules/flickity/dist/flickity.pkgd');
+require('./vendor/flickity-fullscreen');
 
 // Import everything from autoload
 import './autoload/**/*'

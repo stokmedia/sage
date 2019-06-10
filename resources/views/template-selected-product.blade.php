@@ -11,13 +11,13 @@
 <section class="section selected-product">
   <div class="container">
     <div class="row">
-      <div class="selected-product-preview col-md-6">
+      <div class="selected-product-preview col-md-7">
         <div class="row mx-0">
-          <div class="col-md-10">
-            <div class="selected-product-slider">
+          <div class="col-md-10 p-0">
+            <div class="selected-product-slider overflow-hidden">
               @for ($slider = 0; $slider < 3; $slider++)
                 <div class="item">
-                  <figure>
+                  <figure class="mb-0">
                     <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
                   </figure>
                 </div>
@@ -35,9 +35,12 @@
           </div>
         </div>
       </div>
-      <div class="selected-product-options col-md-6 bg-lightgreen">
+      <div class="selected-product-options col-md-5 bg-lightgreen">
       </div>
     </div>
+  </div>
+  <div class="fullscreen inactive">
+
   </div>
 </section>
 
