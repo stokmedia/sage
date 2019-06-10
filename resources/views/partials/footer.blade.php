@@ -72,3 +72,4 @@
   </div>
 </footer>
 @include('partials.trust')
+@include('partials.cookies')
