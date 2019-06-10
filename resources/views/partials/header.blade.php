@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top js-header is-checkout">
+<nav class="navbar navbar-expand-lg fixed-top js-header">
     <div class="container">
         <a class="navbar-brand order-1 order-lg-0" href="#">
             <img src="@asset('images/company-logo.svg')" alt="" srcset="">

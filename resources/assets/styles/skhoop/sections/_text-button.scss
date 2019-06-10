@@ -1,7 +1,93 @@
 .text-button {
+  & > .container {
+    @include media-breakpoint-up(lg) {
+      max-width: 50.3125rem;
+    }
+  }
+
+  &.is-thank-you {
+    & > .container {
+      @include media-breakpoint-up(md) {
+        max-width: 37.8125rem;
+      }
+    }
+  }
+
   .content {
-    p {
-      padding-left: 4.875rem;
+    p.has-padding {
+      @include media-breakpoint-up(lg) {
+        padding-left: 4.875rem;
+      }
+    }
+
+    img {
+      &.size-thumbnail {
+        &.alignleft {
+          margin-right: 1.625rem;
+          margin-bottom: 1.625rem;
+
+          @include media-breakpoint-down(xs) {
+            margin-right: 0;
+            margin-bottom: 0;
+          }
+        }
+
+        &.alignright {
+          margin-left: 1.625rem;
+          margin-bottom: 1.625rem;
+
+          @include media-breakpoint-down(xs) {
+            margin-left: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.size-medium {
+        @include media-breakpoint-down(xs) {
+          width: 100%;
+        }
+
+        &.alignleft {
+          margin-right: 1.625rem;
+          margin-bottom: 1.625rem;
+
+          @include media-breakpoint-down(xs) {
+            margin-right: 0;
+            margin-bottom: 0;
+          }
+        }
+
+        &.alignright {
+          margin-left: 1.625rem;
+          margin-bottom: 1.625rem;
+
+          @include media-breakpoint-down(xs) {
+            margin-left: 0;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.size-full {
+        width: 100%;
+      }
+    }
+  }
+
+  .buttons {
+    @include media-breakpoint-up(lg) {
+      margin-top: 3.4375rem;
+    }
+
+    .btn {
+      padding: 0.5938rem 0.5938rem;
+      border-radius: 1.25rem;
+
+      @include media-breakpoint-up(lg) {
+        padding: 0.9375rem 1rem;
+        border-radius: 9.375rem;
+      }
     }
   }
 }

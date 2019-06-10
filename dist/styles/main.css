@@ -16987,6 +16987,7 @@ h2,
   font-weight: 600;
   letter-spacing: 0.03px;
   line-height: 1.875rem;
+  text-transform: initial;
 }
 
 @media (min-width: 992px) {
@@ -16999,7 +17000,7 @@ h2,
   }
 }
 
-/* line 76, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 77, resources/assets/styles/skhoop/common/_typography.scss */
 
 h3,
 .h3 {
@@ -17007,10 +17008,11 @@ h3,
   font-weight: 300;
   letter-spacing: -0.16px;
   line-height: 1.5rem;
+  text-transform: initial;
 }
 
 @media (min-width: 992px) {
-  /* line 76, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 77, resources/assets/styles/skhoop/common/_typography.scss */
 
   h3,
   .h3 {
@@ -17020,7 +17022,7 @@ h3,
   }
 }
 
-/* line 91, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 93, resources/assets/styles/skhoop/common/_typography.scss */
 
 h4,
 .h4 {
@@ -17032,7 +17034,7 @@ h4,
 }
 
 @media (min-width: 992px) {
-  /* line 91, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 93, resources/assets/styles/skhoop/common/_typography.scss */
 
   h4,
   .h4 {
@@ -17042,7 +17044,7 @@ h4,
   }
 }
 
-/* line 107, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 109, resources/assets/styles/skhoop/common/_typography.scss */
 
 h5,
 .h5 {
@@ -17050,10 +17052,11 @@ h5,
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 1.5625rem;
+  text-transform: initial;
 }
 
 @media (min-width: 992px) {
-  /* line 107, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 109, resources/assets/styles/skhoop/common/_typography.scss */
 
   h5,
   .h5 {
@@ -17062,7 +17065,7 @@ h5,
   }
 }
 
-/* line 121, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 124, resources/assets/styles/skhoop/common/_typography.scss */
 
 h6,
 .h6 {
@@ -17070,10 +17073,11 @@ h6,
   font-weight: 400;
   letter-spacing: 0.5px;
   line-height: 1.5625rem;
+  text-transform: initial;
 }
 
 @media (min-width: 992px) {
-  /* line 121, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 124, resources/assets/styles/skhoop/common/_typography.scss */
 
   h6,
   .h6 {
@@ -17082,7 +17086,7 @@ h6,
   }
 }
 
-/* line 137, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 141, resources/assets/styles/skhoop/common/_typography.scss */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -17094,7 +17098,7 @@ body {
 }
 
 @media (min-width: 992px) {
-  /* line 137, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 141, resources/assets/styles/skhoop/common/_typography.scss */
 
   body {
     font-size: 0.875rem;
@@ -17102,7 +17106,7 @@ body {
   }
 }
 
-/* line 152, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 156, resources/assets/styles/skhoop/common/_typography.scss */
 
 em {
   font-family: "Source Serif Pro", serif;
@@ -17110,7 +17114,7 @@ em {
   font-weight: 400;
 }
 
-/* line 158, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 162, resources/assets/styles/skhoop/common/_typography.scss */
 
 .preamble {
   font-family: "Source Serif Pro", serif;
@@ -17121,7 +17125,7 @@ em {
 }
 
 @media (min-width: 992px) {
-  /* line 158, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 162, resources/assets/styles/skhoop/common/_typography.scss */
 
   .preamble {
     font-size: 1.25rem;
@@ -17129,7 +17133,7 @@ em {
   }
 }
 
-/* line 173, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 177, resources/assets/styles/skhoop/common/_typography.scss */
 
 p em {
   font-size: 1rem;
@@ -17137,7 +17141,7 @@ p em {
 }
 
 @media (min-width: 992px) {
-  /* line 173, resources/assets/styles/skhoop/common/_typography.scss */
+  /* line 177, resources/assets/styles/skhoop/common/_typography.scss */
 
   p em {
     font-size: 1.25rem;
@@ -17145,20 +17149,29 @@ p em {
   }
 }
 
-/* line 185, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 189, resources/assets/styles/skhoop/common/_typography.scss */
 
 p img.aligncenter,
 p img.alignnone {
-  margin: 2.875rem auto;
+  margin: 1.625rem auto;
 }
 
-/* line 191, resources/assets/styles/skhoop/common/_typography.scss */
+@media (min-width: 992px) {
+  /* line 189, resources/assets/styles/skhoop/common/_typography.scss */
+
+  p img.aligncenter,
+  p img.alignnone {
+    margin: 2.875rem auto;
+  }
+}
+
+/* line 199, resources/assets/styles/skhoop/common/_typography.scss */
 
 p a {
   text-decoration: underline;
 }
 
-/* line 196, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 204, resources/assets/styles/skhoop/common/_typography.scss */
 
 small,
 .small {
@@ -17168,7 +17181,7 @@ small,
   line-height: 1.25rem;
 }
 
-/* line 204, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 212, resources/assets/styles/skhoop/common/_typography.scss */
 
 b,
 strong,
@@ -17176,7 +17189,7 @@ strong,
   font-weight: 700;
 }
 
-/* line 214, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 222, resources/assets/styles/skhoop/common/_typography.scss */
 
 ul ul,
 ul ol,
@@ -17185,7 +17198,7 @@ ol ol {
   margin-bottom: 0;
 }
 
-/* line 222, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 230, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote,
 .blockquote {
@@ -17197,7 +17210,7 @@ blockquote,
   line-height: 2.5rem;
 }
 
-/* line 234, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 242, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -17208,7 +17221,7 @@ blockquote ol:last-child,
   margin-bottom: 0;
 }
 
-/* line 239, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 247, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote footer,
 .blockquote footer {
@@ -17219,7 +17232,7 @@ blockquote footer,
   line-height: 1.5625rem;
 }
 
-/* line 246, resources/assets/styles/skhoop/common/_typography.scss */
+/* line 254, resources/assets/styles/skhoop/common/_typography.scss */
 
 blockquote footer::before,
 .blockquote footer::before {
@@ -17674,53 +17687,69 @@ blockquote footer::before,
   line-height: 20px;
 }
 
-/* line 13, resources/assets/styles/skhoop/components/_section.scss */
+/* line 16, resources/assets/styles/skhoop/components/_section.scss */
 
 .section {
   margin-bottom: 50px;
 }
 
 @media (min-width: 992px) {
-  /* line 13, resources/assets/styles/skhoop/components/_section.scss */
+  /* line 16, resources/assets/styles/skhoop/components/_section.scss */
 
   .section {
     margin-bottom: 100px;
   }
 }
 
-/* line 29, resources/assets/styles/skhoop/components/_section.scss */
+/* line 23, resources/assets/styles/skhoop/components/_section.scss */
 
-.section.is-small-mb,
-.section.is-small-mb-next-section {
+.section.has-small-mb,
+.section.has-small-mb-next-section {
   margin-bottom: 40px;
 }
 
 @media (min-width: 992px) {
-  /* line 29, resources/assets/styles/skhoop/components/_section.scss */
+  /* line 23, resources/assets/styles/skhoop/components/_section.scss */
 
-  .section.is-small-mb,
-  .section.is-small-mb-next-section {
+  .section.has-small-mb,
+  .section.has-small-mb-next-section {
     margin-bottom: 70px;
   }
 }
 
-/* line 38, resources/assets/styles/skhoop/components/_section.scss */
+/* line 32, resources/assets/styles/skhoop/components/_section.scss */
 
 .section.no-mb {
   margin-bottom: 0;
 }
 
-/* line 42, resources/assets/styles/skhoop/components/_section.scss */
+/* line 36, resources/assets/styles/skhoop/components/_section.scss */
 
-.section.has-padding-top {
-  padding-bottom: 50px;
+.section.has-pt {
+  padding-top: 50px;
 }
 
 @media (min-width: 992px) {
-  /* line 42, resources/assets/styles/skhoop/components/_section.scss */
+  /* line 36, resources/assets/styles/skhoop/components/_section.scss */
 
-  .section.has-padding-top {
-    padding-bottom: 100px;
+  .section.has-pt {
+    padding-top: 100px;
+  }
+}
+
+/* line 44, resources/assets/styles/skhoop/components/_section.scss */
+
+.section.has-small-pt,
+.section.has-small-pt-next-section {
+  padding-top: 40px;
+}
+
+@media (min-width: 992px) {
+  /* line 44, resources/assets/styles/skhoop/components/_section.scss */
+
+  .section.has-small-pt,
+  .section.has-small-pt-next-section {
+    padding-top: 70px;
   }
 }
 
@@ -19149,20 +19178,28 @@ blockquote footer::before,
   }
 }
 
-/* line 255, resources/assets/styles/skhoop/layouts/_header.scss */
+@media (min-width: 992px) {
+  /* line 241, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .navbar-collapse {
+    margin-top: 0 !important;
+  }
+}
+
+/* line 259, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch {
   padding-bottom: 1.875rem;
 }
 
-/* line 258, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 262, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav {
   padding-top: 0;
   background-color: #b7cad0;
 }
 
-/* line 262, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 266, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li,
@@ -19170,7 +19207,7 @@ blockquote footer::before,
   border-bottom: 1px solid #fff;
 }
 
-/* line 265, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 269, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item .btn-checkout,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li .btn-checkout,
@@ -19183,7 +19220,7 @@ blockquote footer::before,
   text-transform: uppercase;
 }
 
-/* line 273, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 277, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item .btn-checkout:hover,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li .btn-checkout:hover,
@@ -19196,7 +19233,7 @@ blockquote footer::before,
   color: #031532;
 }
 
-/* line 283, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 287, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info {
   padding-top: 3.125rem;
@@ -19204,19 +19241,19 @@ blockquote footer::before,
   background-color: #b7cad0;
 }
 
-/* line 289, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 293, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info .brand-footer img {
   max-width: 5.8125rem;
 }
 
-/* line 294, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 298, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info .group-links {
   margin-top: 1.25rem;
 }
 
-/* line 302, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 306, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-overlay:after {
   content: "";
@@ -19229,35 +19266,35 @@ blockquote footer::before,
   z-index: 3;
 }
 
-/* line 314, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 318, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout {
   display: none !important;
 }
 
 @media (max-width: 991.98px) {
-  /* line 314, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 318, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout {
     text-align: center;
   }
 }
 
-/* line 321, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 325, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-checkout {
   margin-bottom: 0;
 }
 
 @media (max-width: 991.98px) {
-  /* line 321, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 325, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout .navbar-checkout {
     padding-bottom: 1.1875rem;
   }
 }
 
-/* line 329, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 333, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-spacer {
   width: 12.5rem;
@@ -19265,7 +19302,7 @@ blockquote footer::before,
 }
 
 @media (max-width: 991.98px) {
-  /* line 329, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 333, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout .navbar-spacer {
     width: auto;
@@ -19273,7 +19310,7 @@ blockquote footer::before,
   }
 }
 
-/* line 339, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 343, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-back {
   color: #031532;
@@ -19283,14 +19320,14 @@ blockquote footer::before,
   text-decoration: underline;
 }
 
-/* line 350, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 354, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .admin-bar .navbar.fixed-top {
   top: 2.875rem;
 }
 
 @media screen and (min-width: 783px) {
-  /* line 350, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 354, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .admin-bar .navbar.fixed-top {
     top: 2rem;
@@ -21862,10 +21899,138 @@ body#tinymce {
   margin: 0 0.625rem;
 }
 
-/* line 3, resources/assets/styles/skhoop/sections/_text-button.scss */
+@media (min-width: 992px) {
+  /* line 2, resources/assets/styles/skhoop/sections/_text-button.scss */
 
-.text-button .content p {
-  padding-left: 4.875rem;
+  .text-button > .container {
+    max-width: 50.3125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 9, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+  .text-button.is-thank-you > .container {
+    max-width: 37.8125rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 17, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+  .text-button .content p.has-padding {
+    padding-left: 4.875rem;
+  }
+}
+
+/* line 25, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+.text-button .content img.size-thumbnail.alignleft {
+  margin-right: 1.625rem;
+  margin-bottom: 1.625rem;
+}
+
+@media (max-width: 575.98px) {
+  /* line 25, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+  .text-button .content img.size-thumbnail.alignleft {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* line 35, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+.text-button .content img.size-thumbnail.alignright {
+  margin-left: 1.625rem;
+  margin-bottom: 1.625rem;
+}
+
+@media (max-width: 575.98px) {
+  /* line 35, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+  .text-button .content img.size-thumbnail.alignright {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* line 46, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+  .text-button .content img.size-medium {
+    width: 100%;
+  }
+}
+
+/* line 51, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+.text-button .content img.size-medium.alignleft {
+  margin-right: 1.625rem;
+  margin-bottom: 1.625rem;
+}
+
+@media (max-width: 575.98px) {
+  /* line 51, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+  .text-button .content img.size-medium.alignleft {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* line 61, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+.text-button .content img.size-medium.alignright {
+  margin-left: 1.625rem;
+  margin-bottom: 1.625rem;
+}
+
+@media (max-width: 575.98px) {
+  /* line 61, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+  .text-button .content img.size-medium.alignright {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* line 72, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+.text-button .content img.size-full {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  /* line 78, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+  .text-button .buttons {
+    margin-top: 3.4375rem;
+  }
+}
+
+/* line 83, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+.text-button .buttons .btn,
+.text-button .buttons .comment-form input[type="submit"],
+.comment-form .text-button .buttons input[type="submit"],
+.text-button .buttons .search-form .search-submit,
+.search-form .text-button .buttons .search-submit {
+  padding: 0.5938rem 0.5938rem;
+  border-radius: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  /* line 83, resources/assets/styles/skhoop/sections/_text-button.scss */
+
+  .text-button .buttons .btn,
+  .text-button .buttons .comment-form input[type="submit"],
+  .comment-form .text-button .buttons input[type="submit"],
+  .text-button .buttons .search-form .search-submit,
+  .search-form .text-button .buttons .search-submit {
+    padding: 0.9375rem 1rem;
+    border-radius: 9.375rem;
+  }
 }
 
 
