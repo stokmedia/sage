@@ -155,6 +155,35 @@ add_filter( 'pre_get_posts', function ( $query ) {
 
 });
 
+/**
+ * Add REST API support to an already registered post type.
+ */
+add_filter( 'register_post_type_args', function ( $args, $post_type ) {
+ 
+    if ( 'silk_products' === $post_type ) {
+
+        $args['show_in_rest'] = true;
+ 
+        // Optionally customize the rest_base or rest_controller_class
+        $args['rest_base']             = 'products';
+        $args['rest_controller_class'] = 'App\Classes\Silk_Product_REST_Controller';
+    }
+ 
+    return $args;
+}, 10, 2 );
 
 
+/**
+ * Add REST API support to an already registered taxonomy.
+ */
+add_filter( 'register_taxonomy_args', function ( $args, $taxonomy ) {
+ 
+    if ( 'silk_category' === $taxonomy ) {
+
+        $args['show_in_rest'] = true;
+        $args['query_var'] = true;
+    }
+ 
+    return $args;
+}, 10, 2 );
 
