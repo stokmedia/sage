@@ -18377,6 +18377,21 @@ blockquote footer::before,
   text-align: right;
 }
 
+/* line 1, resources/assets/styles/skhoop/components/_cookies.scss */
+
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* line 6, resources/assets/styles/skhoop/components/_cookies.scss */
+
+.cookie-bar .alert {
+  margin-bottom: 0;
+}
+
 /* line 1, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter {

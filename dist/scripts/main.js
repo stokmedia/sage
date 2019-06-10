@@ -74,7 +74,7 @@ module.exports = jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(16);
+module.exports = __webpack_require__(17);
 
 
 /***/ }),
@@ -107,6 +107,7 @@ __webpack_require__(12);
 __webpack_require__(13);
 __webpack_require__(14);
 __webpack_require__(15);
+__webpack_require__(16);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -7398,6 +7399,82 @@ Nav.overlay();
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
+
+(function ( $ ) {
+	console.log('asdfdsaf');
+
+	var mbCookie = {};
+
+	mbCookie.set = function( cname, cvalue, exdays ) {
+		var d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		var expires = 'expires=' +d.toUTCString();
+		document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+	};
+
+	mbCookie.get = function( cname ) {
+		var name = cname + '=';
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) === ' ') {
+				c = c.substring(1);
+			}
+
+			if (c.indexOf(name) === 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return '';
+	};
+
+	mbCookie.init = function( wrapperID, btnClass ) {
+		var wrapper = $( wrapperID );
+
+		if( !wrapper ) { return; }
+
+		var cookieName = wrapper.attr( 'data-cookie' );
+
+		// if cookies allowed but not yet saved
+		if( document.cookie.indexOf(cookieName) < 0 && navigator.cookieEnabled ) {
+
+			//show cookie
+			wrapper.css( 'display' , 'block' );
+
+			//init approval buttons
+			// var button = wrapper.find( btnClass );
+
+			wrapper.on( 'click keydown', btnClass, function(e) {
+				var etype = e.type;
+
+				if(etype === 'keydown' && (e.keyCode !== 13 && e.keyCode !== 32)) {
+					return true;
+				}
+
+				e.preventDefault();	
+
+				mbCookie.set( cookieName, true, 365 );
+
+				wrapper.slideUp( 'slow' );
+
+			} );
+		}
+	};
+
+	$( document ).ready( function() {
+		mbCookie.init( '#js-cookie', '.js-cookie-approve' );
+	});
+
+})( jQuery );
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* WEBPACK VAR INJECTION */(function($) {var Filter = {};
 
 Filter.toggle = function() {
@@ -7443,7 +7520,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {  $.fn.resellersTable = function () {
@@ -7484,7 +7561,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
