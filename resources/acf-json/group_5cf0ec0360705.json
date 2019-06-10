@@ -165,8 +165,8 @@
                 },
                 {
                     "key": "field_5cf0f22624537",
-                    "label": "Preamble",
-                    "name": "preamble",
+                    "label": "Text",
+                    "name": "text",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -241,5 +241,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1559905113
+    "modified": 1560173302
 }

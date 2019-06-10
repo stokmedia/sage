@@ -46,6 +46,35 @@
   // }
 }
 
+@mixin relate-aspect-ratio {
+  position: relative;
+  overflow: hidden;
+
+  > img,
+  > video,
+  > figure,
+  > .ratio-content,
+  > iframe,
+  > .ratio-iframe {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    right: -9999px;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: auto; //center left, right
+    object-fit: cover; //act like background-size: cover if supported
+  }
+
+  > iframe {
+    min-height: 200%;
+    min-width: 200%;
+  }
+}
+
 @mixin aspect-ratio-fullwidth($width, $height, $heightType) {
   position: relative;
   overflow: hidden;

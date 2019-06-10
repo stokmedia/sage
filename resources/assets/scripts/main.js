@@ -18,6 +18,7 @@ import { sliders } from './components/sliders';
 
 // Require Components
 // window.stokpress = require('./util/helper');
+
 // require('./components/helper');
 // require('./util/helper');
 require('./components/auto-padding');

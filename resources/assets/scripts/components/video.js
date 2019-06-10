@@ -1,31 +1,32 @@
+/* eslint-disable no-unused-vars */
 
 import { stokpress } from '../util/helper';
 /* eslint-disable no-undef */
 var Video = {};
 
-// function onPlayerStateChange( event ) {
-// 	if ( event.data === YT.PlayerState.PLAYING ) {
-// 		var target = event.target.a;
+function onPlayerStateChange( event ) {
+	if ( event.data === YT.PlayerState.PLAYING ) {
+		var target = event.target.a;
 
-// 		Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-// 			element.parentNode.removeChild( element );
-// 		} );
+		Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+			element.parentNode.removeChild( element );
+		} );
 
-// 		target.style.opacity = 1;
-// 		target.classList.remove( 'is-video-hidden' );
-// 	}
-// }
+		target.style.opacity = 1;
+		target.classList.remove( 'is-video-hidden' );
+	}
+}
 
 // Youtube callbacks
-// function onYouTubeIframeAPIReady() {
-// 	for ( var i = 0; i < Video.iframes.length; i++ ) {
-// 		new YT.Player( Video.iframes[i].id, {
-// 			events: {
-// 				'onStateChange': onPlayerStateChange,
-// 			},
-// 		} );
-// 	}
-// }
+function onYouTubeIframeAPIReady() {
+	for ( var i = 0; i < Video.iframes.length; i++ ) {
+		new YT.Player( Video.iframes[i].id, {
+			events: {
+				'onStateChange': onPlayerStateChange,
+			},
+		} );
+	}
+}
 
 Video.initializeVimeo = function ( iframes ) {
 	if ( iframes.length === 0 ) { return; }
@@ -103,6 +104,9 @@ Video.initializeYoutube = function ( iframe ) {
 
 	playVideo.addEventListener( 'click', function (event) {
 		event.preventDefault();
+
+		console.log('clicked')
+
 		// this.parentNode.parentNode.classList.add( 'no-after' );
 
 		Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
@@ -110,7 +114,7 @@ Video.initializeYoutube = function ( iframe ) {
 		} );
 
 		iframe.style.opacity = 1;
-		iframe.classList.remove( 'is-video-hidden' );
+		iframe.style.zIndex = 10;
 		iframe.src += '&autoplay=1';
 	} );
 };
@@ -189,6 +193,7 @@ Video.autoPlayChecker = function (e, isCurrStatus, source) {
 				e.parentNode.style.zIndex = 10;
 				e.classList.remove( 'is-video-hidden' );
 				// e.style.opacity = 1;
+				console.log('tae')
 				Video.initializeYoutube( e );
 			}
 		} else {
@@ -202,7 +207,7 @@ Video.autoPlayChecker = function (e, isCurrStatus, source) {
 				e.style.opacity = 1;
 				e.classList.remove( 'is-video-hidden' );
 			} else {
-				// e.style.zIndex = 10;
+				// e.style.zIndex = 1;
 				// e.parentNode.style.zIndex = 10;
 				// e.classList.remove( 'is-video-hidden' );
 				// e.style.opacity = 1;
@@ -212,17 +217,11 @@ Video.autoPlayChecker = function (e, isCurrStatus, source) {
 	} else {
 		//if desktop
 		var currStatusDesk = e.getAttribute( 'data-autoplay' );
+		console.log(currStatusDesk)
 		if(!currStatusDesk) {
 			if(isKindVideo === 'vimeo') {
-				// e.style.opacity = 1;
-				// e.style.zIndex = 10;
-				// e.parentNode.style.zIndex = 10;
-				// e.classList.remove( 'is-video-hidden' );
 				Video.initializeVimeo( e );
 			} else if (isKindVideo === 'youtube') {
-				// e.style.zIndex = 10;
-				// e.parentNode.style.zIndex = 10;
-				// e.style.opacity = 1;
 				e.classList.remove( 'is-video-hidden' );
 				Video.initializeYoutube( e );
 			}
@@ -253,7 +252,7 @@ Video.init = function () {
 
 	if ( Video.tags.length ) {
 		for ( var i = 0; i < Video.tags.length; i++ ) {
-			if(stokpress.isMobile()) {a
+			if(stokpress.isMobile()) {
 				console.log(Video.tags[i].getAttribute( 'data-autoplaymobile' ));
 				if ( Video.tags[i].getAttribute( 'data-autoplaymobile' ) ) {
 					// Put video to the front

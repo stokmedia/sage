@@ -3,8 +3,7 @@ let $carousel = $('.selected-product-slider').flickity({
   pageDots: false,
   fullscreen: true,
 }),
-  $thumbnailGroup = $('.selected-product-thumbnail'),
-  $fullScreen = $('.fullscreen');
+$thumbnailGroup = $('.selected-product-thumbnail');
 
 // select cell on button click
 $thumbnailGroup.on( 'click', '.item', function() {
@@ -14,5 +13,4 @@ $thumbnailGroup.on( 'click', '.item', function() {
 
 $carousel.on('click', '.item', function() {
   // let index = $(this).index();
-  $fullScreen.fadeIn();
 });

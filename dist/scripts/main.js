@@ -1905,7 +1905,7 @@ return getSize;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(7);
-module.exports = __webpack_require__(40);
+module.exports = __webpack_require__(41);
 
 
 /***/ }),
@@ -1942,14 +1942,15 @@ __webpack_require__(9);
 
 // Require Components
 // window.stokpress = require('./util/helper');
+
 // require('./components/helper');
 // require('./util/helper');
-__webpack_require__(33);
 __webpack_require__(34);
 __webpack_require__(35);
 __webpack_require__(36);
 __webpack_require__(37);
 __webpack_require__(38);
+__webpack_require__(39);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -16100,6 +16101,7 @@ Router.prototype.loadEvents = function loadEvents () {
 var sliders = {
   init: function init() {
     __webpack_require__(32);
+    __webpack_require__(33);
   },
 }
 
@@ -16113,8 +16115,7 @@ var sliders = {
   pageDots: false,
   fullscreen: true,
 }),
-  $thumbnailGroup = $('.selected-product-thumbnail'),
-  $fullScreen = $('.fullscreen');
+$thumbnailGroup = $('.selected-product-thumbnail');
 
 // select cell on button click
 $thumbnailGroup.on( 'click', '.item', function() {
@@ -16124,13 +16125,44 @@ $thumbnailGroup.on( 'click', '.item', function() {
 
 $carousel.on('click', '.item', function() {
   // let index = $(this).index();
-  $fullScreen.fadeIn();
 });
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {var GridSlider = {};
+
+GridSlider.slider = function () {
+  var $gridSlider = $( '.js-grid-slider' );
+
+  $gridSlider.flickity({
+    cellAlign: 'left',
+    prevNextButtons: false,
+    pageDots: false,
+  });
+
+  var $prevButton = $('.js-flickity-prev');
+  var $nextButton = $('.js-flickity-next');
+
+  $prevButton.click(function() {
+    $gridSlider.flickity('previous');
+  });
+
+  $nextButton.click(function() {
+    $gridSlider.flickity('next');
+  });
+};
+
+GridSlider.slider();
+
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var AutoPadding = {};
@@ -16154,7 +16186,7 @@ AutoPadding.update = changePadding;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Nav = {};
@@ -16202,7 +16234,7 @@ Nav.menuPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
@@ -16277,7 +16309,7 @@ Nav.menuPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Filter = {};
@@ -16325,7 +16357,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {  $.fn.resellersTable = function () {
@@ -16366,40 +16398,41 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(40);
+/* eslint-disable no-unused-vars */
 
 
 /* eslint-disable no-undef */
 var Video = {};
 
-// function onPlayerStateChange( event ) {
-// 	if ( event.data === YT.PlayerState.PLAYING ) {
-// 		var target = event.target.a;
+function onPlayerStateChange( event ) {
+	if ( event.data === YT.PlayerState.PLAYING ) {
+		var target = event.target.a;
 
-// 		Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-// 			element.parentNode.removeChild( element );
-// 		} );
+		Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+			element.parentNode.removeChild( element );
+		} );
 
-// 		target.style.opacity = 1;
-// 		target.classList.remove( 'is-video-hidden' );
-// 	}
-// }
+		target.style.opacity = 1;
+		target.classList.remove( 'is-video-hidden' );
+	}
+}
 
 // Youtube callbacks
-// function onYouTubeIframeAPIReady() {
-// 	for ( var i = 0; i < Video.iframes.length; i++ ) {
-// 		new YT.Player( Video.iframes[i].id, {
-// 			events: {
-// 				'onStateChange': onPlayerStateChange,
-// 			},
-// 		} );
-// 	}
-// }
+function onYouTubeIframeAPIReady() {
+	for ( var i = 0; i < Video.iframes.length; i++ ) {
+		new YT.Player( Video.iframes[i].id, {
+			events: {
+				'onStateChange': onPlayerStateChange,
+			},
+		} );
+	}
+}
 
 Video.initializeVimeo = function ( iframes ) {
 	if ( iframes.length === 0 ) { return; }
@@ -16479,6 +16512,9 @@ Video.initializeYoutube = function ( iframe ) {
 
 	playVideo.addEventListener( 'click', function (event) {
 		event.preventDefault();
+
+		console.log('clicked')
+
 		// this.parentNode.parentNode.classList.add( 'no-after' );
 
 		Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
@@ -16486,7 +16522,7 @@ Video.initializeYoutube = function ( iframe ) {
 		} );
 
 		iframe.style.opacity = 1;
-		iframe.classList.remove( 'is-video-hidden' );
+		iframe.style.zIndex = 10;
 		iframe.src += '&autoplay=1';
 	} );
 };
@@ -16565,6 +16601,7 @@ Video.autoPlayChecker = function (e, isCurrStatus, source) {
 				e.parentNode.style.zIndex = 10;
 				e.classList.remove( 'is-video-hidden' );
 				// e.style.opacity = 1;
+				console.log('tae')
 				Video.initializeYoutube( e );
 			}
 		} else {
@@ -16578,7 +16615,7 @@ Video.autoPlayChecker = function (e, isCurrStatus, source) {
 				e.style.opacity = 1;
 				e.classList.remove( 'is-video-hidden' );
 			} else {
-				// e.style.zIndex = 10;
+				// e.style.zIndex = 1;
 				// e.parentNode.style.zIndex = 10;
 				// e.classList.remove( 'is-video-hidden' );
 				// e.style.opacity = 1;
@@ -16588,17 +16625,11 @@ Video.autoPlayChecker = function (e, isCurrStatus, source) {
 	} else {
 		//if desktop
 		var currStatusDesk = e.getAttribute( 'data-autoplay' );
+		console.log(currStatusDesk)
 		if(!currStatusDesk) {
 			if(isKindVideo === 'vimeo') {
-				// e.style.opacity = 1;
-				// e.style.zIndex = 10;
-				// e.parentNode.style.zIndex = 10;
-				// e.classList.remove( 'is-video-hidden' );
 				Video.initializeVimeo( e );
 			} else if (isKindVideo === 'youtube') {
-				// e.style.zIndex = 10;
-				// e.parentNode.style.zIndex = 10;
-				// e.style.opacity = 1;
 				e.classList.remove( 'is-video-hidden' );
 				Video.initializeYoutube( e );
 			}
@@ -16629,7 +16660,7 @@ Video.init = function () {
 
 	if ( Video.tags.length ) {
 		for ( var i = 0; i < Video.tags.length; i++ ) {
-			if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {a
+			if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {
 				console.log(Video.tags[i].getAttribute( 'data-autoplaymobile' ));
 				if ( Video.tags[i].getAttribute( 'data-autoplaymobile' ) ) {
 					// Put video to the front
@@ -16685,7 +16716,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16704,6 +16735,10 @@ if (!('remove' in Element.prototype)) {
 // var stokpress = {};
 
 var stokpress = {
+  init: function init() {
+    return true
+  },
+
   strToBool: function strToBool(str) {
     console.log(typeof str);
     if(typeof str == 'boolean') {
@@ -16778,6 +16813,10 @@ var stokpress = {
 }
 
 var stokpressViewPort = {
+  init: function init() {
+    return true
+  },
+
   documentWidth: function documentWidth() {
     var e = window, a = 'inner';
     
@@ -16791,6 +16830,10 @@ var stokpressViewPort = {
 }
 
 var stokpressEvent = {
+  init: function init() {
+    return true
+  },
+  
   debounce: function debounce(func, wait, immediate) {
     var timeout;
     return function() {
@@ -16857,7 +16900,7 @@ var stokpressEvent = {
 // }
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
