@@ -74,7 +74,7 @@ module.exports = jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(22);
+module.exports = __webpack_require__(23);
 
 
 /***/ }),
@@ -112,12 +112,12 @@ __webpack_require__(3);
 // window.stokpress = require('./util/helper');
 // require('./components/helper');
 // require('./util/helper');
-__webpack_require__(15);
 __webpack_require__(16);
 __webpack_require__(17);
 __webpack_require__(18);
 __webpack_require__(19);
 __webpack_require__(20);
+__webpack_require__(21);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -11958,6 +11958,7 @@ Router.prototype.loadEvents = function loadEvents () {
 var sliders = {
   init: function init() {
     __webpack_require__(14);
+    __webpack_require__(15);
   },
 }
 
@@ -11972,6 +11973,38 @@ var sliders = {
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {var GridSlider = {};
+
+GridSlider.slider = function () {
+  var $gridSlider = $( '.js-grid-slider' );
+
+  $gridSlider.flickity({
+    cellAlign: 'left',
+    prevNextButtons: false,
+    pageDots: false,
+  });
+
+  var $prevButton = $('.js-flickity-prev');
+  var $nextButton = $('.js-flickity-next');
+
+  $prevButton.click(function() {
+    $gridSlider.flickity('previous');
+  });
+
+  $nextButton.click(function() {
+    $gridSlider.flickity('next');
+  });
+};
+
+GridSlider.slider();
+
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var AutoPadding = {};
@@ -11995,7 +12028,7 @@ AutoPadding.update = changePadding;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Nav = {};
@@ -12043,7 +12076,7 @@ Nav.menuPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
@@ -12118,7 +12151,7 @@ Nav.menuPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Filter = {};
@@ -12166,7 +12199,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {  $.fn.resellersTable = function () {
@@ -12207,12 +12240,12 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(22);
 
 
 /* eslint-disable no-undef */
@@ -12526,7 +12559,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12698,7 +12731,7 @@ var stokpressEvent = {
 // }
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

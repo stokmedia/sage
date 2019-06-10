@@ -233,6 +233,7 @@
   &-price {
     margin-top: -0.4375rem;
     font-size: 0.75rem;
+    font-weight: $font-weight-normal;
     letter-spacing: 0.5px;
 
     @include media-breakpoint-up(lg) {
