@@ -61,8 +61,35 @@ add_filter( 'acf/prepare_field/name=sections', function( $field ) {
     return $field;
 });
 
+// Register Format dropdown
+add_filter( 'mce_buttons_2', function( $buttons ) {
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+} );
+
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', function( $init_array ) {  
+	$style_formats = array(  
+		array(  
+			'title' => 'Indent',  
+			'block' => 'p',  
+			'classes' => 'has-padding',
+			'wrapper' => false,
+			
+		),  
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = wp_json_encode( $style_formats );  
+	
+	return $init_array;  
+  
+}  );  
+
 /**
  * Image sizes
  */
 add_image_size( 'main-logo-desktop', 120, 45 );
 add_image_size( 'main-logo-mobile', 93, 35 );
+add_image_size( 'category-banner', 1920, 535 );
+
+// TODO: add custom size for category-banner-mobile
