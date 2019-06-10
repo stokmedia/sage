@@ -17,6 +17,7 @@ import aboutUs from './routes/about';
 // require('./util/helper');
 require('./components/auto-padding');
 require('./components/nav');
+require('./components/cookie');
 require('./components/filter');
 require('./components/resellers');
 require('./components/video');

@@ -11,6 +11,20 @@ $mobile-margin-top-menu: 3.75rem;
   & > .container {
     position: relative;
   }
+
+  &.is-checkout {
+    .nav-checkout {
+      display: block !important;
+
+      @include media-breakpoint-up(lg) {
+        display: flex !important;
+      }
+    }
+
+    .container:not(.nav-checkout) {
+      display: none !important;
+    }
+  }
 }
 
 .navbar-brand {
@@ -297,6 +311,40 @@ $mobile-margin-top-menu: 3.75rem;
 	}
 }
 
+.nav-checkout {
+  display: none !important;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+
+  .navbar-checkout {
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 1.1875rem;
+    }
+  }
+
+  .navbar-spacer {
+    width: 12.5rem;
+    padding: 0;
+
+    @include media-breakpoint-down(md) {
+      width: auto;
+      padding: 0.3125rem 0;
+    }
+  }
+
+  .navbar-back {
+    color: $body-color;
+    font-size: 0.875rem;
+    letter-spacing: 0.44px;
+    line-height: 1.875rem;
+    text-decoration: underline;
+  }
+}
+
 .admin-bar {
   .navbar {
     &.fixed-top {
@@ -306,15 +354,5 @@ $mobile-margin-top-menu: 3.75rem;
         top: 2rem;
       }
     }
-  }
-}
-
-.nav-checkout {
-  display: none;
-}
-
-.is-checkout {
-  .nav-checkout {
-    display: block;
   }
 }
