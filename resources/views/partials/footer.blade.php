@@ -4,79 +4,126 @@
             <div class="col-lg-2 col-md-12">
                 <div class="brand-container">
                     <a href="#" class="brand-footer">
-                        <img src="@asset('images/temp/company-logo.svg')" class="" alt=""/>
+                        {!! $logo['footerLogo'] !!}
                     </a>
-                    <ul class="group-links d-none d-md-block">
-                        <li>
-                            <a href="#">
-                                <img src="@asset('images/icon/icon-insta.svg')" class="" alt=""/>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="@asset('images/icon/icon-facebook.svg')" class="" alt=""/>
-                            </a>
-                        </li>
-                    </ul>
+
+                    @if($social_links)
+                        <ul class="group-links d-none d-md-block">
+                            @foreach($social_links as $link)
+                                <li>
+                                    <a href="{{ $link['url']  }}" target="_blank" rel="nofollow noreferrer">
+                                        @if($link['media'] === 'instagram')
+                                            <img src="@asset('images/icon/icon-insta.svg')" class="" alt="">
+                                        @else
+                                            <img src="@asset('images/icon/icon-facebook.svg')" class="" alt="">
+                                        @endif
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </div>
             </div>
             <div class="offset-lg-4 col-lg-2 col-md-4 d-none d-md-block">
-                <div class="link-list">
-                    <h4 class="h4">Shoppa</h4>
-                    <ul>
-                        <li><a href="#">Kjolar</a></li>
-                        <li><a href="#">Jackor</a></li>
-                        <li><a href="#">Mössor</a></li>
-                        <li><a href="#">Regnkläder</a></li>
-                        <li><a href="#">Visa alla</a></li>
-                    </ul>
-                </div>
+                @if(isset($desktop_footer_menu[0]))
+                    <div class="link-list">
+                        <h4 class="h4">
+                            @if($desktop_footer_menu[0]->isLink)
+                                <a href="{{ $desktop_footer_menu[0]->url }}">{{ $desktop_footer_menu[0]->title }}</a>
+                            @else
+                                {{ $desktop_footer_menu[0]->title }}
+                            @endif
+                        </h4>
+
+                        @if(isset($desktop_footer_menu[0]->children) && count($desktop_footer_menu[0]->children))
+                            <ul>
+                                @foreach($desktop_footer_menu[0]->children as $child)
+                                    <li><a href="{{ $child->url }}">{{ $child->title }}</a></li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </div>
+                @endif
             </div>
             <div class="col-lg-2 col-md-4">
-                <div class="link-list  d-none d-md-block">
-                    <h4 class="h4">Kundtjänst</h4>
-                    <ul>
-                        <li><a href="#">Kontaktuppgifter</a></li>
-                        <li><a href="#">Storleksgudie</a></li>
-                        <li><a href="#">Köpvillkor</a></li>
-                        <li><a href="#">Återförsäljare</a></li>
-                        <li><a href="#">Press</a></li>
+                @if(isset($desktop_footer_menu[1]))
+                    <div class="link-list d-none d-md-block">
+                        <h4 class="h4">
+                            @if($desktop_footer_menu[1]->isLink)
+                                <a href="{{ $desktop_footer_menu[1]->url }}">{{ $desktop_footer_menu[1]->title }}</a>
+                            @else
+                                {{ $desktop_footer_menu[1]->title }}
+                            @endif
+                        </h4>
+
+                        @if(isset($desktop_footer_menu[1]->children) && count($desktop_footer_menu[1]->children))
+                            <ul>
+                                @foreach($desktop_footer_menu[1]->children as $child)
+                                    <li><a href="{{ $child->url }}">{{ $child->title }}</a></li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </div>
+                @endif
+
+                {{--Mobile footer menu--}}
+                @if(isset($mobile_footer_menu[0]))
+                    <div class="link-list d-md-none d-lg-none">
+                        <h4 class="h4">
+                            @if($mobile_footer_menu[0]->isLink)
+                                <a href="{{ $mobile_footer_menu[0]->url }}">{{ $mobile_footer_menu[0]->title }}</a>
+                            @else
+                                {{ $mobile_footer_menu[0]->title }}
+                            @endif
+                        </h4>
+
+                        @if(isset($mobile_footer_menu[0]->children) && count($mobile_footer_menu[0]->children))
+                            <ul>
+                                @foreach($mobile_footer_menu[0]->children as $child)
+                                    <li><a href="{{ $child->url }}">{{ $child->title }}</a></li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </div>
+                @endif
+                {{--End Mobile footer menu--}}
+
+                @if($social_links)
+                    <ul class="group-links text-center d-md-none d-lg-none">
+                        @foreach($social_links as $link)
+                            <li>
+                                <a href="{{ $link['url']  }}" target="_blank" rel="nofollow noreferrer">
+                                    @if($link['media'] === 'instagram')
+                                        <img src="@asset('images/icon/icon-insta.svg')" class="" alt="">
+                                    @else
+                                        <img src="@asset('images/icon/icon-facebook.svg')" class="" alt="">
+                                    @endif
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
-                </div>
-                <div class="link-list  d-md-none d-lg-none">
-                    <h4 class="h4">EJTWO</h4>
-                    <ul>
-                        <li><a href="#">Kontaktuppgifter</a></li>
-                        <li><a href="#">Storleksgudie</a></li>
-                        <li><a href="#">Köpvillkor</a></li>
-                        <li><a href="#">Återförsäljare</a></li>
-                        <li><a href="#">Press</a></li>
-                    </ul>
-                </div>
-                <ul class="group-links text-center d-md-none d-lg-none">
-                    <li>
-                        <a href="#">
-                            <img src="@asset('images/icon/icon-insta.svg')" class="" alt=""/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="@asset('images/icon/icon-facebook.svg')" class="" alt=""/>
-                        </a>
-                    </li>
-                </ul>
+                @endif
             </div>
             <div class="col-lg-2 col-md-4 d-none d-md-block">
-                <div class="link-list">
-                    <h4 class="h4">Om Skhoop</h4>
-                    <ul>
-                        <li><a href="#">Om Skhoop</a></li>
-                        <li><a href="#">Skhoop Sisters</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Nyhetsbrev</a></li>
-                    </ul>
-                </div>
+                @if(isset($desktop_footer_menu[2]))
+                    <div class="link-list">
+                        <h4 class="h4">
+                            @if($desktop_footer_menu[2]->isLink)
+                                <a href="{{ $desktop_footer_menu[2]->url }}">{{ $desktop_footer_menu[2]->title }}</a>
+                            @else
+                                {{ $desktop_footer_menu[2]->title }}
+                            @endif
+                        </h4>
+
+                        @if(isset($desktop_footer_menu[2]->children) && count($desktop_footer_menu[2]->children))
+                            <ul>
+                                @foreach($desktop_footer_menu[2]->children as $child)
+                                    <li><a href="{{ $child->url }}">{{ $child->title }}</a></li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </div>
+                @endif
             </div>
         </div>
     </div>

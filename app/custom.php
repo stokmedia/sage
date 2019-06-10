@@ -90,6 +90,7 @@ add_filter( 'tiny_mce_before_init', function( $init_array ) {
  */
 add_image_size( 'main-logo-desktop', 120, 45 );
 add_image_size( 'main-logo-mobile', 93, 35 );
+add_image_size( 'footer-logo-desktop', 180, 68 );
 add_image_size( 'category-banner', 1920, 535 );
 
 // TODO: add custom size for category-banner-mobile
