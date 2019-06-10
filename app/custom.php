@@ -60,3 +60,9 @@ add_filter( 'acf/prepare_field/name=sections', function( $field ) {
 
     return $field;
 });
+
+/**
+ * Image sizes
+ */
+add_image_size( 'main-logo-desktop', 120, 45 );
+add_image_size( 'main-logo-mobile', 93, 35 );
