@@ -1,8 +1,9 @@
-<nav class="navbar navbar-expand-lg fixed-top js-header is-checkout">
+{{--TODO: Add .is-checkout if showing checkout page--}}
+<nav class="navbar navbar-expand-lg fixed-top js-header">
     <div class="container">
         <a class="navbar-brand order-1 order-lg-0" href="#">
-            <img src="@asset('images/company-logo.svg')" alt="" srcset="">
-            <img src="@asset('images/company-logo-mobile.svg')" class="mobile-logo" alt="" srcset="">
+            {!! $logo['desktop'] !!}
+            {!! $logo['mobile'] !!}
         </a>
         <button class="navbar-toggler order-0 js-nav-toggle" type="button" data-toggle="collapse"
                 data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -7402,18 +7402,17 @@ Nav.overlay();
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
 
 (function ( $ ) {
-	console.log('asdfdsaf');
 
-	var mbCookie = {};
+	var siteCookie = {};
 
-	mbCookie.set = function( cname, cvalue, exdays ) {
+	siteCookie.set = function( cname, cvalue, exdays ) {
 		var d = new Date();
 		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 		var expires = 'expires=' +d.toUTCString();
 		document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
 	};
 
-	mbCookie.get = function( cname ) {
+	siteCookie.get = function( cname ) {
 		var name = cname + '=';
 		var decodedCookie = decodeURIComponent(document.cookie);
 		var ca = decodedCookie.split(';');
@@ -7431,7 +7430,7 @@ Nav.overlay();
 		return '';
 	};
 
-	mbCookie.init = function( wrapperID, btnClass ) {
+	siteCookie.init = function( wrapperID, btnClass ) {
 		var wrapper = $( wrapperID );
 
 		if( !wrapper ) { return; }
@@ -7456,7 +7455,7 @@ Nav.overlay();
 
 				e.preventDefault();	
 
-				mbCookie.set( cookieName, true, 365 );
+				siteCookie.set( cookieName, true, 365 );
 
 				wrapper.slideUp( 'slow' );
 
@@ -7465,7 +7464,7 @@ Nav.overlay();
 	};
 
 	$( document ).ready( function() {
-		mbCookie.init( '#js-cookie', '.js-cookie-approve' );
+		siteCookie.init( '#js-cookie', '.js-cookie-approve' );
 	});
 
 })( jQuery );
