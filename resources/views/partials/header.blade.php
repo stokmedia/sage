@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top js-header">
+<nav class="navbar navbar-expand-lg fixed-top js-header is-checkout">
     <div class="container">
         <a class="navbar-brand order-1 order-lg-0" href="#">
             <img src="@asset('images/company-logo.svg')" alt="" srcset="">
@@ -158,16 +158,17 @@
                 </li>
             </ul>
         </div>
+    </div>
 
-
-        <div class="navbar-spacer is-checkout">
+    {{-- Checkout Navigation --}}
+    <div class="container nav-checkout">
+        <div class="navbar-spacer">
             <a href="#" class="navbar-back">Fortsätt shoppa</a>
         </div>
-        <a class="navbar-brand is-checkout order-1" href="#">
-            <img src="@asset('images/company-logo.svg')" alt="" srcset="">
-            <img src="@asset('images/company-logo-mobile.svg')" class="mobile-logo" alt="" srcset="">
-        </a>
-        <div class="navbar-spacer is-checkout"></div>
+        <div class="navbar-checkout h1 m-auto" href="#">Kassa</div>
+        <div class="navbar-spacer d-none d-lg-block"></div>
     </div>
+    {{-- End Checkout Navigation --}}
+
 </nav>
 
