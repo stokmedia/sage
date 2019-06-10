@@ -11,15 +11,25 @@
 <section class="section selected-product">
   <div class="container">
     <div class="row">
-      <div class="selected-product-preview col-md-6 bg-lightgreen">
+      <div class="selected-product-preview col-md-6">
         <div class="row mx-0">
-          <div class="col-md-11 px-0 selected-product-slider">
-            <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
+          <div class="col-md-10">
+            <div class="selected-product-slider">
+              @for ($slider = 0; $slider < 3; $slider++)
+                <div class="item">
+                  <figure>
+                    <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
+                  </figure>
+                </div>
+              @endfor
+            </div>
           </div>
-          <div class="col-md-1 px-0 selected-product-thumbnail">
+          <div class="col-md-2 selected-product-thumbnail">
             @for ($thumbnail = 0; $thumbnail < 3; $thumbnail++)
-              <div class="item">
-                <img src="@asset('images/temp/selected-product-thumb.png')" alt="" srcset="">
+              <div class="item shadow-sm bg-white">
+                <figure class="">
+                  <img src="@asset('images/temp/selected-product-thumb.png')" alt="" srcset="">
+                </figure>
               </div>
             @endfor
           </div>

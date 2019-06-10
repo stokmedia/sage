@@ -42,7 +42,7 @@ trait Content
         foreach( $data->items as $item ) {
             $item = (object) $item;
             
-            $cardImageSize = 'large';
+            $cardImageSize = 'medium';
             $postImage = null;
             $postTitle = null;
             $postText = null;
@@ -55,7 +55,7 @@ trait Content
             
             if( $item->get_content_from === 'category' && $item->category ) {
                 $categoryImage = get_field( 'featured_image', $item->category->taxonomy . '_' . $item->category->term_id ); 
-                $postImage = $categoryImage ? wp_get_attachment_image( $categoryImage['ID'], 'full' ) : null;
+                $postImage = $categoryImage ? wp_get_attachment_image( $categoryImage['ID'], $cardImageSize ) : null;
                 $postTitle = $item->category->name;
                 $postText = $item->category->description;
                 $postLink->url = get_term_link( $item->category, $item->category->taxonomy ); 
@@ -82,7 +82,7 @@ trait Content
             }
 
             $newItem = [
-                'image' => !empty($item->image) ? wp_get_attachment_image( $item->image['ID'], 'full' ) : $postImage,
+                'image' => !empty($item->image) ? wp_get_attachment_image( $item->image['ID'], $cardImageSize ) : $postImage,
                 'title' => !empty($item->title) ? $item->title : $postTitle,
                 'text' => !empty($item->text) ? $item->text : wp_trim_words( $postText, 50 ),
                 'link' => $itemLink,
@@ -152,14 +152,19 @@ trait Content
             'title' => self::hasTitle($newData) ? $newData->section_title : '',
             'text' => $newData->text ?? '',
             'link' => is_array($newData->link) ? (object) $newData->link : false,
-            'image' => $newData->image ? wp_get_attachment_image( $newData->image['ID'], 'full' ) : '',
+            'image' => $newData->image ? wp_get_attachment_image( $newData->image['ID'], 'large' ) : '',
             'orderClass' => $newData->layout === 'image_first' ? 'order-md-1' : 'order-md-2'
         ];
     }   
     
     public static function cms_text_with_button( $data )
     {   
-        return (object) $data;
+        $data = (object) $data;
+        $data->title = self::hasTitle($data) ? $data->section_title : '';
+        $data->link = $data->link ? (object) $data->link : $data->link;
+        $data->has_content = ( $data->title || $data->preamble || $data->content || $data->link );
+
+        return $data;
     }     
 
     public static function cms_three_promo( $data )

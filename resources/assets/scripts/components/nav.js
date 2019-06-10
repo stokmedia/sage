@@ -20,4 +20,22 @@ Nav.overlay = function() {
   })
 };
 
+Nav.menuPosition = function() {
+  var header = $('.js-header');
+  var menu = $('.navbar-collapse');
+  var headerPosition = header.position().top + header.outerHeight(true);
+
+  changePosition(menu, headerPosition);
+
+  window.onresize = function () {
+    headerPosition = header.position().top + header.outerHeight(true);
+    changePosition(menu, headerPosition);
+  };
+
+  function changePosition(menu, headerPosition) {
+    menu.css('margin-top', headerPosition + 'px');
+  }
+}
+
 Nav.overlay();
+Nav.menuPosition();

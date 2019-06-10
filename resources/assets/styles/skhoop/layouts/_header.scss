@@ -252,6 +252,10 @@ $mobile-margin-top-menu: 3.75rem;
     background-color: $green;
   }
 
+  @include media-breakpoint-up(lg) {
+    margin-top: 0 !important;
+  }
+
   .navbar-nav-touch {
     padding-bottom: 1.875rem;
 
