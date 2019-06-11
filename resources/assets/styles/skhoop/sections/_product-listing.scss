@@ -216,6 +216,10 @@
     color: $body-color;
     border-bottom-right-radius: 0.3125rem;
     border-bottom-left-radius: 0.3125rem;
+
+    &:hover {
+      color: $body-color;
+    }
   }
 
   &-name {
