@@ -51,6 +51,10 @@
       max-width: 880px;
     }
 
+    &.is-no-nav {
+      max-width: 100%;
+    }
+
     .title {
       margin-bottom: 0.625rem;
     }

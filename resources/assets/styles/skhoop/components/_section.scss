@@ -20,8 +20,7 @@ $section-padding-sm-touch:      40px;
     margin-bottom: $section-margin;
   }
 
-  &.has-small-mb,
-  &.has-small-mb-next-section {
+  &.has-small-mb {
     margin-bottom: $section-margin-sm-touch;
 
     @include media-breakpoint-up(lg) {
@@ -41,8 +40,7 @@ $section-padding-sm-touch:      40px;
     }
   }
 
-  &.has-small-pt,
-  &.has-small-pt-next-section {
+  &.has-small-pt {
     padding-top: $section-padding-sm-touch;
 
     @include media-breakpoint-up(lg) {

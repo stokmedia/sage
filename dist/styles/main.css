@@ -17703,52 +17703,48 @@ blockquote footer::before,
 
 /* line 23, resources/assets/styles/skhoop/components/_section.scss */
 
-.section.has-small-mb,
-.section.has-small-mb-next-section {
+.section.has-small-mb {
   margin-bottom: 40px;
 }
 
 @media (min-width: 992px) {
   /* line 23, resources/assets/styles/skhoop/components/_section.scss */
 
-  .section.has-small-mb,
-  .section.has-small-mb-next-section {
+  .section.has-small-mb {
     margin-bottom: 70px;
   }
 }
 
-/* line 32, resources/assets/styles/skhoop/components/_section.scss */
+/* line 31, resources/assets/styles/skhoop/components/_section.scss */
 
 .section.no-mb {
   margin-bottom: 0;
 }
 
-/* line 36, resources/assets/styles/skhoop/components/_section.scss */
+/* line 35, resources/assets/styles/skhoop/components/_section.scss */
 
 .section.has-pt {
   padding-top: 50px;
 }
 
 @media (min-width: 992px) {
-  /* line 36, resources/assets/styles/skhoop/components/_section.scss */
+  /* line 35, resources/assets/styles/skhoop/components/_section.scss */
 
   .section.has-pt {
     padding-top: 100px;
   }
 }
 
-/* line 44, resources/assets/styles/skhoop/components/_section.scss */
+/* line 43, resources/assets/styles/skhoop/components/_section.scss */
 
-.section.has-small-pt,
-.section.has-small-pt-next-section {
+.section.has-small-pt {
   padding-top: 40px;
 }
 
 @media (min-width: 992px) {
-  /* line 44, resources/assets/styles/skhoop/components/_section.scss */
+  /* line 43, resources/assets/styles/skhoop/components/_section.scss */
 
-  .section.has-small-pt,
-  .section.has-small-pt-next-section {
+  .section.has-small-pt {
     padding-top: 70px;
   }
 }
@@ -20431,7 +20427,13 @@ body#tinymce {
   border-bottom-left-radius: 0.3125rem;
 }
 
-/* line 221, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 220, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-details:hover {
+  color: #031532;
+}
+
+/* line 225, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-name {
   margin-bottom: 0;
@@ -20441,7 +20443,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 221, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 225, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-name {
     font-size: 0.8125rem;
@@ -20449,7 +20451,7 @@ body#tinymce {
   }
 }
 
-/* line 233, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 237, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-price {
   margin-top: -0.4375rem;
@@ -20459,7 +20461,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 233, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 237, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-price {
     margin-top: -0.1875rem;
@@ -20468,7 +20470,7 @@ body#tinymce {
   }
 }
 
-/* line 247, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 251, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big {
   -webkit-box-flex: 0;
@@ -20478,7 +20480,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 247, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 251, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big {
     -webkit-box-flex: 0;
@@ -20488,35 +20490,35 @@ body#tinymce {
   }
 }
 
-/* line 250, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 254, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 250, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 254, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big .product-wrapper {
     padding: 6.25rem 2.5rem 4.6875rem;
   }
 }
 
-/* line 258, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 262, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 258, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 262, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big .product-details {
     padding: 0 2.5rem 1.5625rem;
   }
 }
 
-/* line 267, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 271, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small {
   -webkit-box-flex: 0;
@@ -20526,7 +20528,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 267, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 271, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small {
     -webkit-box-flex: 0;
@@ -20536,48 +20538,48 @@ body#tinymce {
   }
 }
 
-/* line 270, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 274, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 270, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 274, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small .product-wrapper {
     padding: 4.6875rem 2.3438rem 2.8125rem;
   }
 }
 
-/* line 278, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 282, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 278, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 282, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small .product-details {
     padding: 0 2.3438rem 1.5625rem;
   }
 }
 
-/* line 289, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 293, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-status {
   background-color: #d45656;
   color: #fff;
 }
 
-/* line 294, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 298, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-price {
   color: #d45656;
 }
 
-/* line 297, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 301, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-price span {
   margin-right: 0.3125rem;
@@ -20586,21 +20588,21 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 297, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 301, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-sale .product-price span {
     margin-right: 1.25rem;
   }
 }
 
-/* line 310, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 314, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-oos .product-status {
   background-color: #b7cad0;
   color: #fff;
 }
 
-/* line 315, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 319, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-oos .product-image {
   opacity: 0.5;
@@ -22326,17 +22328,23 @@ body#tinymce {
 
 /* line 54, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
+.popular-products .section-header.is-no-nav {
+  max-width: 100%;
+}
+
+/* line 58, resources/assets/styles/skhoop/sections/_popular-products.scss */
+
 .popular-products .section-header .title {
   margin-bottom: 0.625rem;
 }
 
-/* line 59, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 63, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-header .content > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 65, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 69, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-nav {
   position: absolute;
@@ -22344,7 +22352,7 @@ body#tinymce {
   bottom: 0.4375rem;
 }
 
-/* line 70, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 74, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-nav .btn,
 .popular-products .section-nav .comment-form input[type="submit"],
@@ -22354,34 +22362,34 @@ body#tinymce {
   margin: 0 0.625rem;
 }
 
-/* line 75, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 79, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-footer {
   margin-top: 2.1875rem;
 }
 
 @media (min-width: 992px) {
-  /* line 75, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 79, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products .section-footer {
     margin-top: 3.125rem;
   }
 }
 
-/* line 83, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider {
   margin-top: 1.25rem;
 }
 
-/* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 91, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item:first-child {
   padding-left: 20px;
 }
 
 @media (min-width: 1240px) {
-  /* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 91, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item:first-child {
     padding-left: calc(( 100vw - 1200px) / 2);
@@ -22389,14 +22397,14 @@ body#tinymce {
 }
 
 @media (min-width: 1480px) {
-  /* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 91, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item:first-child {
     padding-left: calc(( 100vw - 1440px) / 2);
   }
 }
 
-/* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .grid-item {
   display: block;
@@ -22407,7 +22415,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item .grid-item {
     width: calc( 100vw / 4);
@@ -22416,7 +22424,7 @@ body#tinymce {
 }
 
 @media (min-width: 1240px) {
-  /* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item .grid-item {
     width: calc( 1120px / 4);
@@ -22424,20 +22432,20 @@ body#tinymce {
 }
 
 @media (min-width: 1480px) {
-  /* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item .grid-item {
     width: calc( 1360px / 4);
   }
 }
 
-/* line 119, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 123, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .grid-item:hover {
   text-decoration: none;
 }
 
-/* line 124, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 128, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .product {
   margin-bottom: 0;
@@ -22446,7 +22454,7 @@ body#tinymce {
           box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 129, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 133, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .product.is-small {
   -webkit-box-flex: initial;
@@ -22878,6 +22886,414 @@ body#tinymce {
     padding: 0.9375rem 1rem;
     border-radius: 9.375rem;
   }
+}
+
+/* line 2, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery {
+  overflow-x: hidden;
+  padding-top: 4.375rem;
+  padding-bottom: 3.4375rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 9, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .image {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 53, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery .image > img,
+.instagram-gallery .image > video,
+.instagram-gallery .image > figure,
+.instagram-gallery .image > .ratio-content,
+.instagram-gallery .image > iframe,
+.instagram-gallery .image > .ratio-iframe {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 72, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery .image > iframe {
+  min-height: 200%;
+  min-width: 200%;
+}
+
+/* line 13, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .col-wrap {
+  margin-left: -5.695%;
+  margin-right: -5.695%;
+}
+
+@media (min-width: 992px) {
+  /* line 13, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .col-wrap {
+    margin-left: -82px;
+    margin-right: -82px;
+  }
+}
+
+/* line 23, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .col-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 27, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .col-side {
+  -ms-flex: 1 0 0;
+  -webkit-box-flex: 1;
+          flex: 1 0 0;
+}
+
+/* line 31, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .tile-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 35, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .tile-block-hidden {
+  position: relative;
+  padding-left: calc(3.712% / 2);
+  padding-top: calc(( (25% * 3) - 11.595%) - (50% - 3.712%));
+  margin-left: -25%;
+  -ms-flex: 0 0 calc(100% - ( 3.712% / 2));
+  -webkit-box-flex: 0;
+          flex: 0 0 calc(100% - ( 3.712% / 2));
+}
+
+@media (min-width: 992px) {
+  /* line 35, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .tile-block-hidden {
+    padding-left: 15px;
+    padding-top: calc(( (25% * 3) - 93px) - (50% - 30px));
+    -ms-flex: 0 0 calc(100% - 15px);
+    -webkit-box-flex: 0;
+            flex: 0 0 calc(100% - 15px);
+  }
+}
+
+/* line 51, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .instagram-info-margin {
+  margin-bottom: -7.8%;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1441px) {
+  /* line 51, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .instagram-info-margin {
+    margin-bottom: -5.75%;
+  }
+}
+
+/* line 61, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .instagram-info {
+  padding-left: calc(3.712% / 2);
+  margin-left: -25%;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  /* line 61, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .instagram-info {
+    padding-left: 15px;
+  }
+}
+
+/* line 70, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .instagram-info .btn-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+@media (min-width: 992px) {
+  /* line 75, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .instagram-info .btn,
+  .instagram-gallery .instagram-info .comment-form input[type="submit"],
+  .comment-form .instagram-gallery .instagram-info input[type="submit"],
+  .instagram-gallery .instagram-info .search-form .search-submit,
+  .search-form .instagram-gallery .instagram-info .search-submit {
+    min-width: 12.125rem;
+  }
+}
+
+/* line 81, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .instagram-info .h3 {
+  margin-bottom: 0;
+  line-height: normal;
+  margin-left: 12px;
+}
+
+/* line 87, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .instagram-info .info {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* line 93, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .tile {
+  position: relative;
+  overflow: hidden;
+  -ms-flex: 0 0 calc(25% - 3.712%);
+  -webkit-box-flex: 0;
+          flex: 0 0 calc(25% - 3.712%);
+  padding-top: calc(25% - 3.712%);
+  margin: calc(3.712% / 2);
+  background-color: #dbe4e7;
+}
+
+/* line 53, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery .tile > img,
+.instagram-gallery .tile > video,
+.instagram-gallery .tile > figure,
+.instagram-gallery .tile > .ratio-content,
+.instagram-gallery .tile > iframe,
+.instagram-gallery .tile > .ratio-iframe {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 72, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery .tile > iframe {
+  min-height: 200%;
+  min-width: 200%;
+}
+
+@media (min-width: 992px) {
+  /* line 93, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .tile {
+    -ms-flex: 0 0 calc(25% - 30px);
+    -webkit-box-flex: 0;
+            flex: 0 0 calc(25% - 30px);
+    padding-top: calc(25% - 30px);
+    margin: 15px;
+  }
+}
+
+/* line 108, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .tile.is-three {
+  -ms-flex: 0 0 calc( (25% * 3) - 11.595%);
+  -webkit-box-flex: 0;
+          flex: 0 0 calc( (25% * 3) - 11.595%);
+  padding-top: calc((25% * 3) - 11.595%);
+}
+
+@media (min-width: 992px) {
+  /* line 108, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .tile.is-three {
+    -ms-flex: 0 0 calc( (25% * 3) - 93px);
+    -webkit-box-flex: 0;
+            flex: 0 0 calc( (25% * 3) - 93px);
+    padding-top: calc((25% * 3) - 93px);
+  }
+}
+
+/* line 121, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .tile-block {
+  -ms-flex: 0 0 calc(25% - 3.712%);
+  -webkit-box-flex: 0;
+          flex: 0 0 calc(25% - 3.712%);
+  margin: calc(3.712% / 2);
+}
+
+@media (min-width: 992px) {
+  /* line 121, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .tile-block {
+    -ms-flex: 0 0 calc(25% - 30px);
+    -webkit-box-flex: 0;
+            flex: 0 0 calc(25% - 30px);
+    margin: 15px;
+  }
+}
+
+/* line 132, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .tile-block .tile {
+  width: 100%;
+  padding-top: 100%;
+  background-color: #dbe4e7;
+  margin: 0;
+}
+
+/* line 138, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery .tile-block .tile:first-child {
+  margin: 0 0 17.45%;
+}
+
+@media (min-width: 992px) {
+  /* line 138, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .tile-block .tile:first-child {
+    margin: 0 0 30px;
+  }
+}
+
+/* line 149, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile {
+  padding: 1.875rem 0;
+  background-color: #b7cad0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+/* line 156, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-info {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 2.0625rem;
+}
+
+/* line 161, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-info .btn-header {
+  margin-bottom: 1.5625rem;
+}
+
+/* line 164, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-info .btn-header .h3 {
+  letter-spacing: 0.5px;
+  line-height: 3.125rem;
+}
+
+/* line 169, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-info .btn-header .btn,
+.instagram-gallery-mobile .instagram-info .btn-header .comment-form input[type="submit"],
+.comment-form .instagram-gallery-mobile .instagram-info .btn-header input[type="submit"],
+.instagram-gallery-mobile .instagram-info .btn-header .search-form .search-submit,
+.search-form .instagram-gallery-mobile .instagram-info .btn-header .search-submit {
+  max-width: 13.4375rem;
+  padding: 0.5938rem 0.5938rem;
+  border-radius: 1.25rem;
+  color: #031532;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 1.86px;
+}
+
+/* line 181, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-col {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* line 187, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-col .row:last-child .col {
+  padding-bottom: 0;
+}
+
+/* line 193, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-col .col {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-bottom: 1.25rem;
+}
+
+/* line 199, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-col .tile {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery-mobile .instagram-col .tile::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery-mobile .instagram-col .tile > img,
+.instagram-gallery-mobile .instagram-col .tile > video,
+.instagram-gallery-mobile .instagram-col .tile > figure,
+.instagram-gallery-mobile .instagram-col .tile > .ratio-content,
+.instagram-gallery-mobile .instagram-col .tile > iframe,
+.instagram-gallery-mobile .instagram-col .tile > .ratio-iframe {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 32, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery-mobile .instagram-col .tile > iframe {
+  min-height: 200%;
+  min-width: 200%;
 }
 
 
