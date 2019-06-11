@@ -141,3 +141,62 @@
     }
   }
 }
+
+.instagram-gallery-mobile {
+  padding: 1.875rem 0;
+  background-color: $primary;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+
+  .instagram-info {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 2.0625rem;
+
+    .btn-header {
+      margin-bottom: 1.5625rem;
+
+      .h3 {
+        letter-spacing: 0.5px;
+        line-height: 3.125rem;
+      }
+
+      .btn {
+        max-width: 13.4375rem;
+        padding: 0.5938rem 0.5938rem;
+        border-radius: 1.25rem;
+        color: $body-color;
+        font-size: 0.8125rem;
+        font-weight: $font-weight-medium;
+        letter-spacing: 1.86px;
+      }
+    }
+  }
+
+  .instagram-col {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    .row {
+      &:last-child {
+        .col {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .col {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      padding-bottom: 1.25rem;
+    }
+
+    .tile {
+      @include aspect-ratio(1,1);
+
+      margin-bottom: 0;
+    }
+  }
+}
+

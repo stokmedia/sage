@@ -23046,5 +23046,119 @@ body#tinymce {
   }
 }
 
+/* line 145, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile {
+  padding: 1.875rem 0;
+  background-color: #b7cad0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+/* line 152, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-info {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 2.0625rem;
+}
+
+/* line 157, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-info .btn-header {
+  margin-bottom: 1.5625rem;
+}
+
+/* line 160, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-info .btn-header .h3 {
+  letter-spacing: 0.5px;
+  line-height: 3.125rem;
+}
+
+/* line 165, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-info .btn-header .btn,
+.instagram-gallery-mobile .instagram-info .btn-header .comment-form input[type="submit"],
+.comment-form .instagram-gallery-mobile .instagram-info .btn-header input[type="submit"],
+.instagram-gallery-mobile .instagram-info .btn-header .search-form .search-submit,
+.search-form .instagram-gallery-mobile .instagram-info .btn-header .search-submit {
+  max-width: 13.4375rem;
+  padding: 0.5938rem 0.5938rem;
+  border-radius: 1.25rem;
+  color: #031532;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 1.86px;
+}
+
+/* line 177, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-col {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* line 183, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-col .row:last-child .col {
+  padding-bottom: 0;
+}
+
+/* line 189, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-col .col {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-bottom: 1.25rem;
+}
+
+/* line 195, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery-mobile .instagram-col .tile {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery-mobile .instagram-col .tile::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery-mobile .instagram-col .tile > img,
+.instagram-gallery-mobile .instagram-col .tile > video,
+.instagram-gallery-mobile .instagram-col .tile > figure,
+.instagram-gallery-mobile .instagram-col .tile > .ratio-content,
+.instagram-gallery-mobile .instagram-col .tile > iframe,
+.instagram-gallery-mobile .instagram-col .tile > .ratio-iframe {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 32, resources/assets/styles/common/_mixins.scss */
+
+.instagram-gallery-mobile .instagram-col .tile > iframe {
+  min-height: 200%;
+  min-width: 200%;
+}
+
 
 /*# sourceMappingURL=main.css.map*/

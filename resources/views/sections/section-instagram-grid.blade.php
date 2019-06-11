@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section instagram">
   <div class="instagram-gallery d-none d-md-block" style="background-image: url('@asset('images/instagram/bg.jpg')');">
     <div class="col-wrap instagram-info-margin">
       <div class="col-group">
@@ -72,6 +72,65 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="instagram-gallery-mobile d-block d-md-none" style="background-image: url(@asset('images/temp/instagram-bg.jpg')">
+    <div class="instagram-info text-center">
+      <div class="btn-header">
+        <h3 class="h3 mb-0">@skhoopskirts</h3>
+        <a href="#" class="btn btn-sm btn-primary text-uppercase">FOLLOW US</a>
+      </div>
+      <div class="info">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce </div>
+    </div>
+    <div class="instagram-col">
+      {{-- 100% --}}
+      <div class="row">
+        <div class="col">
+          <figure class="tile">
+            <img src="@asset('images/instagram/01.png')" alt="">
+          </figure>
+        </div>
+      </div>
+      {{-- 50% --}}
+      @for ($i = 0; $i < 2; $i++)
+        <div class="row">
+          <div class="col">
+            <figure class="tile">
+              <img src="@asset('images/instagram/01.png')" alt="">
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="tile">
+              <img src="@asset('images/instagram/01.png')" alt="">
+            </figure>
+          </div>
+        </div>
+      @endfor
+      {{-- 25% --}}
+      @for ($i = 0; $i < 2; $i++)
+        <div class="row">
+          <div class="col">
+            <figure class="tile">
+              <img src="@asset('images/instagram/01.png')" alt="">
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="tile">
+              <img src="@asset('images/instagram/01.png')" alt="">
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="tile">
+              <img src="@asset('images/instagram/01.png')" alt="">
+            </figure>
+          </div>
+          <div class="col">
+            <figure class="tile">
+              <img src="@asset('images/instagram/01.png')" alt="">
+            </figure>
+          </div>
+        </div>
+      @endfor
     </div>
   </div>
 </section>
