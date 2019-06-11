@@ -34,6 +34,7 @@
   --dark: #343a40;
   --ash: #f1f1f1;
   --lightgreen: #dbe4e7;
+  --red: #d45656;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -3211,6 +3212,36 @@ mark,
 
 /* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
 
+.table-red,
+.table-red > th,
+.table-red > td {
+  background-color: #f3d0d0;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-red th,
+.table-red td,
+.table-red thead th,
+.table-red tbody + tbody {
+  border-color: #e9a7a7;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.table-hover .table-red:hover {
+  background-color: #eebcbc;
+}
+
+/* line 32, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-hover .table-red:hover > td,
+.table-hover .table-red:hover > th {
+  background-color: #eebcbc;
+}
+
+/* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -4981,6 +5012,58 @@ fieldset:disabled .search-form a.search-submit,
           box-shadow: 0 0 0 0.2rem rgba(191, 199, 203, 0.5);
 }
 
+/* line 60, node_modules/bootstrap/scss/_buttons.scss */
+
+.btn-red {
+  color: #fff;
+  background-color: #d45656;
+  border-color: #d45656;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-red:hover {
+  color: #fff;
+  background-color: #cc3838;
+  border-color: #c53232;
+}
+
+/* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-red:focus,
+.btn-red.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 111, 111, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(218, 111, 111, 0.5);
+}
+
+/* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-red.disabled,
+.btn-red:disabled {
+  color: #fff;
+  background-color: #d45656;
+  border-color: #d45656;
+}
+
+/* line 40, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-red:not(:disabled):not(.disabled):active,
+.btn-red:not(:disabled):not(.disabled).active,
+.show > .btn-red.dropdown-toggle {
+  color: #fff;
+  background-color: #c53232;
+  border-color: #bb3030;
+}
+
+/* line 50, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-red:not(:disabled):not(.disabled):active:focus,
+.btn-red:not(:disabled):not(.disabled).active:focus,
+.show > .btn-red.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 111, 111, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(218, 111, 111, 0.5);
+}
+
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
 
 .btn-outline-primary {
@@ -5479,6 +5562,56 @@ fieldset:disabled .search-form a.search-submit,
 .show > .btn-outline-lightgreen.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(219, 228, 231, 0.5);
+}
+
+/* line 66, node_modules/bootstrap/scss/_buttons.scss */
+
+.btn-outline-red {
+  color: #d45656;
+  border-color: #d45656;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-outline-red:hover {
+  color: #fff;
+  background-color: #d45656;
+  border-color: #d45656;
+}
+
+/* line 71, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-red:focus,
+.btn-outline-red.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.5);
+}
+
+/* line 76, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-red.disabled,
+.btn-outline-red:disabled {
+  color: #d45656;
+  background-color: transparent;
+}
+
+/* line 82, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-red:not(:disabled):not(.disabled):active,
+.btn-outline-red:not(:disabled):not(.disabled).active,
+.show > .btn-outline-red.dropdown-toggle {
+  color: #fff;
+  background-color: #d45656;
+  border-color: #d45656;
+}
+
+/* line 89, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-red:not(:disabled):not(.disabled):active:focus,
+.btn-outline-red:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-red.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(212, 86, 86, 0.5);
 }
 
 /* line 77, node_modules/bootstrap/scss/_buttons.scss */
@@ -8597,6 +8730,26 @@ input[type="button"].btn-block {
   color: #595d5e;
 }
 
+/* line 48, node_modules/bootstrap/scss/_alert.scss */
+
+.alert-red {
+  color: #6e2d2d;
+  background-color: #d45656;
+  border-color: #f3d0d0;
+}
+
+/* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-red hr {
+  border-top-color: #eebcbc;
+}
+
+/* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-red .alert-link {
+  color: #4a1e1e;
+}
+
 /* line 5, node_modules/bootstrap/scss/_list-group.scss */
 
 .list-group {
@@ -9143,6 +9296,29 @@ input[type="button"].btn-block {
   color: #fff;
   background-color: #727778;
   border-color: #727778;
+}
+
+/* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-red {
+  color: #6e2d2d;
+  background-color: #f3d0d0;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.list-group-item-red.list-group-item-action:hover,
+.list-group-item-red.list-group-item-action:focus {
+  color: #6e2d2d;
+  background-color: #eebcbc;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-red.list-group-item-action.active {
+  color: #fff;
+  background-color: #6e2d2d;
+  border-color: #6e2d2d;
 }
 
 /* line 1, node_modules/bootstrap/scss/_close.scss */
@@ -9799,6 +9975,21 @@ button.bg-lightgreen:focus {
   background-color: #bccdd3 !important;
 }
 
+/* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
+
+.bg-red {
+  background-color: #d45656 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.bg-red:hover,
+a.bg-red:focus,
+button.bg-red:hover,
+button.bg-red:focus {
+  background-color: #c53232 !important;
+}
+
 /* line 13, node_modules/bootstrap/scss/utilities/_background.scss */
 
 .bg-white {
@@ -9929,6 +10120,12 @@ button.bg-lightgreen:focus {
 
 .border-lightgreen {
   border-color: #dbe4e7 !important;
+}
+
+/* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
+
+.border-red {
+  border-color: #d45656 !important;
 }
 
 /* line 25, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -16422,6 +16619,19 @@ a.text-lightgreen:focus {
   color: #adc2c8 !important;
 }
 
+/* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
+
+.text-red {
+  color: #d45656 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.text-red:hover,
+a.text-red:focus {
+  color: #b12d2d !important;
+}
+
 /* line 51, node_modules/bootstrap/scss/utilities/_text.scss */
 
 .text-body {
@@ -22463,42 +22673,82 @@ body#tinymce {
   max-width: 100%;
 }
 
-/* line 6, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 3, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-preview .breadcrumb {
+  margin-top: 0.8125rem;
+}
+
+/* line 8, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider {
   border-radius: 5px;
   -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
   -o-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  padding: 0 0.625rem;
 }
 
-/* line 10, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 14, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider-col {
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  /* line 10, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 14, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-slider-col {
     width: 575px;
   }
 }
 
-/* line 18, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 22, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .flickity-viewport {
   height: 100%;
 }
 
-/* line 22, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 26, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .flickity-fullscreen-button-view {
   display: none;
 }
 
-/* line 26, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 30, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-slider .flickity-prev-next-button,
+.selected-product-slider .flickity-prev-next-button {
+  width: 25px;
+  height: 25px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 37, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-slider .flickity-prev-next-button.next {
+  right: 0;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIxLjQ0NzYgMTQuMTgwNUMyMS4yMTYgMTMuOTM5OCAyMC44MzA1IDEzLjkzOTggMjAuNTkwOSAxNC4xODA1QzIwLjM1OTMgMTQuNDEzIDIwLjM1OTMgMTQuNzk5OSAyMC41OTA5IDE1LjAzMTlMMjQuOTM1MSAxOS4zOTNMMTAuNTk5OCAxOS4zOTNDMTAuMjY1NiAxOS4zOTM2IDEwIDE5LjY2MDIgMTAgMTkuOTk1N0MxMCAyMC4zMzExIDEwLjI2NTYgMjAuNjA2NCAxMC41OTk4IDIwLjYwNjRMMjQuOTM1MSAyMC42MDY0TDIwLjU5MDkgMjQuOTU5NEMyMC4zNTkzIDI1LjIwMDEgMjAuMzU5MyAyNS41ODc2IDIwLjU5MDkgMjUuODE5NUMyMC44MzA1IDI2LjA2MDIgMjEuMjE2NSAyNi4wNjAyIDIxLjQ0NzYgMjUuODE5NUwyNi44MjAyIDIwLjQyNkMyNy4wNTk5IDIwLjE5MzUgMjcuMDU5OSAxOS44MDY1IDI2LjgyMDIgMTkuNTc0NkwyMS40NDc2IDE0LjE4MDVaIiBmaWxsPSIjMUUyMDFEIi8+Cjwvc3ZnPgo=) no-repeat center/contain white;
+}
+
+/* line 42, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-slider .flickity-prev-next-button.previous {
+  left: 0;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOC41NTI0IDI1LjgxOTVDMTguNzg0IDI2LjA2MDIgMTkuMTY5NSAyNi4wNjAyIDE5LjQwOTEgMjUuODE5NUMxOS42NDA3IDI1LjU4NyAxOS42NDA3IDI1LjIwMDEgMTkuNDA5MSAyNC45NjgxTDE1LjA2NDkgMjAuNjA3SDI5LjQwMDJDMjkuNzM0NCAyMC42MDY0IDMwIDIwLjMzOTggMzAgMjAuMDA0M0MzMCAxOS42Njg5IDI5LjczNDQgMTkuMzkzNiAyOS40MDAyIDE5LjM5MzZIMTUuMDY0OUwxOS40MDkxIDE1LjA0MDZDMTkuNjQwNyAxNC43OTk5IDE5LjY0MDcgMTQuNDEyNCAxOS40MDkxIDE0LjE4MDVDMTkuMTY5NSAxMy45Mzk4IDE4Ljc4MzUgMTMuOTM5OCAxOC41NTI0IDE0LjE4MDVMMTMuMTc5OCAxOS41NzRDMTIuOTQwMSAxOS44MDY1IDEyLjk0MDEgMjAuMTkzNSAxMy4xNzk4IDIwLjQyNTRMMTguNTUyNCAyNS44MTk1WiIgZmlsbD0iIzFFMjAxRCIvPg0KPC9zdmc+DQo=) no-repeat center/contain white;
+}
+
+/* line 47, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-slider .flickity-prev-next-button > .flickity-button-icon,
+.selected-product-slider .flickity-prev-next-button > .flickity-button-icon {
+  display: none;
+}
+
+/* line 52, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .item {
   display: -webkit-box;
@@ -22550,21 +22800,21 @@ body#tinymce {
   min-width: 200%;
 }
 
-/* line 33, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 59, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider.is-fullscreen {
   padding-bottom: 0;
   border-radius: 0;
 }
 
-/* line 37, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 63, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider.is-fullscreen .item {
   height: 100%;
   padding: 0 25px;
 }
 
-/* line 42, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 68, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider.is-fullscreen .item > img {
   position: relative;
@@ -22581,20 +22831,113 @@ body#tinymce {
   object-fit: cover;
 }
 
-/* line 58, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 84, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider.is-fullscreen .item::before {
   display: none;
 }
 
-/* line 68, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 91, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .name {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+@media (min-width: 992px) {
+  /* line 91, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+  .selected-product-options .name {
+    line-height: 45px;
+  }
+}
+
+/* line 101, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .price {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+
+@media (min-width: 992px) {
+  /* line 101, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+  .selected-product-options .price {
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 33px;
+  }
+}
+
+/* line 115, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .info {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 1.86px;
+  line-height: 25px;
+}
+
+/* line 122, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .selectors {
+  margin-top: 0.5625rem;
+  margin-bottom: 0.625rem;
+}
+
+/* line 128, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .accordion .header {
+  cursor: pointer;
+  padding: 0.625rem 0;
+}
+
+/* line 133, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .accordion .header span {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 1.86px;
+}
+
+/* line 139, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .accordion .body {
+  padding-bottom: 1.25rem;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+}
+
+/* line 147, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .accordion .list-group-item {
+  border: none;
+  padding: 0;
+  border-top: 1px solid #979797;
+  border-radius: 0;
+}
+
+/* line 154, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .accordion .list-group-item:first-child,
+.selected-product-options .accordion .list-group-item:last-child {
+  border-top: 1px solid #979797;
+}
+
+/* line 161, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail {
   margin-left: 0.625rem;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 68, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 161, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail {
     margin-left: 0.625rem;
@@ -22612,7 +22955,7 @@ body#tinymce {
   }
 }
 
-/* line 79, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 172, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item {
   width: 70px;
@@ -22626,49 +22969,49 @@ body#tinymce {
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 79, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 172, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item {
     margin: 0.625rem 0.3125rem;
   }
 }
 
-/* line 92, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 185, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:first-child {
   margin-top: 0;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 92, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 185, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item:first-child {
     margin-top: 0.625rem;
   }
 }
 
-/* line 100, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 193, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 100, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 193, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item:last-child {
     margin-bottom: 0.625rem;
   }
 }
 
-/* line 108, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 201, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item.is-selected,
 .selected-product-thumbnail .item:hover {
   opacity: 0.6;
 }
 
-/* line 113, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 206, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item figure {
   position: relative;
@@ -22713,7 +23056,7 @@ body#tinymce {
   min-width: 200%;
 }
 
-/* line 118, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 211, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen {
   position: fixed;
@@ -22736,19 +23079,19 @@ body#tinymce {
           align-items: center;
 }
 
-/* line 131, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 224, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item {
   margin: 0.3125rem;
 }
 
-/* line 134, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 227, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:first-child {
   margin-top: 0.3125rem;
 }
 
-/* line 138, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 231, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:last-child {
   margin-bottom: 0.3125rem;

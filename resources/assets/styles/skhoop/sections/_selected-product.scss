@@ -1,11 +1,15 @@
 .selected-product {
   &-preview {
-    //
+    .breadcrumb {
+      margin-top: 0.8125rem;
+    }
   }
 
   &-slider {
     border-radius: 5px;
     transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 0 0.625rem;
 
     &-col {
       width: 100%;
@@ -20,6 +24,28 @@
     }
 
     .flickity-fullscreen-button-view {
+      display: none;
+    }
+
+    .flickity-prev-next-button,
+    .flickity-prev-next-button {
+      width: 25px;
+      height: 25px;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .flickity-prev-next-button.next {
+      right: 0;
+      background: url(../images/icon/arrow-right.svg) no-repeat center/contain white;
+    }
+
+    .flickity-prev-next-button.previous {
+      left: 0;
+      background: url(../images/icon/arrow-left.svg) no-repeat center/contain white;
+    }
+
+    .flickity-prev-next-button>.flickity-button-icon,
+    .flickity-prev-next-button>.flickity-button-icon {
       display: none;
     }
 
@@ -62,7 +88,74 @@
   }
 
   &-options {
-    //
+    .name {
+      font-family: $font-family-source-serif;
+      font-weight: 600;
+      line-height: 30px;
+
+      @include media-breakpoint-up(lg) {
+        line-height: 45px;
+      }
+    }
+
+    .price {
+      font-size: 1.25rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      line-height: 24px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        line-height: 33px;
+      }
+    }
+
+    .info {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 1.86px;
+      line-height: 25px;
+    }
+
+    .selectors {
+      margin-top: 0.5625rem;
+      margin-bottom: 0.625rem;
+    }
+
+    .accordion {
+      .header {
+        cursor: pointer;
+        padding: 0.625rem 0;
+      }
+
+      .header span {
+        font-size: 0.8125rem;
+        font-weight: 500;
+        letter-spacing: 1.86px;
+      }
+
+      .body {
+        padding-bottom: 1.25rem;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        line-height: 22px;
+      }
+
+      .list-group-item {
+        border: none;
+        padding: 0;
+        border-top: 1px solid #979797;
+        border-radius: 0;
+      }
+
+      .list-group-item:first-child,
+      .list-group-item:last-child {
+        border-top: 1px solid #979797;
+      }
+    }
   }
 
   &-thumbnail {
