@@ -30,7 +30,7 @@
                             Validation message
                             </div> --}}
                         </div>
-                
+
                         <div class="mt-2 custom-control custom-checkbox">
                             <input id="customCheck1" class="custom-control-input" type="checkbox">
                             <label class="custom-control-label" for="customCheck1">

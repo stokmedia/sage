@@ -1905,7 +1905,7 @@ return getSize;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(7);
-module.exports = __webpack_require__(41);
+module.exports = __webpack_require__(42);
 
 
 /***/ }),
@@ -1951,6 +1951,7 @@ __webpack_require__(36);
 __webpack_require__(37);
 __webpack_require__(38);
 __webpack_require__(39);
+__webpack_require__(41);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -16226,7 +16227,7 @@ Nav.menuPosition = function() {
   function changePosition(menu, headerPosition) {
     menu.css('margin-top', headerPosition + 'px');
   }
-}
+};
 
 Nav.overlay();
 Nav.menuPosition();
@@ -16901,6 +16902,40 @@ var stokpressEvent = {
 
 /***/ }),
 /* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {var Instagram = {};
+
+function calculatePosition() {
+  var tileInfoHeight = $('.instagram-gallery .tile-block-hidden').outerHeight();
+  var infoHeight = $('.instagram-gallery .instagram-info').outerHeight();
+  var instagramInfo = $('.instagram-info-margin');
+
+  if (tileInfoHeight > infoHeight) {
+    instagramInfo.css({
+      'margin-bottom': (tileInfoHeight * -1) + 'px',
+      'padding-top': ( tileInfoHeight - infoHeight) + 'px',
+    });
+  } else {
+    instagramInfo.css({
+      'margin-bottom': (tileInfoHeight * -1) + 'px',
+    });
+  }
+}
+
+Instagram.infoPosition = function() {
+  calculatePosition();
+
+  $(window).resize(function () {
+    calculatePosition();
+  });
+};
+
+Instagram.infoPosition();
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 42 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

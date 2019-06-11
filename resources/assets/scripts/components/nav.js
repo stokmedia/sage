@@ -35,7 +35,7 @@ Nav.menuPosition = function() {
   function changePosition(menu, headerPosition) {
     menu.css('margin-top', headerPosition + 'px');
   }
-}
+};
 
 Nav.overlay();
 Nav.menuPosition();

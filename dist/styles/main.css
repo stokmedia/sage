@@ -17749,6 +17749,20 @@ blockquote footer::before,
   }
 }
 
+/* line 51, resources/assets/styles/skhoop/components/_section.scss */
+
+.section.has-small-pb {
+  padding-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+  /* line 51, resources/assets/styles/skhoop/components/_section.scss */
+
+  .section.has-small-pb {
+    padding-bottom: 70px;
+  }
+}
+
 /**
  * WordPress Generated Classes
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
