@@ -6,9 +6,13 @@ use App\Classes\Product;
 
 trait ProductData
 {
-    public function get_product() {
+    public function get_product( $postID=null ) {
 
-    	$product = new Product( get_post()->ID );
+		if (empty($postID)) {
+			$postID = get_post()->ID;
+		}
+
+    	$product = new Product( $postID );
     	
     	$data = (object) [];
     	$data->price = $product->getPrice();

@@ -5,16 +5,58 @@
 
   &-slider {
     border-radius: 5px;
+    transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    &-col {
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        width: 575px;
+      }
+    }
 
     .flickity-viewport {
       height: 100%;
     }
 
-    .item {
-      width: 100%;
+    .flickity-fullscreen-button-view {
+      display: none;
+    }
 
-      figure {
-        @include aspect-ratio(575, 862);
+    .item {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      @include aspect-ratio(575, 862);
+    }
+
+    &.is-fullscreen {
+      padding-bottom: 0;
+      border-radius: 0;
+
+      .item {
+        height: 100%;
+        padding: 0 25px;
+      }
+
+      .item>img {
+        // This will reset the aspect ratio mixin
+        position: relative;
+        top: initial;
+        left: initial;
+        right: initial;
+        bottom: initial;
+        min-height: auto;
+        min-width: auto;
+        height: auto;
+        width: auto;
+        margin: auto;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+
+      .item::before {
+        display: none;
       }
     }
   }
@@ -24,46 +66,79 @@
   }
 
   &-thumbnail {
-    max-height: 862px;
+    margin-left: 0.625rem;
+
+    @include media-max(1152px) {
+      margin-left: 0.625rem;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row !important;
+    }
 
     .item {
       width: 70px;
       height: 106px;
-      margin: 0.625rem auto;
+      margin: 0.3125rem auto;
       padding: 1.4375rem 0.9375rem 1.4375rem;
       border-radius: 5px;
-      box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
       cursor: pointer;
+
+      @include media-max(1152px) {
+        margin: 0.625rem 0.3125rem;
+      }
 
       &:first-child {
         margin-top: 0;
+
+        @include media-max(1152px) {
+          margin-top: 0.625rem;
+        }
       }
 
       &:last-child {
         margin-bottom: 0;
+
+        @include media-max(1152px) {
+          margin-bottom: 0.625rem;
+        }
       }
 
+      &.is-selected,
       &:hover {
-        opacity: 0.8;
-      } 
+        opacity: 0.6;
+      }
 
       figure {
         @include aspect-ratio(35, 57);
       }
     }
-  }
 
-  .fullscreen {
-    background: rgba(247, 247, 247, 0.4);
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: $zindex-modal;
+    &.is-fullscreen {
+      position: fixed;
+      z-index: $zindex-modal;
+      background: rgba(202, 202, 202, 0.3);
+      margin: 0 auto;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      flex-direction: row !important;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
 
-    &.inactive {
-      display: none;
+      .item {
+        margin: 0.3125rem;
+
+        &:first-child {
+          margin-top: 0.3125rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0.3125rem;
+        }
+      }
     }
   }
 }

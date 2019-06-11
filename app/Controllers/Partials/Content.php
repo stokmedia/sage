@@ -10,20 +10,23 @@ trait Content
 
         $flexibleContent = get_field('sections');
 
-        if( $flexibleContent ) {
-            foreach ($flexibleContent as $key=>$content) {
-                $functionName = 'cms_' . str_replace( '-', '_', $content['acf_fc_layout'] );
+        if( !$flexibleContent ) {
+            return $data;
+        }
 
-                if( method_exists( $this, $functionName ) ) {
-                    $thisContent = (object) self::$functionName( $content );
+        foreach ($flexibleContent as $key=>$content) {
+            $functionName = 'cms_' . str_replace( '-', '_', $content['acf_fc_layout'] );
 
-                    if( !empty($thisContent) ) {
-                        $thisContent->is_h1 = $key===0;
-                        array_push( $data, $thisContent );
-                    }
+            if( method_exists( $this, $functionName ) ) {
+                $thisContent = (object) self::$functionName( $content );
+
+                if( !empty($thisContent) ) {
+                    $thisContent->is_h1 = $key===0;
+                    array_push( $data, $thisContent );
                 }
             }
         }
+        
         return $data;
     }
 
@@ -156,7 +159,52 @@ trait Content
     
     public static function cms_popular_products( $data )
     {   
-        return (object) $data;
+        $newData = (object) $data;
+        $products = [];
+
+        if ($newData->section_displays === 'handpick') {
+            $products = $newData->handpicked_products;
+
+        } else {           
+            $args = [
+                'post_type' => 'silk_products',
+                'post_status' => 'publish',
+                'posts_per_page' => $newData->count ? $newData->count : -1,
+                'tax_query' => [
+                    [
+                        'taxonomy' => 'silk_category',
+                        'field' => 'term_id',
+                        'terms' => $newData->category,
+                    ]
+                ]
+            ];
+
+            if( $newData->items_to_display === 'random' ) {
+                $args['orderby'] = 'rand';
+            } else {
+                $args['orderby'] = 'date';
+                $args['order'] = 'DESC';                
+            }
+            
+            $products = get_posts( $args );
+        }
+
+        $hasContent = (
+            self::hasTitle($newData)
+            || $newData->preamble
+            || $products
+            || $newData->link
+        );
+
+        return (object) [
+            'acf_fc_layout' => $newData->acf_fc_layout,
+            'has_content' => $hasContent,
+            'title' => self::hasTitle($newData) ? $newData->section_title : '',
+            'preamble' => $newData->preamble ?? '',
+            'products' => $products,
+            'product_count' => count($products),
+            'link' => is_array($newData->link) ? (object) $newData->link : false,
+        ];
     }    
     
     public static function cms_promo_boxes( $data )

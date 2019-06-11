@@ -18628,9 +18628,9 @@ https://flickity.metafizzy.co
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   padding-bottom: 35px;
-  z-index: 1;
+  z-index: 1050;
 }
 
 /* line 15, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
@@ -22467,30 +22467,54 @@ body#tinymce {
 
 .selected-product-slider {
   border-radius: 5px;
+  -webkit-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* line 9, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 10, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-slider-col {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  /* line 10, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+  .selected-product-slider-col {
+    width: 575px;
+  }
+}
+
+/* line 18, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .flickity-viewport {
   height: 100%;
 }
 
-/* line 13, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 22, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.selected-product-slider .item {
-  width: 100%;
+.selected-product-slider .flickity-fullscreen-button-view {
+  display: none;
 }
 
-/* line 16, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 26, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.selected-product-slider .item figure {
+.selected-product-slider .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
 
 /* line 6, resources/assets/styles/common/_mixins.scss */
 
-.selected-product-slider .item figure::before {
+.selected-product-slider .item::before {
   display: block;
   content: " ";
   width: 100%;
@@ -22499,12 +22523,12 @@ body#tinymce {
 
 /* line 13, resources/assets/styles/common/_mixins.scss */
 
-.selected-product-slider .item figure > img,
-.selected-product-slider .item figure > video,
-.selected-product-slider .item figure > figure,
-.selected-product-slider .item figure > .ratio-content,
-.selected-product-slider .item figure > iframe,
-.selected-product-slider .item figure > .ratio-iframe {
+.selected-product-slider .item > img,
+.selected-product-slider .item > video,
+.selected-product-slider .item > figure,
+.selected-product-slider .item > .ratio-content,
+.selected-product-slider .item > iframe,
+.selected-product-slider .item > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -22521,23 +22545,79 @@ body#tinymce {
 
 /* line 32, resources/assets/styles/common/_mixins.scss */
 
-.selected-product-slider .item figure > iframe {
+.selected-product-slider .item > iframe {
   min-height: 200%;
   min-width: 200%;
 }
 
-/* line 26, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 33, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.selected-product-thumbnail {
-  max-height: 862px;
+.selected-product-slider.is-fullscreen {
+  padding-bottom: 0;
+  border-radius: 0;
 }
 
-/* line 29, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 37, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-slider.is-fullscreen .item {
+  height: 100%;
+  padding: 0 25px;
+}
+
+/* line 42, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-slider.is-fullscreen .item > img {
+  position: relative;
+  top: initial;
+  left: initial;
+  right: initial;
+  bottom: initial;
+  min-height: auto;
+  min-width: auto;
+  height: auto;
+  width: auto;
+  margin: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* line 58, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-slider.is-fullscreen .item::before {
+  display: none;
+}
+
+/* line 68, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-thumbnail {
+  margin-left: 0.625rem;
+}
+
+@media screen and (max-width: 1152px) {
+  /* line 68, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+  .selected-product-thumbnail {
+    margin-left: 0.625rem;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+}
+
+/* line 79, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item {
   width: 70px;
   height: 106px;
-  margin: 0.625rem auto;
+  margin: 0.3125rem auto;
   padding: 1.4375rem 0.9375rem 1.4375rem;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
@@ -22545,25 +22625,50 @@ body#tinymce {
   cursor: pointer;
 }
 
-/* line 38, resources/assets/styles/skhoop/sections/_selected-product.scss */
+@media screen and (max-width: 1152px) {
+  /* line 79, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+  .selected-product-thumbnail .item {
+    margin: 0.625rem 0.3125rem;
+  }
+}
+
+/* line 92, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:first-child {
   margin-top: 0;
 }
 
-/* line 42, resources/assets/styles/skhoop/sections/_selected-product.scss */
+@media screen and (max-width: 1152px) {
+  /* line 92, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+  .selected-product-thumbnail .item:first-child {
+    margin-top: 0.625rem;
+  }
+}
+
+/* line 100, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:last-child {
   margin-bottom: 0;
 }
 
-/* line 46, resources/assets/styles/skhoop/sections/_selected-product.scss */
+@media screen and (max-width: 1152px) {
+  /* line 100, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.selected-product-thumbnail .item:hover {
-  opacity: 0.8;
+  .selected-product-thumbnail .item:last-child {
+    margin-bottom: 0.625rem;
+  }
 }
 
-/* line 50, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 108, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-thumbnail .item.is-selected,
+.selected-product-thumbnail .item:hover {
+  opacity: 0.6;
+}
+
+/* line 113, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item figure {
   position: relative;
@@ -22608,22 +22713,45 @@ body#tinymce {
   min-width: 200%;
 }
 
-/* line 56, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 118, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.selected-product .fullscreen {
-  background: rgba(247, 247, 247, 0.4);
+.selected-product-thumbnail.is-fullscreen {
+  position: fixed;
+  z-index: 1050;
+  background: rgba(202, 202, 202, 0.3);
+  margin: 0 auto;
+  top: auto;
   bottom: 0;
   left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1050;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/* line 65, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 131, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.selected-product .fullscreen.inactive {
-  display: none;
+.selected-product-thumbnail.is-fullscreen .item {
+  margin: 0.3125rem;
+}
+
+/* line 134, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-thumbnail.is-fullscreen .item:first-child {
+  margin-top: 0.3125rem;
+}
+
+/* line 138, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-thumbnail.is-fullscreen .item:last-child {
+  margin-bottom: 0.3125rem;
 }
 
 @media (min-width: 992px) {
