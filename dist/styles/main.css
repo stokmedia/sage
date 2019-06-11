@@ -17690,28 +17690,28 @@ blockquote footer::before,
 /* line 16, resources/assets/styles/skhoop/components/_section.scss */
 
 .section {
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 
 @media (min-width: 992px) {
   /* line 16, resources/assets/styles/skhoop/components/_section.scss */
 
   .section {
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
   }
 }
 
 /* line 23, resources/assets/styles/skhoop/components/_section.scss */
 
 .section.has-small-mb {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 @media (min-width: 992px) {
   /* line 23, resources/assets/styles/skhoop/components/_section.scss */
 
   .section.has-small-mb {
-    margin-bottom: 70px;
+    margin-bottom: 4.375rem;
   }
 }
 
@@ -17724,42 +17724,42 @@ blockquote footer::before,
 /* line 35, resources/assets/styles/skhoop/components/_section.scss */
 
 .section.has-pt {
-  padding-top: 50px;
+  padding-top: 3.125rem;
 }
 
 @media (min-width: 992px) {
   /* line 35, resources/assets/styles/skhoop/components/_section.scss */
 
   .section.has-pt {
-    padding-top: 100px;
+    padding-top: 6.25rem;
   }
 }
 
 /* line 43, resources/assets/styles/skhoop/components/_section.scss */
 
 .section.has-small-pt {
-  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 
 @media (min-width: 992px) {
   /* line 43, resources/assets/styles/skhoop/components/_section.scss */
 
   .section.has-small-pt {
-    padding-top: 70px;
+    padding-top: 4.375rem;
   }
 }
 
 /* line 51, resources/assets/styles/skhoop/components/_section.scss */
 
 .section.has-small-pb {
-  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
 }
 
 @media (min-width: 992px) {
   /* line 51, resources/assets/styles/skhoop/components/_section.scss */
 
   .section.has-small-pb {
-    padding-bottom: 70px;
+    padding-bottom: 4.375rem;
   }
 }
 
@@ -21293,25 +21293,25 @@ body#tinymce {
 
 /* line 1, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner {
+.hero-banner {
   background-color: #dbe4e7;
 }
 
 /* line 4, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap {
+.hero-banner .hero-wrap {
   position: relative;
   overflow: hidden;
 }
 
 /* line 53, resources/assets/styles/common/_mixins.scss */
 
-.section-hero-banner .hero-wrap > img,
-.section-hero-banner .hero-wrap > video,
-.section-hero-banner .hero-wrap > figure,
-.section-hero-banner .hero-wrap > .ratio-content,
-.section-hero-banner .hero-wrap > iframe,
-.section-hero-banner .hero-wrap > .ratio-iframe {
+.hero-banner .hero-wrap > img,
+.hero-banner .hero-wrap > video,
+.hero-banner .hero-wrap > figure,
+.hero-banner .hero-wrap > .ratio-content,
+.hero-banner .hero-wrap > iframe,
+.hero-banner .hero-wrap > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -21328,7 +21328,7 @@ body#tinymce {
 
 /* line 72, resources/assets/styles/common/_mixins.scss */
 
-.section-hero-banner .hero-wrap > iframe {
+.hero-banner .hero-wrap > iframe {
   min-height: 200%;
   min-width: 200%;
 }
@@ -21336,7 +21336,7 @@ body#tinymce {
 @media (max-width: 767.98px) {
   /* line 7, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap iframe {
+  .hero-banner .hero-wrap iframe {
     min-height: 300%;
     min-width: 300%;
   }
@@ -21344,7 +21344,7 @@ body#tinymce {
 
 /* line 13, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-background {
+.hero-banner .hero-wrap .hero-background {
   width: 100%;
   position: relative;
   background-size: cover;
@@ -21357,7 +21357,7 @@ body#tinymce {
 
 /* line 6, resources/assets/styles/common/_mixins.scss */
 
-.section-hero-banner .hero-wrap .hero-background::before {
+.hero-banner .hero-wrap .hero-background::before {
   display: block;
   content: " ";
   width: 100%;
@@ -21366,12 +21366,12 @@ body#tinymce {
 
 /* line 13, resources/assets/styles/common/_mixins.scss */
 
-.section-hero-banner .hero-wrap .hero-background > img,
-.section-hero-banner .hero-wrap .hero-background > video,
-.section-hero-banner .hero-wrap .hero-background > figure,
-.section-hero-banner .hero-wrap .hero-background > .ratio-content,
-.section-hero-banner .hero-wrap .hero-background > iframe,
-.section-hero-banner .hero-wrap .hero-background > .ratio-iframe {
+.hero-banner .hero-wrap .hero-background > img,
+.hero-banner .hero-wrap .hero-background > video,
+.hero-banner .hero-wrap .hero-background > figure,
+.hero-banner .hero-wrap .hero-background > .ratio-content,
+.hero-banner .hero-wrap .hero-background > iframe,
+.hero-banner .hero-wrap .hero-background > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -21388,7 +21388,7 @@ body#tinymce {
 
 /* line 32, resources/assets/styles/common/_mixins.scss */
 
-.section-hero-banner .hero-wrap .hero-background > iframe {
+.hero-banner .hero-wrap .hero-background > iframe {
   min-height: 200%;
   min-width: 200%;
 }
@@ -21396,14 +21396,14 @@ body#tinymce {
 @media (max-width: 767.98px) {
   /* line 13, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap .hero-background {
+  .hero-banner .hero-wrap .hero-background {
     position: relative;
     overflow: hidden;
   }
 
   /* line 6, resources/assets/styles/common/_mixins.scss */
 
-  .section-hero-banner .hero-wrap .hero-background::before {
+  .hero-banner .hero-wrap .hero-background::before {
     display: block;
     content: " ";
     width: 100%;
@@ -21412,12 +21412,12 @@ body#tinymce {
 
   /* line 13, resources/assets/styles/common/_mixins.scss */
 
-  .section-hero-banner .hero-wrap .hero-background > img,
-  .section-hero-banner .hero-wrap .hero-background > video,
-  .section-hero-banner .hero-wrap .hero-background > figure,
-  .section-hero-banner .hero-wrap .hero-background > .ratio-content,
-  .section-hero-banner .hero-wrap .hero-background > iframe,
-  .section-hero-banner .hero-wrap .hero-background > .ratio-iframe {
+  .hero-banner .hero-wrap .hero-background > img,
+  .hero-banner .hero-wrap .hero-background > video,
+  .hero-banner .hero-wrap .hero-background > figure,
+  .hero-banner .hero-wrap .hero-background > .ratio-content,
+  .hero-banner .hero-wrap .hero-background > iframe,
+  .hero-banner .hero-wrap .hero-background > .ratio-iframe {
     position: absolute;
     top: 0;
     left: -9999px;
@@ -21434,14 +21434,14 @@ body#tinymce {
 
   /* line 32, resources/assets/styles/common/_mixins.scss */
 
-  .section-hero-banner .hero-wrap .hero-background > iframe {
+  .hero-banner .hero-wrap .hero-background > iframe {
     min-height: 200%;
     min-width: 200%;
   }
 
   /* line 26, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap .hero-background iframe {
+  .hero-banner .hero-wrap .hero-background iframe {
     min-height: 300%;
     min-width: 300%;
   }
@@ -21449,7 +21449,7 @@ body#tinymce {
 
 /* line 34, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text {
+.hero-banner .hero-wrap .hero-text {
   height: 100%;
   width: 100%;
   padding: 2rem;
@@ -21476,15 +21476,15 @@ body#tinymce {
 
 /* line 51, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-title,
-.section-hero-banner .hero-wrap .hero-text .hero-subtitle {
+.hero-banner .hero-wrap .hero-text .hero-title,
+.hero-banner .hero-wrap .hero-text .hero-subtitle {
   text-align: center;
   line-height: normal;
 }
 
 /* line 56, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-title {
+.hero-banner .hero-wrap .hero-text .hero-title {
   margin-bottom: -1rem;
   font-size: calc(2.13rem + 2.5vw);
 }
@@ -21492,7 +21492,7 @@ body#tinymce {
 @media (max-width: 767.98px) {
   /* line 56, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap .hero-text .hero-title {
+  .hero-banner .hero-wrap .hero-text .hero-title {
     margin-bottom: -0.5rem;
     font-size: calc(1.65rem + 2vw);
   }
@@ -21500,7 +21500,7 @@ body#tinymce {
 
 /* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-subtitle {
+.hero-banner .hero-wrap .hero-text .hero-subtitle {
   font-family: "Covered By Your Grace", cursive;
   margin-bottom: calc(0.1rem + 5vw);
   font-size: calc(0.9rem + 2.5vw);
@@ -21509,7 +21509,7 @@ body#tinymce {
 @media (max-width: 767.98px) {
   /* line 67, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap .hero-text .hero-subtitle {
+  .hero-banner .hero-wrap .hero-text .hero-subtitle {
     font-size: calc(1.5rem + 2vw);
     letter-spacing: 0.1px;
     word-spacing: 3px;
@@ -21518,14 +21518,14 @@ body#tinymce {
 
 /* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-btn {
+.hero-banner .hero-wrap .hero-text .hero-btn {
   position: relative;
 }
 
 @media (max-width: 767.98px) {
   /* line 79, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap .hero-text .hero-btn {
+  .hero-banner .hero-wrap .hero-text .hero-btn {
     position: absolute;
     bottom: 0;
     margin-bottom: calc(3rem + 6vw);
@@ -21534,11 +21534,11 @@ body#tinymce {
 
 /* line 88, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
-.section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
-.comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input[type="submit"],
-.section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit,
-.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit {
+.hero-banner .hero-wrap .hero-text .hero-btn .btn,
+.hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
+.comment-form .hero-banner .hero-wrap .hero-text .hero-btn input[type="submit"],
+.hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit,
+.search-form .hero-banner .hero-wrap .hero-text .hero-btn .search-submit {
   background-color: #fff;
   border-color: #fff;
   color: #031532;
@@ -21552,11 +21552,11 @@ body#tinymce {
 @media (max-width: 767.98px) {
   /* line 88, resources/assets/styles/skhoop/sections/_hero.scss */
 
-  .section-hero-banner .hero-wrap .hero-text .hero-btn .btn,
-  .section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
-  .comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input[type="submit"],
-  .section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit,
-  .search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit {
+  .hero-banner .hero-wrap .hero-text .hero-btn .btn,
+  .hero-banner .hero-wrap .hero-text .hero-btn .comment-form input[type="submit"],
+  .comment-form .hero-banner .hero-wrap .hero-text .hero-btn input[type="submit"],
+  .hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit,
+  .search-form .hero-banner .hero-wrap .hero-text .hero-btn .search-submit {
     max-width: calc(14.3rem + 10vw);
     min-width: calc(14.3rem + 10vw);
     font-size: calc(0.7rem + .5vw);
@@ -21565,16 +21565,16 @@ body#tinymce {
 
 /* line 104, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-text .hero-btn .btn:hover,
-.section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:hover[type="submit"],
-.comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:hover[type="submit"],
-.section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:hover,
-.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:hover,
-.section-hero-banner .hero-wrap .hero-text .hero-btn .btn:active,
-.section-hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:active[type="submit"],
-.comment-form .section-hero-banner .hero-wrap .hero-text .hero-btn input:active[type="submit"],
-.section-hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:active,
-.search-form .section-hero-banner .hero-wrap .hero-text .hero-btn .search-submit:active {
+.hero-banner .hero-wrap .hero-text .hero-btn .btn:hover,
+.hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:hover[type="submit"],
+.comment-form .hero-banner .hero-wrap .hero-text .hero-btn input:hover[type="submit"],
+.hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:hover,
+.search-form .hero-banner .hero-wrap .hero-text .hero-btn .search-submit:hover,
+.hero-banner .hero-wrap .hero-text .hero-btn .btn:active,
+.hero-banner .hero-wrap .hero-text .hero-btn .comment-form input:active[type="submit"],
+.comment-form .hero-banner .hero-wrap .hero-text .hero-btn input:active[type="submit"],
+.hero-banner .hero-wrap .hero-text .hero-btn .search-form .search-submit:active,
+.search-form .hero-banner .hero-wrap .hero-text .hero-btn .search-submit:active {
   background-color: #031532;
   border-color: #031532;
   color: #fff;
@@ -21582,7 +21582,7 @@ body#tinymce {
 
 /* line 114, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-play-btn {
+.hero-banner .hero-wrap .hero-play-btn {
   height: 100%;
   width: 100%;
   padding: 2rem;
@@ -21610,7 +21610,7 @@ body#tinymce {
 
 /* line 133, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-play-btn button {
+.hero-banner .hero-wrap .hero-play-btn button {
   width: 5rem;
   height: 5rem;
   z-index: 3;
@@ -21618,7 +21618,7 @@ body#tinymce {
 
 /* line 138, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-play-btn button img {
+.hero-banner .hero-wrap .hero-play-btn button img {
   width: 30%;
   height: 30%;
   left: 3px;
@@ -21627,7 +21627,7 @@ body#tinymce {
 
 /* line 145, resources/assets/styles/skhoop/sections/_hero.scss */
 
-.section-hero-banner .hero-wrap .hero-play-btn button:hover {
+.hero-banner .hero-wrap .hero-play-btn button:hover {
   background-color: #031532;
   border-color: #031532;
 }
@@ -22220,6 +22220,7 @@ body#tinymce {
 /* line 1, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products {
+  padding-top: 2.5rem;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(22%, #fff), color-stop(22%, #dbe4e7), to(#dbe4e7));
   background-image: -webkit-linear-gradient(bottom, #fff, #fff 22%, #dbe4e7 22%, #dbe4e7 100%);
   background-image: -o-linear-gradient(bottom, #fff, #fff 22%, #dbe4e7 22%, #dbe4e7 100%);
@@ -22230,6 +22231,7 @@ body#tinymce {
   /* line 1, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products {
+    padding-top: 4.375rem;
     background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(30%, #fff), color-stop(30%, #dbe4e7), to(#dbe4e7));
     background-image: -webkit-linear-gradient(bottom, #fff, #fff 30%, #dbe4e7 30%, #dbe4e7 100%);
     background-image: -o-linear-gradient(bottom, #fff, #fff 30%, #dbe4e7 30%, #dbe4e7 100%);
@@ -22259,7 +22261,7 @@ body#tinymce {
   }
 }
 
-/* line 16, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 18, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products.has-button {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(33%, #fff), color-stop(33%, #dbe4e7), to(#dbe4e7));
@@ -22269,7 +22271,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 18, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products.has-button {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(40%, #fff), color-stop(40%, #dbe4e7), to(#dbe4e7));
@@ -22280,7 +22282,7 @@ body#tinymce {
 }
 
 @media (min-width: 1240px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 18, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products.has-button {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(20rem, #fff), color-stop(20rem, #dbe4e7), to(#dbe4e7));
@@ -22291,7 +22293,7 @@ body#tinymce {
 }
 
 @media (min-width: 1480px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 18, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products.has-button {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(21.875rem, #fff), color-stop(21.875rem, #dbe4e7), to(#dbe4e7));
@@ -22301,7 +22303,7 @@ body#tinymce {
   }
 }
 
-/* line 32, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 34, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products > .container {
   position: relative;
@@ -22310,7 +22312,7 @@ body#tinymce {
 }
 
 @media (min-width: 1240px) {
-  /* line 32, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 34, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products > .container {
     padding-left: 0.9375rem;
@@ -22318,14 +22320,14 @@ body#tinymce {
   }
 }
 
-/* line 43, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 45, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-header {
   width: 100%;
 }
 
 @media (min-width: 992px) {
-  /* line 43, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 45, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products .section-header {
     max-width: 810px;
@@ -22333,32 +22335,32 @@ body#tinymce {
 }
 
 @media (min-width: 1240px) {
-  /* line 43, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 45, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products .section-header {
     max-width: 880px;
   }
 }
 
-/* line 54, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 56, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-header.is-no-nav {
   max-width: 100%;
 }
 
-/* line 58, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 60, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-header .title {
   margin-bottom: 0.625rem;
 }
 
-/* line 63, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 65, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-header .content > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 69, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 71, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-nav {
   position: absolute;
@@ -22366,7 +22368,7 @@ body#tinymce {
   bottom: 0.4375rem;
 }
 
-/* line 74, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 76, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-nav .btn,
 .popular-products .section-nav .comment-form input[type="submit"],
@@ -22376,34 +22378,34 @@ body#tinymce {
   margin: 0 0.625rem;
 }
 
-/* line 79, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 81, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-footer {
   margin-top: 2.1875rem;
 }
 
 @media (min-width: 992px) {
-  /* line 79, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 81, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products .section-footer {
     margin-top: 3.125rem;
   }
 }
 
-/* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 89, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider {
   margin-top: 1.25rem;
 }
 
-/* line 91, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 93, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item:first-child {
   padding-left: 20px;
 }
 
 @media (min-width: 1240px) {
-  /* line 91, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 93, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item:first-child {
     padding-left: calc(( 100vw - 1200px) / 2);
@@ -22411,14 +22413,14 @@ body#tinymce {
 }
 
 @media (min-width: 1480px) {
-  /* line 91, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 93, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item:first-child {
     padding-left: calc(( 100vw - 1440px) / 2);
   }
 }
 
-/* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 105, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .grid-item {
   display: block;
@@ -22429,7 +22431,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 105, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item .grid-item {
     width: calc( 100vw / 4);
@@ -22438,7 +22440,7 @@ body#tinymce {
 }
 
 @media (min-width: 1240px) {
-  /* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 105, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item .grid-item {
     width: calc( 1120px / 4);
@@ -22446,20 +22448,20 @@ body#tinymce {
 }
 
 @media (min-width: 1480px) {
-  /* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 105, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item .grid-item {
     width: calc( 1360px / 4);
   }
 }
 
-/* line 123, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 125, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .grid-item:hover {
   text-decoration: none;
 }
 
-/* line 128, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 130, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .product {
   margin-bottom: 0;
@@ -22468,7 +22470,7 @@ body#tinymce {
           box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 133, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 135, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .product.is-small {
   -webkit-box-flex: initial;
@@ -22906,7 +22908,7 @@ body#tinymce {
 
 .instagram-gallery {
   overflow-x: hidden;
-  padding-top: 4.375rem;
+  padding-top: 1.875rem;
   padding-bottom: 3.4375rem;
   background-position: center center;
   background-repeat: no-repeat;
@@ -22914,6 +22916,12 @@ body#tinymce {
 }
 
 /* line 8, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+.instagram-gallery.is-text-overlapping {
+  padding-top: 4.375rem;
+}
+
+/* line 12, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .image {
   position: relative;
@@ -22949,7 +22957,7 @@ body#tinymce {
   min-width: 200%;
 }
 
-/* line 12, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 16, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .col-wrap {
   margin-left: -5.695%;
@@ -22957,7 +22965,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 12, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 16, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .col-wrap {
     margin-left: -82px;
@@ -22965,7 +22973,7 @@ body#tinymce {
   }
 }
 
-/* line 22, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 26, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .col-group {
   display: -webkit-box;
@@ -22973,7 +22981,7 @@ body#tinymce {
   display: flex;
 }
 
-/* line 26, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 30, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .col-side {
   -ms-flex: 1 0 0;
@@ -22987,7 +22995,7 @@ body#tinymce {
   flex-basis: 0;
 }
 
-/* line 31, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 35, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-group {
   display: -webkit-box;
@@ -22995,7 +23003,7 @@ body#tinymce {
   display: flex;
 }
 
-/* line 35, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 39, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block-hidden {
   position: relative;
@@ -23014,7 +23022,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 35, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 39, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile-block-hidden {
     padding-left: 15px;
@@ -23031,14 +23039,14 @@ body#tinymce {
   }
 }
 
-/* line 52, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 56, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info-margin {
   position: relative;
   z-index: 1;
 }
 
-/* line 57, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 61, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info {
   padding-left: calc(3.712% / 2);
@@ -23046,15 +23054,23 @@ body#tinymce {
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  /* line 61, resources/assets/styles/skhoop/sections/_instagram.scss */
+
+  .instagram-gallery .instagram-info {
+    margin-bottom: 25px;
+  }
+}
+
 @media (min-width: 992px) {
-  /* line 57, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 61, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .instagram-info {
     padding-left: 15px;
   }
 }
 
-/* line 66, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 74, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info .btn-header {
   text-align: center;
@@ -23062,7 +23078,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 71, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 79, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .instagram-info .btn,
   .instagram-gallery .instagram-info .comment-form input[type="submit"],
@@ -23073,7 +23089,7 @@ body#tinymce {
   }
 }
 
-/* line 77, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 85, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info .h3 {
   margin-bottom: 0;
@@ -23081,14 +23097,14 @@ body#tinymce {
   margin-left: 12px;
 }
 
-/* line 83, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 91, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info .info {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-/* line 89, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 97, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile {
   position: relative;
@@ -23137,7 +23153,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 89, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 97, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile {
     -webkit-box-flex: 0;
@@ -23152,7 +23168,7 @@ body#tinymce {
   }
 }
 
-/* line 107, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 115, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile.is-three {
   -ms-flex: 0 0 calc( (25% * 3) - 11.595%);
@@ -23168,7 +23184,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 107, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 115, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile.is-three {
     -ms-flex: 0 0 calc( (25% * 3) - 93px);
@@ -23184,7 +23200,7 @@ body#tinymce {
   }
 }
 
-/* line 122, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 130, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block {
   -ms-flex: 0 0 calc(25% - 3.712%);
@@ -23200,7 +23216,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 122, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 130, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile-block {
     -ms-flex: 0 0 calc(25% - 30px);
@@ -23216,7 +23232,7 @@ body#tinymce {
   }
 }
 
-/* line 135, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 143, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block .tile {
   width: 100%;
@@ -23225,21 +23241,21 @@ body#tinymce {
   margin: 0;
 }
 
-/* line 141, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 149, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block .tile:first-child {
   margin: 0 0 17.45%;
 }
 
 @media (min-width: 992px) {
-  /* line 141, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 149, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile-block .tile:first-child {
     margin: 0 0 30px;
   }
 }
 
-/* line 152, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 160, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile {
   padding: 1.875rem 0;
@@ -23249,7 +23265,7 @@ body#tinymce {
   background-size: cover;
 }
 
-/* line 159, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 167, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info {
   padding-left: 1.25rem;
@@ -23257,20 +23273,20 @@ body#tinymce {
   padding-bottom: 2.0625rem;
 }
 
-/* line 164, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 172, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info .btn-header {
   margin-bottom: 1.5625rem;
 }
 
-/* line 167, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 175, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info .btn-header .h3 {
   letter-spacing: 0.5px;
   line-height: 3.125rem;
 }
 
-/* line 172, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 180, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info .btn-header .btn,
 .instagram-gallery-mobile .instagram-info .btn-header .comment-form input[type="submit"],
@@ -23286,20 +23302,20 @@ body#tinymce {
   letter-spacing: 1.86px;
 }
 
-/* line 184, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 192, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-/* line 190, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 198, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col .row:last-child .col {
   padding-bottom: 0;
 }
 
-/* line 196, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 204, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col .col {
   padding-left: 0.625rem;
@@ -23307,7 +23323,7 @@ body#tinymce {
   padding-bottom: 1.25rem;
 }
 
-/* line 202, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 210, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col .tile {
   position: relative;

@@ -1,17 +1,17 @@
 //
 // Section
 // --------------------------------------------------
-$section-margin:             100px;
-$section-margin-touch:       50px;
+$section-margin:             6.25rem;
+$section-margin-touch:       3.125rem;
 
-$section-padding:            100px;
-$section-padding-touch:      50px;
+$section-padding:            6.25rem;
+$section-padding-touch:      3.125rem;
 
-$section-margin-sm:          70px;
-$section-margin-sm-touch:    40px;
+$section-margin-sm:          4.375rem;
+$section-margin-sm-touch:    2.5rem;
 
-$section-padding-sm:         70px;
-$section-padding-sm-touch:   40px;
+$section-padding-sm:         4.375rem;
+$section-padding-sm-touch:   2.5rem;
 
 .section {
   margin-bottom: $section-margin-touch;

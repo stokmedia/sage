@@ -1,9 +1,13 @@
 .instagram-gallery {
   overflow-x: hidden;
-  padding-top: 4.375rem;
+  padding-top: 1.875rem;
   padding-bottom: 3.4375rem;
 
   @include cover;
+
+  &.is-text-overlapping {
+    padding-top: 4.375rem;
+  }
 
   .image {
     @include relate-aspect-ratio;
@@ -58,6 +62,10 @@
     padding-left: calc(3.712% / 2);
     margin-left: -25%;
     width: 100%;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 25px;
+    }
 
     @include media-breakpoint-up(lg) {
       padding-left: 15px;

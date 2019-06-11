@@ -1,6 +1,6 @@
 
 @if ($section->has_content)
-    <section class="section popular-products has-small-pt @if ($section->link) has-button @endif">
+    <section class="section popular-products @if ($section->link) has-button @endif">
         <div class="container">
             <div class="section-header @if ($section->product_count <= 5)is-no-nav @endif">
                 @if ($section->title)
@@ -12,7 +12,7 @@
                         <p>{!! $section->preamble !!}</p>
                     </div>
                 @endif
-                
+
                 @if ($section->product_count > 5)
                     <div class="section-nav d-none d-lg-block">
                         <button class="btn btn-lg btn-icon btn-icon-lg bg-white js-flickity-prev" type="button">
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        @if ($section->products)           
+        @if ($section->products)
             <div class="popular-products-grid-slider js-grid-slider">
                 @foreach ($section->products as $product)
                     @include('partials.product-item',
@@ -34,7 +34,7 @@
                             'post' => $product,
                             'product' => TaxonomySilk_category::get_product($product->ID)
                         ]
-                    )                
+                    )
                     {{-- <div class="grid-slider-item">
                         <a href="#" class="grid-item">
                         <div class="product is-small p-0">

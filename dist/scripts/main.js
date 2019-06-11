@@ -16933,10 +16933,13 @@ function calculatePosition() {
       'margin-bottom': (tileInfoHeight * -1) + 'px',
       'padding-top': ( tileInfoHeight - infoHeight) + 'px',
     });
+    $('.instagram-gallery').removeClass('is-text-overlapping');
   } else {
     instagramInfo.css({
       'margin-bottom': (tileInfoHeight * -1) + 'px',
+      'padding-top': '0',
     });
+    $('.instagram-gallery').addClass('is-text-overlapping');
   }
 }
 

@@ -1,7 +1,9 @@
 .popular-products {
+  padding-top: 2.5rem;
   background-image: linear-gradient(to top, $body-bg, $body-bg 22%, $lightGreen 22%, $lightGreen 100%);
 
   @include media-breakpoint-up(lg) {
+    padding-top: 4.375rem;
     background-image: linear-gradient(to top, $body-bg, $body-bg 30%, $lightGreen 30%, $lightGreen 100%);
   }
 

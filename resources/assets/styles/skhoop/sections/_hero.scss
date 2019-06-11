@@ -1,4 +1,4 @@
-.section-hero-banner {
+.hero-banner {
     background-color: $lightGreen;
 
     .hero-wrap {
@@ -30,7 +30,7 @@
             }
         }
 
-    
+
         .hero-text {
             height: 100%;
             width: 100%;
@@ -47,12 +47,12 @@
             right: 0;
             z-index: 1;
             color: $white;
-    
+
             .hero-title, .hero-subtitle {
                 text-align: center;
                 line-height: normal;
             }
-    
+
             .hero-title {
                 margin-bottom: -1rem;
                 font-size: calc(2.13rem + 2.5vw);
@@ -61,14 +61,14 @@
                 @include media-breakpoint-down(sm) {
                     margin-bottom: -0.5rem;
                     font-size: calc(1.65rem + 2vw);
-                }               
+                }
             }
-    
+
             .hero-subtitle {
                 font-family: $font-family-cbyg;
                 margin-bottom: calc(0.1rem + 5vw);
                 font-size: calc(0.9rem + 2.5vw);
-                
+
                 @include media-breakpoint-down(sm) {
                     font-size: calc(1.5rem + 2vw);
                     letter-spacing: 0.1px;
@@ -112,7 +112,7 @@
 
 
         .hero-play-btn {
-            
+
             height: 100%;
             width: 100%;
             padding: 2rem;
