@@ -3,6 +3,7 @@
   overflow-x: hidden;
   padding-top: 4.375rem;
   padding-bottom: 3.4375rem;
+
   @include cover;
 
   .image {
@@ -38,14 +39,12 @@
     margin-left: -25%;
 
     @include flex(0 0 calc(100% - ( 3.712% / 2) ));
-    
 
     @include media-breakpoint-up(lg) {
       padding-left: 15px;
       padding-top: calc(( (25% * 3) - 93px) - (50% - 30px));
 
       @include flex(0 0 calc(100% - 15px ));
-      
     }
   }
 

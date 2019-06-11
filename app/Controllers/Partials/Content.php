@@ -139,7 +139,13 @@ trait Content
     }  
     
     public static function cms_newsletter_signup( $data )
-    {   
+    {
+        $data = (object) $data;   
+        $data->title = self::hasTitle($data) ? $data->section_title : '';
+        $data->link = $data->link ? (object) $data->link : $data->link;
+        $data->has_content = ( $data->title || $data->preamble || $data->content || $data->link );
+        $data->image = $data->image ? wp_get_attachment_image_url( $data->image['ID'], 'newsletter' ) : null;
+
         return (object) $data;
     }   
     
