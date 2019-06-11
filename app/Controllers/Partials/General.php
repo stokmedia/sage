@@ -27,6 +27,11 @@ trait General
 
         return $list;
     }
+
+    public function cookieData()
+    {
+        return (object) get_field( 'cookies', self::currentLang() ) ?? [];
+    }
     
     public function resellerLists()
     {

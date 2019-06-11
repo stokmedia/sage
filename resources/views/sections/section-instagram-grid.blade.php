@@ -9,7 +9,7 @@
                 <a href="#" class="btn btn-sm btn-primary text-uppercase">FOLLOW US</a>
                 <h3 class="h3">@skhoopskirts</h3>
               </div>
-              <div class="info">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce </div>
+              <div class="info">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce</div>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ $section-margin-sm:          70px;
 $section-margin-sm-touch:    40px;
 
 $section-padding-sm:         70px;
-$section-padding-sm-touch:      40px;
+$section-padding-sm-touch:   40px;
 
 .section {
   margin-bottom: $section-margin-touch;
@@ -48,22 +48,11 @@ $section-padding-sm-touch:      40px;
     }
   }
 
-  // &.has-pb {
-  //     padding-bottom: $section-padding-bottom-touch;
+  &.has-small-pb {
+    padding-bottom: $section-padding-sm-touch;
 
-  //     @include media-breakpoint-up(lg) {
-  //         padding-bottom: $section-padding-bottom;
-  //     }
-  // }
-
-
-
-
-
-
-  // &.is-last {
-  //     &.has-bg {
-  //         margin-bottom: 0;
-  //     }
-  // }
+    @include media-breakpoint-up(lg) {
+      padding-bottom: $section-padding-sm;
+    }
+  }
 }
