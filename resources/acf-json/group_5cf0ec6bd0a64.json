@@ -41,6 +41,30 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_5cf68121fde7c",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5cf6810ffde7b",
             "label": "Text",
             "name": "text",
@@ -60,10 +84,10 @@
             "delay": 0
         },
         {
-            "key": "field_5cf68121fde7c",
-            "label": "Image",
-            "name": "image",
-            "type": "image",
+            "key": "field_5cfe5f6d9a735",
+            "label": "Form",
+            "name": "form",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -72,16 +96,11 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -101,5 +120,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1559658805
+    "modified": 1560174847
 }
