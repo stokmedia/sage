@@ -1905,7 +1905,7 @@ return getSize;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(7);
-module.exports = __webpack_require__(42);
+module.exports = __webpack_require__(43);
 
 
 /***/ }),
@@ -1939,19 +1939,20 @@ __webpack_require__(9);
 
 
 
+__webpack_require__(34);
 
 // Require Components
 // window.stokpress = require('./util/helper');
 
 // require('./components/helper');
 // require('./util/helper');
-__webpack_require__(34);
 __webpack_require__(35);
 __webpack_require__(36);
 __webpack_require__(37);
 __webpack_require__(38);
 __webpack_require__(39);
-__webpack_require__(41);
+__webpack_require__(40);
+__webpack_require__(42);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -1967,6 +1968,7 @@ var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
 jQuery(document).ready(function () {
   routes.loadEvents();
   __WEBPACK_IMPORTED_MODULE_6__components_sliders__["a" /* sliders */].init();
+  $('.js-plus-item').plusItem();
   $('.resellers-table').resellersTable();
 });
 
@@ -16183,6 +16185,37 @@ GridSlider.slider();
 /* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function($) {$.fn.plusItem = function () {
+  var $btn = (this).find('.js-plus-item-btn'),
+      $items = $(this).find('.item');
+  if ($items.length > 5) {
+    $(this).find('.item:lt(4)').removeClass('d-none');
+    $btn.removeClass('d-none');
+  } else {
+    $btn.addClass('d-none');
+    $items.removeClass('d-none');
+  }
+
+  $btn.find('label').text('+' + $(this).find('.item.d-none').length);
+
+  $btn.click(function() {
+    $items.each(function() {
+      var this$1 = this;
+
+      setTimeout(function () {
+        $(this$1).removeClass('d-none').fadeIn('slow');
+      }, $(this).index() * 50);
+    });
+    $(this).addClass('d-none');
+  });
+};
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* WEBPACK VAR INJECTION */(function($) {var AutoPadding = {};
 var $header = $('.js-header');
 var $body = $('body');
@@ -16204,7 +16237,7 @@ AutoPadding.update = changePadding;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Nav = {};
@@ -16252,7 +16285,7 @@ Nav.menuPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
@@ -16327,7 +16360,7 @@ Nav.menuPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Filter = {};
@@ -16375,53 +16408,53 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {  $.fn.resellersTable = function () {
-    this.each(function() {
-      var $tableRows = $(this).find((".resellers-table-row:gt(" + (($(this).data('limit') - 1)) + ")"));
-      var $btnMore = $(this).find('.js-more');
+/* WEBPACK VAR INJECTION */(function($) {$.fn.resellersTable = function () {
+  this.each(function() {
+    var $tableRows = $(this).find((".resellers-table-row:gt(" + (($(this).data('limit') - 1)) + ")"));
+    var $btnMore = $(this).find('.js-more');
 
-      // On window load
+    // On window load
+    if ($(window).innerWidth() < 768) {
+      $tableRows.removeClass('d-md-table-row').addClass('d-none');
+    } else {
+      $tableRows.removeClass('d-none').addClass('d-md-table-row');
+    }
+
+    // On window resize
+    $(window).resize(function() {
       if ($(window).innerWidth() < 768) {
         $tableRows.removeClass('d-md-table-row').addClass('d-none');
       } else {
         $tableRows.removeClass('d-none').addClass('d-md-table-row');
       }
-
-      // On window resize
-      $(window).resize(function() {
-        if ($(window).innerWidth() < 768) {
-          $tableRows.removeClass('d-md-table-row').addClass('d-none');
-        } else {
-          $tableRows.removeClass('d-none').addClass('d-md-table-row');
-        }
-      });
-
-      // Button more
-      $btnMore.click(function() {
-        $tableRows.each(function() {
-          var this$1 = this;
-
-          setTimeout(function () {
-            $(this$1).removeClass('d-none').addClass('d-md-table-row').fadeIn('slow');
-          }, $(this).index() * 50);
-        });
-        $btnMore.fadeOut();
-      });
     });
-  };
+
+    // Button more
+    $btnMore.click(function() {
+      $tableRows.each(function() {
+        var this$1 = this;
+
+        setTimeout(function () {
+          $(this$1).removeClass('d-none').addClass('d-md-table-row').fadeIn('slow');
+        }, $(this).index() * 50);
+      });
+      $btnMore.fadeOut();
+    });
+  });
+};
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(41);
 /* eslint-disable no-unused-vars */
 
 
@@ -16734,7 +16767,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16918,7 +16951,7 @@ var stokpressEvent = {
 // }
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Instagram = {};
@@ -16955,7 +16988,7 @@ Instagram.infoPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

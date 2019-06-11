@@ -67,15 +67,20 @@
               @endforeach
             </ul>
 
-            <ul class="color-selector d-lg-inline-block d-flex  flex-wrap justify-content-center align-items-center w-100">
-              @for ($color = 0; $color < 5; $color++)
-                <li class="mx-2">
+            <ul class="color-selector js-plus-item d-lg-inline-block d-flex flex-wrap justify-content-center align-items-center w-100">
+              @for ($color = 0; $color < 10; $color++)
+                <li class="mx-2 item d-none">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" id="colorCheck[{{ $color }}]" class="custom-control-input">
                     <label class="custom-control-label" for="colorCheck[{{ $color }}]" style="background-color: #{{ substr(md5(mt_rand()), 0, 6) }}"></label>
                   </div>
                 </li>
               @endfor
+                <li class="mx-2 js-plus-item-btn">
+                  <div class="custom-control custom-checkbox">
+                    <label class="align-items-center border custom-control-label d-flex justify-content-center" for="plusItem">+5</label>
+                  </div>
+                </li>
             </ul>
           </div>
 

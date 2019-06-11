@@ -15,6 +15,7 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 import { sliders } from './components/sliders';
+require('./util/plusItem');
 
 // Require Components
 // window.stokpress = require('./util/helper');
@@ -43,5 +44,6 @@ const routes = new Router({
 jQuery(document).ready(() => {
   routes.loadEvents();
   sliders.init();
+  $('.js-plus-item').plusItem();
   $('.resellers-table').resellersTable();
 });

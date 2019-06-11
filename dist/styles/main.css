@@ -23140,6 +23140,12 @@ body#tinymce {
   margin-bottom: 0.3125rem;
 }
 
+/* line 253, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.js-plus-item-btn {
+  cursor: pointer;
+}
+
 @media (min-width: 992px) {
   /* line 2, resources/assets/styles/skhoop/sections/_text-button.scss */
 
