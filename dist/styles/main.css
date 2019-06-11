@@ -17703,52 +17703,48 @@ blockquote footer::before,
 
 /* line 23, resources/assets/styles/skhoop/components/_section.scss */
 
-.section.has-small-mb,
-.section.has-small-mb-next-section {
+.section.has-small-mb {
   margin-bottom: 40px;
 }
 
 @media (min-width: 992px) {
   /* line 23, resources/assets/styles/skhoop/components/_section.scss */
 
-  .section.has-small-mb,
-  .section.has-small-mb-next-section {
+  .section.has-small-mb {
     margin-bottom: 70px;
   }
 }
 
-/* line 32, resources/assets/styles/skhoop/components/_section.scss */
+/* line 31, resources/assets/styles/skhoop/components/_section.scss */
 
 .section.no-mb {
   margin-bottom: 0;
 }
 
-/* line 36, resources/assets/styles/skhoop/components/_section.scss */
+/* line 35, resources/assets/styles/skhoop/components/_section.scss */
 
 .section.has-pt {
   padding-top: 50px;
 }
 
 @media (min-width: 992px) {
-  /* line 36, resources/assets/styles/skhoop/components/_section.scss */
+  /* line 35, resources/assets/styles/skhoop/components/_section.scss */
 
   .section.has-pt {
     padding-top: 100px;
   }
 }
 
-/* line 44, resources/assets/styles/skhoop/components/_section.scss */
+/* line 43, resources/assets/styles/skhoop/components/_section.scss */
 
-.section.has-small-pt,
-.section.has-small-pt-next-section {
+.section.has-small-pt {
   padding-top: 40px;
 }
 
 @media (min-width: 992px) {
-  /* line 44, resources/assets/styles/skhoop/components/_section.scss */
+  /* line 43, resources/assets/styles/skhoop/components/_section.scss */
 
-  .section.has-small-pt,
-  .section.has-small-pt-next-section {
+  .section.has-small-pt {
     padding-top: 70px;
   }
 }
@@ -22332,17 +22328,23 @@ body#tinymce {
 
 /* line 54, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
+.popular-products .section-header.is-no-nav {
+  max-width: 100%;
+}
+
+/* line 58, resources/assets/styles/skhoop/sections/_popular-products.scss */
+
 .popular-products .section-header .title {
   margin-bottom: 0.625rem;
 }
 
-/* line 59, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 63, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-header .content > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 65, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 69, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-nav {
   position: absolute;
@@ -22350,7 +22352,7 @@ body#tinymce {
   bottom: 0.4375rem;
 }
 
-/* line 70, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 74, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-nav .btn,
 .popular-products .section-nav .comment-form input[type="submit"],
@@ -22360,34 +22362,34 @@ body#tinymce {
   margin: 0 0.625rem;
 }
 
-/* line 75, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 79, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products .section-footer {
   margin-top: 2.1875rem;
 }
 
 @media (min-width: 992px) {
-  /* line 75, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 79, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products .section-footer {
     margin-top: 3.125rem;
   }
 }
 
-/* line 83, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider {
   margin-top: 1.25rem;
 }
 
-/* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 91, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item:first-child {
   padding-left: 20px;
 }
 
 @media (min-width: 1240px) {
-  /* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 91, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item:first-child {
     padding-left: calc(( 100vw - 1200px) / 2);
@@ -22395,14 +22397,14 @@ body#tinymce {
 }
 
 @media (min-width: 1480px) {
-  /* line 87, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 91, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item:first-child {
     padding-left: calc(( 100vw - 1440px) / 2);
   }
 }
 
-/* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .grid-item {
   display: block;
@@ -22413,7 +22415,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item .grid-item {
     width: calc( 100vw / 4);
@@ -22422,7 +22424,7 @@ body#tinymce {
 }
 
 @media (min-width: 1240px) {
-  /* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item .grid-item {
     width: calc( 1120px / 4);
@@ -22430,20 +22432,20 @@ body#tinymce {
 }
 
 @media (min-width: 1480px) {
-  /* line 99, resources/assets/styles/skhoop/sections/_popular-products.scss */
+  /* line 103, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
   .popular-products-grid-slider .grid-slider-item .grid-item {
     width: calc( 1360px / 4);
   }
 }
 
-/* line 119, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 123, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .grid-item:hover {
   text-decoration: none;
 }
 
-/* line 124, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 128, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .product {
   margin-bottom: 0;
@@ -22452,7 +22454,7 @@ body#tinymce {
           box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 129, resources/assets/styles/skhoop/sections/_popular-products.scss */
+/* line 133, resources/assets/styles/skhoop/sections/_popular-products.scss */
 
 .popular-products-grid-slider .grid-slider-item .product.is-small {
   -webkit-box-flex: initial;
