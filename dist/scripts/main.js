@@ -16187,7 +16187,8 @@ GridSlider.slider();
 
 /* WEBPACK VAR INJECTION */(function($) {$.fn.plusItem = function () {
   var $btn = (this).find('.js-plus-item-btn'),
-      $items = $(this).find('.item');
+    $items = $(this).find('.item');
+
   if ($items.length > 5) {
     $(this).find('.item:lt(4)').removeClass('d-none');
     $btn.removeClass('d-none');
