@@ -425,3 +425,13 @@
     }
   }
 }
+
+@mixin oneline-flex($fg, $fs, $fb) {
+  -webkit-box-flex: $fg;
+  -ms-flex-positive: $fg;
+  flex-grow: $fg;
+  -ms-flex-negative: $fs;
+  flex-shrink: $fs;
+  -ms-flex-preferred-size: $fb;
+  flex-basis: $fb;
+}

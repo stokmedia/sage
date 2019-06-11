@@ -10,23 +10,21 @@
 
 <section class="section selected-product">
   <div class="container">
-    <div class="row">
-      <div class="selected-product-preview col-md-7">
-        <div class="row mx-0">
-          <div class="col-md-10 p-0">
+    <div class="row mx-0">
+      <div class="selected-product-preview col-lg-7 p-0">
+        <div class="row justify-content-xxl-start justify-content-center mx-0">
+          <div class="selected-product-slider-col p-0 m-0">
             <div class="selected-product-slider overflow-hidden">
               @for ($slider = 0; $slider < 3; $slider++)
-                <div class="item">
-                  <figure class="mb-0">
-                    <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
-                  </figure>
-                </div>
+                <figure class="item align-items-center mb-0">
+                  <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
+                </figure>
               @endfor
             </div>
           </div>
-          <div class="col-md-2 selected-product-thumbnail">
+          <div class="selected-product-thumbnail d-none d-lg-flex flex-column">
             @for ($thumbnail = 0; $thumbnail < 3; $thumbnail++)
-              <div class="item shadow-sm bg-white">
+              <div class="item bg-white">
                 <figure class="">
                   <img src="@asset('images/temp/selected-product-thumb.png')" alt="" srcset="">
                 </figure>
@@ -35,12 +33,9 @@
           </div>
         </div>
       </div>
-      <div class="selected-product-options col-md-5 bg-lightgreen">
+      <div class="selected-product-options col-lg-5 bg-lightgreen">
       </div>
     </div>
-  </div>
-  <div class="fullscreen inactive">
-
   </div>
 </section>
 
