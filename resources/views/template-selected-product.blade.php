@@ -41,7 +41,7 @@
           </div>
         </div>
       </div>
-      <div class="selected-product-options col-xxl-6 col-lg-5 pl-md-4">
+      <div class="selected-product-options text-lg-left text-center pt-lg-0 pt-4 col-xxl-6 col-lg-5 pl-md-4">
         <div class="h2 name mb-0">Anja Tank</div>
         <div class="price">
           <span><del>799 kr</del></span> <!-- line through text -->
@@ -54,9 +54,9 @@
           NOTE: Static looping
         -->
           <div class="selectors">
-            <ul class="size-selector d-inline-block w-100">
+            <ul class="size-selector d-lg-inline-block d-flex  flex-wrap justify-content-center align-items-center w-100">
               @foreach (['XS', 'S', 'M', 'L', 'XL'] as $size)
-                <li>
+                <li class="mx-2">
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" id="sizeCheck[{{ $size }}]" class="custom-control-input" {{ $size == 'L' ? 'disabled="disabled"' : '' }}>
                       <label class="custom-control-label" for="sizeCheck[{{ $size }}]">
@@ -67,9 +67,9 @@
               @endforeach
             </ul>
 
-            <ul class="color-selector d-inline-block w-100">
-              @for ($color = 0; $color < 6; $color++)
-                <li>
+            <ul class="color-selector d-lg-inline-block d-flex  flex-wrap justify-content-center align-items-center w-100">
+              @for ($color = 0; $color < 5; $color++)
+                <li class="mx-2">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" id="colorCheck[{{ $color }}]" class="custom-control-input">
                     <label class="custom-control-label" for="colorCheck[{{ $color }}]" style="background-color: #{{ substr(md5(mt_rand()), 0, 6) }}"></label>
@@ -84,14 +84,16 @@
           <ul class="list-group accordion mt-5" id="productAccordion">
             @for ($accordion = 0; $accordion < 4; $accordion++)
               <li class="list-group-item">
-                <div class="header d-flex  justify-content-lg-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse{{$accordion}}" aria-expanded="false" aria-controls="collapse{{$accordion}}">
+                <div class="header d-flex  justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse{{$accordion}}" aria-expanded="false" aria-controls="collapse{{$accordion}}">
                   <span class="text-uppercase">Collapsible Group Item #{{$accordion}}</span>
                   <button class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary bg-white border-0" type="button">
                     <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                   </button>
                 </div>
-                <div id="collapse{{$accordion}}" class="collapse body" aria-labelledby="headingOne" data-parent="#productAccordion">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid quibusdam reprehenderit eligendi quae voluptatibus quos voluptates nulla quis corrupti sint?
+                <div id="collapse{{$accordion}}" class="collapse body text-left" aria-labelledby="headingOne" data-parent="#productAccordion">
+                  <div class="pb-4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid quibusdam reprehenderit eligendi quae voluptatibus quos voluptates nulla quis corrupti sint?
+                  </div>
                 </div>
               </li>
             @endfor
