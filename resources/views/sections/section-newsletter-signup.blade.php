@@ -1,7 +1,7 @@
 @if ($section->title || $section->image || $section->form)
     <section id="section-{{ $section->id }}" class="section newsletter-section">
         <div class="container">
-            <div class="newsletter row px-0">
+            <div class="newsletter row m-0">
                 <div class="col-lg-6 col-md-6 col-sm-12  newsletter-cover"
                     style="background-image: url({{ $section->image }})">
                 </div>
@@ -18,9 +18,9 @@
                                 {!! $section->text !!}
                             </div>
                         @endif
-                        
-                        <form id="js-section-newsletter-{{ $section->id }}" 
-                            class="js-newsletter" 
+
+                        <form id="js-section-newsletter-{{ $section->id }}"
+                            class="js-newsletter"
                             data-target="#section-{{ $section->id }}"
                             data-success_type="{{ $newsletter_data->form_settings->success_type ?? '' }}"
                             data-messages="{{ json_encode($newsletter_data->form_settings->error_messages ?? '') }}">
@@ -33,6 +33,7 @@
                                     <input type="text" class="form-control " name="esc_email" id="name" placeholder="{{ $newsletter_data->form_settings->email_placeholder ?? '' }}" aria-label="">
                                     <span class="input-group-btn">
                                         <button type="submit" class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary shadow-sm border-0">
+                                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                             <img src="@asset('images/icon/arrow-right.svg')" alt="" srcset="">
                                         </button>
                                     </span>
@@ -49,7 +50,7 @@
                             </div>
                         </form>
                     </div>
-                    
+
                     {{-- Success --}}
                     {{-- NOTE: This will only display if form data-success_type is set to "success-message" --}}
                     <div class="newsletter-inner d-none js-newsletter-success">
@@ -62,8 +63,8 @@
                                 {!! $newsletter_data->form_settings->success_content !!}
                             </div>
                         @endif
-                    </div>                    
-                </div>              
+                    </div>
+                </div>
             </div>
         </div>
     </section>

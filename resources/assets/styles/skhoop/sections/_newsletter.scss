@@ -65,6 +65,7 @@
   }
 
   &-inner {
+    width: 100%;
     max-width: 395px;
     text-align: center;
 
@@ -128,7 +129,7 @@
       }
     }
 
-    .input-group.is-invalid + .invalid-feedback {
+    .input-group.is-invalid+.invalid-feedback {
       display: block;
     }
 
