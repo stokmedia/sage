@@ -35,10 +35,15 @@ trait General
 
     public function newsletterData()
     {
+        $newsletterEnable = get_field( 'newsletter_enable', self::currentLang() );
+        $modalContent = (object) get_field( 'newsletter_modal_content', self::currentLang() );
+        $modalContent->title = self::hasTitle($modalContent) ? $modalContent->section_title : '';
+        $modalContent->image = $modalContent->image ? wp_get_attachment_image_url( $modalContent->image['ID'], 'newsletter' ) : null;      
+
         return (object) [
-            'newsletter_enable' => get_field( 'newsletter_enable', self::currentLang() ),
-            'newsletter_modal_content' => (object) get_field( 'newsletter_modal_content', self::currentLang() ),
-            'form_settings' => (object) get_field( 'form_settings', self::currentLang() ),
+            'newsletter_enable' => $newsletterEnable,
+            'newsletter_modal_content' => $modalContent,
+            'form_settings' => (object) get_field( 'form_settings', self::currentLang() )
         ];
     }
     

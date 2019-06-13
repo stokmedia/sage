@@ -128,4 +128,6 @@
         </div>
     </div>
 </footer>
+
 @include('partials.cookies')
+@include('partials.newsletter-modal')

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/app/themes/sage/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -87,7 +87,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(11)
+      __webpack_require__(12)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( matchesSelector ) {
       return factory( window, matchesSelector );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -331,9 +331,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity main
       __webpack_require__(3),
       __webpack_require__(5),
       __webpack_require__(1),
-      __webpack_require__(12),
       __webpack_require__(13),
-      __webpack_require__(14)
+      __webpack_require__(14),
+      __webpack_require__(15)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( EvEmitter, getSize, utils, Cell, Slide, animatePrototype ) {
       return factory( window, EvEmitter, getSize, utils, Cell, Slide, animatePrototype );
     }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
@@ -1902,32 +1902,239 @@ return getSize;
 
 /***/ }),
 /* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return stokpress; });
+/* unused harmony export stokpressViewPort */
+/* unused harmony export stokpressEvent */
+// Create Element.remove() function if not exist // BECAUSE IE 11
+if (!('remove' in Element.prototype)) {
+    Element.prototype.remove = function() {
+        if (this.parentNode) {
+            this.parentNode.removeChild(this);
+        }
+    };
+}
+
+// var stokpress = {};
+
+var stokpress = {
+  init: function init() {
+    return true
+  },
+
+  strToBool: function strToBool(str) {
+    console.log(typeof str);
+    if(typeof str == 'boolean') {
+      return str;
+    }
+    switch(str.toLowerCase().trim()){
+      case 'true': case 'yes': case '1': return true;
+      case 'false': case 'no': case '0': case null: return false;
+      default: return Boolean(str);
+    }
+  },
+
+  findAncestor: function findAncestor(el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls)){ ; }
+    return el;
+  },
+
+  isMobile: function isMobile() {
+      var result = false;
+      ( function ( a ) {
+        result = /Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test( a );
+      } )( navigator.userAgent || navigator.vendor || window.opera );
+    
+      return result;  
+  },
+
+  isInView: function isInView(el, view) {
+    var rect = el.getBoundingClientRect();
+    var html = document.documentElement;
+
+    if(view == 'completely') {
+      // to check if completely visible
+      return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || html.clientHeight)
+      );
+    } else if(view == 'partially') {
+      // to check if partially visible
+      return (
+        rect.bottom >= 0 && 
+        rect.top < (window.innerHeight || html.clientHeight)
+      );
+    } else {
+      // if partially visible or above current fold,
+      return (
+        rect.top < (window.innerHeight || html.clientHeight)
+      );
+    }
+  },
+
+  getScript: function getScript(source, callback) {
+      var script = document.createElement( 'script' );
+      var prior = document.getElementsByTagName( 'script' )[0];
+      script.async = 1;
+
+      script.onload = script.onreadystatechange = function ( _, isAbort ) {
+        if ( isAbort || !script.readyState || /loaded|complete/.test( script.readyState ) ) {
+          script.onload = script.onreadystatechange = null;
+          script = undefined;
+
+          if ( !isAbort ) { 
+            if ( callback ) {
+              callback(); 
+            }
+          }
+        }
+      };
+
+      script.src = source;
+      prior.parentNode.insertBefore( script, prior );
+  },
+
+  setCookie: function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = 'expires=' + d.toUTCString();
+    document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+  },
+
+  getCookie: function getCookie(cname) {
+    var name = cname + '=';
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return '';
+  }, 
+}
+
+var stokpressViewPort = {
+  init: function init() {
+    return true
+  },
+
+  documentWidth: function documentWidth() {
+    var e = window, a = 'inner';
+    
+    if( !( 'innerWidth' in window ) ) {
+      a = 'client';
+      e = document.documentElement || document.body;
+    }
+
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+  },
+}
+
+var stokpressEvent = {
+  init: function init() {
+    return true
+  },
+  
+  debounce: function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) { func.apply(context, args); }
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) { func.apply(context, args); }
+    };
+  },
+
+  throttle: function throttle(fn, threshhold, scope) {
+    threshhold || (threshhold = 250);
+    var last, deferTimer;
+    return function () {
+      var context = scope || this;
+
+      var now = +new Date,
+          args = arguments;
+      if (last && now < last + threshhold) {
+        // hold on to it
+        clearTimeout(deferTimer);
+        deferTimer = setTimeout(function () {
+          last = now;
+          fn.apply(context, args);
+        }, threshhold);
+      } else {
+        last = now;
+        fn.apply(context, args);
+      }
+    };
+  },
+
+  addListener: function addListener( element, eventNames, listener ) {
+    var events = eventNames.split(' ');
+      for ( var i = 0; i < events.length; i++ ) {
+        element.addEventListener( events[i], listener );
+      }
+  },
+}
+
+// stokpress.cartItems; 
+
+// stokpress.cartHeight = function() {
+//   var e = window, a = 'inner';
+  
+//   if( !( 'innerHeight' in window ) ) {
+//     a = 'client';
+//     e = document.documentElement || document.body;
+//   }
+
+//   (function () {
+//       if ( typeof NodeList.prototype.forEach === 'function' ) return false;
+//       NodeList.prototype.forEach = Array.prototype.forEach;
+//   })();  
+
+//   stokpress.cartItems.forEach(function(element) {
+//     element.style.setProperty('--cartheight', e[ a+'Height' ]+'px');
+//   });
+// }
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(7);
+__webpack_require__(8);
 module.exports = __webpack_require__(44);
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_bootstrap_js__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Router__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_common__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_home__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_about__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_sliders__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_bootstrap_js__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Router__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_common__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_home__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_about__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_sliders__ = __webpack_require__(32);
 // import external dependencies
 
 
 // Require/Import vendors
-__webpack_require__(8);
 __webpack_require__(9);
+__webpack_require__(10);
 
 // Import everything from autoload
 
@@ -1939,19 +2146,19 @@ __webpack_require__(9);
 
 
 
-__webpack_require__(34);
+__webpack_require__(35);
 
 // Require Components
 // window.stokpress = require('./util/helper');
 
 // require('./components/helper');
 // require('./util/helper');
-__webpack_require__(35);
 __webpack_require__(36);
 __webpack_require__(37);
 __webpack_require__(38);
 __webpack_require__(39);
 __webpack_require__(40);
+__webpack_require__(41);
 __webpack_require__(42);
 __webpack_require__(43);
 
@@ -1976,7 +2183,7 @@ jQuery(document).ready(function () {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_LOCAL_MODULE_1__, __WEBPACK_LOCAL_MODULE_1__factory, __WEBPACK_LOCAL_MODULE_1__module;var __WEBPACK_LOCAL_MODULE_2__, __WEBPACK_LOCAL_MODULE_2__factory, __WEBPACK_LOCAL_MODULE_2__module;var __WEBPACK_LOCAL_MODULE_3__, __WEBPACK_LOCAL_MODULE_3__factory, __WEBPACK_LOCAL_MODULE_3__module;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_4__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_5__;var __WEBPACK_LOCAL_MODULE_6__, __WEBPACK_LOCAL_MODULE_6__factory, __WEBPACK_LOCAL_MODULE_6__module;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_7__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_8__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_9__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_10__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_11__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_12__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_13__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_14__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_15__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_16__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_LOCAL_MODULE_17__;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_19__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -6573,7 +6780,7 @@ return Flickity;
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -6589,7 +6796,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   if ( true ) {
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(10) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+      __webpack_require__(11) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -6762,7 +6969,7 @@ return Flickity;
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -6783,12 +6990,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
       __webpack_require__(2),
-      __webpack_require__(15),
-      __webpack_require__(17),
+      __webpack_require__(16),
       __webpack_require__(18),
       __webpack_require__(19),
       __webpack_require__(20),
-      __webpack_require__(21)
+      __webpack_require__(21),
+      __webpack_require__(22)
     ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -6813,7 +7020,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -6876,7 +7083,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity.Cell
@@ -6985,7 +7192,7 @@ return Cell;
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;// slide
@@ -7069,7 +7276,7 @@ return Slide;
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// animate
@@ -7277,7 +7484,7 @@ return proto;
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// drag
@@ -7288,7 +7495,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// drag
     // AMD
     !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
       __webpack_require__(2),
-      __webpack_require__(16),
+      __webpack_require__(17),
       __webpack_require__(1)
     ], __WEBPACK_AMD_DEFINE_RESULT__ = (function( Flickity, Unidragger, utils ) {
       return factory( window, Flickity, Unidragger, utils );
@@ -7677,7 +7884,7 @@ return Flickity;
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -7963,7 +8170,7 @@ return Unidragger;
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// prev/next buttons
@@ -8181,7 +8388,7 @@ return Flickity;
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// page dots
@@ -8376,7 +8583,7 @@ return Flickity;
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// player & autoPlay
@@ -8574,7 +8781,7 @@ return Flickity;
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// add, remove cell
@@ -8742,7 +8949,7 @@ return Flickity;
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// lazyload
@@ -8883,17 +9090,17 @@ return Flickity;
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap__);
 
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -8902,7 +9109,7 @@ return Flickity;
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(0), __webpack_require__(24)) :
+   true ? factory(exports, __webpack_require__(0), __webpack_require__(25)) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
   (global = global || self, factory(global.bootstrap = {}, global.jQuery, global.Popper));
 }(this, function (exports, $, Popper) { 'use strict';
@@ -13346,7 +13553,7 @@ return Flickity;
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15933,10 +16140,10 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(25)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(26)))
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 var g;
@@ -15963,11 +16170,11 @@ module.exports = g;
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(28);
 
 
 /**
@@ -16041,7 +16248,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16057,7 +16264,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16072,7 +16279,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16087,7 +16294,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16099,21 +16306,21 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return sliders; });
 var sliders = {
   init: function init() {
-    __webpack_require__(32);
     __webpack_require__(33);
+    __webpack_require__(34);
   },
 }
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var $slider = $('.selected-product-slider').flickity({
@@ -16154,7 +16361,7 @@ $slider.on('fullscreenChange.flickity', function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var GridSlider = {};
@@ -16190,7 +16397,7 @@ GridSlider.slider();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$.fn.plusItem = function () {
@@ -16222,7 +16429,7 @@ GridSlider.slider();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var AutoPadding = {};
@@ -16246,7 +16453,7 @@ AutoPadding.update = changePadding;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Nav = {};
@@ -16294,7 +16501,7 @@ Nav.menuPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
@@ -16369,7 +16576,7 @@ Nav.menuPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Filter = {};
@@ -16417,7 +16624,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$.fn.resellersTable = function () {
@@ -16458,12 +16665,12 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(6);
 /* eslint-disable no-unused-vars */
 
 
@@ -16776,190 +16983,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 
 /***/ }),
-/* 41 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return stokpress; });
-/* unused harmony export stokpressViewPort */
-/* unused harmony export stokpressEvent */
-// Create Element.remove() function if not exist // BECAUSE IE 11
-if (!('remove' in Element.prototype)) {
-    Element.prototype.remove = function() {
-        if (this.parentNode) {
-            this.parentNode.removeChild(this);
-        }
-    };
-}
-
-// var stokpress = {};
-
-var stokpress = {
-  init: function init() {
-    return true
-  },
-
-  strToBool: function strToBool(str) {
-    console.log(typeof str);
-    if(typeof str == 'boolean') {
-      return str;
-    }
-    switch(str.toLowerCase().trim()){
-      case 'true': case 'yes': case '1': return true;
-      case 'false': case 'no': case '0': case null: return false;
-      default: return Boolean(str);
-    }
-  },
-
-  findAncestor: function findAncestor(el, cls) {
-    while ((el = el.parentElement) && !el.classList.contains(cls)){ ; }
-    return el;
-  },
-
-  isMobile: function isMobile() {
-      var result = false;
-      ( function ( a ) {
-        result = /Android|webOS|iPhone|iPad|BlackBerry|Windows Phone|Opera Mini|IEMobile|Mobile/i.test( a );
-      } )( navigator.userAgent || navigator.vendor || window.opera );
-    
-      return result;  
-  },
-
-  isInView: function isInView(el, view) {
-    var rect = el.getBoundingClientRect();
-    var html = document.documentElement;
-
-    if(view == 'completely') {
-      // to check if completely visible
-      return (
-        rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || html.clientHeight)
-      );
-    } else if(view == 'partially') {
-      // to check if partially visible
-      return (
-        rect.bottom >= 0 && 
-        rect.top < (window.innerHeight || html.clientHeight)
-      );
-    } else {
-      // if partially visible or above current fold,
-      return (
-        rect.top < (window.innerHeight || html.clientHeight)
-      );
-    }
-  },
-
-  getScript: function getScript(source, callback) {
-      var script = document.createElement( 'script' );
-      var prior = document.getElementsByTagName( 'script' )[0];
-      script.async = 1;
-
-      script.onload = script.onreadystatechange = function ( _, isAbort ) {
-        if ( isAbort || !script.readyState || /loaded|complete/.test( script.readyState ) ) {
-          script.onload = script.onreadystatechange = null;
-          script = undefined;
-
-          if ( !isAbort ) { 
-            if ( callback ) {
-              callback(); 
-            }
-          }
-        }
-      };
-
-      script.src = source;
-      prior.parentNode.insertBefore( script, prior );
-  },
-}
-
-var stokpressViewPort = {
-  init: function init() {
-    return true
-  },
-
-  documentWidth: function documentWidth() {
-    var e = window, a = 'inner';
-    
-    if( !( 'innerWidth' in window ) ) {
-      a = 'client';
-      e = document.documentElement || document.body;
-    }
-
-    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
-  },
-}
-
-var stokpressEvent = {
-  init: function init() {
-    return true
-  },
-  
-  debounce: function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) { func.apply(context, args); }
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) { func.apply(context, args); }
-    };
-  },
-
-  throttle: function throttle(fn, threshhold, scope) {
-    threshhold || (threshhold = 250);
-    var last, deferTimer;
-    return function () {
-      var context = scope || this;
-
-      var now = +new Date,
-          args = arguments;
-      if (last && now < last + threshhold) {
-        // hold on to it
-        clearTimeout(deferTimer);
-        deferTimer = setTimeout(function () {
-          last = now;
-          fn.apply(context, args);
-        }, threshhold);
-      } else {
-        last = now;
-        fn.apply(context, args);
-      }
-    };
-  },
-
-  addListener: function addListener( element, eventNames, listener ) {
-    var events = eventNames.split(' ');
-      for ( var i = 0; i < events.length; i++ ) {
-        element.addEventListener( events[i], listener );
-      }
-  },
-}
-
-// stokpress.cartItems; 
-
-// stokpress.cartHeight = function() {
-//   var e = window, a = 'inner';
-  
-//   if( !( 'innerHeight' in window ) ) {
-//     a = 'client';
-//     e = document.documentElement || document.body;
-//   }
-
-//   (function () {
-//       if ( typeof NodeList.prototype.forEach === 'function' ) return false;
-//       NodeList.prototype.forEach = Array.prototype.forEach;
-//   })();  
-
-//   stokpress.cartItems.forEach(function(element) {
-//     element.style.setProperty('--cartheight', e[ a+'Height' ]+'px');
-//   });
-// }
-
-/***/ }),
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16998,226 +17021,235 @@ Instagram.infoPosition();
 
 /***/ }),
 /* 43 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(6);
+
 
 var Newsletter = {};
 
-Newsletter.updateErrorHtml = function() {
-	var formError = this.parentNode.querySelector('.js-form-error');
+(function($){
 
-    if (!formError) {
-        formError = this.parentNode.parentNode.querySelector('.js-form-error');
-    }
+	Newsletter.updateErrorHtml = function() {
+		var formError = this.parentNode.querySelector('.js-form-error');
 
-    if (formError && formError.innerText.length > 0) {
-		formError.innerText = null;
-		this.classList.remove( Newsletter.elClasses.error );
-    }
-};
-
-Newsletter.removeErrors = function (wrapperEl) {
-	var inputs = wrapperEl.querySelectorAll( 'input' );
-
-	if (inputs.length === 0) { 
-        return; 
-    }
-
-	for (var i=0; i < inputs.length; i++) {
-        inputs[i].addEventListener( 'focus', Newsletter.updateErrorHtml );
-        inputs[i].addEventListener( 'click', Newsletter.updateErrorHtml );
-	}    
-};
-
-Newsletter.validateEmail = function( email ) {
-	var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-	return re.test( email );
-};
-
-Newsletter.formValidation = function( wrapperEl ) {
-	var errorMessages = JSON.parse( wrapperEl.getAttribute( 'data-messages' ) );
-	var email = wrapperEl.querySelector( 'input[name="esc_email"]' );
-	var terms = wrapperEl.querySelector( 'input[name="accept_terms"]' );
-	var errors = {};
-
-	// Form validation
-	if( email.value.length === 0 ) {
-		errors.email = ( errorMessages && errorMessages.required_email ) ? errorMessages.required_email : 'E-mail field is required';
-	} else if ( !Newsletter.validateEmail( email.value ) ) {
-		errors.email = ( errorMessages && errorMessages.invalid_email ) ? errorMessages.invalid_email : 'Email address is invalid';
-	}
-
-	if( terms.checked === false ) {
-		errors.terms = ( errorMessages && errorMessages.required_terms ) ? errorMessages.required_terms : 'Accept terms is required';
-	}
-
-	// Return false if no errors
-	if (Object.keys(errors).length === 0) {
-		return false;
-    }
-
-	// Display error
-    for( var key in errors ) {
-        var errorEl = wrapperEl.querySelector( '.js-form-error[data-field="'+ key +'"]' );
-        if (errorEl) {
-            errorEl.innerText = errors[ key ];
+		if (!formError) {
+			formError = this.parentNode.parentNode.querySelector('.js-form-error');
 		}
-		
-		var elToAddClass = key === 'email' ? email : terms;
-		elToAddClass.classList.add( Newsletter.elClasses.error );
-    }
 
-	return true;
-};
-
-Newsletter.formSubmit = function ( form ) {
-    if ( !form ) { return; }
-	
-    var formData = new FormData( form );
-	formData.append( 'ajax', 1 );
-	
-	var button = form.querySelector('button[type="submit"]');
-	button.classList.add( Newsletter.elClasses.isLoading );	
-
-    var hasErrors = Newsletter.formValidation( form );
-    if (hasErrors) {
-		return setTimeout( function () {
-			button.classList.remove( Newsletter.elClasses.isLoading );
-		}, 500 );		
-    }
-    
-    var sendData = [];
-	formData.forEach(function(value, key){
-        sendData.push( encodeURIComponent(key) + '=' + encodeURIComponent(value) );	    
-	});
-
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function() {
-        if( xhr.readyState == XMLHttpRequest.DONE ) {
-            if (xhr.status == 200) {
-				var response = JSON.parse(xhr.response);
-				
-				if (response.success) {
-					setTimeout( function () {
-						button.classList.remove( Newsletter.elClasses.isLoading );	
-						Newsletter.formSuccess(form);
-					}, 1500 );
-				}				
-            }
-        }
-    };
-    
-    xhr.open( 'POST', '/', true );
-    xhr.setRequestHeader( 'Accept', 'application/json, text/javascript, */*; q=0.01' );
-    xhr.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded;charset=UTF-8' );
-    xhr.send( sendData.join('&') );
-};
-
-Newsletter.formSuccess = function(form) {
-	var targetContainer = document.querySelector(form.dataset.target);
-	var successType = form.dataset.success_type;
-
-	if (targetContainer && successType === 'success-message') {
-		Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-success', '.js-newsletter-content' );
-	} else if( successType === 'alert' ) {
-		// Alert.setup( 'email', 'success', true );
-		// Display alert message
-	}
-
-	Newsletter.resetForm(targetContainer, form, successType);	
-};
-
-Newsletter.resetForm = function( targetContainer, form, successType ) {
-	form.querySelector( 'input[name="esc_email"]' ).value = '';
-	form.querySelector( 'input[name="accept_terms"]' ).checked = false;	
-
-	if (successType === 'success-message') {
-		setTimeout( function () {				
-			Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-content', '.js-newsletter-success' );
-		}, 10000 );
-	}
-};
-
-Newsletter.displaySuccessMessage = function( targetContainer, toDisplayClass, toHideClass  ) {
-	if (!targetContainer) {
-		return;
-	}
-
-	var contentToDisplay = targetContainer.querySelectorAll( toDisplayClass );
-	var contentToHide = targetContainer.querySelectorAll( toHideClass );
-
-	if( contentToHide.length > 0 ) {
-		Array.prototype.forEach.call( contentToHide, function ( element ) {
-			element.classList.add( Newsletter.elClasses.hidden );
-		} );
-	}	
-
-	if( contentToDisplay.length > 0 ) {
-		Array.prototype.forEach.call( contentToDisplay, function ( element ) {
-			element.classList.remove( Newsletter.elClasses.hidden );
-		} );
-	}
-}
-
-Newsletter.init = function ( mainWrapper, modalId ) {
-
-    var container = document.querySelectorAll( mainWrapper );
-	if (container.length === 0) { 
-        return; 
-	}
-	
-	console.log( modalId );
-
-	for (var i = 0; i < container.length; i++) {
-
-        // Form submit
-        var form = container[i];
-        form.addEventListener( 'submit', function (e) {
-            e.preventDefault();
-            Newsletter.formSubmit( this );
-        });
-
-        // Remove Errors on input change
-		Newsletter.removeErrors( form );
-	}
-
-	// Modal Newsletter
-	// var modal = document.getElementById( modalId );
-
-	// if( !modal ) { return; }
-
-	// var cookieName = modal.getAttribute( 'data-cookie' );
-
-	// if( !siteCookie.getCookie( cookieName ) ) {
-	// 	// Show modal
-	// 	setTimeout( function () {
-	// 		modal.classList.add( 'is-active' );
-	// 		siteCookie.setCookie( cookieName, true, 365 );
-	// 	}, 5000 );	
-
-	// 	// Close modal
-	// 	// setTimeout( function () {
-	// 	// 	modal.classList.remove( 'is-active' );
-	// 	// }, 25000 );		
-	// }
-
-	// // Close modal
-	// Helper.addListener( modal.querySelector( '.modal-close' ), 'click', function(e) {
-	// 	e.preventDefault();
-	// 	modal.classList.remove( 'is-active' );
-	// });
-
-};
-
-document.addEventListener( 'DOMContentLoaded', function () {	
-	Newsletter.elClasses = {
-		hidden: 'd-none',
-		isLoading: 'is-loading',
-		isDisabled: 'is-disabled',
-		error: 'is-invalid',
+		if (formError && formError.innerText.length > 0) {
+			formError.innerText = null;
+			this.classList.remove( Newsletter.elClasses.error );
+		}
 	};
 
-	Newsletter.init( '.js-newsletter', 'js-newsletter-modal' );
-} );
+	Newsletter.removeErrors = function (wrapperEl) {
+		var inputs = wrapperEl.querySelectorAll( 'input' );
+
+		if (inputs.length === 0) { 
+			return; 
+		}
+
+		for (var i=0; i < inputs.length; i++) {
+			inputs[i].addEventListener( 'focus', Newsletter.updateErrorHtml );
+			inputs[i].addEventListener( 'click', Newsletter.updateErrorHtml );
+		}    
+	};
+
+	Newsletter.validateEmail = function( email ) {
+		var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+		return re.test( email );
+	};
+
+	Newsletter.formValidation = function( wrapperEl ) {
+		var errorMessages = JSON.parse( wrapperEl.getAttribute( 'data-messages' ) );
+		var email = wrapperEl.querySelector( 'input[name="esc_email"]' );
+		var terms = wrapperEl.querySelector( 'input[name="accept_terms"]' );
+		var errors = {};
+
+		// Form validation
+		if( email.value.length === 0 ) {
+			errors.email = ( errorMessages && errorMessages.required_email ) ? errorMessages.required_email : 'E-mail field is required';
+		} else if ( !Newsletter.validateEmail( email.value ) ) {
+			errors.email = ( errorMessages && errorMessages.invalid_email ) ? errorMessages.invalid_email : 'Email address is invalid';
+		}
+
+		if( terms.checked === false ) {
+			errors.terms = ( errorMessages && errorMessages.required_terms ) ? errorMessages.required_terms : 'Accept terms is required';
+		}
+
+		// Return false if no errors
+		if (Object.keys(errors).length === 0) {
+			return false;
+		}
+
+		// Display error
+		for( var key in errors ) {
+			var errorEl = wrapperEl.querySelector( '.js-form-error[data-field="'+ key +'"]' );
+			if (errorEl) {
+				errorEl.innerText = errors[ key ];
+			}
+			
+			var elToAddClass = key === 'email' ? email : terms;
+			elToAddClass.classList.add( Newsletter.elClasses.error );
+		}
+
+		return true;
+	};
+
+	Newsletter.formSubmit = function ( form ) {
+		if ( !form ) { return; }
+		
+		var formData = new FormData( form );
+		formData.append( 'ajax', 1 );
+		
+		var button = form.querySelector('button[type="submit"]');
+		button.classList.add( Newsletter.elClasses.isLoading );	
+
+		var hasErrors = Newsletter.formValidation( form );
+		if (hasErrors) {
+			return setTimeout( function () {
+				button.classList.remove( Newsletter.elClasses.isLoading );
+			}, 500 );		
+		}
+		
+		var sendData = [];
+		formData.forEach(function(value, key){
+			sendData.push( encodeURIComponent(key) + '=' + encodeURIComponent(value) );	    
+		});
+
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			if( xhr.readyState == XMLHttpRequest.DONE ) {
+				if (xhr.status == 200) {
+					var response = JSON.parse(xhr.response);
+					
+					if (response.success) {
+						setTimeout( function () {
+							button.classList.remove( Newsletter.elClasses.isLoading );	
+							Newsletter.formSuccess(form);
+						}, 1500 );
+					}				
+				}
+			}
+		};
+		
+		xhr.open( 'POST', '/', true );
+		xhr.setRequestHeader( 'Accept', 'application/json, text/javascript, */*; q=0.01' );
+		xhr.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded;charset=UTF-8' );
+		xhr.send( sendData.join('&') );
+	};
+
+	Newsletter.formSuccess = function(form) {
+		var targetContainer = document.querySelector(form.dataset.target);
+		var successType = form.dataset.success_type;
+
+		if (targetContainer && successType === 'success-message') {
+			Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-success', '.js-newsletter-content' );
+		} else if( successType === 'alert' ) {
+			// Alert.setup( 'email', 'success', true );
+			// Display alert message
+		}
+
+		Newsletter.resetForm(targetContainer, form, successType);	
+	};
+
+	Newsletter.resetForm = function( targetContainer, form, successType ) {
+		form.querySelector( 'input[name="esc_email"]' ).value = '';
+		form.querySelector( 'input[name="accept_terms"]' ).checked = false;	
+
+		if (successType === 'success-message') {
+			setTimeout( function () {				
+				Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-content', '.js-newsletter-success' );
+			}, 10000 );
+		}
+	};
+
+	Newsletter.displaySuccessMessage = function( targetContainer, toDisplayClass, toHideClass  ) {
+		if (!targetContainer) {
+			return;
+		}
+
+		var contentToDisplay = targetContainer.querySelectorAll( toDisplayClass );
+		var contentToHide = targetContainer.querySelectorAll( toHideClass );
+
+		if( contentToHide.length > 0 ) {
+			Array.prototype.forEach.call( contentToHide, function ( element ) {
+				element.classList.add( Newsletter.elClasses.hidden );
+			} );
+		}	
+
+		if( contentToDisplay.length > 0 ) {
+			Array.prototype.forEach.call( contentToDisplay, function ( element ) {
+				element.classList.remove( Newsletter.elClasses.hidden );
+			} );
+		}
+	};
+
+	Newsletter.modal = function( modal ) {
+		if( !modal ) { 
+			return; 
+		}
+
+		var cookieName = modal.data( 'cookie' );
+		var delay = modal.data( 'delay' );
+		var displayTime = modal.data( 'display_time' );
+		
+		if( !__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getCookie( cookieName ) ) {
+			// Show modal
+			setTimeout( function () {
+				modal.modal('show');
+				__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].setCookie( cookieName, true, 365 );
+			}, delay * 1000 );	
+
+			// Close modal
+			if (displayTime) {
+				setTimeout( function () {
+					modal.modal('hide');
+				}, displayTime * 1000 );
+			}
+		}
+	};
+
+	Newsletter.init = function ( mainWrapper, modalId ) {
+
+		var container = document.querySelectorAll( mainWrapper );
+		if (container.length === 0) { 
+			return; 
+		}
+
+		for (var i = 0; i < container.length; i++) {
+
+			// Form submit
+			var form = container[i];
+			form.addEventListener( 'submit', function (e) {
+				e.preventDefault();
+				Newsletter.formSubmit( this );
+			});
+
+			// Remove Errors on input change
+			Newsletter.removeErrors( form );
+		}
+
+		// Newsletter Modal
+		var modal = $( modalId );
+		Newsletter.modal( modal );
+	};
+
+	document.addEventListener( 'DOMContentLoaded', function () {	
+		Newsletter.elClasses = {
+			hidden: 'd-none',
+			isLoading: 'is-loading',
+			isDisabled: 'is-disabled',
+			error: 'is-invalid',
+		};
+
+		Newsletter.init( '.js-newsletter', '#js-newsletter-modal' );
+	} );
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 44 */
