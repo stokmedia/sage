@@ -16000,7 +16000,7 @@ Router.prototype.fire = function fire (route, event, arg) {
       },
     }));
   }
-    
+
   var fire = route !== '' && this.routes[route] && typeof this.routes[route][event] === 'function';
   if (fire) {
     this.routes[route][event](arg);
@@ -16162,6 +16162,10 @@ $slider.on('fullscreenChange.flickity', function () {
 GridSlider.slider = function () {
   var $gridSlider = $( '.js-grid-slider' );
 
+  $gridSlider.on( 'ready.flickity', function() {
+    $gridSlider.css('visibility', 'visible');
+  });
+
   $gridSlider.flickity({
     cellAlign: 'left',
     prevNextButtons: false,
@@ -16182,7 +16186,6 @@ GridSlider.slider = function () {
 };
 
 GridSlider.slider();
-
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
