@@ -15990,13 +15990,15 @@ var Router = function Router(routes) {
 Router.prototype.fire = function fire (route, event, arg) {
     if ( event === void 0 ) event = 'init';
 
-  document.dispatchEvent(new CustomEvent('routed', {
-    bubbles: true,
-    detail: {
-      route: route,
-      fn: event,
-    },
-  }));
+  if(typeof(Event) === 'function') {
+    document.dispatchEvent(new CustomEvent('routed', {
+      bubbles: true,
+      detail: {
+        route: route,
+        fn: event,
+      },
+    }));
+  }
     
   var fire = route !== '' && this.routes[route] && typeof this.routes[route][event] === 'function';
   if (fire) {
