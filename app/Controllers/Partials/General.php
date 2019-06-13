@@ -32,6 +32,15 @@ trait General
     {
         return (object) get_field( 'cookies', self::currentLang() ) ?? [];
     }
+
+    public function newsletterData()
+    {
+        return (object) [
+            'newsletter_enable' => get_field( 'newsletter_enable', self::currentLang() ),
+            'newsletter_modal_content' => (object) get_field( 'newsletter_modal_content', self::currentLang() ),
+            'form_settings' => (object) get_field( 'form_settings', self::currentLang() ),
+        ];
+    }
     
     public function resellerLists()
     {

@@ -82,6 +82,9 @@
                 @include media-breakpoint-down(sm) {
                     position: absolute;
                     bottom: 0;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
                     margin-bottom: calc(3rem + 6vw);
                 }
 

@@ -1,8 +1,6 @@
-{{-- TODO: Custom image size --}}
-
 @if ($section->hasContent)
     <section class="section fifty-fifthy-section">
-        <div class="row fifty-fifthy">
+        <div class="row fifty-fifthy mx-0">
             
             <div class="fifty-fifthy-item col-md-6 p-0 order-1 {{ $section->orderClass }}">
                 <figure class="mb-0">

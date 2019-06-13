@@ -82,25 +82,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_5cfe5f6d9a735",
-            "label": "Form",
-            "name": "form",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -120,5 +101,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1560174847
+    "modified": 1560248315
 }
