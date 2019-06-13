@@ -16162,6 +16162,7 @@ GridSlider.slider = function () {
     cellAlign: 'left',
     prevNextButtons: false,
     pageDots: false,
+    dragThreshold: 15,
   });
 
   var $prevButton = $('.js-flickity-prev');

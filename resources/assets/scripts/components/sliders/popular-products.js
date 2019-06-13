@@ -1,16 +1,17 @@
-var GridSlider = {};
+let GridSlider = {};
 
 GridSlider.slider = function () {
-  var $gridSlider = $( '.js-grid-slider' );
+  let $gridSlider = $( '.js-grid-slider' );
 
   $gridSlider.flickity({
     cellAlign: 'left',
     prevNextButtons: false,
     pageDots: false,
+    dragThreshold: 15,
   });
 
-  var $prevButton = $('.js-flickity-prev');
-  var $nextButton = $('.js-flickity-next');
+  let $prevButton = $('.js-flickity-prev');
+  let $nextButton = $('.js-flickity-next');
 
   $prevButton.click(function() {
     $gridSlider.flickity('previous');
