@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg fixed-top js-header">
+<nav class="navbar navbar-expand-lg fixed-top {{(get_page_template_slug() == 'views/template-checkout.blade.php') ? 'is-checkout': ''}} js-header">
+    @if (get_page_template_slug() !== 'views/template-checkout.blade.php')
     <div class="container">
         <a class="navbar-brand order-1 order-lg-0" href="#">
             {!! $logo['desktop'] !!}
@@ -151,6 +152,8 @@
         </div>
     </div>
 
+    @else
+
     {{-- Checkout Navigation --}}
     <div class="container nav-checkout">
         <div class="navbar-spacer">
@@ -161,5 +164,6 @@
     </div>
     {{-- End Checkout Navigation --}}
 
+    @endif
 </nav>
 
