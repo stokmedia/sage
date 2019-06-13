@@ -5,6 +5,7 @@ let $slider = $('.selected-product-slider').flickity({
     cellAlign: 'left',
     fullscreen: $(window).innerWidth() > 991,
     percentPosition: false,
+    dragThreshold: 10,
   }),
   $flkty = $slider.data('flickity'),
   $thumbnailGroup = $('.selected-product-thumbnail'),
