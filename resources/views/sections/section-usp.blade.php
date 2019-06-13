@@ -1,7 +1,8 @@
 @if (!empty($section->usp))
+<section class="section usp">
 	<div class="trust-bar">
 		<div class="container">
-			
+
 			@foreach ($section->usp as $item)
 				<div class="trust-item">
 
@@ -24,5 +25,6 @@
 			@endforeach
 		</div>
 	</div>
+</section>
 @endif
 
