@@ -10,6 +10,8 @@
   letter-spacing: 1.86px;
   max-width: 270px;
   width: 100%;
+  border-radius: $btn-border-radius;
+  text-transform: uppercase;
 
   @include media-breakpoint-up(md) {
     width: auto;
@@ -23,6 +25,7 @@
   &.btn-sm {
     font-size: $input-btn-font-size-sm;
     font-weight: normal;
+    border-radius: $btn-border-radius-sm;
     letter-spacing: 0.5px;
 
     @include media-breakpoint-up(md) {

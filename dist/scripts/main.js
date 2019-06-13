@@ -15990,14 +15990,16 @@ var Router = function Router(routes) {
 Router.prototype.fire = function fire (route, event, arg) {
     if ( event === void 0 ) event = 'init';
 
-  document.dispatchEvent(new CustomEvent('routed', {
-    bubbles: true,
-    detail: {
-      route: route,
-      fn: event,
-    },
-  }));
-    
+  if(typeof(Event) === 'function') {
+    document.dispatchEvent(new CustomEvent('routed', {
+      bubbles: true,
+      detail: {
+        route: route,
+        fn: event,
+      },
+    }));
+  }
+
   var fire = route !== '' && this.routes[route] && typeof this.routes[route][event] === 'function';
   if (fire) {
     this.routes[route][event](arg);
@@ -16158,6 +16160,10 @@ $slider.on('fullscreenChange.flickity', function () {
 GridSlider.slider = function () {
   var $gridSlider = $( '.js-grid-slider' );
 
+  $gridSlider.on( 'ready.flickity', function() {
+    $gridSlider.css('visibility', 'visible');
+  });
+
   $gridSlider.flickity({
     cellAlign: 'left',
     prevNextButtons: false,
@@ -16178,7 +16184,6 @@ GridSlider.slider = function () {
 };
 
 GridSlider.slider();
-
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 

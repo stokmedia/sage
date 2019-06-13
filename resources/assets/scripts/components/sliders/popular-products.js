@@ -3,6 +3,10 @@ let GridSlider = {};
 GridSlider.slider = function () {
   let $gridSlider = $( '.js-grid-slider' );
 
+  $gridSlider.on( 'ready.flickity', function() {
+    $gridSlider.css('visibility', 'visible');
+  });
+
   $gridSlider.flickity({
     cellAlign: 'left',
     prevNextButtons: false,
@@ -23,4 +27,3 @@ GridSlider.slider = function () {
 };
 
 GridSlider.slider();
-

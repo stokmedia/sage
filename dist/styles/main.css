@@ -694,7 +694,7 @@ mark,
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
   max-width: 100%;
   height: auto;
 }
@@ -3430,7 +3430,7 @@ mark,
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #7e7e7e;
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3744,7 +3744,7 @@ textarea.form-control,
   line-height: 1.5;
   color: #fff;
   background-color: rgba(40, 167, 69, 0.9);
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 54, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -3998,7 +3998,7 @@ textarea.form-control.is-valid,
   line-height: 1.5;
   color: #fff;
   background-color: rgba(212, 86, 86, 0.9);
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 54, node_modules/bootstrap/scss/mixins/_forms.scss */
@@ -4405,7 +4405,7 @@ textarea.form-control.is-invalid,
   padding: 0.5938rem 0.5938rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -5795,7 +5795,7 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 42, node_modules/bootstrap/scss/_dropdown.scss */
@@ -6420,7 +6420,7 @@ input[type="button"].btn-block {
   white-space: nowrap;
   background-color: #e9ecef;
   border: 1px solid #7e7e7e;
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 118, node_modules/bootstrap/scss/_input-group.scss */
@@ -6772,7 +6772,7 @@ input[type="button"].btn-block {
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2.0625rem center/8px 10px;
   background-color: #fff;
   border: 1px solid #7e7e7e;
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -6898,7 +6898,7 @@ input[type="button"].btn-block {
   color: #495057;
   background-color: #fff;
   border: 1px solid #7e7e7e;
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 342, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -6917,7 +6917,7 @@ input[type="button"].btn-block {
   content: "Browse";
   background-color: #e9ecef;
   border-left: inherit;
-  border-radius: 0 1.1875rem 1.1875rem 0;
+  border-radius: 0 1.25rem 1.25rem 0;
 }
 
 /* line 366, node_modules/bootstrap/scss/_custom-forms.scss */
@@ -7229,8 +7229,8 @@ input[type="button"].btn-block {
 .nav-tabs .banner .nav a,
 .banner .nav .nav-tabs a {
   border: 1px solid transparent;
-  border-top-left-radius: 1.1875rem;
-  border-top-right-radius: 1.1875rem;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -7284,7 +7284,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link,
 .nav-pills .banner .nav a,
 .banner .nav .nav-pills a {
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 81, node_modules/bootstrap/scss/_nav.scss */
@@ -7449,7 +7449,7 @@ input[type="button"].btn-block {
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -8093,7 +8093,7 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 16, node_modules/bootstrap/scss/_card.scss */
@@ -8106,15 +8106,15 @@ input[type="button"].btn-block {
 /* line 22, node_modules/bootstrap/scss/_card.scss */
 
 .card > .list-group:first-child .list-group-item:first-child {
-  border-top-left-radius: 1.1875rem;
-  border-top-right-radius: 1.1875rem;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
 }
 
 /* line 28, node_modules/bootstrap/scss/_card.scss */
 
 .card > .list-group:last-child .list-group-item:last-child {
-  border-bottom-right-radius: 1.1875rem;
-  border-bottom-left-radius: 1.1875rem;
+  border-bottom-right-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
 }
 
 /* line 34, node_modules/bootstrap/scss/_card.scss */
@@ -8169,7 +8169,7 @@ input[type="button"].btn-block {
 /* line 76, node_modules/bootstrap/scss/_card.scss */
 
 .card-header:first-child {
-  border-radius: calc(1.1875rem - 1px) calc(1.1875rem - 1px) 0 0;
+  border-radius: calc(1.25rem - 1px) calc(1.25rem - 1px) 0 0;
 }
 
 /* line 81, node_modules/bootstrap/scss/_card.scss */
@@ -8189,7 +8189,7 @@ input[type="button"].btn-block {
 /* line 92, node_modules/bootstrap/scss/_card.scss */
 
 .card-footer:last-child {
-  border-radius: 0 0 calc(1.1875rem - 1px) calc(1.1875rem - 1px);
+  border-radius: 0 0 calc(1.25rem - 1px) calc(1.25rem - 1px);
 }
 
 /* line 102, node_modules/bootstrap/scss/_card.scss */
@@ -8223,23 +8223,23 @@ input[type="button"].btn-block {
 
 .card-img {
   width: 100%;
-  border-radius: calc(1.1875rem - 1px);
+  border-radius: calc(1.25rem - 1px);
 }
 
 /* line 130, node_modules/bootstrap/scss/_card.scss */
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(1.1875rem - 1px);
-  border-top-right-radius: calc(1.1875rem - 1px);
+  border-top-left-radius: calc(1.25rem - 1px);
+  border-top-right-radius: calc(1.25rem - 1px);
 }
 
 /* line 135, node_modules/bootstrap/scss/_card.scss */
 
 .card-img-bottom {
   width: 100%;
-  border-bottom-right-radius: calc(1.1875rem - 1px);
-  border-bottom-left-radius: calc(1.1875rem - 1px);
+  border-bottom-right-radius: calc(1.25rem - 1px);
+  border-bottom-left-radius: calc(1.25rem - 1px);
 }
 
 /* line 143, node_modules/bootstrap/scss/_card.scss */
@@ -8456,7 +8456,7 @@ input[type="button"].btn-block {
   margin-bottom: 1rem;
   list-style: none;
   background-color: #fff;
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 13, node_modules/bootstrap/scss/_breadcrumb.scss */
@@ -8499,7 +8499,7 @@ input[type="button"].btn-block {
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
-  border-radius: 1.1875rem;
+  border-radius: 1.25rem;
 }
 
 /* line 14, node_modules/bootstrap/scss/_alert.scss */
@@ -8803,16 +8803,16 @@ input[type="button"].btn-block {
 /* line 54, node_modules/bootstrap/scss/_list-group.scss */
 
 .list-group-item:first-child {
-  border-top-left-radius: 1.1875rem;
-  border-top-right-radius: 1.1875rem;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
 }
 
 /* line 58, node_modules/bootstrap/scss/_list-group.scss */
 
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 1.1875rem;
-  border-bottom-left-radius: 1.1875rem;
+  border-bottom-right-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
 }
 
 /* line 63, node_modules/bootstrap/scss/_list-group.scss */
@@ -8852,8 +8852,8 @@ input[type="button"].btn-block {
 /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
 .list-group-horizontal .list-group-item:first-child {
-  border-top-left-radius: 1.1875rem;
-  border-bottom-left-radius: 1.1875rem;
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
   border-top-right-radius: 0;
 }
 
@@ -8861,8 +8861,8 @@ input[type="button"].btn-block {
 
 .list-group-horizontal .list-group-item:last-child {
   margin-right: 0;
-  border-top-right-radius: 1.1875rem;
-  border-bottom-right-radius: 1.1875rem;
+  border-top-right-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
   border-bottom-left-radius: 0;
 }
 
@@ -8886,8 +8886,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-sm .list-group-item:first-child {
-    border-top-left-radius: 1.1875rem;
-    border-bottom-left-radius: 1.1875rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
     border-top-right-radius: 0;
   }
 
@@ -8895,8 +8895,8 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-sm .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 1.1875rem;
-    border-bottom-right-radius: 1.1875rem;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
     border-bottom-left-radius: 0;
   }
 }
@@ -8921,8 +8921,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-md .list-group-item:first-child {
-    border-top-left-radius: 1.1875rem;
-    border-bottom-left-radius: 1.1875rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
     border-top-right-radius: 0;
   }
 
@@ -8930,8 +8930,8 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-md .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 1.1875rem;
-    border-bottom-right-radius: 1.1875rem;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
     border-bottom-left-radius: 0;
   }
 }
@@ -8956,8 +8956,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-lg .list-group-item:first-child {
-    border-top-left-radius: 1.1875rem;
-    border-bottom-left-radius: 1.1875rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
     border-top-right-radius: 0;
   }
 
@@ -8965,8 +8965,8 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-lg .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 1.1875rem;
-    border-bottom-right-radius: 1.1875rem;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
     border-bottom-left-radius: 0;
   }
 }
@@ -8991,8 +8991,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-xl .list-group-item:first-child {
-    border-top-left-radius: 1.1875rem;
-    border-bottom-left-radius: 1.1875rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
     border-top-right-radius: 0;
   }
 
@@ -9000,8 +9000,8 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-xl .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 1.1875rem;
-    border-bottom-right-radius: 1.1875rem;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
     border-bottom-left-radius: 0;
   }
 }
@@ -9026,8 +9026,8 @@ input[type="button"].btn-block {
   /* line 95, node_modules/bootstrap/scss/_list-group.scss */
 
   .list-group-horizontal-xxl .list-group-item:first-child {
-    border-top-left-radius: 1.1875rem;
-    border-bottom-left-radius: 1.1875rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
     border-top-right-radius: 0;
   }
 
@@ -9035,8 +9035,8 @@ input[type="button"].btn-block {
 
   .list-group-horizontal-xxl .list-group-item:last-child {
     margin-right: 0;
-    border-top-right-radius: 1.1875rem;
-    border-bottom-right-radius: 1.1875rem;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
     border-bottom-left-radius: 0;
   }
 }
@@ -10143,35 +10143,35 @@ button.bg-red:focus {
 /* line 37, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded {
-  border-radius: 1.1875rem !important;
+  border-radius: 1.25rem !important;
 }
 
 /* line 41, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-top {
-  border-top-left-radius: 1.1875rem !important;
-  border-top-right-radius: 1.1875rem !important;
+  border-top-left-radius: 1.25rem !important;
+  border-top-right-radius: 1.25rem !important;
 }
 
 /* line 46, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-right {
-  border-top-right-radius: 1.1875rem !important;
-  border-bottom-right-radius: 1.1875rem !important;
+  border-top-right-radius: 1.25rem !important;
+  border-bottom-right-radius: 1.25rem !important;
 }
 
 /* line 51, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-bottom {
-  border-bottom-right-radius: 1.1875rem !important;
-  border-bottom-left-radius: 1.1875rem !important;
+  border-bottom-right-radius: 1.25rem !important;
+  border-bottom-left-radius: 1.25rem !important;
 }
 
 /* line 56, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .rounded-left {
-  border-top-left-radius: 1.1875rem !important;
-  border-bottom-left-radius: 1.1875rem !important;
+  border-top-left-radius: 1.25rem !important;
+  border-bottom-left-radius: 1.25rem !important;
 }
 
 /* line 61, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -17459,6 +17459,8 @@ blockquote footer::before,
   letter-spacing: 1.86px;
   max-width: 270px;
   width: 100%;
+  border-radius: 1.25rem;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -17472,7 +17474,7 @@ blockquote footer::before,
   }
 }
 
-/* line 19, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 21, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn.btn-lg,
 .btn-group-lg > .btn,
@@ -17483,7 +17485,7 @@ blockquote footer::before,
   border-radius: 9.375rem;
 }
 
-/* line 23, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 25, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn.btn-sm,
 .btn-group-sm > .btn,
@@ -17493,11 +17495,12 @@ blockquote footer::before,
 .search-form .btn-sm.search-submit {
   font-size: 0.75rem;
   font-weight: normal;
+  border-radius: 0.9375rem;
   letter-spacing: 0.5px;
 }
 
 @media (min-width: 768px) {
-  /* line 23, resources/assets/styles/skhoop/components/_buttons.scss */
+  /* line 25, resources/assets/styles/skhoop/components/_buttons.scss */
 
   .btn.btn-sm,
   .btn-group-sm > .btn,
@@ -17510,13 +17513,13 @@ blockquote footer::before,
   }
 }
 
-/* line 40, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 43, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary {
   color: #fff;
 }
 
-/* line 44, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 47, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary:hover {
   color: #031532;
@@ -17524,20 +17527,20 @@ blockquote footer::before,
   border-color: #7e7e7e;
 }
 
-/* line 54, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 57, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary {
   border-color: #7e7e7e;
   color: #031532;
 }
 
-/* line 59, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 62, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary:hover {
   color: #fff;
 }
 
-/* line 66, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 69, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon {
   min-width: auto;
@@ -17549,27 +17552,27 @@ blockquote footer::before,
           box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 74, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 77, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-sm {
   height: 1.875rem;
   width: 1.875rem;
 }
 
-/* line 79, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 82, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-lg {
   height: 2.5rem;
   width: 2.5rem;
 }
 
-/* line 84, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 87, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > img {
   width: 100%;
 }
 
-/* line 88, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 91, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > svg {
   width: 100%;
@@ -22719,6 +22722,12 @@ body#tinymce {
       -ms-flex: initial;
           flex: initial;
   max-width: 100%;
+}
+
+/* line 144, resources/assets/styles/skhoop/sections/_popular-products.scss */
+
+.js-grid-slider {
+  visibility: hidden;
 }
 
 /* line 3, resources/assets/styles/skhoop/sections/_selected-product.scss */
