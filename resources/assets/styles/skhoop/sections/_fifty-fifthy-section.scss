@@ -1,4 +1,34 @@
-.fifty-fifthy {
+.fifty-fifty {
+  &.is-text-first {
+    .fifty-fifty-content {
+      @include media-breakpoint-up(md) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-right: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 5.5rem;
+      }
+    }
+  }
+
+  &.is-image-first {
+    .fifty-fifty-content {
+      @include media-breakpoint-up(md) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-left: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 5.5rem;
+      }
+    }
+  }
+
   &-item {
     padding-left: 30px;
     padding-right: 30px;
@@ -10,9 +40,17 @@
     padding-bottom: 4.5625rem;
 
     @include media-breakpoint-up(md) {
-      width: 85%;
+      width: 100%;
       padding-bottom: 1rem;
       padding-top: 1rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 31.25rem;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 38.125rem;
     }
 
     h2 {
