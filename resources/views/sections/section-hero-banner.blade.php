@@ -1,8 +1,8 @@
 {{-- <section class='section-hero-banner'>
     <div class='hero-wrap'>
-        
+
         <div class='hero-background'>
-            {!! $section->image !!}            
+            {!! $section->image !!}
 
             @if ($section->video_url)
                 <div class='hero-play-btn js-hide-on-play js-playvideo'>
@@ -14,7 +14,7 @@
         </div>
 
         {!! $section->video !!}
-        
+
         @if ($section->title || $section->text || $section->link)
             <div class='hero-text'>
                 @if ($section->title)
@@ -44,9 +44,9 @@
 
 {{-- Original Markup --}}
 
-<section class='section-hero-banner'>
+<section class='section hero-banner'>
     <div class='hero-wrap'>
-        
+
         <div class='hero-background'>
             <!-- Image Tag -->
             <img class='hero-image' src="@asset('images/temp/hero_banner.png')" alt="">
@@ -68,7 +68,7 @@
         <!-- <iframe data-autoplayMobile='1' data-autoplay='1' class='hero-iframe-video is-vimeo js-video-iframe is-video-hidden' style='z-index:1;opacity:0.000001;background-color:black'; data-source='vimeo' src="https://player.vimeo.com/external/323460867.hd.mp4?s=6386bff00f0b9898e3fb3b84182057fdbcd3117d&profile_id=175" frameborder="0" allow="autoplay; fullscreen"></iframe> -->
         <!-- Youtube -->
         <!-- <iframe id="video-iframe-ScMzIvxBSi4" data-autoplayMobile='1' data-autoplay='' class='hero-iframe-video is-yt js-video-iframe' style='z-index:10;opacity:0.000001;background-color:black'; data-source='youtube' src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&showinfo=0&controls=0&enablejsapi=1" frameborder="0" allow="autoplay; fullscreen"></iframe> -->
-        
+
 
         <div class='hero-text'>
             <h1 class='h1 hero-title'>Hero banner</h1>
@@ -76,12 +76,12 @@
                 För en aktiv livsstil
             </div>
             <div class='hero-btn'>
-        
+
                 <a href="#">
                     <button class="btn btn-outline-primary d-md-none" type="button">Visa produkter</button>
                 </a>
 
-            
+
                 <a href="#">
                     <button class="btn btn-lg btn-outline-primary d-none d-md-inline-block" type="button">Visa produkter</button>
                 </a>
