@@ -1,7 +1,7 @@
 @if ($section->title || $section->image || $section->form)
     <section id="section-{{ $section->id }}" class="section newsletter-section">
         <div class="container">
-            <div class="newsletter row px-0">
+            <div class="newsletter row m-0">
                 <div class="col-lg-6 col-md-6 col-sm-12  newsletter-cover"
                     style="background-image: url({{ $section->image }})">
                 </div>
