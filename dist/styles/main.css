@@ -23845,5 +23845,57 @@ body#tinymce {
   min-width: 200%;
 }
 
+/* line 1, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide {
+  margin-bottom: 1.625rem;
+}
+
+/* line 4, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-image {
+  max-width: 16.5rem;
+}
+
+/* line 8, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table {
+  width: 100%;
+  margin-left: 3.4375rem;
+}
+
+/* line 12, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table {
+  width: 100%;
+}
+
+/* line 15, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table-cell {
+  vertical-align: middle;
+  padding: 0 0.75rem;
+}
+
+/* line 19, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table-cell.head {
+  font-weight: 500;
+}
+
+/* line 23, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table-cell.size {
+  width: 3.125rem;
+  padding: 0;
+  font-size: 1.25rem;
+}
+
+/* line 31, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table-row.spacer {
+  height: 2.125rem;
+}
+
 
 /*# sourceMappingURL=main.css.map*/
