@@ -73,7 +73,7 @@ class VideoHelper
                 $videoURL = str_replace( "controls=0", "controls=1", $videoURL );
             }
 
-            return '<iframe id="video-iframe-ScMzIvxBSi4" data-autoplayMobile="1" data-autoplay="1" class="hero-iframe-video is-yt js-video-iframe" style="z-index:10;opacity:0.000001;background-color:black"; data-source="youtube" src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&showinfo=0&controls=0&enablejsapi=1&autoplay=1&mute=1" frameborder="0" allow="autoplay; fullscreen"></iframe>';
+            return sprintf('<iframe data-autoplayMobile="1" data-autoplay="1" class="hero-iframe-video is-yt js-video-iframe" style="opacity:0.000001;background-color:black"; data-source="youtube" src="%s" frameborder="0"></iframe>', $videoURL);
         } elseif ( in_array( $videoSource, array( "vimeo-external", "mp4" ) ) ) {
             $videoLoop = $videoLoop ? "loop" : "";
             $autoplayDesktop = $autoplayDesktop ? "autoplay" : "";

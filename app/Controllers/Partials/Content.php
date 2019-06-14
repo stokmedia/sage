@@ -163,9 +163,9 @@ trait Content
             'link' => is_array( $newData->link ) ? (object)$newData->link : false,
             'image' => $image,
             'image_mobile' => $imageMobile,
-            'video_url' => $newData->video_url,
-            'is_autoplay' => $newData->is_autoplay,
-            'video_tag' => VideoHelper::getVideoTag( $newData->video_url )
+//            'video_url' => $newData->video_url,
+//            'is_autoplay' => $newData->is_autoplay,
+            'video_tag' => VideoHelper::getVideoTag( $newData->video_url, true, false, $newData->is_autoplay )
         ];
     }
 
