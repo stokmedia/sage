@@ -17513,13 +17513,37 @@ blockquote footer::before,
   }
 }
 
+/* line 39, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn > [class*="spinner-"],
+.comment-form input[type="submit"] > [class*="spinner-"],
+.search-form .search-submit > [class*="spinner-"] {
+  display: none;
+}
+
 /* line 43, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn.is-loading > [class*="spinner-"],
+.comment-form input.is-loading[type="submit"] > [class*="spinner-"],
+.search-form .is-loading.search-submit > [class*="spinner-"] {
+  display: inline-block;
+}
+
+/* line 47, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn.is-loading > img,
+.comment-form input.is-loading[type="submit"] > img,
+.search-form .is-loading.search-submit > img {
+  display: none;
+}
+
+/* line 56, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary {
   color: #fff;
 }
 
-/* line 47, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 60, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary:hover {
   color: #031532;
@@ -17527,20 +17551,20 @@ blockquote footer::before,
   border-color: #7e7e7e;
 }
 
-/* line 57, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 70, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary {
   border-color: #7e7e7e;
   color: #031532;
 }
 
-/* line 62, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 75, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary:hover {
   color: #fff;
 }
 
-/* line 69, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 82, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon {
   min-width: auto;
@@ -17552,27 +17576,27 @@ blockquote footer::before,
           box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 77, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 90, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-sm {
   height: 1.875rem;
   width: 1.875rem;
 }
 
-/* line 82, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 95, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-lg {
   height: 2.5rem;
   width: 2.5rem;
 }
 
-/* line 87, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 100, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > img {
   width: 100%;
 }
 
-/* line 91, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 104, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > svg {
   width: 100%;
@@ -19028,6 +19052,7 @@ html.is-flickity-fullscreen {
 /* line 67, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-inner {
+  width: 100%;
   max-width: 395px;
   text-align: center;
 }
@@ -19039,14 +19064,14 @@ html.is-flickity-fullscreen {
     text-align: left;
   }
 
-  /* line 74, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 75, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-modal .newsletter-inner {
     text-align: center;
   }
 }
 
-/* line 80, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 81, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-title {
   font-family: "Covered By Your Grace", cursive;
@@ -19057,7 +19082,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 80, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 81, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-title {
     font-size: 2.1875rem;
@@ -19066,7 +19091,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 94, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 95, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-body {
   color: #292929;
@@ -19079,20 +19104,20 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 94, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 95, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-body {
     margin-bottom: 0;
   }
 
-  /* line 106, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 107, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-modal .newsletter-body {
     padding-bottom: 1.25rem;
   }
 }
 
-/* line 113, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 114, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .btn,
 .newsletter-form .comment-form input[type="submit"],
@@ -19102,13 +19127,13 @@ html.is-flickity-fullscreen {
   background-color: #fff;
 }
 
-/* line 117, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 118, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group {
   margin-bottom: 0;
 }
 
-/* line 121, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 122, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group [type="text"] {
   min-width: auto;
@@ -19117,26 +19142,26 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 121, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 122, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-form .input-group [type="text"] {
     margin-right: 1.875rem;
   }
 }
 
-/* line 131, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 132, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group.is-invalid + .invalid-feedback {
   display: block;
 }
 
-/* line 135, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 136, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form form {
   width: 100%;
 }
 
-/* line 140, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 141, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter .custom-checkbox {
   text-align: left;
@@ -19144,7 +19169,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 140, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 141, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter .custom-checkbox {
     padding-left: 1.875rem;
@@ -23843,6 +23868,119 @@ body#tinymce {
 .instagram-gallery-mobile .instagram-col .tile > iframe {
   min-height: 200%;
   min-width: 200%;
+}
+
+/* line 1, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide {
+  margin-bottom: 1.625rem;
+}
+
+/* line 5, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-image img {
+  max-width: 11.5rem;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  /* line 5, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-image img {
+    max-width: 16.5rem;
+  }
+}
+
+/* line 15, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table {
+  width: 100%;
+  margin-top: 1.625rem;
+}
+
+@media (min-width: 768px) {
+  /* line 15, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table {
+    margin-top: 0;
+    margin-left: 3.4375rem;
+  }
+}
+
+/* line 24, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table {
+  width: 100%;
+}
+
+/* line 27, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table-cell {
+  padding: 0 0.375rem;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  /* line 27, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell {
+    padding: 0 0.75rem;
+  }
+}
+
+/* line 35, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table-cell.head {
+  padding: 0 0.375rem 1.125rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 23.125rem) {
+  /* line 35, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell.head {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 35, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell.head {
+    padding: 0 0.75rem 1.125rem;
+    letter-spacing: 1.86px;
+  }
+}
+
+/* line 51, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table-cell.size {
+  padding: 0;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 23.125rem) {
+  /* line 51, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell.size {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 51, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell.size {
+    width: 3.125rem;
+  }
+}
+
+/* line 66, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+.size-guide-table .d-table-row.spacer {
+  height: 2.25rem;
 }
 
 

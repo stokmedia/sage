@@ -105,6 +105,9 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
     return $paths;
 });
 
+
+// TODO: Maybe move all of the following Centra related filters to the Esc Plugin instead
+
 /**
  * Order Centra Products for Category
  */
@@ -207,6 +210,8 @@ add_filter( 'rest_silk_products_query', function ( $query_vars, $request ) {
 
     if (isset($orderby) && $orderby === 'price_low') {
 
+        // TODO: We should put these inside the Esc Plugin instead.
+        // eg: EscConnect::getMarket(), EscConnect::getPricelist();
         $market = $_SESSION['esc_store']['market'];
         $priceList = $_SESSION['esc_store']['pricelist'];
 

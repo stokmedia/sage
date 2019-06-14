@@ -3,6 +3,7 @@ namespace App\Classes;
 
 include_once( \Esc::directory() . '/modules/product.php' );
 
+// TODO: Maybe move this class to the Esc Plugin insead
 class Silk_Product_REST_Controller extends \WP_REST_Posts_Controller {
 
 	

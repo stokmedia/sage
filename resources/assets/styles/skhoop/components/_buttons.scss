@@ -35,6 +35,19 @@
   }
 }
 
+// loading
+.btn > [class*="spinner-"] {
+  display: none;
+}
+
+.btn.is-loading > [class*="spinner-"] {
+  display: inline-block;
+}
+
+.btn.is-loading > img {
+  display: none;
+}
+
 //
 // Alternate buttons
 //

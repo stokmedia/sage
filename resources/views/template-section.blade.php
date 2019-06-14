@@ -9,7 +9,7 @@
 @include('partials.page-header')
 
   <div class="container">
-    <div class="h2">Newsletter</div>
+    <div class="h2">Newsletter 1</div>
   </div>
   <!-- Newsletter -->
   @include('sections.section-newsletter')

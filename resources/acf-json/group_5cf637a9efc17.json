@@ -134,10 +134,10 @@
             "sub_fields": [
                 {
                     "key": "field_5cf6807a82314",
-                    "label": "Expiration date",
-                    "name": "expiration_date",
-                    "type": "date_picker",
-                    "instructions": "",
+                    "label": "Modal delay (seconds)",
+                    "name": "modal_delay",
+                    "type": "number",
+                    "instructions": "This will determine how long the modal will appear after the page loads.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -145,9 +145,34 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "d\/m\/Y",
-                    "return_format": "d\/m\/Y",
-                    "first_day": 1
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5d025b1bc38a3",
+                    "label": "Modal display time (seconds)",
+                    "name": "modal_display_time",
+                    "type": "number",
+                    "instructions": "This will determine how long the modal will be visible on the page. Leave it blank if you don't want to make the modal to automatically close.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
                 },
                 {
                     "key": "field_5cf6808482315",
@@ -426,5 +451,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1560414891
+    "modified": 1560435752
 }
