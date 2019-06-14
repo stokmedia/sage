@@ -4,6 +4,7 @@ namespace App\Controllers\Partials;
 
 
 use App\Classes\VideoHelper;
+use App\Classes\Helper;
 
 trait Content
 {
@@ -236,11 +237,6 @@ trait Content
         return (object)$data;
     }
 
-    public static function cms_newsletter( $data )
-    {
-        return (object)$data;
-    }
-
     public static function cms_popular_products( $data )
     {
         $newData = (object)$data;
@@ -329,6 +325,9 @@ trait Content
         $data->title = self::hasTitle( $data ) ? $data->section_title : '';
         $data->link = $data->link ? (object)$data->link : $data->link;
         $data->has_content = ( $data->title || $data->preamble || $data->content || $data->link );
+        $data->content = Helper::sp_render_text( [
+            'size_guide' => \App\template( 'partials.size-guide', [ 'size_guide' => self::sizeGuideData() ] )
+        ], $data->content );          
 
         return $data;
     }

@@ -64,7 +64,7 @@
             "label": "Content",
             "name": "content",
             "type": "wysiwyg",
-            "instructions": "Recommended image width: <br\/>\r\n800px or above <br\/><br\/>\r\n<strong>Note:<\/strong><br\/>\r\n1. You can use \"Formats > Indent\" from the toolbar to indent a paragraph. <br\/>\r\n2. Make sure that the image display setting is set to \"Full size\" to avoid cropping of the added image.",
+            "instructions": "Recommended image width: <br\/>\r\n800px or above <br\/><br\/>\r\n<strong>Note:<\/strong><br\/>\r\n1. You can use \"Formats > Indent\" from the toolbar to indent a paragraph. <br\/>\r\n2. Make sure that the image display setting is set to \"Full size\" to avoid cropping of the added image. <br\/>\r\n3. You can use [size_guide] shortcode to display the size guide chart in the content.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -111,5 +111,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1560160579
+    "modified": 1560520959
 }

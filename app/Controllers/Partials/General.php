@@ -46,6 +46,13 @@ trait General
             'form_settings' => (object) get_field( 'form_settings', self::currentLang() )
         ];
     }
+
+    public function sizeGuideData()
+    {
+        return (object) [
+            'image' => wp_get_attachment_image_url( get_field( 'size_guide_image', self::currentLang() ), 'full' )
+        ];
+    }
     
     public function resellerLists()
     {
