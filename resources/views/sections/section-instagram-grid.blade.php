@@ -1,7 +1,7 @@
 {{-- <pre>{{ var_dump($section) }}</pre> --}}
 
 <section class="section instagram">
-    <div class="instagram-gallery d-none d-md-block" style="background-image: url('@asset('images/instagram/bg.jpg')');">
+    <div class="instagram-gallery d-none d-md-block" style="background-image: url('{{ $section->image }}');">
 
         @if ( ($section->instagram_link->url && $section->instagram_link->title) || $section->title || $section->text )
             <div class="col-wrap instagram-info-margin">
@@ -112,13 +112,25 @@
     </div>
 
     <div class="instagram-gallery-mobile d-block d-md-none" style="background-image: url(@asset('images/temp/instagram-bg.jpg')">
-        <div class="instagram-info text-center">
-            <div class="btn-header">
-                <h3 class="h3 mb-0">@skhoopskirts</h3>
-                <a href="#" class="btn btn-sm btn-primary text-uppercase">FOLLOW US</a>
+        @if ( ($section->instagram_link->url && $section->instagram_link->title) || $section->title || $section->text )
+            <div class="instagram-info text-center">
+                <div class="btn-header">
+                    @if ($section->title)
+                        <h3 class="h3 mb-0">{{ $section->title }}</h3>
+                    @endif 
+                    
+                    @if ($section->instagram_link->url && $section->instagram_link->title)
+                        <a href="{{ $section->instagram_link->url }}" 
+                            class="btn btn-sm btn-primary text-uppercase" 
+                            target="{{ $section->instagram_link->target }}">{{ $section->instagram_link->title }}</a>
+                    @endif                    
+                </div>
+
+                @if ($section->text)
+                    <div class="info">{!! $section->text !!}</div>
+                @endif
             </div>
-            <div class="info">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce </div>
-        </div>
+        @endif
 
         @if ($section->instagram_images)
             @php

@@ -203,7 +203,7 @@ trait Content
         $instagramLinkIndex = array_search('instagram', array_column( self::socialLinks(), 'media'));
         if ($instagramLinkIndex) {
             $instagramLink = [
-                'title' => get_field( 'translate_folow_us', self::currentLang() ),
+                'title' => get_field( 'translate_follow_us', self::currentLang() ),
                 'url' => self::socialLinks()[ $instagramLinkIndex ]['url'],
                 'target' => '_blank'
             ];
@@ -215,6 +215,7 @@ trait Content
             'instagram_link' => (object) $instagramLink ?? [],
             'title' => self::hasTitle($data) ? $data->section_title : '',
             'text' => $data->text,
+            'image' => $data->image ? wp_get_attachment_image_url( $data->image['ID'], 'instagram-bg' ) : '',
         ];
     }  
     
