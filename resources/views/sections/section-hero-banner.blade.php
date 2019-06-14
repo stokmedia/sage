@@ -1,3 +1,4 @@
+@dump($section)
 {{-- <section class='section-hero-banner'>
     <div class='hero-wrap'>
 
@@ -49,7 +50,9 @@
 
         <div class='hero-background'>
             <!-- Image Tag -->
-            <img class='hero-image' src="@asset('images/temp/hero_banner.png')" alt="">
+            {{--<img class='hero-image' src="@asset('images/temp/hero_banner.png')" alt="">--}}
+            {!! $section->image !!}
+            {!! $section->image_mobile !!}
 
             <!-- Play button -->
             <!-- <div class='hero-play-btn js-hide-on-play js-playvideo'>
@@ -71,21 +74,32 @@
 
 
         <div class='hero-text'>
-            <h1 class='h1 hero-title'>Hero banner</h1>
-            <div class='hero-subtitle'>
-                För en aktiv livsstil
-            </div>
-            <div class='hero-btn'>
+            @if($section->show_title)
+                @if($section->is_h1)
+                    <h1 class='h1 hero-title'>{{ $section->title }}</h1>
+                @else
+                    <h2 class='h1 hero-title'>{{ $section->title }}</h2>
+                @endif
+            @endif
 
-                <a href="#">
-                    <button class="btn btn-outline-primary d-md-none" type="button">Visa produkter</button>
-                </a>
+            @if($section->text)
+                <div class='hero-subtitle'>{{ $section->text }}</div>
+            @endif
 
+            @if($section->link)
+                <div class='hero-btn'>
 
-                <a href="#">
-                    <button class="btn btn-lg btn-outline-primary d-none d-md-inline-block" type="button">Visa produkter</button>
-                </a>
-            </div>
+                    <a href="{{ $section->link->url }}" target="{{ $section->link->target }}">
+                        <button class="btn btn-outline-primary d-md-none"
+                                type="button">{{ $section->link->title }}</button>
+                    </a>
+
+                    <a href="{{ $section->link->url }}" target="{{ $section->link->target }}">
+                        <button class="btn btn-lg btn-outline-primary d-none d-md-inline-block"
+                                type="button">{{ $section->link->title }}</button>
+                    </a>
+                </div>
+            @endif
         </div>
 
     </div>

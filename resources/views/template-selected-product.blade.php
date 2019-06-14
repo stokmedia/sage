@@ -7,20 +7,27 @@
 @section('content')
 @while(have_posts()) @php the_post() @endphp
 @include('partials.page-header')
-
 <section class="section selected-product">
   <div class="container">
     <div class="row">
+
+
+      <!--
+        NOTE: Add `.is-oos` to `.selected-product-preview`, this will add the "out of stock" state for the product.
+      -->
+
+
       <div class="selected-product-preview col-xxl-6 col-lg-7 p-0">
         <div class="row justify-content-xxl-start justify-content-center mx-0">
           <div class="selected-product-slider-col p-md-0 m-0">
-            <div class="selected-product-slider overflow-hidden p-md-0">
+            <div class="selected-product-slider overflow-hidden p-md-0 shadow-sm">
               @for ($slider = 0; $slider < 3; $slider++)
                 <figure class="item align-items-center mb-0">
                   <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
                 </figure>
               @endfor
             </div>
+            <div class="selected-product-blur d-lg-block d-none rounded-circle" style="background: url(@asset('images/temp/selected-product-blur.jpg')) no-repeat center/cover transparent"></div>
           </div>
           <div class="selected-product-thumbnail d-none d-lg-flex flex-column">
             @for ($thumbnail = 0; $thumbnail < 3; $thumbnail++)

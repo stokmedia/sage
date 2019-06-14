@@ -2112,7 +2112,7 @@ var stokpressEvent = {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-module.exports = __webpack_require__(44);
+module.exports = __webpack_require__(45);
 
 
 /***/ }),
@@ -2161,6 +2161,7 @@ __webpack_require__(40);
 __webpack_require__(41);
 __webpack_require__(42);
 __webpack_require__(43);
+__webpack_require__(44);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -17253,6 +17254,68 @@ var Newsletter = {};
 
 /***/ }),
 /* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(jQuery) {/**
+ * Created by STOK on 13/06/2019.
+ */
+var Alert = {};
+
+(function ( $ ) {
+    var target = $( '#js-alert' ), image = target.find( '#js-alert-image' ), text = target.find( '#js-alert-text' ), button = target.find( '#js-alert-button' );
+
+    Alert.show = function ( type, message, buttonText ) {
+        if ( target.length === 0 ) {
+            return;
+        }
+
+        var alertClass = target.data( 'classDefault' ) + ' ', buttonClass = button.data( 'classDefault' ), imageSource = '';
+
+        switch ( type ) {
+            case 'success':
+                alertClass += target.data( 'classSuccess' );
+                buttonClass = button.data( 'classSpecial' );
+                imageSource = image.data( 'iconSuccess' );
+                break;
+            case 'warning':
+                alertClass += target.data( 'classWarning' );
+                imageSource = image.data( 'iconWarning' );
+                break;
+            case 'danger':
+                alertClass += target.data( 'classDanger' );
+                imageSource = image.data( 'iconDanger' );
+                break;
+            default:
+                return;
+        }
+
+        target.attr( 'class', alertClass );
+        image.attr( 'src', imageSource );
+        text.text( message );
+        button.text( buttonText );
+        button.attr( 'class', buttonClass );
+        target.show();
+    };
+
+    $( function () {
+        if ( target.length === 0 ) {
+            return;
+        }
+
+        button.click( function () {
+
+
+            target.hide();
+        } );
+    } )
+
+})( jQuery );
+
+window.Alert = Alert;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 45 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
