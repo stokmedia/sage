@@ -20116,7 +20116,7 @@ html.is-flickity-fullscreen {
 
 .trust-bar .trust-item {
   padding-left: 3.75rem;
-  min-height: 4.1875rem;
+  min-height: 3.5625rem;
   position: relative;
   width: 14.375rem;
   margin-left: auto;
@@ -20141,25 +20141,19 @@ html.is-flickity-fullscreen {
 /* line 128, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item .info .h4 {
+  margin-top: 0.1875rem;
   margin-bottom: 0;
+  line-height: 1rem;
 }
 
-@media (min-width: 768px) {
-  /* line 132, resources/assets/styles/skhoop/layouts/_footer.scss */
-
-  .trust-bar .trust-item .info .small {
-    margin-top: -0.4375rem;
-  }
-}
-
-/* line 139, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 140, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item + .trust-item {
   margin-top: 0.625rem;
 }
 
 @media (min-width: 768px) {
-  /* line 139, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 140, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item + .trust-item {
     margin-top: 0;
@@ -20168,20 +20162,20 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 139, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 140, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item + .trust-item {
-    margin-left: 4.5rem;
+    margin-left: 3.9375rem;
   }
 }
 
-/* line 153, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 154, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .icon-block {
   width: 2.5rem;
   height: 2.5rem;
   position: absolute;
-  top: 0.875rem;
+  top: 0.625rem;
   left: 0;
   margin-top: 0;
   border-radius: 50%;
@@ -20291,17 +20285,19 @@ body#tinymce {
 
 /* line 13, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
+.category-banner::before {
+  width: 0 !important;
+}
+
+/* line 17, resources/assets/styles/skhoop/sections/_category-banner.scss */
+
 .category-banner .box-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
   padding: 1.25rem 0.3125rem;
 }
 
 @media (min-width: 576px) {
-  /* line 13, resources/assets/styles/skhoop/sections/_category-banner.scss */
+  /* line 17, resources/assets/styles/skhoop/sections/_category-banner.scss */
 
   .category-banner .box-wrapper {
     padding: 2.8125rem 1.875rem;
