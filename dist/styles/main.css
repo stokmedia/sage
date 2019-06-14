@@ -22876,7 +22876,7 @@ body#tinymce {
 
 .selected-product-slider .flickity-prev-next-button.previous {
   left: 0;
-  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOC41NTI0IDI1LjgxOTVDMTguNzg0IDI2LjA2MDIgMTkuMTY5NSAyNi4wNjAyIDE5LjQwOTEgMjUuODE5NUMxOS42NDA3IDI1LjU4NyAxOS42NDA3IDI1LjIwMDEgMTkuNDA5MSAyNC45NjgxTDE1LjA2NDkgMjAuNjA3SDI5LjQwMDJDMjkuNzM0NCAyMC42MDY0IDMwIDIwLjMzOTggMzAgMjAuMDA0M0MzMCAxOS42Njg5IDI5LjczNDQgMTkuMzkzNiAyOS40MDAyIDE5LjM5MzZIMTUuMDY0OUwxOS40MDkxIDE1LjA0MDZDMTkuNjQwNyAxNC43OTk5IDE5LjY0MDcgMTQuNDEyNCAxOS40MDkxIDE0LjE4MDVDMTkuMTY5NSAxMy45Mzk4IDE4Ljc4MzUgMTMuOTM5OCAxOC41NTI0IDE0LjE4MDVMMTMuMTc5OCAxOS41NzRDMTIuOTQwMSAxOS44MDY1IDEyLjk0MDEgMjAuMTkzNSAxMy4xNzk4IDIwLjQyNTRMMTguNTUyNCAyNS44MTk1WiIgZmlsbD0iIzFFMjAxRCIvPg0KPC9zdmc+DQo=) no-repeat center/contain white;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4LjU1MjQgMjUuODE5NUMxOC43ODQgMjYuMDYwMiAxOS4xNjk1IDI2LjA2MDIgMTkuNDA5MSAyNS44MTk1QzE5LjY0MDcgMjUuNTg3IDE5LjY0MDcgMjUuMjAwMSAxOS40MDkxIDI0Ljk2ODFMMTUuMDY0OSAyMC42MDdIMjkuNDAwMkMyOS43MzQ0IDIwLjYwNjQgMzAgMjAuMzM5OCAzMCAyMC4wMDQzQzMwIDE5LjY2ODkgMjkuNzM0NCAxOS4zOTM2IDI5LjQwMDIgMTkuMzkzNkgxNS4wNjQ5TDE5LjQwOTEgMTUuMDQwNkMxOS42NDA3IDE0Ljc5OTkgMTkuNjQwNyAxNC40MTI0IDE5LjQwOTEgMTQuMTgwNUMxOS4xNjk1IDEzLjkzOTggMTguNzgzNSAxMy45Mzk4IDE4LjU1MjQgMTQuMTgwNUwxMy4xNzk4IDE5LjU3NEMxMi45NDAxIDE5LjgwNjUgMTIuOTQwMSAyMC4xOTM1IDEzLjE3OTggMjAuNDI1NEwxOC41NTI0IDI1LjgxOTVaIiBmaWxsPSIjMUUyMDFEIi8+Cjwvc3ZnPgo=) no-repeat center/contain white;
 }
 
 /* line 45, resources/assets/styles/skhoop/sections/_selected-product.scss */
@@ -23876,50 +23876,111 @@ body#tinymce {
   margin-bottom: 1.625rem;
 }
 
-/* line 4, resources/assets/styles/skhoop/sections/_size-guide.scss */
+/* line 5, resources/assets/styles/skhoop/sections/_size-guide.scss */
 
-.size-guide-image {
-  max-width: 16.5rem;
+.size-guide-image img {
+  max-width: 11.5rem;
+  height: auto;
 }
 
-/* line 8, resources/assets/styles/skhoop/sections/_size-guide.scss */
+@media (min-width: 768px) {
+  /* line 5, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-image img {
+    max-width: 16.5rem;
+  }
+}
+
+/* line 15, resources/assets/styles/skhoop/sections/_size-guide.scss */
 
 .size-guide-table {
   width: 100%;
-  margin-left: 3.4375rem;
+  margin-top: 1.625rem;
 }
 
-/* line 12, resources/assets/styles/skhoop/sections/_size-guide.scss */
+@media (min-width: 768px) {
+  /* line 15, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table {
+    margin-top: 0;
+    margin-left: 3.4375rem;
+  }
+}
+
+/* line 24, resources/assets/styles/skhoop/sections/_size-guide.scss */
 
 .size-guide-table .d-table {
   width: 100%;
 }
 
-/* line 15, resources/assets/styles/skhoop/sections/_size-guide.scss */
+/* line 27, resources/assets/styles/skhoop/sections/_size-guide.scss */
 
 .size-guide-table .d-table-cell {
+  padding: 0 0.375rem;
   vertical-align: middle;
-  padding: 0 0.75rem;
 }
 
-/* line 19, resources/assets/styles/skhoop/sections/_size-guide.scss */
+@media (min-width: 768px) {
+  /* line 27, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell {
+    padding: 0 0.75rem;
+  }
+}
+
+/* line 35, resources/assets/styles/skhoop/sections/_size-guide.scss */
 
 .size-guide-table .d-table-cell.head {
+  padding: 0 0.375rem 1.125rem;
+  font-size: 0.6875rem;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
-/* line 23, resources/assets/styles/skhoop/sections/_size-guide.scss */
+@media screen and (min-width: 23.125rem) {
+  /* line 35, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell.head {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 35, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell.head {
+    padding: 0 0.75rem 1.125rem;
+    letter-spacing: 1.86px;
+  }
+}
+
+/* line 51, resources/assets/styles/skhoop/sections/_size-guide.scss */
 
 .size-guide-table .d-table-cell.size {
-  width: 3.125rem;
   padding: 0;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
 }
 
-/* line 31, resources/assets/styles/skhoop/sections/_size-guide.scss */
+@media screen and (min-width: 23.125rem) {
+  /* line 51, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell.size {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 51, resources/assets/styles/skhoop/sections/_size-guide.scss */
+
+  .size-guide-table .d-table-cell.size {
+    width: 3.125rem;
+  }
+}
+
+/* line 66, resources/assets/styles/skhoop/sections/_size-guide.scss */
 
 .size-guide-table .d-table-row.spacer {
-  height: 2.125rem;
+  height: 2.25rem;
 }
 
 

@@ -13,17 +13,17 @@
           (det är dina egna mått du mäter som du sedan jämför i tabellen nedan
           och ser vilken storlek du ska ha )
         </div>
-        <div class="size-guide d-lg-flex">
-          <div class="size-guide-image">
+        <div class="size-guide d-md-flex">
+          <div class="size-guide-image m-auto text-center">
             <img src="@asset('images/temp/size-guide.png')" />
           </div>
           <div class="size-guide-table">
             <div class="d-table">
-              <div class="d-table-row">
-                  <div class="d-table-cell text-center head"></div>
-                  <div class="d-table-cell text-center head">Bystvidd</div>
-                  <div class="d-table-cell text-center head">Midjevidd</div>
-                  <div class="d-table-cell text-center head">Stussvidd</div>
+              <div class="d-table-row row-head">
+                  <div class="d-table-cell text-center text-uppercase head"></div>
+                  <div class="d-table-cell text-center text-uppercase head">Bystvidd</div>
+                  <div class="d-table-cell text-center text-uppercase head">Midjevidd</div>
+                  <div class="d-table-cell text-center text-uppercase head">Stussvidd</div>
               </div>
               <div class="d-table-row">
                 <div class="d-table-cell size text-right text-right">
@@ -90,7 +90,7 @@
               <div class="d-table-row spacer"></div>
               <div class="d-table-row">
                 <div class="d-table-cell size text-right">
-                  LG
+                  L
                 </div>
                 <div class="d-table-cell text-center">
                   <div>78-82</div>
@@ -182,8 +182,7 @@
     </div>
   </section>
 
-  @include('sections.section-thankyou')
-  @include('sections.section-newsletter')
-  @include('sections.section-three-promo')
+  @include('sections.section-text-and-image')
+  @include('sections.section-popular-products')
 
 @endsection
