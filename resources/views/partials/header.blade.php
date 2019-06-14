@@ -1,3 +1,4 @@
+@include('partials.alert')
 <nav class="navbar navbar-expand-lg fixed-top {{(get_page_template_slug() == 'views/template-checkout.blade.php') ? 'is-checkout': ''}} js-header">
     @if (get_page_template_slug() !== 'views/template-checkout.blade.php')
     <div class="container">
