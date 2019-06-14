@@ -312,7 +312,7 @@ trait Content
             'title' => self::hasTitle($newData) ? $newData->section_title : '',
             'text' => $newData->text ?? '',
             'link' => is_array($newData->link) ? (object) $newData->link : false,
-            'image' => $newData->image ? wp_get_attachment_image( $newData->image['ID'], 'large' ) : '',
+            'image' => $newData->image ? wp_get_attachment_image_url( $newData->image['ID'], 'large' ) : '',
             'orderClass' => $newData->layout === 'image_first' ? 'order-md-1' : 'order-md-2'
         ];
     }   
