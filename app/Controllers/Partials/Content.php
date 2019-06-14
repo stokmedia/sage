@@ -119,11 +119,14 @@ trait Content
         ];
 
         if ($newData->image_desktop) {
+            $imgAttr['class'] = 'hero-image d-none d-sm-none d-md-block';
             $image = wp_get_attachment_image( $newData->image_desktop['ID'], 'hero-banner', false, $imgAttr );
+            $imgAttr['class'] = 'hero-image d-block d-sm-block d-md-none';
             $imageMobile = wp_get_attachment_image( $newData->image_desktop['ID'], 'hero-banner-mobile', false, $imgAttr );
         }
 
         if ($newData->image_mobile) {
+            $imgAttr['class'] = 'hero-image d-block d-sm-block d-md-none';
             $imageMobile = wp_get_attachment_image( $newData->image_mobile['ID'], 'hero-banner-mobile', false, $imgAttr );
         }
         
@@ -136,6 +139,7 @@ trait Content
             'image' => $image,
             'image_mobile' => $imageMobile,
             'video_url' => $newData->video_url,
+            'is_autoplay' => $newData->is_autoplay
         ];
     }
 
