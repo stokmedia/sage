@@ -10,11 +10,11 @@
     @include aspect-ratio(18,5);
   }
 
+  &::before {
+    width: 0 !important;
+  }
+
   .box-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
     width: 100%;
     padding: 1.25rem 0.3125rem;
 

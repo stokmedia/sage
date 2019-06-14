@@ -105,6 +105,26 @@ trait Content
         
         return $items;
     }
+
+    public static function getInstagramData($options=[])
+    {
+        $args = array(
+            'post_status' => 'publish',
+            'post_type' => 'instagram',
+            'orderby' => 'date',
+            'order' => 'DESC',
+        );
+
+        if ($options) {
+            foreach ($options as $key=>$item) {
+                $args[ $key ] = $item;
+            }
+        }
+
+        $data = get_posts($args);
+
+        return wp_list_pluck( $data, 'ID' );
+    }     
     
     public static function cms_hero_banner( $data )
     { 
@@ -145,7 +165,58 @@ trait Content
 
     public static function cms_instagram_grid( $data )
     {   
-        return (object) $data;
+        $data = (object) $data;
+        $imageCount = 13;
+
+        if ($hashtags = $data->filter_by_hashtag) {
+            $taxQuery = [
+                'taxonomy' => 'hashtag',
+                'field'    => 'term_id',
+                'terms'    => $hashtags,                
+            ];
+        }
+
+        $original = self::getInstagramData([
+            'posts_per_page' => $imageCount,
+            'ignore_sticky_posts' => 1,
+            'tax_query' => $taxQuery
+        ]);
+        
+        // Add filler if original images is less than the $imageCount value
+        if (count($original) < $imageCount) {
+            $fill = self::getInstagramData([
+                'posts_per_page' => $imageCount - count($original),
+                'ignore_sticky_posts' => 1,
+                'post__not_in' => $original
+            ]);
+        }
+
+        $allIDs = array_merge($original, ($fill ?? []));
+        $instaImages = array_map( function( $id ) {
+            return (object) [
+                'image_small' => wp_get_attachment_image(get_post_thumbnail_id($id), 'square-small' ),
+                'image_large' => wp_get_attachment_image(get_post_thumbnail_id($id), 'large' ),
+                'link' => get_post_meta($id, 'instagram_link', true)
+            ];
+        }, $allIDs );
+
+        $instagramLinkIndex = array_search('instagram', array_column( self::socialLinks(), 'media'));
+        if ($instagramLinkIndex) {
+            $instagramLink = [
+                'title' => get_field( 'translate_follow_us', self::currentLang() ),
+                'url' => self::socialLinks()[ $instagramLinkIndex ]['url'],
+                'target' => '_blank'
+            ];
+        }
+
+        return (object) [
+            'acf_fc_layout' => $data->acf_fc_layout,
+            'instagram_images' => $instaImages,
+            'instagram_link' => (object) $instagramLink ?? [],
+            'title' => self::hasTitle($data) ? $data->section_title : '',
+            'text' => $data->text,
+            'image' => $data->image ? wp_get_attachment_image_url( $data->image['ID'], 'instagram-bg' ) : '',
+        ];
     }  
     
     public static function cms_newsletter_signup( $data )
