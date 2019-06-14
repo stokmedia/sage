@@ -130,6 +130,7 @@ trait Content
         return (object) [
             'acf_fc_layout' => $newData->acf_fc_layout,
             'title' => self::hasTitle($newData) ? $newData->section_title : '',
+            'show_title' => $newData->show_section_title,
             'text' => $newData->text ?? '',
             'link' => is_array($newData->link) ? (object) $newData->link : false,
             'image' => $image,
