@@ -1,4 +1,4 @@
-<div id="js-alert" data-class-default="alert alert-dismissible fade show fixed-top" role="alert"
+<div id="js-alert" data-class-default="alert fade show fixed-top" role="alert"
      style="display:none; z-index:1031"
      data-class-success="alert-success" data-class-warning="alert-warning" data-class-danger="alert-danger">
     <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
@@ -10,7 +10,6 @@
         </div>
         <button id="js-alert-button" data-class-default="btn btn-sm btn-primary text-body"
                 data-class-special="btn btn-sm btn-primary bg-white text-body"
-                type="button"
-                data-dismiss="alert"></button>
+                type="button"></button>
     </div>
 </div>

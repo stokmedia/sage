@@ -16,7 +16,7 @@ var Alert = {};
         switch ( type ) {
             case 'success':
                 alertClass += target.data( 'classSuccess' );
-                buttonClass = button.data( 'buttonSpecial' );
+                buttonClass = button.data( 'classSpecial' );
                 imageSource = image.data( 'iconSuccess' );
                 break;
             case 'warning':
@@ -34,9 +34,23 @@ var Alert = {};
         target.attr( 'class', alertClass );
         image.attr( 'src', imageSource );
         text.text( message );
-        buttonText.text( buttonText );
+        button.text( buttonText );
         button.attr( 'class', buttonClass );
         target.show();
     };
 
+    $( function () {
+        if ( target.length === 0 ) {
+            return;
+        }
+
+        button.click( function () {
+
+
+            target.hide();
+        } );
+    } )
+
 })( jQuery );
+
+window.Alert = Alert;
