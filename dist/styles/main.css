@@ -17037,16 +17037,16 @@ body#tinymce {
   margin: 12px !important;
 }
 
-/* line 3, resources/assets/styles/sections/_fifty-fifthy-section.scss */
+/* line 3, resources/assets/styles/sections/_fifty-fifty-section.scss */
 
-.fifty-fifty-item figure {
+.fifty-fifty-item.image {
   position: relative;
   overflow: hidden;
 }
 
 /* line 6, resources/assets/styles/common/_mixins.scss */
 
-.fifty-fifty-item figure::before {
+.fifty-fifty-item.image::before {
   display: block;
   content: " ";
   width: 100%;
@@ -17055,12 +17055,12 @@ body#tinymce {
 
 /* line 13, resources/assets/styles/common/_mixins.scss */
 
-.fifty-fifty-item figure > img,
-.fifty-fifty-item figure > video,
-.fifty-fifty-item figure > figure,
-.fifty-fifty-item figure > .ratio-content,
-.fifty-fifty-item figure > iframe,
-.fifty-fifty-item figure > .ratio-iframe {
+.fifty-fifty-item.image > img,
+.fifty-fifty-item.image > video,
+.fifty-fifty-item.image > figure,
+.fifty-fifty-item.image > .ratio-content,
+.fifty-fifty-item.image > iframe,
+.fifty-fifty-item.image > .ratio-iframe {
   position: absolute;
   top: 0;
   left: -9999px;
@@ -17077,7 +17077,7 @@ body#tinymce {
 
 /* line 32, resources/assets/styles/common/_mixins.scss */
 
-.fifty-fifty-item figure > iframe {
+.fifty-fifty-item.image > iframe {
   min-height: 200%;
   min-width: 200%;
 }
@@ -19177,7 +19177,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 3, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 3, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty.is-text-first .fifty-fifty-content {
     padding-left: 2rem;
@@ -19187,7 +19187,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 1240px) {
-  /* line 3, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 3, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty.is-text-first .fifty-fifty-content {
     padding-left: 0;
@@ -19197,7 +19197,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 18, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 18, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty.is-image-first .fifty-fifty-content {
     padding-left: 2rem;
@@ -19207,7 +19207,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 1240px) {
-  /* line 18, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 18, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty.is-image-first .fifty-fifty-content {
     padding-left: 0;
@@ -19216,14 +19216,14 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 32, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+/* line 32, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
 .fifty-fifty-item {
   padding-left: 30px;
   padding-right: 30px;
 }
 
-/* line 37, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+/* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
 .fifty-fifty-content {
   width: 95%;
@@ -19232,7 +19232,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content {
     width: 100%;
@@ -19242,7 +19242,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 1240px) {
-  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content {
     max-width: 31.25rem;
@@ -19250,14 +19250,14 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 1480px) {
-  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content {
     max-width: 38.125rem;
   }
 }
 
-/* line 56, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+/* line 56, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
 .fifty-fifty-content h2 {
   font-family: "Source Serif Pro", serif;
@@ -19267,7 +19267,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 56, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 56, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content h2 {
     font-size: 2.25rem;
@@ -19276,7 +19276,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 69, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+/* line 69, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
 .fifty-fifty-content p {
   font-family: "Source Serif Pro", serif;
@@ -19288,7 +19288,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 69, resources/assets/styles/skhoop/sections/_fifty-fifthy-section.scss */
+  /* line 69, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content p {
     font-size: 1.25rem;
