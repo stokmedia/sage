@@ -42,9 +42,9 @@
         },
         {
             "key": "field_5cf12611a91f4",
-            "label": "Filter post",
-            "name": "filter_post",
-            "type": "group",
+            "label": "Filter by hashtag",
+            "name": "filter_by_hashtag",
+            "type": "taxonomy",
             "instructions": "Will show the recent Instagram photos with this filter.",
             "required": 0,
             "conditional_logic": 0,
@@ -53,49 +53,14 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
-            "sub_fields": [
-                {
-                    "key": "field_5cf126cba91f5",
-                    "label": "Account",
-                    "name": "account",
-                    "type": "user",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "role": "",
-                    "allow_null": 1,
-                    "multiple": 0,
-                    "return_format": "id"
-                },
-                {
-                    "key": "field_5cf127efa91f6",
-                    "label": "Hashtag",
-                    "name": "hashtag",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "category",
-                    "field_type": "multi_select",
-                    "allow_null": 1,
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "multiple": 0
-                }
-            ]
+            "taxonomy": "hashtag",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
         }
     ],
     "location": [
@@ -115,5 +80,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1559308363
+    "modified": 1560491039
 }

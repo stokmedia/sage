@@ -1,136 +1,161 @@
+{{-- <pre>{{ var_dump($section) }}</pre> --}}
+
 <section class="section instagram">
-  <div class="instagram-gallery d-none d-md-block" style="background-image: url('@asset('images/instagram/bg.jpg')');">
-    <div class="col-wrap instagram-info-margin">
-      <div class="col-group">
-        <div class="col-side"></div>
-        <div class="col-side">
-          <div class="instagram-info">
-              <div class="btn-header d-flex justify-content-center">
+    <div class="instagram-gallery d-none d-md-block" style="background-image: url('@asset('images/instagram/bg.jpg')');">
+
+        @if ( ($section->instagram_link->url && $section->instagram_link->title) || $section->title || $section->text )
+            <div class="col-wrap instagram-info-margin">
+                <div class="col-group">
+                    <div class="col-side"></div>
+                    <div class="col-side">
+                        <div class="instagram-info">
+                            <div class="btn-header d-flex justify-content-center">
+                                @if ($section->instagram_link->url && $section->instagram_link->title)
+                                    <a href="{{ $section->instagram_link->url }}" 
+                                        class="btn btn-sm btn-primary text-uppercase" 
+                                        target="{{ $section->instagram_link->target }}">{{ $section->instagram_link->title }}</a>
+                                @endif
+
+                                @if ($section->title)
+                                    <h3 class="h3">{{ $section->title }}</h3>
+                                @endif
+                            </div>
+
+                            @if ($section->text)
+                                <div class="info">{!! $section->text !!}</div>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        @if ($section->instagram_images)
+            <div class="col-wrap">
+                <div class="col-group">
+                    <div class="col-side">
+                        <div class="tile-group justify-content-end align-items-end">
+
+                            @include( 'partials.instagram-image', [
+                                'image' => $section->instagram_images[0],
+                                'isLarge' => true,
+                                'tileClass' => 'is-three'
+                            ] )
+
+                            <div class="tile-block">
+
+                                @for ($i = 1; $i <= 2; $i++)
+                                    @include( 'partials.instagram-image', [
+                                        'image' => $section->instagram_images[ $i ],
+                                        'isLarge' => false,
+                                        'tileClass' => ''
+                                    ] )
+                                @endfor
+                                @php $lastIndex = $i @endphp
+
+                            </div>
+                        </div>
+                        <div class="tile-group justify-content-end">
+
+                            @for ($i = $lastIndex; $i < $lastIndex+3; $i++)
+                                @include( 'partials.instagram-image', [
+                                    'image' => $section->instagram_images[ $i ],
+                                    'isLarge' => false,
+                                    'tileClass' => ''
+                                ] )
+                            @endfor
+                            @php $lastIndex = $i @endphp
+
+                        </div>
+                    </div>
+                    <div class="col-side">
+                        <div class="tile-group">
+                            <div class="tile-block-hidden"></div>
+                        </div>
+                        <div class="tile-group">
+
+                            @for ($i = $lastIndex; $i < $lastIndex+3; $i++)
+                                @include( 'partials.instagram-image', [
+                                    'image' => $section->instagram_images[ $i ],
+                                    'isLarge' => false,
+                                    'tileClass' => ''
+                                ] )                                  
+                            @endfor
+                            @php $lastIndex = $i @endphp
+
+                        </div>
+                        <div class="tile-group">
+                            <div class="tile-block">
+
+                                @for ($i = $lastIndex; $i < $lastIndex+2; $i++)
+                                    @include( 'partials.instagram-image', [
+                                        'image' => $section->instagram_images[ $i ],
+                                        'isLarge' => false,
+                                        'tileClass' => ''
+                                    ] )
+                                @endfor
+                                @php $lastIndex = $i @endphp  
+                                
+                            </div>
+
+                            @include( 'partials.instagram-image', [
+                                'image' => $section->instagram_images[ $lastIndex ],
+                                'isLarge' => true,
+                                'tileClass' => 'is-three'
+                            ] )  
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+    </div>
+
+    <div class="instagram-gallery-mobile d-block d-md-none" style="background-image: url(@asset('images/temp/instagram-bg.jpg')">
+        <div class="instagram-info text-center">
+            <div class="btn-header">
+                <h3 class="h3 mb-0">@skhoopskirts</h3>
                 <a href="#" class="btn btn-sm btn-primary text-uppercase">FOLLOW US</a>
-                <h3 class="h3">@skhoopskirts</h3>
-              </div>
-              <div class="info">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce</div>
-          </div>
+            </div>
+            <div class="info">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce </div>
         </div>
-      </div>
+
+        @if ($section->instagram_images)
+            @php
+            $isLarge = false;
+            $isMobile = true;
+            @endphp
+            
+            <div class="instagram-col">
+                @foreach ($section->instagram_images as $image)
+                    @if ($loop->iteration === 1)
+                        <div class="row">
+                            @include( 'partials.instagram-image' )
+                        </div>
+                        
+                    @elseif ($loop->iteration <= 5)
+                        @if ($loop->iteration % 2 === 0)
+                        <div class="row">
+                        @endif
+
+                            @include( 'partials.instagram-image' )
+
+                        @if ($loop->iteration % 2 === 1)
+                        </div>                
+                        @endif
+                    @else
+                        @if ($loop->iteration % 4 === 2)
+                        <div class="row">            
+                        @endif
+
+                            @include( 'partials.instagram-image' )
+
+                        @if ($loop->iteration % 4 === 1 || $loop->iteration === count($section->instagram_images))
+                        </div>
+                        @endif
+                    @endif
+                @endforeach
+            </div>
+        @endif
     </div>
-    <div class="col-wrap">
-      <div class="col-group">
-        <div class="col-side">
-          <div class="tile-group justify-content-end align-items-end">
-            <div class="tile is-three">
-              <img src="@asset('images/instagram/01.png')" class="" alt="">
-            </div>
-            <div class="tile-block">
-              <div class="tile">
-                <img src="@asset('images/instagram/02.png')" class="" alt="">
-              </div>
-              <div class="tile">
-                <img src="@asset('images/instagram/03.png')" class="" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="tile-group justify-content-end">
-            <div class="tile">
-              <img src="@asset('images/instagram/04.png')" class="" alt="">
-            </div>
-            <div class="tile">
-              <img src="@asset('images/instagram/05.png')" class="" alt="">
-            </div>
-            <div class="tile">
-              <img src="@asset('images/instagram/06.png')" class="" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="col-side">
-          <div class="tile-group">
-            <div class="tile-block-hidden"></div>
-          </div>
-          <div class="tile-group">
-            <div class="tile">
-              <img src="@asset('images/instagram/07.png')" class="" alt="">
-            </div>
-            <div class="tile">
-              <img src="@asset('images/instagram/08.png')" class="" alt="">
-            </div>
-            <div class="tile">
-              <img src="@asset('images/instagram/09.png')" class="" alt="">
-            </div>
-          </div>
-          <div class="tile-group">
-            <div class="tile-block">
-              <div class="tile">
-                <img src="@asset('images/instagram/10.png')" class="" alt="">
-              </div>
-              <div class="tile">
-                <img src="@asset('images/instagram/11.png')" class="" alt="">
-              </div>
-            </div>
-            <div class="tile is-three">
-              <img src="@asset('images/instagram/12.png')" class="" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="instagram-gallery-mobile d-block d-md-none" style="background-image: url(@asset('images/temp/instagram-bg.jpg')">
-    <div class="instagram-info text-center">
-      <div class="btn-header">
-        <h3 class="h3 mb-0">@skhoopskirts</h3>
-        <a href="#" class="btn btn-sm btn-primary text-uppercase">FOLLOW US</a>
-      </div>
-      <div class="info">In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce </div>
-    </div>
-    <div class="instagram-col">
-      {{-- 100% --}}
-      <div class="row">
-        <div class="col">
-          <figure class="tile">
-            <img src="@asset('images/instagram/01.png')" alt="">
-          </figure>
-        </div>
-      </div>
-      {{-- 50% --}}
-      @for ($i = 0; $i < 2; $i++)
-        <div class="row">
-          <div class="col">
-            <figure class="tile">
-              <img src="@asset('images/instagram/01.png')" alt="">
-            </figure>
-          </div>
-          <div class="col">
-            <figure class="tile">
-              <img src="@asset('images/instagram/01.png')" alt="">
-            </figure>
-          </div>
-        </div>
-      @endfor
-      {{-- 25% --}}
-      @for ($i = 0; $i < 2; $i++)
-        <div class="row">
-          <div class="col">
-            <figure class="tile">
-              <img src="@asset('images/instagram/01.png')" alt="">
-            </figure>
-          </div>
-          <div class="col">
-            <figure class="tile">
-              <img src="@asset('images/instagram/01.png')" alt="">
-            </figure>
-          </div>
-          <div class="col">
-            <figure class="tile">
-              <img src="@asset('images/instagram/01.png')" alt="">
-            </figure>
-          </div>
-          <div class="col">
-            <figure class="tile">
-              <img src="@asset('images/instagram/01.png')" alt="">
-            </figure>
-          </div>
-        </div>
-      @endfor
-    </div>
-  </div>
 </section>

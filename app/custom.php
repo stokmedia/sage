@@ -113,6 +113,7 @@ add_image_size( 'hero-banner-mobile', 640, 955, true );
 add_image_size( 'instagram-bg', 640, 955, true );
 add_image_size( 'newsletter', 960, 480, true );
 add_image_size( 'newsletter-modal', 540, 435, true );
+add_image_size( 'square-small', 480, 480, true );
 
 
 // TODO: add custom size for category-banner-mobile
