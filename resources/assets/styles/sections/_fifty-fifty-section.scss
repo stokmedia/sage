@@ -1,6 +1,6 @@
 .fifty-fifty {
   &-item {
-    figure {
+    &.image {
       @include aspect-ratio(1, 1);
     }
   }

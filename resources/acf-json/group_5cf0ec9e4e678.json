@@ -41,10 +41,53 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_5d03786d39469",
+            "label": "Text",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5d03787c3946a",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5cf12611a91f4",
-            "label": "Filter post",
-            "name": "filter_post",
-            "type": "group",
+            "label": "Filter by hashtag",
+            "name": "filter_by_hashtag",
+            "type": "taxonomy",
             "instructions": "Will show the recent Instagram photos with this filter.",
             "required": 0,
             "conditional_logic": 0,
@@ -53,49 +96,14 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
-            "sub_fields": [
-                {
-                    "key": "field_5cf126cba91f5",
-                    "label": "Account",
-                    "name": "account",
-                    "type": "user",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "role": "",
-                    "allow_null": 1,
-                    "multiple": 0,
-                    "return_format": "id"
-                },
-                {
-                    "key": "field_5cf127efa91f6",
-                    "label": "Hashtag",
-                    "name": "hashtag",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "category",
-                    "field_type": "multi_select",
-                    "allow_null": 1,
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "multiple": 0
-                }
-            ]
+            "taxonomy": "hashtag",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
         }
     ],
     "location": [
@@ -115,5 +123,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1559308363
+    "modified": 1560508575
 }

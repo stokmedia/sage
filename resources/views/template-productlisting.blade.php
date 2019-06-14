@@ -7,8 +7,8 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
 
-    <section class="section category-banner no-mb" style="background-image:url( @asset('images/temp/category-banner.jpg') );">
-      <div class="box-wrapper d-flex align-items-end">
+    <section class="section category-banner d-flex no-mb" style="background-image:url( @asset('images/temp/category-banner.jpg') );">
+      <div class="box-wrapper d-flex align-self-end">
         <div class="container">
           <div class="category-banner-info text-center text-sm-left">
             <div class="title h3">
