@@ -1,4 +1,3 @@
-@dump($section)
 {{-- <section class='section-hero-banner'>
     <div class='hero-wrap'>
 
@@ -54,14 +53,17 @@
             {!! $section->image !!}
             {!! $section->image_mobile !!}
 
-            <!-- Play button -->
-            <!-- <div class='hero-play-btn js-hide-on-play js-playvideo'>
-                <button id='js-playvideo' class='btn btn-lg btn-icon btn-icon-lg btn-primary'>
-                    <img src="@asset('images/icon/icon-play.svg')" alt="">
-                </button>
-            </div> -->
+            @if($section->video_url && !$section->title && !$section->text && !$section->link)
+                <!-- Play button -->
+                <div class="hero-play-btn js-hide-on-play js-playvideo d-block d-sm-block d-md-none">
+                    <button id="js-playvideo" class="btn btn-lg btn-icon btn-icon-lg btn-primary">
+                        <img src="@asset('images/icon/icon-play.svg')" alt="">
+                    </button>
+                </div>
+            @endif
         </div>
 
+        {!! $section->video_tag !!}
         <!-- Video Tag -->
         <!-- <video class='hero-video js-video-tag' autoplay='autoplay' muted='muted' loop='loop' playsinline='playsinline'>
             <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
