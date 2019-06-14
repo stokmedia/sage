@@ -27,7 +27,7 @@
                 </figure>
               @endfor
             </div>
-            <div class="selected-product-blur rounded-circle" style="background: url(@asset('images/temp/selected-product-blur.jpg')) no-repeat center/cover transparent"></div>
+            <div class="selected-product-blur d-lg-block d-none rounded-circle" style="background: url(@asset('images/temp/selected-product-blur.jpg')) no-repeat center/cover transparent"></div>
           </div>
           <div class="selected-product-thumbnail d-none d-lg-flex flex-column">
             @for ($thumbnail = 0; $thumbnail < 3; $thumbnail++)
