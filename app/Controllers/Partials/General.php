@@ -35,6 +35,32 @@ trait General
         return $list;
     }
 
+    public static function getResellerLists()
+    {
+        $posts = get_posts([
+            'post_type' => 'reseller',
+            'posts_per_page'=> -1,
+        ]);
+    
+        return array_map( function ($post) {
+            $url = get_field( 'website', $post->ID );
+
+            $link = [
+                'url' => $url,
+                'title' => preg_replace( "(^https?://)", "", $url ),
+                'target' => '_blank',
+            ];
+
+            return [
+                'title' => $post->post_title,
+                'country' => get_field( 'country', $post->ID ),
+                'city' => get_field( 'city', $post->ID ),
+                'link' => $link,
+                'is_agent' => get_field( 'is_agent', $post->ID ),
+            ];
+        }, $posts );
+    }
+
     public function defaultUsp()
     {
         return self::getDefaultUsp();
@@ -63,30 +89,10 @@ trait General
     {
         return self::getSizeGuideData();
     }
+
     
     public function resellerLists()
     {
-        $posts = get_posts([
-            'post_type' => 'reseller',
-            'posts_per_page'=> -1,
-        ]);
-    
-        return array_map(function ($post) {
-            $url = get_field( 'website', $post->ID );
-
-            $link = [
-                'url' => $url,
-                'title' => preg_replace( "(^https?://)", "", $url ),
-                'target' => '_blank',
-            ];
-
-            return [
-                'title' => $post->post_title,
-                'country' => get_field( 'country', $post->ID ),
-                'city' => get_field( 'city', $post->ID ),
-                'link' => $link,
-                'is_agent' => get_field( 'is_agent', $post->ID ),
-            ];
-        }, $posts);        
+        return self::getResellerLists();
     }
 }
