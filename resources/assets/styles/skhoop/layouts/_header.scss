@@ -313,14 +313,16 @@ $mobile-margin-top-menu: 3.75rem;
   }
 
 	&:after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(41,41,41,0.8);
-    z-index: 3;
+    @include media-breakpoint-down(md) {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(41,41,41,0.8);
+      z-index: 3;
+    }
 	}
 }
 
