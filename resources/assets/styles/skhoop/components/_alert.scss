@@ -9,6 +9,20 @@
   &-container {
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;
+
+    >.col {
+      .iphone & {
+        @include media-max(576px) {
+          display: inline-block !important;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+      padding: 0.5625rem 1.25rem;
+    }
 
     img {
       width: 40px;
@@ -30,6 +44,13 @@
 
     @include media-breakpoint-up(sm) {
       margin: 0 2.75rem;
+    }
+
+    .iphone & {
+      @include media-max(576px) {
+        display: block!important;
+        width: 100%;
+      }
     }
   }
 

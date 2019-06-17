@@ -17770,16 +17770,34 @@ blockquote footer::before,
 .alert-container {
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
-/* line 13, resources/assets/styles/skhoop/components/_alert.scss */
+@media screen and (max-width: 576px) {
+  /* line 15, resources/assets/styles/skhoop/components/_alert.scss */
+
+  .iphone .alert-container > .col {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 576px) {
+  /* line 9, resources/assets/styles/skhoop/components/_alert.scss */
+
+  .alert-container {
+    text-align: left;
+    padding: 0.5625rem 1.25rem;
+  }
+}
+
+/* line 27, resources/assets/styles/skhoop/components/_alert.scss */
 
 .alert-container img {
   width: 40px;
   height: 40px;
 }
 
-/* line 19, resources/assets/styles/skhoop/components/_alert.scss */
+/* line 33, resources/assets/styles/skhoop/components/_alert.scss */
 
 .alert-text {
   color: #031532;
@@ -17790,7 +17808,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 19, resources/assets/styles/skhoop/components/_alert.scss */
+  /* line 33, resources/assets/styles/skhoop/components/_alert.scss */
 
   .alert-text {
     font-size: 1.25rem;
@@ -17799,14 +17817,23 @@ blockquote footer::before,
 }
 
 @media (min-width: 576px) {
-  /* line 19, resources/assets/styles/skhoop/components/_alert.scss */
+  /* line 33, resources/assets/styles/skhoop/components/_alert.scss */
 
   .alert-text {
     margin: 0 2.75rem;
   }
 }
 
-/* line 36, resources/assets/styles/skhoop/components/_alert.scss */
+@media screen and (max-width: 576px) {
+  /* line 49, resources/assets/styles/skhoop/components/_alert.scss */
+
+  .iphone .alert-text {
+    display: block !important;
+    width: 100%;
+  }
+}
+
+/* line 57, resources/assets/styles/skhoop/components/_alert.scss */
 
 .alert .btn.btn-sm,
 .alert .btn-group-sm > .btn,
