@@ -11,7 +11,7 @@ namespace App\Classes;
 
 class VideoHelper
 {
-    private static $currentId = 1;
+    // private static $currentId = 1;
 
     public static function getVideoTag( $videoURL, $videoLoop = false, $videoAddControls = true, $autoplayDesktop = false,
                                         $autoplayMobile = false, $videoBackground = false, $class = "" )
