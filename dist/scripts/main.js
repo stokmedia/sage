@@ -16324,18 +16324,28 @@ var sliders = {
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {var $slider = $('.selected-product-slider').flickity({
-    prevNextButtons: $(window).innerWidth() < 992,
-    pageDots: false,
-    contain: true,
-    cellAlign: 'left',
-    fullscreen: $(window).innerWidth() > 991,
-    percentPosition: false,
-    dragThreshold: 10,
-  }),
-  $flkty = $slider.data('flickity'),
-  $thumbnailGroup = $('.selected-product-thumbnail'),
-  $thumbnailGroupItems = $thumbnailGroup.find('.item');
+/* WEBPACK VAR INJECTION */(function($) {var $slider, $flkty, $thumbnailGroup, $thumbnailGroupItems, $productPeview;
+
+$slider = $('.selected-product-slider');
+$thumbnailGroup = $('.selected-product-thumbnail');
+$thumbnailGroupItems = $thumbnailGroup.find('.item');
+$productPeview = $('.selected-product-preview');
+
+$slider.on('ready.flickity', function () {
+  $productPeview.removeClass('invisible');
+});
+
+$slider.flickity({
+  pageDots: false,
+  contain: true,
+  cellAlign: 'left',
+  percentPosition: false,
+  dragThreshold: 10,
+  prevNextButtons: $(window).innerWidth() < 992,
+  fullscreen: $(window).innerWidth() > 991,
+});
+
+$flkty = $slider.data('flickity');
 
 $slider.flickity('resize');
 
