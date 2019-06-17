@@ -53,7 +53,7 @@
             {!! $section->image !!}
             {!! $section->image_mobile !!}
 
-            @if($section->video_url && !$section->title && !$section->text && !$section->link)
+            @if($section->video_tag && !$section->title && !$section->text && !$section->link)
                 <!-- Play button -->
                 <div class="hero-play-btn js-hide-on-play js-playvideo d-block d-sm-block d-md-none">
                     <button id="js-playvideo" class="btn btn-lg btn-icon btn-icon-lg btn-primary">
