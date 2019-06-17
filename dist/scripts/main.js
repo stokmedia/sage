@@ -16525,7 +16525,6 @@ Nav.menuPosition = function() {
   var header = $('.js-header');
   var menu = $('.navbar-collapse, .nav-item.dropdown .dropdown-menu');
   var headerPosition = header.position().top + header.outerHeight(true);
-  console.log(headerPosition);
   changePosition(menu, headerPosition);
 
   window.onresize = function () {
@@ -16535,6 +16534,7 @@ Nav.menuPosition = function() {
 
   function changePosition(menu, headerPosition) {
     menu.css('margin-top', headerPosition + 'px');
+    console.log(headerPosition);
   }
 };
 
