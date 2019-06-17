@@ -16376,7 +16376,7 @@ GridSlider.slider = function () {
 
   var optionsLeft = {
     cellAlign: 'left',
-    groupCells: true,
+    wrapAround: true,
     prevNextButtons: false,
     pageDots: false,
     dragThreshold: 15,
@@ -16384,12 +16384,13 @@ GridSlider.slider = function () {
 
   // var optionsRight = {
   //   cellAlign: 'right',
+  //   groupCells: true,
   //   prevNextButtons: false,
   //   pageDots: false,
   //   dragThreshold: 15,
   // };
 
-  $gridSlider.flickity(optionsLeft);
+  var $slider = $gridSlider.flickity(optionsLeft);
 
   var $prevButton = $('.js-flickity-prev');
   var $nextButton = $('.js-flickity-next');
@@ -16418,6 +16419,10 @@ GridSlider.slider = function () {
 
   //   $slider.flickity('resize');
   // });
+
+  $slider.on('change.flickity', function () {
+    $('.popular-products-grid-slider .grid-slider-item:first-child').css('padding-left', '0');
+  });
 };
 
 GridSlider.slider();

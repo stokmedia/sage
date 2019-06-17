@@ -90,6 +90,7 @@
 
     .custom-control-input:checked ~ .custom-control-label {
       background-color: $body-color;
+      border: 0.0625rem solid $body-color;
 
       span {
         color: $white;
