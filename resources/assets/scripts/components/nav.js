@@ -29,7 +29,7 @@ Nav.menuPosition = function() {
   window.onresize = function () {
     headerPosition = header.position().top + header.outerHeight(true);
     changePosition(menu, headerPosition);
-
+    console.log('onresize');
   };
 
   function changePosition(menu, headerPosition) {
