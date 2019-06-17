@@ -91,7 +91,10 @@
             </ul>
           </div>
 
-          <button type="button" class="btn btn-lg btn-primary text-uppercase">Lägg i kundkorg</button>
+          <button type="button" class="btn btn-lg btn-primary text-uppercase is-loading">
+            Lägg i kundkorg
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <!-- Loading spinner, just add '.is-loading' class to '.btn' -->
+          </button>
 
           <ul class="list-group accordion mt-5" id="productAccordion">
             @for ($accordion = 0; $accordion < 4; $accordion++)
