@@ -16735,12 +16735,12 @@ Nav.overlay = function() {
 
   navBarCollapse.on('show.bs.collapse', function () {
     $('body').addClass('nav-overlay');
-    __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpressScroll */].disableBodyScroll(true, 'navbar-collapse');
+    __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpressScroll */].disableBodyScroll(true, '.navbar-collapse');
   })
 
   navBarCollapse.on('hidden.bs.collapse', function () {
     $('body').removeClass('nav-overlay');
-    __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpressScroll */].disableBodyScroll(false, 'navbar-collapse');
+    __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpressScroll */].disableBodyScroll(false, '.navbar-collapse');
   })
 };
 
