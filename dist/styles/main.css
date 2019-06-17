@@ -16953,11 +16953,17 @@ a.text-red:focus {
 
 /* line 1, resources/assets/styles/common/_global.scss */
 
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 5, resources/assets/styles/common/_global.scss */
+
 #wpadminbar {
   position: fixed !important;
 }
 
-/* line 6, resources/assets/styles/common/_global.scss */
+/* line 10, resources/assets/styles/common/_global.scss */
 
 img.lazy {
   -webkit-transition: opacity .3s ease-in;
@@ -16966,7 +16972,7 @@ img.lazy {
   opacity: 0;
 }
 
-/* line 9, resources/assets/styles/common/_global.scss */
+/* line 13, resources/assets/styles/common/_global.scss */
 
 img.lazy.loaded {
   opacity: 1;
