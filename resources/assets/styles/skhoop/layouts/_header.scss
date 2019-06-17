@@ -368,4 +368,14 @@ $mobile-margin-top-menu: 3.75rem;
       }
     }
   }
+
+  .navbar-collapse {
+    @include media-breakpoint-down(md) {
+      margin-top: 5.75rem;
+    }
+
+    @include media-max(782px) {
+      margin-top: 6.625rem;
+    }
+  }
 }

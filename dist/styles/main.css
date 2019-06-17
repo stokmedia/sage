@@ -19988,6 +19988,22 @@ html.is-flickity-fullscreen {
   }
 }
 
+@media (max-width: 991.98px) {
+  /* line 372, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .admin-bar .navbar-collapse {
+    margin-top: 5.75rem;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  /* line 372, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .admin-bar .navbar-collapse {
+    margin-top: 6.625rem;
+  }
+}
+
 /* line 1, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .content-info {
