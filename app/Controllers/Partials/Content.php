@@ -10,9 +10,18 @@ trait Content
 {
     public function content()
     {
+        return self::get_content();
+    }
+
+    public static function get_content( $postID=null )
+    {
         $data = [ ];
 
-        $flexibleContent = get_field( 'sections' );
+        if( empty(get_post()->ID) && empty($postID) ) {
+            return $data;
+        }
+
+        $flexibleContent = get_field( 'sections', $postID );
 
         if ( !$flexibleContent ) {
             return $data;
@@ -21,8 +30,8 @@ trait Content
         foreach ( $flexibleContent as $key => $content ) {
             $functionName = 'cms_' . str_replace( '-', '_', $content[ 'acf_fc_layout' ] );
 
-            if ( method_exists( $this, $functionName ) ) {
-                $thisContent = (object)self::$functionName( $content );
+            if ( method_exists( __CLASS__, $functionName ) ) {
+                $thisContent = (object) self::$functionName( $content );
 
                 if ( !empty( $thisContent ) ) {
                     $thisContent->id = $key + 1;
@@ -38,12 +47,12 @@ trait Content
             }
         }
 
-        return $data;
+        return $data;        
     }
 
     public static function hasTitle( $data )
     {
-        return ( $data->section_title && $data->show_section_title );
+        return ( !empty($data->section_title) && !empty($data->show_section_title) );
     }
 
     public static function getPromoData( $data )
@@ -215,7 +224,7 @@ trait Content
         $instagramLinkIndex = array_search( 'instagram', array_column( self::getSocialLinks(), 'media' ) );
         if ( $instagramLinkIndex ) {
             $instagramLink = [
-                'title' => get_field( 'translate_follow_us', self::currentLang() ),
+                'title' => get_field( 'translate_follow_us', Helper::current_lang() ),
                 'url' => self::getSocialLinks()[ $instagramLinkIndex ][ 'url' ],
                 'target' => '_blank'
             ];
@@ -402,7 +411,7 @@ trait Content
             'preamble' => $newData->preamble,
             'items' => $newData->content,
             'count' => $newData->count,
-            'view_all_btn' => get_field( 'translate_view_all', self::currentLang() )
+            'view_all_btn' => get_field( 'translate_view_all', Helper::current_lang() )
         ];
     }
 
@@ -447,10 +456,7 @@ trait Content
         $isSectionsWithNoBottomAdjustment = in_array( $current, $sectionsWithNoBottomAdjustment );
 
         // Check if current section in $sectionsWithNoBottomAdjustment
-        $nextSectionHasBg = in_array( $nextSection, $sectionsWithBg );
-
-        // Check if current section in $sectionsWithBg
-        $isSectionWithBg = in_array( $current, $sectionsWithBg );   
+        $nextSectionHasBg = in_array( $nextSection, $sectionsWithBg ); 
         
         // Check if current section is newsletter
         $isNewsletter = ($current==='newsletter-signup');

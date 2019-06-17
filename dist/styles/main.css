@@ -18210,15 +18210,16 @@ blockquote footer::before,
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
   background-color: #031532;
+  border: 0.0625rem solid #031532;
 }
 
-/* line 94, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 95, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label span {
   color: #fff;
 }
 
-/* line 100, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 101, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label::before {
   content: "";
@@ -19804,14 +19805,20 @@ html.is-flickity-fullscreen {
   /* line 241, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-collapse {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: 100%;
     max-width: 23.4375rem;
-    height: 100vh !important;
-    overflow-y: auto;
+    height: 100vh;
+    max-height: 100vh !important;
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
     margin-top: 3.75rem;
     background-color: #b7cad0;
   }
@@ -19825,20 +19832,20 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 259, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 264, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch {
   padding-bottom: 1.875rem;
 }
 
-/* line 262, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 267, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav {
   padding-top: 0;
   background-color: #b7cad0;
 }
 
-/* line 266, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 271, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li,
@@ -19846,7 +19853,7 @@ html.is-flickity-fullscreen {
   border-bottom: 1px solid #fff;
 }
 
-/* line 269, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 274, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item .btn-checkout,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li .btn-checkout,
@@ -19859,7 +19866,7 @@ html.is-flickity-fullscreen {
   text-transform: uppercase;
 }
 
-/* line 277, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 282, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item .btn-checkout:hover,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li .btn-checkout:hover,
@@ -19872,7 +19879,7 @@ html.is-flickity-fullscreen {
   color: #031532;
 }
 
-/* line 287, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 292, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info {
   padding-top: 3.125rem;
@@ -19880,19 +19887,27 @@ html.is-flickity-fullscreen {
   background-color: #b7cad0;
 }
 
-/* line 293, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 298, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info .brand-footer img {
   max-width: 5.8125rem;
 }
 
-/* line 298, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 303, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info .group-links {
   margin-top: 1.25rem;
 }
 
-/* line 306, resources/assets/styles/skhoop/layouts/_header.scss */
+@media (max-width: 991.98px) {
+  /* line 310, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .nav-overlay {
+    overflow: hidden !important;
+  }
+}
+
+/* line 315, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-overlay:after {
   content: "";
@@ -19905,35 +19920,35 @@ html.is-flickity-fullscreen {
   z-index: 3;
 }
 
-/* line 318, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 327, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout {
   display: none !important;
 }
 
 @media (max-width: 991.98px) {
-  /* line 318, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 327, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout {
     text-align: center;
   }
 }
 
-/* line 325, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 334, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-checkout {
   margin-bottom: 0;
 }
 
 @media (max-width: 991.98px) {
-  /* line 325, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 334, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout .navbar-checkout {
     padding-bottom: 1.1875rem;
   }
 }
 
-/* line 333, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 342, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-spacer {
   width: 12.5rem;
@@ -19941,7 +19956,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (max-width: 991.98px) {
-  /* line 333, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 342, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout .navbar-spacer {
     width: auto;
@@ -19949,7 +19964,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 343, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 352, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-back {
   color: #031532;
@@ -19959,17 +19974,33 @@ html.is-flickity-fullscreen {
   text-decoration: underline;
 }
 
-/* line 354, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 363, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .admin-bar .navbar.fixed-top {
   top: 2.875rem;
 }
 
 @media screen and (min-width: 783px) {
-  /* line 354, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 363, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .admin-bar .navbar.fixed-top {
     top: 2rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* line 372, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .admin-bar .navbar-collapse {
+    margin-top: 5.75rem;
+  }
+}
+
+@media screen and (max-width: 782px) {
+  /* line 372, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .admin-bar .navbar-collapse {
+    margin-top: 6.625rem;
   }
 }
 
@@ -20760,18 +20791,19 @@ body#tinymce {
 /* line 215, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-details {
+  margin-top: -0.0625rem;
   color: #031532;
   border-bottom-right-radius: 0.3125rem;
   border-bottom-left-radius: 0.3125rem;
 }
 
-/* line 220, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 221, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-details:hover {
   color: #031532;
 }
 
-/* line 225, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 226, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-name {
   margin-bottom: 0;
@@ -20781,7 +20813,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 225, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 226, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-name {
     font-size: 0.8125rem;
@@ -20789,7 +20821,7 @@ body#tinymce {
   }
 }
 
-/* line 237, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 238, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-price {
   margin-top: -0.4375rem;
@@ -20799,7 +20831,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 237, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 238, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-price {
     margin-top: -0.1875rem;
@@ -20808,7 +20840,7 @@ body#tinymce {
   }
 }
 
-/* line 251, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 252, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big {
   -webkit-box-flex: 0;
@@ -20818,7 +20850,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 251, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 252, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big {
     -webkit-box-flex: 0;
@@ -20828,35 +20860,35 @@ body#tinymce {
   }
 }
 
-/* line 254, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 255, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 254, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 255, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big .product-wrapper {
     padding: 6.25rem 2.5rem 4.6875rem;
   }
 }
 
-/* line 262, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 263, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 262, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 263, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big .product-details {
     padding: 0 1.5rem 1.5625rem;
   }
 }
 
-/* line 271, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 272, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small {
   -webkit-box-flex: 0;
@@ -20866,7 +20898,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 271, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 272, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small {
     -webkit-box-flex: 0;
@@ -20876,48 +20908,48 @@ body#tinymce {
   }
 }
 
-/* line 274, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 275, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small .product-wrapper {
   padding: 2.5rem 0.9375rem 0.9375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 274, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 275, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small .product-wrapper {
     padding: 4.6875rem 2.3438rem 2.8125rem;
   }
 }
 
-/* line 282, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 283, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small .product-details {
   padding: 0 0.9375rem 0.3125rem;
 }
 
 @media (min-width: 992px) {
-  /* line 282, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 283, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small .product-details {
     padding: 0 0.75rem 1.5625rem;
   }
 }
 
-/* line 293, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 294, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-status {
   background-color: #d45656;
   color: #fff;
 }
 
-/* line 298, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 299, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-price {
   color: #d45656;
 }
 
-/* line 301, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 302, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-price span {
   margin-right: 0.3125rem;
@@ -20926,21 +20958,21 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 301, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 302, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-sale .product-price span {
     margin-right: 1.25rem;
   }
 }
 
-/* line 314, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 315, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-oos .product-status {
   background-color: #b7cad0;
   color: #fff;
 }
 
-/* line 319, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 320, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-oos .product-image {
   opacity: 0.5;

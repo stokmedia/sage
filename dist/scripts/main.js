@@ -16395,6 +16395,7 @@ GridSlider.slider = function () {
 
   // var optionsRight = {
   //   cellAlign: 'right',
+  //   groupCells: true,
   //   prevNextButtons: false,
   //   pageDots: false,
   //   dragThreshold: 15,
@@ -16428,6 +16429,10 @@ GridSlider.slider = function () {
   //   }
 
   //   $slider.flickity('resize');
+  // });
+
+  // $slider.on('change.flickity', function () {
+  //   $('.popular-products-grid-slider .grid-slider-item:first-child').css('padding-left', '0');
   // });
 };
 
@@ -16616,21 +16621,25 @@ Nav.menuPosition = function() {
   var header = $('.js-header');
   var menu = $('.navbar-collapse, .nav-item.dropdown .dropdown-menu');
   var headerPosition = header.position().top + header.outerHeight(true);
-
   changePosition(menu, headerPosition);
 
   window.onresize = function () {
     headerPosition = header.position().top + header.outerHeight(true);
     changePosition(menu, headerPosition);
+    console.log('onresize');
   };
 
   function changePosition(menu, headerPosition) {
     menu.css('margin-top', headerPosition + 'px');
+    console.log(headerPosition);
+
+    console.log('header position top: ' + header.position().top);
+    console.log('outerheight: ' + header.outerHeight(true));
   }
 };
 
 Nav.overlay();
-Nav.menuPosition();
+//Nav.menuPosition();
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 

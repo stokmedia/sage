@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-2 col-md-12">
                 <div class="brand-container">
-                    <a href="#" class="brand-footer">
+                    <a href="{{ $home_url }}" class="brand-footer">
                         {!! $logo['footerLogo'] !!}
                     </a>
 

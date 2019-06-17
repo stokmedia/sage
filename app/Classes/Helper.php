@@ -32,6 +32,18 @@ class Helper {
     }
 
     /**
+     * Get current language
+     *
+     * @param $value string
+     * @return string 
+     */
+    public static function current_lang( $value='slug' ) {
+        $defaultValue = $value == 'locale' ? 'en_GB' : 'en';
+
+		return function_exists('pll_current_language') ? pll_current_language( $value ) : $defaultValue;
+    }      
+
+    /**
      * Gets the translated page of saved architecture pages in Silk settings
      *
      * @return int 
