@@ -1,3 +1,13 @@
 #wpadminbar {
   position: fixed !important;
 }
+
+img{
+  &.lazy{
+      transition: opacity .3s ease-in;
+      opacity: 0;
+      &.loaded{
+          opacity: 1;
+      }
+  }
+}
