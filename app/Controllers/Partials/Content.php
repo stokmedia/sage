@@ -43,7 +43,7 @@ trait Content
 
     public static function hasTitle( $data )
     {
-        return ( $data->section_title && $data->show_section_title );
+        return ( !empty($data->section_title) && !empty($data->show_section_title) );
     }
 
     public static function getPromoData( $data )

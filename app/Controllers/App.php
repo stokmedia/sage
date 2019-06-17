@@ -73,6 +73,11 @@ class App extends Controller
         return $output;
     }
 
+    public function homeUrl()
+    {
+        return esc_url(home_url('/'));
+    }
+
     public function siteName()
     {
         return get_bloginfo( 'name' );

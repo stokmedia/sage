@@ -76,7 +76,7 @@ trait General
         $newsletterEnable = get_field( 'newsletter_enable', self::currentLang() );
         $modalContent = (object) get_field( 'newsletter_modal_content', self::currentLang() );
         $modalContent->title = self::hasTitle($modalContent) ? $modalContent->section_title : '';
-        $modalContent->image = $modalContent->image ? wp_get_attachment_image_url( $modalContent->image['ID'], 'newsletter' ) : null;      
+        $modalContent->image = !empty($modalContent->image) ? wp_get_attachment_image_url( $modalContent->image['ID'], 'newsletter' ) : null;      
 
         return (object) [
             'newsletter_enable' => $newsletterEnable,
