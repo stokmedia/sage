@@ -74,4 +74,20 @@ class Helper {
         return $str;
     }
 
+    /**
+     * Get array value by index
+     *
+     * @param $arr array, $pos number
+     * @return array 
+     */
+    public static function get_array_value_by_index( $arr, $pos ) {
+        if( empty($arr[ $pos ]) ) {
+            return;
+        }
+
+        return $arr[ $pos ];
+    }    
+
+
+
 }

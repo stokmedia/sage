@@ -28,7 +28,9 @@ trait Content
                     $thisContent->id = $key + 1;
                     $thisContent->is_h1 = $key === 0;
                     $thisContent->classes = self::section_layout_classes( 
-                        $thisContent, $flexibleContent
+                        $thisContent, 
+                        $key, 
+                        $flexibleContent
                     );
 
                     array_push( $data, $thisContent );
@@ -368,7 +370,7 @@ trait Content
         $newData = (object)$data;
 
         // Get reseller lists
-        $resellers = self::resellerLists();
+        $resellers = self::getResellerLists();
 
         // Add items to $newData
         if ( $resellers ) {
@@ -404,22 +406,75 @@ trait Content
         ];
     }
 
-    public static function section_layout_classes( $currentSection, $sections )
+    public static function section_layout_classes( $currentSection, $pos, $sections )
     {
         $classes = [];
+        $sectionLists = wp_list_pluck( $sections, 'acf_fc_layout' );
+
         $sectionsWithNoBottomAdjustment = [
             'hero-banner',
             'promo-boxes',
-            'popular-products',
             'instagram-grid',
             'three-promo',
             'text-and-image',
             'usp',
         ];
 
-        // if last section
-        if ($currentSection->id === count($sections)) {
+        $sectionsWithPaddingTopAdjustment = [
+            'text-with-button',
+            'resellers'
+        ]; 
+        
+        $sectionsWithSmallPaddingTopAdjustment = [
+            'newsletter'
+        ];
+        
+        $sectionsWithBg = array_merge( $sectionsWithNoBottomAdjustment, ['popular-products'] );
+
+        // Get current section layout name
+        $current = $currentSection->acf_fc_layout;
+
+        // Get next section layout name
+        $nextSection = Helper::get_array_value_by_index( $sectionLists, $pos + 1 );
+
+        // Check if current section is the first section
+        $isFirst = ($currentSection->id === 1);
+
+        // Check if current section is the last section
+        $isLast = ($currentSection->id === count($sections));
+
+        // Check if current section in $sectionsWithNoBottomAdjustment
+        $isSectionsWithNoBottomAdjustment = in_array( $current, $sectionsWithNoBottomAdjustment );
+
+        // Check if current section in $sectionsWithNoBottomAdjustment
+        $nextSectionHasBg = in_array( $nextSection, $sectionsWithNoBottomAdjustment );
+
+        // Check if current section in $sectionsWithBg
+        $isSectionWithBg = in_array( $current, $sectionsWithBg );   
+        
+        // Check if current section is newsletter
+        $isNewsletter = ($current==='newsletter-signup');
+
+        // Has padding top
+        if ($isFirst && in_array($current, $sectionsWithPaddingTopAdjustment )) {
+            array_push( $classes, 'has-pt' );
+        
+        // Has small padding top
+        } elseif ($isFirst && in_array($current, $sectionsWithSmallPaddingTopAdjustment )) {
+            array_push( $classes, 'has-small-pt' );
+        }
+
+        // No margin bottom
+        if ( ($isLast && $isSectionsWithNoBottomAdjustment) || ($nextSectionHasBg && $isSectionsWithNoBottomAdjustment)) {
             array_push( $classes, 'no-mb' );
+        
+        // Has small margin bottom
+        } elseif ( 
+            $nextSection === 'newsletter-signup' // Next section is newsletter      
+            || ($isLast && $isNewsletter) // Current section is newsletter and is last section
+            || ($isNewsletter && in_array( $nextSection, $sectionsWithBg )) // Current section is newsletter and next section has BG
+        ) {
+            array_push( $classes, 'has-small-mb' );
         }
 
         return implode( ' ', $classes );
