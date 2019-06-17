@@ -23,9 +23,9 @@
         },
         {
             "key": "field_5ce3e67af94a7",
-            "label": "Repeater 1",
-            "name": "repeater_1",
-            "type": "repeater",
+            "label": "Inspiration Media",
+            "name": "inspiration_media",
+            "type": "gallery",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -34,40 +34,32 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
-            "min": 0,
-            "max": 2,
-            "layout": "row",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_5ce3e73c02fab",
-                    "label": "Rows",
-                    "name": "rows",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                }
-            ]
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "taxonomy",
                 "operator": "==",
-                "value": "post"
+                "value": "silk_product_sku"
+            }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "silk_product_variant_sku"
             }
         ]
     ],
@@ -77,7 +69,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": 1,
     "description": "",
-    "modified": 1558718880
+    "modified": 1560785494
 }

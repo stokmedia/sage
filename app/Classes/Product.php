@@ -10,6 +10,18 @@ class Product extends \EscProduct
         return \EscGeneral::getPrice( $this->product_post->ID );
     }
 
+    // TODO: Bundles should maybe be its own CPT
+    public function isBundle()
+    {
+        return isset( $this->product_meta['bundle'] );
+    }
+
+    // TODO: Bundles should maybe be its own CPT
+    public function getBundle()
+    {
+        return \EscGeneral::getBundleData( $this->product_meta['bundle'] );
+    }
+
     public function getAllProductImages() {
 
         $productImages = array();

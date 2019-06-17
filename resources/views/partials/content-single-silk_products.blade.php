@@ -18,6 +18,11 @@
     </div>
 
     {{ $product_information }}
+
+    @if ($product->is_bundle )
+      @include('partials.product-bundle', ['bundle' => $product->bundle ] )
+    @endif
+
   </div>
   <footer>
     {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}

@@ -96,6 +96,60 @@ add_filter( 'tiny_mce_before_init', function( $initArray ) {
 }  );  
 
 
+
+/* STELLAR PoC , Plase leave this code for now
+// Testing to register own Taxonomy
+$tax_args = array(
+    'label'                      => 'Product Data',
+    'public'                     => true,
+    'hierarchical'               => false,
+    'show_ui'                    => true,
+    'show_in_nav_menus'          => true,
+    'show_tagcloud'              => false,
+    'args'                       => array( 'orderby' => 'term_order' ),
+    'rewrite'                    => array( 'slug' => 'product_sku', 'with_front' => true, 'hierarchical' => false, 'ep_mask' => EP_ALL_ARCHIVES ),
+    'query_var'                  => true
+);
+
+register_taxonomy( 'silk_product_sku', 'silk_products', $tax_args );
+
+$tax_args = array(
+    'label'                      => 'Variant Data',
+    'public'                     => true,
+    'hierarchical'               => false,
+    'show_ui'                    => true,
+    'show_in_nav_menus'          => true,
+    'show_tagcloud'              => false,
+    'args'                       => array( 'orderby' => 'term_order' ),
+    'rewrite'                    => array( 'slug' => 'variant_sku', 'with_front' => true, 'hierarchical' => false, 'ep_mask' => EP_ALL_ARCHIVES ),
+    'query_var'                  => true
+);
+
+register_taxonomy( 'silk_product_variant_sku', 'silk_products', $tax_args );
+
+
+// Register Format dropdown
+add_filter( 'custom_silk_taxonomy_args', function( $args ) {
+    
+    $taxonomy_args = array(
+        array( 
+            'name' => 'name',
+            'taxonomy' => 'silk_product_sku',
+            'slug' => 'productSku'
+        ),
+        array( 
+            'name' => array('name', 'variantName'),
+            'taxonomy' => 'silk_product_variant_sku',
+            'slug' => 'sku'
+        ),
+    );
+
+    return $taxonomy_args;
+} );
+
+
+*/
+
 /**
  * Image sizes
  */

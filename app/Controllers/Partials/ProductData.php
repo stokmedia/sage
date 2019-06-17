@@ -17,6 +17,15 @@ trait ProductData
     	$data = (object) [];
     	$data->price = $product->getPrice();
     	$data->images = $product->getAllProductImages();
+        $data->is_bundle = $product->isBundle();
+
+        if( $product->isBundle() && is_single() ) {
+
+            // TODO: Maybe needed?
+            //var_dump(General::currentLang());
+
+            $data->bundle = $product->getBundle();
+        }
 
     	return $data;
 	}
