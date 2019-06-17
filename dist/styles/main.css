@@ -19899,7 +19899,15 @@ html.is-flickity-fullscreen {
   margin-top: 1.25rem;
 }
 
-/* line 311, resources/assets/styles/skhoop/layouts/_header.scss */
+@media (max-width: 991.98px) {
+  /* line 310, resources/assets/styles/skhoop/layouts/_header.scss */
+
+  .nav-overlay {
+    overflow: hidden !important;
+  }
+}
+
+/* line 315, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-overlay:after {
   content: "";
@@ -19912,35 +19920,35 @@ html.is-flickity-fullscreen {
   z-index: 3;
 }
 
-/* line 323, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 327, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout {
   display: none !important;
 }
 
 @media (max-width: 991.98px) {
-  /* line 323, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 327, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout {
     text-align: center;
   }
 }
 
-/* line 330, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 334, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-checkout {
   margin-bottom: 0;
 }
 
 @media (max-width: 991.98px) {
-  /* line 330, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 334, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout .navbar-checkout {
     padding-bottom: 1.1875rem;
   }
 }
 
-/* line 338, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 342, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-spacer {
   width: 12.5rem;
@@ -19948,7 +19956,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (max-width: 991.98px) {
-  /* line 338, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 342, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout .navbar-spacer {
     width: auto;
@@ -19956,7 +19964,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 348, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 352, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-back {
   color: #031532;
@@ -19966,14 +19974,14 @@ html.is-flickity-fullscreen {
   text-decoration: underline;
 }
 
-/* line 359, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 363, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .admin-bar .navbar.fixed-top {
   top: 2.875rem;
 }
 
 @media screen and (min-width: 783px) {
-  /* line 359, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 363, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .admin-bar .navbar.fixed-top {
     top: 2rem;

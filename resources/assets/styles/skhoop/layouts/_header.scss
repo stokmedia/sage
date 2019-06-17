@@ -308,6 +308,10 @@ $mobile-margin-top-menu: 3.75rem;
 }
 
 .nav-overlay {
+  @include media-breakpoint-down(md) {
+    overflow: hidden !important;
+  }
+
 	&:after {
     content: "";
     position: fixed;
