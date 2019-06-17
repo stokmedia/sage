@@ -16957,6 +16957,21 @@ a.text-red:focus {
   position: fixed !important;
 }
 
+/* line 6, resources/assets/styles/common/_global.scss */
+
+img.lazy {
+  -webkit-transition: opacity .3s ease-in;
+  -o-transition: opacity .3s ease-in;
+  transition: opacity .3s ease-in;
+  opacity: 0;
+}
+
+/* line 9, resources/assets/styles/common/_global.scss */
+
+img.lazy.loaded {
+  opacity: 1;
+}
+
 /* line 1, resources/assets/styles/components/_buttons.scss */
 
 .btn,
@@ -17042,6 +17057,7 @@ body#tinymce {
 .fifty-fifty-item.image {
   position: relative;
   overflow: hidden;
+  overflow: initial;
 }
 
 /* line 6, resources/assets/styles/common/_mixins.scss */
@@ -19236,8 +19252,17 @@ html.is-flickity-fullscreen {
 
   .fifty-fifty-content {
     width: 100%;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+
+  .fifty-fifty-content {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
   }
 }
 
@@ -19257,7 +19282,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 56, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+/* line 61, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
 .fifty-fifty-content h2 {
   font-family: "Source Serif Pro", serif;
@@ -19267,7 +19292,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 56, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+  /* line 61, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content h2 {
     font-size: 2.25rem;
@@ -19276,7 +19301,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 69, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+/* line 74, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
 .fifty-fifty-content p {
   font-family: "Source Serif Pro", serif;
@@ -19288,7 +19313,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 69, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+  /* line 74, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content p {
     font-size: 1.25rem;

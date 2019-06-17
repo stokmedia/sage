@@ -2,6 +2,8 @@
   &-item {
     &.image {
       @include aspect-ratio(1, 1);
+
+      overflow: initial;
     }
   }
 }
