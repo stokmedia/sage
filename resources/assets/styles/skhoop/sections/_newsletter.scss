@@ -133,6 +133,10 @@
       @include media-breakpoint-up(md) {
         margin-right: 1.875rem;
       }
+
+      .msie & {
+        background-size: 22px;
+      }
     }
 
     .input-group.is-invalid+.invalid-feedback {

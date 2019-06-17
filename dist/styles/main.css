@@ -19201,19 +19201,25 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 138, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 137, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+.msie .newsletter-form .input-group [type="text"] {
+  background-size: 22px;
+}
+
+/* line 142, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group.is-invalid + .invalid-feedback {
   display: block;
 }
 
-/* line 142, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 146, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form form {
   width: 100%;
 }
 
-/* line 147, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 151, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter .custom-checkbox {
   text-align: left;
@@ -19221,7 +19227,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 147, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 151, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter .custom-checkbox {
     padding-left: 1.875rem;
