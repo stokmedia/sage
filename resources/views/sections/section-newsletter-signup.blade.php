@@ -1,4 +1,4 @@
-@if ($section->title || $section->image || $section->form)
+@if ($section->title || $section->image || $section->text)
     <section id="section-{{ $section->id }}" class="section newsletter-section">
         <div class="container">
             <div class="newsletter row m-0">

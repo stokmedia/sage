@@ -27,6 +27,11 @@ trait Content
                 if ( !empty( $thisContent ) ) {
                     $thisContent->id = $key + 1;
                     $thisContent->is_h1 = $key === 0;
+                    // $thisContent->classes = self::section_layout_classes( 
+                    //     $thisContent->acf_fc_layout, 
+                    //     $thisContent->id,
+                    //     $flexibleContent 
+                    // );
 
                     array_push( $data, $thisContent );
                 }
@@ -231,7 +236,7 @@ trait Content
         $data = (object)$data;
         $data->title = self::hasTitle( $data ) ? $data->section_title : '';
         $data->link = (object) (!empty($data->link) ? $data->link : []);
-        $data->has_content = ( $data->title || $data->preamble || $data->content || $data->link );
+        $data->has_content = ( !empty($data->title) || !empty($data->preamble) || !empty($data->content) || !empty($data->link) );
         $data->image = $data->image ? wp_get_attachment_image_url( $data->image[ 'ID' ], 'newsletter' ) : null;
 
         return (object)$data;
@@ -349,7 +354,7 @@ trait Content
     {
         // Get Default USP from sitewide
         if ( empty( $data[ 'usp' ] ) ) {
-            $data[ 'usp' ] = self::defaultUsp();
+            $data[ 'usp' ] = self::getDefaultUsp();
         }
 
         // Convert USP items to object
@@ -399,6 +404,27 @@ trait Content
             'count' => $newData->count,
             'view_all_btn' => get_field( 'translate_view_all', self::currentLang() )
         ];
+    }
+
+    public static function section_layout_classes( $layout, $pos, $sections )
+    {
+        $classes = [];
+        $sectionsWithNoBottomAdjustment = [
+            'hero-banner',
+            'promo-boxes',
+            'popular-products',
+            'instagram-grid',
+            'three-promo',
+            'text-and-image',
+            'usp',
+        ];
+
+        // if last section
+        if ($pos === count($sections)) {
+            array_push( $classes, 'no-mb' );
+        }
+
+        return implode( ' ', $classes );
     }
 
     // Delete this after dev

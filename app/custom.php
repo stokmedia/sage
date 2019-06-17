@@ -14,7 +14,9 @@ add_action( 'parse_query', function( $query, $error = true ) {
     }
 } );
 
-add_filter( 'get_search_form', create_function( '$a', "return null;" ) );
+add_filter( 'get_search_form', function ( $a ) {
+    return null;
+} );
 
 // Unregister Search widget
 add_action( 'widgets_init', function() {

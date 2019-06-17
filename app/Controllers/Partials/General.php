@@ -25,14 +25,19 @@ trait General
         return (object) [
             'image' => wp_get_attachment_image_url( get_field( 'size_guide_image', self::currentLang() ), 'full' )
         ];
-    }    
-
-    public function defaultUsp()
+    }
+    
+    public static function getDefaultUsp()
     {
         $defaultUsp = get_field( 'default_usp',self::currentLang() );
         $list = $defaultUsp['usp'] ?? []; 
 
         return $list;
+    }
+
+    public function defaultUsp()
+    {
+        return self::getDefaultUsp();
     }
 
     public function cookieData()
