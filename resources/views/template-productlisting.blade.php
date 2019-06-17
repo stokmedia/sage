@@ -309,8 +309,8 @@
               <div class="product is-small">
                 <a href="#" class="product-wrapper bg-white d-block">
                   <figure class="product-image">
-                    <img src="@asset('images/temp/erika-skirt.jpeg')" />
-                    <img src="@asset('images/temp/erika-skirt1.jpeg')" class="visible-on-hover"/>
+                    <img src="@asset('images/temp/anja-tank.jpeg')" />
+                    <img src="@asset('images/temp/anja-tank1.jpeg')" class="visible-on-hover"/>
                   </figure>
                 </a>
                 <a href="#" class="product-details bg-white d-block text-center">

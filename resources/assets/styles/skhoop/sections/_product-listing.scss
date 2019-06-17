@@ -168,7 +168,7 @@
   }
 
   &-image {
-    @include aspect-ratio(326,375);
+    @include aspect-ratio(450,518);
 
     margin-bottom: 0;
 
@@ -263,7 +263,7 @@
       padding: 0 0.9375rem 0.3125rem;
 
       @include media-breakpoint-up(lg) {
-        padding: 0 2.5rem 1.5625rem;
+        padding: 0 1.5rem 1.5625rem;
       }
     }
   }
@@ -283,7 +283,7 @@
       padding: 0 0.9375rem 0.3125rem;
 
       @include media-breakpoint-up(lg) {
-        padding: 0 2.3438rem 1.5625rem;
+        padding: 0 0.75rem 1.5625rem;
       }
     }
   }

@@ -20669,7 +20669,7 @@ body#tinymce {
   display: block;
   content: " ";
   width: 100%;
-  padding-top: 115.03067%;
+  padding-top: 115.11111%;
 }
 
 /* line 13, resources/assets/styles/common/_mixins.scss */
@@ -20843,7 +20843,7 @@ body#tinymce {
   /* line 262, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big .product-details {
-    padding: 0 2.5rem 1.5625rem;
+    padding: 0 1.5rem 1.5625rem;
   }
 }
 
@@ -20891,7 +20891,7 @@ body#tinymce {
   /* line 282, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small .product-details {
-    padding: 0 2.3438rem 1.5625rem;
+    padding: 0 0.75rem 1.5625rem;
   }
 }
 
@@ -23464,18 +23464,19 @@ body#tinymce {
   overflow-x: hidden;
   padding-top: 1.875rem;
   padding-bottom: 3.4375rem;
+  background-color: #dbe4e7;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* line 8, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 9, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery.is-text-overlapping {
   padding-top: 4.375rem;
 }
 
-/* line 12, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 13, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .image {
   position: relative;
@@ -23511,7 +23512,7 @@ body#tinymce {
   min-width: 200%;
 }
 
-/* line 16, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 17, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .col-wrap {
   margin-left: -5.695%;
@@ -23519,7 +23520,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 16, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 17, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .col-wrap {
     margin-left: -82px;
@@ -23527,7 +23528,7 @@ body#tinymce {
   }
 }
 
-/* line 26, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 27, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .col-group {
   display: -webkit-box;
@@ -23535,7 +23536,7 @@ body#tinymce {
   display: flex;
 }
 
-/* line 30, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 31, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .col-side {
   -ms-flex: 1 0 0;
@@ -23549,7 +23550,7 @@ body#tinymce {
   flex-basis: 0;
 }
 
-/* line 35, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 36, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-group {
   display: -webkit-box;
@@ -23557,7 +23558,7 @@ body#tinymce {
   display: flex;
 }
 
-/* line 39, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 40, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block-hidden {
   position: relative;
@@ -23576,7 +23577,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 39, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 40, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile-block-hidden {
     padding-left: 15px;
@@ -23593,14 +23594,14 @@ body#tinymce {
   }
 }
 
-/* line 56, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 57, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info-margin {
   position: relative;
   z-index: 1;
 }
 
-/* line 61, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 62, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info {
   padding-left: calc(3.712% / 2);
@@ -23609,7 +23610,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 61, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 62, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .instagram-info {
     margin-bottom: 25px;
@@ -23617,14 +23618,14 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 61, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 62, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .instagram-info {
     padding-left: 15px;
   }
 }
 
-/* line 74, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 75, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info .btn-header {
   text-align: center;
@@ -23632,7 +23633,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 79, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 80, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .instagram-info .btn,
   .instagram-gallery .instagram-info .comment-form input[type="submit"],
@@ -23643,7 +23644,7 @@ body#tinymce {
   }
 }
 
-/* line 85, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 86, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info .h3 {
   margin-bottom: 0;
@@ -23651,14 +23652,14 @@ body#tinymce {
   margin-left: 12px;
 }
 
-/* line 91, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 92, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .instagram-info .info {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-/* line 97, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 98, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile {
   position: relative;
@@ -23707,7 +23708,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 97, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 98, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile {
     -webkit-box-flex: 0;
@@ -23722,7 +23723,7 @@ body#tinymce {
   }
 }
 
-/* line 115, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 116, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile.is-three {
   -ms-flex: 0 0 calc( (25% * 3) - 11.595%);
@@ -23738,7 +23739,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 115, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 116, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile.is-three {
     -ms-flex: 0 0 calc( (25% * 3) - 93px);
@@ -23754,7 +23755,7 @@ body#tinymce {
   }
 }
 
-/* line 130, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 131, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block {
   -ms-flex: 0 0 calc(25% - 3.712%);
@@ -23770,7 +23771,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 130, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 131, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile-block {
     -ms-flex: 0 0 calc(25% - 30px);
@@ -23786,7 +23787,7 @@ body#tinymce {
   }
 }
 
-/* line 143, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 144, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block .tile {
   width: 100%;
@@ -23795,31 +23796,31 @@ body#tinymce {
   margin: 0;
 }
 
-/* line 149, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 150, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block .tile:first-child {
   margin: 0 0 17.45%;
 }
 
 @media (min-width: 992px) {
-  /* line 149, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 150, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile-block .tile:first-child {
     margin: 0 0 30px;
   }
 }
 
-/* line 160, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 161, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile {
   padding: 1.875rem 0;
-  background-color: #b7cad0;
+  background-color: #dbe4e7;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
 
-/* line 167, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 168, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info {
   padding-left: 1.25rem;
@@ -23827,20 +23828,20 @@ body#tinymce {
   padding-bottom: 2.0625rem;
 }
 
-/* line 172, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 173, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info .btn-header {
   margin-bottom: 1.5625rem;
 }
 
-/* line 175, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 176, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info .btn-header .h3 {
   letter-spacing: 0.5px;
   line-height: 3.125rem;
 }
 
-/* line 180, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 181, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info .btn-header .btn,
 .instagram-gallery-mobile .instagram-info .btn-header .comment-form input[type="submit"],
@@ -23856,20 +23857,20 @@ body#tinymce {
   letter-spacing: 1.86px;
 }
 
-/* line 192, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 193, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-/* line 198, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 199, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col .row:last-child .col {
   padding-bottom: 0;
 }
 
-/* line 204, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 205, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col .col {
   padding-left: 0.625rem;
@@ -23877,7 +23878,7 @@ body#tinymce {
   padding-bottom: 1.25rem;
 }
 
-/* line 210, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 211, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col .tile {
   position: relative;

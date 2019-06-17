@@ -2,6 +2,7 @@
   overflow-x: hidden;
   padding-top: 1.875rem;
   padding-bottom: 3.4375rem;
+  background-color: $lightGreen;
 
   @include cover;
 
@@ -159,7 +160,7 @@
 
 .instagram-gallery-mobile {
   padding: 1.875rem 0;
-  background-color: $primary;
+  background-color: $lightGreen;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
