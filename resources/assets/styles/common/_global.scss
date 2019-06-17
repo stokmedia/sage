@@ -6,6 +6,11 @@ body {
   position: fixed !important;
 }
 
+.no-scroll,
+.no-scroll body {
+  overflow: hidden;
+}
+
 img{
   &.lazy{
       transition: opacity .3s ease-in;

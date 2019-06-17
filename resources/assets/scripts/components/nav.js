@@ -15,11 +15,13 @@ Nav.overlay = function() {
 
   navBarCollapse.on('show.bs.collapse', function () {
     $('body').addClass('nav-overlay');
+    document.documentElement.classList.add('no-scroll');
     stokpressScroll.disableBodyScroll(true, '.navbar-collapse');
   })
 
   navBarCollapse.on('hidden.bs.collapse', function () {
     $('body').removeClass('nav-overlay');
+    document.documentElement.classList.remove('no-scroll');
     stokpressScroll.disableBodyScroll(false, '.navbar-collapse');
   })
 };

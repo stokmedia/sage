@@ -16963,7 +16963,14 @@ body {
   position: fixed !important;
 }
 
-/* line 10, resources/assets/styles/common/_global.scss */
+/* line 9, resources/assets/styles/common/_global.scss */
+
+.no-scroll,
+.no-scroll body {
+  overflow: hidden;
+}
+
+/* line 15, resources/assets/styles/common/_global.scss */
 
 img.lazy {
   -webkit-transition: opacity .3s ease-in;
@@ -16972,7 +16979,7 @@ img.lazy {
   opacity: 0;
 }
 
-/* line 13, resources/assets/styles/common/_global.scss */
+/* line 18, resources/assets/styles/common/_global.scss */
 
 img.lazy.loaded {
   opacity: 1;
