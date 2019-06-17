@@ -16530,11 +16530,15 @@ Nav.menuPosition = function() {
   window.onresize = function () {
     headerPosition = header.position().top + header.outerHeight(true);
     changePosition(menu, headerPosition);
+
   };
 
   function changePosition(menu, headerPosition) {
     menu.css('margin-top', headerPosition + 'px');
     console.log(headerPosition);
+
+    console.log('header position top: ' + header.position().top);
+    console.log('outerheight: ' + header.outerHeight(true));
   }
 };
 
