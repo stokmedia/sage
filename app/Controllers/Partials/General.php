@@ -2,14 +2,16 @@
 
 namespace App\Controllers\Partials;
 
+use App\Classes\Helper;
+
 trait General
 {
-    public static function currentLang( $value='slug' )
-    {
-        $defaultValue = $value == 'locale' ? 'en_GB' : 'en';
+    // public static function currentLang( $value='slug' )
+    // {
+    //     $defaultValue = $value == 'locale' ? 'en_GB' : 'en';
 
-		return function_exists('pll_current_language') ? pll_current_language( $value ) : $defaultValue;
-    }
+	// 	return function_exists('pll_current_language') ? pll_current_language( $value ) : $defaultValue;
+    // }
 
     public static function renderTitle( $title, $class='', $isH1=false )
     {
@@ -23,13 +25,13 @@ trait General
     public static function getSizeGuideData()
     {
         return (object) [
-            'image' => wp_get_attachment_image_url( get_field( 'size_guide_image', self::currentLang() ), 'full' )
+            'image' => wp_get_attachment_image_url( get_field( 'size_guide_image', Helper::current_lang() ), 'full' )
         ];
     }
     
     public static function getDefaultUsp()
     {
-        $defaultUsp = get_field( 'default_usp',self::currentLang() );
+        $defaultUsp = get_field( 'default_usp', Helper::current_lang() );
         $list = $defaultUsp['usp'] ?? []; 
 
         return $list;
@@ -68,20 +70,21 @@ trait General
 
     public function cookieData()
     {
-        return (object) get_field( 'cookies', self::currentLang() ) ?? [];
+        return (object) get_field( 'cookies', Helper::current_lang() ) ?? [];
     }
 
     public function newsletterData()
     {
-        $newsletterEnable = get_field( 'newsletter_enable', self::currentLang() );
-        $modalContent = (object) get_field( 'newsletter_modal_content', self::currentLang() );
+        $lang = Helper::current_lang();
+        $newsletterEnable = get_field( 'newsletter_enable', $lang );
+        $modalContent = (object) get_field( 'newsletter_modal_content', $lang );
         $modalContent->title = self::hasTitle($modalContent) ? $modalContent->section_title : '';
         $modalContent->image = !empty($modalContent->image) ? wp_get_attachment_image_url( $modalContent->image['ID'], 'newsletter' ) : null;      
 
         return (object) [
             'newsletter_enable' => $newsletterEnable,
             'newsletter_modal_content' => $modalContent,
-            'form_settings' => (object) get_field( 'form_settings', self::currentLang() )
+            'form_settings' => (object) get_field( 'form_settings', $lang )
         ];
     }
 

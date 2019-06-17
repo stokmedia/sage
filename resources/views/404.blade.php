@@ -1,6 +1,6 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
 
-@section('content')
+{{-- @section('content') --}}
   {{-- @include('partials.page-header')
   {{$sometext}}
   @if (!have_posts())
@@ -10,7 +10,7 @@
     {!! get_search_form(false) !!}
   @endif --}}
 
-  <section class="section text-button has-pt">
+  {{-- <section class="section text-button has-pt">
     <div class="container">
       <div class="title h2 text-center text-lg-left">404 - Sidan kan inte hittas</div>
       <div class="preamble text-center text-lg-left">
@@ -30,4 +30,5 @@
   @include('sections.section-instagram-grid')
   @include('sections.section-newsletter')
 
-@endsection
+@endsection --}}
+@include('page')
