@@ -2112,7 +2112,7 @@ var stokpressEvent = {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-module.exports = __webpack_require__(45);
+module.exports = __webpack_require__(46);
 
 
 /***/ }),
@@ -2147,13 +2147,13 @@ __webpack_require__(10);
 
 
 __webpack_require__(35);
+__webpack_require__(36);
 
 // Require Components
 // window.stokpress = require('./util/helper');
 
 // require('./components/helper');
 // require('./util/helper');
-__webpack_require__(36);
 __webpack_require__(37);
 __webpack_require__(38);
 __webpack_require__(39);
@@ -2162,6 +2162,7 @@ __webpack_require__(41);
 __webpack_require__(42);
 __webpack_require__(43);
 __webpack_require__(44);
+__webpack_require__(45);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -16475,6 +16476,101 @@ GridSlider.slider();
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function($) {var Platform = {};
+
+(function () {
+
+  Platform.detectDevice = function () {
+    var body = document.body;
+    var ua = navigator.userAgent;
+    var checker = {
+      // OS
+      Windows: ua.match(/Windows/),
+      MacOS: ua.match(/Mac/),
+      Android: ua.match(/Android/),
+
+      // Browser
+      Msie: ua.match(/Trident/),
+      Edge: ua.match(/Edge/),
+      Chrome: ua.match(/Chrome/),
+      Firefox: ua.match(/Firefox/),
+      Safari: ua.match(/Safari/),
+
+      // Device
+      isApple: ua.match(/(iPhone|iPod|iPad)/),
+      iPhone: ua.match(/iPhone/),
+      iPad: ua.match(/iPad/),
+      iPod: ua.match(/iPod/),
+    };
+
+    if (checker.isApple) {
+      // Apple
+      body.classList.add('isApple');
+
+      if (checker.iPhone) {
+        // Apple iPhone
+        body.classList.add('iphone');
+      } else if (checker.iPad) {
+        // Apple iPad
+        body.classList.add('ipad');
+      } else if (checker.iPod) {
+        // Apple iPod
+        body.classList.add('ipod');
+      }
+
+    } else  if (checker.Windows){
+      // Windows OS
+      body.classList.add('windowsOS');
+
+      if (checker.Edge){
+        // Edge Browser
+        body.classList.add('edge');
+      } else if (checker.Chrome){
+        // Chrome Browser
+        body.classList.add('chrome');
+      } else if(checker.Safari){
+        // Safari Browser
+        body.classList.add('safari');
+      } else if(checker.Firefox){
+        // Firefox Browser
+        body.classList.add('firefox');
+      } else if(checker.Msie){
+        // Firefox Browser
+        body.classList.add('msie');
+      }
+
+    } else if (checker.MacOS){
+      // Mac OS
+      body.classList.add('macOS');
+
+      if (checker.Chrome){
+        // Chrome Browser
+        body.classList.add('chrome');
+      } else if(checker.Safari){
+        // Safari Browser
+        body.classList.add('safari');
+      } else if(checker.Firefox){
+        // Firefox Browser
+        body.classList.add('firefox');
+      }
+
+    } else if (checker.Android){
+      // Android OS
+      body.classList.add('AndroidOS');
+    }
+
+  }
+
+  Platform.detectDevice();
+
+})($);
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* WEBPACK VAR INJECTION */(function($) {var AutoPadding = {};
 var $header = $('.js-header');
 var $body = $('body');
@@ -16496,7 +16592,7 @@ AutoPadding.update = changePadding;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Nav = {};
@@ -16551,7 +16647,7 @@ Nav.overlay();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
@@ -16626,7 +16722,7 @@ Nav.overlay();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Filter = {};
@@ -16674,7 +16770,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$.fn.resellersTable = function () {
@@ -16715,7 +16811,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17033,7 +17129,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Instagram = {};
@@ -17070,7 +17166,7 @@ Instagram.infoPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17302,7 +17398,7 @@ var Newsletter = {};
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/**
@@ -17364,7 +17460,7 @@ window.Alert = Alert;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
