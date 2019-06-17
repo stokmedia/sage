@@ -166,7 +166,7 @@ trait Content
             'image_mobile' => $imageMobile,
 //            'video_url' => $newData->video_url,
 //            'is_autoplay' => $newData->is_autoplay,
-            'video_tag' => VideoHelper::getVideoTag( $newData->video_url, true, false, $newData->is_autoplay )
+            'video_tag' => $newData->video_url ? VideoHelper::getVideoTag( $newData->video_url, true, false, $newData->is_autoplay ) : null,
         ];
     }
 
