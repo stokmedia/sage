@@ -1,5 +1,5 @@
 @if ($section->has_content )
-    <section class="section text-button">
+    <section class="section text-button  {{ $section->classes ?? '' }}">
         <div class="container">
             @if ($section->title)
                 <div class="title h2 text-center text-lg-left">{{ $section->title }}</div>

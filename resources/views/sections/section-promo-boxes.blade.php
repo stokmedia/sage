@@ -27,7 +27,7 @@
       
 
 @if ($section->items)
-    <section class="section promo-box overflow-hidden">
+    <section class="section promo-box overflow-hidden  {{ $section->classes ?? '' }}">
         <div class="align-items-center row mx-0">
 
             @foreach ($section->items as $item)
