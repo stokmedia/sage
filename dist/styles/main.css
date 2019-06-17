@@ -18685,21 +18685,6 @@ blockquote footer::before,
   text-align: right;
 }
 
-/* line 1, resources/assets/styles/skhoop/components/_cookies.scss */
-
-.cookie-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-/* line 6, resources/assets/styles/skhoop/components/_cookies.scss */
-
-.cookie-bar .alert {
-  margin-bottom: 0;
-}
-
 /*! Flickity v2.2.0
 https://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -19012,13 +18997,21 @@ html.is-flickity-fullscreen {
   padding: 0;
 }
 
-/* line 19, resources/assets/styles/skhoop/sections/_newsletter.scss */
+@media (min-width: 768px) {
+  /* line 19, resources/assets/styles/skhoop/sections/_newsletter.scss */
+
+  .msie .newsletter-cover {
+    min-height: 300px;
+  }
+}
+
+/* line 25, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-modal .newsletter-cover {
   height: 300px;
 }
 
-/* line 23, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 29, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-cover::before {
   content: " ";
@@ -19032,7 +19025,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 23, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 29, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-cover::before {
     left: auto;
@@ -19044,7 +19037,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 42, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 48, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-modal .newsletter-cover::before {
   display: none;
@@ -19059,7 +19052,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 53, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 59, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-content {
   padding-bottom: 72px;
@@ -19067,7 +19060,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 53, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 59, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-content {
     padding-bottom: 0;
@@ -19075,13 +19068,13 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 62, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 68, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-modal .newsletter-content {
   padding-bottom: 50px !important;
 }
 
-/* line 67, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 73, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-inner {
   width: 100%;
@@ -19090,20 +19083,20 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 67, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 73, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-inner {
     text-align: left;
   }
 
-  /* line 75, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 81, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-modal .newsletter-inner {
     text-align: center;
   }
 }
 
-/* line 81, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 87, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-title {
   font-family: "Covered By Your Grace", cursive;
@@ -19114,7 +19107,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 81, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 87, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-title {
     font-size: 2.1875rem;
@@ -19123,7 +19116,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 95, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 101, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-body {
   color: #292929;
@@ -19136,20 +19129,20 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 95, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 101, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-body {
     margin-bottom: 0;
   }
 
-  /* line 107, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 113, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-modal .newsletter-body {
     padding-bottom: 1.25rem;
   }
 }
 
-/* line 114, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 120, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .btn,
 .newsletter-form .comment-form input[type="submit"],
@@ -19159,13 +19152,13 @@ html.is-flickity-fullscreen {
   background-color: #fff;
 }
 
-/* line 118, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 124, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group {
   margin-bottom: 0;
 }
 
-/* line 122, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 128, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group [type="text"] {
   min-width: auto;
@@ -19174,26 +19167,26 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 122, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 128, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter-form .input-group [type="text"] {
     margin-right: 1.875rem;
   }
 }
 
-/* line 132, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 138, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form .input-group.is-invalid + .invalid-feedback {
   display: block;
 }
 
-/* line 136, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 142, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter-form form {
   width: 100%;
 }
 
-/* line 141, resources/assets/styles/skhoop/sections/_newsletter.scss */
+/* line 147, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
 .newsletter .custom-checkbox {
   text-align: left;
@@ -19201,7 +19194,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 141, resources/assets/styles/skhoop/sections/_newsletter.scss */
+  /* line 147, resources/assets/styles/skhoop/sections/_newsletter.scss */
 
   .newsletter .custom-checkbox {
     padding-left: 1.875rem;

@@ -16,6 +16,12 @@
     overflow: hidden;
     padding: 0;
 
+    .msie & {
+      @include media-breakpoint-up(md) {
+        min-height: 300px;
+      }
+    }
+
     .newsletter-modal & {
       height: 300px;
     }
