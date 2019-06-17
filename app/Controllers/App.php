@@ -14,7 +14,7 @@ class App extends Controller
 
     public function socialLinks()
     {
-        return get_field( 'links', 'global' );
+        return self::getSocialLinks();
     }
 
     public function desktopMenu()
@@ -76,6 +76,11 @@ class App extends Controller
     public function siteName()
     {
         return get_bloginfo( 'name' );
+    }
+
+    public static function getSocialLinks()
+    {
+        return get_field( 'links', 'global' );
     }
 
     public static function title()
