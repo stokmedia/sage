@@ -1,13 +1,13 @@
 @if (!empty($isMobile))
-    <div class="col">
+    <a href="{{ $image->link }}" class="col" target="_blank" rel="nofollow noreferrer">
         <figure class="tile">
             {!! !empty($isLarge) ? $image->image_large : $image->image_small !!}
         </figure>
-    </div>
+    </a>
 @else
     @if ($image)
-        <div class="tile {{ $tileClass ?? '' }}">
+        <a href="{{ $image->link }}" class="tile {{ $tileClass ?? '' }}" target="_blank" rel="nofollow noreferrer">
             {!! !empty($isLarge) ? $image->image_large : $image->image_small !!}
-        </div>
+        </a>
     @endif
 @endif
