@@ -20,6 +20,13 @@ trait General
         }
     }
 
+    public static function getSizeGuideData()
+    {
+        return (object) [
+            'image' => wp_get_attachment_image_url( get_field( 'size_guide_image', self::currentLang() ), 'full' )
+        ];
+    }    
+
     public function defaultUsp()
     {
         $defaultUsp = get_field( 'default_usp',self::currentLang() );
@@ -49,9 +56,7 @@ trait General
 
     public function sizeGuideData()
     {
-        return (object) [
-            'image' => wp_get_attachment_image_url( get_field( 'size_guide_image', self::currentLang() ), 'full' )
-        ];
+        return self::getSizeGuideData();
     }
     
     public function resellerLists()

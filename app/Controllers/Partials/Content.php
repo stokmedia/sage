@@ -59,7 +59,7 @@ trait Content
             $postPreHeader = null;
             $postLink = (object)[
                 'url' => null,
-                'title' => $data->item_link_text,
+                'title' => $data->item_link_text ?? '',
                 'target' => '_blank',
             ];
 
@@ -88,7 +88,7 @@ trait Content
             $itemLink = !empty( $item->link ) ? (object)$item->link : $postLink;
 
             if ( empty( $itemLink->title ) ) {
-                $itemLink->title = $data->item_link_text;
+                $itemLink->title = $data->item_link_text ?? '';
             }
 
             $newItem = [
@@ -166,7 +166,7 @@ trait Content
             'image_mobile' => $imageMobile,
 //            'video_url' => $newData->video_url,
 //            'is_autoplay' => $newData->is_autoplay,
-            'video_tag' => $newData->video_url ? VideoHelper::getVideoTag( $newData->video_url, true, false, $newData->is_autoplay ) : null,
+            'video_tag' => !empty($newData->video_url) ? VideoHelper::getVideoTag( $newData->video_url, true, false, $newData->is_autoplay ) : null,
         ];
     }
 
@@ -186,7 +186,7 @@ trait Content
         $original = self::getInstagramData( [
             'posts_per_page' => $imageCount,
             'ignore_sticky_posts' => 1,
-            'tax_query' => $taxQuery
+            'tax_query' => $taxQuery ?? []
         ] );
 
         // Add filler if original images is less than the $imageCount value
@@ -207,11 +207,11 @@ trait Content
             ];
         }, $allIDs );
 
-        $instagramLinkIndex = array_search( 'instagram', array_column( self::socialLinks(), 'media' ) );
+        $instagramLinkIndex = array_search( 'instagram', array_column( self::getSocialLinks(), 'media' ) );
         if ( $instagramLinkIndex ) {
             $instagramLink = [
                 'title' => get_field( 'translate_follow_us', self::currentLang() ),
-                'url' => self::socialLinks()[ $instagramLinkIndex ][ 'url' ],
+                'url' => self::getSocialLinks()[ $instagramLinkIndex ][ 'url' ],
                 'target' => '_blank'
             ];
         }
@@ -230,7 +230,7 @@ trait Content
     {
         $data = (object)$data;
         $data->title = self::hasTitle( $data ) ? $data->section_title : '';
-        $data->link = $data->link ? (object)$data->link : $data->link;
+        $data->link = (object) (!empty($data->link) ? $data->link : []);
         $data->has_content = ( $data->title || $data->preamble || $data->content || $data->link );
         $data->image = $data->image ? wp_get_attachment_image_url( $data->image[ 'ID' ], 'newsletter' ) : null;
 
@@ -326,7 +326,7 @@ trait Content
         $data->link = $data->link ? (object)$data->link : $data->link;
         $data->has_content = ( $data->title || $data->preamble || $data->content || $data->link );
         $data->content = Helper::sp_render_text( [
-            'size_guide' => \App\template( 'partials.size-guide', [ 'size_guide' => self::sizeGuideData() ] )
+            'size_guide' => \App\template( 'partials.size-guide', [ 'size_guide' => self::getSizeGuideData() ] )
         ], $data->content );
 
         return $data;

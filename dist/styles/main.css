@@ -22063,20 +22063,18 @@ body#tinymce {
 /* line 2, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-name {
-  margin-bottom: 0.3125rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* line 14, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 12, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item:nth-child(1) {
   background-color: #fff;
 }
 
-/* line 18, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 16, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item,
 .promo-box-item:hover {
@@ -22084,13 +22082,13 @@ body#tinymce {
   text-decoration: none;
 }
 
-/* line 14, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 12, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item:nth-child(2) {
   background-color: rgba(235, 227, 207, 0.25);
 }
 
-/* line 18, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 16, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item,
 .promo-box-item:hover {
@@ -22098,13 +22096,13 @@ body#tinymce {
   text-decoration: none;
 }
 
-/* line 14, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 12, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item:nth-child(3) {
   background-color: rgba(218, 180, 180, 0.25);
 }
 
-/* line 18, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 16, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item,
 .promo-box-item:hover {
@@ -22113,7 +22111,7 @@ body#tinymce {
 }
 
 @media (max-width: 767.98px) {
-  /* line 10, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 8, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-item {
     -webkit-box-flex: 0;
@@ -22123,27 +22121,27 @@ body#tinymce {
   }
 }
 
-/* line 31, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 29, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item-row {
   min-height: 210px;
 }
 
 @media (min-width: 576px) {
-  /* line 31, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 29, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-item-row {
     min-height: 270px;
   }
 }
 
-/* line 38, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 36, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item-row .btn-icon {
   background-color: #fff;
 }
 
-/* line 43, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 41, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-description {
   font-size: 0.75rem;
@@ -22158,14 +22156,14 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 43, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 41, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-description {
     margin-bottom: 2.625rem;
   }
 }
 
-/* line 59, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 57, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-image {
   position: relative;
@@ -22210,7 +22208,7 @@ body#tinymce {
   min-width: 200%;
 }
 
-/* line 63, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 61, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-figure {
   max-width: 100px;
@@ -22218,7 +22216,7 @@ body#tinymce {
 }
 
 @media (min-width: 1240px) {
-  /* line 63, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 61, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-figure {
     max-width: 129px;
