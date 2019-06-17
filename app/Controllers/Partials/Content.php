@@ -447,7 +447,7 @@ trait Content
         $isSectionsWithNoBottomAdjustment = in_array( $current, $sectionsWithNoBottomAdjustment );
 
         // Check if current section in $sectionsWithNoBottomAdjustment
-        $nextSectionHasBg = in_array( $nextSection, $sectionsWithNoBottomAdjustment );
+        $nextSectionHasBg = in_array( $nextSection, $sectionsWithBg );
 
         // Check if current section in $sectionsWithBg
         $isSectionWithBg = in_array( $current, $sectionsWithBg );   
