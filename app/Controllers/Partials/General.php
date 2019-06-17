@@ -35,43 +35,14 @@ trait General
         return $list;
     }
 
-    public function defaultUsp()
-    {
-        return self::getDefaultUsp();
-    }
-
-    public function cookieData()
-    {
-        return (object) get_field( 'cookies', self::currentLang() ) ?? [];
-    }
-
-    public function newsletterData()
-    {
-        $newsletterEnable = get_field( 'newsletter_enable', self::currentLang() );
-        $modalContent = (object) get_field( 'newsletter_modal_content', self::currentLang() );
-        $modalContent->title = self::hasTitle($modalContent) ? $modalContent->section_title : '';
-        $modalContent->image = $modalContent->image ? wp_get_attachment_image_url( $modalContent->image['ID'], 'newsletter' ) : null;      
-
-        return (object) [
-            'newsletter_enable' => $newsletterEnable,
-            'newsletter_modal_content' => $modalContent,
-            'form_settings' => (object) get_field( 'form_settings', self::currentLang() )
-        ];
-    }
-
-    public function sizeGuideData()
-    {
-        return self::getSizeGuideData();
-    }
-    
-    public function resellerLists()
+    public static function getResellerLists()
     {
         $posts = get_posts([
             'post_type' => 'reseller',
             'posts_per_page'=> -1,
         ]);
     
-        return array_map(function ($post) {
+        return array_map( function ($post) {
             $url = get_field( 'website', $post->ID );
 
             $link = [
@@ -87,6 +58,41 @@ trait General
                 'link' => $link,
                 'is_agent' => get_field( 'is_agent', $post->ID ),
             ];
-        }, $posts);        
+        }, $posts );
+    }
+
+    public function defaultUsp()
+    {
+        return self::getDefaultUsp();
+    }
+
+    public function cookieData()
+    {
+        return (object) get_field( 'cookies', self::currentLang() ) ?? [];
+    }
+
+    public function newsletterData()
+    {
+        $newsletterEnable = get_field( 'newsletter_enable', self::currentLang() );
+        $modalContent = (object) get_field( 'newsletter_modal_content', self::currentLang() );
+        $modalContent->title = self::hasTitle($modalContent) ? $modalContent->section_title : '';
+        $modalContent->image = !empty($modalContent->image) ? wp_get_attachment_image_url( $modalContent->image['ID'], 'newsletter' ) : null;      
+
+        return (object) [
+            'newsletter_enable' => $newsletterEnable,
+            'newsletter_modal_content' => $modalContent,
+            'form_settings' => (object) get_field( 'form_settings', self::currentLang() )
+        ];
+    }
+
+    public function sizeGuideData()
+    {
+        return self::getSizeGuideData();
+    }
+
+    
+    public function resellerLists()
+    {
+        return self::getResellerLists();
     }
 }

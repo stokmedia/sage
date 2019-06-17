@@ -44,7 +44,7 @@
 
 {{-- Original Markup --}}
 
-<section class='section hero-banner'>
+<section class='section hero-banner {{ $section->classes ?? '' }}'>
     <div class='hero-wrap'>
 
         <div class='hero-background'>

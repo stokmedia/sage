@@ -3,10 +3,11 @@
 --}}
 
 @include('page')
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
 
-@section('content')
-@while(have_posts()) @php the_post() @endphp
+{{-- @section('content') --}}
+{{-- @include('partials.sections') --}}
+{{-- @while(have_posts()) @php the_post() @endphp
 @include('partials.page-header')
 
 <section class="section resellers">
@@ -37,5 +38,5 @@
   </div>
 </section>
 @include('partials.content-page')
-@endwhile
-@endsection
+@endwhile --}}
+{{-- @endsection --}}
