@@ -1,5 +1,5 @@
-<form id="{{ $formID }}" 
-    class="js-newsletter" 
+<form id="{{ $formID }}"
+    class="js-newsletter"
     data-target="{{ $targetContainer }}"
     data-success_type="{{ $newsletter_data->form_settings->success_type ?? '' }}"
     data-messages="{{ json_encode($newsletter_data->form_settings->error_messages ?? '') }}">
