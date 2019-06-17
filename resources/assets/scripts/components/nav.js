@@ -13,10 +13,12 @@ Nav.overlay = function() {
 
   navBarCollapse.on('show.bs.collapse', function () {
     $('body').addClass('nav-overlay');
+    $('body').on('touchmove', function(e) { e.preventDefault(); }, { passive:false });
   })
 
   navBarCollapse.on('hidden.bs.collapse', function () {
     $('body').removeClass('nav-overlay');
+    $('body').off('touchmove');
   })
 };
 
