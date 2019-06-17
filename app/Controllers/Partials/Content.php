@@ -327,7 +327,7 @@ trait Content
         $data->has_content = ( $data->title || $data->preamble || $data->content || $data->link );
         $data->content = Helper::sp_render_text( [
             'size_guide' => \App\template( 'partials.size-guide', [ 'size_guide' => self::sizeGuideData() ] )
-        ], $data->content );          
+        ], $data->content );
 
         return $data;
     }

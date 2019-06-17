@@ -16,6 +16,10 @@ class VideoHelper
     public static function getVideoTag( $videoURL, $videoLoop = false, $videoAddControls = true, $autoplayDesktop = false,
                                         $autoplayMobile = false, $videoBackground = false, $class = "" )
     {
+        if (empty($videoURL)) {
+            return false;
+        }
+
         // Determine video provider through URL
         if ( strpos( $videoURL, "youtube" ) !== false || strpos( $videoURL, "youtu.be" ) !== false ) {
             $videoSource = "youtube";
