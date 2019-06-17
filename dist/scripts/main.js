@@ -16610,12 +16610,12 @@ Nav.overlay = function() {
 
   navBarCollapse.on('show.bs.collapse', function () {
     $('body').addClass('nav-overlay');
-    $(document).on('touchmove', function(e) { e.preventDefault(); }, { passive:false });
+    //disableBodyScroll(true, 'navbar-collapse');
   })
 
   navBarCollapse.on('hidden.bs.collapse', function () {
     $('body').removeClass('nav-overlay');
-    $(document).off('touchmove');
+    //disableBodyScroll(false, 'navbar-collapse');
   })
 };
 

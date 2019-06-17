@@ -23700,6 +23700,7 @@ body#tinymce {
 /* line 98, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile {
+  display: block;
   position: relative;
   overflow: hidden;
   -ms-flex: 0 0 calc(25% - 3.712%);
@@ -23761,7 +23762,7 @@ body#tinymce {
   }
 }
 
-/* line 116, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 117, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile.is-three {
   -ms-flex: 0 0 calc( (25% * 3) - 11.595%);
@@ -23777,7 +23778,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 116, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 117, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile.is-three {
     -ms-flex: 0 0 calc( (25% * 3) - 93px);
@@ -23793,7 +23794,7 @@ body#tinymce {
   }
 }
 
-/* line 131, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 132, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block {
   -ms-flex: 0 0 calc(25% - 3.712%);
@@ -23809,7 +23810,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 131, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 132, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile-block {
     -ms-flex: 0 0 calc(25% - 30px);
@@ -23825,7 +23826,7 @@ body#tinymce {
   }
 }
 
-/* line 144, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 145, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block .tile {
   width: 100%;
@@ -23834,21 +23835,21 @@ body#tinymce {
   margin: 0;
 }
 
-/* line 150, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 151, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery .tile-block .tile:first-child {
   margin: 0 0 17.45%;
 }
 
 @media (min-width: 992px) {
-  /* line 150, resources/assets/styles/skhoop/sections/_instagram.scss */
+  /* line 151, resources/assets/styles/skhoop/sections/_instagram.scss */
 
   .instagram-gallery .tile-block .tile:first-child {
     margin: 0 0 30px;
   }
 }
 
-/* line 161, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 162, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile {
   padding: 1.875rem 0;
@@ -23858,7 +23859,7 @@ body#tinymce {
   background-size: cover;
 }
 
-/* line 168, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 169, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info {
   padding-left: 1.25rem;
@@ -23866,20 +23867,20 @@ body#tinymce {
   padding-bottom: 2.0625rem;
 }
 
-/* line 173, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 174, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info .btn-header {
   margin-bottom: 1.5625rem;
 }
 
-/* line 176, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 177, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info .btn-header .h3 {
   letter-spacing: 0.5px;
   line-height: 3.125rem;
 }
 
-/* line 181, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 182, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-info .btn-header .btn,
 .instagram-gallery-mobile .instagram-info .btn-header .comment-form input[type="submit"],
@@ -23895,20 +23896,20 @@ body#tinymce {
   letter-spacing: 1.86px;
 }
 
-/* line 193, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 194, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-/* line 199, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 200, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col .row:last-child .col {
   padding-bottom: 0;
 }
 
-/* line 205, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 206, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col .col {
   padding-left: 0.625rem;
@@ -23916,7 +23917,7 @@ body#tinymce {
   padding-bottom: 1.25rem;
 }
 
-/* line 211, resources/assets/styles/skhoop/sections/_instagram.scss */
+/* line 212, resources/assets/styles/skhoop/sections/_instagram.scss */
 
 .instagram-gallery-mobile .instagram-col .tile {
   position: relative;

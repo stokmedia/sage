@@ -96,6 +96,7 @@
   }
 
   .tile {
+    display: block;
     @include relate-aspect-ratio;
     @include flex( 0 0 calc(25% - 3.712%) );
     @include oneline-flex(0, 0, calc(25% - 3.712%));
