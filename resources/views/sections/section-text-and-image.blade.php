@@ -1,5 +1,5 @@
 @if ($section->hasContent)
-    <section class="section fifty-fifty-section">
+    <section class="section fifty-fifty-section  {{ $section->classes ?? '' }}">
         <div class="row fifty-fifty mx-0 {{ ($section->orderClass == 'order-md-2') ? 'is-text-first' : 'is-image-first'  }}">
 
             <div class="fifty-fifty-item image col-md-6 p-0 order-1 {{ $section->orderClass }}" style="background: url({{ $section->image ?? '' }}) no-repeat center/cover white;"></div>

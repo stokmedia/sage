@@ -1,5 +1,5 @@
 @if (!empty($section->usp))
-<section class="section usp">
+<section class="section usp {{ $section->classes ?? '' }}">
 	<div class="trust-bar">
 		<div class="container">
 

@@ -27,11 +27,9 @@ trait Content
                 if ( !empty( $thisContent ) ) {
                     $thisContent->id = $key + 1;
                     $thisContent->is_h1 = $key === 0;
-                    // $thisContent->classes = self::section_layout_classes( 
-                    //     $thisContent->acf_fc_layout, 
-                    //     $thisContent->id,
-                    //     $flexibleContent 
-                    // );
+                    $thisContent->classes = self::section_layout_classes( 
+                        $thisContent, $flexibleContent
+                    );
 
                     array_push( $data, $thisContent );
                 }
@@ -406,7 +404,7 @@ trait Content
         ];
     }
 
-    public static function section_layout_classes( $layout, $pos, $sections )
+    public static function section_layout_classes( $currentSection, $sections )
     {
         $classes = [];
         $sectionsWithNoBottomAdjustment = [
@@ -420,7 +418,7 @@ trait Content
         ];
 
         // if last section
-        if ($pos === count($sections)) {
+        if ($currentSection->id === count($sections)) {
             array_push( $classes, 'no-mb' );
         }
 
