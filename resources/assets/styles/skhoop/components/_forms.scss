@@ -3,6 +3,7 @@
 }
 
 .form-control-lg {
+
   &.is-invalid,
   &.is-valid {
     background-size: 1.875rem;
@@ -10,7 +11,7 @@
 }
 
 .custom-control {
-  .custom-control-label > span {
+  .custom-control-label>span {
     display: inline-block;
     margin-top: 0.125rem;
   }
@@ -40,6 +41,10 @@
   left: -2.5rem;
   border-color: $white;
   background-color: $white;
+}
+
+.custom-switch .custom-control-label::after {
+  left: calc(-2.6875rem + 3px);
 }
 
 // Sizes
@@ -81,11 +86,11 @@
 
 // Event Toggled
 .custom-switch .custom-control-input:checked {
-  & ~ .custom-control-label::after {
+  &~.custom-control-label::after {
     background-color: #292929;
   }
 
-  & ~ .custom-control-label::before {
+  &~.custom-control-label::before {
     color: $white;
     border-color: $primary;
     background-color: $primary;
