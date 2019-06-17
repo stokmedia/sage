@@ -59,7 +59,7 @@ trait Content
             $postPreHeader = null;
             $postLink = (object)[
                 'url' => null,
-                'title' => $data->item_link_text,
+                'title' => $data->item_link_text ?? '',
                 'target' => '_blank',
             ];
 
@@ -186,7 +186,7 @@ trait Content
         $original = self::getInstagramData( [
             'posts_per_page' => $imageCount,
             'ignore_sticky_posts' => 1,
-            'tax_query' => $taxQuery
+            'tax_query' => $taxQuery ?? []
         ] );
 
         // Add filler if original images is less than the $imageCount value

@@ -6,7 +6,7 @@ use App\Classes\Product;
 
 trait ProductData
 {
-    public function get_product( $postID=null ) {
+    public static function get_product( $postID=null ) {
 
 		if (empty($postID)) {
 			$postID = get_post()->ID;
