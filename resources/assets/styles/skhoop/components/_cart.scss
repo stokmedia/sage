@@ -7,6 +7,7 @@
   width: 100%;
   max-width: 12.5rem;
   max-height: 0;
+  transition: max-height .3s ease-in-out;
 
   @include media-breakpoint-up(lg) {
     max-width: 23.4375rem;
