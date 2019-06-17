@@ -16,6 +16,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import { sliders } from './components/sliders';
 require('./util/plusItem');
+require('./util/crossPlatform');
 
 // Require Components
 // window.stokpress = require('./util/helper');
