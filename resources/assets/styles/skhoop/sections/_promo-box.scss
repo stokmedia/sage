@@ -1,70 +1,77 @@
 .promo-box {
-    &-name {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+  &-pre-header {
+    margin-bottom: 0.125rem;
+  }
 
-    &-item {
-      $i: 0;
-      @each $color in $promo-box-colors {
-        $i: $i + 1;
-        &:nth-child(#{$i}) {
-          background-color: $color;
-        }
+  &-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.4375rem;
+  }
 
-        &,
-        &:hover {
-          color: $body-color;
-          text-decoration: none;
-        }
+  &-item {
+    $i: 0;
+
+    @each $color in $promo-box-colors {
+      $i: $i + 1;
+
+      &:nth-child(#{$i}) {
+        background-color: $color;
       }
 
-      @include media-breakpoint-down(sm) {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-    }
-
-    &-item-row {
-      min-height: 210px;
-
-      @include media-breakpoint-up(sm) {
-        min-height: 270px;
-      }
-
-      .btn-icon {
-        background-color: $white;
+      &,
+      &:hover {
+        color: $body-color;
+        text-decoration: none;
       }
     }
 
-    &-description {
-      font-size: 0.75rem;
-      font-style: italic;
-      letter-spacing: 1px;
-      line-height: 20px;
-      margin-bottom: 2.4375rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+    @include media-breakpoint-down(sm) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
 
-      @include media-breakpoint-up(md) {
-        margin-bottom: 2.625rem;
-      }
+  &-item-row {
+    min-height: 210px;
+
+    @include media-breakpoint-up(sm) {
+      min-height: 270px;
     }
 
-    &-image {
-      @include aspect-ratio(129,160);
+    .btn-icon {
+      background-color: $white;
     }
+  }
 
-    &-figure {
-      max-width: 100px;
-      max-height: 125px;
+  &-description {
+    font-size: 0.75rem;
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-bottom: 2.4375rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
-      @include media-breakpoint-up(xl) {
-        max-width: 129px;
-        max-height: 160px;
-      }
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2.625rem;
     }
+  }
+
+  &-image {
+    @include aspect-ratio(129, 160);
+  }
+
+  &-figure {
+    max-width: 100px;
+    max-height: 125px;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 129px;
+      max-height: 160px;
+    }
+  }
 }
