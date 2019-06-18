@@ -40,4 +40,26 @@ class TaxonomySilk_category extends Controller
         ];
     }
 
+    public function backgroundImage()
+    {
+        $term = get_queried_object();
+        $acfId = $term->taxonomy .'_'. $term->term_id;
+        $backgroundImage = get_field( 'background_image', $acfId );
+
+        if( !empty($backgroundImage['image']) ) {
+            $image = wp_get_attachment_image_url( $backgroundImage['image']['ID'], 'category-banner' );
+            $imageMobile = wp_get_attachment_image_url( $backgroundImage['image']['ID'], 'category-banner-mobile' );
+        }
+
+        if( !empty($backgroundImage['image_mobile']) ) {
+            $imageMobile = wp_get_attachment_image_url( $backgroundImage['image_mobile']['ID'], 'category-banner-mobile' );
+        }
+        
+        return (object) [
+            'title' => $term->name,
+            'text' => $term->description,
+            'image' => $image.'taz'.$acfId.print_r($backgroundImage).'tazki',
+            'image_mobile' => $imageMobile,
+        ];
+    }
 }

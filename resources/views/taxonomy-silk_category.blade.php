@@ -234,7 +234,7 @@
   @if ($hero_banner->image || $hero_banner->image_mobile)
     @include('sections.section-category-banner')
   @endif
-
+{{ $background_image->image }}
   <section class="section product-listing">
     <div class="container p-0">
       <div class="bg-image m-auto rounded-circle" style="background-image:url( <?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/bg-product-listing.jpg );"></div>

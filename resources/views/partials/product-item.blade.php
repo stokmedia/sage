@@ -8,7 +8,7 @@
 	<a href="{{ get_the_permalink() }}">@include('partials.product-images', ['images' => $product->images, 'size' => 'thumb', 'limit' => 2] )</a>
 </div> --}}
 
-<div class="product {{ $count <= 3 ? ' is-big' : 'is-small' }}">
+<div class="product {{ !empty($count) && $count <= 3 ? ' is-big' : 'is-small' }}">
 	<a href="{{ get_the_permalink( $post ) }}" class="product-wrapper bg-white d-block">
 	<figure class="product-image">
 		@include('partials.product-images', [
