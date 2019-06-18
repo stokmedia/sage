@@ -11,7 +11,7 @@
     <div class="row m-0 align-items-center justify-content-center justify-content-lg-around newsletter-form">
         <div class="input-group is-invalid align-items-center">
             <input type="text" class="form-control " name="esc_email" id="name" placeholder="{{ $newsletter_data->form_settings->email_placeholder ?? '' }}" aria-label="">
-            <span class="input-group-btn">
+            <span class="input-group-btn align-items-center">
                 <button type="submit" class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary shadow-sm border-0">
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     <img src="@asset('images/icon/arrow-right.svg')" alt="" srcset="">
