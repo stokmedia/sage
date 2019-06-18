@@ -1688,9 +1688,9 @@ return Unipointer;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return stokpress; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return stokpress; });
 /* unused harmony export stokpressViewPort */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return stokpressPopup; });
+/* unused harmony export stokpressPopup */
 // Create Element.remove() function if not exist // BECAUSE IE 11
 if (!('remove' in Element.prototype)) {
     Element.prototype.remove = function() {
@@ -16698,14 +16698,14 @@ Nav.overlay = function() {
   navBarCollapse.on('show.bs.collapse', function () {
     $('body').addClass('nav-overlay');
     document.documentElement.classList.add('no-scroll');
-    __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpressPopup */].disableBodyScroll(true, '.navbar-collapse');
+    __WEBPACK_IMPORTED_MODULE_0__util_helper__["default"].disableBodyScroll(true, '.navbar-collapse');
     //disableBodyScroll(true, '.navbar-collapse');
   })
 
   navBarCollapse.on('hidden.bs.collapse', function () {
     $('body').removeClass('nav-overlay');
     document.documentElement.classList.remove('no-scroll');
-    __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpressPopup */].disableBodyScroll(false, '.navbar-collapse');
+    __WEBPACK_IMPORTED_MODULE_0__util_helper__["default"].disableBodyScroll(false, '.navbar-collapse');
     //disableBodyScroll(false, '.navbar-collapse');
   })
 };
@@ -17038,13 +17038,13 @@ Video.iframeProcess = function () {
 
         var source = Video.iframes[i].getAttribute( 'data-source' );
 
-        if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {
+        if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpress */].isMobile()) {
             Video.autoPlayChecker(Video.iframes[i], 'mobile', source);
         } else {
             Video.autoPlayChecker(Video.iframes[i], 'desktop', source);
         }
 
-        if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) || __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
+        if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) || __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpress */].isMobile() ) {
             if ( source === 'vimeo' ) {
                 includeVimeoScript = true;
                 // if ( systerpHelper.isMobile() ) {
@@ -17057,7 +17057,7 @@ Video.iframeProcess = function () {
                 // }
 
             } else if ( source === 'youtube' ) {
-                if ( __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
+                if ( __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpress */].isMobile() ) {
                     // Video.iframes[i].style.zIndex = 10;
                     // Video.iframes[i].parentNode.style.zIndex = 10;
                     // Video.iframes[i].classList.remove( 'is-video-hidden' );
@@ -17077,13 +17077,13 @@ Video.iframeProcess = function () {
     }
 
     if ( includeVimeoScript ) {
-        __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://player.vimeo.com/api/player.js', function () {
+        __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpress */].getScript( 'https://player.vimeo.com/api/player.js', function () {
             Video.initializeVimeo( Video.iframes );
         } );
     }
 
     if ( includeYoutubeScript ) {
-        __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://www.youtube.com/iframe_api' );
+        __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpress */].getScript( 'https://www.youtube.com/iframe_api' );
     }
 };
 
@@ -17163,7 +17163,7 @@ Video.init = function () {
 
     if ( Video.tags.length ) {
         for ( var i = 0; i < Video.tags.length; i++ ) {
-            if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {
+            if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpress */].isMobile()) {
                 console.log(Video.tags[i].getAttribute( 'data-autoplaymobile' ));
                 if ( Video.tags[i].getAttribute( 'data-autoplaymobile' ) ) {
                     // Put video to the front
@@ -17433,11 +17433,11 @@ var Newsletter = {};
 		var delay = modal.data( 'delay' );
 		var displayTime = modal.data( 'display_time' );
 		
-		if( !__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getCookie( cookieName ) ) {
+		if( !__WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpress */].getCookie( cookieName ) ) {
 			// Show modal
 			setTimeout( function () {
 				modal.modal('show');
-				__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].setCookie( cookieName, true, 365 );
+				__WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpress */].setCookie( cookieName, true, 365 );
 			}, delay * 1000 );	
 
 			// Close modal
