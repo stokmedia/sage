@@ -20233,7 +20233,7 @@ html.is-flickity-fullscreen {
 /* line 140, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item + .trust-item {
-  margin-top: 0.625rem;
+  margin-top: 1.25rem;
 }
 
 @media (min-width: 768px) {
