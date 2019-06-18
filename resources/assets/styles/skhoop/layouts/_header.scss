@@ -387,3 +387,13 @@ body:not(.AndroidOS):not(.isApple) {
     }
   }
 }
+
+body.isApple {
+  .navbar {
+    .content-info {
+      .brand-container {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}

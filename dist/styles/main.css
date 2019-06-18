@@ -20038,6 +20038,12 @@ html.is-flickity-fullscreen {
   }
 }
 
+/* line 394, resources/assets/styles/skhoop/layouts/_header.scss */
+
+body.isApple .navbar .content-info .brand-container {
+  margin-bottom: 5rem;
+}
+
 /* line 1, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .content-info {
@@ -21141,7 +21147,7 @@ body#tinymce {
   -webkit-overflow-scrolling: touch;
   -ms-scroll-chaining: none;
       overscroll-behavior: contain;
-  padding: 0 1.875rem 3.125rem;
+  padding: 0 1.875rem 1.25rem;
   background-color: #fff;
 }
 
@@ -21411,20 +21417,34 @@ body#tinymce {
   }
 }
 
-/* line 246, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 247, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+body.isApple .product-filter {
+  padding: 0 1.875rem 5rem;
+}
+
+@media (min-width: 992px) {
+  /* line 247, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  body.isApple .product-filter {
+    padding: 0;
+  }
+}
+
+/* line 259, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .js-filter-toggle .filter-close {
   display: none;
 }
 
-/* line 251, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 264, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .js-filter-collapse {
   display: none;
 }
 
 @media (max-width: 991.98px) {
-  /* line 255, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 268, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .filter-is-open {
     overflow: hidden !important;
@@ -21433,7 +21453,7 @@ body#tinymce {
 }
 
 @media (max-width: 991.98px) {
-  /* line 262, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 275, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .js-accordion-body {
     display: none !important;
@@ -21441,14 +21461,14 @@ body#tinymce {
 }
 
 @media (max-width: 991.98px) {
-  /* line 270, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 283, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .js-accordion-toggle.is-open + .js-accordion-body {
     display: block !important;
   }
 }
 
-/* line 279, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 292, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .admin-bar .product-filter {
   top: 2.875rem;
@@ -21456,7 +21476,7 @@ body#tinymce {
 }
 
 @media screen and (min-width: 48.9375rem) {
-  /* line 279, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 292, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .admin-bar .product-filter {
     top: 2rem;
@@ -21465,7 +21485,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 279, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 292, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .admin-bar .product-filter {
     top: auto;

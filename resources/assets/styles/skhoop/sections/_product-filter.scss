@@ -62,7 +62,7 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
-  padding: 0 1.875rem 3.125rem;
+  padding: 0 1.875rem 1.25rem;
   background-color: $body-bg;
 
   @include media-breakpoint-up(lg) {
@@ -240,6 +240,19 @@
     }
   }
 }
+
+body.isApple {
+
+  // Product Filter iOS touch
+  .product-filter {
+    padding: 0 1.875rem 5rem;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+    }
+  }
+}
+
 
 // JS Filter
 .js-filter-toggle {
