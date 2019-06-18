@@ -64,9 +64,23 @@
         display: none;
       }
 
-      &::after {
-        @include center(both);
+      &::after{
+        display: none;
       }
+    }
+
+    .custom-control-label[style*="white"],
+    .custom-control-label[style*="#FFFFFF"],
+    .custom-control-label[style="#FFF"],
+    .custom-control-label[style*="#ffffff"],
+    .custom-control-label[style="#fff"],
+    .custom-control-label[style="rgb(255, 255, 255)"]     {
+      border: 1px solid $green;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label {
+      border: 0.125rem solid $white;
+      box-shadow: 0 0 0.3125rem 0 rgba($black,0.25);
     }
   }
 }
@@ -83,6 +97,7 @@
       span {
         @include center(both);
 
+        margin-top: 0;
         font-size: 0.75rem;
         line-height: 1.25rem;
       }

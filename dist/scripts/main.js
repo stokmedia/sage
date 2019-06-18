@@ -2061,7 +2061,7 @@ var stokpressViewPort = {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-module.exports = __webpack_require__(48);
+module.exports = __webpack_require__(49);
 
 
 /***/ }),
@@ -2112,6 +2112,7 @@ __webpack_require__(44);
 __webpack_require__(45);
 __webpack_require__(46);
 __webpack_require__(47);
+__webpack_require__(48);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -17213,6 +17214,80 @@ Filter.accordion();
 
 /***/ }),
 /* 43 */
+/***/ (function(module, exports) {
+
+var Filter = {};
+
+//add class if certain color was detected
+Filter.for_color = function () {
+  var el = document.getElementsByClassName('js-color');
+  if (!el) {
+      return;
+  }
+  for (var i = 0; i < el.length; i++) {
+      var bgProp = window.getComputedStyle(el[i], null).getPropertyValue('background-color');
+      if (Filter.color_detector(bgProp) == 'light') {
+          el[i].classList.add('is-checkmark-dark');
+      } else {
+          el[i].classList.add('is-checkmark-white');
+      }
+
+
+      if (i > 10) {
+          break;
+      }
+  }
+
+}
+
+//color detector
+Filter.color_detector = function (color) {
+  // Variables for red, green, blue values
+  var r, g, b, hsp;
+
+  // Check the format of the color, HEX or RGB?
+  if (color.match(/^rgb/)) {
+
+      // If HEX --> store the red, green, blue values in separate variables
+      color = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);
+
+      r = color[1];
+      g = color[2];
+      b = color[3];
+  } else {
+
+      // If RGB --> Convert it to HEX: http://gist.github.com/983661
+      color = +('0x' + color.slice(1).replace(
+          color.length < 5 && /./g, '$&$&'));
+
+      r = color >> 16;
+      g = color >> 8 & 255;
+      b = color & 255;
+  }
+
+  // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
+  hsp = Math.sqrt(
+      0.299 * (r * r) +
+      0.587 * (g * g) +
+      0.114 * (b * b)
+  );
+
+  // Using the HSP value, determine whether the color is light or dark
+  if (hsp > 127.5) {
+
+
+      return 'light';
+  } else {
+
+      return 'dark';
+  }
+}
+
+Filter.for_color();
+
+
+/***/ }),
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$.fn.resellersTable = function () {
@@ -17253,7 +17328,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17265,313 +17340,158 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* eslint-disable no-undef */
 var Video = {};
 
-function onPlayerStateChange( event ) {
-    if ( event.data === YT.PlayerState.PLAYING ) {
-        var target = event.target.a;
+window.onPlayerStateChange = function( event ) {
+	if ( event.data === YT.PlayerState.PLAYING ) {
+		var target = event.target.a;
 
-        Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-            element.parentNode.removeChild( element );
-        } );
+		Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+			element.parentNode.removeChild( element );
+		} );
 
-        target.style.opacity = 1;
-        target.classList.remove( 'is-video-hidden' );
-    }
-}
+		target.style.opacity = 1;
+	}
+};
 
 // Youtube callbacks
-function onYouTubeIframeAPIReady() {
-    for ( var i = 0; i < Video.iframes.length; i++ ) {
-        new YT.Player( Video.iframes[i].id, {
-            events: {
-                'onStateChange': onPlayerStateChange,
-            },
-        } );
-    }
-}
+window.onYouTubeIframeAPIReady = function() {
+	for ( var i = 0; i < Video.iframes.length; i++ ) {
+		new YT.Player( Video.iframes[i].id, {
+			events: {
+				'onStateChange': onPlayerStateChange,
+			},
+		} );
+	}
+};
+
 
 Video.initializeVimeo = function ( iframes ) {
     if ( iframes.length === 0 ) { return; }
 
-    for ( var i = 0; i < iframes.length; i++ ) {
-        var source = iframes[i].getAttribute( 'data-source' );
-        // var isAutoPlay = iframes[i].getAttribute( 'data-autoplay' );
+	for ( var i = 0; i < iframes.length; i++ ) {
+		var source = iframes[i].getAttribute( 'data-source' );
 
-        if ( source !== 'vimeo' ) { continue; }
+		if ( source !== 'vimeo' ) { continue; }
 
-        var playVideo = iframes[i].parentNode.parentNode.querySelector( '.js-playvideo' );
+		var playVideo = iframes[i].parentNode.parentNode.querySelector( '.js-playvideo' );
 
         if ( !playVideo ) { continue; }
 
-        playVideo.addEventListener( 'click', function (event) {
-            event.preventDefault();
+		playVideo.addEventListener( 'click', function (event) {
+			event.preventDefault();
             var iframe = this.parentNode.parentNode.querySelector( '.js-video-iframe' );
 
             if ( !iframe ) { return; }
 
-            // this.parentNode.parentNode.classList.add( 'no-after' );
+			Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+				element.parentNode.removeChild( element );
+			} );
 
-            Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                element.parentNode.removeChild( element );
-            } );
+			iframe.style.opacity = 1;
 
-            iframe.style.opacity = 1;
-            iframe.style.zIndex = 10;
-            iframe.parentNode.style.zIndex = 10;
-            iframe.classList.remove( 'is-video-hidden' );
-
-            var player = new Vimeo.Player( iframe );
-            player.play();
-        } );
-    }
-};
-
-Video.playVimeo = function ( e ) {
-    var this$1 = this;
-
-    if ( e.length === 0 ) { return; }
-
-    for ( var i = 0; i < e.length; i++ ) {
-        var source = e[i].getAttribute( 'data-source' );
-        // var isAutoPlay = e[i].getAttribute( 'data-autoplay' );
-
-        if ( source !== 'vimeo' ) { continue; }
-
-        var playVideo = e[i].parentNode.parentNode.querySelector( '.js-playvideo' );
-
-        if ( !playVideo ) { continue; }
-
-        var iframe = e[i].parentNode.parentNode.querySelector( '.js-video-iframe' );
-
-        if ( !iframe ) { return; }
-
-        // this.parentNode.parentNode.classList.add( 'no-after' );
-
-        Array.prototype.forEach.call( this$1.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-            element.parentNode.removeChild( element );
-        } );
-
-        iframe.style.opacity = 1;
-        iframe.style.zIndex = 10;
-        iframe.parentNode.style.zIndex = 10;
-        iframe.classList.remove( 'is-video-hidden' );
-
-        var player = new Vimeo.Player( iframe );
-        player.play();
-    }
+			var player = new Vimeo.Player( iframe );
+			player.play();
+		} );
+	}
 };
 
 Video.initializeYoutube = function ( iframe ) {
     var playVideo = iframe.parentNode.parentNode.querySelector( '.js-playvideo' );
 
-    if ( !playVideo ) { return; }
+	if ( !playVideo ) { return; }
 
-    playVideo.addEventListener( 'click', function (event) {
-        event.preventDefault();
+	playVideo.addEventListener( 'click', function (event) {
+		event.preventDefault();
 
-        console.log('clicked')
+		Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+			element.parentNode.removeChild( element );
+		} );
 
-        // this.parentNode.parentNode.classList.add( 'no-after' );
-
-        Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-            element.parentNode.removeChild( element );
-        } );
-
-        iframe.style.opacity = 1;
-        iframe.style.zIndex = 10;
+		iframe.style.opacity = 1;
         iframe.src += '&autoplay=1';
-    } );
+	} );
 };
 
 Video.iframeProcess = function () {
-    var includeYoutubeScript = false,
-        includeVimeoScript = false;
+	var includeYoutubeScript = false,
+		includeVimeoScript = false;
 
-    for ( var i = 0; i < Video.iframes.length; i++ ) {
+	for ( var i = 0; i < Video.iframes.length; i++ ) {
+		if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) ) {
+            var source = Video.iframes[i].getAttribute( 'data-source' );
 
-        var source = Video.iframes[i].getAttribute( 'data-source' );
+			if ( source === 'vimeo' ) {
+				includeVimeoScript = true;
+			} else if ( source === 'youtube' ) {
+				if ( __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
+					Video.iframes[i].style.zIndex = 10;
+					Video.iframes[i].parentNode.style.zIndex = 10;
+					includeYoutubeScript = true;
+				} else {
+					Video.initializeYoutube( Video.iframes[i] );
+				}
+			}
 
-        if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {
-            Video.autoPlayChecker(Video.iframes[i], 'mobile', source);
-        } else {
-            Video.autoPlayChecker(Video.iframes[i], 'desktop', source);
-        }
-
-        if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) || __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
-            if ( source === 'vimeo' ) {
-                includeVimeoScript = true;
-                // if ( systerpHelper.isMobile() ) {
-                // 	Video.iframes[i].style.opacity = 1;
-                // 	Video.iframes[i].style.zIndex = 10;
-                // 	Video.iframes[i].parentNode.style.zIndex = 10;
-                // 	Video.iframes[i].classList.remove( 'is-video-hidden' );
-                // } else {
-                // 	Video.initializeVimeo( Video.iframes[i] );
-                // }
-
-            } else if ( source === 'youtube' ) {
-                if ( __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
-                    // Video.iframes[i].style.zIndex = 10;
-                    // Video.iframes[i].parentNode.style.zIndex = 10;
-                    // Video.iframes[i].classList.remove( 'is-video-hidden' );
-                    includeYoutubeScript = true;
-                } else {
-                    // Video.initializeYoutube( Video.iframes[i] );
-                }
-            }
-
-        } else {
-            // Array.prototype.forEach.call( Video.iframes[i].parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-            // 	element.parentNode.removeChild( element );
-            // } );
-            // Video.iframes[i].style.opacity = 1;
-            // Video.iframes[i].classList.remove( 'is-video-hidden' );
-        }
-    }
-
-    if ( includeVimeoScript ) {
-        __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://player.vimeo.com/api/player.js', function () {
-            Video.initializeVimeo( Video.iframes );
-        } );
-    }
-
-    if ( includeYoutubeScript ) {
-        __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://www.youtube.com/iframe_api' );
-    }
-};
-
-Video.autoPlayChecker = function (e, isCurrStatus, source) {
-    var isKindVideo = source;
-
-    //if mobile
-    if(isCurrStatus === 'mobile') {
-        var currStatus = e.getAttribute( 'data-autoplaymobile' );
-        //if not autoplay
-        if(!currStatus) {
-            //check if vimeo or yt
-            if(isKindVideo === 'vimeo') {
-
-                Video.initializeVimeo( e );
-            } else if (isKindVideo === 'youtube') {
-                e.style.zIndex = 10;
-                e.parentNode.style.zIndex = 10;
-                e.classList.remove( 'is-video-hidden' );
-                // e.style.opacity = 1;
-                console.log('tae')
-                Video.initializeYoutube( e );
-            }
-        } else {
-            //if autoplay
-            if(isKindVideo === 'vimeo') {
-                Video.playVimeo( e );
-
-                Array.prototype.forEach.call( e.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                    element.parentNode.removeChild( element );
-                } );
-                e.style.opacity = 1;
-                e.classList.remove( 'is-video-hidden' );
-            } else {
-                // e.style.zIndex = 1;
-                // e.parentNode.style.zIndex = 10;
-                // e.classList.remove( 'is-video-hidden' );
-                // e.style.opacity = 1;
-                Video.initializeYoutube( e );
-            }
-        }
-    } else {
-        //if desktop
-        var currStatusDesk = e.getAttribute( 'data-autoplay' );
-        console.log(currStatusDesk)
-        if(!currStatusDesk) {
-            if(isKindVideo === 'vimeo') {
-                Video.initializeVimeo( e );
-            } else if (isKindVideo === 'youtube') {
-                e.classList.remove( 'is-video-hidden' );
-                Video.initializeYoutube( e );
-            }
-        } else {
-            if(source === 'vimeo') {
-                e.style.opacity = 1;
-                e.style.zIndex = 10;
-                e.parentNode.style.zIndex = 10;
-                e.classList.remove( 'is-video-hidden' );
-            }
-
-            Array.prototype.forEach.call(  e.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                element.parentNode.removeChild( element );
+		} else {
+			Array.prototype.forEach.call( Video.iframes[i].parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+				element.parentNode.removeChild( element );
             } );
-            e.style.opacity = 1;
-            e.classList.remove( 'is-video-hidden' );
-        }
-    }
+            
+			Video.iframes[i].style.opacity = 1;
+		}
+	}
+
+	if ( includeVimeoScript ) {
+		__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://player.vimeo.com/api/player.js', function () {
+			Video.initializeVimeo( Video.iframes );
+		} );
+	}
+
+	if ( includeYoutubeScript ) {
+		__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://www.youtube.com/iframe_api' );
+	}
 };
 
 Video.init = function () {
-    Video.iframes = document.querySelectorAll( 'iframe.js-video-iframe' );
-    Video.tags = document.querySelectorAll( 'video.js-video-tag' );
+	Video.iframes = document.querySelectorAll( 'iframe.js-video-iframe' );
+	Video.tags = document.querySelectorAll( 'video.js-video-tag' );
 
-    if ( Video.iframes.length ) {
-        Video.iframeProcess();
-    }
+	if ( Video.iframes.length ) {
+		Video.iframeProcess();
+	}
 
-    if ( Video.tags.length ) {
-        for ( var i = 0; i < Video.tags.length; i++ ) {
-            if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {
-                console.log(Video.tags[i].getAttribute( 'data-autoplaymobile' ));
-                if ( Video.tags[i].getAttribute( 'data-autoplaymobile' ) ) {
-                    // Put video to the front
-                    Video.tags[i].style.zIndex = 10;
-                } else {
-                    // Play video upon clicking the play button
-                    var playVideo = Video.tags[i].parentNode.parentNode.querySelector( '.js-playvideo' );
+	if ( Video.tags.length ) {
+		for ( var i = 0; i < Video.tags.length; i++ ) {
+			if ( Video.tags[i].getAttribute( 'data-autoplay' ) ) {
+				// Put video to the front
+				Video.tags[i].style.zIndex = 10;
+			} else {
+				// Play video upon clicking the play button
+				var playVideo = Video.tags[i].parentNode.parentNode.querySelector( '.js-playvideo' );
 
-                    if ( !playVideo ) { continue; }
+				if ( !playVideo ) { continue; }
 
-                    playVideo.addEventListener( 'click', function (event) {
-                        event.preventDefault();
-                        var targetVideo = this.parentNode.parentNode.querySelector( 'video' );
+				playVideo.addEventListener( 'click', function (event) {
+                    event.preventDefault();
+                    var targetVideo = this.parentNode.parentNode.querySelector( 'video' );
 
-                        Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                            element.parentNode.removeChild( element );
-                        } );
+					Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+						element.parentNode.removeChild( element );
+					} );
 
-                        targetVideo.play();
-                        targetVideo.classList.remove( 'is-video-hidden' );
-                    } );
-                }
-            } else {
-                if ( Video.tags[i].autoplay ) {
-                    // Put video to the front
-                    Video.tags[i].style.zIndex = 10;
-                } else {
-                    // Play video upon clicking the play button
-                    var playVideoDesk = Video.tags[i].parentNode.parentNode.querySelector( '.js-playvideo' );
-
-                    if ( !playVideo ) { continue; }
-
-                    playVideoDesk.addEventListener( 'click', function (event) {
-                        event.preventDefault();
-                        var targetVideo = this.parentNode.parentNode.querySelector( 'video' );
-
-                        Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                            element.parentNode.removeChild( element );
-                        } );
-
-                        targetVideo.play();
-                        targetVideo.classList.remove( 'is-video-hidden' );
-                    } );
-                }
-            }
-        }
-    }
+                    targetVideo.play();
+                    targetVideo.style.zIndex = 1;
+				} );
+			}
+		}
+	}
 };
 
 document.addEventListener( 'DOMContentLoaded', function () {
-    Video.init();
-    // console.log(stokpress.isMobile())
+	Video.init();
 } );
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Instagram = {};
@@ -17608,7 +17528,7 @@ Instagram.infoPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17736,9 +17656,12 @@ var Newsletter = {};
 
 		if (targetContainer && successType === 'success-message') {
 			Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-success', '.js-newsletter-content' );
+
 		} else if( successType === 'alert' ) {
-			// Alert.setup( 'email', 'success', true );
-			// Display alert message
+			// var btn = document.getElementById( 'js-alert-button' );
+			// var btnText = btn ? btn.dataset.text : '';
+
+			// Alert.show( 'success', form.dataset.alert, btnText );
 		}
 
 		Newsletter.resetForm(targetContainer, form, successType);	
@@ -17803,6 +17726,11 @@ var Newsletter = {};
 
 	Newsletter.init = function ( mainWrapper, modalId ) {
 
+		// var btn = document.getElementById( 'js-alert-button' );
+		// var btnText = btn ? btn.dataset.text : '';
+
+		// Alert.show( 'success', form.dataset.alert, btnText );		
+
 		var container = document.querySelectorAll( mainWrapper );
 		if (container.length === 0) { 
 			return; 
@@ -17840,7 +17768,7 @@ var Newsletter = {};
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/**
@@ -17902,7 +17830,7 @@ window.Alert = Alert;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

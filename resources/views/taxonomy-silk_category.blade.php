@@ -2,20 +2,11 @@
 
 @section('content')
 
-  <section class="section category-banner d-flex no-mb" style="background-image:url( @asset('images/temp/category-banner.jpg') );">
-    <div class="box-wrapper d-flex align-self-end">
-      <div class="container">
-        <div class="category-banner-info text-center text-sm-left">
-          <div class="title h3">
-            Skhoop Kjolar
-          </div>
-          <div class="content">
-            <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {{-- Hero banner --}}
+  @if ($hero_banner->image || $hero_banner->image_mobile)
+    @include('sections.section-category-banner')
+  @endif
+
   <section class="section product-header no-mb">
     <div class="container">
       {{-- TODO: Hide this if category banner is present --}}
@@ -230,21 +221,24 @@
     </div>
   </section>
 
-  {{-- Hero banner --}}
-  @if ($hero_banner->image || $hero_banner->image_mobile)
-    @include('sections.section-category-banner')
-  @endif
-{{ $background_image->image }}
   <section class="section product-listing">
     <div class="container p-0">
-      <div class="bg-image m-auto rounded-circle" style="background-image:url( <?php echo get_stylesheet_directory_uri(); ?>/assets/images/temp/bg-product-listing.jpg );"></div>
+      <div class="bg-image m-auto rounded-circle" style="background-image:url( {{ $background_image->image }} );"></div>
       <div class="products d-flex flex-wrap justify-content-center">
           @php $count = 1 @endphp
           @while (have_posts()) @php(the_post())
 
+            @if($count <= 3)
+              @php($imageSize = ' is-big')
+            @else
+              @php($imageSize = ' is-small')
+            @endif
+
             @include('partials.product-item',
-              ['product' => TaxonomySilk_category::get_product(), 'count' => $count++ ]
+              ['product' => TaxonomySilk_category::get_product(), 'imageSize' => $imageSize ]
             )
+
+            @php($count++)
 
           @endwhile
       {{-- <div class="spinner text-center">
