@@ -87,11 +87,13 @@ Nav.overlay = function() {
   var navBarCollapse = $('#navbarNav');
 
   // Cart Overlay
-  cartOverlay.hover(function() {
-    $('body').addClass('cart-overlay');
-  }, function(){
-    $('body').removeClass('cart-overlay');
-  });
+  if (!$('body').is('.isApple, .AndroidOS')){
+    cartOverlay.hover(function() {
+      $('body').addClass('cart-overlay');
+    }, function(){
+      $('body').removeClass('cart-overlay');
+    });
+  }
 
   navBarCollapse.on('show.bs.collapse', function () {
     $('body').addClass('nav-overlay');

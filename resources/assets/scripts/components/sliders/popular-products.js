@@ -7,23 +7,25 @@ GridSlider.slider = function () {
     $gridSlider.css('visibility', 'visible');
   });
 
-  var optionsLeft = {
+  var options = {
     cellAlign: 'left',
-    groupCells: true,
+    groupCells: false,
     prevNextButtons: false,
     pageDots: false,
     dragThreshold: 15,
   };
 
-  // var optionsRight = {
-  //   cellAlign: 'right',
-  //   groupCells: true,
-  //   prevNextButtons: false,
-  //   pageDots: false,
-  //   dragThreshold: 15,
-  // };
+  if (matchMedia('screen and (min-width: 768px)').matches) {
+    options = {
+      cellAlign: 'left',
+      groupCells: true,
+      prevNextButtons: false,
+      pageDots: false,
+      dragThreshold: 15,
+    }
+  }
 
-  $gridSlider.flickity(optionsLeft);
+  $gridSlider.flickity(options);
 
   let $prevButton = $('.js-flickity-prev');
   let $nextButton = $('.js-flickity-next');
@@ -35,27 +37,10 @@ GridSlider.slider = function () {
   $nextButton.click(function() {
     $gridSlider.flickity('next');
   });
-
-  // $slider.on('change.flickity', function () {
-  //   var flkty = $slider.data('flickity');
-  //   var cellIndex = flkty.selectedIndex + 1;
-  //   var cellLength = flkty.slides.length;
-
-  //   console.log(cellIndex + '/' + cellLength);
-
-  //   if (cellIndex == cellLength) {
-  //     console.log('Last Cell');
-  //     $slider = $gridSlider.flickity(optionsRight);
-  //   } else {
-  //     $slider = $gridSlider.flickity(optionsLeft);
-  //   }
-
-  //   $slider.flickity('resize');
-  // });
-
-  // $slider.on('change.flickity', function () {
-  //   $('.popular-products-grid-slider .grid-slider-item:first-child').css('padding-left', '0');
-  // });
 };
 
 GridSlider.slider();
+
+$(window).resize(function() {
+  GridSlider.slider();
+});
