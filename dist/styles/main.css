@@ -22437,10 +22437,12 @@ body#tinymce {
 .comment-form .checkout-container .discount-code input[type="submit"],
 .checkout-container .discount-code .search-form .search-submit,
 .search-form .checkout-container .discount-code .search-submit {
+  max-width: 11.3125rem;
   min-width: 11.3125rem;
+  text-transform: none;
 }
 
-/* line 91, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 93, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .discount-code .form-control,
 .checkout-container .discount-code .comment-form input[type="text"],
@@ -22456,7 +22458,7 @@ body#tinymce {
   margin-top: 1.25rem;
 }
 
-/* line 96, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 98, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .get-newsletter {
   margin-bottom: 2.625rem;
@@ -22464,7 +22466,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 96, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 98, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .get-newsletter {
     border-bottom: 1px solid #fff;
@@ -22474,21 +22476,21 @@ body#tinymce {
   }
 }
 
-/* line 108, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 110, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .appointment-radios {
   margin-top: 1.5625rem;
 }
 
 @media (min-width: 768px) {
-  /* line 108, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 110, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .appointment-radios {
     margin-top: 1.3125rem;
   }
 }
 
-/* line 115, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 117, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .appointment-radios .item {
   padding-top: 0.5rem;
@@ -22497,7 +22499,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 115, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 117, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .appointment-radios .item {
     padding-top: 0.875rem;
@@ -22506,7 +22508,7 @@ body#tinymce {
 }
 
 @media (min-width: 768px) {
-  /* line 125, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 127, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .appointment-radios .item:last-child {
     border-bottom: 1px solid #fff;
