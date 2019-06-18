@@ -152,11 +152,14 @@ trait Content
         $hasContent = true;
         $image = null;
         $imageMobile = null;
+        $buttonClass =null;
         $imgAttr = [
             'class' => 'hero-image',
             'width' => null,
             'height' => null
         ];
+
+        $title = self::hasTitle( $newData ) ? $newData->section_title : '';
 
         if ( $newData->image_desktop ) {
             $imgAttr[ 'class' ] = 'hero-image d-none d-sm-none d-md-block';
@@ -170,17 +173,22 @@ trait Content
             $imageMobile = wp_get_attachment_image( $newData->image_mobile[ 'ID' ], 'hero-banner-mobile', false, $imgAttr );
         }
 
+        if ($title || $newData->text || $newData->link) {
+            $buttonClass = 'd-none d-sm-none d-md-flex';
+        }
+        
+
         return (object)[
             'acf_fc_layout' => $newData->acf_fc_layout,
-            'title' => self::hasTitle( $newData ) ? $newData->section_title : '',
+            'title' => $title,
             'show_title' => $newData->show_section_title,
             'text' => $newData->text ?? '',
             'link' => is_array( $newData->link ) ? (object)$newData->link : false,
             'image' => $image,
             'image_mobile' => $imageMobile,
-//            'video_url' => $newData->video_url,
-//            'is_autoplay' => $newData->is_autoplay,
-            'video_tag' => !empty($newData->video_url) ? VideoHelper::getVideoTag( $newData->video_url, true, false, $newData->is_autoplay ) : null,
+            'is_autoplay' => $newData->is_autoplay,
+            'play_button_class' => $buttonClass,
+            'video_tag' => !empty($newData->video_url) ? VideoHelper::getVideoTag( $newData->video_url, true, false, $newData->is_autoplay, $newData->is_autoplay ) : null,
         ];
     }
 

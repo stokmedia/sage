@@ -120,9 +120,12 @@ var Newsletter = {};
 
 		if (targetContainer && successType === 'success-message') {
 			Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-success', '.js-newsletter-content' );
+
 		} else if( successType === 'alert' ) {
-			// Alert.setup( 'email', 'success', true );
-			// Display alert message
+			// var btn = document.getElementById( 'js-alert-button' );
+			// var btnText = btn ? btn.dataset.text : '';
+
+			// Alert.show( 'success', form.dataset.alert, btnText );
 		}
 
 		Newsletter.resetForm(targetContainer, form, successType);	
@@ -186,6 +189,11 @@ var Newsletter = {};
 	};
 
 	Newsletter.init = function ( mainWrapper, modalId ) {
+
+		// var btn = document.getElementById( 'js-alert-button' );
+		// var btnText = btn ? btn.dataset.text : '';
+
+		// Alert.show( 'success', form.dataset.alert, btnText );		
 
 		var container = document.querySelectorAll( mainWrapper );
 		if (container.length === 0) { 
