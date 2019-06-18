@@ -53,7 +53,17 @@ class VideoHelper
                 $videoURL .= "&background=1";
             }
 
-            return '<iframe data-autoplayMobile="1" data-autoplay="1" class="hero-iframe-video is-vimeo js-video-iframe is-video-hidden" style="z-index:1;opacity:0.000001;background-color:black"; data-source="vimeo" src="https://player.vimeo.com/external/323460867.hd.mp4?s=6386bff00f0b9898e3fb3b84182057fdbcd3117d&profile_id=175" frameborder="0" allow="autoplay; fullscreen"></iframe>';
+            $videoAttr = [];
+
+            if ( $autoplayDesktop ) {
+                array_push( $videoAttr, 'data-autoplay="1"' );
+            }
+
+            if ( $autoplayMobile ) {
+                array_push( $videoAttr, 'data-autoplayMobile="1"' );
+            }
+                  
+            return sprintf('<iframe '. implode( ' ', $videoAttr ) .' class="hero-iframe-video is-vimeo js-video-iframe is-video-hidden" style="z-index:1;opacity:0.000001;" data-source="vimeo" frameborder="0" src="%s" allow="autoplay; fullscreen"></iframe>', $videoURL);
         } elseif ( $videoSource === "youtube" ) {
             $breakString = "watch?v=";
 
@@ -77,16 +87,38 @@ class VideoHelper
                 $videoURL = str_replace( "controls=0", "controls=1", $videoURL );
             }
 
-            return sprintf('<iframe data-autoplayMobile="1" data-autoplay="1" class="hero-iframe-video is-yt js-video-iframe" style="opacity:0.000001;background-color:black"; data-source="youtube" src="%s" frameborder="0"></iframe>', $videoURL);
+            $videoAttr = [];
+
+            if ( $autoplayDesktop ) {
+                array_push( $videoAttr, 'data-autoplay="1"' );
+            }
+
+            if ( $autoplayMobile ) {
+                array_push( $videoAttr, 'data-autoplayMobile="1"' );
+            }             
+
+            return sprintf('<iframe '. implode( ' ', $videoAttr ) .' class="hero-iframe-video is-yt js-video-iframe" style="opacity:0.000001;" data-source="youtube" src="%s" frameborder="0" allow="autoplay"></iframe>', $videoURL);
         } elseif ( in_array( $videoSource, array( "vimeo-external", "mp4" ) ) ) {
             $videoLoop = $videoLoop ? "loop" : "";
             $autoplayDesktop = $autoplayDesktop ? "autoplay" : "";
+
+            $videoAttr = [];
+
+            if ( $autoplayDesktop ) {
+                array_push( $videoAttr, 'autoplay="autoplay"' );
+            } else {
+                array_push( $videoAttr, 'style="z-index:-1"' );
+            }
+
+            if ( $autoplayMobile ) {
+                array_push( $videoAttr, 'data-autoplayMobile="1"' );
+            }            
 
 //            return "<video id="video-tag-" . self::$currentId++ . "" class="hero-video js-video-tag " . $class
 //            . "" playsinline " . $autoplayDesktop . " muted " . $videoLoop
 //            . " style="width:100 %;height:100 %;background - color:black" data-autoplayMobile="" . $autoplayMobile . "">"
 //            . "<source src="" . $videoURL . "" type="video / mp4">Your browser does not support the video tag.</video>";
-            return '<video class="hero-video js-video-tag" data-autoplayMobile="1" autoplay="autoplay" muted="muted" loop="loop"><source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4"></video>';
+            return '<video class="hero-video js-video-tag '. $class .'" '. implode( ' ', $videoAttr ) .' muted="muted" loop="loop"><source src="'. $videoURL .'" type="video/mp4"></video>';
         }
 
 //        return "<iframe id="video-iframe-" . self::$currentId++ . "" class="js-video-iframe " . $class

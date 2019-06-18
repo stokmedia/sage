@@ -2061,7 +2061,7 @@ var stokpressViewPort = {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-module.exports = __webpack_require__(46);
+module.exports = __webpack_require__(49);
 
 
 /***/ }),
@@ -2072,18 +2072,20 @@ module.exports = __webpack_require__(46);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_bootstrap_js__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Router__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_common__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_home__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_about__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_sliders__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_bootstrap_js__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Router__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_common__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__routes_home__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__routes_about__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_sliders__ = __webpack_require__(33);
 // import external dependencies
 
 
 // Require/Import vendors
 __webpack_require__(9);
 __webpack_require__(10);
+__webpack_require__(23);
+
 
 // Import everything from autoload
 
@@ -2095,20 +2097,22 @@ __webpack_require__(10);
 
 
 
-__webpack_require__(35);
 __webpack_require__(36);
 __webpack_require__(37);
+__webpack_require__(38);
+__webpack_require__(39);
 
 
 // Require Components
-__webpack_require__(38);
-__webpack_require__(39);
 __webpack_require__(40);
 __webpack_require__(41);
 __webpack_require__(42);
 __webpack_require__(43);
 __webpack_require__(44);
 __webpack_require__(45);
+__webpack_require__(46);
+__webpack_require__(47);
+__webpack_require__(48);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -9042,16 +9046,315 @@ return Flickity;
 
 /***/ }),
 /* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(jQuery) {// txtTruncate - a jQuery plugin to truncate text
+// version 1.1.0
+// https://github.com/blakehaswell/txtTruncate
+//
+// Copyright (c) 2011-2012 Blake Haswell
+// Licensed under the MIT license: http://opensource.org/licenses/MIT
+(function ($) {
+
+    'use strict';
+
+
+    // Constructor
+    function Truncator(elem, options) {
+
+        // Cache the instance.
+        var self = this;
+
+        self.$elem      = $(elem);
+        self.lineHeight = self._getLineHeight();
+        self.origHeight = self.$elem.height();
+        self.origTxt    = self.$elem.text();
+
+        // Override default settings with passed options (if any)
+        self.settings   = $.extend({}, self._defaults, options || {});
+
+        self._setLines();
+
+        self.truncate();
+
+        // Text should be truncated whenever the window has been resized so that it
+        // works as expected on fluid layouts
+        var timeout;
+        $(window).resize(function(){
+
+            // Clear any existing timeout.
+            clearTimeout(timeout);
+
+            // Create a new one.
+            timeout = setTimeout($.proxy(self.truncate, self), 200);
+        });
+    }
+
+
+    Truncator.prototype = {
+
+        /**
+         * If the element doesn't fit in the specified number of lines then we
+         * collapse the element to the desired height and truncate the text.
+         */
+        hide: function () {
+            if (this._getCurrentLines() > this.settings.lines) {
+                this.$elem.animate({
+                    height: this.lineHeight * this.settings.lines,
+                }, $.proxy(this.truncate, this));
+            }
+        },
+
+        /**
+         * Restores the element's original text and expands the element to take
+         * up the required space.
+         */
+        show: function () {
+
+            // Set the element's height to the current height to stop it from
+            // getting bigger when we restore the original text
+            this.$elem.height(this.$elem.height());
+
+            this._restoreOrigTxt();
+            this.$elem.animate({
+                height: this.origHeight,
+            });
+
+        },
+
+        /**
+         * Removes characters from the element until it fits in the specified
+         * number of lines.
+         */
+        truncate: function () {
+            var this$1 = this;
+
+
+            // Prepare the element before calculating the lines
+            this._prepareElem();
+
+            var currTxt      = this._restoreOrigTxt(),
+                origTxtLines = this._getCurrentLines(),
+                charsPerLine = Math.round(currTxt.length / origTxtLines),
+                charsPerHalfLine = Math.round(charsPerLine / 2);
+
+            // Only continue to truncate if we have more lines than we want
+            if (origTxtLines > this.settings.lines) {
+
+                // If we have way more lines than we want take a guess at how
+                // much to cull
+                if (origTxtLines > this.settings.lines + 1) {
+
+                    // Given our charsPerLine value, truncate text so it's about
+                    // 1 line too tall
+                    currTxt = this._truncateElementTxt((this.settings.lines + 1) * charsPerLine);
+
+                    // If we still have way too many lines then keep removing
+                    // half a line of text until we only have 1 line more than
+                    // we want
+                    while (this._getCurrentLines() > this.settings.lines + 1) {
+                        currTxt = this$1._truncateElementTxt(currTxt.length - charsPerHalfLine);
+                    }
+
+                }
+
+                // Take off 1 character at a time until we have the number of
+                // lines we want.
+                while (this._getCurrentLines() > this.settings.lines) {
+
+                    // Due to potential weirdness where height() and lineHeight produce different values even for one line, we need to stop infinite loops.
+                    // If we're down to half a line and still truncating, something has gone wrong.
+                    if (currTxt.length == charsPerHalfLine) {
+                        this$1._recoverFromLoop(currTxt);
+                        break;
+                    }
+
+                    // Otherwise, truncate.
+                    currTxt = this$1._truncateElementTxt(currTxt.length - 1);
+                }
+            }
+
+            this._restoreElem();
+
+        },
+
+        /**
+         * The default settings to use if no `options` argument is provided when
+         * instantiating the Truncator.
+         */
+        _defaults: {
+            end   : '…',
+            lines : null,
+        },
+
+        /**
+         * Get the line height, if we're in IE and there's no unit of measurement convert it to a %
+         * so jQuery can calculate the right px value and IE doesn't explode.
+         */
+        _getLineHeight : function () {
+            var ieVal = null;
+
+            // check if IE's 'currentStyle' is available
+            if (document.body.currentStyle) {
+
+                // get the line height as IE reports it - note % are converted to pt
+                ieVal = this.$elem.get(0).currentStyle.lineHeight;
+
+                // if there's no unit of measurement
+                if (!ieVal.match(/px|PX|pt|PT|em|EM/)) {
+
+                    // set the lineHeight to an equivalent % so that IE reports a value
+                    // jQuery can work with
+                    this.$elem.css('line-height', (ieVal * 100) + '%');
+                }
+            }
+
+            return parseInt(this.$elem.css('line-height'), 10);
+        },
+
+        /**
+         * Determines how many "lines" the element takes up (based on
+         * its height).
+         */
+        _getCurrentLines: function () {
+            return Math.round(this.$elem.height() / this.lineHeight);
+        },
+
+        /**
+         * Prepares the element to be manipulated by the truncate method by
+         * removing CSS properties which influence height.
+         *
+         * TODO Call at the start of the truncate method and reset properties to their original value at the end?
+         */
+        _prepareElem: function () {
+
+            // Store the original CSS values so we can restore them later
+            this.css = {
+                height    : $.style(this.$elem, 'height') || 'auto',
+                maxHeight : this.$elem.css('max-height'),
+                minHeight : this.$elem.css('min-height'),
+            };
+
+            // Remove CSS values which influence the height of the element
+            this.$elem.css({
+                height    : 'auto',
+                maxHeight : 'none',
+                minHeight : 0,
+            });
+        },
+
+        /**
+         * Helps recover from infinite loops brought on by stupid discrepancies between height and line-height.
+         * @param string currTxt The currently displayed text.
+         */
+        _recoverFromLoop: function(currTxt){
+            var this$1 = this;
+
+
+            // Grab the current height of the element (which should be the 'ideal' height).
+            var height = this.$elem.height();
+            var maxLength = this.origTxt.length;
+
+            // Now keep adding characters back until the height changes, or alternatively, we've restored all the characters.
+            while (height == this.$elem.height() && currTxt.length < maxLength) {
+                currTxt = this$1._truncateElementTxt(currTxt.length + 1);
+            }
+
+            // If the height actually changed, take off the last character we added.
+            if (this.$elem.height() != height) {
+                this._truncateElementTxt(currTxt.length - 1);
+            }
+
+            // If we wound up displaying everything, drop the ...
+            if (currTxt.length == maxLength) {
+                this._restoreOrigTxt();
+            }
+        },
+
+        /**
+         * Restores the element's original styles.
+         */
+        _restoreElem: function () {
+            this.$elem.css(this.css);
+        },
+
+        /**
+         * Restores the element's original text. Return value is the
+         * original text.
+         */
+        _restoreOrigTxt: function () {
+            this.$elem.text(this.origTxt);
+            return this.origTxt;
+        },
+
+        /**
+         * If a number of lines hasn't been defined in the settings then we set
+         * the lines based on the element's `max-height` or, failing that,
+         * default to 1 line.
+         */
+        _setLines: function () {
+
+            // If a maximum number of lines hasn't been defined then we
+            // calculate it
+            if (!this.settings.lines) {
+
+                // If the element's max-height is greater than its line-height
+                // we use that to calculate the number of lines
+                var maxHeight = parseInt(this.$elem.css('max-height'), 10);
+
+                if (maxHeight > this.lineHeight) {
+                    this.settings.lines = Math.floor(maxHeight / this.lineHeight);
+                }
+
+                // Otherwise we'll just assume that we want to truncate to
+                // 1 line
+                else {
+                    this.settings.lines = 1;
+                }
+
+            }
+
+        },
+
+        /**
+         * Given a `length`, this method truncates the element's text to that
+         * length and adds the prepends the `end` string.
+         *
+         * Returns the truncated text (not including the `end` string).
+         */
+        _truncateElementTxt: function (length) {
+            var txt = this.origTxt.substring(0, length);
+            this.$elem.text(txt + this.settings.end);
+            return txt;
+        },
+
+    };
+
+
+    // jQuery plugin
+    $.fn.txtTruncate = function (options) {
+        return this.each(function () {
+            $(this).data('truncator', new Truncator(this, options));
+        });
+    };
+
+
+}(jQuery));
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap__);
 
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -9060,7 +9363,7 @@ return Flickity;
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(0), __webpack_require__(25)) :
+   true ? factory(exports, __webpack_require__(0), __webpack_require__(26)) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
   (global = global || self, factory(global.bootstrap = {}, global.jQuery, global.Popper));
 }(this, function (exports, $, Popper) { 'use strict';
@@ -13504,7 +13807,7 @@ return Flickity;
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16091,10 +16394,10 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(27)))
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 var g;
@@ -16121,11 +16424,11 @@ module.exports = g;
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__camelCase__ = __webpack_require__(29);
 
 
 /**
@@ -16199,7 +16502,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16215,7 +16518,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16230,7 +16533,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16245,7 +16548,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16257,21 +16560,21 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return sliders; });
 var sliders = {
   init: function init() {
-    __webpack_require__(33);
     __webpack_require__(34);
+    __webpack_require__(35);
   },
 }
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var $slider, $flkty, $thumbnailGroup, $thumbnailGroupItems, $productPeview;
@@ -16322,7 +16625,7 @@ $slider.on('fullscreenChange.flickity', function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var GridSlider = {};
@@ -16375,19 +16678,29 @@ $(window).resize(function() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$.fn.plusItem = function () {
   var $btn = (this).find('.js-plus-item-btn'),
     $items = $(this).find('.item');
 
-  if ($items.length > 5) {
-    $(this).find('.item:lt(4)').removeClass('d-none');
-    $btn.removeClass('d-none');
+  if ($(window).innerWidth() > 991) {
+    if ($items.length > 5) {
+      $(this).find('.item:lt(5)').removeClass('d-none');
+      $btn.removeClass('d-none');
+    } else {
+      $btn.addClass('d-none');
+      $items.removeClass('d-none');
+    }
   } else {
-    $btn.addClass('d-none');
-    $items.removeClass('d-none');
+    if ($items.length > 4) {
+      $(this).find('.item:lt(4)').removeClass('d-none');
+      $btn.removeClass('d-none');
+    } else {
+      $btn.addClass('d-none');
+      $items.removeClass('d-none');
+    }
   }
 
   $btn.find('label').text('+' + $(this).find('.item.d-none').length);
@@ -16407,7 +16720,7 @@ $(window).resize(function() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Platform = {};
@@ -16502,7 +16815,7 @@ $(window).resize(function() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($, jQuery) {$.fn.autoPadding = function ($settings) {
@@ -16527,7 +16840,24 @@ $(window).resize(function() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),
-/* 38 */
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {// Promo Box
+$('.promo-box-name').txtTruncate({
+	end: '...',
+	lines: 1,
+});
+
+$('.promo-box-description').txtTruncate({
+	end: '...',
+	lines: 2,
+});
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var disableBodyScroll = (function() {
@@ -16667,7 +16997,7 @@ Nav.overlay();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* COOKIES */
@@ -16742,7 +17072,7 @@ Nav.overlay();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 40 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var disableBodyScroll = (function() {
@@ -16893,7 +17223,81 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 41 */
+/* 43 */
+/***/ (function(module, exports) {
+
+var Filter = {};
+
+//add class if certain color was detected
+Filter.for_color = function () {
+  var el = document.getElementsByClassName('js-color');
+  if (!el) {
+      return;
+  }
+  for (var i = 0; i < el.length; i++) {
+      var bgProp = window.getComputedStyle(el[i], null).getPropertyValue('background-color');
+      if (Filter.color_detector(bgProp) == 'light') {
+          el[i].classList.add('is-checkmark-dark');
+      } else {
+          el[i].classList.add('is-checkmark-white');
+      }
+
+
+      if (i > 10) {
+          break;
+      }
+  }
+
+}
+
+//color detector
+Filter.color_detector = function (color) {
+  // Variables for red, green, blue values
+  var r, g, b, hsp;
+
+  // Check the format of the color, HEX or RGB?
+  if (color.match(/^rgb/)) {
+
+      // If HEX --> store the red, green, blue values in separate variables
+      color = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);
+
+      r = color[1];
+      g = color[2];
+      b = color[3];
+  } else {
+
+      // If RGB --> Convert it to HEX: http://gist.github.com/983661
+      color = +('0x' + color.slice(1).replace(
+          color.length < 5 && /./g, '$&$&'));
+
+      r = color >> 16;
+      g = color >> 8 & 255;
+      b = color & 255;
+  }
+
+  // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
+  hsp = Math.sqrt(
+      0.299 * (r * r) +
+      0.587 * (g * g) +
+      0.114 * (b * b)
+  );
+
+  // Using the HSP value, determine whether the color is light or dark
+  if (hsp > 127.5) {
+
+
+      return 'light';
+  } else {
+
+      return 'dark';
+  }
+}
+
+Filter.for_color();
+
+
+/***/ }),
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$.fn.resellersTable = function () {
@@ -16934,7 +17338,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 42 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16946,313 +17350,158 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* eslint-disable no-undef */
 var Video = {};
 
-function onPlayerStateChange( event ) {
-    if ( event.data === YT.PlayerState.PLAYING ) {
-        var target = event.target.a;
+window.onPlayerStateChange = function( event ) {
+	if ( event.data === YT.PlayerState.PLAYING ) {
+		var target = event.target.a;
 
-        Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-            element.parentNode.removeChild( element );
-        } );
+		Array.prototype.forEach.call( target.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+			element.parentNode.removeChild( element );
+		} );
 
-        target.style.opacity = 1;
-        target.classList.remove( 'is-video-hidden' );
-    }
-}
+		target.style.opacity = 1;
+	}
+};
 
 // Youtube callbacks
-function onYouTubeIframeAPIReady() {
-    for ( var i = 0; i < Video.iframes.length; i++ ) {
-        new YT.Player( Video.iframes[i].id, {
-            events: {
-                'onStateChange': onPlayerStateChange,
-            },
-        } );
-    }
-}
+window.onYouTubeIframeAPIReady = function() {
+	for ( var i = 0; i < Video.iframes.length; i++ ) {
+		new YT.Player( Video.iframes[i].id, {
+			events: {
+				'onStateChange': onPlayerStateChange,
+			},
+		} );
+	}
+};
+
 
 Video.initializeVimeo = function ( iframes ) {
     if ( iframes.length === 0 ) { return; }
 
-    for ( var i = 0; i < iframes.length; i++ ) {
-        var source = iframes[i].getAttribute( 'data-source' );
-        // var isAutoPlay = iframes[i].getAttribute( 'data-autoplay' );
+	for ( var i = 0; i < iframes.length; i++ ) {
+		var source = iframes[i].getAttribute( 'data-source' );
 
-        if ( source !== 'vimeo' ) { continue; }
+		if ( source !== 'vimeo' ) { continue; }
 
-        var playVideo = iframes[i].parentNode.parentNode.querySelector( '.js-playvideo' );
+		var playVideo = iframes[i].parentNode.parentNode.querySelector( '.js-playvideo' );
 
         if ( !playVideo ) { continue; }
 
-        playVideo.addEventListener( 'click', function (event) {
-            event.preventDefault();
+		playVideo.addEventListener( 'click', function (event) {
+			event.preventDefault();
             var iframe = this.parentNode.parentNode.querySelector( '.js-video-iframe' );
 
             if ( !iframe ) { return; }
 
-            // this.parentNode.parentNode.classList.add( 'no-after' );
+			Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+				element.parentNode.removeChild( element );
+			} );
 
-            Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                element.parentNode.removeChild( element );
-            } );
+			iframe.style.opacity = 1;
 
-            iframe.style.opacity = 1;
-            iframe.style.zIndex = 10;
-            iframe.parentNode.style.zIndex = 10;
-            iframe.classList.remove( 'is-video-hidden' );
-
-            var player = new Vimeo.Player( iframe );
-            player.play();
-        } );
-    }
-};
-
-Video.playVimeo = function ( e ) {
-    var this$1 = this;
-
-    if ( e.length === 0 ) { return; }
-
-    for ( var i = 0; i < e.length; i++ ) {
-        var source = e[i].getAttribute( 'data-source' );
-        // var isAutoPlay = e[i].getAttribute( 'data-autoplay' );
-
-        if ( source !== 'vimeo' ) { continue; }
-
-        var playVideo = e[i].parentNode.parentNode.querySelector( '.js-playvideo' );
-
-        if ( !playVideo ) { continue; }
-
-        var iframe = e[i].parentNode.parentNode.querySelector( '.js-video-iframe' );
-
-        if ( !iframe ) { return; }
-
-        // this.parentNode.parentNode.classList.add( 'no-after' );
-
-        Array.prototype.forEach.call( this$1.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-            element.parentNode.removeChild( element );
-        } );
-
-        iframe.style.opacity = 1;
-        iframe.style.zIndex = 10;
-        iframe.parentNode.style.zIndex = 10;
-        iframe.classList.remove( 'is-video-hidden' );
-
-        var player = new Vimeo.Player( iframe );
-        player.play();
-    }
+			var player = new Vimeo.Player( iframe );
+			player.play();
+		} );
+	}
 };
 
 Video.initializeYoutube = function ( iframe ) {
     var playVideo = iframe.parentNode.parentNode.querySelector( '.js-playvideo' );
 
-    if ( !playVideo ) { return; }
+	if ( !playVideo ) { return; }
 
-    playVideo.addEventListener( 'click', function (event) {
-        event.preventDefault();
+	playVideo.addEventListener( 'click', function (event) {
+		event.preventDefault();
 
-        console.log('clicked')
+		Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+			element.parentNode.removeChild( element );
+		} );
 
-        // this.parentNode.parentNode.classList.add( 'no-after' );
-
-        Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-            element.parentNode.removeChild( element );
-        } );
-
-        iframe.style.opacity = 1;
-        iframe.style.zIndex = 10;
+		iframe.style.opacity = 1;
         iframe.src += '&autoplay=1';
-    } );
+	} );
 };
 
 Video.iframeProcess = function () {
-    var includeYoutubeScript = false,
-        includeVimeoScript = false;
+	var includeYoutubeScript = false,
+		includeVimeoScript = false;
 
-    for ( var i = 0; i < Video.iframes.length; i++ ) {
+	for ( var i = 0; i < Video.iframes.length; i++ ) {
+		if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) ) {
+            var source = Video.iframes[i].getAttribute( 'data-source' );
 
-        var source = Video.iframes[i].getAttribute( 'data-source' );
+			if ( source === 'vimeo' ) {
+				includeVimeoScript = true;
+			} else if ( source === 'youtube' ) {
+				if ( __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
+					Video.iframes[i].style.zIndex = 10;
+					Video.iframes[i].parentNode.style.zIndex = 10;
+					includeYoutubeScript = true;
+				} else {
+					Video.initializeYoutube( Video.iframes[i] );
+				}
+			}
 
-        if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {
-            Video.autoPlayChecker(Video.iframes[i], 'mobile', source);
-        } else {
-            Video.autoPlayChecker(Video.iframes[i], 'desktop', source);
-        }
-
-        if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) || __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
-            if ( source === 'vimeo' ) {
-                includeVimeoScript = true;
-                // if ( systerpHelper.isMobile() ) {
-                // 	Video.iframes[i].style.opacity = 1;
-                // 	Video.iframes[i].style.zIndex = 10;
-                // 	Video.iframes[i].parentNode.style.zIndex = 10;
-                // 	Video.iframes[i].classList.remove( 'is-video-hidden' );
-                // } else {
-                // 	Video.initializeVimeo( Video.iframes[i] );
-                // }
-
-            } else if ( source === 'youtube' ) {
-                if ( __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
-                    // Video.iframes[i].style.zIndex = 10;
-                    // Video.iframes[i].parentNode.style.zIndex = 10;
-                    // Video.iframes[i].classList.remove( 'is-video-hidden' );
-                    includeYoutubeScript = true;
-                } else {
-                    // Video.initializeYoutube( Video.iframes[i] );
-                }
-            }
-
-        } else {
-            // Array.prototype.forEach.call( Video.iframes[i].parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-            // 	element.parentNode.removeChild( element );
-            // } );
-            // Video.iframes[i].style.opacity = 1;
-            // Video.iframes[i].classList.remove( 'is-video-hidden' );
-        }
-    }
-
-    if ( includeVimeoScript ) {
-        __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://player.vimeo.com/api/player.js', function () {
-            Video.initializeVimeo( Video.iframes );
-        } );
-    }
-
-    if ( includeYoutubeScript ) {
-        __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://www.youtube.com/iframe_api' );
-    }
-};
-
-Video.autoPlayChecker = function (e, isCurrStatus, source) {
-    var isKindVideo = source;
-
-    //if mobile
-    if(isCurrStatus === 'mobile') {
-        var currStatus = e.getAttribute( 'data-autoplaymobile' );
-        //if not autoplay
-        if(!currStatus) {
-            //check if vimeo or yt
-            if(isKindVideo === 'vimeo') {
-
-                Video.initializeVimeo( e );
-            } else if (isKindVideo === 'youtube') {
-                e.style.zIndex = 10;
-                e.parentNode.style.zIndex = 10;
-                e.classList.remove( 'is-video-hidden' );
-                // e.style.opacity = 1;
-                console.log('tae')
-                Video.initializeYoutube( e );
-            }
-        } else {
-            //if autoplay
-            if(isKindVideo === 'vimeo') {
-                Video.playVimeo( e );
-
-                Array.prototype.forEach.call( e.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                    element.parentNode.removeChild( element );
-                } );
-                e.style.opacity = 1;
-                e.classList.remove( 'is-video-hidden' );
-            } else {
-                // e.style.zIndex = 1;
-                // e.parentNode.style.zIndex = 10;
-                // e.classList.remove( 'is-video-hidden' );
-                // e.style.opacity = 1;
-                Video.initializeYoutube( e );
-            }
-        }
-    } else {
-        //if desktop
-        var currStatusDesk = e.getAttribute( 'data-autoplay' );
-        console.log(currStatusDesk)
-        if(!currStatusDesk) {
-            if(isKindVideo === 'vimeo') {
-                Video.initializeVimeo( e );
-            } else if (isKindVideo === 'youtube') {
-                e.classList.remove( 'is-video-hidden' );
-                Video.initializeYoutube( e );
-            }
-        } else {
-            if(source === 'vimeo') {
-                e.style.opacity = 1;
-                e.style.zIndex = 10;
-                e.parentNode.style.zIndex = 10;
-                e.classList.remove( 'is-video-hidden' );
-            }
-
-            Array.prototype.forEach.call(  e.parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                element.parentNode.removeChild( element );
+		} else {
+			Array.prototype.forEach.call( Video.iframes[i].parentNode.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+				element.parentNode.removeChild( element );
             } );
-            e.style.opacity = 1;
-            e.classList.remove( 'is-video-hidden' );
-        }
-    }
+            
+			Video.iframes[i].style.opacity = 1;
+		}
+	}
+
+	if ( includeVimeoScript ) {
+		__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://player.vimeo.com/api/player.js', function () {
+			Video.initializeVimeo( Video.iframes );
+		} );
+	}
+
+	if ( includeYoutubeScript ) {
+		__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].getScript( 'https://www.youtube.com/iframe_api' );
+	}
 };
 
 Video.init = function () {
-    Video.iframes = document.querySelectorAll( 'iframe.js-video-iframe' );
-    Video.tags = document.querySelectorAll( 'video.js-video-tag' );
+	Video.iframes = document.querySelectorAll( 'iframe.js-video-iframe' );
+	Video.tags = document.querySelectorAll( 'video.js-video-tag' );
 
-    if ( Video.iframes.length ) {
-        Video.iframeProcess();
-    }
+	if ( Video.iframes.length ) {
+		Video.iframeProcess();
+	}
 
-    if ( Video.tags.length ) {
-        for ( var i = 0; i < Video.tags.length; i++ ) {
-            if(__WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile()) {
-                console.log(Video.tags[i].getAttribute( 'data-autoplaymobile' ));
-                if ( Video.tags[i].getAttribute( 'data-autoplaymobile' ) ) {
-                    // Put video to the front
-                    Video.tags[i].style.zIndex = 10;
-                } else {
-                    // Play video upon clicking the play button
-                    var playVideo = Video.tags[i].parentNode.parentNode.querySelector( '.js-playvideo' );
+	if ( Video.tags.length ) {
+		for ( var i = 0; i < Video.tags.length; i++ ) {
+			if ( Video.tags[i].getAttribute( 'data-autoplay' ) ) {
+				// Put video to the front
+				Video.tags[i].style.zIndex = 10;
+			} else {
+				// Play video upon clicking the play button
+				var playVideo = Video.tags[i].parentNode.parentNode.querySelector( '.js-playvideo' );
 
-                    if ( !playVideo ) { continue; }
+				if ( !playVideo ) { continue; }
 
-                    playVideo.addEventListener( 'click', function (event) {
-                        event.preventDefault();
-                        var targetVideo = this.parentNode.parentNode.querySelector( 'video' );
+				playVideo.addEventListener( 'click', function (event) {
+                    event.preventDefault();
+                    var targetVideo = this.parentNode.parentNode.querySelector( 'video' );
 
-                        Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                            element.parentNode.removeChild( element );
-                        } );
+					Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
+						element.parentNode.removeChild( element );
+					} );
 
-                        targetVideo.play();
-                        targetVideo.classList.remove( 'is-video-hidden' );
-                    } );
-                }
-            } else {
-                if ( Video.tags[i].autoplay ) {
-                    // Put video to the front
-                    Video.tags[i].style.zIndex = 10;
-                } else {
-                    // Play video upon clicking the play button
-                    var playVideoDesk = Video.tags[i].parentNode.parentNode.querySelector( '.js-playvideo' );
-
-                    if ( !playVideo ) { continue; }
-
-                    playVideoDesk.addEventListener( 'click', function (event) {
-                        event.preventDefault();
-                        var targetVideo = this.parentNode.parentNode.querySelector( 'video' );
-
-                        Array.prototype.forEach.call( this.parentNode.querySelectorAll( '.js-hide-on-play' ), function ( element ) {
-                            element.parentNode.removeChild( element );
-                        } );
-
-                        targetVideo.play();
-                        targetVideo.classList.remove( 'is-video-hidden' );
-                    } );
-                }
-            }
-        }
-    }
+                    targetVideo.play();
+                    targetVideo.style.zIndex = 1;
+				} );
+			}
+		}
+	}
 };
 
 document.addEventListener( 'DOMContentLoaded', function () {
-    Video.init();
-    // console.log(stokpress.isMobile())
+	Video.init();
 } );
 
 /***/ }),
-/* 43 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Instagram = {};
@@ -17289,7 +17538,7 @@ Instagram.infoPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 44 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17417,9 +17666,12 @@ var Newsletter = {};
 
 		if (targetContainer && successType === 'success-message') {
 			Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-success', '.js-newsletter-content' );
+
 		} else if( successType === 'alert' ) {
-			// Alert.setup( 'email', 'success', true );
-			// Display alert message
+			// var btn = document.getElementById( 'js-alert-button' );
+			// var btnText = btn ? btn.dataset.text : '';
+
+			// Alert.show( 'success', form.dataset.alert, btnText );
 		}
 
 		Newsletter.resetForm(targetContainer, form, successType);	
@@ -17484,6 +17736,11 @@ var Newsletter = {};
 
 	Newsletter.init = function ( mainWrapper, modalId ) {
 
+		// var btn = document.getElementById( 'js-alert-button' );
+		// var btnText = btn ? btn.dataset.text : '';
+
+		// Alert.show( 'success', form.dataset.alert, btnText );		
+
 		var container = document.querySelectorAll( mainWrapper );
 		if (container.length === 0) { 
 			return; 
@@ -17521,7 +17778,7 @@ var Newsletter = {};
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 45 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/**
@@ -17583,7 +17840,7 @@ window.Alert = Alert;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 46 */
+/* 49 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

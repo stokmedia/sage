@@ -17867,14 +17867,14 @@ blockquote footer::before,
   letter-spacing: 1.86px;
 }
 
-/* line 7, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 6, resources/assets/styles/skhoop/components/_forms.scss */
 
 .form-control-lg.is-invalid,
 .form-control-lg.is-valid {
   background-size: 1.875rem;
 }
 
-/* line 14, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 13, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control .custom-control-label > span {
   display: inline-block;
@@ -17883,11 +17883,23 @@ blockquote footer::before,
 
 /* line 24, resources/assets/styles/skhoop/components/_forms.scss */
 
+.custom-checkbox .custom-control-label span {
+  margin-left: 1rem;
+}
+
+/* line 35, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-radio .custom-control-label span {
+  margin-left: 1rem;
+}
+
+/* line 39, resources/assets/styles/skhoop/components/_forms.scss */
+
 .custom-radio .custom-control-label::after {
   background: no-repeat 50% / 0.875rem;
 }
 
-/* line 32, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 48, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::after {
   background-color: #fff;
@@ -17895,7 +17907,7 @@ blockquote footer::before,
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-/* line 37, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 53, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::before {
   height: 0.75rem;
@@ -17906,39 +17918,45 @@ blockquote footer::before,
   background-color: #fff;
 }
 
-/* line 46, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 62, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::after {
   left: calc(-2.6875rem + 3px);
 }
 
-/* line 51, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 67, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control.custom-control-lg {
   margin: 0.3125rem 0;
 }
 
-/* line 54, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 69, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control.custom-control-lg .custom-control-label::before {
   width: 1.875rem;
   height: 1.875rem;
 }
 
-/* line 61, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 74, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-control.custom-control-lg.custom-radio {
+  padding-left: 2rem;
+}
+
+/* line 80, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio.custom-control-lg .custom-control-label::before {
   top: -0.1875rem;
   left: -2.0625rem;
 }
 
-/* line 66, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 85, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio.custom-control-lg .custom-control-label::after {
   background: no-repeat 50% / 20px;
 }
 
-/* line 72, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 91, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-checkbox.custom-control-lg .custom-control-label::before {
   width: 1.875rem;
@@ -17947,7 +17965,7 @@ blockquote footer::before,
   left: -2.0625rem;
 }
 
-/* line 79, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 98, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-checkbox.custom-control-lg .custom-control-label::after {
   width: 1.875rem;
@@ -17956,13 +17974,13 @@ blockquote footer::before,
   left: -2.0625rem;
 }
 
-/* line 89, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 108, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #292929;
 }
 
-/* line 93, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 112, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
@@ -17970,7 +17988,7 @@ blockquote footer::before,
   background-color: #b7cad0;
 }
 
-/* line 101, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 120, resources/assets/styles/skhoop/components/_forms.scss */
 
 .invalid-feedback,
 .valid-feedback {
@@ -18212,22 +18230,36 @@ blockquote footer::before,
 /* line 67, resources/assets/styles/skhoop/components/_picker.scss */
 
 .color-selector .custom-checkbox .custom-control-label::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-     transform: translate(-50%, -50%);
+  display: none;
 }
 
-/* line 78, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 72, resources/assets/styles/skhoop/components/_picker.scss */
+
+.color-selector .custom-checkbox .custom-control-label[style*="white"],
+.color-selector .custom-checkbox .custom-control-label[style*="#FFFFFF"],
+.color-selector .custom-checkbox .custom-control-label[style="#FFF"],
+.color-selector .custom-checkbox .custom-control-label[style*="#ffffff"],
+.color-selector .custom-checkbox .custom-control-label[style="#fff"],
+.color-selector .custom-checkbox .custom-control-label[style="rgb(255, 255, 255)"] {
+  border: 1px solid #b7cad0;
+}
+
+/* line 81, resources/assets/styles/skhoop/components/_picker.scss */
+
+.color-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
+  border: 0.125rem solid #fff;
+  -webkit-box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 92, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-label::before,
 .size-selector .custom-checkbox .custom-control-label::after {
   display: none;
 }
 
-/* line 83, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 97, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-label span {
   position: absolute;
@@ -18236,24 +18268,25 @@ blockquote footer::before,
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
      transform: translate(-50%, -50%);
+  margin-top: 0;
   font-size: 0.75rem;
   line-height: 1.25rem;
 }
 
-/* line 91, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 106, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
   background-color: #031532;
   border: 0.0625rem solid #031532;
 }
 
-/* line 95, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 110, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label span {
   color: #fff;
 }
 
-/* line 101, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 116, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label::before {
   content: "";
@@ -20023,6 +20056,12 @@ html.is-flickity-fullscreen {
   }
 }
 
+/* line 394, resources/assets/styles/skhoop/layouts/_header.scss */
+
+body.isApple .navbar .content-info .brand-container {
+  margin-bottom: 5rem;
+}
+
 /* line 1, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .content-info {
@@ -21396,20 +21435,34 @@ body#tinymce {
   }
 }
 
-/* line 246, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 247, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+body.isApple .product-filter {
+  padding: 0 1.875rem 5rem;
+}
+
+@media (min-width: 992px) {
+  /* line 247, resources/assets/styles/skhoop/sections/_product-filter.scss */
+
+  body.isApple .product-filter {
+    padding: 0;
+  }
+}
+
+/* line 259, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .js-filter-toggle .filter-close {
   display: none;
 }
 
-/* line 251, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 264, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .js-filter-collapse {
   display: none;
 }
 
 @media (max-width: 991.98px) {
-  /* line 255, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 268, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .filter-is-open {
     overflow: hidden !important;
@@ -21418,7 +21471,7 @@ body#tinymce {
 }
 
 @media (max-width: 991.98px) {
-  /* line 262, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 275, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .js-accordion-body {
     display: none !important;
@@ -21426,14 +21479,14 @@ body#tinymce {
 }
 
 @media (max-width: 991.98px) {
-  /* line 270, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 283, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .js-accordion-toggle.is-open + .js-accordion-body {
     display: block !important;
   }
 }
 
-/* line 279, resources/assets/styles/skhoop/sections/_product-filter.scss */
+/* line 292, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .admin-bar .product-filter {
   top: 2.875rem;
@@ -21441,7 +21494,7 @@ body#tinymce {
 }
 
 @media screen and (min-width: 48.9375rem) {
-  /* line 279, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 292, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .admin-bar .product-filter {
     top: 2rem;
@@ -21450,7 +21503,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 279, resources/assets/styles/skhoop/sections/_product-filter.scss */
+  /* line 292, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
   .admin-bar .product-filter {
     top: auto;
@@ -22237,24 +22290,25 @@ body#tinymce {
 /* line 36, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item-row {
-  min-height: 210px;
+  padding: 1rem 0;
+  height: 100%;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   /* line 36, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-item-row {
-    min-height: 270px;
+    padding: 2.1875rem 0;
   }
 }
 
-/* line 43, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 44, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item-row .btn-icon {
   background-color: #fff;
 }
 
-/* line 48, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 49, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-description {
   font-size: 0.75rem;
@@ -22262,21 +22316,17 @@ body#tinymce {
   letter-spacing: 1px;
   line-height: 20px;
   margin-bottom: 2.4375rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 @media (min-width: 768px) {
-  /* line 48, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 49, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-description {
     margin-bottom: 2.625rem;
   }
 }
 
-/* line 64, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 61, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-image {
   position: relative;
@@ -22321,7 +22371,7 @@ body#tinymce {
   min-width: 200%;
 }
 
-/* line 68, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 65, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-figure {
   max-width: 100px;
@@ -22329,7 +22379,7 @@ body#tinymce {
 }
 
 @media (min-width: 1240px) {
-  /* line 68, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 65, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-figure {
     max-width: 129px;
@@ -22557,6 +22607,12 @@ body#tinymce {
   .checkout-container .appointment-radios .item:last-child {
     border-bottom: 1px solid #fff;
   }
+}
+
+/* line 137, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .custom-radio .custom-control-label span {
+  font-weight: 500;
 }
 
 /* line 1, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
@@ -23418,9 +23474,10 @@ body#tinymce {
 
 .selected-product .custom-control .custom-control-label > span {
   margin-top: 0;
+  margin-left: 0;
 }
 
-/* line 284, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 285, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .js-plus-item-btn {
   cursor: pointer;

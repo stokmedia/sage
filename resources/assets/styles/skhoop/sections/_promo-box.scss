@@ -34,10 +34,11 @@
   }
 
   &-item-row {
-    min-height: 210px;
+    padding: 1rem 0;
+    height: 100%;
 
-    @include media-breakpoint-up(sm) {
-      min-height: 270px;
+    @include media-breakpoint-up(md) {
+      padding: 2.1875rem 0;
     }
 
     .btn-icon {
@@ -51,10 +52,6 @@
     letter-spacing: 1px;
     line-height: 20px;
     margin-bottom: 2.4375rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 
     @include media-breakpoint-up(md) {
       margin-bottom: 2.625rem;

@@ -3,7 +3,6 @@
 }
 
 .form-control-lg {
-
   &.is-invalid,
   &.is-valid {
     background-size: 1.875rem;
@@ -17,12 +16,29 @@
   }
 }
 
+// Checkbox
+//
+// Tweak just a few things for radios.
+.custom-checkbox {
+  .custom-control-label {
+    span {
+      margin-left: 1rem;
+    }
+  }
+}
+
 // Radios
 //
 // Tweak just a few things for radios.
 .custom-radio {
-  .custom-control-label::after {
-    background: no-repeat 50% / 0.875rem;
+  .custom-control-label {
+    span {
+      margin-left: 1rem;
+    }
+
+    &::after {
+      background: no-repeat 50% / 0.875rem;
+    }
   }
 }
 
@@ -50,10 +66,13 @@
 // Sizes
 .custom-control.custom-control-lg {
   margin: 0.3125rem 0;
-
   .custom-control-label::before {
     width: 1.875rem;
     height: 1.875rem;
+  }
+
+  &.custom-radio {
+    padding-left: 2rem;
   }
 }
 
