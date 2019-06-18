@@ -2,7 +2,8 @@
     class="js-newsletter"
     data-target="{{ $targetContainer }}"
     data-success_type="{{ $newsletter_data->form_settings->success_type ?? '' }}"
-    data-messages="{{ json_encode($newsletter_data->form_settings->error_messages ?? '') }}">
+    data-messages="{{ json_encode($newsletter_data->form_settings->error_messages ?? '') }}"
+    data-alert="{{ json_encode(strip_tags($newsletter_data->form_settings->success_content, '<a><div><em><strong>') ?? '') }}">
 
     <input type="hidden" name="esc_action" value="esc_submit_newsletter">
     {!! wp_nonce_field( 'silk_submit_newsletter' ) !!}

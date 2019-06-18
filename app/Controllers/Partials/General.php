@@ -6,13 +6,11 @@ use App\Classes\Helper;
 
 trait General
 {
-    // public static function currentLang( $value='slug' )
-    // {
-    //     $defaultValue = $value == 'locale' ? 'en_GB' : 'en';
-
-	// 	return function_exists('pll_current_language') ? pll_current_language( $value ) : $defaultValue;
-    // }
-
+    public static function siteTranslate( $fieldName )
+    {
+        return get_field( $fieldName, Helper::current_lang() );
+    }
+    
     public static function renderTitle( $title, $class='', $isH1=false )
     {
         if ($isH1) {

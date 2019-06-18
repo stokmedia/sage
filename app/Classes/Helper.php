@@ -41,7 +41,17 @@ class Helper {
         $defaultValue = $value == 'locale' ? 'en_GB' : 'en';
 
 		return function_exists('pll_current_language') ? pll_current_language( $value ) : $defaultValue;
-    }      
+    }  
+    
+    /**
+     * Get translated sitewide field value
+     *
+     * @param $fieldName string
+     * @return string 
+     */
+    public static function localize( $fieldName ) {
+		return get_field( $fieldName, self::current_lang() );
+    }     
 
     /**
      * Gets the translated page of saved architecture pages in Silk settings

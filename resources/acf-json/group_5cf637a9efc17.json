@@ -57,6 +57,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5d078896751b7",
+            "label": "Close",
+            "name": "translate_close",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5cf637d5c4727",
             "label": "USP",
             "name": "",
@@ -95,7 +114,7 @@
         },
         {
             "key": "field_5cf67f8130c28",
-            "label": "Newsletter modal",
+            "label": "Newsletter",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -375,7 +394,15 @@
                     "type": "text",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d0201756c159",
+                                "operator": "==",
+                                "value": "success-message"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -394,7 +421,15 @@
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d0201756c159",
+                                "operator": "!=",
+                                "value": "none"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -548,5 +583,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1560766277
+    "modified": 1560774817
 }
