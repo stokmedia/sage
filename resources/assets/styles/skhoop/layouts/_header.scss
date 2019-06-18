@@ -1,5 +1,6 @@
 $mobile-margin-top-menu: 3.75rem;
 
+// Navigation Bar
 .navbar {
   background-color: $white;
   padding: 0.3125rem 1.875rem 0.25rem;
@@ -27,6 +28,7 @@ $mobile-margin-top-menu: 3.75rem;
   }
 }
 
+// Navigation Brand/Logo
 .navbar-brand {
   @include media-breakpoint-up(lg) {
     padding: 1.125rem 0 1.0625rem;
@@ -52,6 +54,7 @@ $mobile-margin-top-menu: 3.75rem;
   }
 }
 
+// Navigation Helper(Cart, Search, Etc...)
 .navbar-helper {
   .nav-item {
     cursor: pointer;
@@ -67,17 +70,12 @@ $mobile-margin-top-menu: 3.75rem;
     }
   }
 
-  .nav-item-cart:hover .cart {
-    @include media-breakpoint-up(lg) {
-      max-height: calc(100vh - 5rem);
-    }
-  }
-
   .nav-item-cart.is-open .cart {
     max-height: calc(100vh - 5rem);
   }
 }
 
+// Navigation Hamburger
 .navbar-toggler {
   @include hamburger(1.75rem, 1.375rem);
 
@@ -99,6 +97,7 @@ $mobile-margin-top-menu: 3.75rem;
 
 }
 
+// Navigation Menu
 .navbar-nav {
   background-color: $white;
 
@@ -238,6 +237,7 @@ $mobile-margin-top-menu: 3.75rem;
   }
 }
 
+// Navigation Menu Mobile
 .navbar-collapse {
   @include media-breakpoint-down(md) {
     display: block;
@@ -307,6 +307,7 @@ $mobile-margin-top-menu: 3.75rem;
   }
 }
 
+// Navigation Overlay
 .nav-overlay {
   @include media-breakpoint-down(md) {
     overflow: hidden !important;
@@ -326,6 +327,7 @@ $mobile-margin-top-menu: 3.75rem;
 	}
 }
 
+// Navigation Checkout
 .nav-checkout {
   display: none !important;
 
@@ -360,6 +362,7 @@ $mobile-margin-top-menu: 3.75rem;
   }
 }
 
+// Has admin bar
 .admin-bar {
   .navbar {
     &.fixed-top {
@@ -370,14 +373,17 @@ $mobile-margin-top-menu: 3.75rem;
       }
     }
   }
+}
 
-  // .navbar-collapse {
-  //   @include media-breakpoint-down(md) {
-  //     margin-top: 5.75rem;
-  //   }
+// Navigation Touch Queries
+body:not(.AndroidOS):not(.isApple) {
 
-  //   @include media-max(782px) {
-  //     margin-top: 6.625rem;
-  //   }
-  // }
+  // Navigation Helper(Cart, Search, Etc...)
+  .navbar-helper {
+    .nav-item-cart:hover .cart {
+      @include media-breakpoint-up(lg) {
+        max-height: calc(100vh - 5rem);
+      }
+    }
+  }
 }

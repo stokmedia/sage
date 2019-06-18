@@ -93,13 +93,13 @@
       &:first-child{
         padding-left: 20px;
 
-        @include media-breakpoint-up(xl) {
-          padding-left: calc(( 100vw - 1200px) / 2);
-        }
+        // @include media-breakpoint-up(xl) {
+        //   padding-left: calc(( 100vw - 1200px) / 2);
+        // }
 
-        @include media-breakpoint-up(xxl) {
-          padding-left: calc(( 100vw - 1440px) / 2);
-        }
+        // @include media-breakpoint-up(xxl) {
+        //   padding-left: calc(( 100vw - 1440px) / 2);
+        // }
       }
 
       .grid-item {
