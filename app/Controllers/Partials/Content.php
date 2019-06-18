@@ -177,8 +177,10 @@ trait Content
         if ($title || $newData->text || $newData->link) {
             $buttonClass = 'd-none d-sm-none d-md-flex';
             $playOnMobile = [ 'data-showonmobile="false"' ];
-        } else {
+        } elseif ($newData->is_autoplay) {
             $buttonClass = 'd-flex d-sm-flex d-md-none';
+        } else {
+            $buttonClass = '';
         }
 
         $isBackground = false;
