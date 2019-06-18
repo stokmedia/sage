@@ -22288,13 +22288,21 @@ body.isApple .product-filter {
   height: 100%;
 }
 
-/* line 40, resources/assets/styles/skhoop/sections/_promo-box.scss */
+@media (min-width: 768px) {
+  /* line 36, resources/assets/styles/skhoop/sections/_promo-box.scss */
+
+  .promo-box-item-row {
+    padding: 2.1875rem 0;
+  }
+}
+
+/* line 44, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-item-row .btn-icon {
   background-color: #fff;
 }
 
-/* line 45, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 49, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-description {
   font-size: 0.75rem;
@@ -22305,14 +22313,14 @@ body.isApple .product-filter {
 }
 
 @media (min-width: 768px) {
-  /* line 45, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 49, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-description {
     margin-bottom: 2.625rem;
   }
 }
 
-/* line 57, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 61, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-image {
   position: relative;
@@ -22357,7 +22365,7 @@ body.isApple .product-filter {
   min-width: 200%;
 }
 
-/* line 61, resources/assets/styles/skhoop/sections/_promo-box.scss */
+/* line 65, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
 .promo-box-figure {
   max-width: 100px;
@@ -22365,7 +22373,7 @@ body.isApple .product-filter {
 }
 
 @media (min-width: 1240px) {
-  /* line 61, resources/assets/styles/skhoop/sections/_promo-box.scss */
+  /* line 65, resources/assets/styles/skhoop/sections/_promo-box.scss */
 
   .promo-box-figure {
     max-width: 129px;
