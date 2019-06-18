@@ -10,7 +10,9 @@
   <section class="section product-header no-mb">
     <div class="container">
       {{-- TODO: Hide this if category banner is present --}}
-      {{-- <h1 class="product-header-title h1 text-center">Skhoop Kjolar</h1> --}}
+      @if (!$hero_banner->image && !$hero_banner->image_mobile)
+      <h1 class="product-header-title h1 text-center">Skhoop Kjolar</h1>
+      @endif
 
       <div class="product-header-actionbox row align-items-center">
         <div class="product-breadcrumbs col-lg-6 d-none d-lg-block">
