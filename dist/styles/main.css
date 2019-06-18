@@ -23372,22 +23372,21 @@ body#tinymce {
 
 .selected-product-thumbnail.is-fullscreen .item {
   margin: 0.3125rem;
-  opacity: 1;
 }
 
-/* line 267, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 266, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:first-child {
   margin-top: 0.3125rem;
 }
 
-/* line 271, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 270, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:last-child {
   margin-bottom: 0.3125rem;
 }
 
-/* line 280, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 279, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .js-plus-item-btn {
   cursor: pointer;
