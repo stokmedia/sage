@@ -152,7 +152,6 @@ trait Content
         $hasContent = true;
         $image = null;
         $imageMobile = null;
-        $buttonClass =null;
         $imgAttr = [
             'class' => 'hero-image',
             'width' => null,
@@ -172,11 +171,20 @@ trait Content
             $imgAttr[ 'class' ] = 'hero-image d-block d-sm-block d-md-none';
             $imageMobile = wp_get_attachment_image( $newData->image_mobile[ 'ID' ], 'hero-banner-mobile', false, $imgAttr );
         }
+        
+        $playOnMobile = [ 'data-showonmobile="true"' ];
 
         if ($title || $newData->text || $newData->link) {
             $buttonClass = 'd-none d-sm-none d-md-flex';
+            $playOnMobile = [ 'data-showonmobile="false"' ];
+        } else {
+            $buttonClass = 'd-flex d-sm-flex d-md-none';
         }
-        
+
+        $isBackground = false;
+        if ($newData->is_autoplay) {
+            $isBackground = true;
+        }
 
         return (object)[
             'acf_fc_layout' => $newData->acf_fc_layout,
@@ -188,7 +196,7 @@ trait Content
             'image_mobile' => $imageMobile,
             'is_autoplay' => $newData->is_autoplay,
             'play_button_class' => $buttonClass,
-            'video_tag' => !empty($newData->video_url) ? VideoHelper::getVideoTag( $newData->video_url, true, false, $newData->is_autoplay, $newData->is_autoplay ) : null,
+            'video_tag' => !empty($newData->video_url) ? VideoHelper::getVideoTag( $newData->video_url, true, false, $newData->is_autoplay, $newData->is_autoplay, $isBackground, '', $playOnMobile ) : null,
         ];
     }
 

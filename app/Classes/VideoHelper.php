@@ -11,14 +11,17 @@ namespace App\Classes;
 
 class VideoHelper
 {
-    // private static $currentId = 1;
+    private static $currentId = 1;
 
     public static function getVideoTag( $videoURL, $videoLoop = false, $videoAddControls = true, $autoplayDesktop = false,
-                                        $autoplayMobile = false, $videoBackground = false, $class = "" )
+                                        $autoplayMobile = false, $videoBackground = false, $class = "", $videoAttr=[] )
     {
         if (empty($videoURL)) {
             return false;
         }
+        
+        // Add id attribute in $videoAttr
+        array_push( $videoAttr, 'id="section-video-'. self::$currentId++ .'"' );
 
         // Determine video provider through URL
         if ( strpos( $videoURL, "youtube" ) !== false || strpos( $videoURL, "youtu.be" ) !== false ) {
@@ -53,8 +56,6 @@ class VideoHelper
                 $videoURL .= "&background=1";
             }
 
-            $videoAttr = [];
-
             if ( $autoplayDesktop ) {
                 array_push( $videoAttr, 'data-autoplay="1"' );
             }
@@ -62,7 +63,7 @@ class VideoHelper
             if ( $autoplayMobile ) {
                 array_push( $videoAttr, 'data-autoplayMobile="1"' );
             }
-                  
+
             return sprintf('<iframe '. implode( ' ', $videoAttr ) .' class="hero-iframe-video is-vimeo js-video-iframe is-video-hidden" style="z-index:1;opacity:0.000001;" data-source="vimeo" frameborder="0" src="%s" allow="autoplay; fullscreen"></iframe>', $videoURL);
         } elseif ( $videoSource === "youtube" ) {
             $breakString = "watch?v=";
@@ -87,7 +88,9 @@ class VideoHelper
                 $videoURL = str_replace( "controls=0", "controls=1", $videoURL );
             }
 
-            $videoAttr = [];
+            if ( $videoBackground ) {
+                $videoURL .= "&mute=1";
+            }            
 
             if ( $autoplayDesktop ) {
                 array_push( $videoAttr, 'data-autoplay="1"' );

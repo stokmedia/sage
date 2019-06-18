@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import { stokpress } from '../util/helper';
+import { stokpress, stokpressViewPort } from '../util/helper';
 /* eslint-disable no-undef */
 var Video = {};
 
@@ -27,6 +27,9 @@ window.onYouTubeIframeAPIReady = function() {
 	}
 };
 
+Video.isMobile = function () {
+    return stokpress.isMobile() || stokpressViewPort.documentWidth().width < 720;
+};
 
 Video.initializeVimeo = function ( iframes ) {
     if ( iframes.length === 0 ) { return; }
@@ -75,21 +78,26 @@ Video.initializeYoutube = function ( iframe ) {
 	} );
 };
 
+
 Video.iframeProcess = function () {
 	var includeYoutubeScript = false,
-		includeVimeoScript = false;
+        includeVimeoScript = false;
 
 	for ( var i = 0; i < Video.iframes.length; i++ ) {
-		if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) ) {
-            var source = Video.iframes[i].getAttribute( 'data-source' );
+		if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) || Video.isMobile() ) {
+            var source = Video.iframes[i].getAttribute( 'data-source' ),
+                playOnMobile = Video.iframes[i].getAttribute( 'data-showonmobile' );
 
 			if ( source === 'vimeo' ) {
 				includeVimeoScript = true;
 			} else if ( source === 'youtube' ) {
-				if ( stokpress.isMobile() ) {
-					Video.iframes[i].style.zIndex = 10;
-					Video.iframes[i].parentNode.style.zIndex = 10;
-					includeYoutubeScript = true;
+				if ( Video.isMobile() ) {
+
+                    if (playOnMobile === 'true') {
+                        Video.iframes[i].style.zIndex = 5;
+                        includeYoutubeScript = true;
+                    }
+
 				} else {
 					Video.initializeYoutube( Video.iframes[i] );
 				}
@@ -100,7 +108,7 @@ Video.iframeProcess = function () {
 				element.parentNode.removeChild( element );
             } );
             
-			Video.iframes[i].style.opacity = 1;
+            Video.iframes[i].style.opacity = 1;
 		}
 	}
 
@@ -151,5 +159,5 @@ Video.init = function () {
 };
 
 document.addEventListener( 'DOMContentLoaded', function () {
-	Video.init();
+    Video.init();
 } );

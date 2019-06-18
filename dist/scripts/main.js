@@ -1906,7 +1906,7 @@ return getSize;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return stokpress; });
-/* unused harmony export stokpressViewPort */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return stokpressViewPort; });
 // Create Element.remove() function if not exist // BECAUSE IE 11
 if (!('remove' in Element.prototype)) {
     Element.prototype.remove = function() {
@@ -17373,6 +17373,9 @@ window.onYouTubeIframeAPIReady = function() {
 	}
 };
 
+Video.isMobile = function () {
+    return __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() || __WEBPACK_IMPORTED_MODULE_0__util_helper__["b" /* stokpressViewPort */].documentWidth().width < 720;
+};
 
 Video.initializeVimeo = function ( iframes ) {
     if ( iframes.length === 0 ) { return; }
@@ -17421,21 +17424,26 @@ Video.initializeYoutube = function ( iframe ) {
 	} );
 };
 
+
 Video.iframeProcess = function () {
 	var includeYoutubeScript = false,
-		includeVimeoScript = false;
+        includeVimeoScript = false;
 
 	for ( var i = 0; i < Video.iframes.length; i++ ) {
-		if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) ) {
-            var source = Video.iframes[i].getAttribute( 'data-source' );
+		if ( !Video.iframes[i].getAttribute( 'data-autoplay' ) || Video.isMobile() ) {
+            var source = Video.iframes[i].getAttribute( 'data-source' ),
+                playOnMobile = Video.iframes[i].getAttribute( 'data-showonmobile' );
 
 			if ( source === 'vimeo' ) {
 				includeVimeoScript = true;
 			} else if ( source === 'youtube' ) {
-				if ( __WEBPACK_IMPORTED_MODULE_0__util_helper__["a" /* stokpress */].isMobile() ) {
-					Video.iframes[i].style.zIndex = 10;
-					Video.iframes[i].parentNode.style.zIndex = 10;
-					includeYoutubeScript = true;
+				if ( Video.isMobile() ) {
+
+                    if (playOnMobile === 'true') {
+                        Video.iframes[i].style.zIndex = 5;
+                        includeYoutubeScript = true;
+                    }
+
 				} else {
 					Video.initializeYoutube( Video.iframes[i] );
 				}
@@ -17446,7 +17454,7 @@ Video.iframeProcess = function () {
 				element.parentNode.removeChild( element );
             } );
             
-			Video.iframes[i].style.opacity = 1;
+            Video.iframes[i].style.opacity = 1;
 		}
 	}
 
@@ -17497,7 +17505,7 @@ Video.init = function () {
 };
 
 document.addEventListener( 'DOMContentLoaded', function () {
-	Video.init();
+    Video.init();
 } );
 
 /***/ }),

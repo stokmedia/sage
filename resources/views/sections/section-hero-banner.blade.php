@@ -56,7 +56,7 @@
             {!! $section->image_mobile !!}
 
             {{-- @if($section->video_tag && !$section->title && !$section->text && !$section->link) --}}
-            @if($section->video_tag && !$section->is_autoplay)
+            @if($section->video_tag)
                 <!-- Play button -->
                 {{-- d-block d-sm-block d-md-none --}}
                 <div class="hero-play-btn js-hide-on-play js-playvideo {{ $section->play_button_class }}">
@@ -76,7 +76,7 @@
         <!-- Vimeo -->
         {{-- <iframe data-autoplayMobile='1' data-autoplay='1' class='hero-iframe-video is-vimeo js-video-iframe is-video-hidden' style='z-index:1;opacity:0.000001;background-color:black'; data-source='vimeo' src="https://player.vimeo.com/external/323460867.hd.mp4?s=6386bff00f0b9898e3fb3b84182057fdbcd3117d&profile_id=175" frameborder="0" allow="autoplay; fullscreen"></iframe> --}}
         <!-- Youtube -->
-        {{-- <iframe id="video-iframe-ScMzIvxBSi4" data-autoplayMobile='1' data-autoplay='1' class='hero-iframe-video is-yt js-video-iframe' style='z-index:10;opacity:1;background-color:black;' data-source='youtube' src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&showinfo=0&controls=0&enablejsapi=1" frameborder="0" allow="autoplay; fullscreen"></iframe> --}}
+        {{-- <iframe id="video-iframe-ScMzIvxBSi4" data-autoplayMobile='1' data-autoplay='1' class='hero-iframe-video is-yt js-video-iframe' style='z-index:10;opacity:1;background-color:black;' data-source='youtube' src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&showinfo=0&controls=0&enablejsapi=1&autoplay=1&mute=1" frameborder="0" allow="autoplay"></iframe> --}}
 
 
         <div class='hero-text'>
