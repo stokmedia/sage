@@ -34,11 +34,8 @@
   }
 
   &-item-row {
-    min-height: 210px;
-
-    @include media-breakpoint-up(sm) {
-      min-height: 270px;
-    }
+    padding: 1rem 0;
+    height: 100%;
 
     .btn-icon {
       background-color: $white;
@@ -51,10 +48,6 @@
     letter-spacing: 1px;
     line-height: 20px;
     margin-bottom: 2.4375rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 
     @include media-breakpoint-up(md) {
       margin-bottom: 2.625rem;

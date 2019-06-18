@@ -4,6 +4,8 @@ import 'jquery';
 // Require/Import vendors
 require('../../../node_modules/flickity/dist/flickity.pkgd');
 require('./vendor/flickity-fullscreen');
+require('./vendor/jquery.txtTruncate');
+
 
 // Import everything from autoload
 import './autoload/**/*'
@@ -18,6 +20,7 @@ import { sliders } from './components/sliders';
 require('./util/plusItem');
 require('./util/crossPlatform');
 require('./util/autoPadding');
+require('./util/ellipsis');
 
 
 // Require Components
