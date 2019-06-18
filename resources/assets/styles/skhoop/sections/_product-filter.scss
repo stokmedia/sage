@@ -62,7 +62,7 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
-  padding: 0 1.875rem 1.25rem;
+  padding: 0 1.875rem 3.125rem;
   background-color: $body-bg;
 
   @include media-breakpoint-up(lg) {

@@ -21141,7 +21141,7 @@ body#tinymce {
   -webkit-overflow-scrolling: touch;
   -ms-scroll-chaining: none;
       overscroll-behavior: contain;
-  padding: 0 1.875rem 1.25rem;
+  padding: 0 1.875rem 3.125rem;
   background-color: #fff;
 }
 
