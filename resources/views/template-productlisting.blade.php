@@ -333,8 +333,6 @@
 
     @include('sections.section-text-header')
 
-    @include('sections.section-popular-products')
-
     @include('partials.content-page')
   @endwhile
 @endsection
