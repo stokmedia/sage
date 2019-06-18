@@ -228,6 +228,9 @@
     font-size: 0.75rem;
     letter-spacing: 0.5px;
     text-transform: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     @include media-breakpoint-up(lg) {
       font-size: 0.8125rem;
@@ -237,9 +240,14 @@
 
   &-price {
     margin-top: -0.4375rem;
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     font-weight: $font-weight-normal;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.25px;
+
+    @include media-min(23.4375rem) {
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+    }
 
     @include media-breakpoint-up(lg) {
       margin-top: -0.1875rem;
@@ -261,7 +269,11 @@
     }
 
     .product-details {
-      padding: 0 0.9375rem 0.3125rem;
+      padding: 0 0.3125rem 0.3125rem;
+
+      @include media-min(23.4375rem) {
+        padding: 0 0.9375rem 0.3125rem;
+      }
 
       @include media-breakpoint-up(lg) {
         padding: 0 1.5rem 1.5625rem;
@@ -281,7 +293,11 @@
     }
 
     .product-details {
-      padding: 0 0.9375rem 0.3125rem;
+      padding: 0 0.3125rem 0.3125rem;
+
+      @include media-min(375px) {
+        padding: 0 0.9375rem 0.3125rem;
+      }
 
       @include media-breakpoint-up(lg) {
         padding: 0 0.75rem 1.5625rem;
@@ -298,6 +314,9 @@
 
     .product-price {
       color: $red;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
 
       span {
         margin-right: 0.3125rem;
