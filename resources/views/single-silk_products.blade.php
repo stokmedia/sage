@@ -7,5 +7,3 @@
    	)
   @endwhile
 @endsection
-
-@debug

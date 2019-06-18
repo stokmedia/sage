@@ -18,6 +18,10 @@ trait ProductData
     	$data->price = $product->getPrice();
     	$data->images = $product->getAllProductImages();
         $data->is_bundle = $product->isBundle();
+        
+        $data->product_meta = $product->product_meta;
+
+        var_dump($data->product_meta);
 
         if( $product->isBundle() && is_single() ) {
 

@@ -96,8 +96,6 @@ add_filter( 'tiny_mce_before_init', function( $initArray ) {
 }  );  
 
 
-
-/* STELLAR PoC , Plase leave this code for now
 // Testing to register own Taxonomy
 $tax_args = array(
     'label'                      => 'Product Data',
@@ -148,7 +146,6 @@ add_filter( 'custom_silk_taxonomy_args', function( $args ) {
 } );
 
 
-*/
 
 /**
  * Image sizes

@@ -114,4 +114,10 @@ class App extends Controller
         }
     */
 
+    public static function format_centra_markup( $str ) {
+        $str = preg_replace('/\[b\]([^\[]+)\[\/b\]/', '<strong>$1</strong>', $str);
+        $str = preg_replace('/\n/', '<br/>', $str);
+        return $str;
+    } 
+
 }
