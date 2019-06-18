@@ -1,4 +1,4 @@
-import stokpressPopup from '../util/helper';
+import { stokpressPopup } from '../util/helper';
 
 var Nav = {};
 
