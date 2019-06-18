@@ -32,7 +32,8 @@
                     @include('partials.product-item',
                         [
                             'post' => $product,
-                            'product' => TaxonomySilk_category::get_product($product->ID)
+                            'product' => TaxonomySilk_category::get_product($product->ID),
+                            'isSlider' => true
                         ]
                     )
                     {{-- <div class="grid-slider-item">
