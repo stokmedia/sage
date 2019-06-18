@@ -116,10 +116,16 @@
     width: 14.375rem;
     margin-left: auto;
     margin-right: auto;
+    
 
     @include media-breakpoint-up(md) {
       display: inline-block;
       vertical-align: top;
+      width: 13.75rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 14.375rem;
     }
 
     .info {

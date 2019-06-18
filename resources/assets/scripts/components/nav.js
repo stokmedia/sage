@@ -1,3 +1,5 @@
+import { stokpressPopup } from '../util/helper';
+
 var Nav = {};
 
 Nav.overlay = function() {
@@ -14,12 +16,14 @@ Nav.overlay = function() {
   navBarCollapse.on('show.bs.collapse', function () {
     $('body').addClass('nav-overlay');
     document.documentElement.classList.add('no-scroll');
+    stokpressPopup.disableBodyScroll(true, '.navbar-collapse');
     //disableBodyScroll(true, '.navbar-collapse');
   })
 
   navBarCollapse.on('hidden.bs.collapse', function () {
     $('body').removeClass('nav-overlay');
     document.documentElement.classList.remove('no-scroll');
+    stokpressPopup.disableBodyScroll(false, '.navbar-collapse');
     //disableBodyScroll(false, '.navbar-collapse');
   })
 };

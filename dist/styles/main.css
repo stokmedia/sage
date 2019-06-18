@@ -20213,16 +20213,25 @@ html.is-flickity-fullscreen {
   .trust-bar .trust-item {
     display: inline-block;
     vertical-align: top;
+    width: 13.75rem;
   }
 }
 
-/* line 125, resources/assets/styles/skhoop/layouts/_footer.scss */
+@media (min-width: 992px) {
+  /* line 112, resources/assets/styles/skhoop/layouts/_footer.scss */
+
+  .trust-bar .trust-item {
+    width: 14.375rem;
+  }
+}
+
+/* line 131, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item .info {
   text-align: left;
 }
 
-/* line 128, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 134, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item .info .h4 {
   margin-top: 0.1875rem;
@@ -20230,14 +20239,14 @@ html.is-flickity-fullscreen {
   line-height: 1rem;
 }
 
-/* line 140, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 146, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item + .trust-item {
   margin-top: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  /* line 140, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 146, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item + .trust-item {
     margin-top: 0;
@@ -20246,14 +20255,14 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 140, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 146, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item + .trust-item {
     margin-left: 3.9375rem;
   }
 }
 
-/* line 154, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 160, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .icon-block {
   width: 2.5rem;
