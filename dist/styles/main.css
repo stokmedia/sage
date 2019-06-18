@@ -17883,17 +17883,23 @@ blockquote footer::before,
 
 /* line 24, resources/assets/styles/skhoop/components/_forms.scss */
 
-.custom-radio .custom-control-label > span {
+.custom-checkbox .custom-control-label span {
   margin-left: 1rem;
 }
 
-/* line 28, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 35, resources/assets/styles/skhoop/components/_forms.scss */
+
+.custom-radio .custom-control-label span {
+  margin-left: 1rem;
+}
+
+/* line 39, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio .custom-control-label::after {
   background: no-repeat 50% / 0.875rem;
 }
 
-/* line 37, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 48, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::after {
   background-color: #fff;
@@ -17901,7 +17907,7 @@ blockquote footer::before,
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-/* line 42, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 53, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::before {
   height: 0.75rem;
@@ -17912,45 +17918,45 @@ blockquote footer::before,
   background-color: #fff;
 }
 
-/* line 51, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 62, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-label::after {
   left: calc(-2.6875rem + 3px);
 }
 
-/* line 56, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 67, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control.custom-control-lg {
   margin: 0.3125rem 0;
 }
 
-/* line 58, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 69, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control.custom-control-lg .custom-control-label::before {
   width: 1.875rem;
   height: 1.875rem;
 }
 
-/* line 63, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 74, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-control.custom-control-lg.custom-radio {
   padding-left: 2rem;
 }
 
-/* line 69, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 80, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio.custom-control-lg .custom-control-label::before {
   top: -0.1875rem;
   left: -2.0625rem;
 }
 
-/* line 74, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 85, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-radio.custom-control-lg .custom-control-label::after {
   background: no-repeat 50% / 20px;
 }
 
-/* line 80, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 91, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-checkbox.custom-control-lg .custom-control-label::before {
   width: 1.875rem;
@@ -17959,7 +17965,7 @@ blockquote footer::before,
   left: -2.0625rem;
 }
 
-/* line 87, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 98, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-checkbox.custom-control-lg .custom-control-label::after {
   width: 1.875rem;
@@ -17968,13 +17974,13 @@ blockquote footer::before,
   left: -2.0625rem;
 }
 
-/* line 97, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 108, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #292929;
 }
 
-/* line 101, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 112, resources/assets/styles/skhoop/components/_forms.scss */
 
 .custom-switch .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
@@ -17982,7 +17988,7 @@ blockquote footer::before,
   background-color: #b7cad0;
 }
 
-/* line 109, resources/assets/styles/skhoop/components/_forms.scss */
+/* line 120, resources/assets/styles/skhoop/components/_forms.scss */
 
 .invalid-feedback,
 .valid-feedback {
@@ -22604,6 +22610,12 @@ body.isApple .product-filter {
   .checkout-container .appointment-radios .item:last-child {
     border-bottom: 1px solid #fff;
   }
+}
+
+/* line 137, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .custom-radio .custom-control-label span {
+  font-weight: 500;
 }
 
 /* line 1, resources/assets/styles/skhoop/sections/_thankyou-details.scss */

@@ -16,12 +16,23 @@
   }
 }
 
+// Checkbox
+//
+// Tweak just a few things for radios.
+.custom-checkbox {
+  .custom-control-label {
+    span {
+      margin-left: 1rem;
+    }
+  }
+}
+
 // Radios
 //
 // Tweak just a few things for radios.
 .custom-radio {
   .custom-control-label {
-    & > span {
+    span {
       margin-left: 1rem;
     }
 
