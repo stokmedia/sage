@@ -16685,12 +16685,22 @@ $(window).resize(function() {
   var $btn = (this).find('.js-plus-item-btn'),
     $items = $(this).find('.item');
 
-  if ($items.length > 5) {
-    $(this).find('.item:lt(4)').removeClass('d-none');
-    $btn.removeClass('d-none');
+  if ($(window).innerWidth() > 991) {
+    if ($items.length > 5) {
+      $(this).find('.item:lt(5)').removeClass('d-none');
+      $btn.removeClass('d-none');
+    } else {
+      $btn.addClass('d-none');
+      $items.removeClass('d-none');
+    }
   } else {
-    $btn.addClass('d-none');
-    $items.removeClass('d-none');
+    if ($items.length > 4) {
+      $(this).find('.item:lt(4)').removeClass('d-none');
+      $btn.removeClass('d-none');
+    } else {
+      $btn.addClass('d-none');
+      $items.removeClass('d-none');
+    }
   }
 
   $btn.find('label').text('+' + $(this).find('.item.d-none').length);
