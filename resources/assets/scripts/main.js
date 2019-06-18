@@ -9,7 +9,7 @@ require('./vendor/flickity-fullscreen');
 import './autoload/**/*'
 
 
-// import local dependencies
+// import local dependencies/utils
 import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
@@ -17,13 +17,10 @@ import aboutUs from './routes/about';
 import { sliders } from './components/sliders';
 require('./util/plusItem');
 require('./util/crossPlatform');
+require('./util/autoPadding');
+
 
 // Require Components
-// window.stokpress = require('./util/helper');
-
-// require('./components/helper');
-// require('./util/helper');
-require('./components/auto-padding');
 require('./components/nav');
 require('./components/cookie');
 require('./components/filter');
@@ -49,4 +46,7 @@ jQuery(document).ready(() => {
   sliders.init();
   $('.js-plus-item').plusItem();
   $('.resellers-table').resellersTable();
+  $('body').autoPadding({
+    source:  $('.js-header'),
+  });
 });

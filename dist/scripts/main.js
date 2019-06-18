@@ -2260,7 +2260,7 @@ __webpack_require__(10);
 
 
 
-// import local dependencies
+// import local dependencies/utils
 
 
 
@@ -2268,13 +2268,10 @@ __webpack_require__(10);
 
 __webpack_require__(35);
 __webpack_require__(36);
+__webpack_require__(37);
+
 
 // Require Components
-// window.stokpress = require('./util/helper');
-
-// require('./components/helper');
-// require('./util/helper');
-__webpack_require__(37);
 __webpack_require__(38);
 __webpack_require__(39);
 __webpack_require__(40);
@@ -2300,6 +2297,9 @@ jQuery(document).ready(function () {
   __WEBPACK_IMPORTED_MODULE_6__components_sliders__["a" /* sliders */].init();
   $('.js-plus-item').plusItem();
   $('.resellers-table').resellersTable();
+  $('body').autoPadding({
+    source:  $('.js-header'),
+  });
 });
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(0)))
@@ -16691,25 +16691,26 @@ GridSlider.slider();
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {var AutoPadding = {};
-var $header = $('.js-header');
-var $body = $('body');
+/* WEBPACK VAR INJECTION */(function($, jQuery) {$.fn.autoPadding = function ($settings) {
+  var $config = {
+      source: null,
+    },
+    $target = $(this);
 
-changePadding($body, $header);
+  if ($settings) { jQuery.extend($config, $settings); }
 
-$(window).resize(function () {
-  changePadding($body, $header);
-});
-
-function changePadding($body, $header) {
-  $body.css({
-    paddingTop: $header.innerHeight() + 'px',
+  $(this).css({
+    paddingTop: $config.source.innerHeight() + 'px',
   });
-}
 
-AutoPadding.update = changePadding;
+  $(window).resize(function () {
+    $target.css({
+      paddingTop: $config.source.innerHeight() + 'px',
+    });
+  });
+};
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),
 /* 38 */
