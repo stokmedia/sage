@@ -19,9 +19,7 @@ trait ProductData
     	$data->images = $product->getAllProductImages();
         $data->is_bundle = $product->isBundle();
         $data->product_meta = $product->product_meta;
-
-        echo "<pre>";
-        var_dump($data->product_meta['relatedProducts']);
+        $data->compared_to = $product->getComparedProducts();
 
         if( $product->isBundle() && is_single() ) {
 
@@ -33,4 +31,10 @@ trait ProductData
 
     	return $data;
 	}
+
+
+
+
+
+
 }

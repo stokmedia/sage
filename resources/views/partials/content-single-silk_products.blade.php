@@ -48,10 +48,21 @@
     <div style="border: 1px solid orange; margin: 20px; padding: 20px; width: 50%">
       <h2>Compared</h2>
       <div style="float: left; width: 50%; border-right: 1px solid orange; padding-right: 20px;">
+
+        <h3>{{ the_title() }}</h3>
+
         {!! App::format_centra_markup($product->product_meta['compared_to']) !!}
       </div>
       <div style="float: left; width: 50%; padding-left: 20px;">
-        {!! App::format_centra_markup($product->product_meta['compared_to']) !!}
+        
+        @if ($product->compared_to)
+          @foreach($product->compared_to as $compared)
+            <h3>{{ $compared['name'] }}</h3>
+
+            {!! App::format_centra_markup($compared['compared_to']) !!}
+          @endforeach
+        @endif
+
       </div>
 
       <div>&nbsp;</div>
@@ -87,4 +98,3 @@
   </footer>
   @php comments_template('/partials/comments.blade.php') @endphp
 </article>
-@debug

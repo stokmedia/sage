@@ -44,6 +44,47 @@ class Product extends \EscProduct
         return $productImages;
     }
 
+    public function getComparedProducts() {
+
+        $relation = 'compared';
+        
+        $compared_to = [];
+
+        if( !isset( $this->product_meta['relatedProducts'] ) ) return $compared_to;
+
+        foreach( $this->product_meta['relatedProducts'] as $relatedProduct ) {
+
+            $product    = $relatedProduct['product'];
+
+            if( $relatedProduct['relation'] != $relation ) continue;
+
+            $args = array(
+                'post_type'        => 'silk_products',
+                'meta_key'         => 'product_id',
+                'meta_value'       =>  $product
+            );
+
+            $wpQuery = new \WP_Query( $args );
+
+            if( empty($wpQuery->posts) ) {
+                continue;
+            }
+            
+            $post_id = $wpQuery->posts[0]->ID;
+
+            $product_data = new \EscProduct( $post_id );
+            $compared_to[$product] = $product_data->product_meta;
+            $compared_to[$product]['productUri']= get_permalink($post_id);
+
+        }
+
+        usort( $compared_to, function( $a, $b ) {
+            return (int) $a['product'] > (int) $b['product'] ? 1 : -1;
+        } );
+
+        return $compared_to;        
+    }
+
     public function renderSizesLoop( $template ) {
 
         //Get selected on second pass.
