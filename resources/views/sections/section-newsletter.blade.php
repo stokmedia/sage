@@ -63,7 +63,7 @@
                 </div>
                 <div class="row m-0 align-items-center justify-content-center justify-content-lg-around newsletter-form">
                   <form action="">
-                    <div class="input-group is-invalid">
+                    <div class="input-group is-invalid align-items-center">
                       <input type="text" class="form-control is-invalid" name="name" id="name" placeholder="" aria-label="">
                       <span class="input-group-btn">
                         <button class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary shadow-sm border-0" type="button">
