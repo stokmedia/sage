@@ -24,6 +24,7 @@ require('./util/autoPadding');
 require('./components/nav');
 require('./components/cookie');
 require('./components/filter');
+require('./components/picker');
 require('./components/resellers');
 require('./components/video');
 require('./components/instagram');

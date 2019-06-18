@@ -18212,22 +18212,36 @@ blockquote footer::before,
 /* line 67, resources/assets/styles/skhoop/components/_picker.scss */
 
 .color-selector .custom-checkbox .custom-control-label::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-     transform: translate(-50%, -50%);
+  display: none;
 }
 
-/* line 78, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 72, resources/assets/styles/skhoop/components/_picker.scss */
+
+.color-selector .custom-checkbox .custom-control-label[style*="white"],
+.color-selector .custom-checkbox .custom-control-label[style*="#FFFFFF"],
+.color-selector .custom-checkbox .custom-control-label[style="#FFF"],
+.color-selector .custom-checkbox .custom-control-label[style*="#ffffff"],
+.color-selector .custom-checkbox .custom-control-label[style="#fff"],
+.color-selector .custom-checkbox .custom-control-label[style="rgb(255, 255, 255)"] {
+  border: 1px solid #b7cad0;
+}
+
+/* line 81, resources/assets/styles/skhoop/components/_picker.scss */
+
+.color-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
+  border: 0.125rem solid #fff;
+  -webkit-box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 92, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-label::before,
 .size-selector .custom-checkbox .custom-control-label::after {
   display: none;
 }
 
-/* line 83, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 97, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-label span {
   position: absolute;
@@ -18236,24 +18250,25 @@ blockquote footer::before,
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
      transform: translate(-50%, -50%);
+  margin-top: 0;
   font-size: 0.75rem;
   line-height: 1.25rem;
 }
 
-/* line 91, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 106, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
   background-color: #031532;
   border: 0.0625rem solid #031532;
 }
 
-/* line 95, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 110, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label span {
   color: #fff;
 }
 
-/* line 101, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 116, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label::before {
   content: "";

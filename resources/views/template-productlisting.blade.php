@@ -126,44 +126,44 @@
                         <li>
                           <div class="custom-control custom-checkbox">
                             <input type="checkbox" id="colorCheck1" class="custom-control-input">
-                            <label class="custom-control-label" for="colorCheck1" style="background-color: #B7CAD0;"></label>
+                            <label class="custom-control-label js-color" for="colorCheck1" style="background-color: black;"></label>
                           </div>
                         </li>
                         <li>
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" id="colorCheck2" class="custom-control-input" checked="checked">
-                            <label class="custom-control-label" for="colorCheck2" style="background-color: #DAB4B4;"></label>
+                            <input type="checkbox" id="colorCheck2" class="custom-control-input">
+                            <label class="custom-control-label js-color" for="colorCheck2" style="background-color: white;"></label>
                           </div>
                         </li>
                         <li>
                           <div class="custom-control custom-checkbox">
                             <input type="checkbox" id="colorCheck3" class="custom-control-input">
-                            <label class="custom-control-label" for="colorCheck3" style="background-color: #B2B2B2;"></label>
+                            <label class="custom-control-label js-color" for="colorCheck3" style="background-color: #B2B2B2;"></label>
                           </div>
                         </li>
                         <li>
                           <div class="custom-control custom-checkbox">
                             <input type="checkbox" id="colorCheck4" class="custom-control-input" disabled="disabled">
-                            <label class="custom-control-label" for="colorCheck4" style="background-color: #B7CAD0;"></label>
+                            <label class="custom-control-label js-color" for="colorCheck4" style="background-color: #B7CAD0;"></label>
                           </div>
                         </li>
                         <li>
                           <div class="custom-control custom-checkbox">
                             <input type="checkbox" id="colorCheck5" class="custom-control-input" checked="checked">
-                            <label class="custom-control-label" for="colorCheck5" style="background-color: #DAB4B4;"></label>
+                            <label class="custom-control-label js-color" for="colorCheck5" style="background-color: #DAB4B4;"></label>
                           </div>
                         </li>
                         <li>
                           <div class="custom-control custom-checkbox">
                             <input type="checkbox" id="colorCheck6" class="custom-control-input">
-                            <label class="custom-control-label" for="colorCheck6" style="background-color: #B2B2B2;"></label>
+                            <label class="custom-control-label js-color" for="colorCheck6" style="background-color: #B2B2B2;"></label>
                           </div>
                         </li>
                         @for ($i = 7; $i < 19; $i++)
                           <li>
                             <div class="custom-control custom-checkbox">
                             <input type="checkbox" id="colorCheck{{ $i }}" class="custom-control-input">
-                              <label class="custom-control-label" for="colorCheck{{ $i }}" style="background-color: #B2B2B2;"></label>
+                              <label class="custom-control-label js-color" for="colorCheck{{ $i }}" style="background-color: #B2B2B2;"></label>
                             </div>
                           </li>
                         @endfor

@@ -2061,7 +2061,7 @@ var stokpressViewPort = {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-module.exports = __webpack_require__(46);
+module.exports = __webpack_require__(47);
 
 
 /***/ }),
@@ -2109,6 +2109,7 @@ __webpack_require__(42);
 __webpack_require__(43);
 __webpack_require__(44);
 __webpack_require__(45);
+__webpack_require__(46);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -16894,6 +16895,80 @@ Filter.accordion();
 
 /***/ }),
 /* 41 */
+/***/ (function(module, exports) {
+
+var Filter = {};
+
+//add class if certain color was detected
+Filter.for_color = function () {
+  var el = document.getElementsByClassName('js-color');
+  if (!el) {
+      return;
+  }
+  for (var i = 0; i < el.length; i++) {
+      var bgProp = window.getComputedStyle(el[i], null).getPropertyValue('background-color');
+      if (Filter.color_detector(bgProp) == 'light') {
+          el[i].classList.add('is-checkmark-dark');
+      } else {
+          el[i].classList.add('is-checkmark-white');
+      }
+
+
+      if (i > 10) {
+          break;
+      }
+  }
+
+}
+
+//color detector
+Filter.color_detector = function (color) {
+  // Variables for red, green, blue values
+  var r, g, b, hsp;
+
+  // Check the format of the color, HEX or RGB?
+  if (color.match(/^rgb/)) {
+
+      // If HEX --> store the red, green, blue values in separate variables
+      color = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);
+
+      r = color[1];
+      g = color[2];
+      b = color[3];
+  } else {
+
+      // If RGB --> Convert it to HEX: http://gist.github.com/983661
+      color = +('0x' + color.slice(1).replace(
+          color.length < 5 && /./g, '$&$&'));
+
+      r = color >> 16;
+      g = color >> 8 & 255;
+      b = color & 255;
+  }
+
+  // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
+  hsp = Math.sqrt(
+      0.299 * (r * r) +
+      0.587 * (g * g) +
+      0.114 * (b * b)
+  );
+
+  // Using the HSP value, determine whether the color is light or dark
+  if (hsp > 127.5) {
+
+
+      return 'light';
+  } else {
+
+      return 'dark';
+  }
+}
+
+Filter.for_color();
+
+
+/***/ }),
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$.fn.resellersTable = function () {
@@ -16934,7 +17009,7 @@ Filter.accordion();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17252,7 +17327,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var Instagram = {};
@@ -17289,7 +17364,7 @@ Instagram.infoPosition();
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17521,7 +17596,7 @@ var Newsletter = {};
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/**
@@ -17583,7 +17658,7 @@ window.Alert = Alert;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
