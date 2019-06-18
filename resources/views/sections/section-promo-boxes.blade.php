@@ -24,7 +24,7 @@
         @endfor
     </div>
 </section> --}}
-      
+
 
 @if ($section->items)
     <section class="section promo-box overflow-hidden  {{ $section->classes ?? '' }}">
@@ -40,7 +40,7 @@
                     <div class="promo-box-item-row row mx-0">
                         <div class="col-lg-6 col-md-6 col align-self-center">
                             @if ($item->pre_header)
-                            <span class="h4">{!! $item->pre_header !!}</span>
+                            <div class="h4 promo-box-pre-header">{!! $item->pre_header !!}</div>
                             @endif
 
                             @if ($item->title)
@@ -50,7 +50,7 @@
                             @if ($item->text)
                             <div class="promo-box-description">{!! $item->text !!}</div>
                             @endif
-                            
+
                             @if ($item->link->url)
                                 <div class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary border-0">
                                     <img src="@asset('images/icon/arrow-right.svg')" alt="">
