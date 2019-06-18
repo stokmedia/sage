@@ -16953,24 +16953,18 @@ a.text-red:focus {
 
 /* line 1, resources/assets/styles/common/_global.scss */
 
-body {
-  -webkit-overflow-scrolling: touch;
-}
-
-/* line 5, resources/assets/styles/common/_global.scss */
-
 #wpadminbar {
   position: fixed !important;
 }
 
-/* line 9, resources/assets/styles/common/_global.scss */
+/* line 5, resources/assets/styles/common/_global.scss */
 
 .no-scroll,
 .no-scroll body {
   overflow: hidden;
 }
 
-/* line 15, resources/assets/styles/common/_global.scss */
+/* line 11, resources/assets/styles/common/_global.scss */
 
 img.lazy {
   -webkit-transition: opacity .3s ease-in;
@@ -16979,7 +16973,7 @@ img.lazy {
   opacity: 0;
 }
 
-/* line 18, resources/assets/styles/common/_global.scss */
+/* line 14, resources/assets/styles/common/_global.scss */
 
 img.lazy.loaded {
   opacity: 1;
@@ -19845,9 +19839,9 @@ html.is-flickity-fullscreen {
 
   .navbar-collapse {
     display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: -5px;
+    left: -30px;
     bottom: 0;
     width: 100%;
     max-width: 23.4375rem;
