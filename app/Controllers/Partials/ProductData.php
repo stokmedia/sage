@@ -20,6 +20,9 @@ trait ProductData
         $data->is_bundle = $product->isBundle();
         $data->product_meta = $product->product_meta;
 
+        echo "<pre>";
+        var_dump($data->product_meta['relatedProducts']);
+
         if( $product->isBundle() && is_single() ) {
 
             // TODO: Maybe needed?
