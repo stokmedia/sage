@@ -273,6 +273,11 @@
       }
     }
   }
+
+  // Overide
+  .custom-control .custom-control-label > span {
+    margin-top: 0;
+  }
 }
 
 //  Custom plugin

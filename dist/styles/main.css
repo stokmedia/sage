@@ -23386,7 +23386,13 @@ body#tinymce {
   margin-bottom: 0.3125rem;
 }
 
-/* line 279, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 278, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product .custom-control .custom-control-label > span {
+  margin-top: 0;
+}
+
+/* line 284, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .js-plus-item-btn {
   cursor: pointer;
