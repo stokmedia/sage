@@ -16827,6 +16827,9 @@ Nav.overlay();
   };
 }());
 
+var supportsOrientationChange = 'onorientationchange' in window,
+    orientationEvent = supportsOrientationChange ? 'orientationchange' : 'resize';
+
 var Filter = {};
 
 Filter.toggle = function() {
@@ -16841,7 +16844,9 @@ Filter.toggle = function() {
     openFilterButtons.hide();
     closeFilterButtons.show();
     $('body').addClass('filter-is-open');
-    disableBodyScroll(true, '.product-filter');
+    if (matchMedia('screen and (max-width: 991.98px)').matches) {
+      disableBodyScroll(true, '.product-filter');
+    }
   });
 
   closeFilter.click(function () {
@@ -16849,8 +16854,22 @@ Filter.toggle = function() {
     closeFilterButtons.hide();
     openFilterButtons.show();
     $('body').removeClass('filter-is-open');
-    disableBodyScroll(false, '.product-filter');
+    if (matchMedia('screen and (max-width: 991.98px)').matches) {
+      disableBodyScroll(false, '.product-filter');
+    }
   });
+
+  if ($('.product-filter')[0]){
+    window.addEventListener(orientationEvent, function() {
+      collapseFilter.hide();
+      closeFilterButtons.hide();
+      openFilterButtons.show();
+      $('body').removeClass('filter-is-open');
+      if (matchMedia('screen and (max-width: 991.98px)').matches) {
+        disableBodyScroll(false, '.product-filter');
+      }
+    }, false);
+  }
 };
 
 Filter.accordion = function() {
