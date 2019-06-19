@@ -114,10 +114,10 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
 add_filter( 'pre_get_posts', function ( $query ) {
 
     $taxonomy = 'silk_category';
-    $market = $_SESSION['esc_store']['market'];
-	$priceList = $_SESSION['esc_store']['pricelist'];
-
     if ( isset( $query->query[ $taxonomy ] ) && $query->is_main_query() ) {
+
+        $market = $_SESSION['esc_store']['market'];
+        $priceList = $_SESSION['esc_store']['pricelist'];
 
         $term = $query->query[ $taxonomy ];
 
@@ -134,12 +134,23 @@ add_filter( 'pre_get_posts', function ( $query ) {
         // in_stock_2_l
         // in_stock_2_xl
         // in_stock_2_xxl
+        // pr( $_GET );
 
-        // product_sizes
-        // product_colors
+        $meta = array();
+        if (isset($_GET['size']) && is_array($_GET['size'])) {
+            foreach ($_GET['size'] as $val) {
+                $val = strtolower($val);
+                $meta[] = array(
+                    'key' => 'in_stock_' . $market . '_' . $val,
+                    'value' => 1,
+                    'compare' => '='
+                );
+            }
+        }
+        // pr(  $meta );
         $meta = array(
             array(
-            'key' => 'in_stock_2_xs',
+            'key' => 'in_stock_' . $market . '_' . $val,
             'value' => 1,
             'compare' => '='
             ),
@@ -149,6 +160,7 @@ add_filter( 'pre_get_posts', function ( $query ) {
             'compare' => '='
             )
         );
+        // pr(  $meta );
         $query->set('meta_query',$meta );
 
         // TODO: Set this from Site Wide setting
