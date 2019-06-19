@@ -7,49 +7,50 @@
     @include('sections.section-category-banner')
   @endif
 
+  
   <section class="section product-header no-mb">
-    <div class="container">
-      {{-- TODO: Hide this if category banner is present --}}
-      @if (!$hero_banner->image && !$hero_banner->image_mobile)
-      <h1 class="product-header-title h1 text-center">Skhoop Kjolar</h1>
-      @endif
+    <form action="" method="GET">
+      <div class="container">
+        {{-- TODO: Hide this if category banner is present --}}
+        @if (!$hero_banner->image && !$hero_banner->image_mobile)
+        <h1 class="product-header-title h1 text-center">Skhoop Kjolar</h1>
+        @endif
 
-      <div class="product-header-actionbox row align-items-center">
-        <div class="product-breadcrumbs col-lg-6 d-none d-lg-block">
-            <div class="breadcrumb bg-white d-inline-block mb-0">
-              <a class="breadcrumb-item" href="#">Home</a>
-              <a class="breadcrumb-item" href="#">Level 2</a>
-              <span class="breadcrumb-item active">Level 3</span>
-            </div>
-        </div>
-        <div class="product-filter-toggle col-lg-6 text-center text-lg-right">
-          <div class="h4 d-inline-block mb-0">
-            <div class="js-filter-toggle">
-                <div class="filter-open js-filter-open">
-                    Filtrera & Sortera
-                    <button class="btn btn-lg btn-icon btn-icon-lg btn-default" type="button">
-                      <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
-                    </button>
-                </div>
-                <div class="filter-close">
-                    <a class="btn-clear" href="#" role="button">Rensa Alla</a>
-                    <button class="btn btn-primary text-uppercase js-filter-close" type="button">Uppdatera</button>
-                    <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
-                      <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
-                    </button>
-                </div>
+        <div class="product-header-actionbox row align-items-center">
+          <div class="product-breadcrumbs col-lg-6 d-none d-lg-block">
+              <div class="breadcrumb bg-white d-inline-block mb-0">
+                <a class="breadcrumb-item" href="#">Home</a>
+                <a class="breadcrumb-item" href="#">Level 2</a>
+                <span class="breadcrumb-item active">Level 3</span>
+              </div>
+          </div>
+          <div class="product-filter-toggle col-lg-6 text-center text-lg-right">
+            <div class="h4 d-inline-block mb-0">
+              <div class="js-filter-toggle">
+                  <div class="filter-open js-filter-open">
+                      Filtrera & Sortera
+                      <button class="btn btn-lg btn-icon btn-icon-lg btn-default" type="button">
+                        <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+                      </button>
+                  </div>
+                  <div class="filter-close">
+                      <a class="btn-clear" href="#" role="button">Rensa Alla</a>
+                      <button class="btn btn-primary text-uppercase" type="submit">Uppdatera</button>
+                      <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
+                        <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
+                      </button>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="product-filter js-filter-collapse">
-      <form action="" method="GET">
+      <div class="product-filter js-filter-collapse">
         <div class="container">
             <div class="button-container d-block d-lg-none">
               <div class="row text-center d-block d-lg-flex">
                 <div class="column">
-                    <button class="btn btn-primary text-uppercase js-filter-close" type="button">Uppdatera</button>
+                    <button class="btn btn-primary text-uppercase" type="submit">Uppdatera</button>
                     <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
                       <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
                     </button>
@@ -145,8 +146,8 @@
               </div>
             </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
   </section>
 
   <section class="section product-listing">

@@ -2061,7 +2061,7 @@ var stokpressViewPort = {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-module.exports = __webpack_require__(49);
+module.exports = __webpack_require__(50);
 
 
 /***/ }),
@@ -2113,6 +2113,7 @@ __webpack_require__(45);
 __webpack_require__(46);
 __webpack_require__(47);
 __webpack_require__(48);
+__webpack_require__(49);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -17849,6 +17850,15 @@ window.Alert = Alert;
 
 /***/ }),
 /* 49 */
+/***/ (function(module, exports) {
+
+
+	document.addEventListener( 'DOMContentLoaded', function () {	
+        // alert('test');
+	} );
+
+/***/ }),
+/* 50 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

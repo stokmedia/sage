@@ -1,1 +1,4 @@
-alert('taz');
+
+	document.addEventListener( 'DOMContentLoaded', function () {	
+        // alert('test');
+	} );
