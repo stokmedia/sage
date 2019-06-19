@@ -188,15 +188,11 @@ add_filter( 'pre_get_posts', function ( $query ) {
                     $query->set('orderby', 'title');
                     $query->set( 'order', 'asc' );
                     break;
-                case 'id_desc':
-                    $query->set( 'orderby', 'id' );
-                    $query->set( 'order', 'desc' );
+                case 'pop_asc':
+                    $query->set( 'meta_key', 'category_order_' . $term );
+                    $query->set( 'orderby', 'meta_value' );
+                    $query->set( 'order', 'asc' );
                     break;
-                // case 'pop':
-                //     $query->set( 'meta_key', 'sort_in_' . $query->query[ 'product-categories' ] );
-                //     $query->set( 'orderby', 'meta_value_num' );
-                //     $query->set( 'order', 'asc' );
-                //     break;
             }
         }
 

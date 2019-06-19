@@ -142,8 +142,8 @@
                                 <input id="option2" value="title_desc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_desc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
                                 Ö-A
                               </label>
-                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='id_desc') ? 'active' : '' }}">
-                                <input id="option3" value="id_desc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='id_desc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
+                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='pop_asc') ? 'active' : '' }}">
+                                <input id="option3" value="pop_asc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='pop_asc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
                                 Populäritet
                               </label>
                               <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_desc') ? 'active' : '' }}">
