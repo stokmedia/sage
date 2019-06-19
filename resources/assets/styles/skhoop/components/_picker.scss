@@ -27,6 +27,10 @@
       border-radius: 50%;
       border: 0.0625rem solid #e4e4e4;
       cursor: pointer;
+
+      span {
+        margin: 0;
+      }
     }
 
     .custom-control-input:disabled ~ .custom-control-label {
