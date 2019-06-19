@@ -38,6 +38,10 @@
 
   .custom-control-label {
     padding-left: 0.5625rem;
+
+    span {
+      margin-left: 0;
+    }
   }
 
   .custom-checkbox {
