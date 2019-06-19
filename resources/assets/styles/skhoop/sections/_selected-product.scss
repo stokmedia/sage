@@ -3,9 +3,8 @@
     filter: blur(17.1828px);
     z-index: $zindex-dropdown;
     position: absolute;
-    background: tomato;
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 700px;
+    max-height: 700px;
     height: 100%;
     width: 100%;
     top: 0;
@@ -13,6 +12,10 @@
     bottom: 0;
     left: -170px;
     margin: auto;
+
+    .msie & {
+      opacity: 0.8;
+    }
   }
 
   &-preview {
@@ -37,6 +40,25 @@
 
       @include media-breakpoint-up(md) {
         width: 575px;
+      }
+
+      .msie & {
+        .ie-blur {
+          /* Internet Explorer < v11  */
+          z-index: $zindex-dropdown;
+          position: absolute;
+          background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 68%, rgba(255, 255, 255, 1) 86%, rgba(255, 255, 255, 1) 100%);
+          max-width: 800px;
+          max-height: 800px;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          right: auto;
+          bottom: 0;
+          left: -171px;
+          margin: auto;
+          border-radius: 50%;
+        }
       }
     }
 
@@ -92,6 +114,12 @@
       }
 
       .item>img {
+
+        // Internet Explorer support
+        .msie & {
+          position: absolute;
+        }
+
         // This will reset the aspect ratio mixin
         position: relative;
         top: initial;
@@ -275,7 +303,7 @@
   }
 
   // Overide
-  .custom-control .custom-control-label > span {
+  .custom-control .custom-control-label>span {
     margin-top: 0;
     margin-left: 0;
   }
