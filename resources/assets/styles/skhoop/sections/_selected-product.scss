@@ -186,7 +186,7 @@
 
       .header .btn-icon {
         transform: rotate(180deg);
-        transition: all 200ms cubic-bezier(0.19, 1, 0.22, 1);
+        transition: transform 200ms ease-in;
 
         @include media-max(991px) {
           width: 25px;
