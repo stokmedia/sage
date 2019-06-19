@@ -15,6 +15,42 @@ class TaxonomySilk_category extends Controller
         return get_post()->post_title;
     }
 
+    public function productSize()
+    {
+        return  get_option('product_sizes');
+    }
+
+    public function productColor()
+    {
+        // This will reArrange Colors
+        // So that All colors will be list first
+        // before listing patterns
+        $arrColors = array();
+        $arrPattern = array();
+        $colors = get_option('product_colors');
+        if (is_array($colors)) {
+            foreach ($colors as $key => $val) {
+                if (!empty($val['Hex'])) {
+                    $arrColors[$key] = $val;
+                } else {
+                    $arrPattern[$key] = $val;
+                }
+            }
+        }
+        return array_merge($arrColors, $arrPattern);
+    }
+
+    public function categoryList()
+    {
+        $attributes = array(
+            'taxonomy' => 'silk_category',
+            'orderby' => 'name',
+            'order' => 'asc'
+        );
+        // return pr( get_terms($attributes) );
+        return get_terms($attributes);
+    }
+
     public function heroBanner()
     {
         $term = get_queried_object();

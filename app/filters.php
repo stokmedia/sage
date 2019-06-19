@@ -114,6 +114,8 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
 add_filter( 'pre_get_posts', function ( $query ) {
 
     $taxonomy = 'silk_category';
+    $market = $_SESSION['esc_store']['market'];
+	$priceList = $_SESSION['esc_store']['pricelist'];
 
     if ( isset( $query->query[ $taxonomy ] ) && $query->is_main_query() ) {
 
@@ -126,20 +128,42 @@ add_filter( 'pre_get_posts', function ( $query ) {
             $query->set( 'order', 'asc' );
         }
 
+        // in_stock_2_xs
+        // in_stock_2_s
+        // in_stock_2_m
+        // in_stock_2_l
+        // in_stock_2_xl
+        // in_stock_2_xxl
+
+        // product_sizes
+        // product_colors
+        $meta = array(
+            array(
+            'key' => 'in_stock_2_xs',
+            'value' => 1,
+            'compare' => '='
+            ),
+            array(
+            'key' => 'in_stock_2_m',
+            'value' => 0,
+            'compare' => '='
+            )
+        );
+        $query->set('meta_query',$meta );
+
         // TODO: Set this from Site Wide setting
-        $query->set( 'posts_per_page', 5 );
+        $query->set( 'posts_per_page', -1 );
 
         // TODO: Set sorting from filter etc
-        /*
         switch ( !empty($_GET[ 'o' ]) ) {
             case 'price':
-                $query->set( 'meta_key', 'price_sort' );
+                $query->set( 'meta_key', 'price_' . $market . '_' . $priceList );
                 $query->set( 'orderby', 'meta_value_num' );
-                $query->set( 'order', 'asc' );
+                $query->set( 'order', 'desc' );
                 break;
             case 'alpha':
                 $query->set( 'orderby', 'title' );
-                $query->set( 'order', 'asc' );
+                $query->set( 'order', 'desc' );
                 break;
             case 'pop':
                 $query->set( 'meta_key', 'sort_in_' . $query->query[ 'product-categories' ] );
@@ -147,7 +171,6 @@ add_filter( 'pre_get_posts', function ( $query ) {
                 $query->set( 'order', 'asc' );
                 break;
         }
-        */
 
         // TODO: Set sorting from filter etc
         /*

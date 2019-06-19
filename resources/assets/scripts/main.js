@@ -33,6 +33,7 @@ require('./components/video');
 require('./components/instagram');
 require('./components/newsletter');
 require('./components/alert');
+require('./components/category');
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
