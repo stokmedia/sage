@@ -167,24 +167,39 @@ add_filter( 'pre_get_posts', function ( $query ) {
 
             // pr( $meta );
             $query->set( 'meta_query',$meta );
-        }
 
-        // TODO: Set sorting from filter etc
-        switch ( !empty($_GET[ 'o' ]) ) {
-            case 'price':
-                $query->set( 'meta_key', 'price_' . $market . '_' . $priceList );
-                $query->set( 'orderby', 'meta_value_num' );
-                $query->set( 'order', 'desc' );
-                break;
-            case 'alpha':
-                $query->set( 'orderby', 'title' );
-                $query->set( 'order', 'desc' );
-                break;
-            case 'pop':
-                $query->set( 'meta_key', 'sort_in_' . $query->query[ 'product-categories' ] );
-                $query->set( 'orderby', 'meta_value_num' );
-                $query->set( 'order', 'asc' );
-                break;
+            switch ( !empty($filters['orderby']) ) {
+                case 'price_desc':
+                    $query->set( 'meta_key', 'price_' . $market . '_' . $priceList );
+                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set( 'order', 'desc' );
+                    break;
+                case 'price_asc':
+                    $query->set( 'meta_key', 'price_' . $market . '_' . $priceList );
+                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set( 'order', 'asc' );
+                    break;
+                case 'title_desc':
+                    $query->set( 'meta_key', 'title' );
+                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set( 'order', 'desc' );
+                    break;
+                case 'title_asc':
+                    $query->set( 'meta_key', 'title' );
+                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set( 'order', 'asc' );
+                    break;
+                case 'id_desc':
+                    $query->set( 'meta_key', 'id' );
+                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set( 'order', 'desc' );
+                    break;
+                // case 'pop':
+                //     $query->set( 'meta_key', 'sort_in_' . $query->query[ 'product-categories' ] );
+                //     $query->set( 'orderby', 'meta_value_num' );
+                //     $query->set( 'order', 'asc' );
+                //     break;
+            }
         }
 
         // TODO: Set sorting from filter etc

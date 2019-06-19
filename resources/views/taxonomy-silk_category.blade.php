@@ -134,17 +134,25 @@
                     <div class="js-accordion-body d-block d-lg-inline-block">
                         <div class="sort-selector text-center text-sm-left">
                             <div class="btn-group btn-group-toggle d-inline-block d-sm-inline-flex" data-toggle="buttons">
-                              <label class="btn btn-outline-primary">
-                                <input id="option1" name="options" type="radio">
+                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_asc') ? 'active' : '' }}">
+                                <input id="option1" value="title_asc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_asc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
                                 A-Ö
                               </label>
-                              <label class="btn btn-outline-primary">
-                                <input id="option2" name="options" type="radio">
+                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_desc') ? 'active' : '' }}">
+                                <input id="option2" value="title_desc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_desc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
+                                Ö-A
+                              </label>
+                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='id_desc') ? 'active' : '' }}">
+                                <input id="option3" value="id_desc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='id_desc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
                                 Populäritet
                               </label>
-                              <label class="btn btn-outline-primary">
-                                <input id="option3" name="options" type="radio">
-                                Övrigt
+                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_desc') ? 'active' : '' }}">
+                                <input id="option4" value="price_desc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_desc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
+                                Price (High to Low)
+                              </label>
+                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_asc') ? 'active' : '' }}">
+                                <input id="option5" value="price_asc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_asc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
+                                Price (Low to High)
                               </label>
                             </div>
                         </div>
