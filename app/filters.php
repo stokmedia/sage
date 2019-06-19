@@ -125,11 +125,11 @@ add_filter( 'pre_get_posts', function ( $query ) {
         $query->set( 'posts_per_page', -1 );
 
         // Category sort from Centra
-        if( !empty( $term ) ) {
-            $query->set( 'meta_key', 'category_order_' . $term );
-            $query->set( 'orderby', 'meta_value_num' );
-            $query->set( 'order', 'asc' );
-        }
+        // if( !empty( $term ) ) {
+        //     $query->set( 'meta_key', 'category_order_' . $term );
+        //     $query->set( 'orderby', 'meta_value_num' );
+        //     $query->set( 'order', 'asc' );
+        // }
 
         // pr( $_GET );
         if (isset($_GET['filters']) && is_array($_GET['filters'])) {
@@ -168,30 +168,28 @@ add_filter( 'pre_get_posts', function ( $query ) {
             // pr( $meta );
             $query->set( 'meta_query',$meta );
 
-            switch ( !empty($filters['orderby']) ) {
+            // Sort Products by Price, Title or ID
+            switch ( $filters['orderby'] ) {
                 case 'price_desc':
                     $query->set( 'meta_key', 'price_' . $market . '_' . $priceList );
-                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set( 'orderby', 'meta_value' );
                     $query->set( 'order', 'desc' );
                     break;
                 case 'price_asc':
                     $query->set( 'meta_key', 'price_' . $market . '_' . $priceList );
-                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set( 'orderby', 'meta_value' );
                     $query->set( 'order', 'asc' );
                     break;
                 case 'title_desc':
-                    $query->set( 'meta_key', 'title' );
-                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set('orderby', 'title');
                     $query->set( 'order', 'desc' );
                     break;
                 case 'title_asc':
-                    $query->set( 'meta_key', 'title' );
-                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set('orderby', 'title');
                     $query->set( 'order', 'asc' );
                     break;
                 case 'id_desc':
-                    $query->set( 'meta_key', 'id' );
-                    $query->set( 'orderby', 'meta_value_num' );
+                    $query->set( 'orderby', 'id' );
                     $query->set( 'order', 'desc' );
                     break;
                 // case 'pop':
@@ -202,6 +200,7 @@ add_filter( 'pre_get_posts', function ( $query ) {
             }
         }
 
+        // NOTE: Do we still need this? Even sorting already working using switch condition above.
         // TODO: Set sorting from filter etc
         /*
         $tax_query = apply_filters( 'esc_product_listing_filter', $_GET );
