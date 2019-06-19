@@ -30,51 +30,54 @@
   @php comments_template('/partials/comments.blade.php') @endphp
 </article> --}}
 
+{{-- <pre>{{ var_dump($product->images) }}</pre> --}}
 
 <section class="section selected-product">
     <div class="container">
-      <div class="row">
-  
-  
-        <!--
-          NOTE: Add `.is-oos` to `.selected-product-preview`, this will add the "out of stock" state for the product.
-        -->
-  
-  
-        <div class="selected-product-preview col-xxl-6 col-lg-7 p-0 invisible">
-          <div class="row justify-content-xxl-start justify-content-center mx-0">
-            <div class="selected-product-slider-col p-md-0 m-0">
-              <div class="selected-product-slider overflow-hidden p-md-0 shadow-sm">
-                @for ($slider = 0; $slider < 3; $slider++)
-                  <figure class="item align-items-center mb-0">
-                    <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
-                  </figure>
-                @endfor
-              </div>
-              <div class="selected-product-blur d-lg-block d-none rounded-circle" style="background: url(@asset('images/temp/selected-product-blur.jpg')) no-repeat center/cover transparent"></div>
-            </div>
-            <div class="selected-product-thumbnail d-none d-lg-flex flex-column">
-              @for ($thumbnail = 0; $thumbnail < 3; $thumbnail++)
-                <div class="item bg-white">
-                  <figure class="">
-                    <img src="@asset('images/temp/selected-product-thumb.png')" alt="" srcset="">
-                  </figure>
+        <div class="row">
+
+            {{-- Images --}}
+            <div class="selected-product-preview col-xxl-6 col-lg-7 p-0 invisible {{ $data->is_sold_out ? 'is-oos' : '' }}">
+                <div class="row justify-content-xxl-start justify-content-center mx-0">
+                    <div class="selected-product-slider-col p-md-0 m-0">
+                        <div class="selected-product-slider overflow-hidden p-md-0 shadow-sm">
+                            @if (!empty($product->images))
+                                @foreach ($product->images['standard'] as $item)
+                                    <figure class="item align-items-center mb-0">
+                                        <img src="{{ $item['url'] }}" alt="" srcset="">
+                                    </figure>
+                                @endforeach
+                            @endif
+                        </div>
+                        <div class="selected-product-blur d-lg-block d-none rounded-circle" style="background: url({{ $product_background_image ?? '' }}) no-repeat center/cover transparent"></div>
+                    </div>
+
+                    <div class="selected-product-thumbnail d-none d-lg-flex flex-column">
+                        @if (!empty($product->images))
+                            @foreach ($product->images['thumb'] as $item)
+                                <div class="item bg-white">
+                                    <figure>
+                                        <img src="{{ $item['url'] }}" alt="" srcset="">
+                                    </figure>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
                 </div>
-              @endfor
+
+                {{-- Breadcrumbs --}}
+                <div class="container-fluid">
+                    <div class="breadcrumb bg-white d-lg-inline-block d-none mb-0 ">
+                        <a class="breadcrumb-item" href="#">Home</a>
+                        <a class="breadcrumb-item" href="#">Level 2</a>
+                        <span class="breadcrumb-item active">Level 3</span>
+                    </div>
+                </div>
             </div>
-          </div>
-  
-          <div class="container-fluid">
-            <div class="breadcrumb bg-white d-lg-inline-block d-none mb-0 ">
-              <a class="breadcrumb-item" href="#">Home</a>
-              <a class="breadcrumb-item" href="#">Level 2</a>
-              <span class="breadcrumb-item active">Level 3</span>
-            </div>
-          </div>
+
+            {{-- Product info --}}
+            @include( 'partials.product-info' );
         </div>
-  
-        @include( 'partials.product-info' );
-      </div>
     </div>
-  </section>
+</section>
   

@@ -18,10 +18,16 @@ trait ProductData
     	$data->price = $product->getPrice();
     	$data->images = $product->getAllProductImages();
 		$data->is_bundle = $product->isBundle();
-		$data->colors = $product->getProductColors( 'variant' );
 		$data->sizes_available = $product->sizesAvailable();
 		$data->product_meta = (object) $product->product_meta;
 		$data->display_price = self::get_display_price( $data->price );
+		$data->is_sold_out = self::is_sold_out( $postID ) || $data->sizes_available === 0;
+
+		// Product colors
+		$colors = $product->getProductColors( 'variant' );
+		if (!empty($colors)) {
+			$data->colors = self::get_product_colors( $colors );
+		} 
 
         if( $product->isBundle() && is_single() ) {
 
@@ -53,6 +59,52 @@ trait ProductData
 		}
 
 		return $data;
+	}
+
+	public static function get_product_colors( $colors )
+	{
+		if( empty($colors) || !is_array($colors) ) {
+			return;
+		}
+
+		$productColors = [];
+
+		foreach ($colors as $color) {
+			$tempColor = (object) [];
+			$tempColor->product = $color['product'];
+			$tempColor->variant = $color['variantName'];			
+			$tempColor->product_uri = $color['productUri'];
+			
+			// Get swatch style
+			$swatch = (object) [];
+			if (!empty($color['swatch'])) {
+				if (!empty($color['swatch']['image'])) {
+					$background = 'background-image: url(' .  $color['swatch']['image']['url'] .')';
+					$isImage = true;
+				} else {
+					$background = 'background-color: ' .  $color['swatch']['hex'];
+					$isImage = false;
+				}
+
+				$swatch->desc = $isImage ? $color['variantName'] : $color['swatch']['desc'];
+				$swatch->background = $background;
+				$swatch->is_image = $isImage;
+			}
+
+			$tempColor->swatch = $swatch;
+
+			array_push( $productColors, $tempColor );
+		}
+
+		return $productColors;
+		
+	}
+
+	public static function is_sold_out( $postID )
+	{	
+		$isAvailable = \EscGeneral::isAvailable( $postID );
+
+		return ($isAvailable[ 'info' ][ 'stockOfAllItems' ] === 0);
 	}
 
 }
