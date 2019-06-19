@@ -127,7 +127,7 @@
             "label": "Video URL",
             "name": "video_url",
             "type": "url",
-            "instructions": "The video will only show in mobile view if Hero banner has no content ( Title, Text, or Link).",
+            "instructions": "All video except autoplay MP4 will only show in mobile view if Hero banner has no content ( Title, Text, or Link).",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -175,5 +175,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1560925833
+    "modified": 1560926344
 }
