@@ -121,6 +121,9 @@ add_filter( 'pre_get_posts', function ( $query ) {
 
         $term = $query->query[ $taxonomy ];
 
+        // TODO: Set this from Site Wide setting
+        $query->set( 'posts_per_page', -1 );
+
         // Category sort from Centra
         if( !empty( $term ) ) {
             $query->set( 'meta_key', 'category_order_' . $term );
@@ -128,43 +131,43 @@ add_filter( 'pre_get_posts', function ( $query ) {
             $query->set( 'order', 'asc' );
         }
 
-        // in_stock_2_xs
-        // in_stock_2_s
-        // in_stock_2_m
-        // in_stock_2_l
-        // in_stock_2_xl
-        // in_stock_2_xxl
         // pr( $_GET );
+        if (isset($_GET['filters']) && is_array($_GET['filters'])) {
+            $filters = $_GET['filters'];
+            $meta = array();
 
-        $meta = array();
-        if (isset($_GET['size']) && is_array($_GET['size'])) {
-            foreach ($_GET['size'] as $val) {
-                $val = strtolower($val);
+            // Set Filter for Size
+            if (isset($filters['size']) && is_array($filters['size'])) {
+                foreach ($filters['size'] as $key => $val) {
+                    $meta[] = array(
+                        'key' => 'in_stock_' . $market . '_' . strtolower($val),
+                        'value' => 1,
+                        'compare' => '='
+                    );
+                }
+            }
+
+            // Set Filter for Color
+            if (isset($filters['color']) && is_array($filters['color'])) {
                 $meta[] = array(
-                    'key' => 'in_stock_' . $market . '_' . $val,
-                    'value' => 1,
-                    'compare' => '='
+                    'key' => 'product_color',
+                    'value' => implode(',', $filters['color']),
+                    'compare' => 'IN'
                 );
             }
-        }
-        // pr(  $meta );
-        $meta = array(
-            array(
-            'key' => 'in_stock_' . $market . '_' . $val,
-            'value' => 1,
-            'compare' => '='
-            ),
-            array(
-            'key' => 'in_stock_2_m',
-            'value' => 0,
-            'compare' => '='
-            )
-        );
-        // pr(  $meta );
-        $query->set('meta_query',$meta );
 
-        // TODO: Set this from Site Wide setting
-        $query->set( 'posts_per_page', -1 );
+            // Set Filter for Category
+            if (isset($filters['category']) && is_array($filters['category'])) {
+                $meta[] = array(
+                    'key' => 'canonical_category',
+                    'value' => implode(',', $filters['category']),
+                    'compare' => 'IN'
+                );
+            }
+
+            // pr( $meta );
+            $query->set( 'meta_query',$meta );
+        }
 
         // TODO: Set sorting from filter etc
         switch ( !empty($_GET[ 'o' ]) ) {

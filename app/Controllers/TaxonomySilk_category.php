@@ -15,6 +15,11 @@ class TaxonomySilk_category extends Controller
         return get_post()->post_title;
     }
 
+    public function filterData()
+    {
+        return (isset($_GET['filters'])) ? $_GET['filters'] : '';
+    }
+
     public function productSize()
     {
         return  get_option('product_sizes');

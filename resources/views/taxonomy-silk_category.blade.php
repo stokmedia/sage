@@ -6,7 +6,6 @@
   @if ($hero_banner->image || $hero_banner->image_mobile)
     @include('sections.section-category-banner')
   @endif
-
   
   <section class="section product-header no-mb">
     <form action="" method="GET">
@@ -65,14 +64,19 @@
                     <div class="js-accordion-body">
                       <ul class="size-selector">
                         @foreach ($product_size as $size)
-                        <li>
-                          <div class="custom-control custom-checkbox">
-                            <input name="size[]" type="checkbox" id="sizeCheck{{ $size }}" class="custom-control-input" value="{{ $size }}">
-                            <label class="custom-control-label" for="sizeCheck{{ $size }}">
-                                <span>{{ $size }}</span>
-                            </label>
-                          </div>
-                        </li>
+                          @php $checked = '' @endphp
+                          @if(isset($filter_data['size']) && in_array($size, $filter_data['size']))
+                            @php $checked = 'checked="checked"' @endphp
+                          @endif
+
+                          <li>
+                            <div class="custom-control custom-checkbox">
+                            <input name="filters[size][]" {{ $checked }} type="checkbox"  id="sizeCheck{{ $size }}" class="custom-control-input" value="{{ $size }}">
+                              <label class="custom-control-label" for="sizeCheck{{ $size }}">
+                                  <span>{{ $size }}</span>
+                              </label>
+                            </div>
+                          </li>
                         @endforeach
                       </ul>
                     </div>
@@ -82,9 +86,14 @@
                     <div class="js-accordion-body">
                       <ul class="color-selector">
                         @foreach ($product_color as $color)
+                        @php $checked = '' @endphp
+                        @if(isset($filter_data['color']) && in_array($color['Name'], $filter_data['color']))
+                          @php $checked = 'checked="checked"' @endphp
+                        @endif
+
                         <li>
                           <div class="custom-control custom-checkbox">
-                            <input name="color[]" type="checkbox" id="colorCheck{{ $color['Name'] }}" value="{{ $color['Name'] }}" class="custom-control-input">
+                            <input name="filters[color][]" {{ $checked }} type="checkbox" id="colorCheck{{ $color['Name'] }}" value="{{ $color['Name'] }}" class="custom-control-input">
                             <label class="custom-control-label" for="colorCheck{{ $color['Name'] }}" 
                               style="{{ $color['Image'] ? 'background-image:url('.$color['Image'].')' : 'background-color:'.$color['Hex'] }};"></label>
                           </div>
@@ -98,10 +107,15 @@
                     <div class="js-accordion-body">
                       <ul class="category-selector">
                         @foreach ($category_list as $category)
+                        @php $checked = '' @endphp
+                        @if(isset($filter_data['category']) && in_array($category->slug, $filter_data['category']))
+                          @php $checked = 'checked="checked"' @endphp
+                        @endif
+
                         <li>
                           <div class="custom-control custom-control-lg custom-checkbox">
                             {{-- Add disabled="disabled" to checkbox if needed for proper layout return --}}
-                            <input name="category[]" id="customCheck{{ $category->term_id }}" value="{{ $category->slug }}" class="custom-control-input" type="checkbox">
+                            <input name="filters[category][]" {{ $checked }} id="customCheck{{ $category->term_id }}" value="{{ $category->slug }}" class="custom-control-input" type="checkbox">
                             <label class="custom-control-label" for="customCheck{{ $category->term_id }}">
                               <span>{{ $category->name }}</span>
                             </label>
