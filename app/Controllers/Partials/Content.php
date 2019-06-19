@@ -176,21 +176,26 @@ trait Content
         $hasContent = ($title || $newData->text || $newData->link);
         $isVideoMp4 = (strpos( $newData->video_url, '.mp4' ) !== false);
         $isVimeoExternal = strpos( $newData->video_url, 'vimeo' ) !== false && strpos( $newData->video_url, 'external' ) !== false;
+        $isVideoTag = $isVideoMp4 || $isVimeoExternal;
         $buttonClass = '';
 
-        if ($hasContent && !$isVideoMp4) {
+        // iframe embedded videos with content
+        if ($hasContent && !$isVideoTag) {
             $buttonClass = 'd-none d-sm-none d-md-flex';
             $playOnMobile = [ 'data-showonmobile="false"' ];
-
-        }  elseif ($newData->is_autoplay) {
+        
+        // If video is set to autoplay
+        } elseif ($newData->is_autoplay) {
             $buttonClass = 'd-flex d-sm-flex d-md-none';
 
-            if ( $isVideoMp4 || $isVimeoExternal ) {
+            if ( $isVideoTag ) {
                 $buttonClass = 'd-none';
             }
-
-        } else {
-            $buttonClass = '';
+        
+        // Video tags with content
+        } elseif ($isVideoTag && $hasContent && !$newData->is_autoplay) {
+            $buttonClass = 'd-none d-sm-none d-md-flex';
+            $playOnMobile = [ 'data-showonmobile="false"' ];
         }
 
         $isBackground = false;
