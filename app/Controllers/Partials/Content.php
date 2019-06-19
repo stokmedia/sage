@@ -173,14 +173,29 @@ trait Content
         }
         
         $playOnMobile = [ 'data-showonmobile="true"' ];
+        $hasContent = ($title || $newData->text || $newData->link);
+        $isVideoMp4 = (strpos( $newData->video_url, '.mp4' ) !== false);
+        $isVimeoExternal = strpos( $newData->video_url, 'vimeo' ) !== false && strpos( $newData->video_url, 'external' ) !== false;
+        $isVideoTag = $isVideoMp4 || $isVimeoExternal;
+        $buttonClass = '';
 
-        if ($title || $newData->text || $newData->link) {
+        // iframe embedded videos with content
+        if ($hasContent && !$isVideoTag) {
             $buttonClass = 'd-none d-sm-none d-md-flex';
             $playOnMobile = [ 'data-showonmobile="false"' ];
+        
+        // If video is set to autoplay
         } elseif ($newData->is_autoplay) {
             $buttonClass = 'd-flex d-sm-flex d-md-none';
-        } else {
-            $buttonClass = '';
+
+            if ( $isVideoTag ) {
+                $buttonClass = 'd-none';
+            }
+        
+        // Video tags with content
+        } elseif ($isVideoTag && $hasContent && !$newData->is_autoplay) {
+            $buttonClass = 'd-none d-sm-none d-md-flex';
+            $playOnMobile = [ 'data-showonmobile="false"' ];
         }
 
         $isBackground = false;
