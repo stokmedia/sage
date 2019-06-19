@@ -173,12 +173,22 @@ trait Content
         }
         
         $playOnMobile = [ 'data-showonmobile="true"' ];
+        $hasContent = ($title || $newData->text || $newData->link);
+        $isVideoMp4 = (strpos( $newData->video_url, '.mp4' ) !== false);
+        $isVimeoExternal = strpos( $newData->video_url, 'vimeo' ) !== false && strpos( $newData->video_url, 'external' ) !== false;
+        $buttonClass = '';
 
-        if ($title || $newData->text || $newData->link) {
+        if ($hasContent && !$isVideoMp4) {
             $buttonClass = 'd-none d-sm-none d-md-flex';
             $playOnMobile = [ 'data-showonmobile="false"' ];
-        } elseif ($newData->is_autoplay) {
+
+        }  elseif ($newData->is_autoplay) {
             $buttonClass = 'd-flex d-sm-flex d-md-none';
+
+            if ( $isVideoMp4 || $isVimeoExternal ) {
+                $buttonClass = 'd-none';
+            }
+
         } else {
             $buttonClass = '';
         }

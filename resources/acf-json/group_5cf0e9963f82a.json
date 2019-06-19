@@ -143,7 +143,7 @@
             "label": "Is Autoplay?",
             "name": "is_autoplay",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "<strong>Note: <\/strong>Autoplay on mobile will only work for MP4 videos only.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -175,5 +175,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1560520169
+    "modified": 1560924035
 }
