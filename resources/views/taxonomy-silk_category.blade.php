@@ -8,7 +8,7 @@
   @endif
   
   <section class="section product-header no-mb">
-  <form id="silkFilterForm" action="" data-baseurl="{{ site_url() }}" method="GET">
+  <form id="silkFilterForm" action="" data-ajaxurl="{{ $ajax_url_listing }}" method="GET">
       <div class="container">
         {{-- TODO: Hide this if category banner is present --}}
         @if (!$hero_banner->image && !$hero_banner->image_mobile)

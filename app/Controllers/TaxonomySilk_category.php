@@ -15,6 +15,14 @@ class TaxonomySilk_category extends Controller
         return get_post()->post_title;
     }
 
+    public function ajaxUrlListing()
+    {        
+        // http://localhost/wp-skhoop/wp-json/wp/v2/products?filters%5Bcategory%5D%5B%5D=bottoms&per_page=10&page=2
+        // pr(get_queried_object());
+        $url = site_url().'/wp-json/wp/v2/products';
+        return $url;
+    }
+
     public function currentCategory()
     {
         return get_queried_object()->slug;

@@ -4,20 +4,15 @@ document.addEventListener( 'DOMContentLoaded', function () {
 } );
 
 $('.silk-loadmore').click(function(){
-	// http://localhost/wp-skhoop/wp-json/wp/v2/products?filters%5Bcategory%5D%5B%5D=bottoms&per_page=10&page=2
-	var ajaxUrl = $('#silkFilterForm').data('baseurl');
-	ajaxUrl += '/wp-json/wp/v2/products';
-	var currentPage = 2;
-	var query = '?per_page=10&page=' + currentPage;
-	console.log(ajaxUrl + query);
+	var ajaxUrl = $('#silkFilterForm').data('ajaxurl');
+	console.log(ajaxUrl);
 	$.ajax({
-		url: ajaxUrl + query,
+		url: ajaxUrl,
 		type: 'GET',
 		// beforeSend : function (  ) {
 			// button.text('Loading...'); // change the button text, you can also add a preloader image
 		// },
 		success: function( data ) {
-			console.log('taz');
 			console.log(data);
 			if( data ) { 
 				// button.text( 'More posts' ).prev().before(data); // insert new posts
