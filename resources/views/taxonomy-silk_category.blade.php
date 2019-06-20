@@ -8,7 +8,7 @@
   @endif
   
   <section class="section product-header no-mb">
-    <form action="" method="GET">
+  <form id="silkFilterForm" action="" data-baseurl="{{ site_url() }}" method="GET">
       <div class="container">
         {{-- TODO: Hide this if category banner is present --}}
         @if (!$hero_banner->image && !$hero_banner->image_mobile)
@@ -192,13 +192,13 @@
             @php($count++)
 
           @endwhile
-      {{-- <div class="spinner text-center">
-        <div class="spinner-btn">
-            <button class="btn btn-lg btn-primary" type="button">Load More...</button>
-        </div>
-        <div class="spinner-border" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
+    </div>
+    <div class="spinner text-center">
+      <div class="spinner-btn">
+      <button class="btn btn-lg btn-primary silk-loadmore" type="button">Load More...</button>
+      </div>
+      {{-- <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
       </div> --}}
     </div>
   </section>

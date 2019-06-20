@@ -1,6 +1,8 @@
 <?php
 namespace App\Classes;
 
+use App\Classes\Helper;
+
 include_once( \Esc::directory() . '/modules/product.php' );
 
 // TODO: Maybe move this class to the Esc Plugin insead
@@ -46,6 +48,10 @@ class Silk_Product_REST_Controller extends \WP_REST_Posts_Controller {
 		$product = new Product( $data['id'] );
 
 		$data['product_meta'] = $product->product_meta;
+
+		// $render = Helper::sp_render_text( [
+        //     'product' => \App\template( 'partials.product-item' )
+		// ], $data );
 
 		return $data;
 	}
