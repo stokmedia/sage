@@ -76,10 +76,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5d0b26eb9111a",
-            "label": "Add to cart",
-            "name": "translate_add_to_cart",
-            "type": "text",
+            "key": "field_5d0b4cb0db7ac",
+            "label": "Selected Product",
+            "name": "translate_selected_product",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -88,11 +88,159 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5d0b4cd5db7ad",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d0b4ce0db7ae",
+                    "label": "Details",
+                    "name": "details",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d0b4ce4db7af",
+                    "label": "Care Instruction",
+                    "name": "care_instruction",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d0b4d7b31649",
+                    "label": "Shipping & Delivery",
+                    "name": "shipping_delivery",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d0b4e0e8e63b",
+                    "label": "Buy button",
+                    "name": "buy_button",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d0b4edf8d944",
+                    "label": "Product States",
+                    "name": "product_states",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d0b4eef8d945",
+                            "label": "Sale",
+                            "name": "sale",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5d0b4f1f8d946",
+                            "label": "Out of stock",
+                            "name": "out_of_stock",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                }
+            ]
         },
         {
             "key": "field_5cf637d5c4727",
@@ -541,7 +689,7 @@
         },
         {
             "key": "field_5d07670743592",
-            "label": "Page Settings",
+            "label": "Page Section Settings",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -579,7 +727,7 @@
         },
         {
             "key": "field_5d0a3096ae5bd",
-            "label": "Product",
+            "label": "Selected Product",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -592,82 +740,6 @@
             },
             "placement": "top",
             "endpoint": 0
-        },
-        {
-            "key": "field_5d0a3853f065f",
-            "label": "Description Label",
-            "name": "product_description_label",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d0a387df0660",
-            "label": "Details Label",
-            "name": "product_details_label",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d0a38e94a4a9",
-            "label": "Care Instruction Label",
-            "name": "product_care_instruction_label",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d0a30cbae5be",
-            "label": "Shipping Label",
-            "name": "product_shipping_label",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         },
         {
             "key": "field_5d0a30d6ae5bf",
@@ -737,5 +809,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561011966
+    "modified": 1561024624
 }
