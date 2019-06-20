@@ -17,9 +17,13 @@ class TaxonomySilk_category extends Controller
 
     public function currentCategory()
     {
-        // return current queried object
         return get_queried_object()->slug;
     }
+
+    // public function currentCategoryUrl()
+    // {
+    //     return get_term_link(get_queried_object()->term_id);
+    // }
 
     public function filterData()
     {

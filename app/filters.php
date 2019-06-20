@@ -122,6 +122,17 @@ add_filter( 'pre_get_posts', function ( $query ) {
         $query->set( 'posts_per_page', 10 );
 
         $meta = silk_product_filter();
+        // If no filter is selected default category to current one
+        // This will prevent inconsitency with Rest API
+        if (!is_array($meta)) {
+            $meta = array(
+                array(
+                    'key' => 'canonical_category',
+                    'value' => $term,
+                    'compare' => 'IN'
+                )
+            );
+        }
         $query->set( 'meta_query', $meta );
 
         $orderby = silk_product_orderby();
