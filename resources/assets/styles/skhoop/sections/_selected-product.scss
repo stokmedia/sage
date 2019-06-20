@@ -99,7 +99,7 @@
       border-radius: 5px;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 
-      @include aspect-ratio(575, 862);
+      @include aspect-ratio(1330, 1995);
     }
 
     &.is-fullscreen {
@@ -278,7 +278,7 @@
       }
 
       figure {
-        @include aspect-ratio(35, 57);
+        @include aspect-ratio(1330, 1995);
       }
     }
 

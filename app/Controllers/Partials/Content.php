@@ -13,7 +13,14 @@ trait Content
         return self::get_content();
     }
 
-    public static function get_content( $postID=null )
+    /**
+     * Get page sections
+     *
+     * @param $postID int - ID where to get the sections
+     * @param $sectionID int - Section starting value
+     * @return object 
+     */
+    public static function get_content( $postID=null, $sectionID=0 )
     {
         $data = [ ];
 
@@ -27,6 +34,9 @@ trait Content
             return $data;
         }
 
+        // Set initial section id
+        $id = $sectionID;
+
         foreach ( $flexibleContent as $key => $content ) {
             $functionName = 'cms_' . str_replace( '-', '_', $content[ 'acf_fc_layout' ] );
 
@@ -34,12 +44,14 @@ trait Content
                 $thisContent = (object) self::$functionName( $content );
 
                 if ( !empty( $thisContent ) ) {
-                    $thisContent->id = $key + 1;
-                    $thisContent->is_h1 = $key === 0;
+                    $id++;
+                    $thisContent->id = $id;
+                    $thisContent->is_h1 = $id === 1;
                     $thisContent->classes = self::section_layout_classes( 
                         $thisContent, 
                         $key, 
-                        $flexibleContent
+                        $flexibleContent,
+                        count($flexibleContent) + $sectionID
                     );
 
                     array_push( $data, $thisContent );
@@ -293,27 +305,48 @@ trait Content
             $products = $newData->handpicked_products;
 
         } else {
+            $postType = 'silk_products';
+            $taxonomy = 'silk_category';
+
+            // Related posts
+            if( $newData->section_displays === 'related' ) {
+                if( is_single() && get_post_type() === $postType ) {
+                    $postTerms = wp_get_post_terms( get_the_ID(), $taxonomy );
+                    $category = $postTerms ? end($postTerms)->term_id : null;
+                    $category = $category;
+                } else {
+                    $category = null;
+                }
+
+            } else {
+                $category = $newData->category;
+            }
+
             $args = [
-                'post_type' => 'silk_products',
+                'post_type' => $postType,
                 'post_status' => 'publish',
                 'posts_per_page' => $newData->count ? $newData->count : -1,
-                'tax_query' => [
-                    [
-                        'taxonomy' => 'silk_category',
-                        'field' => 'term_id',
-                        'terms' => $newData->category,
-                    ]
-                ]
             ];
+
+            // Category filter
+            if ($category) {
+                $args['tax_query'] = [[
+                    'taxonomy' => $taxonomy,
+                    'field' => 'term_id',
+                    'terms' => $category,
+                ]];
+            }            
 
             if ( $newData->items_to_display === 'random' ) {
                 $args[ 'orderby' ] = 'rand';
             } else {
-                $args[ 'orderby' ] = 'date';
-                $args[ 'order' ] = 'DESC';
+                $args['meta_key'] = 'product_order';
+                $args['orderby'] = 'meta_value_num';
+                $args['order'] = 'ASC';                
             }
 
-            $products = get_posts( $args );
+            $posts = new \WP_query( $args );
+            $products = $posts->posts;
         }
 
         $hasContent = (
@@ -448,7 +481,7 @@ trait Content
         ];
     }
 
-    public static function section_layout_classes( $currentSection, $pos, $sections )
+    public static function section_layout_classes( $currentSection, $pos, $sections, $count )
     {
         $classes = [];
         $sectionLists = wp_list_pluck( $sections, 'acf_fc_layout' );
@@ -483,7 +516,7 @@ trait Content
         $isFirst = ($currentSection->id === 1);
 
         // Check if current section is the last section
-        $isLast = ($currentSection->id === count($sections));
+        $isLast = ($currentSection->id === $count);
 
         // Check if current section in $sectionsWithNoBottomAdjustment
         $isSectionsWithNoBottomAdjustment = in_array( $current, $sectionsWithNoBottomAdjustment );

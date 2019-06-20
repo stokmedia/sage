@@ -11,6 +11,14 @@ class SingleSilk_products extends Controller
 
 	use Partials\ProductData;
 
+    public function content()
+    {
+        // Get selected product page
+        $postID = get_field( 'settings_selected_product', Helper::current_lang() );
+
+        return App::get_content( $postID, 1 );
+    }  	
+
 	public function productClass()
 	{
 		return new Product( get_post()->ID );
@@ -23,11 +31,35 @@ class SingleSilk_products extends Controller
 		return $backgroundImage ? wp_get_attachment_image_url( $backgroundImage['ID'], 'medium' ) : '';
 	}
 
+	public function productTranslations()
+	{
+		return !empty(App::getSiteTranslations()->selected_product) ? App::getSiteTranslations()->selected_product : [];
+	}
+
+	public function addtocartButton()
+	{	
+		$product = self::get_product();
+		$translations = $this->productTranslations();
+
+		if ($product->is_sold_out) {
+			$buttonText = !empty($translations['product_states']['out_of_stock']) ? $translations['product_states']['out_of_stock'] : '';
+			$buttonAttr = 'disabled';
+		} else {
+			$buttonText = !empty($translations['buy_button']) ? $translations['buy_button'] : '';
+			$buttonAttr = '';
+		}
+
+		return (object) [
+			'text' => $buttonText,
+			'attr' => $buttonAttr
+		];
+	}
+
 	public function productInformation()
 	{
 		$product = $this->productClass();
 		$siteTranslations = App::getSiteTranslations();
-		$labels = !empty($siteTranslations->selected_product) ? $siteTranslations->selected_product : [];
+		$labels = $this->productTranslations();
 		$infos = [];
 
 		// Description
