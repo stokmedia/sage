@@ -23,7 +23,7 @@
             <div class="selected-product-slider overflow-hidden p-md-0 shadow-sm">
               @for ($slider = 0; $slider < 3; $slider++)
                 <figure class="item align-items-center mb-0">
-                  <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
+                  <img src="@asset('images/temp/selected-product-view-2.png')" alt="" srcset="">
                 </figure>
               @endfor
             </div>
