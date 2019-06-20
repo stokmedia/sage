@@ -100,7 +100,7 @@ class VideoHelper
                 array_push( $videoAttr, 'data-autoplayMobile="1"' );
             }             
 
-            return sprintf('<iframe '. implode( ' ', $videoAttr ) .' class="hero-iframe-video is-yt js-video-iframe" style="opacity:0.000001;" data-source="youtube" src="%s" frameborder="0" allow="autoplay"></iframe>', $videoURL);
+            return sprintf('<iframe '. implode( ' ', $videoAttr ) .' class="hero-iframe-video is-yt js-video-iframe" style="opacity:0.000001;" data-source="youtube" src="%s" frameborder="0" allow="autoplay; fullscreen"></iframe>', $videoURL);
         } elseif ( in_array( $videoSource, array( "vimeo-external", "mp4" ) ) ) {
             $videoLoop = $videoLoop ? "loop" : "";
             $autoplayDesktop = $autoplayDesktop ? "autoplay" : "";
