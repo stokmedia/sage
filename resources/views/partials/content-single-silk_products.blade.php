@@ -30,7 +30,7 @@
   @php comments_template('/partials/comments.blade.php') @endphp
 </article> --}}
 
-<section class="section selected-product">
+<section class="section selected-product no-mb">
     <div class="container">
         <div class="row">
 
@@ -74,7 +74,7 @@
             </div>
 
             {{-- Product info --}}
-            @include( 'partials.product-info' );
+            @include( 'partials.product-info' )
         </div>
     </div>
 </section>
