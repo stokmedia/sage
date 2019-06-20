@@ -64,7 +64,7 @@ class VideoHelper
                 array_push( $videoAttr, 'data-autoplayMobile="1"' );
             }
 
-            return sprintf('<iframe '. implode( ' ', $videoAttr ) .' class="hero-iframe-video is-vimeo js-video-iframe is-video-hidden" style="z-index:1;opacity:0.000001;" data-source="vimeo" frameborder="0" src="%s" allow="autoplay; fullscreen"></iframe>', $videoURL);
+            return sprintf('<iframe '. implode( ' ', $videoAttr ) .' class="hero-iframe-video is-vimeo js-video-iframe is-video-hidden" style="z-index:1;opacity:0.000001;" data-source="vimeo" frameborder="0" src="%s" allow="autoplay;"></iframe>', $videoURL);
         } elseif ( $videoSource === "youtube" ) {
             $breakString = "watch?v=";
 
@@ -74,7 +74,7 @@ class VideoHelper
                 $videoID = substr( $videoURL, strrpos( $videoURL, "/" ) + 1 );
             }
 
-            $videoURL = "https://www.youtube.com/embed/$videoID?rel=0&showinfo=0&controls=0&enablejsapi=1";
+            $videoURL = "https://www.youtube.com/embed/$videoID?rel=0&showinfo=0&controls=0&enablejsapi=1&fs=0";
 
             if ( $videoLoop ) {
                 $videoURL .= "&loop=1&playlist=$videoID";
@@ -100,7 +100,7 @@ class VideoHelper
                 array_push( $videoAttr, 'data-autoplayMobile="1"' );
             }             
 
-            return sprintf('<iframe '. implode( ' ', $videoAttr ) .' class="hero-iframe-video is-yt js-video-iframe" style="opacity:0.000001;" data-source="youtube" src="%s" frameborder="0" allow="autoplay; fullscreen"></iframe>', $videoURL);
+            return sprintf('<iframe '. implode( ' ', $videoAttr ) .' class="hero-iframe-video is-yt js-video-iframe" style="opacity:0.000001;" data-source="youtube" src="%s" frameborder="0" allow="autoplay;"></iframe>', $videoURL);
         } elseif ( in_array( $videoSource, array( "vimeo-external", "mp4" ) ) ) {
             $videoLoop = $videoLoop ? "loop" : "";
             $autoplayDesktop = $autoplayDesktop ? "autoplay" : "";
