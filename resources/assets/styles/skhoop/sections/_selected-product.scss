@@ -178,6 +178,13 @@
       margin-bottom: 0.625rem;
     }
 
+    .selectors .color-selector > .is-active {
+      .custom-control-label {
+        border: 0.125rem solid $white;
+        box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+
     .accordion {
       .header {
         cursor: pointer;
