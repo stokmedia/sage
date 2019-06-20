@@ -15,6 +15,12 @@ class TaxonomySilk_category extends Controller
         return get_post()->post_title;
     }
 
+    public function currentCategory()
+    {
+        // return current queried object
+        return get_queried_object()->slug;
+    }
+
     public function filterData()
     {
         return (isset($_GET['filters'])) ? $_GET['filters'] : '';

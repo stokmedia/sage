@@ -115,7 +115,7 @@
                         <li>
                           <div class="custom-control custom-control-lg custom-checkbox">
                             {{-- Add disabled="disabled" to checkbox if needed for proper layout return --}}
-                            <input name="filters[category][]" {{ $checked }} id="customCheck{{ $category->term_id }}" value="{{ $category->slug }}" class="custom-control-input" type="checkbox">
+                          <input name="filters[category][]" {{ $checked }} id="customCheck{{ $category->term_id }}" {{ $current_category!=$category->slug ? 'disabled' : 'checked'  }} value="{{ $category->slug }}" class="custom-control-input" type="checkbox">
                             <label class="custom-control-label" for="customCheck{{ $category->term_id }}">
                               <span>{{ $category->name }}</span>
                             </label>

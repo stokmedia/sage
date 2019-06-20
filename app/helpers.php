@@ -136,3 +136,95 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+/**
+ * Generate meta_query
+ * @return array
+ */
+function silk_product_filter() {
+    $market = $_SESSION['esc_store']['market'];
+    $priceList = $_SESSION['esc_store']['pricelist'];
+
+    // pr( $_GET );
+    if (isset($_GET['filters']) && is_array($_GET['filters'])) {
+        $filters = $_GET['filters'];
+        $meta = array();
+
+        // Set Filter for Size
+        if (isset($filters['size']) && is_array($filters['size'])) {
+            foreach ($filters['size'] as $key => $val) {
+                $meta[] = array(
+                    'key' => 'in_stock_' . $market . '_' . strtolower($val),
+                    'value' => 1,
+                    'compare' => '='
+                );
+            }
+        }
+
+        // Set Filter for Color
+        if (isset($filters['color']) && is_array($filters['color'])) {
+            $meta[] = array(
+                'key' => 'product_color',
+                'value' => implode(',', $filters['color']),
+                'compare' => 'IN'
+            );
+        }
+
+        // Set Filter for Category
+        if (isset($filters['category']) && is_array($filters['category'])) {
+            $meta[] = array(
+                'key' => 'canonical_category',
+                'value' => implode(',', $filters['category']),
+                'compare' => 'IN'
+            );
+        }
+
+        // pr( $meta );
+        return $meta;
+    }
+
+    return false;
+}
+
+/**
+ * Generate order by
+ * @return array
+ */
+ function silk_product_orderby() {
+    $market = $_SESSION['esc_store']['market'];
+    $priceList = $_SESSION['esc_store']['pricelist'];
+
+    // Sort Products by Price, Title or ID
+    if (isset($_GET['filters']) && is_array($_GET['filters'])
+        && isset($_GET['filters']['orderby']) && !empty($_GET['filters']['orderby'])) {
+        switch ( $_GET['filters']['orderby'] ) {
+            case 'price_desc':
+                $orderby['meta_key'] = 'price_' . $market . '_' . $priceList;
+                $orderby['orderby'] = 'meta_value';
+                $orderby['order'] = 'desc';
+                break;
+            case 'price_asc':
+                $orderby['meta_key'] = 'price_' . $market . '_' . $priceList;
+                $orderby['orderby'] = 'meta_value';
+                $orderby['order'] = 'asc';
+                break;
+            case 'title_desc':
+                $orderby['orderby'] = 'title';
+                $orderby['order'] = 'desc';
+                break;
+            case 'title_asc':
+                $orderby['orderby'] = 'title';
+                $orderby['order'] = 'asc';
+                break;
+            case 'pop_asc':
+                $orderby['meta_key'] = 'category_order_' . $term;
+                $orderby['orderby'] = 'meta_value';
+                $orderby['order'] = 'asc';
+                break;
+        }
+
+        return $orderby;
+    }
+
+    return false;
+ }

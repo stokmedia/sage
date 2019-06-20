@@ -116,84 +116,24 @@ add_filter( 'pre_get_posts', function ( $query ) {
     $taxonomy = 'silk_category';
     if ( isset( $query->query[ $taxonomy ] ) && $query->is_main_query() ) {
 
-        $market = $_SESSION['esc_store']['market'];
-        $priceList = $_SESSION['esc_store']['pricelist'];
-
         $term = $query->query[ $taxonomy ];
 
         // TODO: Set this from Site Wide setting
-        $query->set( 'posts_per_page', -1 );
+        $query->set( 'posts_per_page', 10 );
 
-        // Category sort from Centra
-        // if( !empty( $term ) ) {
-        //     $query->set( 'meta_key', 'category_order_' . $term );
-        //     $query->set( 'orderby', 'meta_value_num' );
-        //     $query->set( 'order', 'asc' );
-        // }
+        $meta = silk_product_filter();
+        $query->set( 'meta_query', $meta );
 
-        // pr( $_GET );
-        if (isset($_GET['filters']) && is_array($_GET['filters'])) {
-            $filters = $_GET['filters'];
-            $meta = array();
-
-            // Set Filter for Size
-            if (isset($filters['size']) && is_array($filters['size'])) {
-                foreach ($filters['size'] as $key => $val) {
-                    $meta[] = array(
-                        'key' => 'in_stock_' . $market . '_' . strtolower($val),
-                        'value' => 1,
-                        'compare' => '='
-                    );
-                }
+        $orderby = silk_product_orderby();
+        if (isset($orderby['orderby'])) {
+            $query->set('orderby', $orderby['orderby']);
+            $query->set( 'order', $orderby['order'] );
+            if (isset($orderby['meta_key'])) {
+                $query->set('meta_key', $orderby['meta_key']);    
             }
-
-            // Set Filter for Color
-            if (isset($filters['color']) && is_array($filters['color'])) {
-                $meta[] = array(
-                    'key' => 'product_color',
-                    'value' => implode(',', $filters['color']),
-                    'compare' => 'IN'
-                );
-            }
-
-            // Set Filter for Category
-            if (isset($filters['category']) && is_array($filters['category'])) {
-                $meta[] = array(
-                    'key' => 'canonical_category',
-                    'value' => implode(',', $filters['category']),
-                    'compare' => 'IN'
-                );
-            }
-
-            // pr( $meta );
-            $query->set( 'meta_query',$meta );
-
-            // Sort Products by Price, Title or ID
-            switch ( $filters['orderby'] ) {
-                case 'price_desc':
-                    $query->set( 'meta_key', 'price_' . $market . '_' . $priceList );
-                    $query->set( 'orderby', 'meta_value' );
-                    $query->set( 'order', 'desc' );
-                    break;
-                case 'price_asc':
-                    $query->set( 'meta_key', 'price_' . $market . '_' . $priceList );
-                    $query->set( 'orderby', 'meta_value' );
-                    $query->set( 'order', 'asc' );
-                    break;
-                case 'title_desc':
-                    $query->set('orderby', 'title');
-                    $query->set( 'order', 'desc' );
-                    break;
-                case 'title_asc':
-                    $query->set('orderby', 'title');
-                    $query->set( 'order', 'asc' );
-                    break;
-                case 'pop_asc':
-                    $query->set( 'meta_key', 'category_order_' . $term );
-                    $query->set( 'orderby', 'meta_value' );
-                    $query->set( 'order', 'asc' );
-                    break;
-            }
+        } else {
+            $query->set('orderby', 'title');
+            $query->set( 'order', 'asc' );
         }
 
         // NOTE: Do we still need this? Even sorting already working using switch condition above.
@@ -245,62 +185,87 @@ add_filter( 'register_taxonomy_args', function ( $args, $taxonomy ) {
 add_filter( 'rest_silk_products_collection_params', function ( $params ) {
 
     $params['orderby']['enum'][] = 'price_low';
-
+    
     return $params;
 }, 10, 1 );
+
+add_filter( 'rest_query_vars', function ( $valid_vars ) {
+    return array_merge( $valid_vars, array( 'meta_query' ) );
+} );
 
 /**
  * Check the orderby param for the particular REST API for hte custom post type. 
  */
 add_filter( 'rest_silk_products_query', function ( $query_vars, $request ) {
 
-    $orderby = $request->get_param('orderby');
+    $filter_query = silk_product_filter($request);
+    $query_vars['meta_query'] = $filter_query;
 
-    if (isset($orderby) && $orderby === 'price_low') {
-
-        // TODO: We should put these inside the Esc Plugin instead.
-        // eg: EscConnect::getMarket(), EscConnect::getPricelist();
-        $market = $_SESSION['esc_store']['market'];
-        $priceList = $_SESSION['esc_store']['pricelist'];
-
-        // TODO: Add support for asc/desc
-        $query_vars["orderby"] = "meta_value_num";
-        $query_vars['meta_key'] = 'price_' . $market . '_' . $priceList;
-        $query_vars["order"] = "asc";
-
+    $orderby = silk_product_orderby();
+    if (isset($orderby['orderby'])) {
+        $query_vars["orderby"] = $orderby['orderby'];
+        $query_vars["order"] = $orderby['order'];
+        if (isset($orderby['meta_key'])) {  
+            $query_vars["meta_key"] = $orderby['meta_key'];
+        }
     } else {
-
-        // TODO: Make REST API and regular product listing use same query
-        $term_id = $request->get_param('silk_category')[0];
-
-        $term = get_term_by('id', $term_id, 'silk_category');
-
-        /** The taxonomy we want to parse */
-        $taxonomy = "silk_category";
-
-        /** Get terms that have children */
-        $hierarchy = _get_term_hierarchy($taxonomy);
-
-        $termSlug = $term->slug;
-
-        while( !empty($term->parent) ) {
-            $term = get_term_by('id', $term->parent, 'silk_category');
-            $termSlug =  $term->slug . '/' . $termSlug;
-        }
-
-        if( $$termSlug ) {
-            // Category sort from Centra
-            if( !empty( $term ) ) {
-                $query_vars["orderby"] = "meta_value_num";
-                $query_vars['meta_key'] = 'category_order_' . $term->slug;
-                $query_vars["order"] = "asc";
-            }
-        }
+        $query_vars["orderby"] = "title";
+        $query_vars["order"] = "asc";
     }
+    // pr($filter_query);
+    // pr($query_vars);
+    // die;
+
+
+    /**
+    * Not sure if we can delete this already. 
+    */
+    // $orderby = $request->get_param('orderby');
+    // if (isset($orderby) && $orderby === 'price_low') {
+    //     // TODO: We should put these inside the Esc Plugin instead.
+    //     // eg: EscConnect::getMarket(), EscConnect::getPricelist();
+    //     $market = $_SESSION['esc_store']['market'];
+    //     $priceList = $_SESSION['esc_store']['pricelist'];
+
+    //     // TODO: Add support for asc/desc
+    //     $query_vars["orderby"] = "meta_value_num";
+    //     $query_vars['meta_key'] = 'price_' . $market . '_' . $priceList;
+    //     $query_vars["order"] = "asc";
+    // } else {
+    //     // TODO: Make REST API and regular product listing use same query
+    //     $term_id = $request->get_param('silk_category')[0];
+
+    //     $term = get_term_by('id', $term_id, 'silk_category');
+
+    //     /** The taxonomy we want to parse */
+    //     $taxonomy = "silk_category";
+
+    //     /** Get terms that have children */
+    //     $hierarchy = _get_term_hierarchy($taxonomy);
+
+    //     $termSlug = $term->slug;
+
+    //     while( !empty($term->parent) ) {
+    //         $term = get_term_by('id', $term->parent, 'silk_category');
+    //         $termSlug =  $term->slug . '/' . $termSlug;
+    //     }
+
+    //     if( $$termSlug ) {
+    //         // Category sort from Centra
+    //         if( !empty( $term ) ) {
+    //             $query_vars["orderby"] = "meta_value_num";
+    //             $query_vars['meta_key'] = 'category_order_' . $term->slug;
+    //             $query_vars["order"] = "asc";
+    //         }
+    //     }
+    // }
 
     return $query_vars;
 
 }, 10, 2);
+
+
+
 
 
 
