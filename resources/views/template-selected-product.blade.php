@@ -23,7 +23,7 @@
             <div class="selected-product-slider overflow-hidden p-md-0 shadow-sm">
               @for ($slider = 0; $slider < 3; $slider++)
                 <figure class="item align-items-center mb-0">
-                  <img src="@asset('images/temp/selected-product-view.png')" alt="" srcset="">
+                  <img src="@asset('images/temp/selected-product-view-2.png')" alt="" srcset="">
                 </figure>
               @endfor
             </div>
@@ -77,11 +77,11 @@
 
             <ul class="color-selector js-plus-item d-lg-inline-block d-flex flex-wrap justify-content-center align-items-center w-100">
               @for ($color = 0; $color < 10; $color++)
-                <li class="mx-2 item d-none">
-                  <div class="custom-control custom-checkbox">
+                <li class="mx-2 item d-none is-active">
+                  <a href="#" class="custom-control custom-checkbox">
                     <input type="checkbox" id="colorCheck[{{ $color }}]" class="custom-control-input">
                     <label class="custom-control-label" for="colorCheck[{{ $color }}]" style="background-color: #{{ substr(md5(mt_rand()), 0, 6) }}"></label>
-                  </div>
+                  </a>
                 </li>
               @endfor
                 <li class="mx-2 js-plus-item-btn">

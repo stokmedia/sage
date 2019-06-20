@@ -1,12 +1,12 @@
-   
+
 <div class="selected-product-options text-lg-left text-center pt-lg-0 pt-4 col-xxl-6 col-lg-5 pl-md-4">
     {{-- Title --}}
     <h1 class="h2 name mb-0">{{ $post->post_title }}</h1>
 
     {{-- Price --}}
     @include( 'partials.product-price', [
-        'priceInfo' => $product->display_price, 
-        'priceClass' => 'price', 
+        'priceInfo' => $product->display_price,
+        'priceClass' => 'price',
         'isSelectedProduct'=> true
     ])
 
@@ -14,7 +14,7 @@
     @if ($product_categories)
         <div class="info text-uppercase d-lg-block d-none">{{ $product_categories }}</div>
     @endif
-    
+
     {{-- Form Start --}}
     @php ($product_class->renderStartPurchaseForm())
 
@@ -29,7 +29,7 @@
                                 <span>{name}</span>
                             </label>
                         </div>
-                    </li>' 
+                    </li>'
                     )
                 )
             </ul>
@@ -43,9 +43,9 @@
                                 <input id="color-check[{{ $loop->iteration }}]" class="custom-control-input">
                                 <label class="custom-control-label" for="color-check[{{ $loop->iteration }}]" style="{{ $color->swatch->background }}"></label>
                             </a>
-                        </li>                            
+                        </li>
                     @endforeach
-                    
+
                     @if (count($product->colors) > 5)
                         <li class="mx-2 js-plus-item-btn">
                             <div class="custom-control custom-checkbox">
@@ -57,14 +57,14 @@
             @endif
         </div>
 
-        <button type="button" class="btn btn-lg btn-primary text-uppercase is-loading">
+        <button type="submit" class="btn btn-lg btn-primary text-uppercase">
             Lägg i kundkorg
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <!-- Loading spinner, just add '.is-loading' class to '.btn' -->
         </button>
 
     {{-- Form end --}}
     @php ($product_class->renderEndForm())
-    
+
     {{-- Product Information --}}
     @if ($product_information)
         <ul class="list-group accordion mt-5" id="productAccordion">
@@ -79,7 +79,7 @@
                     <div id="collapse-{{ $loop->iteration }}" class="collapse body text-left" aria-labelledby="headingOne" data-parent="#productAccordion">
                         <div class="pb-4">{!! $info->content !!}</div>
                     </div>
-                </li>                
+                </li>
             @endforeach
         </ul>
     @endif

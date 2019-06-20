@@ -76,6 +76,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5d0b26eb9111a",
+            "label": "Add to cart",
+            "name": "translate_add_to_cart",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5cf637d5c4727",
             "label": "USP",
             "name": "",
@@ -718,5 +737,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1560951197
+    "modified": 1561011966
 }

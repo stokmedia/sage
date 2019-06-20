@@ -178,6 +178,13 @@
       margin-bottom: 0.625rem;
     }
 
+    .selectors .color-selector > .is-active {
+      .custom-control-label {
+        border: 0.125rem solid $white;
+        box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+
     .accordion {
       .header {
         cursor: pointer;
@@ -240,7 +247,7 @@
       width: 70px;
       height: 106px;
       margin: 0.3125rem auto;
-      padding: 1.4375rem 0.9375rem 1.4375rem;
+      // padding: 1.4375rem 0.9375rem 1.4375rem;
       border-radius: 5px;
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
       cursor: pointer;

@@ -61,39 +61,36 @@ trait General
         }, $posts );
     }
 
-    public function defaultUsp()
+    public static function getSiteTranslations()
     {
-        return self::getDefaultUsp();
-    }
-
-    public function cookieData()
-    {
-        return (object) get_field( 'cookies', Helper::current_lang() ) ?? [];
-    }
-
-    public function newsletterData()
-    {
-        $lang = Helper::current_lang();
-        $newsletterEnable = get_field( 'newsletter_enable', $lang );
-        $modalContent = (object) get_field( 'newsletter_modal_content', $lang );
-        $modalContent->title = self::hasTitle($modalContent) ? $modalContent->section_title : '';
-        $modalContent->image = !empty($modalContent->image) ? wp_get_attachment_image_url( $modalContent->image['ID'], 'newsletter' ) : null;      
-
         return (object) [
-            'newsletter_enable' => $newsletterEnable,
-            'newsletter_modal_content' => $modalContent,
-            'form_settings' => (object) get_field( 'form_settings', $lang )
+            'general' => null,
+            'selected_product' => get_field( 'translate_selected_product', Helper::current_lang() ),
         ];
+    }    
+
+    public static function getSocialLinks()
+    {
+        return get_field( 'links', 'global' );
     }
 
-    public function sizeGuideData()
+    public static function title()
     {
-        return self::getSizeGuideData();
-    }
-
-    
-    public function resellerLists()
-    {
-        return self::getResellerLists();
-    }
+        if ( is_home() ) {
+            if ( $home = get_option( 'page_for_posts', true ) ) {
+                return get_the_title( $home );
+            }
+            return __( 'Latest Posts', 'sage' );
+        }
+        if ( is_archive() ) {
+            return get_the_archive_title();
+        }
+        if ( is_search() ) {
+            return sprintf( __( 'Search Results for %s', 'sage' ), get_search_query() );
+        }
+        if ( is_404() ) {
+            return __( 'Not Found', 'sage' );
+        }
+        return get_the_title();
+    }    
 }

@@ -30,8 +30,6 @@
   @php comments_template('/partials/comments.blade.php') @endphp
 </article> --}}
 
-{{-- <pre>{{ var_dump($product->images) }}</pre> --}}
-
 <section class="section selected-product">
     <div class="container">
         <div class="row">
