@@ -17081,7 +17081,23 @@ body#tinymce {
 .fifty-fifty-item.image > img,
 .fifty-fifty-item.image > video,
 .fifty-fifty-item.image > figure,
-.fifty-fifty-item.image > .ratio-content,
+.fifty-fifty-item.image > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .fifty-fifty-item.image > iframe,
 .fifty-fifty-item.image > .ratio-iframe {
   position: absolute;
@@ -17096,7 +17112,7 @@ body#tinymce {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .fifty-fifty-item.image > iframe {
   min-height: 200%;
@@ -18598,7 +18614,23 @@ blockquote footer::before,
 .product-details-inline figure > img,
 .product-details-inline figure > video,
 .product-details-inline figure > figure,
-.product-details-inline figure > .ratio-content,
+.product-details-inline figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .product-details-inline figure > iframe,
 .product-details-inline figure > .ratio-iframe {
   position: absolute;
@@ -18613,7 +18645,7 @@ blockquote footer::before,
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .product-details-inline figure > iframe {
   min-height: 200%;
@@ -19528,7 +19560,7 @@ html.is-flickity-fullscreen {
   width: 1.75rem;
 }
 
-/* line 382, resources/assets/styles/common/_mixins.scss */
+/* line 407, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span {
   background-color: currentColor;
@@ -19553,31 +19585,31 @@ html.is-flickity-fullscreen {
   width: 28px;
 }
 
-/* line 394, resources/assets/styles/common/_mixins.scss */
+/* line 419, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span:nth-child(1) {
   top: 0;
 }
 
-/* line 398, resources/assets/styles/common/_mixins.scss */
+/* line 423, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span:nth-child(2) {
   top: calc(50% - 1px);
 }
 
-/* line 402, resources/assets/styles/common/_mixins.scss */
+/* line 427, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler span:nth-child(3) {
   top: calc(50% + 8px);
 }
 
-/* line 407, resources/assets/styles/common/_mixins.scss */
+/* line 432, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler:hover {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* line 414, resources/assets/styles/common/_mixins.scss */
+/* line 439, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler[aria-expanded=true] span:nth-child(1) {
   -webkit-transform: translateY(9px) rotate(45deg);
@@ -19585,13 +19617,13 @@ html.is-flickity-fullscreen {
           transform: translateY(9px) rotate(45deg);
 }
 
-/* line 418, resources/assets/styles/common/_mixins.scss */
+/* line 443, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler[aria-expanded=true] span:nth-child(2) {
   opacity: 0;
 }
 
-/* line 422, resources/assets/styles/common/_mixins.scss */
+/* line 447, resources/assets/styles/common/_mixins.scss */
 
 .navbar-toggler[aria-expanded=true] span:nth-child(3) {
   -webkit-transform: translateY(-9px) rotate(-45deg);
@@ -20347,7 +20379,23 @@ body#tinymce {
 .category-banner > img,
 .category-banner > video,
 .category-banner > figure,
-.category-banner > .ratio-content,
+.category-banner > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .category-banner > iframe,
 .category-banner > .ratio-iframe {
   position: absolute;
@@ -20362,7 +20410,7 @@ body#tinymce {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .category-banner > iframe {
   min-height: 200%;
@@ -20391,7 +20439,23 @@ body#tinymce {
   .category-banner > img,
   .category-banner > video,
   .category-banner > figure,
-  .category-banner > .ratio-content,
+  .category-banner > .ratio-content {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    right: -9999px;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  /* line 30, resources/assets/styles/common/_mixins.scss */
+
   .category-banner > iframe,
   .category-banner > .ratio-iframe {
     position: absolute;
@@ -20406,7 +20470,7 @@ body#tinymce {
     margin: auto;
   }
 
-  /* line 32, resources/assets/styles/common/_mixins.scss */
+  /* line 44, resources/assets/styles/common/_mixins.scss */
 
   .category-banner > iframe {
     min-height: 200%;
@@ -20566,7 +20630,23 @@ body#tinymce {
 .product-listing .bg-image > img,
 .product-listing .bg-image > video,
 .product-listing .bg-image > figure,
-.product-listing .bg-image > .ratio-content,
+.product-listing .bg-image > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .product-listing .bg-image > iframe,
 .product-listing .bg-image > .ratio-iframe {
   position: absolute;
@@ -20581,7 +20661,7 @@ body#tinymce {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .product-listing .bg-image > iframe {
   min-height: 200%;
@@ -20781,7 +20861,23 @@ body#tinymce {
 .product-image > img,
 .product-image > video,
 .product-image > figure,
-.product-image > .ratio-content,
+.product-image > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .product-image > iframe,
 .product-image > .ratio-iframe {
   position: absolute;
@@ -20796,7 +20892,7 @@ body#tinymce {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .product-image > iframe {
   min-height: 200%;
@@ -21613,7 +21709,23 @@ body.isApple .product-filter {
 .card-block figure > img,
 .card-block figure > video,
 .card-block figure > figure,
-.card-block figure > .ratio-content,
+.card-block figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .card-block figure > iframe,
 .card-block figure > .ratio-iframe {
   position: absolute;
@@ -21628,7 +21740,7 @@ body.isApple .product-filter {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .card-block figure > iframe {
   min-height: 200%;
@@ -21777,12 +21889,28 @@ body.isApple .product-filter {
   overflow: hidden;
 }
 
-/* line 53, resources/assets/styles/common/_mixins.scss */
+/* line 54, resources/assets/styles/common/_mixins.scss */
 
 .hero-banner .hero-wrap > img,
 .hero-banner .hero-wrap > video,
 .hero-banner .hero-wrap > figure,
-.hero-banner .hero-wrap > .ratio-content,
+.hero-banner .hero-wrap > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 71, resources/assets/styles/common/_mixins.scss */
+
 .hero-banner .hero-wrap > iframe,
 .hero-banner .hero-wrap > .ratio-iframe {
   position: absolute;
@@ -21797,7 +21925,7 @@ body.isApple .product-filter {
   margin: auto;
 }
 
-/* line 72, resources/assets/styles/common/_mixins.scss */
+/* line 85, resources/assets/styles/common/_mixins.scss */
 
 .hero-banner .hero-wrap > iframe {
   min-height: 200%;
@@ -21840,7 +21968,23 @@ body.isApple .product-filter {
 .hero-banner .hero-wrap .hero-background > img,
 .hero-banner .hero-wrap .hero-background > video,
 .hero-banner .hero-wrap .hero-background > figure,
-.hero-banner .hero-wrap .hero-background > .ratio-content,
+.hero-banner .hero-wrap .hero-background > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .hero-banner .hero-wrap .hero-background > iframe,
 .hero-banner .hero-wrap .hero-background > .ratio-iframe {
   position: absolute;
@@ -21855,7 +21999,7 @@ body.isApple .product-filter {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .hero-banner .hero-wrap .hero-background > iframe {
   min-height: 200%;
@@ -21884,7 +22028,23 @@ body.isApple .product-filter {
   .hero-banner .hero-wrap .hero-background > img,
   .hero-banner .hero-wrap .hero-background > video,
   .hero-banner .hero-wrap .hero-background > figure,
-  .hero-banner .hero-wrap .hero-background > .ratio-content,
+  .hero-banner .hero-wrap .hero-background > .ratio-content {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    right: -9999px;
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  /* line 30, resources/assets/styles/common/_mixins.scss */
+
   .hero-banner .hero-wrap .hero-background > iframe,
   .hero-banner .hero-wrap .hero-background > .ratio-iframe {
     position: absolute;
@@ -21899,7 +22059,7 @@ body.isApple .product-filter {
     margin: auto;
   }
 
-  /* line 32, resources/assets/styles/common/_mixins.scss */
+  /* line 44, resources/assets/styles/common/_mixins.scss */
 
   .hero-banner .hero-wrap .hero-background > iframe {
     min-height: 200%;
@@ -22340,7 +22500,23 @@ body.isApple .product-filter {
 .promo-box-image > img,
 .promo-box-image > video,
 .promo-box-image > figure,
-.promo-box-image > .ratio-content,
+.promo-box-image > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .promo-box-image > iframe,
 .promo-box-image > .ratio-iframe {
   position: absolute;
@@ -22355,7 +22531,7 @@ body.isApple .product-filter {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .promo-box-image > iframe {
   min-height: 200%;
@@ -23136,7 +23312,23 @@ body.isApple .product-filter {
 .selected-product-slider .item > img,
 .selected-product-slider .item > video,
 .selected-product-slider .item > figure,
-.selected-product-slider .item > .ratio-content,
+.selected-product-slider .item > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .selected-product-slider .item > iframe,
 .selected-product-slider .item > .ratio-iframe {
   position: absolute;
@@ -23151,7 +23343,7 @@ body.isApple .product-filter {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .selected-product-slider .item > iframe {
   min-height: 200%;
@@ -23435,7 +23627,23 @@ body.isApple .product-filter {
 .selected-product-thumbnail .item figure > img,
 .selected-product-thumbnail .item figure > video,
 .selected-product-thumbnail .item figure > figure,
-.selected-product-thumbnail .item figure > .ratio-content,
+.selected-product-thumbnail .item figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .selected-product-thumbnail .item figure > iframe,
 .selected-product-thumbnail .item figure > .ratio-iframe {
   position: absolute;
@@ -23450,7 +23658,7 @@ body.isApple .product-filter {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .selected-product-thumbnail .item figure > iframe {
   min-height: 200%;
@@ -23670,12 +23878,28 @@ body.isApple .product-filter {
   overflow: hidden;
 }
 
-/* line 53, resources/assets/styles/common/_mixins.scss */
+/* line 54, resources/assets/styles/common/_mixins.scss */
 
 .instagram-gallery .image > img,
 .instagram-gallery .image > video,
 .instagram-gallery .image > figure,
-.instagram-gallery .image > .ratio-content,
+.instagram-gallery .image > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 71, resources/assets/styles/common/_mixins.scss */
+
 .instagram-gallery .image > iframe,
 .instagram-gallery .image > .ratio-iframe {
   position: absolute;
@@ -23690,7 +23914,7 @@ body.isApple .product-filter {
   margin: auto;
 }
 
-/* line 72, resources/assets/styles/common/_mixins.scss */
+/* line 85, resources/assets/styles/common/_mixins.scss */
 
 .instagram-gallery .image > iframe {
   min-height: 200%;
@@ -23864,12 +24088,28 @@ body.isApple .product-filter {
   background-color: #dbe4e7;
 }
 
-/* line 53, resources/assets/styles/common/_mixins.scss */
+/* line 54, resources/assets/styles/common/_mixins.scss */
 
 .instagram-gallery .tile > img,
 .instagram-gallery .tile > video,
 .instagram-gallery .tile > figure,
-.instagram-gallery .tile > .ratio-content,
+.instagram-gallery .tile > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 71, resources/assets/styles/common/_mixins.scss */
+
 .instagram-gallery .tile > iframe,
 .instagram-gallery .tile > .ratio-iframe {
   position: absolute;
@@ -23884,7 +24124,7 @@ body.isApple .product-filter {
   margin: auto;
 }
 
-/* line 72, resources/assets/styles/common/_mixins.scss */
+/* line 85, resources/assets/styles/common/_mixins.scss */
 
 .instagram-gallery .tile > iframe {
   min-height: 200%;
@@ -24084,7 +24324,23 @@ body.isApple .product-filter {
 .instagram-gallery-mobile .instagram-col .tile > img,
 .instagram-gallery-mobile .instagram-col .tile > video,
 .instagram-gallery-mobile .instagram-col .tile > figure,
-.instagram-gallery-mobile .instagram-col .tile > .ratio-content,
+.instagram-gallery-mobile .instagram-col .tile > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
 .instagram-gallery-mobile .instagram-col .tile > iframe,
 .instagram-gallery-mobile .instagram-col .tile > .ratio-iframe {
   position: absolute;
@@ -24099,7 +24355,7 @@ body.isApple .product-filter {
   margin: auto;
 }
 
-/* line 32, resources/assets/styles/common/_mixins.scss */
+/* line 44, resources/assets/styles/common/_mixins.scss */
 
 .instagram-gallery-mobile .instagram-col .tile > iframe {
   min-height: 200%;
