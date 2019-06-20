@@ -30,5 +30,5 @@
   @include('sections.section-instagram-grid')
   @include('sections.section-newsletter')
 --}}
-  @include('page')
+  @include('partials.sections')
 @endsection 
