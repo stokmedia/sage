@@ -136,6 +136,21 @@
           flex: initial;
           max-width: 100%;
         }
+
+        &-details {
+          max-width: calc(100% - 0.75rem);
+          min-width: calc(100% - 0.75rem);
+
+          @include media-breakpoint-up(sm) {
+            min-width: 8.75rem;
+            max-width: calc(100% - 30px);
+          }
+          @include media-breakpoint-up(md) {
+            bottom: 0.9375rem;
+            min-width: 8.75rem;
+            max-width: calc(100% - 30px);
+          }
+        }
       }
     }
   }
