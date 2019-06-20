@@ -26,33 +26,35 @@ class SingleSilk_products extends Controller
 	public function productInformation()
 	{
 		$product = $this->productClass();
+		$siteTranslations = App::getSiteTranslations();
+		$labels = !empty($siteTranslations->selected_product) ? $siteTranslations->selected_product : [];
 		$infos = [];
 
 		// Description
-		$descriptionLabel = Helper::localize( 'product_description_label' );
+		$descriptionLabel = !empty($labels['description']) ? $labels['description'] : 'Description';
 		if ($product->product_meta['description']) {
 			array_push( $infos, [ 
-				'label' => $descriptionLabel ? $descriptionLabel : 'Description', 
+				'label' => $descriptionLabel, 
 				'content' => $product->product_meta['description']
 			]);
 		}
 
 		// Details
-		$detailsLabel = Helper::localize( 'product_details_label' );
+		$detailsLabel = !empty($labels['details']) ? $labels['details'] : 'Details';
 		if ($product->product_meta['excerpt']) {
 			array_push( $infos, [ 
-				'label' => $detailsLabel ? $detailsLabel : 'Details', 
+				'label' => $detailsLabel, 
 				'content' => $product->product_meta['excerpt']
 			]);
 		}
 		
 		// Shipping
-		$shippingLabel = Helper::localize( 'product_shipping_label' );
+		$shippingLabel = !empty($labels['shipping_delivery']) ? $labels['shipping_delivery'] : 'Shipping & Delivery';
 		$shippingContent = Helper::localize( 'product_shipping_content' );
 
 		if ($shippingContent) {
 			array_push( $infos, [ 
-				'label' => $shippingLabel ? $shippingLabel : 'Shipping & Delivery', 
+				'label' => $shippingLabel, 
 				'content' => $shippingContent
 			]);
 		}
