@@ -57,7 +57,7 @@
             @endif
         </div>
 
-        <button type="button" class="btn btn-lg btn-primary text-uppercase is-loading">
+        <button type="submit" class="btn btn-lg btn-primary text-uppercase">
             Lägg i kundkorg
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <!-- Loading spinner, just add '.is-loading' class to '.btn' -->
         </button>
