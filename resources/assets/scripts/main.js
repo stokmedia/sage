@@ -34,6 +34,7 @@ require('./components/instagram');
 require('./components/newsletter');
 require('./components/alert');
 require('./components/category');
+require('./components/cart');
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
