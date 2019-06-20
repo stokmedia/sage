@@ -35,7 +35,7 @@
         <div class="row">
 
             {{-- Images --}}
-            <div class="selected-product-preview col-xxl-6 col-lg-7 p-0 invisible {{ $data->is_sold_out ? 'is-oos' : '' }}">
+            <div class="selected-product-preview col-xxl-6 col-lg-7 p-0 invisible {{ $product->is_sold_out ? 'is-oos' : '' }}">
                 <div class="row justify-content-xxl-start justify-content-center mx-0">
                     <div class="selected-product-slider-col p-md-0 m-0">
                         <div class="selected-product-slider overflow-hidden p-md-0 shadow-sm">
@@ -78,4 +78,6 @@
         </div>
     </div>
 </section>
-  
+
+{{-- Sections --}}
+@include( 'partials.sections' )

@@ -726,6 +726,28 @@
             "ui": 1
         },
         {
+            "key": "field_5d0b787cfe0dd",
+            "label": "Selected Product Page",
+            "name": "settings_selected_product",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
             "key": "field_5d0a3096ae5bd",
             "label": "Selected Product",
             "name": "",
@@ -809,5 +831,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561024624
+    "modified": 1561032854
 }

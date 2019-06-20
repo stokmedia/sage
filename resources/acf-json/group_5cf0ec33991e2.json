@@ -64,7 +64,7 @@
             "label": "Section displays",
             "name": "section_displays",
             "type": "radio",
-            "instructions": "",
+            "instructions": "\"Related products (same category)\" is applicable on selected product pages only. If used in other pages, this will only display all products.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -74,7 +74,8 @@
             },
             "choices": {
                 "category": "Products from a category",
-                "handpick": "Handpicked products"
+                "handpick": "Handpicked products",
+                "related": "Related products ( same category )."
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -127,6 +128,13 @@
                         "operator": "==",
                         "value": "category"
                     }
+                ],
+                [
+                    {
+                        "field": "field_5cf0f7706caa6",
+                        "operator": "==",
+                        "value": "related"
+                    }
                 ]
             ],
             "wrapper": {
@@ -135,7 +143,7 @@
                 "id": ""
             },
             "choices": {
-                "latest": "Latest products from the selected category",
+                "latest": "Latest products from the category",
                 "random": "Random"
             },
             "allow_null": 0,
@@ -158,6 +166,13 @@
                         "field": "field_5cf0f7706caa6",
                         "operator": "==",
                         "value": "category"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5cf0f7706caa6",
+                        "operator": "==",
+                        "value": "related"
                     }
                 ]
             ],
@@ -241,5 +256,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1560234272
+    "modified": 1561036293
 }
