@@ -1,6 +1,6 @@
-{{-- @extends('layouts.app') --}}
+@extends('layouts.app')
 
-{{-- @section('content') --}}
+@section('content')
   {{-- @include('partials.page-header')
   {{$sometext}}
   @if (!have_posts())
@@ -29,6 +29,6 @@
 
   @include('sections.section-instagram-grid')
   @include('sections.section-newsletter')
-
-@endsection --}}
-@include('page')
+--}}
+  @include('page')
+@endsection 
