@@ -1,14 +1,16 @@
 $('.silk-loadmore').click(function(){
 	var ajaxUrl = $('#silkFilterForm').data('ajaxurl');
+	var currentCategory = $(this).data('currentcategory');
+	ajaxUrl = ajaxUrl + '&filters[category][]='+currentCategory;
 	var nextPage = $(this).data('currentpage') + 1;
 	$('.silk-loadmore').data('currentpage', nextPage);
-	// console.log(ajaxUrl + '&page=' + nextPage);
+	console.log(ajaxUrl + '&page=' + nextPage);
 	$.ajax({
 		url: ajaxUrl + '&page=' + nextPage,
 		type: 'GET',
 		beforeSend : function (  ) {
 			$('.silk-loadmore').hide();
-			$('.silk-spinner').show();
+			$('.silk-spinner').removeClass('d-none');
 		},
 		error: function( data, textStatus ) {
 			console.log(data);
@@ -17,7 +19,7 @@ $('.silk-loadmore').click(function(){
 		success: function( data, textStatus, jqXHR ) {
 			if( data ) {
 				$('.silk-loadmore').show();
-				$('.silk-spinner').hide();
+				$('.silk-spinner').addClass('d-none');
 
 				$( data ).each(function (key, val) {
 					$('.silk-product-item-holder').append(val.product_item);

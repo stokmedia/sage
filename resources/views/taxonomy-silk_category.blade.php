@@ -193,11 +193,11 @@
           @endwhile
     </div>
     @if($show_load_more_button)
-      <div class="spinner text-center">
+      <div class="spinner text-center position-relative">
         <div class="spinner-btn">
-          <button class="btn btn-lg btn-primary silk-loadmore" data-currentpage="1" type="button">Load More...</button>
+        <button class="btn btn-lg btn-primary silk-loadmore" data-currentpage="1" data-currentcategory="{{ $current_category }}" type="button">Load More...</button>
         </div>
-        <div class="spinner-border silk-spinner" role="status" style="display:none;">
+        <div class="spinner-border silk-spinner d-none" role="status">
           <span class="sr-only">Loading...</span>
         </div>
       </div>

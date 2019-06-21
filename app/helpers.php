@@ -179,7 +179,6 @@ function silk_product_filter() {
             );
         }
 
-        // pr( $meta );
         return $meta;
     }
 
