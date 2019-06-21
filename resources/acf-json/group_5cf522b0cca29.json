@@ -268,6 +268,27 @@
             ]
         },
         {
+            "key": "field_5d0c980ae7792",
+            "label": "Product listing count",
+            "name": "settings_product_listing_count",
+            "type": "number",
+            "instructions": "Add value here to limit the displayed products in the Product listing page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
             "key": "field_5cf523db9ca4f",
             "label": "Social Media",
             "name": "",
@@ -417,5 +438,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1560158315
+    "modified": 1561106565
 }
