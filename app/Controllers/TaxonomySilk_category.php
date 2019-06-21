@@ -143,8 +143,8 @@ class TaxonomySilk_category extends Controller
         return (object) [
             'title' => $term->name,
             'text' => $term->description,
-            'image' => $image,
-            'image_mobile' => $imageMobile,
+            'image' => $image ?? '',
+            'image_mobile' => $imageMobile ?? '',
         ];
     }
 }
