@@ -127,7 +127,7 @@ add_filter( 'pre_get_posts', function ( $query ) {
         $term = $query->query[ $taxonomy ];
 
         // TODO: Set this from Site Wide setting
-        $query->set( 'posts_per_page', 10 );
+        $query->set( 'posts_per_page', 11 );
 
         $meta = silk_product_filter();
         // If no filter is selected default category to current one
@@ -154,15 +154,6 @@ add_filter( 'pre_get_posts', function ( $query ) {
             $query->set('orderby', 'title');
             $query->set( 'order', 'asc' );
         }
-
-        // NOTE: Do we still need this? Even sorting already working using switch condition above.
-        // TODO: Set sorting from filter etc
-        /*
-        $tax_query = apply_filters( 'esc_product_listing_filter', $_GET );
-        $query->tax_query->queries[ ] = $tax_query;
-        $query->set( 'tax_query', $query->tax_query->queries );
-        */
- 
     }
 
 });

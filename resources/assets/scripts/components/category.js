@@ -10,10 +10,18 @@ $('.silk-loadmore').click(function(){
 			$('.silk-loadmore').hide();
 			$('.silk-spinner').show();
 		},
+		error: function( data, textStatus ) {
+			console.log(data);
+			console.log(textStatus);
+		},
 		success: function( data, textStatus, jqXHR ) {
 			if( data ) {
 				$('.silk-loadmore').show();
 				$('.silk-spinner').hide();
+
+				$( data ).each(function (key, val) {
+					$('.silk-product-item-holder').append(val.product_item);
+				});
 
 				var totalPage  = parseInt( jqXHR.getResponseHeader('X-WP-TotalPages'), 10 );
 				if ( $('.silk-loadmore').data('currentpage') == totalPage )

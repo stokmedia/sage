@@ -146,8 +146,8 @@ function silk_product_filter() {
     $priceList = $_SESSION['esc_store']['pricelist'];
 
     // pr( $_GET );
-    if (isset($_GET['silk_filters']) && is_array($_GET['silk_filters'])) {
-        $filters = $_GET['silk_filters'];
+    if (isset($_GET['filters']) && is_array($_GET['filters'])) {
+        $filters = $_GET['filters'];
         $meta = array();
 
         // Set Filter for Size
@@ -195,7 +195,7 @@ function silk_product_filter() {
     $priceList = $_SESSION['esc_store']['pricelist'];
 
     // Sort Products by Price, Title or ID
-    if (isset($_GET['silk_filters']) && is_array($_GET['silk_filters'])
+    if (isset($_GET['filters']) && is_array($_GET['filters'])
         && isset($_GET['filters']['orderby']) && !empty($_GET['filters']['orderby'])) {
         switch ( $_GET['filters']['orderby'] ) {
             case 'price_desc':

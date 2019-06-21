@@ -2,6 +2,7 @@
 namespace App\Classes;
 
 use App\Classes\Helper;
+use App\Controllers\TaxonomySilk_category;
 
 include_once( \Esc::directory() . '/modules/product.php' );
 
@@ -41,19 +42,10 @@ class Silk_Product_REST_Controller extends \WP_REST_Posts_Controller {
 	 * @return mixed
 	 */
 	public function prepare_item_for_response( $item, $request ) {
-
 	    $response = parent::prepare_item_for_response( $item, $request );
 	    $data     = $response->get_data();
-
-		$product = new Product( $data['id'] );
-
-		$data['product_meta'] = $product->product_meta;
-
-		// $render = Helper::sp_render_text( [
-        //     'product' => \App\template( 'partials.product-item' )
-		// ], $data );
-
-		return $data;
+		$tpl['product_item'] = \App\template( 'partials.product-item', ['product' => TaxonomySilk_category::get_product($data['id'])] );
+		return $tpl;
 	}
 
 	/**

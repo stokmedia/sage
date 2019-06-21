@@ -175,7 +175,7 @@
   <section class="section product-listing">
     <div class="container p-0">
       <div class="bg-image m-auto rounded-circle" style="background-image:url( {{ $background_image->image }} );"></div>
-      <div class="products d-flex flex-wrap justify-content-center">
+      <div class="products d-flex flex-wrap justify-content-center silk-product-item-holder">
           @php $count = 1 @endphp
           @while (have_posts()) @php(the_post())
 
@@ -190,17 +190,18 @@
             )
 
             @php($count++)
-
           @endwhile
     </div>
-    <div class="spinner text-center">
-      <div class="spinner-btn">
-        <button class="btn btn-lg btn-primary silk-loadmore" data-currentpage="1" type="button">Load More...</button>
+    @if($show_load_more_button)
+      <div class="spinner text-center">
+        <div class="spinner-btn">
+          <button class="btn btn-lg btn-primary silk-loadmore" data-currentpage="1" type="button">Load More...</button>
+        </div>
+        <div class="spinner-border silk-spinner" role="status" style="display:none;">
+          <span class="sr-only">Loading...</span>
+        </div>
       </div>
-      <div class="spinner-border silk-spinner" role="status" style="display:none;">
-        <span class="sr-only">Loading...</span>
-      </div>
-    </div>
+    @endif
   </section>
 
   @include('sections.section-text-header')
