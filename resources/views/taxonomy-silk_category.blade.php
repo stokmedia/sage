@@ -12,7 +12,12 @@
       <div class="container">
         {{-- TODO: Hide this if category banner is present --}}
         @if (!$hero_banner->image && !$hero_banner->image_mobile)
-        <h1 class="product-header-title h1 text-center">Skhoop Kjolar</h1>
+        <div class="product-header-title text-button">
+          <div class="container">
+              <div class="title h1 text-center mb-0">{{ get_queried_object()->name }}</div>
+              <div class="preamble text-center mb-3">{{ get_queried_object()->description }}</div>
+          </div>
+        </div>
         @endif
 
         <div class="product-header-actionbox row align-items-center">
