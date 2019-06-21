@@ -17859,7 +17859,7 @@ module.exports = Alert;
 	ajaxUrl = ajaxUrl + '&filters[category][]='+currentCategory;
 	var nextPage = $(this).data('currentpage') + 1;
 	$('.silk-loadmore').data('currentpage', nextPage);
-	console.log(ajaxUrl + '&page=' + nextPage);
+	// console.log(ajaxUrl + '&page=' + nextPage);
 	$.ajax({
 		url: ajaxUrl + '&page=' + nextPage,
 		type: 'GET',

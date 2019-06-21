@@ -1,5 +1,5 @@
 {{--
-  Template Name: Section Checkout
+  Template Name: Checkout Template
 --}}
 
 @extends('layouts.app')
