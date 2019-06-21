@@ -126,8 +126,9 @@ add_filter( 'pre_get_posts', function ( $query ) {
 
         $term = $query->query[ $taxonomy ];
 
-        // TODO: Set this from Site Wide setting
-        $query->set( 'posts_per_page', 11 );
+        $productListingCount = get_field('settings_product_listing_count', 'global');
+        $productListingCount = (!empty($productListingCount)) ? $productListingCount : '-1';
+        $query->set( 'posts_per_page', $productListingCount );
 
         $meta = silk_product_filter();
         // If no filter is selected default category to current one

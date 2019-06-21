@@ -10,7 +10,7 @@ class TaxonomySilk_category extends Controller
 
     use Partials\ProductData;
 
-    protected $itemPerPage = 11;
+    // private $itemPerPage = get_field('settings_product_listing_count', 'global');
 
     public static function title()
     {
@@ -20,7 +20,8 @@ class TaxonomySilk_category extends Controller
     public function showLoadMoreButton()
     {
         global $wp_query;
-        if ($wp_query->found_posts > $this->itemPerPage) {
+        $productListingCount = get_field('settings_product_listing_count', 'global');
+        if (!empty($productListingCount) && $wp_query->found_posts > $productListingCount) {
             return true;
         }
 
@@ -28,7 +29,9 @@ class TaxonomySilk_category extends Controller
     }
 
     public function ajaxUrlListing()
-    {        
+    {
+        $productListingCount = get_field('settings_product_listing_count', 'global');
+        $productListingCount = (!empty($productListingCount)) ? $productListingCount : '-1';
         $filterData = $this->filterData();
         $queryString = '';
         if (is_array($filterData)) {
@@ -45,7 +48,7 @@ class TaxonomySilk_category extends Controller
             }
         }
 
-        $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'&per_page='.$this->itemPerPage;
+        $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'&per_page='.$productListingCount;
         return $url;
     }
 
