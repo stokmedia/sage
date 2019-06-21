@@ -109,6 +109,14 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
 // TODO: Maybe move all of the following Centra related filters to the Esc Plugin instead
 
 /**
+ * Add filters to query_vars
+ */
+// add_filter( 'query_vars', function ( $vars ) {
+//     $vars[] = "filters";
+//     return $vars;
+// });
+
+/**
  * Order Centra Products for Category
  */
 add_filter( 'pre_get_posts', function ( $query ) {

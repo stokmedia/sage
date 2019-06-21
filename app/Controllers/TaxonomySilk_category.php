@@ -8,7 +8,7 @@ use App\Classes\Product;
 class TaxonomySilk_category extends Controller
 {
 
-	use Partials\ProductData;
+    use Partials\ProductData;
 
     public static function title()
     {
@@ -17,9 +17,24 @@ class TaxonomySilk_category extends Controller
 
     public function ajaxUrlListing()
     {        
-        // http://localhost/wp-skhoop/wp-json/wp/v2/products?filters%5Bcategory%5D%5B%5D=bottoms&per_page=10&page=2
-        // pr(get_queried_object());
-        $url = site_url().'/wp-json/wp/v2/products';
+        $itemPerPage = 10;
+        $filterData = $this->filterData();
+        $queryString = '';
+        if (is_array($filterData)) {
+            foreach ($filterData as $key => $val) {
+                $separator = (!empty($queryString)) ? '&' : '';
+                if (is_array($val)) {
+                    foreach ($val as $skey => $sval) {
+                        $separator = (!empty($queryString)) ? '&' : '';
+                        $queryString .= $separator.'filters['.$key.'][]='.$sval;
+                    }
+                } else {
+                    $queryString .= $separator.'filters['.$key.']='.$val;
+                }
+            }
+        }
+
+        $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'&per_page='.$itemPerPage;
         return $url;
     }
 

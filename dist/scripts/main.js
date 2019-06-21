@@ -17853,33 +17853,28 @@ module.exports = Alert;
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {document.addEventListener( 'DOMContentLoaded', function () {	
-	// alert('test');
-	
-} );
-
-$('.silk-loadmore').click(function(){
+/* WEBPACK VAR INJECTION */(function($) {$('.silk-loadmore').click(function(){
 	var ajaxUrl = $('#silkFilterForm').data('ajaxurl');
-	console.log(ajaxUrl);
+	var nextPage = $(this).data('currentpage') + 1;
+	$('.silk-loadmore').data('currentpage', nextPage);
+	// console.log(ajaxUrl + '&page=' + nextPage);
 	$.ajax({
-		url: ajaxUrl,
+		url: ajaxUrl + '&page=' + nextPage,
 		type: 'GET',
-		// beforeSend : function (  ) {
-			// button.text('Loading...'); // change the button text, you can also add a preloader image
-		// },
-		success: function( data ) {
-			console.log(data);
-			if( data ) { 
-				// button.text( 'More posts' ).prev().before(data); // insert new posts
-				// currentPage++;
+		beforeSend : function (  ) {
+			$('.silk-loadmore').hide();
+			$('.silk-spinner').show();
+		},
+		success: function( data, textStatus, jqXHR ) {
+			if( data ) {
+				$('.silk-loadmore').show();
+				$('.silk-spinner').hide();
 
-				// if ( misha_loadmore_params.current_page == misha_loadmore_params.max_page ) 
-					// button.remove(); // if last page, remove the button
-
-				// you can also fire the "post-load" event here if you use a plugin that requires it
-				// $( document.body ).trigger( 'post-load' );
+				var totalPage  = parseInt( jqXHR.getResponseHeader('X-WP-TotalPages'), 10 );
+				if ( $('.silk-loadmore').data('currentpage') == totalPage )
+					{ $('.silk-loadmore').remove(); } // if last page, remove the button
 			} else {
-				// button.remove(); // if no data, remove the button as well
+				$('.silk-loadmore').remove(); // if no data, remove the button as well
 			}
 		},
 	});
