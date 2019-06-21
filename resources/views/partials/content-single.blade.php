@@ -14,4 +14,10 @@
 
 
 {{-- @include( 'sections.section-text-with-button', [ 'section' => $post_content ] ) --}}
+@if ($breadcrumbs)
+  <section class="section breadcrumb-vertical no-mb">
+    {!! $breadcrumbs !!}
+  </section>
+@endif
+
 @include( 'partials.sections' )

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use Sober\Controller\Controller;
 use App\Classes\Navigation;
 use App\Classes\Helper;
+use App\Classes\Breadcrumbs;
 
 class App extends Controller
 {
@@ -122,7 +123,24 @@ class App extends Controller
     public function resellerLists()
     {
         return self::getResellerLists();
-    }    
+    }
+    
+    public function breadcrumbs()
+    {
+        // Do not display breadcrumbs on index pages
+        if (is_front_page()) {
+            return false;
+        }
+
+        $breadcrumbs = new Breadcrumbs();
+
+        return $breadcrumbs->render_breadcumbs( [
+            'container_tag'     => 'div',
+            'container_class'   => 'breadcrumb is-vertical d-inline-block',
+            'template'          => '<a class="breadcrumb-item" href="{link}">{title}</a>',
+            'template_active'   => '<span class="breadcrumb-item active">{title}</span>',
+        ]);
+    }
 
     /*
         // TODO: Could we use a general function to generate the image tag in the templates for Centra Product Images
