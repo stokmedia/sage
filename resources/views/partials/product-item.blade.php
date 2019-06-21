@@ -41,7 +41,7 @@
 	</div>
 
 @else
-	@php ($productClass .= $imageSize ?? 'is-small')
+	@php ($productClass .= !empty($imageSize) ? ' '. $imageSize : ' is-small')
 
 	<div class="product {{ $productClass }}">
 		<a href="{{ get_the_permalink( $post ) }}" class="product-wrapper bg-white d-block">

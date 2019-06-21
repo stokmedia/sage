@@ -4,6 +4,12 @@
     @include('partials.page-header')
     @include('partials.content-page')
   @endwhile --}}
+  
+  @if ($breadcrumbs)
+    <section class="section breadcrumb-vertical no-mb">
+      {!! $breadcrumbs !!}
+    </section>
+  @endif
 
   @include('partials.sections')
 
