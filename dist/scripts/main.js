@@ -2112,7 +2112,6 @@ __webpack_require__(44);
 __webpack_require__(45);
 __webpack_require__(46);
 __webpack_require__(47);
-__webpack_require__(48);
 __webpack_require__(49);
 __webpack_require__(50);
 
@@ -17555,6 +17554,7 @@ Instagram.infoPosition();
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_helper__ = __webpack_require__(6);
 
+var Alert = __webpack_require__(48);
 
 var Newsletter = {};
 
@@ -17678,10 +17678,10 @@ var Newsletter = {};
 			Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-success', '.js-newsletter-content' );
 
 		} else if( successType === 'alert' ) {
-			// var btn = document.getElementById( 'js-alert-button' );
-			// var btnText = btn ? btn.dataset.text : '';
+			var btn = document.getElementById( 'js-alert-button' );
+			var btnText = btn ? btn.dataset.text : '';
 
-			// Alert.show( 'success', form.dataset.alert, btnText );
+			Alert.show( 'success', form.dataset.alert, btnText );
 		}
 
 		Newsletter.resetForm(targetContainer, form, successType);	
@@ -17826,10 +17826,10 @@ var Alert = {};
 
         target.attr( 'class', alertClass );
         image.attr( 'src', imageSource );
-        text.text( message );
+        text.html( message );
         button.text( buttonText );
         button.attr( 'class', buttonClass );
-        target.show();
+        target.slideDown( 'slow' );
     };
 
     $( function () {
@@ -17838,15 +17838,15 @@ var Alert = {};
         }
 
         button.click( function () {
-
-
-            target.hide();
+            target.slideUp( 'slow' );
         } );
     } )
 
 })( jQuery );
 
-window.Alert = Alert;
+// window.Alert = Alert;
+
+module.exports = Alert;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),

@@ -76,6 +76,80 @@
             "maxlength": ""
         },
         {
+            "key": "field_5d0c6dbf00b13",
+            "label": "General",
+            "name": "translate_general",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5d0c6ddd00b14",
+                    "label": "View all",
+                    "name": "view_all",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d0c6de500b15",
+                    "label": "Follow us",
+                    "name": "follow_us",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d0c6df100b16",
+                    "label": "Close",
+                    "name": "close",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
             "key": "field_5d0b4cb0db7ac",
             "label": "Selected Product",
             "name": "translate_selected_product",
@@ -831,5 +905,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561032854
+    "modified": 1561095683
 }

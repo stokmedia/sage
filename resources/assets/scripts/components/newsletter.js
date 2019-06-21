@@ -1,4 +1,5 @@
 import { stokpress } from '../util/helper';
+var Alert = require('../components/alert');
 
 var Newsletter = {};
 
@@ -122,10 +123,10 @@ var Newsletter = {};
 			Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-success', '.js-newsletter-content' );
 
 		} else if( successType === 'alert' ) {
-			// var btn = document.getElementById( 'js-alert-button' );
-			// var btnText = btn ? btn.dataset.text : '';
+			var btn = document.getElementById( 'js-alert-button' );
+			var btnText = btn ? btn.dataset.text : '';
 
-			// Alert.show( 'success', form.dataset.alert, btnText );
+			Alert.show( 'success', form.dataset.alert, btnText );
 		}
 
 		Newsletter.resetForm(targetContainer, form, successType);	
