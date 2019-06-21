@@ -6,13 +6,21 @@ class Breadcrumbs
 {
 	private $links = array();
 
-    public function __construct() 
+    public function __construct($postId=null) 
     {
         $this->bc_get_start_page();
 
-		switch( get_post_type() ) {
+        if ($postId) {
+            $id = $postId;
+        } else {
+            $id = !empty(get_post()) ? get_post()->ID : null;
+        }
+
+        $type = $this->get_breadcrumb_type( $postId );
+
+		switch( $type ) {
 			case 'page':
-				$this->bc_get_pages( get_post()->ID );
+				$this->bc_get_pages( $id );
                 break;
                 
 			case 'category':
@@ -20,18 +28,35 @@ class Breadcrumbs
                 break;
                 
             case 'post':
-				$this->bc_get_single( get_post()->ID, 'category' );
+				$this->bc_get_single( $id, 'category' );
                 break;
 
             case 'silk_products':
-				$this->bc_get_single( get_post()->ID, 'silk_category' );
+				$this->bc_get_single( $id, 'silk_category' );
                 break;
                            
 			case 'search':
 				$this->bc_get_search_page();
 				break;
         }
-	}
+    }
+    
+    public function get_breadcrumb_type($postId)
+    {
+        if ($postId) {
+            return get_post_type( $postId );
+
+        } if (is_tax() || is_category()) {
+            return 'category';
+
+        } elseif( is_search() ) {
+            return 'search';
+
+        } else {
+            return get_post_type();
+
+        }
+    }
 
     public function bs_set_link( $text, $url ) 
     {

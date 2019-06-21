@@ -22,11 +22,12 @@
 
         <div class="product-header-actionbox row align-items-center">
           <div class="product-breadcrumbs col-lg-6 d-none d-lg-block">
-              <div class="breadcrumb bg-white d-inline-block mb-0">
+            {!! $breadcrumbs !!}
+              {{-- <div class="breadcrumb bg-white d-inline-block mb-0">
                 <a class="breadcrumb-item" href="#">Home</a>
                 <a class="breadcrumb-item" href="#">Level 2</a>
                 <span class="breadcrumb-item active">Level 3</span>
-              </div>
+              </div> --}}
           </div>
           <div class="product-filter-toggle col-lg-6 text-center text-lg-right">
             <div class="h4 d-inline-block mb-0">

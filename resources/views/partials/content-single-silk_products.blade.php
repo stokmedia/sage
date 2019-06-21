@@ -65,11 +65,12 @@
 
                 {{-- Breadcrumbs --}}
                 <div class="container-fluid">
-                    <div class="breadcrumb bg-white d-lg-inline-block d-none mb-0 ">
+                    {!! $breadcrumbs !!}
+                    {{-- <div class="breadcrumb bg-white d-lg-inline-block d-none mb-0 ">
                         <a class="breadcrumb-item" href="#">Home</a>
                         <a class="breadcrumb-item" href="#">Level 2</a>
                         <span class="breadcrumb-item active">Level 3</span>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 

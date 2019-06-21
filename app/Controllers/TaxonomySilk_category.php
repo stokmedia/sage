@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 use App\Classes\Product;
+use App\Classes\Breadcrumbs;
 
 class TaxonomySilk_category extends Controller
 {
@@ -16,6 +17,18 @@ class TaxonomySilk_category extends Controller
     {
         return get_post()->post_title;
     }
+
+	public function breadcrumbs()
+	{
+        $breadcrumbs = new Breadcrumbs();
+
+        return $breadcrumbs->render_breadcumbs( [
+            'container_tag'     => 'div',
+            'container_class'   => 'breadcrumb bg-white d-lg-inline-block d-none mb-0 ',
+            'template'          => '<a class="breadcrumb-item" href="{link}">{title}</a>',
+            'template_active'   => '<span class="breadcrumb-item active">{title}</span>',
+		]);
+	}    
 
     public function showLoadMoreButton()
     {

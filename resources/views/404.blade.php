@@ -30,5 +30,11 @@
   @include('sections.section-instagram-grid')
   @include('sections.section-newsletter')
 --}}
+  @if ($breadcrumbs)
+    <section class="section breadcrumb-vertical no-mb">
+      {!! $breadcrumbs !!}
+    </section>
+  @endif
+
   @include('partials.sections')
 @endsection 
