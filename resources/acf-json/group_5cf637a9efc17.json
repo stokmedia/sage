@@ -19,63 +19,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_5cfa339cba6d1",
-            "label": "View all",
-            "name": "translate_view_all",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d037a8012f81",
-            "label": "Follow us",
-            "name": "translate_follow_us",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5d078896751b7",
-            "label": "Close",
-            "name": "translate_close",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5d0c6dbf00b13",
             "label": "General",
             "name": "translate_general",
@@ -905,5 +848,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561095683
+    "modified": 1561098620
 }

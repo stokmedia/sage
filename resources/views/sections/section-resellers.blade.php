@@ -59,8 +59,8 @@
                                 </div>
                             </div>                        
                         @endforeach
-
-                        @if ( $ctr > $section->count && $section->view_all_btn )
+                        
+                        @if ( $section->count && $ctr > $section->count && $section->view_all_btn )
                             <button type="button" class="btn btn-sm btn-primary js-more d-md-none">{!! $section->view_all_btn !!}</button>
                         @endif
 
