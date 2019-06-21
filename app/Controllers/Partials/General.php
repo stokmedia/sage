@@ -6,10 +6,10 @@ use App\Classes\Helper;
 
 trait General
 {
-    public static function siteTranslate( $fieldName )
-    {
-        return get_field( $fieldName, Helper::current_lang() );
-    }
+    // public static function siteTranslate( $fieldName )
+    // {
+    //     return get_field( $fieldName, Helper::current_lang() );
+    // }
     
     public static function renderTitle( $title, $class='', $isH1=false )
     {
@@ -64,7 +64,7 @@ trait General
     public static function getSiteTranslations()
     {
         return (object) [
-            'general' => null,
+            'general' => get_field( 'translate_general', Helper::current_lang() ),
             'selected_product' => get_field( 'translate_selected_product', Helper::current_lang() ),
         ];
     }    

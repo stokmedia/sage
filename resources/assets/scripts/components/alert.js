@@ -33,10 +33,10 @@ var Alert = {};
 
         target.attr( 'class', alertClass );
         image.attr( 'src', imageSource );
-        text.text( message );
+        text.html( message );
         button.text( buttonText );
         button.attr( 'class', buttonClass );
-        target.show();
+        target.slideDown( 'slow' );
     };
 
     $( function () {
@@ -45,12 +45,12 @@ var Alert = {};
         }
 
         button.click( function () {
-
-
-            target.hide();
+            target.slideUp( 'slow' );
         } );
     } )
 
 })( jQuery );
 
-window.Alert = Alert;
+// window.Alert = Alert;
+
+module.exports = Alert;

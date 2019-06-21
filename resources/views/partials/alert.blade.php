@@ -10,6 +10,6 @@
         </div>
         <button id="js-alert-button" data-class-default="btn btn-sm btn-primary text-body"
                 data-class-special="btn btn-sm btn-primary bg-white text-body"
-                type="button" data-text="{{ App::siteTranslate( 'translate_close' ) }}"></button>
+                type="button" data-text="{{ $site_translate->general['close'] ?? '' }}"></button>
     </div>
 </div>

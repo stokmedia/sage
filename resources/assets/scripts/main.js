@@ -32,7 +32,6 @@ require('./components/resellers');
 require('./components/video');
 require('./components/instagram');
 require('./components/newsletter');
-require('./components/alert');
 require('./components/category');
 require('./components/cart');
 
