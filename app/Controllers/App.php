@@ -142,6 +142,11 @@ class App extends Controller
         ]);
     }
 
+    public function selection()
+    {
+        return \EscGeneral::getSelection();
+    }
+
     /*
         // TODO: Could we use a general function to generate the image tag in the templates for Centra Product Images
         public function renderProductImage( $imageData, $size ) {

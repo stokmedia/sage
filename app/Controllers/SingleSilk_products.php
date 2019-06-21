@@ -53,25 +53,35 @@ class SingleSilk_products extends Controller
 	{	
 		$product = self::get_product();
 		$translations = $this->productTranslations();
-
+		$buttonAttr = [];
+		
+		// Soldout product
 		if ($product->is_sold_out) {
-			$buttonText = !empty($translations['product_states']['out_of_stock']) ? $translations['product_states']['out_of_stock'] : '';
-			$buttonAttr = 'disabled';
+			$buttonText = !empty($translations['product_states']['out_of_stock']) ? $translations['product_states']['out_of_stock'] : 'Out of stock';
+			array_push( $buttonAttr, 'disabled' );
+		
+		// Add to cart
 		} else {
-			$buttonText = !empty($translations['buy_button']) ? $translations['buy_button'] : '';
-			$buttonAttr = '';
+			$buttonText = !empty($translations['buy_button']) ? $translations['buy_button'] : 'Add to cart';
+
 		}
+
+		// Add button text to button attr
+		array_push( $buttonAttr, 'data-text="'. $buttonText .'"' );
+
+		// Error message
+		$errorMessage = !empty($translations['error_message']) ? $translations['error_message'] : 'Select size';
+		array_push( $buttonAttr, 'data-error="'. $errorMessage .'"' );
 
 		return (object) [
 			'text' => $buttonText,
-			'attr' => $buttonAttr
+			'attr' => implode( ' ', $buttonAttr )
 		];
 	}
 
 	public function productInformation()
 	{
 		$product = $this->productClass();
-		$siteTranslations = App::getSiteTranslations();
 		$labels = $this->productTranslations();
 		$infos = [];
 

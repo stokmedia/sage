@@ -58,8 +58,8 @@
         </div>
 
         @if (!empty($addtocart_button->text))
-            <button type="submit" class="btn btn-lg btn-primary text-uppercase" {{ $addtocart_button->attr ?? null }}>
-                {{ $addtocart_button->text ?? null }}
+            <button type="submit" class="btn btn-lg btn-primary text-uppercase" {!! $addtocart_button->attr ?? null !!}>
+                <span class="js-button-text">{{ $addtocart_button->text ?? null }}</span>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <!-- Loading spinner, just add '.is-loading' class to '.btn' -->
             </button>
         @endif

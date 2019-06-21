@@ -256,6 +256,25 @@
                             "maxlength": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_5d0ccd1e3cbf8",
+                    "label": "Add to cart error message",
+                    "name": "error_message",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -848,5 +867,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561098620
+    "modified": 1561120053
 }
