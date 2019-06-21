@@ -18,10 +18,15 @@
 	]
 )
 
+@php ($productClass = '')
+@if (!empty($product->display_price->is_sale))
+	@php ($productClass = 'is-sale')
+@endif
+
 @if (!empty($isSlider))
 	<div class="grid-slider-item">
 		<a href="{{ get_the_permalink( $post ) }}" class="grid-item">
-			<div class="product is-small p-0">
+			<div class="product is-small p-0 {{ $productClass }}">
 				<div class="product-wrapper bg-white d-block">
 				<figure class="product-image">
 					@include('partials.product-images', $itemParam )
@@ -36,7 +41,9 @@
 	</div>
 
 @else
-	<div class="product {{ $imageSize ?? 'is-small' }}">
+	@php ($productClass .= $imageSize ?? 'is-small')
+
+	<div class="product {{ $productClass }}">
 		<a href="{{ get_the_permalink( $post ) }}" class="product-wrapper bg-white d-block">
 			<figure class="product-image">
 				@include('partials.product-images', $itemParam)

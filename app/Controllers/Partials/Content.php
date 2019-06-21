@@ -269,7 +269,7 @@ trait Content
         $instagramLinkIndex = array_search( 'instagram', array_column( self::getSocialLinks(), 'media' ) );
         if ( $instagramLinkIndex ) {
             $instagramLink = [
-                'title' => get_field( 'translate_follow_us', Helper::current_lang() ),
+                'title' => self::getSiteTranslations()->general['follow_us'] ?? '',
                 'url' => self::getSocialLinks()[ $instagramLinkIndex ][ 'url' ],
                 'target' => '_blank'
             ];
@@ -442,7 +442,7 @@ trait Content
 
     public static function cms_resellers( $data )
     {
-        $newData = (object)$data;
+        $newData = (object) $data;
 
         // Get reseller lists
         $resellers = self::getResellerLists();
@@ -477,7 +477,7 @@ trait Content
             'preamble' => $newData->preamble,
             'items' => $newData->content,
             'count' => $newData->count,
-            'view_all_btn' => get_field( 'translate_view_all', Helper::current_lang() )
+            'view_all_btn' => self::getSiteTranslations()->general['view_all'] ?? ''
         ];
     }
 
