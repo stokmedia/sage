@@ -1,7 +1,3 @@
-@php 
-$selection = EscGeneral::getSelection();  
-pr($selection);
-@endphp
 <section class="section checkout-container d-md-flex no-mb">
   <div class="checkout-col align-self-stretch has-bg">
     <div class="product-shipping">
