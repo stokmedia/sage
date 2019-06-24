@@ -18,6 +18,13 @@ class TaxonomySilk_category extends Controller
     {
         return get_post()->post_title;
     }
+    
+    public function translation()
+    {
+        $lang = Helper::current_lang();
+        $productListing = get_field( 'translate_product_listing', $lang );
+        return (object) $productListing;
+    }
 
     public function content()
     {
@@ -90,10 +97,10 @@ class TaxonomySilk_category extends Controller
         return get_queried_object()->slug;
     }
 
-    // public function currentCategoryUrl()
-    // {
-    //     return get_term_link(get_queried_object()->term_id);
-    // }
+    public function currentCategoryUrl()
+    {
+        return get_term_link(get_queried_object()->term_id);
+    }
 
     public function filterData()
     {

@@ -31,14 +31,14 @@
             <div class="h4 d-inline-block mb-0">
               <div class="js-filter-toggle">
                   <div class="filter-open js-filter-open">
-                      Filtrera & Sortera
+                      {{ $translation->filter_and_sort_title }}
                       <button class="btn btn-lg btn-icon btn-icon-lg btn-default" type="button">
                         <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                       </button>
                   </div>
                   <div class="filter-close">
-                      <a class="btn-clear" href="#" role="button">Rensa Alla</a>
-                      <button class="btn btn-primary text-uppercase" type="submit">Uppdatera</button>
+                      <a class="btn-clear" href="{{ $current_category_url }}" role="button">{{ $translation->clear_button }}</a>
+                      <button class="btn btn-primary text-uppercase" type="submit">{{ $translation->update_button }}</button>
                       <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
                         <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
                       </button>
@@ -53,7 +53,7 @@
             <div class="button-container d-block d-lg-none">
               <div class="row text-center d-block d-lg-flex">
                 <div class="column">
-                    <button class="btn btn-primary text-uppercase" type="submit">Uppdatera</button>
+                    <button class="btn btn-primary text-uppercase" type="submit">{{ $translation->update_button }}</button>
                     <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
                       <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
                     </button>
@@ -64,7 +64,7 @@
             <div class="filter-container">
               <div class="row ">
                   <div class="column">
-                    <div class="h4 title js-accordion-toggle is-open">Size</div>
+                    <div class="h4 title js-accordion-toggle is-open">{{ $translation->size }}</div>
                     <div class="js-accordion-body">
                       <ul class="size-selector">
                         @foreach ($product_size as $size)
@@ -86,7 +86,7 @@
                     </div>
                   </div>
                   <div class="column">
-                    <div class="h4 title js-accordion-toggle">Color</div>
+                    <div class="h4 title js-accordion-toggle">{{ $translation->color }}</div>
                     <div class="js-accordion-body">
                       <ul class="color-selector">
                         @foreach ($product_color as $color)
@@ -107,7 +107,7 @@
                     </div>
                   </div>
                   <div class="column">
-                    <div class="h4 title js-accordion-toggle">Kategori</div>
+                    <div class="h4 title js-accordion-toggle">{{ $translation->category }}</div>
                     <div class="js-accordion-body">
                       <ul class="category-selector">
                         @foreach ($category_list as $category)
@@ -134,29 +134,29 @@
             <div class="sort-container">
               <div class="row">
                   <div class="column">
-                    <div class="h4 title d-block d-lg-inline-block js-accordion-toggle">Sort list by</div>
+                    <div class="h4 title d-block d-lg-inline-block js-accordion-toggle">{{ $translation->sort['sort_title'] }}</div>
                     <div class="js-accordion-body d-block d-lg-inline-block">
                         <div class="sort-selector text-center text-sm-left">
                             <div class="btn-group btn-group-toggle d-inline-block d-sm-inline-flex" data-toggle="buttons">
                               <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_asc') ? 'active' : '' }}">
                                 <input id="option1" value="title_asc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_asc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
-                                A-Ö
+                                {{ $translation->sort['title_asc'] }}
                               </label>
                               <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_desc') ? 'active' : '' }}">
                                 <input id="option2" value="title_desc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_desc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
-                                Ö-A
+                                {{ $translation->sort['title_desc'] }}
                               </label>
                               <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='pop_asc') ? 'active' : '' }}">
                                 <input id="option3" value="pop_asc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='pop_asc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
-                                Populäritet
+                                {{ $translation->sort['popular'] }}
                               </label>
                               <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_desc') ? 'active' : '' }}">
                                 <input id="option4" value="price_desc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_desc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
-                                Price (High to Low)
+                                {{ $translation->sort['price_low_to_high'] }}
                               </label>
                               <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_asc') ? 'active' : '' }}">
                                 <input id="option5" value="price_asc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_asc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
-                                Price (Low to High)
+                                {{ $translation->sort['price_high_to_low'] }}
                               </label>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
     @if($show_load_more_button)
       <div class="spinner text-center position-relative">
         <div class="spinner-btn">
-        <button class="btn btn-lg btn-primary silk-loadmore" data-currentpage="1" data-currentcategory="{{ $current_category }}" type="button">Load More...</button>
+        <button class="btn btn-lg btn-primary silk-loadmore" data-currentpage="1" data-currentcategory="{{ $current_category }}" type="button">{{ $translation->load_more }}</button>
         </div>
         <div class="spinner-border silk-spinner d-none" role="status">
           <span class="sr-only">Loading...</span>
