@@ -70,6 +70,16 @@
       padding-bottom: 1.25rem;
       border-top: 1px solid $white;
     }
+
+    /* TODO: To whom it may concern please review <<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+    .item .image {
+      padding: 0;
+    }
+
+    .item .product-details-inline figure {
+      @include aspect-ratio(1330, 1995);
+    }
+    /* END TODO <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
   }
 
   .summary-group {

@@ -27,7 +27,7 @@
     $priceLabel = !empty($translations['price']) ? $translations['price'].' - ' : '';
     ?>
 
-    <div class="product-details-inline {{$classname}}">
+    <div class="product-details-inline <?php echo !empty($classname) ? $classname : '' ?>">
         <a href="<?php echo get_permalink( $postID ) ?>" class="image-wrap">
             <div class="image">
                 <figure>

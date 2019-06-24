@@ -34,8 +34,7 @@
                             $recentlyAdded = $item;
                         }
 
-                        $has_qty = false;
-                        $has_remove = true;
+                        $has_qty = $has_remove = true;
                         ?>
                         <li class="item">
                             <?php include( locate_template( 'parts/shop/selection-item.php' ) ) ?>
@@ -82,8 +81,7 @@
                 <ul class="cart-items p-0">
                     <li class="item">
                         <?php 
-                        $has_remove = false;
-                        $has_qty = false;
+                        $has_qty = $has_remove = false;
                         include( locate_template( 'parts/shop/selection-item.php' ) );
                         ?>
                     </li>
