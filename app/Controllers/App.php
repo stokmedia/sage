@@ -147,6 +147,14 @@ class App extends Controller
         return \EscGeneral::getSelection();
     }
 
+    public function scripts()
+    {
+        return (object) [
+            'header_script' => get_field( 'header_scripts', 'global'),
+            'footer_script' => get_field( 'footer_scripts', 'global'),
+        ];
+    }
+
     /*
         // TODO: Could we use a general function to generate the image tag in the templates for Centra Product Images
         public function renderProductImage( $imageData, $size ) {

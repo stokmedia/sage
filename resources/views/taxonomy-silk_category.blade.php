@@ -210,9 +210,11 @@
     @endif
   </section>
 
-  @include('sections.section-text-header')
+  @include('partials.sections')
 
-  @include('sections.section-popular-products')
+  {{-- @include('sections.section-text-header') --}}
+
+  {{-- @include('sections.section-popular-products') --}}
 @endsection
 
 {{-- @debug --}}

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use Sober\Controller\Controller;
 use App\Classes\Product;
 use App\Classes\Breadcrumbs;
+use App\Classes\Helper;
 
 class TaxonomySilk_category extends Controller
 {
@@ -17,6 +18,22 @@ class TaxonomySilk_category extends Controller
     {
         return get_post()->post_title;
     }
+
+    public function content()
+    {
+        $termId = get_queried_object()->term_id;
+        $categorySettings = get_field( 'settings_category_pages', Helper::current_lang() );
+
+        // Get category sections in sitewide
+        if ($termId && !empty($categorySettings)) {
+            $searchIndex = array_search( $termId, array_column( $categorySettings, 'category') );
+            if( $searchIndex !== false ) {
+                $postID = $categorySettings[ $searchIndex ]['page_content'];
+            }
+        }    
+
+        return !empty($postID) ? App::get_content( $postID, 1 ) : false;
+	}     
 
 	public function breadcrumbs()
 	{

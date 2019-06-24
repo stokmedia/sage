@@ -131,3 +131,6 @@
 
 @include('partials.cookies')
 @include('partials.newsletter-modal')
+
+{{-- Footer Script from sitewide global --}}
+{!! $scripts->footer_script ?? null !!}

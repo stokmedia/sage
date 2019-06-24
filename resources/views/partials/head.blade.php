@@ -5,3 +5,7 @@
   @php wp_head() @endphp
   <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Roboto:300,400,500,700,900|Source+Serif+Pro:400,600,700&display=swap" rel="stylesheet">
 </head>
+
+
+{{-- Heeader Script from sitewide global --}}
+{!! $scripts->header_script ?? null !!}
