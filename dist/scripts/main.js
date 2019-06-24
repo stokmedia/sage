@@ -2113,7 +2113,7 @@ var Alert = {};
 
 })( jQuery );
 
-// window.Alert = Alert;
+window.Alert = Alert;
 
 module.exports = Alert;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -17938,7 +17938,7 @@ var Cart = {};
             },
             success: function (result) {
 
-                // // Update cart item count
+                // Update cart item count
                 cartItemCount.each( function () {
                     $(this).text(result.totalItems);
                 });
