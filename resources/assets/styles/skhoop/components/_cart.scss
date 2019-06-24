@@ -94,6 +94,14 @@
         position: relative;
         top: -0.25rem;
       }
+
+      .image {
+        padding: 0;
+      }
+
+      .image figure {
+        @include aspect-ratio(1330, 1995);
+      }
     }
   }
 
@@ -133,7 +141,7 @@
 }
 
 .cart-overlay {
-	&:after {
+  &:after {
     @include media-breakpoint-up(lg) {
       content: "";
       position: fixed;
@@ -141,8 +149,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(41,41,41,0.8);
+      background-color: rgba(41, 41, 41, 0.8);
       z-index: $zindex-sticky;
     }
-	}
+  }
 }

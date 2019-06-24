@@ -2113,7 +2113,7 @@ var Alert = {};
 
 })( jQuery );
 
-// window.Alert = Alert;
+window.Alert = Alert;
 
 module.exports = Alert;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -18049,9 +18049,9 @@ var Cart = {};
 (function ($) {
     var cartForm = '.js-selectProductSingle';
     var navCart = '.js-cart-overlay';
-    // var removeItem = '.cart-remove-item';
+    var removeItem = '.js-cart-remove-item';
     var cartItemCount = $('.js-item-count');
-    // var cartItems = $('.cart');
+    var cartItems = $('.js-cart-items');
     // var cartNavButton = $('.navbar-cart-button');
     var buttonText = '.js-button-text';
     var singlePageScope = $('body.single');
@@ -18083,13 +18083,11 @@ var Cart = {};
                     $(this).text(result.totalItems);
                 });
 
-                // cartItems.html(result.basket);
-                // cartNavButton.addClass('has-added-item');
+                cartItems.html(result.basket);
                 Cart.toggleCart( 'open' );
             },
             complete: function () {
                 setTimeout(function () {
-                //     cartNavButton.removeClass('has-added-item');
                     Cart.toggleCart( 'close' );
 
                     if (button && button.length > 0) {
@@ -18185,13 +18183,13 @@ var Cart = {};
             Cart.add($(this));
         });
 
-        // // Remove product
-        // $(document).on('click', removeItem, function (e) {
-        //     e.preventDefault();
-        //     var _this = $(this);
+        // Remove product
+        $(document).on( 'click', removeItem, function (e) {
+            e.preventDefault();
+            var _this = $(this);
 
-        //     Cart.ajaxCall('GET', null, _this.attr('href'), null);
-        // });
+            Cart.ajaxCall( 'GET', null, _this.attr('href'), null );
+        });
 
         // Has size selected
         $(document).on( 'change', 'input[name="esc_product_item"], select[name="esc_product_item"]', function (e) {

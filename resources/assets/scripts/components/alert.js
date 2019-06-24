@@ -51,6 +51,6 @@ var Alert = {};
 
 })( jQuery );
 
-// window.Alert = Alert;
+window.Alert = Alert;
 
 module.exports = Alert;

@@ -125,13 +125,17 @@
       margin-bottom: 0;
     }
 
+    .input-group .input-group-btn {
+      margin-right: 0.625rem;
+    }
+
     .input-group [type="text"] {
       min-width: auto;
       margin-right: 0.625rem;
       border-radius: 9.375rem;
 
       @include media-breakpoint-up(md) {
-        margin-right: 1.875rem;
+        margin-right: 1.25rem;
       }
 
       .msie & {
