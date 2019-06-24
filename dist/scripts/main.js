@@ -17860,7 +17860,7 @@ var Newsletter = {};
 	ajaxUrl = ajaxUrl + '&filters[category][]='+currentCategory;
 	var nextPage = $(this).data('currentpage') + 1;
 	$('.silk-loadmore').data('currentpage', nextPage);
-	// console.log(ajaxUrl + '&page=' + nextPage);
+	console.log(ajaxUrl + '&page=' + nextPage);
 	$.ajax({
 		url: ajaxUrl + '&page=' + nextPage,
 		type: 'GET',
@@ -17938,7 +17938,7 @@ var Cart = {};
             },
             success: function (result) {
 
-                // // Update cart item count
+                // Update cart item count
                 cartItemCount.each( function () {
                     $(this).text(result.totalItems);
                 });
