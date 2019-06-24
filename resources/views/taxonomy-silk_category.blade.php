@@ -37,8 +37,8 @@
                       </button>
                   </div>
                   <div class="filter-close">
-                      <a class="btn-clear" href="{{ $current_category_url }}" role="button">{{ $translation->clear_button }}</a>
-                      <button class="btn btn-primary text-uppercase" type="submit">{{ $translation->update_button }}</button>
+                      <a class="btn-clear silk-hash-clear" href="#" role="button">{{ $translation->clear_button }}</a>
+                      <button class="btn btn-primary text-uppercase js-filter-close" type="button">{{ $translation->update_button }}</button>
                       <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
                         <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
                       </button>
@@ -53,7 +53,7 @@
             <div class="button-container d-block d-lg-none">
               <div class="row text-center d-block d-lg-flex">
                 <div class="column">
-                    <button class="btn btn-primary text-uppercase" type="submit">{{ $translation->update_button }}</button>
+                    <button class="btn btn-primary text-uppercase js-filter-close" type="button">{{ $translation->update_button }}</button>
                     <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
                       <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
                     </button>
@@ -75,7 +75,7 @@
 
                           <li>
                             <div class="custom-control custom-checkbox">
-                            <input name="filters[size][]" {{ $checked }} type="checkbox"  id="sizeCheck{{ $size }}" class="custom-control-input" value="{{ $size }}">
+                            <input name="size" {{ $checked }} type="checkbox"  id="sizeCheck{{ $size }}" class="custom-control-input silk-hash-filter" value="{{ strtolower($size) }}">
                               <label class="custom-control-label" for="sizeCheck{{ $size }}">
                                   <span>{{ $size }}</span>
                               </label>
@@ -97,8 +97,8 @@
 
                         <li>
                           <div class="custom-control custom-checkbox">
-                            <input name="filters[color][]" {{ $checked }} type="checkbox" id="colorCheck{{ $color['Name'] }}" value="{{ $color['Name'] }}" class="custom-control-input">
-                            <label class="custom-control-label" for="colorCheck{{ $color['Name'] }}" 
+                            <input name="color" {{ $checked }} type="checkbox" id="colorCheck{{ $color['slug'] }}" value="{{ $color['slug'] }}" class="custom-control-input silk-hash-filter">
+                            <label class="custom-control-label" for="colorCheck{{ $color['slug'] }}" 
                               style="{{ $color['Image'] ? 'background-image:url('.$color['Image'].')' : 'background-color:'.$color['Hex'] }};"></label>
                           </div>
                         </li>
@@ -119,7 +119,7 @@
                         <li>
                           <div class="custom-control custom-control-lg custom-checkbox">
                             {{-- Add disabled="disabled" to checkbox if needed for proper layout return --}}
-                          <input name="filters[category][]" {{ $checked }} id="customCheck{{ $category->term_id }}" {{ $current_category!=$category->slug ? 'disabled' : 'checked'  }} value="{{ $category->slug }}" class="custom-control-input" type="checkbox">
+                          <input name="category" {{ $checked }} id="customCheck{{ $category->term_id }}" {{ $current_category!=$category->slug ? 'disabled' : 'checked'  }} value="{{ $category->slug }}" class="custom-control-input silk-hash-filter" type="checkbox">
                             <label class="custom-control-label" for="customCheck{{ $category->term_id }}">
                               <span>{{ $category->name }}</span>
                             </label>
@@ -138,24 +138,24 @@
                     <div class="js-accordion-body d-block d-lg-inline-block">
                         <div class="sort-selector text-center text-sm-left">
                             <div class="btn-group btn-group-toggle d-inline-block d-sm-inline-flex" data-toggle="buttons">
-                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_asc') ? 'active' : '' }}">
-                                <input id="option1" value="title_asc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_asc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
+                              <label class="btn btn-outline-primary silk-hash-filter">
+                                <input id="orderby_title_asc" value="title_asc" name="orderby" type="radio">
                                 {{ $translation->sort['title_asc'] }}
                               </label>
-                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_desc') ? 'active' : '' }}">
-                                <input id="option2" value="title_desc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='title_desc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
+                              <label class="btn btn-outline-primary silk-hash-filter">
+                                <input id="orderby_title_desc" value="title_desc" name="orderby" type="radio">
                                 {{ $translation->sort['title_desc'] }}
                               </label>
-                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='pop_asc') ? 'active' : '' }}">
-                                <input id="option3" value="pop_asc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='pop_asc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
+                              <label class="btn btn-outline-primary silk-hash-filter">
+                                <input id="orderby_pop_asc" value="pop_asc" name="orderby" type="radio">
                                 {{ $translation->sort['popular'] }}
                               </label>
-                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_desc') ? 'active' : '' }}">
-                                <input id="option4" value="price_desc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_desc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
+                              <label class="btn btn-outline-primary silk-hash-filter">
+                                <input id="orderby_price_desc" value="price_desc" name="orderby" type="radio">
                                 {{ $translation->sort['price_low_to_high'] }}
                               </label>
-                              <label class="btn btn-outline-primary {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_asc') ? 'active' : '' }}">
-                                <input id="option5" value="price_asc" {{ (isset($filter_data['orderby']) && $filter_data['orderby']=='price_asc') ? 'checked=checked' : '' }} name="filters[orderby]" type="radio">
+                              <label class="btn btn-outline-primary silk-hash-filter">
+                                <input id="orderby_price_asc" value="price_asc" name="orderby" type="radio">
                                 {{ $translation->sort['price_high_to_low'] }}
                               </label>
                             </div>
@@ -180,7 +180,7 @@
     <div class="container p-0">
       <div class="bg-image m-auto rounded-circle" style="background-image:url( {{ $background_image->image }} );"></div>
       <div class="products d-flex flex-wrap justify-content-center silk-product-item-holder">
-          @php $count = 1 @endphp
+          {{-- @php $count = 1 @endphp
           @while (have_posts()) @php(the_post())
 
             @if($count <= 3)
@@ -194,7 +194,7 @@
             )
 
             @php($count++)
-          @endwhile
+          @endwhile --}}
     </div>
     @if($show_load_more_button)
       <div class="spinner text-center position-relative">

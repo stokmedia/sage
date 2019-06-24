@@ -122,6 +122,7 @@ class TaxonomySilk_category extends Controller
         $colors = get_option('product_colors');
         if (is_array($colors)) {
             foreach ($colors as $key => $val) {
+                $val['slug'] = str_replace(' ', '-', strtolower($val['Name']));
                 if (!empty($val['Hex'])) {
                     $arrColors[$key] = $val;
                 } else {

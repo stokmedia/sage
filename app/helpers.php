@@ -147,40 +147,40 @@ function silk_product_filter() {
     $market = $_SESSION['esc_store']['market'];
     $priceList = $_SESSION['esc_store']['pricelist'];
 
-    // pr( $_GET );
-    if (isset($_GET['filters']) && is_array($_GET['filters'])) {
-        $filters = $_GET['filters'];
-        $meta = array();
+    // pr( $_GET );die;
+    $meta = array();
 
-        // Set Filter for Size
-        if (isset($filters['size']) && is_array($filters['size'])) {
-            foreach ($filters['size'] as $key => $val) {
-                $meta[] = array(
-                    'key' => 'in_stock_' . $market . '_' . strtolower($val),
-                    'value' => 1,
-                    'compare' => '='
-                );
-            }
-        }
-
-        // Set Filter for Color
-        if (isset($filters['color']) && is_array($filters['color'])) {
+    // Set Filter for Size
+    if (isset($_GET['size']) && !empty($_GET['size'])) {
+        $sizes = explode(',', $_GET['size']);
+        foreach ($sizes as $val) {
             $meta[] = array(
-                'key' => 'product_color',
-                'value' => implode(',', $filters['color']),
-                'compare' => 'IN'
+                'key' => 'in_stock_' . $market . '_' . strtolower($val),
+                'value' => 1,
+                'compare' => '='
             );
         }
+    }
 
-        // Set Filter for Category
-        if (isset($filters['category']) && is_array($filters['category'])) {
-            $meta[] = array(
-                'key' => 'canonical_category',
-                'value' => implode(',', $filters['category']),
-                'compare' => 'IN'
-            );
-        }
+    // Set Filter for Color
+    if (isset($_GET['color']) && !empty($_GET['color'])) {
+        $meta[] = array(
+            'key' => 'product_color',
+            'value' => $_GET['color'],
+            'compare' => 'IN'
+        );
+    }
 
+    // Set Filter for Category
+    if (isset($_GET['category']) && !empty($_GET['category'])) {
+        $meta[] = array(
+            'key' => 'canonical_category',
+            'value' => $_GET['category'],
+            'compare' => 'IN'
+        );
+    }
+
+    if (sizeof($meta) > 0) {
         return $meta;
     }
 
@@ -198,9 +198,8 @@ function silk_product_filter() {
     $priceList = $_SESSION['esc_store']['pricelist'];
 
     // Sort Products by Price, Title or ID
-    if (isset($_GET['filters']) && is_array($_GET['filters'])
-        && isset($_GET['filters']['orderby']) && !empty($_GET['filters']['orderby'])) {
-        switch ( $_GET['filters']['orderby'] ) {
+    if (isset($_GET['orderBy']) && !empty($_GET['orderBy'])) {
+        switch ( $_GET['orderBy'] ) {
             case 'price_desc':
                 $orderby['meta_key'] = 'price_' . $market . '_' . $priceList;
                 $orderby['orderby'] = 'meta_value';
