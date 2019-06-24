@@ -135,13 +135,14 @@ class TaxonomySilk_category extends Controller
 
     public function categoryList()
     {
-        $attributes = array(
-            'taxonomy' => 'silk_category',
-            'orderby' => 'name',
-            'order' => 'asc'
-        );
-        // return pr( get_terms($attributes) );
-        return get_terms($attributes);
+        $termList = array();
+        $term = get_queried_object();
+        $term_children = get_term_children($term->term_id, 'silk_category');
+        foreach ( $term_children as $key => $child ) {
+            $term = get_term_by( 'id', $child, 'silk_category' );
+            $termList[$key] = $term;
+        }
+        return $termList;
     }
 
     public function heroBanner()
