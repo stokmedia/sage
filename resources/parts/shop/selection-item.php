@@ -43,11 +43,17 @@
             <div class="category"><?php echo $catLabel.$category ?></div>
             <div class="color"><?php echo $colorLabel.$product->product_meta->variantName ?></div>
             <div class="size"><?php echo $sizeLabel.$item['size']; ?></div>
+
+            <?php if (!empty($has_qty)) : ?>
             <div class="qty"><?php echo $qtyLabel.$item['quantity']; ?></div>
+            <?php endif ?>
+
             <div class="price <?php echo $priceClass ?>"><?php echo $priceLabel.$price?></div>
         </div>
 
-        <div class="close-pos">
-            <a href="<?php echo EscGeneral::getQueryRemoveProduct( $item ); ?>" class="close-btn js-cart-remove-item"></a>
-        </div>
+        <?php if (!empty($has_remove)) : ?>
+            <div class="close-pos">
+                <a href="<?php echo EscGeneral::getQueryRemoveProduct( $item ); ?>" class="close-btn js-cart-remove-item"></a>
+            </div>
+        <?php endif ?>
     </div>

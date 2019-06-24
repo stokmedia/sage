@@ -9,10 +9,6 @@
     $recentlyAdded = [];
 
     // Translations
-    $totalLabel = !empty($translations['total_price']) ? $translations['total_price'] : '';
-    $vatLabel = !empty($translations['vat']) ? $translations['vat'] : '';
-    $shippingLabel = !empty($translations['shipping']) ? $translations['shipping'] : '';
-    $subTotalLabel = !empty($translations['sub_total']) ? $translations['sub_total'] : '';
     $itemAdded = !empty($translations['item_added']) ? $translations['item_added'] : '';
     $noItem = !empty($translations['no_item_added']) ? $translations['no_item_added'] : '';
     $goToCheckout = !empty($translations['go_to_checkout']) ? $translations['go_to_checkout'] : '';
@@ -38,8 +34,8 @@
                             $recentlyAdded = $item;
                         }
 
-                        $is_link = true;
-                        $has_close = true;
+                        $has_qty = false;
+                        $has_remove = true;
                         ?>
                         <li class="item">
                             <?php include( locate_template( 'parts/shop/selection-item.php' ) ) ?>
@@ -50,29 +46,12 @@
             </div>
             <div class="cart-summary">
                 <div class="summary">
-                    <div class="summary-group">
-                        <div class="summary-item d-flex">
-                            <div class="title w-50"><?php echo $totalLabel ?></div>
-                            <div class="price w-50 text-right"><?php echo $selection['totals']['itemsTotalPrice']; ?></div>
-                        </div>
-
-                        <?php if ($selection['totals']['taxDeductedAsNumber']) : ?>
-                            <div class="summary-item d-flex">
-                                <div class="title w-50"><?php echo $vatLabel ?></div>
-                                <div class="price w-50 text-right"><?php echo $selection['totals']['taxDeducted']; ?></div>
-                            </div>
-                        <?php endif ;?>
-
-                        <div class="summary-item d-flex">
-                            <div class="title w-50"><?php echo $shippingLabel ?></div>
-                            <div class="price w-50 text-right"><?php echo $selection['totals']['shippingPrice']; ?></div>
-                        </div>
-
-                        <div class="summary-item d-flex">
-                            <div class="title w-50"><?php echo $subTotalLabel ?></div>
-                            <div class="price w-50 text-right"><strong><?php echo $selection['totals']['grandTotalPrice']; ?></strong></div>
-                        </div>
-                    </div>
+                    <?php 
+                    $rowClass = 'd-flex';
+                    $labelClass = 'w-50';
+                    $valueClass = 'w-50 text-right';
+                    include( locate_template( 'parts/shop/totals-selection.php' ) );
+                    ?>
                 </div>
             </div>
 
@@ -102,7 +81,11 @@
             <div class="cart-list">
                 <ul class="cart-items p-0">
                     <li class="item">
-                        <?php include( locate_template( 'parts/shop/selection-item.php' ) )?>
+                        <?php 
+                        $has_remove = false;
+                        $has_qty = false;
+                        include( locate_template( 'parts/shop/selection-item.php' ) );
+                        ?>
                     </li>
                 </ul>
             </div>
