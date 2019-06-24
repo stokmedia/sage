@@ -5,7 +5,6 @@
 @extends('layouts.app')
 
 @section('content')
-  @php(include(locate_template('parts/shop/checkout-selection.php')))
-
-  @include('partials.trust')
+    @include( 'sections.section-checkout' )
+    @include( 'partials.sections' )
 @endsection
