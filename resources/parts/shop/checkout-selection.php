@@ -45,7 +45,10 @@
                             
                         </div>
                         <div class="close-pos">
+                          <a data-href="<?php echo EscGeneral::getQueryRemoveProduct( $item, 'remove' ); ?>" class="cart-remove-item edit-product">
                             <button class="close-btn"></button>
+                            <span class="visually-hidden"><?php #echo $translation['remove_item']; ?></span>
+                          </a>
                         </div>
                     </div>
                 </li>
