@@ -2,6 +2,7 @@
 namespace App\Classes;
 
 include_once( \Esc::directory() . '/modules/product.php' );
+include_once( \Esc::directory() . '/modules/general.php' );
 
 class Product extends \EscProduct
 {

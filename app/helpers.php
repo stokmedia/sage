@@ -142,6 +142,8 @@ function display_sidebar()
  * @return array
  */
 function silk_product_filter() {
+    if( is_admin() ) return;
+    
     $market = $_SESSION['esc_store']['market'];
     $priceList = $_SESSION['esc_store']['pricelist'];
 
@@ -190,6 +192,8 @@ function silk_product_filter() {
  * @return array
  */
  function silk_product_orderby() {
+    if( is_admin() ) return;
+
     $market = $_SESSION['esc_store']['market'];
     $priceList = $_SESSION['esc_store']['pricelist'];
 
