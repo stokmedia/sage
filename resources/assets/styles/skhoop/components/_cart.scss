@@ -99,9 +99,11 @@
         padding: 0;
       }
 
+      /* TODO: To whom it may concern please review <<<<<<<<<<<<<<<<<<<<<<<<<<<< */
       .image figure {
         @include aspect-ratio(1330, 1995);
       }
+      /* END TODO <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
     }
   }
 

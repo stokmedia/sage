@@ -18465,6 +18465,13 @@ blockquote footer::before,
   border-top: 0.0625rem solid #fff;
 }
 
+/* line 92, resources/assets/styles/skhoop/components/_cart.scss */
+
+.cart-items .product-details-inline {
+  /* TODO: To whom it may concern please review <<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+  /* END TODO <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+}
+
 /* line 93, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-items .product-details-inline .info {
@@ -18478,7 +18485,7 @@ blockquote footer::before,
   padding: 0;
 }
 
-/* line 102, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 103, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-items .product-details-inline .image figure {
   position: relative;
@@ -18537,26 +18544,26 @@ blockquote footer::before,
   min-width: 200%;
 }
 
-/* line 108, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 110, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-summary {
   padding: 0.9375rem 0.625rem 0.3125rem;
 }
 
-/* line 111, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 113, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-summary .summary {
   line-height: 1.25rem;
 }
 
-/* line 114, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 116, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-summary .summary-group {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 119, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 121, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-summary .summary-item {
   padding: 0;
@@ -18567,14 +18574,14 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 119, resources/assets/styles/skhoop/components/_cart.scss */
+  /* line 121, resources/assets/styles/skhoop/components/_cart.scss */
 
   .cart-summary .summary-item {
     line-height: 1.25rem;
   }
 }
 
-/* line 134, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 136, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-buttons .btn,
 .cart-buttons .comment-form input[type="submit"],
@@ -18588,7 +18595,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 144, resources/assets/styles/skhoop/components/_cart.scss */
+  /* line 146, resources/assets/styles/skhoop/components/_cart.scss */
 
   .cart-overlay:after {
     content: "";
@@ -22699,6 +22706,8 @@ body.isApple .product-filter {
   padding: 0;
   margin: 0;
   list-style: none;
+  /* TODO: To whom it may concern please review <<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+  /* END TODO <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 }
 
 /* line 68, resources/assets/styles/skhoop/sections/_checkout.scss */
@@ -22711,26 +22720,91 @@ body.isApple .product-filter {
 
 /* line 75, resources/assets/styles/skhoop/sections/_checkout.scss */
 
+.checkout-container .checkout-items .item .image {
+  padding: 0;
+}
+
+/* line 79, resources/assets/styles/skhoop/sections/_checkout.scss */
+
+.checkout-container .checkout-items .item .product-details-inline figure {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.checkout-container .checkout-items .item .product-details-inline figure::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 150%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.checkout-container .checkout-items .item .product-details-inline figure > img,
+.checkout-container .checkout-items .item .product-details-inline figure > video,
+.checkout-container .checkout-items .item .product-details-inline figure > figure,
+.checkout-container .checkout-items .item .product-details-inline figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.checkout-container .checkout-items .item .product-details-inline figure > iframe,
+.checkout-container .checkout-items .item .product-details-inline figure > .ratio-iframe {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+/* line 44, resources/assets/styles/common/_mixins.scss */
+
+.checkout-container .checkout-items .item .product-details-inline figure > iframe {
+  min-height: 200%;
+  min-width: 200%;
+}
+
+/* line 85, resources/assets/styles/skhoop/sections/_checkout.scss */
+
 .checkout-container .summary-group {
   margin-top: 0;
   margin-bottom: 1.25rem;
 }
 
-/* line 80, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 90, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .discount-code {
   padding-bottom: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  /* line 80, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 90, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .discount-code {
     border-bottom: 1px solid #fff;
   }
 }
 
-/* line 87, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 97, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .discount-code .btn,
 .checkout-container .discount-code .comment-form input[type="submit"],
@@ -22742,7 +22816,7 @@ body.isApple .product-filter {
   text-transform: none;
 }
 
-/* line 93, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 103, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .discount-code .form-control,
 .checkout-container .discount-code .comment-form input[type="text"],
@@ -22758,7 +22832,7 @@ body.isApple .product-filter {
   margin-top: 1.25rem;
 }
 
-/* line 98, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 108, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .get-newsletter {
   margin-bottom: 2.625rem;
@@ -22766,7 +22840,7 @@ body.isApple .product-filter {
 }
 
 @media (min-width: 768px) {
-  /* line 98, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 108, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .get-newsletter {
     border-bottom: 1px solid #fff;
@@ -22776,21 +22850,21 @@ body.isApple .product-filter {
   }
 }
 
-/* line 110, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 120, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .appointment-radios {
   margin-top: 1.5625rem;
 }
 
 @media (min-width: 768px) {
-  /* line 110, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 120, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .appointment-radios {
     margin-top: 1.3125rem;
   }
 }
 
-/* line 117, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 127, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .appointment-radios .item {
   padding-top: 0.5rem;
@@ -22799,7 +22873,7 @@ body.isApple .product-filter {
 }
 
 @media (min-width: 768px) {
-  /* line 117, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 127, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .appointment-radios .item {
     padding-top: 0.875rem;
@@ -22808,14 +22882,14 @@ body.isApple .product-filter {
 }
 
 @media (min-width: 768px) {
-  /* line 127, resources/assets/styles/skhoop/sections/_checkout.scss */
+  /* line 137, resources/assets/styles/skhoop/sections/_checkout.scss */
 
   .checkout-container .appointment-radios .item:last-child {
     border-bottom: 1px solid #fff;
   }
 }
 
-/* line 137, resources/assets/styles/skhoop/sections/_checkout.scss */
+/* line 147, resources/assets/styles/skhoop/sections/_checkout.scss */
 
 .checkout-container .custom-radio .custom-control-label span {
   font-weight: 500;
