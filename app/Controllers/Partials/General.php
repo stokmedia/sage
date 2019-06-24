@@ -66,6 +66,8 @@ trait General
         return (object) [
             'general' => get_field( 'translate_general', Helper::current_lang() ),
             'selected_product' => get_field( 'translate_selected_product', Helper::current_lang() ),
+            'product_listing' => get_field( 'translate_product_listing', Helper::current_lang() ),
+            'selections' => get_field( 'translate_selections', Helper::current_lang() ),
         ];
     }    
 
