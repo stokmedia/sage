@@ -47,7 +47,6 @@
 
     @include media-breakpoint-up(lg) {
       padding-left: 15px;
-      padding-right: 15px;
       padding-top: calc(( (25% * 3) - 93px) - (50% - 30px));
 
       @include flex(0 0 calc(100% - 15px ));
@@ -71,6 +70,7 @@
 
     @include media-breakpoint-up(lg) {
       padding-left: 15px;
+      padding-right: 15px;
     }
 
     .btn-header {
