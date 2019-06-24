@@ -18472,26 +18472,91 @@ blockquote footer::before,
   top: -0.25rem;
 }
 
-/* line 100, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 98, resources/assets/styles/skhoop/components/_cart.scss */
+
+.cart-items .product-details-inline .image {
+  padding: 0;
+}
+
+/* line 102, resources/assets/styles/skhoop/components/_cart.scss */
+
+.cart-items .product-details-inline .image figure {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, resources/assets/styles/common/_mixins.scss */
+
+.cart-items .product-details-inline .image figure::before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 150%;
+}
+
+/* line 13, resources/assets/styles/common/_mixins.scss */
+
+.cart-items .product-details-inline .image figure > img,
+.cart-items .product-details-inline .image figure > video,
+.cart-items .product-details-inline .image figure > figure,
+.cart-items .product-details-inline .image figure > .ratio-content {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 30, resources/assets/styles/common/_mixins.scss */
+
+.cart-items .product-details-inline .image figure > iframe,
+.cart-items .product-details-inline .image figure > .ratio-iframe {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  right: -9999px;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+/* line 44, resources/assets/styles/common/_mixins.scss */
+
+.cart-items .product-details-inline .image figure > iframe {
+  min-height: 200%;
+  min-width: 200%;
+}
+
+/* line 108, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-summary {
   padding: 0.9375rem 0.625rem 0.3125rem;
 }
 
-/* line 103, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 111, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-summary .summary {
   line-height: 1.25rem;
 }
 
-/* line 106, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 114, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-summary .summary-group {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 111, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 119, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-summary .summary-item {
   padding: 0;
@@ -18502,14 +18567,14 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 111, resources/assets/styles/skhoop/components/_cart.scss */
+  /* line 119, resources/assets/styles/skhoop/components/_cart.scss */
 
   .cart-summary .summary-item {
     line-height: 1.25rem;
   }
 }
 
-/* line 126, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 134, resources/assets/styles/skhoop/components/_cart.scss */
 
 .cart-buttons .btn,
 .cart-buttons .comment-form input[type="submit"],
@@ -18523,7 +18588,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 136, resources/assets/styles/skhoop/components/_cart.scss */
+  /* line 144, resources/assets/styles/skhoop/components/_cart.scss */
 
   .cart-overlay:after {
     content: "";
