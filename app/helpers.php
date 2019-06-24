@@ -147,7 +147,7 @@ function silk_product_filter() {
     $market = $_SESSION['esc_store']['market'];
     $priceList = $_SESSION['esc_store']['pricelist'];
 
-    // pr( $_GET );die;
+    // pr( $_GET );
     $meta = array();
 
     // Set Filter for Size
@@ -194,6 +194,7 @@ function silk_product_filter() {
  function silk_product_orderby() {
     if( is_admin() ) return;
 
+    $orderby = array();
     $market = $_SESSION['esc_store']['market'];
     $priceList = $_SESSION['esc_store']['pricelist'];
 
@@ -219,7 +220,8 @@ function silk_product_filter() {
                 $orderby['order'] = 'asc';
                 break;
             case 'pop_asc':
-                $orderby['meta_key'] = 'category_order_' . $term;
+                $orderBySlug = explode('--', $_GET['orderBy']);
+                $orderby['meta_key'] = 'category_order_' . $orderBySlug[1];
                 $orderby['orderby'] = 'meta_value';
                 $orderby['order'] = 'asc';
                 break;

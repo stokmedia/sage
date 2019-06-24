@@ -17863,9 +17863,9 @@ $('.silk-loadmore').click(function(){
 });
 
 $('.silk-hash-clear').click(function() {
-	console.log(this);
 	history.pushState('', document.title, window.location.pathname + window.location.search);
 	$('#silkFilterForm').trigger('reset');
+	$('.silk-hash-orderby').parent('label').removeClass('active');
 	silkProductLoad(1);
 });
 
@@ -17906,6 +17906,7 @@ $('.silk-hash-filter').click(function() {
 	});
 
 	// this will be use for Order By
+	$('.silk-hash-orderby').parent('label').removeClass('active');
 	var checkedOrderBy = $(this).children('input[type="radio"]').val();	
 	if(checkedOrderBy != undefined) {	
 		orderBy = checkedOrderBy;
@@ -17914,6 +17915,8 @@ $('.silk-hash-filter').click(function() {
 	var filterUrl = '';	
 	if(categoryList != '') {
 		filterUrl += 'category='+categoryList;
+	} else {
+		filterUrl += 'category='+$('.silk-loadmore').data('currentcategory');
 	}
 	if(colorList != '') {
 		if(filterUrl != '') {
@@ -17955,7 +17958,7 @@ function silkProductLoad(nextPage, isFilter) {
 		ajaxUrl = ajaxUrl + '&category=' + currentCategory;
 	}
 
-	// console.log(ajaxUrl + '&page=' + nextPage);
+	console.log(ajaxUrl + '&page=' + nextPage);
 	$.ajax({
 		url: ajaxUrl + '&page=' + nextPage,
 		type: 'GET',
@@ -17989,7 +17992,7 @@ function silkProductLoad(nextPage, isFilter) {
 				});
 
 				var totalPage  = parseInt( jqXHR.getResponseHeader('X-WP-TotalPages'), 10 );
-				if ( $('.silk-loadmore').data('currentpage') == totalPage )
+				if ( $('.silk-loadmore').data('currentpage') == totalPage || data.length==0 )
 					{ $('.silk-loadmore').hide(); } // if last page, remove the button
 			} else {
 				$('.silk-loadmore').hide(); // if no data, remove the button as well
