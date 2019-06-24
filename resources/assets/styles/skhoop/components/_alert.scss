@@ -1,6 +1,7 @@
 .alert {
   padding: 1.25rem;
   border-radius: 0;
+  border: none;
 
   @include media-breakpoint-up(sm) {
     padding: 0.5625rem 1.25rem;
