@@ -146,7 +146,7 @@
                                 {{ $translation->sort['title_desc'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
-                              <input id="orderby_pop_asc" value="pop_asc--{{ $current_category }}" name="orderby" type="radio" class="silk-hash-orderby">
+                              <input id="orderby_pop_asc--{{ $current_category }}" value="pop_asc--{{ $current_category }}" name="orderby" type="radio" class="silk-hash-orderby">
                                 {{ $translation->sort['popular'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
