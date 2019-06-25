@@ -74,7 +74,7 @@
 
 {!! TemplateCheckout::startSelectionForm() !!}
 
-    <section class="section checkout-container d-md-flex no-mb">
+    <section id="js-checkout-content" class="section checkout-container d-md-flex no-mb">
         <div class="checkout-col align-self-stretch has-bg">
             <div class="product-shipping">
                 <h3 class="h3">1. Dina varor</h2>
@@ -90,9 +90,9 @@
                 </div>
                 
                 <div class="discount-code">
-                    <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#discountCollapse" aria-expanded="false" aria-controls="discountCollapse">+ Lägg till rabattkod</button>
-                    <div class="collapse" id="discountCollapse">
-                    <input type="text" class="form-control form-control-md" placeholder="discount code">
+                    <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#js-voucher-field" aria-expanded="false" aria-controls="js-voucher-field">+ Lägg till rabattkod</button>
+                    <div class="collapse" id="js-voucher-field">
+                      @php (include( locate_template( 'parts/shop/voucher.php' ) ))
                     </div>
                 </div>
 
@@ -102,10 +102,9 @@
                 </div>
 
                 <h3 class="h3">2. Betslsätt och fraktalternativ i din region</h2>
-
-                <div id="js-selectedShippingMethod" class="appointment-radios">
-                    @php (include( locate_template( 'parts/shop/shipping-options.php' ) ))
-                </div>
+                <div id="js-selectedPaymentMethod" class="appointment-radios">
+                    @php (include( locate_template( 'parts/shop/payment-options.php' ) ))
+                </div>              
             </div>
         </div>
 

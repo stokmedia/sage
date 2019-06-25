@@ -18214,22 +18214,21 @@ var Cart = {};
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(jQuery) {var Checkout = {};
+/* WEBPACK VAR INJECTION */(function(jQuery) {(function($) {
+    var Checkout = {};
 
-(function($) {
-
-    var editProduct = '.edit-product';
-    var cartContainer = $( '#js-selectedItems' );
-    var selectedItemsContainer = $( '#js-selectedItems--selection' );
-    var selectedTotalsContainer = $( '#js-selectedTotals' );
-    var voucherContainer = $('#js-voucher-field');
-    var paymentMethodContainer = $( '#js-selectedPaymentMethod' );
-    var newsletterContainer = $( '#js-selectedNewsletter' );
-    var giftContainer = $( '#js-selectedGiftwrap' );
-    var paymentFieldsContainer = $( '#js-paymentFields' );
-    var commentContainer = $('#js-selectedComment');
-    var shippingMethodContainer = $( '#js-selectedShippingMethod' );
-    var scope = $( 'body.page-template-template-checkout-php' );
+    var editProduct = '.js-edit-item';
+    var cartContainer = $(document).find( '#js-selectedItems' );
+    var selectedItemsContainer = $(document).find( '#js-selectedItems--selection' );
+    var selectedTotalsContainer = $(document).find( '#js-selectedTotals' );
+    var voucherContainer = $(document).find('#js-voucher-field');
+    var paymentMethodContainer = $(document).find( '#js-selectedPaymentMethod' );
+    var newsletterContainer = $(document).find( '#js-selectedNewsletter' );
+    var giftContainer = $(document).find( '#js-selectedGiftwrap' );
+    var paymentFieldsContainer = $(document).find( '#js-paymentFields' );
+    var commentContainer = $(document).find('#js-selectedComment');
+    var shippingMethodContainer = $(document).find( '#js-selectedShippingMethod' );
+    var scope = $(document).find( '#js-checkout-content' );
 
 
 	Checkout.init = function() {
@@ -18273,13 +18272,13 @@ var Cart = {};
         });
 
         // Payment Method
-		paymentMethodContainer.find( ':radio' ).on( 'change', function(e) {
+		$(document).on( 'change', '#js-selectedPaymentMethod :radio', function(e) {
             e.preventDefault();
             Checkout.processPaymentMethod( paymentMethodContainer );
 		});
 
         // Shipping Method
-        shippingMethodContainer.find( ':radio' ).on( 'change', function(e) {
+        $(document).on( 'change', '#js-selectedShippingMethod :radio', function(e) {
             e.preventDefault();
             Checkout.processShippingMethod( shippingMethodContainer );
         });
@@ -18291,8 +18290,12 @@ var Cart = {};
 		} );
 
     };
+
+    Checkout.ajaxCall = function() {
+    };
 	
 	Checkout.updateHtml = function( data ) {
+
         paymentMethodContainer.html( data.paymentOptions );
         shippingMethodContainer.html( data.shippingOptions );
 		paymentFieldsContainer.html( data.payments );
@@ -18300,37 +18303,26 @@ var Cart = {};
 		selectedItemsContainer.html( data.items );
 		selectedTotalsContainer.html( data.totals );
         voucherContainer.html( data.voucher );
-
         console.log('reinit payments');
-        Checkout.init();
-
-        // paymentMethodContainer.find( ':radio' ).on( 'change', function( e ) {
-        //     e.preventDefault();
-        //     Checkout.processPaymentMethod( paymentMethodContainer );
-        // });
-
-        // // Shipping Method
-        // shippingMethodContainer.find( ':radio' ).on( 'change', function( e ) {
-        //     e.preventDefault();
-        //     Checkout.processShippingMethod( shippingMethodContainer );
-        // });      
-
-        // systerpAccordion.init('.js-accordion','js-accordion-item','js-accordion-btn','is-open');
+        
     };
     
     Checkout.processItems = function( el ) {
         if ( !el ) { return; }
-        console.log( el );
+
+        console.log( el, el.attr( 'href' ) );
+        
         $.ajax({
             type: 'GET',
             dataType: 'json',
-            url: el.attr( 'data-href' ),
-            success: function (data) {
+            url: el.attr( 'href' ),
+            success: function(data) {
 
                 if( data.totalItems === 0 ) {
                     window.location.href = location.pathname;
                 } else {
                     Checkout.updateHtml( data );
+                    console.log( data );
                 }
 
             },
@@ -18343,26 +18335,26 @@ var Cart = {};
 	Checkout.processPaymentMethod = function( wrapper ) {
 		var paymentValue = wrapper.find( ':radio:checked' ).val();
 		
-        console.log( 'processPaymentMethod', paymentValue );
+        console.log( 'processPaymentMethod' );
 
-        // $.ajax( {
-        //     url: ajaxURL,
-        //     dataType: 'JSON',
-        //     data: {
-        //         action: 'get_payment_method_form',
-        //         payment_method: paymentValue
-        //     },
-        //     success: function ( result ) {
-        //         if( result.html ) {
-        //             $( '#js-paymentFields' ).html( result.html );
-        //         } else {
-        //             window.location.reload();	
-        //         }
-        //     },
-        //     error: function( error ) {
-        //         console.log( error );
-        //     },          
-        // } );		
+        $.ajax( {
+            url: window.ajaxURL,
+            dataType: 'JSON',
+            data: {
+                action: 'get_payment_method_form',
+                payment_method: paymentValue,
+            },
+            success: function ( result ) {
+                if( result.html ) {
+                    $( '#js-paymentFields' ).html( result.html );
+                } else {
+                    window.location.reload();	
+                }
+            },
+            error: function( error ) {
+                console.log( error );
+            },          
+        } );		
 	}
 
 	Checkout.voucherProcess = function( $button ) {
