@@ -35,6 +35,7 @@ require('./components/newsletter');
 require('./components/alert');
 require('./components/category');
 require('./components/cart');
+require('./components/checkout');
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({

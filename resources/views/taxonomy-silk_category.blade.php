@@ -138,23 +138,23 @@
                         <div class="sort-selector text-center text-sm-left">
                             <div class="btn-group btn-group-toggle d-inline-block d-sm-inline-flex" data-toggle="buttons">
                               <label class="btn btn-outline-primary silk-hash-filter">
-                                <input id="orderby_title_asc" value="title_asc" name="orderby" type="radio">
+                                <input id="orderby_title_asc" value="title_asc" name="orderby" type="radio" class="silk-hash-orderby">
                                 {{ $translation->sort['title_asc'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
-                                <input id="orderby_title_desc" value="title_desc" name="orderby" type="radio">
+                                <input id="orderby_title_desc" value="title_desc" name="orderby" type="radio" class="silk-hash-orderby">
                                 {{ $translation->sort['title_desc'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
-                                <input id="orderby_pop_asc" value="pop_asc" name="orderby" type="radio">
+                              <input id="orderby_pop_asc" value="pop_asc--{{ $current_category }}" name="orderby" type="radio" class="silk-hash-orderby">
                                 {{ $translation->sort['popular'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
-                                <input id="orderby_price_desc" value="price_desc" name="orderby" type="radio">
+                                <input id="orderby_price_desc" value="price_desc" name="orderby" type="radio" class="silk-hash-orderby">
                                 {{ $translation->sort['price_low_to_high'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
-                                <input id="orderby_price_asc" value="price_asc" name="orderby" type="radio">
+                                <input id="orderby_price_asc" value="price_asc" name="orderby" type="radio" class="silk-hash-orderby">
                                 {{ $translation->sort['price_high_to_low'] }}
                               </label>
                             </div>

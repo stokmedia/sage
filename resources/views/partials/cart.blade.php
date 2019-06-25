@@ -6,7 +6,7 @@
                 <span class="cart-item-count text-center js-item-count">{{ $selection['total_items'] ?? 0 }}</span>
             </a>
 
-            <div class="cart js-cart-items">
+            <div id="js-selectedItems" class="cart js-cart-items">
                 @php (include(locate_template( 'parts/shop/header-selection.php' )))
             </div>
         </li>
