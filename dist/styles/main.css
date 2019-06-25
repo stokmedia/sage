@@ -12599,7 +12599,8 @@ button.bg-red:focus {
 
 /* line 11, node_modules/bootstrap/scss/utilities/_spacing.scss */
 
-.m-0 {
+.m-0,
+.selected-product-thumbnail .item figure {
   margin: 0 !important;
 }
 
@@ -23694,7 +23695,7 @@ body.isApple .product-filter {
 
 .selected-product-thumbnail .item {
   width: 70px;
-  height: 106px;
+  height: auto;
   margin: 0.3125rem auto;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
@@ -23804,7 +23805,7 @@ body.isApple .product-filter {
   min-width: 200%;
 }
 
-/* line 285, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 286, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen {
   position: fixed;
@@ -23827,32 +23828,32 @@ body.isApple .product-filter {
           align-items: center;
 }
 
-/* line 298, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 299, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item {
   margin: 0.3125rem;
 }
 
-/* line 301, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 302, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:first-child {
   margin-top: 0.3125rem;
 }
 
-/* line 305, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 306, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:last-child {
   margin-bottom: 0.3125rem;
 }
 
-/* line 313, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 314, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product .custom-control .custom-control-label > span {
   margin-top: 0;
   margin-left: 0;
 }
 
-/* line 320, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 321, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .js-plus-item-btn {
   cursor: pointer;

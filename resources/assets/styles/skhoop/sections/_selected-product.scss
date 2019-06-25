@@ -245,7 +245,7 @@
 
     .item {
       width: 70px;
-      height: 106px;
+      height: auto;
       margin: 0.3125rem auto;
       // padding: 1.4375rem 0.9375rem 1.4375rem;
       border-radius: 5px;
@@ -278,6 +278,7 @@
       }
 
       figure {
+        @extend .m-0;
         @include aspect-ratio(1330, 1995);
       }
     }
