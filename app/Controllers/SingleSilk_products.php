@@ -85,6 +85,8 @@ class SingleSilk_products extends Controller
 		$labels = $this->productTranslations();
 		$infos = [];
 
+		// pr( $product );
+
 		// Description
 		$descriptionLabel = !empty($labels['description']) ? $labels['description'] : 'Description';
 		if ($product->product_meta['description']) {
@@ -102,6 +104,16 @@ class SingleSilk_products extends Controller
 				'content' => $product->product_meta['excerpt']
 			]);
 		}
+
+		// Care
+		$careLabel = !empty($labels['care_instruction']) ? $labels['care_instruction'] : 'Care & washing instructions';
+		if ($product->product_meta['care']) {
+			array_push( $infos, [ 
+				'label' => $careLabel, 
+				'content' => $product->product_meta['care']['desc'] ?? '',
+				'image' => $product->product_meta['care']['image'] ?? '',
+			]);
+		}		
 		
 		// Shipping
 		$shippingLabel = !empty($labels['shipping_delivery']) ? $labels['shipping_delivery'] : 'Shipping & Delivery';

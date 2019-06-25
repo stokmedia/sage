@@ -79,6 +79,7 @@
                         </button>
                     </div>
                     <div id="collapse-{{ $loop->iteration }}" class="collapse body text-left" aria-labelledby="headingOne" data-parent="#productAccordion">
+                        {!! $info->image ?? null !!}
                         <div class="pb-4">{!! $info->content !!}</div>
                     </div>
                 </li>
