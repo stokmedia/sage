@@ -52,8 +52,9 @@
         </div>
 
         <?php if (!empty($has_remove)) : ?>
+            <?php $removeClass = !empty($removeClass) ? $removeClass : 'js-cart-remove-item'; ?>
             <div class="close-pos">
-                <a href="<?php echo EscGeneral::getQueryRemoveProduct( $item ); ?>" class="close-btn js-cart-remove-item"></a>
+                <a href="<?php echo EscGeneral::getQueryRemoveProduct( $item ); ?>" class="close-btn <?php echo $removeClass ?>"></a>
             </div>
         <?php endif ?>
     </div>

@@ -66,7 +66,8 @@ array_map(function ($file) use ($sage_error) {
     'custom',
     'Post-types/Reseller',
     'Post-types/Instagram',
-    'Classes/AcfOptions'
+    'Classes/AcfOptions',
+    'Classes/Ajax',
 ]);
 
 /**

@@ -16,6 +16,7 @@
 
                             <?php 
                             $has_qty = $has_remove = true;
+                            $removeClass = 'js-edit-item';
                             include( locate_template( 'parts/shop/selection-item.php' ) );
                             ?>
 

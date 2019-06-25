@@ -16,25 +16,32 @@
     ?>
 
     <div class="summary-group">
-        <div class="summary-item <?php echo $rowClass ?>">
-            <div class="title <?php echo $labelClass ?>"><?php echo $totalLabel ?></div>
-            <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['itemsTotalPrice']; ?></div>
-        </div>
 
-        <?php if ($selection['totals']['taxDeductedAsNumber']) : ?>
+        <?php if (!empty($selection['totals']['itemsTotalPrice'])) : ?>
+            <div class="summary-item <?php echo $rowClass ?>">
+                <div class="title <?php echo $labelClass ?>"><?php echo $totalLabel ?></div>
+                <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['itemsTotalPrice']; ?></div>
+            </div>
+        <?php endif ;?>
+
+        <?php if (!empty($selection['totals']['taxDeductedAsNumber'])) : ?>
             <div class="summary-item <?php echo $rowClass ?>">
                 <div class="title <?php echo $labelClass ?>"><?php echo $vatLabel ?></div>
                 <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['taxDeducted']; ?></div>
             </div>
         <?php endif ;?>
 
-        <div class="summary-item <?php echo $rowClass ?>">
-            <div class="title <?php echo $labelClass ?>"><?php echo $shippingLabel ?></div>
-            <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['shippingPrice']; ?></div>
-        </div>
+        <?php if (!empty($selection['totals']['shippingPrice'])) : ?>
+            <div class="summary-item <?php echo $rowClass ?>">
+                <div class="title <?php echo $labelClass ?>"><?php echo $shippingLabel ?></div>
+                <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['shippingPrice']; ?></div>
+            </div>
+        <?php endif ;?>
 
-        <div class="summary-item <?php echo $rowClass ?>">
-            <div class="title <?php echo $labelClass ?>"><?php echo $subTotalLabel ?></div>
-            <div class="price <?php echo $valueClass ?>"><strong><?php echo $selection['totals']['grandTotalPrice']; ?></strong></div>
-        </div>
+        <?php if (!empty($selection['totals']['grandTotalPrice'])) : ?>
+            <div class="summary-item <?php echo $rowClass ?>">
+                <div class="title <?php echo $labelClass ?>"><?php echo $subTotalLabel ?></div>
+                <div class="price <?php echo $valueClass ?>"><strong><?php echo $selection['totals']['grandTotalPrice']; ?></strong></div>
+            </div>
+        <?php endif ;?>
     </div>

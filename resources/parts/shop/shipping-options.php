@@ -1,16 +1,19 @@
-<div class="item">
-    <div class="custom-control custom-control-lg  custom-radio">
-        <input id="customRadio6" class="custom-control-input" name="customRadio" type="radio" checked="">
-        <label class="custom-control-label" for="customRadio6">
-        <span>KLARNA</span>
-        </label>
+<?php
+
+$selection = new EscSelection();
+$selection->paymentFieldTemplate('
+    <div class="item">
+        <div class="custom-control custom-control-lg  custom-radio">
+            <input id="{id}" type="{type}" name="{name}" value="{value}" class="custom-control-input" {checked}>
+            <label class="custom-control-label" for="{id}">
+                <span>{label}</span>
+            </label>
+        </div>
     </div>
-</div>
-<div class="item">
-    <div class="custom-control custom-control-lg  custom-radio">
-    <input id="customRadio7" class="custom-control-input" name="customRadio" type="radio" checked="">
-    <label class="custom-control-label" for="customRadio7">
-        <span>DHL</span>
-    </label>
-    </div>
-</div>
+');
+
+if( isset( $_SESSION['shipping_method'] ) ) {
+    $selection->renderShippingLoop( $_SESSION['shipping_method'] );
+} else {
+    $selection->renderShippingLoop();
+}
