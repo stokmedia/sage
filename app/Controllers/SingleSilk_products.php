@@ -85,11 +85,9 @@ class SingleSilk_products extends Controller
 		$labels = $this->productTranslations();
 		$infos = [];
 
-		// pr( $product );
-
 		// Description
 		$descriptionLabel = !empty($labels['description']) ? $labels['description'] : 'Description';
-		if ($product->product_meta['description']) {
+		if (!empty($product->product_meta['description'])) {
 			array_push( $infos, [ 
 				'label' => $descriptionLabel, 
 				'content' => $product->product_meta['description']
@@ -98,7 +96,7 @@ class SingleSilk_products extends Controller
 
 		// Details
 		$detailsLabel = !empty($labels['details']) ? $labels['details'] : 'Details';
-		if ($product->product_meta['excerpt']) {
+		if (!empty($product->product_meta['excerpt'])) {
 			array_push( $infos, [ 
 				'label' => $detailsLabel, 
 				'content' => $product->product_meta['excerpt']
@@ -107,7 +105,7 @@ class SingleSilk_products extends Controller
 
 		// Care
 		$careLabel = !empty($labels['care_instruction']) ? $labels['care_instruction'] : 'Care & washing instructions';
-		if ($product->product_meta['care']) {
+		if (!empty($product->product_meta['care'])) {
 			array_push( $infos, [ 
 				'label' => $careLabel, 
 				'content' => $product->product_meta['care']['desc'] ?? '',
