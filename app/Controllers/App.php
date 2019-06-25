@@ -106,6 +106,11 @@ class App extends Controller
         return $checkoutPage ? get_permalink( $checkoutPage ) : '';
     }
 
+    public function displayFooter()
+    {
+        return (get_page_template_slug() !== 'views/template-checkout.blade.php');
+    }
+
     public function newsletterData()
     {
         $lang = Helper::current_lang();

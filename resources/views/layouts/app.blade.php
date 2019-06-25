@@ -17,7 +17,11 @@
       </div>
     </div>
     @php do_action('get_footer') @endphp
-    @include('partials.footer')
+
+    @if ($display_footer)
+      @include('partials.footer')
+    @endif
+
     @php wp_footer() @endphp
   </body>
 </html>
