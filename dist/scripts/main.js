@@ -18295,16 +18295,24 @@ var Cart = {};
     };
 	
 	Checkout.updateHtml = function( data ) {
-
-        paymentMethodContainer.html( data.paymentOptions );
-        shippingMethodContainer.html( data.shippingOptions );
-		paymentFieldsContainer.html( data.payments );
-		cartContainer.html( data.basket );
-		selectedItemsContainer.html( data.items );
-		selectedTotalsContainer.html( data.totals );
-        voucherContainer.html( data.voucher );
         console.log('reinit payments');
-        
+
+        if (data.totalItems === 0) {
+
+            window.location.href = location.pathname;
+
+        } else {
+
+            paymentMethodContainer.html( data.paymentOptions );
+            shippingMethodContainer.html( data.shippingOptions );
+            paymentFieldsContainer.html( data.payments );
+            cartContainer.html( data.basket );
+            selectedItemsContainer.html( data.items );
+            selectedTotalsContainer.html( data.totals );
+            voucherContainer.html( data.voucher );
+            
+        }
+
     };
     
     Checkout.processItems = function( el ) {
@@ -18412,9 +18420,7 @@ var Cart = {};
             type: 'POST',
             data: sendData,
             success: function ( data ) {
-                // console.log(result);
                 Checkout.updateHtml( data );
-                console.log(data.shippingOptions);
             },
             error: function( error ) {
                 console.log( error );

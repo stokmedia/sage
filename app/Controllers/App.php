@@ -100,6 +100,12 @@ class App extends Controller
         return (object) get_field( 'cookies', Helper::current_lang() ) ?? [];
     }
 
+    public function checkoutLink()
+    {
+        $checkoutPage = Helper::get_silk_architecture_page( 'selection' );
+        return $checkoutPage ? get_permalink( $checkoutPage ) : '';
+    }
+
     public function newsletterData()
     {
         $lang = Helper::current_lang();

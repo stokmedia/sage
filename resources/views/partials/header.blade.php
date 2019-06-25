@@ -89,10 +89,16 @@
 
     {{-- Checkout Navigation --}}
     <div class="container nav-checkout">
-        <div class="navbar-spacer">
-            <a href="#" class="navbar-back">Fortsätt shoppa</a>
-        </div>
-        <div class="navbar-checkout h1 m-auto" href="#">Kassa</div>
+        @if (!empty($checkout_header->shop_link))
+            <div class="navbar-spacer">
+                <a href="{{ $checkout_header->shop_link['url'] }}" class="navbar-back" target="{{ $checkout_header->shop_link['target'] }}">{{ $checkout_header->shop_link['title'] }}</a>
+            </div>
+        @endif
+
+        @if (!empty($checkout_header->title))
+            <div class="navbar-checkout h1 m-auto">{{ $checkout_header->title }}</div>
+        @endif
+
         <div class="navbar-spacer d-none d-lg-block"></div>
     </div>
     {{-- End Checkout Navigation --}}
