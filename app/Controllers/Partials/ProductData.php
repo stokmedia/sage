@@ -104,7 +104,7 @@ trait ProductData
 	{	
 		$isAvailable = \EscGeneral::isAvailable( $postID );
 
-		return ($isAvailable[ 'info' ][ 'stockOfAllItems' ] === 0);
+		return !empty($isAvailable[ 'info' ]) ? ($isAvailable[ 'info' ][ 'stockOfAllItems' ] === 0) : false;
 	}
 
 }

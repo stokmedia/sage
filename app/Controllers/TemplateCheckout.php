@@ -23,12 +23,19 @@ class TemplateCheckout extends Controller
     }
     
     public function noSelectedItemContent()
-    {
+    {   
+        $content = get_field( 'no_items_content' );
+
         return (object) [
-            'title' => 'No item added',
-            'preamble' => 'In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper',
+            'title' => !empty($content['title']) ? $content['title'] : '',
+            'text' => !empty($content['text']) ? $content['text'] : '',
         ];
     }
+
+    public function pageContent()
+    {   
+        return self::getPageContent();
+    }    
     
     public function selection()
     {
@@ -43,6 +50,16 @@ class TemplateCheckout extends Controller
         return ( !\EscSelection::hasSelection() || $selectedItems === 0 );
     }
 
+    public static function getPageContent()
+    {
+        return (object) [
+            'additional_options' => get_field( 'options_content' ),
+            'order' => get_field( 'order_content' ),
+            'payment' => get_field( 'payment_content' ),
+            'delivery' => get_field( 'delivery_content' )
+        ];
+    }
+
     public static function selectionInit()
     {
         return new \EscSelection();
@@ -51,6 +68,8 @@ class TemplateCheckout extends Controller
     public static function newsletterField()
     {
         $selection = self::selectionInit();
+        $translation = self::getPageContent();
+        $text = !empty($translation->additional_options['signup_for_newsletter']) ? $translation->additional_options['signup_for_newsletter'] : '';
 
         $selection->checkFieldTemplate('
         <div class="custom-control custom-control-lg custom-checkbox">
@@ -61,7 +80,7 @@ class TemplateCheckout extends Controller
         </div>                
         ');
 
-        return $selection->renderField( 'newsletter', 'Få vårt nyhetsbrev - Godkänn villkoren och GDPR kraven…' );
+        return $selection->renderField( 'newsletter', $text );
     }
 
     public static function startSelectionForm()
