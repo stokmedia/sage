@@ -14,7 +14,6 @@
   </section>
 
   @include('sections.section-thankyou')
-  @include('sections.section-newsletter')
-  @include('sections.section-three-promo')
+  @include( 'partials.sections' )
 
 @endsection
