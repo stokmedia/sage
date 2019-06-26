@@ -1,7 +1,7 @@
 @if ($newsletter_data->newsletter_enable)
     <div class="modal newsletter-modal fade p-0" id="js-newsletter-modal" tabindex="-1" role="dialog" 
         aria-labelledby="modelTitleId" aria-hidden="true" 
-        data-cookie="skhoopNewsletter"
+        data-cookie="settings_newsletterDisplayed"
         data-display_time="{{ $newsletter_data->newsletter_modal_content->modal_display_time }}"
         data-delay="{{ $newsletter_data->newsletter_modal_content->modal_delay }}">
         <div class="modal-dialog modal-dialog-centered" role="document">
