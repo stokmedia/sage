@@ -1,5 +1,5 @@
 @if (!empty($cookie_data->cookie_content) || !empty($cookie_data->cookie_bar_button))
-  <div id="js-cookie" class="cookie-bar fixed-bottom" data-cookie="skhoopCookie" style="display: none;">
+  <div id="js-cookie" class="cookie-bar fixed-bottom" data-cookie="settings_agreedToCookie" style="display: none;">
     <div class="alert alert-ash alert-dismissible fade show mb-0" role="alert">
       <div class="alert-container align-items-center d-flex justify-content-center flex-column flex-sm-row">
         <div class="col d-flex align-items-center p-0 flex-column flex-sm-row">
