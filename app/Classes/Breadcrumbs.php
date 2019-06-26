@@ -2,11 +2,11 @@
 
 namespace App\Classes;
 
-class Breadcrumbs 
+class Breadcrumbs
 {
 	private $links = array();
 
-    public function __construct($postId=null) 
+    public function __construct($postId=null)
     {
         $this->bc_get_start_page();
 
@@ -22,11 +22,11 @@ class Breadcrumbs
 			case 'page':
 				$this->bc_get_pages( $id );
                 break;
-                
+
 			case 'category':
-				$this->bc_get_categories();				
+				$this->bc_get_categories();
                 break;
-                
+
             case 'post':
 				$this->bc_get_single( $id, 'category' );
                 break;
@@ -34,13 +34,13 @@ class Breadcrumbs
             case 'silk_products':
 				$this->bc_get_single( $id, 'silk_category' );
                 break;
-                           
+
 			case 'search':
 				$this->bc_get_search_page();
 				break;
         }
     }
-    
+
     public function get_breadcrumb_type($postId)
     {
         if ($postId) {
@@ -58,7 +58,7 @@ class Breadcrumbs
         }
     }
 
-    public function bs_set_link( $text, $url ) 
+    public function bs_set_link( $text, $url )
     {
 		$this->links[] = array(
 			'text' => $text,
@@ -66,22 +66,28 @@ class Breadcrumbs
 		);
 	}
 
-    public function get_links() 
+    public function get_links()
     {
-		return $this->links;	
+		return $this->links;
 	}
 
-    public function bc_get_search_page() 
+    public function bc_get_search_page()
     {
 		$this->bs_set_link( get_field( 'search_title', pll_current_language() ), null );
-	}	
-
-    public function bc_get_start_page() 
-    {
-		$this->bs_set_link( 'Start', pll_home_url( pll_current_language( 'slug' ) ) );
 	}
 
-    public function bc_get_pages( $postId ) 
+    public function bc_get_start_page()
+    {
+        if (function_exists( 'pll_home_url' )) {
+            $homeUrl = pll_home_url( pll_current_language( 'slug' ) );
+        } else {
+            $homeUrl = esc_url(home_url('/'));
+        }
+
+		$this->bs_set_link( 'Start', $homeUrl );
+	}
+
+    public function bc_get_pages( $postId )
     {
 		if( !$postId || is_front_page() ) { return; }
 
@@ -95,14 +101,14 @@ class Breadcrumbs
 			foreach( $ancestors as $key => $page ) {
 				$this->bs_set_link( get_the_title( $page ), get_permalink( $page ) );
             }
-            
+
 		}
 
 		// Set Link for main page
 		$this->bs_set_link( get_the_title( $postId ), null );
 	}
 
-    public function bc_get_categories( $category = null ) 
+    public function bc_get_categories( $category = null )
     {
 		if( empty( $category ) ) {
 			$currentCategory = get_queried_object();
@@ -110,8 +116,8 @@ class Breadcrumbs
 			$currentCategory = $category;
 		}
 
-		if( !$currentCategory ) { 
-            return; 
+		if( !$currentCategory ) {
+            return;
         }
 
 		// Get category page
@@ -119,10 +125,10 @@ class Breadcrumbs
 
 		// Parent categories
 		if( $parents ) {
-            
+
             // Reverse parent categories ordering
             krsort( $parents );
-            
+
 			foreach( $parents as $key => $cat ) {
 				$tax = get_term_by( 'id', $cat, $currentCategory->taxonomy );
 				$this->bs_set_link( $tax->name, get_term_link( $tax->term_id ) );
@@ -132,14 +138,14 @@ class Breadcrumbs
 
 		// Main category
         $termLink = ( $category ) ? get_term_link( $category ) : null;
-        
+
 		$this->bs_set_link( $currentCategory->name, $termLink );
 	}
 
-    public function bc_get_single( $postId, $taxonomy ) 
+    public function bc_get_single( $postId, $taxonomy )
     {
-		if( !$postId || !$taxonomy ) { 
-            return; 
+		if( !$postId || !$taxonomy ) {
+            return;
         }
 
 		$category = get_the_terms( $postId, $taxonomy );
@@ -160,14 +166,14 @@ class Breadcrumbs
 					}
 				}
             }
-            
+
 		}
 
 		// Set last category as main category
 		if( empty( $mainCategory ) ) {
 			$mainCategory = $category[count($category)-1];
 		}
-		
+
 		if( $mainCategory ) {
 			$this->bc_get_categories( $mainCategory );
 		}
@@ -175,7 +181,7 @@ class Breadcrumbs
 		$this->bs_set_link( get_the_title( $postId ), null );
     }
 
-    public function render_breadcumbs( $options=[] ) 
+    public function render_breadcumbs( $options=[] )
     {
         $config = [
             'container_tag'     => 'ul',
@@ -189,7 +195,7 @@ class Breadcrumbs
             foreach ($options as $key=>$item) {
                 $config[ $key ] = $item;
             }
-        }  
+        }
 
         $items = '';
         foreach ($this->links as $key=>$item ) {

@@ -31,10 +31,10 @@
   @include('sections.section-newsletter')
 --}}
   @if ($breadcrumbs)
-    <section class="section breadcrumb-vertical no-mb">
+    <section class="section breadcrumb-vertical no-mb d-none d-lg-block">
       {!! $breadcrumbs !!}
     </section>
   @endif
 
   @include('partials.sections')
-@endsection 
+@endsection

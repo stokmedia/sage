@@ -4,9 +4,9 @@
     @include('partials.page-header')
     @include('partials.content-page')
   @endwhile --}}
-  
+
   @if ($breadcrumbs)
-    <section class="section breadcrumb-vertical no-mb">
+    <section class="section breadcrumb-vertical no-mb d-none d-lg-block">
       {!! $breadcrumbs !!}
     </section>
   @endif

@@ -18595,19 +18595,17 @@ blockquote footer::before,
   text-transform: uppercase;
 }
 
-@media (min-width: 992px) {
-  /* line 146, resources/assets/styles/skhoop/components/_cart.scss */
+/* line 146, resources/assets/styles/skhoop/components/_cart.scss */
 
-  .cart-overlay:after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(41, 41, 41, 0.8);
-    z-index: 1020;
-  }
+.cart-overlay:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.8);
+  z-index: 1020;
 }
 
 /* line 1, resources/assets/styles/skhoop/components/_product-details-inline.scss */
@@ -20984,24 +20982,30 @@ body#tinymce {
 
 /* line 176, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
-.product-image .visible-on-hover {
-  opacity: 0;
+.product-image img {
+  z-index: 1;
 }
 
-/* line 183, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 180, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product-image .visible-on-hover {
+  z-index: 0;
+}
+
+/* line 187, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product:hover .product-image .visible-on-hover {
-  opacity: 1;
+  z-index: 1;
 }
 
-/* line 189, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 193, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-wrapper {
   position: relative;
   border-radius: 0.3125rem;
 }
 
-/* line 194, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 198, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-status {
   position: absolute;
@@ -21018,7 +21022,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 194, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 198, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-status {
     top: 1.375rem;
@@ -21028,11 +21032,12 @@ body#tinymce {
   }
 }
 
-/* line 215, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 219, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-details {
   position: absolute;
   bottom: 0.3125rem;
+  z-index: 1;
   padding: 0.0625rem 6px 0;
   max-width: calc(100% - 2.25rem);
   min-width: calc(100% - 2.25rem);
@@ -21046,7 +21051,7 @@ body#tinymce {
 }
 
 @media (min-width: 576px) {
-  /* line 215, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 219, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-details {
     bottom: 0.9375rem;
@@ -21056,7 +21061,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 215, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 219, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-details {
     bottom: 1.375rem;
@@ -21067,20 +21072,20 @@ body#tinymce {
 }
 
 @media screen and (min-width: 71.25rem) {
-  /* line 215, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 219, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-details {
     min-width: 10.9375rem;
   }
 }
 
-/* line 243, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 248, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-details:hover {
   color: #031532;
 }
 
-/* line 248, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 253, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-name {
   margin-bottom: 0;
@@ -21093,7 +21098,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 248, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 253, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-name {
     font-size: 0.8125rem;
@@ -21101,7 +21106,7 @@ body#tinymce {
   }
 }
 
-/* line 263, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 268, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product-price {
   margin-top: -0.4375rem;
@@ -21111,7 +21116,7 @@ body#tinymce {
 }
 
 @media screen and (min-width: 23.4375rem) {
-  /* line 263, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 268, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-price {
     font-size: 0.75rem;
@@ -21120,7 +21125,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 263, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 268, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product-price {
     margin-top: -0.25rem;
@@ -21129,7 +21134,7 @@ body#tinymce {
   }
 }
 
-/* line 282, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 287, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-big {
   -webkit-box-flex: 0;
@@ -21139,7 +21144,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 282, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 287, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-big {
     -webkit-box-flex: 0;
@@ -21149,7 +21154,7 @@ body#tinymce {
   }
 }
 
-/* line 286, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 291, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-small {
   -webkit-box-flex: 0;
@@ -21159,7 +21164,7 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 286, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 291, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-small {
     -webkit-box-flex: 0;
@@ -21169,14 +21174,14 @@ body#tinymce {
   }
 }
 
-/* line 292, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 297, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-status {
   background-color: #d45656;
   color: #fff;
 }
 
-/* line 297, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 302, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-price {
   color: #d45656;
@@ -21185,7 +21190,7 @@ body#tinymce {
   white-space: nowrap;
 }
 
-/* line 303, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 308, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-sale .product-price span {
   margin-right: 0.3125rem;
@@ -21194,21 +21199,21 @@ body#tinymce {
 }
 
 @media (min-width: 992px) {
-  /* line 303, resources/assets/styles/skhoop/sections/_product-listing.scss */
+  /* line 308, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
   .product.is-sale .product-price span {
     margin-right: 1.25rem;
   }
 }
 
-/* line 316, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 321, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-oos .product-status {
   background-color: #b7cad0;
   color: #fff;
 }
 
-/* line 321, resources/assets/styles/skhoop/sections/_product-listing.scss */
+/* line 326, resources/assets/styles/skhoop/sections/_product-listing.scss */
 
 .product.is-oos .product-image {
   opacity: 0.5;
@@ -23411,7 +23416,7 @@ body.isApple .product-filter {
 
 .selected-product-slider .flickity-prev-next-button.previous {
   left: 0;
-  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOC41NTI0IDI1LjgxOTVDMTguNzg0IDI2LjA2MDIgMTkuMTY5NSAyNi4wNjAyIDE5LjQwOTEgMjUuODE5NUMxOS42NDA3IDI1LjU4NyAxOS42NDA3IDI1LjIwMDEgMTkuNDA5MSAyNC45NjgxTDE1LjA2NDkgMjAuNjA3SDI5LjQwMDJDMjkuNzM0NCAyMC42MDY0IDMwIDIwLjMzOTggMzAgMjAuMDA0M0MzMCAxOS42Njg5IDI5LjczNDQgMTkuMzkzNiAyOS40MDAyIDE5LjM5MzZIMTUuMDY0OUwxOS40MDkxIDE1LjA0MDZDMTkuNjQwNyAxNC43OTk5IDE5LjY0MDcgMTQuNDEyNCAxOS40MDkxIDE0LjE4MDVDMTkuMTY5NSAxMy45Mzk4IDE4Ljc4MzUgMTMuOTM5OCAxOC41NTI0IDE0LjE4MDVMMTMuMTc5OCAxOS41NzRDMTIuOTQwMSAxOS44MDY1IDEyLjk0MDEgMjAuMTkzNSAxMy4xNzk4IDIwLjQyNTRMMTguNTUyNCAyNS44MTk1WiIgZmlsbD0iIzFFMjAxRCIvPg0KPC9zdmc+DQo=) no-repeat center/contain white;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4LjU1MjQgMjUuODE5NUMxOC43ODQgMjYuMDYwMiAxOS4xNjk1IDI2LjA2MDIgMTkuNDA5MSAyNS44MTk1QzE5LjY0MDcgMjUuNTg3IDE5LjY0MDcgMjUuMjAwMSAxOS40MDkxIDI0Ljk2ODFMMTUuMDY0OSAyMC42MDdIMjkuNDAwMkMyOS43MzQ0IDIwLjYwNjQgMzAgMjAuMzM5OCAzMCAyMC4wMDQzQzMwIDE5LjY2ODkgMjkuNzM0NCAxOS4zOTM2IDI5LjQwMDIgMTkuMzkzNkgxNS4wNjQ5TDE5LjQwOTEgMTUuMDQwNkMxOS42NDA3IDE0Ljc5OTkgMTkuNjQwNyAxNC40MTI0IDE5LjQwOTEgMTQuMTgwNUMxOS4xNjk1IDEzLjkzOTggMTguNzgzNSAxMy45Mzk4IDE4LjU1MjQgMTQuMTgwNUwxMy4xNzk4IDE5LjU3NEMxMi45NDAxIDE5LjgwNjUgMTIuOTQwMSAyMC4xOTM1IDEzLjE3OTggMjAuNDI1NEwxOC41NTI0IDI1LjgxOTVaIiBmaWxsPSIjMUUyMDFEIi8+Cjwvc3ZnPgo=) no-repeat center/contain white;
 }
 
 /* line 90, resources/assets/styles/skhoop/sections/_selected-product.scss */
@@ -24623,7 +24628,7 @@ body.isApple .product-filter {
   top: 6.25rem;
   right: 1.875rem;
   margin-bottom: 0;
-  z-index: 1;
+  z-index: 2;
   -webkit-transform-origin: right;
        -o-transform-origin: right;
           transform-origin: right;

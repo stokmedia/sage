@@ -17,6 +17,7 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 import { sliders } from './components/sliders';
+import LazyLoad from 'vanilla-lazyload';
 require('./util/plusItem');
 require('./util/crossPlatform');
 require('./util/autoPadding');
@@ -56,4 +57,14 @@ jQuery(document).ready(() => {
   $('body').autoPadding({
     source:  $('.js-header'),
   });
+
+  let lazyLoadInstance = new LazyLoad({
+    threshold: 500,
+		elements_selector: '.lazy',
+  });
+
+  if (lazyLoadInstance) {
+    lazyLoadInstance.update();
+  }
+
 });

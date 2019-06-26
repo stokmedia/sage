@@ -245,8 +245,8 @@
               <div class="product is-big">
                 <a href="#" class="product-wrapper bg-white d-block">
                   <figure class="product-image">
-                    <img src="@asset('images/temp/prod.png')" />
-                    <img src="@asset('images/temp/prod1.png')" class="visible-on-hover"/>
+                    <img class="lazy" data-src="@asset('images/temp/prod.png')"/>
+                    <img data-src="@asset('images/temp/prod1.png')" class="visible-on-hover lazy"/>
                   </figure>
                 </a>
                 <a href="#" class="product-details bg-white d-block text-center">
@@ -258,8 +258,8 @@
             <div class="product is-small">
               <a href="#" class="product-wrapper bg-white d-block">
                 <figure class="product-image">
-                  <img src="@asset('images/temp/prod.png')" />
-                  <img src="@asset('images/temp/prod1.png')" class="visible-on-hover"/>
+                  <img class="lazy" data-src="@asset('images/temp/prod.png')"/>
+                  <img data-src="@asset('images/temp/prod1.png')" class="visible-on-hover lazy"/>
                 </figure>
               </a>
               <a href="#" class="product-details bg-white d-block text-center">
@@ -271,8 +271,8 @@
               <a href="#" class="product-wrapper bg-white d-block">
                 <div class="product-status text-center"><span>REA</span></div>
                 <figure class="product-image">
-                  <img src="@asset('images/temp/prod.png')" />
-                  <img src="@asset('images/temp/prod1.png')" class="visible-on-hover"/>
+                  <img class="lazy" data-src="@asset('images/temp/prod.png')"/>
+                  <img data-src="@asset('images/temp/prod1.png')" class="visible-on-hover lazy"/>
                 </figure>
               </a>
               <a href="#" class="product-details bg-white d-block text-center">
@@ -284,8 +284,8 @@
               <a href="#" class="product-wrapper bg-white d-block">
                 <div class="product-status text-center"><span>Slutsåld</span></div>
                 <figure class="product-image">
-                  <img src="@asset('images/temp/prod.png')" />
-                  <img src="@asset('images/temp/prod1.png')" class="visible-on-hover"/>
+                  <img class="lazy" data-src="@asset('images/temp/prod.png')"/>
+                  <img data-src="@asset('images/temp/prod1.png')" class="visible-on-hover lazy"/>
                 </figure>
               </a>
               <a href="#" class="product-details bg-white d-block text-center">
@@ -296,8 +296,8 @@
             <div class="product is-small">
               <a href="#" class="product-wrapper bg-white d-block">
                 <figure class="product-image">
-                  <img src="@asset('images/temp/selected-product-view.png')" />
-                  <img src="@asset('images/temp/prod1.png')" class="visible-on-hover"/>
+                  <img class="lazy" data-src="@asset('images/temp/selected-product-view.png')" />
+                  <img data-src="@asset('images/temp/prod1.png')" class="visible-on-hover lazy"/>
                 </figure>
               </a>
               <a href="#" class="product-details bg-white d-block text-center">
@@ -309,8 +309,8 @@
               <div class="product is-small">
                 <a href="#" class="product-wrapper bg-white d-block">
                   <figure class="product-image">
-                    <img src="@asset('images/temp/prod.png')" />
-                    <img src="@asset('images/temp/prod1.png')" class="visible-on-hover"/>
+                    <img class="lazy" data-src="@asset('images/temp/prod.png')"/>
+                    <img data-src="@asset('images/temp/prod1.png')" class="visible-on-hover lazy"/>
                   </figure>
                 </a>
                 <a href="#" class="product-details bg-white d-block text-center">

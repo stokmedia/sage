@@ -5,11 +5,11 @@ namespace App\Classes;
 class Helper {
 
     /**
-     * Gets the term id value to be pass as $post_id 
+     * Gets the term id value to be pass as $post_id
      * parameter to ACF. Will only return a value if
      * current page is a category page.
      *
-     * @return string 
+     * @return string
      */
     public static function get_acf_term_id() {
         if( !is_tax() && !is_category() ) {
@@ -35,28 +35,28 @@ class Helper {
      * Get current language
      *
      * @param $value string
-     * @return string 
+     * @return string
      */
     public static function current_lang( $value='slug' ) {
         $defaultValue = $value == 'locale' ? 'en_GB' : 'en';
 
 		return function_exists('pll_current_language') ? pll_current_language( $value ) : $defaultValue;
-    }  
-    
+    }
+
     /**
      * Get translated sitewide field value
      *
      * @param $fieldName string
-     * @return string 
+     * @return string
      */
     public static function localize( $fieldName ) {
 		return get_field( $fieldName, self::current_lang() );
-    }     
+    }
 
     /**
      * Gets the translated page of saved architecture pages in Silk settings
      *
-     * @return int 
+     * @return int
      */
     public static function get_silk_architecture_page( $type = null ) {
         $pageId = null;
@@ -64,7 +64,7 @@ class Helper {
         $defaultPageId = $architecturePages['esc_'. $type .'_page'];
 
         // Gets the translated page of architecture page
-        if (!empty( $defaultPageId )) {
+        if (function_exists('pll_get_post') && !empty( $defaultPageId )) {
             $pageId = pll_get_post( $defaultPageId, pll_current_language() );
         }
 
@@ -82,11 +82,11 @@ class Helper {
      * This will replace the shortcode (array key) with the array value
      *
      * @param $replaces array, $template text
-     * @return text 
+     * @return text
      */
     public static function sp_render_text( $replaces, $template ) {
         if (!$replaces && !$template) {
-            return; 
+            return;
         }
 
         $str = preg_replace_callback( '/\[(.+?)\]/', function ( $matches ) use ( $replaces ) {
@@ -100,7 +100,7 @@ class Helper {
      * Get array value by index
      *
      * @param $arr array, $pos number
-     * @return array 
+     * @return array
      */
     public static function get_array_value_by_index( $arr, $pos ) {
         if( empty($arr[ $pos ]) ) {
@@ -108,7 +108,7 @@ class Helper {
         }
 
         return $arr[ $pos ];
-    }    
+    }
 
 
 
