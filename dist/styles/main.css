@@ -18296,22 +18296,23 @@ blockquote footer::before,
   margin-top: 0;
   font-size: 0.75rem;
   line-height: 1.25rem;
+  white-space: nowrap;
 }
 
-/* line 110, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 111, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
   background-color: #031532;
   border: 0.0625rem solid #031532;
 }
 
-/* line 114, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 115, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label span {
   color: #fff;
 }
 
-/* line 120, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 121, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label::before {
   content: "";
@@ -21011,7 +21012,7 @@ body#tinymce {
   position: absolute;
   top: 0.9375rem;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   min-width: 75px;
   padding: 0.25rem 0.75rem;
   font-size: 0.6875rem;
@@ -21328,7 +21329,7 @@ body#tinymce {
     -o-transform: translate(-50%);
        transform: translate(-50%);
     top: auto;
-    z-index: 2;
+    z-index: 3;
     height: auto;
     padding: 0;
   }
@@ -24625,13 +24626,19 @@ body.isApple .product-filter {
 
 .breadcrumb-vertical .breadcrumb {
   position: absolute;
-  top: 6.25rem;
+  top: 4.375rem;
   right: 1.875rem;
   margin-bottom: 0;
   z-index: 2;
   -webkit-transform-origin: right;
        -o-transform-origin: right;
           transform-origin: right;
+}
+
+/* line 14, resources/assets/styles/skhoop/sections/_breadcrumb-vertical.scss */
+
+.admin-bar .breadcrumb-vertical .breadcrumb {
+  top: 6.25rem;
 }
 
 

@@ -39,9 +39,9 @@
                 <ul class="color-selector js-plus-item d-lg-inline-block d-flex flex-wrap justify-content-center align-items-center w-100">
                     @foreach ($product->colors as $color)
                         <li class="mx-2 item d-none {{ $color->product === $product->product_meta->product ? 'is-active' : '' }}">
-                            <a href="{{ $color->product_uri }}" class="custom-control custom-checkbox" title="{{ $color->swatch->desc }}">
+                            <a href="{{ $color->product_uri }}" class="custom-control custom-checkbox" title="{{ $color->swatch->desc ?? '' }}">
                                 <input id="color-check[{{ $loop->iteration }}]" class="custom-control-input">
-                                <label class="custom-control-label" for="color-check[{{ $loop->iteration }}]" style="{{ $color->swatch->background }}"></label>
+                                <label class="custom-control-label" for="color-check[{{ $loop->iteration }}]" style="{{ $color->swatch->background ?? '' }}"></label>
                             </a>
                         </li>
                     @endforeach
@@ -73,14 +73,14 @@
             @foreach ($product_information as $info)
                 <li class="list-group-item">
                     <div class="header d-flex  justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse-{{ $loop->iteration }}" aria-expanded="false" aria-controls="collapse-{{ $loop->iteration }}">
-                        <span class="text-uppercase">{{ $info->label }}</span>
+                        <span class="text-uppercase">{{ $info->label ?? '' }}</span>
                         <button class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary bg-white border-0" type="button">
                             <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                         </button>
                     </div>
                     <div id="collapse-{{ $loop->iteration }}" class="collapse body text-left" aria-labelledby="headingOne" data-parent="#productAccordion">
                         {!! $info->image ?? null !!}
-                        <div class="pb-4">{!! $info->content !!}</div>
+                        <div class="pb-4">{!! $info->content ?? '' !!}</div>
                     </div>
                 </li>
             @endforeach

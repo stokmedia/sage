@@ -19,8 +19,18 @@
 )
 
 @php ($productClass = '')
+@php ($status = '')
+
 @if (!empty($product->display_price->is_sale))
+
 	@php ($productClass = 'is-sale')
+	@php ($status = App::getSiteTranslations()->selected_product['product_states']['sale'] ?? '')
+
+@elseif (!empty($product->is_sold_out))
+
+	@php ($productClass = 'is-oos')
+	@php ($status = App::getSiteTranslations()->selected_product['product_states']['out_of_stock'] ?? '')
+
 @endif
 
 @if (!empty($isSlider))
@@ -28,9 +38,14 @@
 		<a href="{{ get_the_permalink( $post ) }}" class="grid-item">
 			<div class="product is-small p-0 {{ $productClass }}">
 				<div class="product-wrapper bg-white d-block">
-				<figure class="product-image">
-					@include('partials.product-images', $itemParam )
-				</figure>
+
+					@if (!empty($status))
+					<div class="product-status text-center"><span>{{ $status }}</span></div>
+					@endif
+
+					<figure class="product-image">
+						@include('partials.product-images', $itemParam )
+					</figure>
 				</div>
 				<div class="product-details bg-white d-block text-center">
 					<div class="product-name h4">{{ $post->post_title }}</div>
@@ -45,6 +60,11 @@
 
 	<div class="product {{ $productClass }}">
 		<a href="{{ get_the_permalink( $post ) }}" class="product-wrapper bg-white d-block">
+
+			@if (!empty($status))
+			<div class="product-status text-center"><span>{{ $status }}</span></div>
+			@endif
+
 			<figure class="product-image">
 				@include('partials.product-images', $itemParam)
 			</figure>
