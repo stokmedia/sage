@@ -41,10 +41,11 @@ trait Content
             $functionName = 'cms_' . str_replace( '-', '_', $content[ 'acf_fc_layout' ] );
 
             if ( method_exists( __CLASS__, $functionName ) ) {
+                $id++;
+                $content['id'] = $id;
                 $thisContent = (object) self::$functionName( $content );
 
                 if ( !empty( $thisContent ) ) {
-                    $id++;
                     $thisContent->id = $id;
                     $thisContent->is_h1 = $id === 1;
                     $thisContent->classes = self::section_layout_classes( 
@@ -161,11 +162,16 @@ trait Content
     public static function cms_hero_banner( $data )
     {
         $newData = (object)$data;
+        $lazyClass = '';
+        if($newData->id != 1) {
+            $lazyClass = ' lazy';
+        }
+
         $hasContent = true;
         $image = null;
         $imageMobile = null;
         $imgAttr = [
-            'class' => 'hero-image',
+            'class' => 'hero-image'.$lazyClass,
             'width' => null,
             'height' => null
         ];
@@ -260,8 +266,8 @@ trait Content
         $allIDs = array_merge( $original, ( $fill ?? [ ]) );
         $instaImages = array_map( function ( $id ) {
             return (object)[
-                'image_small' => wp_get_attachment_image( get_post_thumbnail_id( $id ), 'square-small' ),
-                'image_large' => wp_get_attachment_image( get_post_thumbnail_id( $id ), 'large' ),
+                'image_small' => wp_get_attachment_image( get_post_thumbnail_id( $id ), 'square-small lazy' ),
+                'image_large' => wp_get_attachment_image( get_post_thumbnail_id( $id ), 'large lazy' ),
                 'link' => get_post_meta( $id, 'instagram_link', true )
             ];
         }, $allIDs );
@@ -372,6 +378,10 @@ trait Content
         $newData = (object)$data;
 
         $items = self::getPromoData( $newData );
+        // Add lazy load class
+        foreach ($items as $key => $item) {
+            $items[$key]->image = str_replace(array('class="', 'src="'), array('class="lazy ', 'data-src="'), $item->image);
+        }
 
         return (object)[
             'acf_fc_layout' => $newData->acf_fc_layout,

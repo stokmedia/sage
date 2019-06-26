@@ -67,4 +67,6 @@ jQuery(document).ready(() => {
     lazyLoadInstance.update();
   }
 
+  window.lazyLoadInstance = lazyLoadInstance;
+
 });

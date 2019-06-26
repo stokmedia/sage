@@ -13,9 +13,9 @@
                                 <li>
                                     <a href="{{ $link['url']  }}" target="_blank" rel="nofollow noreferrer">
                                         @if($link['media'] === 'instagram')
-                                            <img src="@asset('images/icon/icon-insta.svg')" class="" alt="">
+                                            <img data-src="@asset('images/icon/icon-insta.svg')" class="lazy" alt="">
                                         @else
-                                            <img src="@asset('images/icon/icon-facebook.svg')" class="" alt="">
+                                            <img data-src="@asset('images/icon/icon-facebook.svg')" class="lazy" alt="">
                                         @endif
                                     </a>
                                 </li>
@@ -94,9 +94,9 @@
                             <li>
                                 <a href="{{ $link['url']  }}" target="_blank" rel="nofollow noreferrer">
                                     @if($link['media'] === 'instagram')
-                                        <img src="@asset('images/icon/icon-insta.svg')" class="" alt="">
+                                        <img data-src="@asset('images/icon/icon-insta.svg')" class="lazy" alt="">
                                     @else
-                                        <img src="@asset('images/icon/icon-facebook.svg')" class="" alt="">
+                                        <img data-src="@asset('images/icon/icon-facebook.svg')" class="lazy" alt="">
                                     @endif
                                 </a>
                             </li>

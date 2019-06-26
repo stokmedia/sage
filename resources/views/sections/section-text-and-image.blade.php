@@ -2,7 +2,7 @@
     <section class="section fifty-fifty-section  {{ $section->classes ?? '' }}">
         <div class="row fifty-fifty mx-0 {{ ($section->orderClass == 'order-md-2') ? 'is-text-first' : 'is-image-first'  }}">
 
-            <div class="fifty-fifty-item image col-md-6 p-0 order-1 {{ $section->orderClass }}" style="background: url({{ $section->image ?? '' }}) no-repeat center/cover white;"></div>
+            <div class="fifty-fifty-item image col-md-6 p-0 order-1 lazy {{ $section->orderClass }}" style="background: url({{ $section->image ?? '' }}) no-repeat center/cover white;"></div>
 
             <div class="fifty-fifty-item bg-lightgreen d-flex align-items-center col-md-6 order-2 order-md-1 p-4 pb-5 p-md-0 {{ ($section->orderClass == 'order-md-2') ? 'justify-content-end' : 'justify-content-start'  }}">
                 <div class="fifty-fifty-content">

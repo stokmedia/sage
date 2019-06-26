@@ -16,7 +16,7 @@ trait ProductData
     	
     	$data = (object) [];
     	$data->price = $product->getPrice();
-    	$data->images = $product->getAllProductImages();
+    	$data->images = $product->getAllProductImages();//pr($data->images);
 		$data->is_bundle = $product->isBundle();
 		$data->sizes_available = $product->sizesAvailable();
 		$data->product_meta = (object) $product->product_meta;
