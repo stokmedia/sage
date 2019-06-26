@@ -110,6 +110,17 @@ class Helper {
         return $arr[ $pos ];
     }
 
-
+    /**
+     * Explode string to array 
+     * Allowed functionName value is explode and preg_split only
+     * 
+     * @param $delimeter string, $text string, $functionName string
+     * @return array
+     */
+    public static function sp_split_string( $delimeter, $text, $functionName='explode' ) {
+        return array_map( function($item) {
+            return trim($item);
+        }, $functionName( $delimeter, $text) );
+    }
 
 }

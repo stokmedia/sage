@@ -1265,6 +1265,80 @@
             "mime_types": ""
         },
         {
+            "key": "field_5d1365e6dac3d",
+            "label": "Chart content",
+            "name": "size_guide_chart_content",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5d1368dcd7ebe",
+                    "label": "Chart X",
+                    "name": "chart_x",
+                    "type": "text",
+                    "instructions": "Separate with semicolon",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d1368f7d7ebf",
+                    "label": "Chart Y",
+                    "name": "chart_y",
+                    "type": "text",
+                    "instructions": "Separate with semicolon",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d136917d7ec0",
+                    "label": "Content",
+                    "name": "content",
+                    "type": "textarea",
+                    "instructions": "You can use the ff. characters to separate each content <br\/><br>\r\nComma (,) - to separate each cell content. <br\/><br>\r\nPipe (|) - to separate each column. <br\/><br>\r\nNewline (enter) - to separate each row",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
             "key": "field_5d07670743592",
             "label": "Page Section Settings",
             "name": "",
@@ -1473,5 +1547,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561371103
+    "modified": 1561553687
 }

@@ -23,7 +23,8 @@ trait General
     public static function getSizeGuideData()
     {
         return (object) [
-            'image' => wp_get_attachment_image_url( get_field( 'size_guide_image', Helper::current_lang() ), 'full' )
+            'image' => wp_get_attachment_image_url( get_field( 'size_guide_image', Helper::current_lang() ), 'full' ),
+            'chart' => self::getSizeGuideChart()
         ];
     }
     
@@ -94,5 +95,52 @@ trait General
             return __( 'Not Found', 'sage' );
         }
         return get_the_title();
-    }    
+    }
+    
+    public static function getSizeGuideChart()
+    {   
+        $sizeGuideContent = get_field( 'size_guide_chart_content', Helper::current_lang() );
+        $chartX = !empty($sizeGuideContent['chart_x']) ? $sizeGuideContent['chart_x'] : '';
+        $chartY = !empty($sizeGuideContent['chart_y']) ? $sizeGuideContent['chart_y'] : '';
+        $content = !empty($sizeGuideContent['content']) ? $sizeGuideContent['content'] : '';
+
+        // Parse header X to array
+        $headerX = Helper::sp_split_string( ';', $chartX );
+ 
+        // Parse header Y to array
+        $headerY = Helper::sp_split_string( ';', $chartY );
+
+        // Parse content value to array
+        $contentRow = Helper::sp_split_string( '/<br[^>]*>/i', $content, 'preg_split' );
+
+        // Return no content
+        if (empty($headerY) || empty($contentRow)) {
+            return false;
+        }
+
+        $contentArr = [];
+
+        foreach ($headerY as $key=>$val) {
+            $tempRowValue = [];
+
+            if (!empty($contentRow[ $key ])) {
+
+                $contentColumn = Helper::sp_split_string( '|', $contentRow[ $key ] );
+
+                foreach ($headerX as $i=>$col) {
+                    if (empty($contentColumn[ $i ])) { continue; }
+                    $tempRowValue[ $col ] = Helper::sp_split_string( ',', $contentColumn[ $i ] );
+                }
+
+            }
+
+            $contentArr[ $val ] = $tempRowValue;
+        }
+
+        return (object) [
+            'header_x' => $headerX,
+            'header_y' => $headerY,
+            'content' => $contentArr
+        ];
+    }
 }
