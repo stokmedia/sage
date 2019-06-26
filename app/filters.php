@@ -256,11 +256,11 @@ add_filter( 'rest_silk_products_query', function ( $query_vars, $request ) {
     //     $term = get_term_by('id', $term_id, 'silk_category');
 
     //     /** The taxonomy we want to parse */
-    //     $taxonomy = "silk_category";
+        $taxonomy = "silk_category";
 
     //     /** Get terms that have children */
-    //     $hierarchy = _get_term_hierarchy($taxonomy);
-
+        $hierarchy = _get_term_hierarchy($taxonomy);
+        // pr($hierarchy);
     //     $termSlug = $term->slug;
 
     //     while( !empty($term->parent) ) {

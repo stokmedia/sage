@@ -146,7 +146,7 @@
                                 {{ $translation->sort['title_desc'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
-                              <input id="orderby_pop_asc--{{ $current_category }}" value="pop_asc--{{ $current_category }}" name="orderby" type="radio" class="silk-hash-orderby">
+                              <input id="orderby_pop_asc--{{ $current_category->slug }}" value="pop_asc--{{ $current_category->slug }}" name="orderby" type="radio" class="silk-hash-orderby">
                                 {{ $translation->sort['popular'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
@@ -181,7 +181,7 @@
       <div class="products d-flex flex-wrap justify-content-center silk-product-item-holder"></div>
       <div class="spinner text-center position-relative">
         <div class="spinner-btn">
-        <button class="btn btn-lg btn-primary silk-loadmore {{ ($show_load_more_button) ? null : 'd-none' }}" data-currentpage="1" data-currentcategory="{{ $current_category }}" type="button">{{ $translation->load_more }}</button>
+        <button class="btn btn-lg btn-primary silk-loadmore {{ ($show_load_more_button) ? null : 'd-none' }}" data-currentpage="1" data-currentcategory="{{ $current_category->slug }}" data-currentterm_id="{{ $current_category->term_id }}" type="button">{{ $translation->load_more }}</button>
         </div>
         <div class="spinner-border silk-spinner d-none" role="status">
           <span class="sr-only">Loading...</span>

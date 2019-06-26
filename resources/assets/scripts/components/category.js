@@ -63,6 +63,7 @@ $('.silk-hash-filter').click(function () {
 	} else {
 		filterUrl += 'category=' + $('.silk-loadmore').data('currentcategory');
 	}
+
 	if (colorList != '') {
 		if (filterUrl != '') {
 			filterUrl += '&';
@@ -93,12 +94,13 @@ function silkProductLoad(nextPage, isFilter = '') {
 
 	var ajaxUrl = $('#silkFilterForm').data('ajaxurl');
 	var currentCategory = $('.silk-loadmore').data('currentcategory');
+	var currentTermId = $('.silk-loadmore').data('currentterm_id');
 	var hashQueryString = window.location.hash;
 	hashQueryString = hashQueryString.replace('#', '&');
 	if (hashQueryString != '' && isFilter == true) {
-		ajaxUrl = ajaxUrl + hashQueryString;
+		ajaxUrl = ajaxUrl + hashQueryString + '&termid=' + currentTermId;
 	} else {
-		ajaxUrl = ajaxUrl + '&category=' + currentCategory;
+		ajaxUrl = ajaxUrl + '&category=' + currentCategory + '&termid=' + currentTermId;
 	}
 
 	console.log(ajaxUrl + '&page=' + nextPage);

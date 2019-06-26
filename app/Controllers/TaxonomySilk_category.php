@@ -94,7 +94,7 @@ class TaxonomySilk_category extends Controller
 
     public function currentCategory()
     {
-        return get_queried_object()->slug;
+        return get_queried_object();
     }
 
     public function currentCategoryUrl()
