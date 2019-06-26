@@ -80,7 +80,8 @@ add_filter( 'tiny_mce_before_init', function( $initArray ) {
 			'wrapper' => false,
 			
 		),  
-	);  
+    );  
+    
     $initArray['style_formats'] = wp_json_encode( $styleFormats );  
     
     // Update Indent Format style
@@ -93,7 +94,18 @@ add_filter( 'tiny_mce_before_init', function( $initArray ) {
 	
 	return $initArray;
   
-}  );  
+}  );
+
+
+// Add data-src to Images with lazy load
+add_filter( 'wp_get_attachment_image_attributes', function ( $attr ) {
+
+    if ( isset( $attr['class'] ) && in_array( 'lazy', explode( ' ', $attr['class'] ) ) ) {
+        $attr['data-src'] = isset($attr['src']) ? $attr['src'] : '';
+    }
+ 
+    return $attr;
+} );
 
 
 

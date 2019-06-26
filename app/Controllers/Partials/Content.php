@@ -87,7 +87,7 @@ trait Content
             $postLink = (object)[
                 'url' => null,
                 'title' => $data->item_link_text ?? '',
-                'target' => '_blank',
+                'target' => '',
             ];
 
             if ( $item->get_content_from === 'category' && $item->category ) {

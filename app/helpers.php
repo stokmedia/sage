@@ -148,6 +148,7 @@ function silk_product_filter() {
     $priceList = $_SESSION['esc_store']['pricelist'];
 
     // pr( $_GET );
+    $filters = array();
     $meta = array();
 
     // Set Filter for Size
@@ -173,22 +174,27 @@ function silk_product_filter() {
 
     // Set Filter for Category
     if (isset($_GET['category']) && !empty($_GET['category'])) {
-        $meta[] = array(
-            'key' => 'canonical_category',
-            'value' => $_GET['category'],
-            'compare' => 'IN'
+        // $meta[] = array(
+        //     'key' => 'canonical_category',
+        //     'value' => $_GET['category'],
+        //     'compare' => 'IN'
+        // );
+        $categoryList = explode(',', $_GET['category']);
+        $filters['tax_query'] = array(
+            array(
+                'taxonomy'     => 'silk_category',
+                'field'     => 'slug',
+                'terms'     => $categoryList
+            )
         );
     }
-    // $args['tax_query'] = array(
-    //     array(
-    //         'taxonomy'     => $taxonomy,
-    //         'field'     => 'term_id',
-    //         'terms'     => $term
-    //     )
-    // );
 
     if (sizeof($meta) > 0) {
-        return $meta;
+        $filters['meta_query'] = $meta;
+    }
+
+    if (sizeof($filters) > 0) {
+        return $filters;
     }
 
     return false;

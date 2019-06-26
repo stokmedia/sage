@@ -201,7 +201,7 @@ add_filter( 'rest_silk_products_collection_params', function ( $params ) {
 }, 10, 1 );
 
 add_filter( 'rest_query_vars', function ( $valid_vars ) {
-    return array_merge( $valid_vars, array( 'meta_query' ) );
+    return array_merge( $valid_vars, array( 'meta_query', 'tax_query' ) );
 } );
 
 /**
@@ -210,7 +210,12 @@ add_filter( 'rest_query_vars', function ( $valid_vars ) {
 add_filter( 'rest_silk_products_query', function ( $query_vars, $request ) {
 
     $filter_query = silk_product_filter($request);
-    $query_vars['meta_query'] = $filter_query;
+    if (isset($filter_query['meta_query'])) {
+        $query_vars['meta_query'] = $filter_query['meta_query'];
+    }
+    if (isset($filter_query['tax_query'])) {
+        $query_vars['tax_query'] = $filter_query['tax_query'];
+    }
 
     $orderby = silk_product_orderby();
     if (isset($orderby['orderby'])) {
@@ -220,10 +225,10 @@ add_filter( 'rest_silk_products_query', function ( $query_vars, $request ) {
             $query_vars["meta_key"] = $orderby['meta_key'];
         }
     } else {
-        $category = explode(',', $_GET['category']);
-        $query_vars['meta_key'] = 'category_order_' . $category[0];
-        $query_vars['orderby'] = 'meta_value';
-        $query_vars['order'] = 'asc';
+        // $category = explode(',', $_GET['category']);
+        // $query_vars['meta_key'] = 'category_order_' . $category[0];
+        // $query_vars['orderby'] = 'meta_value';
+        // $query_vars['order'] = 'asc';
     }
     // pr($filter_query);
     // pr($query_vars);
