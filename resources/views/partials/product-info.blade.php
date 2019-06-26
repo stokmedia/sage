@@ -37,16 +37,20 @@
             {{-- Selector: Color --}}
             @if (!empty($product->colors))
                 <ul class="color-selector js-plus-item d-lg-inline-block d-flex flex-wrap justify-content-center align-items-center w-100">
+                    @php ($has_swatch = false)
                     @foreach ($product->colors as $color)
-                        <li class="mx-2 item d-none {{ $color->product === $product->product_meta->product ? 'is-active' : '' }}">
-                            <a href="{{ $color->product_uri }}" class="custom-control custom-checkbox" title="{{ $color->swatch->desc ?? '' }}">
-                                <input id="color-check[{{ $loop->iteration }}]" class="custom-control-input">
-                                <label class="custom-control-label" for="color-check[{{ $loop->iteration }}]" style="{{ $color->swatch->background ?? '' }}"></label>
-                            </a>
-                        </li>
+                        @if(!empty($color->swatch->background))
+                            @php ($has_swatch = true)
+                            <li class="mx-2 item d-none {{ $color->product === $product->product_meta->product ? 'is-active' : '' }}">
+                                <a href="{{ $color->product_uri }}" class="custom-control custom-checkbox" title="{{ $color->swatch->desc ?? '' }}">
+                                    <input id="color-check[{{ $loop->iteration }}]" class="custom-control-input">
+                                    <label class="custom-control-label" for="color-check[{{ $loop->iteration }}]" style="{{ $color->swatch->background ?? '' }}"></label>
+                                </a>
+                            </li>
+                        @endif
                     @endforeach
 
-                    @if (count($product->colors) > 5)
+                    @if ($has_swatch && count($product->colors) > 5)
                         <li class="mx-2 js-plus-item-btn">
                             <div class="custom-control custom-checkbox">
                                 <label class="align-items-center border custom-control-label d-flex justify-content-center" for="plusItem">+5</label>
