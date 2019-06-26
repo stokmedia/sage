@@ -1,10 +1,18 @@
 .breadcrumb-vertical {
   .breadcrumb {
     position: absolute;
-    top: 6.25rem;
+    top: 4.375rem;
     right: 1.875rem;
     margin-bottom: 0;
     z-index: 2;
     transform-origin: right;
+  }
+}
+
+.admin-bar {
+  .breadcrumb-vertical {
+    .breadcrumb {
+      top: 6.25rem;
+    }
   }
 }
