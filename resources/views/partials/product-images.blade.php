@@ -1,4 +1,4 @@
-@if ($images[$size])
+@if (!empty($images[$size]))
 	@foreach($images[$size] as $image)
 	    @if ($loop->index >= $limit)
 	        @break
