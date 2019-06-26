@@ -18296,22 +18296,23 @@ blockquote footer::before,
   margin-top: 0;
   font-size: 0.75rem;
   line-height: 1.25rem;
+  white-space: nowrap;
 }
 
-/* line 110, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 111, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
   background-color: #031532;
   border: 0.0625rem solid #031532;
 }
 
-/* line 114, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 115, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:checked ~ .custom-control-label span {
   color: #fff;
 }
 
-/* line 120, resources/assets/styles/skhoop/components/_picker.scss */
+/* line 121, resources/assets/styles/skhoop/components/_picker.scss */
 
 .size-selector .custom-checkbox .custom-control-input:disabled ~ .custom-control-label::before {
   content: "";
