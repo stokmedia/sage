@@ -220,8 +220,10 @@ add_filter( 'rest_silk_products_query', function ( $query_vars, $request ) {
             $query_vars["meta_key"] = $orderby['meta_key'];
         }
     } else {
-        $query_vars["orderby"] = "title";
-        $query_vars["order"] = "asc";
+        $category = explode(',', $_GET['category']);
+        $query_vars['meta_key'] = 'category_order_' . $category[0];
+        $query_vars['orderby'] = 'meta_value';
+        $query_vars['order'] = 'asc';
     }
     // pr($filter_query);
     // pr($query_vars);

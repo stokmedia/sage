@@ -179,6 +179,13 @@ function silk_product_filter() {
             'compare' => 'IN'
         );
     }
+    // $args['tax_query'] = array(
+    //     array(
+    //         'taxonomy'     => $taxonomy,
+    //         'field'     => 'term_id',
+    //         'terms'     => $term
+    //     )
+    // );
 
     if (sizeof($meta) > 0) {
         return $meta;
