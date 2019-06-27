@@ -19981,8 +19981,21 @@ html.is-flickity-fullscreen {
   }
 }
 
+/* line 235, resources/assets/styles/skhoop/layouts/_header.scss */
+
+.navbar-nav .nav-item .nav-link-cart .cart-item-count span,
+.navbar-nav .banner .nav li .nav-link-cart .cart-item-count span,
+.banner .nav .navbar-nav li .nav-link-cart .cart-item-count span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+}
+
 @media (max-width: 991.98px) {
-  /* line 241, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 245, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-collapse {
     display: block;
@@ -20005,27 +20018,27 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 241, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 245, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .navbar-collapse {
     margin-top: 0 !important;
   }
 }
 
-/* line 264, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 268, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch {
   padding-bottom: 1.875rem;
 }
 
-/* line 267, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 271, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav {
   padding-top: 0;
   background-color: #b7cad0;
 }
 
-/* line 271, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 275, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li,
@@ -20033,7 +20046,7 @@ html.is-flickity-fullscreen {
   border-bottom: 1px solid #fff;
 }
 
-/* line 274, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 278, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item .btn-checkout,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li .btn-checkout,
@@ -20046,7 +20059,7 @@ html.is-flickity-fullscreen {
   text-transform: uppercase;
 }
 
-/* line 282, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 286, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .navbar-nav .nav-item .btn-checkout:hover,
 .navbar-collapse .navbar-nav-touch .navbar-nav .banner .nav li .btn-checkout:hover,
@@ -20059,7 +20072,7 @@ html.is-flickity-fullscreen {
   color: #031532;
 }
 
-/* line 292, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 296, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info {
   padding-top: 3.125rem;
@@ -20067,20 +20080,20 @@ html.is-flickity-fullscreen {
   background-color: #b7cad0;
 }
 
-/* line 298, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 302, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info .brand-footer img {
   max-width: 5.8125rem;
 }
 
-/* line 303, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 307, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .navbar-collapse .navbar-nav-touch .content-info .group-links {
   margin-top: 1.25rem;
 }
 
 @media (max-width: 991.98px) {
-  /* line 311, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 315, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-overlay {
     overflow: hidden !important;
@@ -20088,7 +20101,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (max-width: 991.98px) {
-  /* line 316, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 320, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-overlay:after {
     content: "";
@@ -20102,35 +20115,35 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 331, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 335, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout {
   display: none !important;
 }
 
 @media (max-width: 991.98px) {
-  /* line 331, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 335, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout {
     text-align: center;
   }
 }
 
-/* line 338, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 342, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-checkout {
   margin-bottom: 0;
 }
 
 @media (max-width: 991.98px) {
-  /* line 338, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 342, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout .navbar-checkout {
     padding-bottom: 1.1875rem;
   }
 }
 
-/* line 346, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 350, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-spacer {
   width: 12.5rem;
@@ -20138,7 +20151,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (max-width: 991.98px) {
-  /* line 346, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 350, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .nav-checkout .navbar-spacer {
     width: auto;
@@ -20146,7 +20159,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 356, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 360, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .nav-checkout .navbar-back {
   color: #031532;
@@ -20156,14 +20169,14 @@ html.is-flickity-fullscreen {
   text-decoration: underline;
 }
 
-/* line 368, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 372, resources/assets/styles/skhoop/layouts/_header.scss */
 
 .admin-bar .navbar.fixed-top {
   top: 2.875rem;
 }
 
 @media screen and (min-width: 783px) {
-  /* line 368, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 372, resources/assets/styles/skhoop/layouts/_header.scss */
 
   .admin-bar .navbar.fixed-top {
     top: 2rem;
@@ -20171,14 +20184,14 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 383, resources/assets/styles/skhoop/layouts/_header.scss */
+  /* line 387, resources/assets/styles/skhoop/layouts/_header.scss */
 
   body:not(.AndroidOS):not(.isApple) .navbar-helper .nav-item-cart:hover .cart {
     max-height: calc(100vh - 5rem);
   }
 }
 
-/* line 394, resources/assets/styles/skhoop/layouts/_header.scss */
+/* line 398, resources/assets/styles/skhoop/layouts/_header.scss */
 
 body.isApple .navbar .content-info .brand-container {
   margin-bottom: 5rem;
@@ -23423,7 +23436,7 @@ body.isApple .product-filter {
 
 .selected-product-slider .flickity-prev-next-button.previous {
   left: 0;
-  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOC41NTI0IDI1LjgxOTVDMTguNzg0IDI2LjA2MDIgMTkuMTY5NSAyNi4wNjAyIDE5LjQwOTEgMjUuODE5NUMxOS42NDA3IDI1LjU4NyAxOS42NDA3IDI1LjIwMDEgMTkuNDA5MSAyNC45NjgxTDE1LjA2NDkgMjAuNjA3SDI5LjQwMDJDMjkuNzM0NCAyMC42MDY0IDMwIDIwLjMzOTggMzAgMjAuMDA0M0MzMCAxOS42Njg5IDI5LjczNDQgMTkuMzkzNiAyOS40MDAyIDE5LjM5MzZIMTUuMDY0OUwxOS40MDkxIDE1LjA0MDZDMTkuNjQwNyAxNC43OTk5IDE5LjY0MDcgMTQuNDEyNCAxOS40MDkxIDE0LjE4MDVDMTkuMTY5NSAxMy45Mzk4IDE4Ljc4MzUgMTMuOTM5OCAxOC41NTI0IDE0LjE4MDVMMTMuMTc5OCAxOS41NzRDMTIuOTQwMSAxOS44MDY1IDEyLjk0MDEgMjAuMTkzNSAxMy4xNzk4IDIwLjQyNTRMMTguNTUyNCAyNS44MTk1WiIgZmlsbD0iIzFFMjAxRCIvPg0KPC9zdmc+DQo=) no-repeat center/contain white;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4LjU1MjQgMjUuODE5NUMxOC43ODQgMjYuMDYwMiAxOS4xNjk1IDI2LjA2MDIgMTkuNDA5MSAyNS44MTk1QzE5LjY0MDcgMjUuNTg3IDE5LjY0MDcgMjUuMjAwMSAxOS40MDkxIDI0Ljk2ODFMMTUuMDY0OSAyMC42MDdIMjkuNDAwMkMyOS43MzQ0IDIwLjYwNjQgMzAgMjAuMzM5OCAzMCAyMC4wMDQzQzMwIDE5LjY2ODkgMjkuNzM0NCAxOS4zOTM2IDI5LjQwMDIgMTkuMzkzNkgxNS4wNjQ5TDE5LjQwOTEgMTUuMDQwNkMxOS42NDA3IDE0Ljc5OTkgMTkuNjQwNyAxNC40MTI0IDE5LjQwOTEgMTQuMTgwNUMxOS4xNjk1IDEzLjkzOTggMTguNzgzNSAxMy45Mzk4IDE4LjU1MjQgMTQuMTgwNUwxMy4xNzk4IDE5LjU3NEMxMi45NDAxIDE5LjgwNjUgMTIuOTQwMSAyMC4xOTM1IDEzLjE3OTggMjAuNDI1NEwxOC41NTI0IDI1LjgxOTVaIiBmaWxsPSIjMUUyMDFEIi8+Cjwvc3ZnPgo=) no-repeat center/contain white;
 }
 
 /* line 90, resources/assets/styles/skhoop/sections/_selected-product.scss */

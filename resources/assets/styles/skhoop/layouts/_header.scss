@@ -231,6 +231,10 @@ $mobile-margin-top-menu: 3.75rem;
             top: -1rem;
             right: 0.3125rem;
           }
+
+          span {
+            @include center(both);
+          }
         }
       }
     }

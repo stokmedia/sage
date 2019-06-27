@@ -140,7 +140,8 @@ trait General
         return (object) [
             'header_x' => $headerX,
             'header_y' => $headerY,
-            'content' => $contentArr
+            'content' => $contentArr,
+            'has_content' => (array_filter($headerX) || array_filter($headerY) || array_filter($contentArr))
         ];
     }
 }

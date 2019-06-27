@@ -9,10 +9,10 @@
                     <div class="col-side"></div>
                     <div class="col-side">
                         <div class="instagram-info">
-                            <div class="btn-header d-flex justify-content-center">
+                            <div class="btn-header d-flex justify-content-center align-items-center">
                                 @if ($section->instagram_link->url && $section->instagram_link->title)
-                                    <a href="{{ $section->instagram_link->url }}" 
-                                        class="btn btn-sm btn-primary text-uppercase" 
+                                    <a href="{{ $section->instagram_link->url }}"
+                                        class="btn btn-sm btn-primary text-uppercase"
                                         target="{{ $section->instagram_link->target }}">{{ $section->instagram_link->title }}</a>
                                 @endif
 
@@ -79,7 +79,7 @@
                                     'image' => $section->instagram_images[ $i ],
                                     'isLarge' => false,
                                     'tileClass' => ''
-                                ] )                                  
+                                ] )
                             @endfor
                             @php $lastIndex = $i @endphp
 
@@ -94,16 +94,16 @@
                                         'tileClass' => ''
                                     ] )
                                 @endfor
-                                @php $lastIndex = $i @endphp  
-                                
+                                @php $lastIndex = $i @endphp
+
                             </div>
 
                             @include( 'partials.instagram-image', [
                                 'image' => $section->instagram_images[ $lastIndex ],
                                 'isLarge' => true,
                                 'tileClass' => 'is-three'
-                            ] )  
-                            
+                            ] )
+
                         </div>
                     </div>
                 </div>
@@ -117,13 +117,13 @@
                 <div class="btn-header">
                     @if ($section->title)
                         <h3 class="h3 mb-0">{{ $section->title }}</h3>
-                    @endif 
-                    
+                    @endif
+
                     @if ($section->instagram_link->url && $section->instagram_link->title)
-                        <a href="{{ $section->instagram_link->url }}" 
-                            class="btn btn-sm btn-primary text-uppercase" 
+                        <a href="{{ $section->instagram_link->url }}"
+                            class="btn btn-sm btn-primary text-uppercase"
                             target="{{ $section->instagram_link->target }}">{{ $section->instagram_link->title }}</a>
-                    @endif                    
+                    @endif
                 </div>
 
                 @if ($section->text)
@@ -137,14 +137,14 @@
             $isLarge = false;
             $isMobile = true;
             @endphp
-            
+
             <div class="instagram-col">
                 @foreach ($section->instagram_images as $image)
                     @if ($loop->iteration === 1)
                         <div class="row">
                             @include( 'partials.instagram-image' )
                         </div>
-                        
+
                     @elseif ($loop->iteration <= 5)
                         @if ($loop->iteration % 2 === 0)
                         <div class="row">
@@ -153,11 +153,11 @@
                             @include( 'partials.instagram-image' )
 
                         @if ($loop->iteration % 2 === 1)
-                        </div>                
+                        </div>
                         @endif
                     @else
                         @if ($loop->iteration % 4 === 2)
-                        <div class="row">            
+                        <div class="row">
                         @endif
 
                             @include( 'partials.instagram-image' )
