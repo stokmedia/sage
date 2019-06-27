@@ -185,7 +185,7 @@
 
   <section class="section product-listing">
     <div class="container p-0">
-      <div class="bg-image m-auto rounded-circle lazy" data-bg="url({{ $background_image->image }})"></div>
+      <div class="bg-image m-auto rounded-circle lazy d-none" data-bg="url({{ $background_image->image }})"></div>
       <div class="products d-flex flex-wrap justify-content-center silk-product-item-holder"></div>
       <div class="spinner text-center position-relative">
         <div class="spinner-btn">

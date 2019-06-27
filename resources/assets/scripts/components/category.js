@@ -108,7 +108,7 @@ function silkProductLoad(nextPage, isFilter = '') {
 		url: ajaxUrl + '&page=' + nextPage,
 		type: 'GET',
 		beforeSend: function () {
-			$('.silk-loadmore').hide();
+			$('.silk-loadmore').addClass('d-none');
 			$('.silk-spinner').removeClass('d-none');
 		},
 		error: function (data, textStatus) {
@@ -117,7 +117,7 @@ function silkProductLoad(nextPage, isFilter = '') {
 		},
 		success: function (data, textStatus, jqXHR) {
 			if (data) {
-				$('.silk-loadmore').show();
+				$('.silk-loadmore').removeClass('d-none');
 				$('.silk-spinner').addClass('d-none');
 
 				// Need to clear list if Filter is trigger
@@ -125,24 +125,31 @@ function silkProductLoad(nextPage, isFilter = '') {
 					$('.silk-product-item-holder').html('');
 				}
 
-				var count = 1;
-				var productItem = '';
-				$(data).each(function (key, val) {
-					productItem = val.product_item;
-					if (count <= 3 && nextPage == 1) {
-						productItem = productItem.replace('is-small', 'is-big');
-					}
-					$('.silk-product-item-holder').append(productItem);
-					count++;
-				});
+				if($(data).length > 0) {
+					var count = 1;
+					var productItem = '';
+					$(data).each(function (key, val) {
+						productItem = val.product_item;
+						if (count <= 3 && nextPage == 1) {
+							productItem = productItem.replace('is-small', 'is-big');
+						}
+						$('.silk-product-item-holder').append(productItem);
+						count++;
+					});
 
-				window.lazyLoadInstance.update();
+					window.lazyLoadInstance.update();
+
+					// Show Product Bg
+					if ($('.bg-image').hasClass('d-none')) {
+						$('.bg-image').removeClass('d-none');
+					}
+				}
 
 				var totalPage = parseInt(jqXHR.getResponseHeader('X-WP-TotalPages'), 10);
 				if ($('.silk-loadmore').data('currentpage') == totalPage || data.length == 0)
-					$('.silk-loadmore').hide(); // if last page, remove the button
+					$('.silk-loadmore').addClass('d-none'); // if last page, remove the button
 			} else {
-				$('.silk-loadmore').hide(); // if no data, remove the button as well
+				$('.silk-loadmore').addClass('d-none'); // if no data, remove the button as well
 			}
 		},
 	});
