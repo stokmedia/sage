@@ -29,8 +29,13 @@ class PopulateImagesHelper
 
     function __construct()
     {
+        /* End process if WP_DEBUG is not defined or set to false */
+        if (WP_DEBUG !== true) {
+            return;
+        }
+
         /* End process if variable local_path and src_path is not defined */
-        if( empty($this->local_path) && empty($this->src_path) ) {
+        if (empty($this->local_path) && empty($this->src_path)) {
             return;
         }
 
