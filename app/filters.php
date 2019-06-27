@@ -121,41 +121,9 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
  */
 add_filter( 'pre_get_posts', function ( $query ) {
 
-    $taxonomy = 'silk_category';
-    if ( isset( $query->query[ $taxonomy ] ) && $query->is_main_query() ) {
-
-        $term = $query->query[ $taxonomy ];
-
-        $productListingCount = get_field('settings_product_listing_count', 'global');
-        $productListingCount = (!empty($productListingCount)) ? $productListingCount : '-1';
-        $query->set( 'posts_per_page', $productListingCount );
-
-        $meta = silk_product_filter();
-        // If no filter is selected default category to current one
-        // This will prevent inconsitency with Rest API
-        if (!is_array($meta)) {
-            $meta = array(
-                array(
-                    'key' => 'canonical_category',
-                    'value' => $term,
-                    'compare' => 'IN'
-                )
-            );
-        }
-        $query->set( 'meta_query', $meta );
-
-        $orderby = silk_product_orderby();
-        if (isset($orderby['orderby'])) {
-            $query->set('orderby', $orderby['orderby']);
-            $query->set( 'order', $orderby['order'] );
-            if (isset($orderby['meta_key'])) {
-                $query->set('meta_key', $orderby['meta_key']);    
-            }
-        } else {
-            $query->set('orderby', 'title');
-            $query->set( 'order', 'asc' );
-        }
-    }
+    /**
+    *  Not being used anymore but still loading by default.
+    */
 
 });
 
@@ -209,74 +177,17 @@ add_filter( 'rest_query_vars', function ( $valid_vars ) {
  */
 add_filter( 'rest_silk_products_query', function ( $query_vars, $request ) {
 
+    // Category filter from Centra
     $filter_query = silk_product_filter($request);
-    if (isset($filter_query['meta_query'])) {
-        $query_vars['meta_query'] = $filter_query['meta_query'];
-    }
-    if (isset($filter_query['tax_query'])) {
-        $query_vars['tax_query'] = $filter_query['tax_query'];
+    if (is_array($filter_query)) {
+        $query_vars = array_merge($query_vars, $filter_query);
     }
 
-    $orderby = silk_product_orderby();
-    if (isset($orderby['orderby'])) {
-        $query_vars["orderby"] = $orderby['orderby'];
-        $query_vars["order"] = $orderby['order'];
-        if (isset($orderby['meta_key'])) {  
-            $query_vars["meta_key"] = $orderby['meta_key'];
-        }
-    } else {
-        // $category = explode(',', $_GET['category']);
-        // $query_vars['meta_key'] = 'category_order_' . $category[0];
-        // $query_vars['orderby'] = 'meta_value';
-        // $query_vars['order'] = 'asc';
+    // Category sort from Centra
+    $orderby = silk_product_orderby($request);
+    if (is_array($orderby)) {
+        $query_vars = array_merge($query_vars, $orderby);
     }
-    // pr($filter_query);
-    // pr($query_vars);
-    // die;
-
-
-    /**
-    * Not sure if we can delete this already. 
-    */
-    // $orderby = $request->get_param('orderby');
-    // if (isset($orderby) && $orderby === 'price_low') {
-    //     // TODO: We should put these inside the Esc Plugin instead.
-    //     // eg: EscConnect::getMarket(), EscConnect::getPricelist();
-    //     $market = $_SESSION['esc_store']['market'];
-    //     $priceList = $_SESSION['esc_store']['pricelist'];
-
-    //     // TODO: Add support for asc/desc
-    //     $query_vars["orderby"] = "meta_value_num";
-    //     $query_vars['meta_key'] = 'price_' . $market . '_' . $priceList;
-    //     $query_vars["order"] = "asc";
-    // } else {
-    //     // TODO: Make REST API and regular product listing use same query
-    //     $term_id = $request->get_param('silk_category')[0];
-
-    //     $term = get_term_by('id', $term_id, 'silk_category');
-
-    //     /** The taxonomy we want to parse */
-        $taxonomy = "silk_category";
-
-    //     /** Get terms that have children */
-        $hierarchy = _get_term_hierarchy($taxonomy);
-        // pr($hierarchy);
-    //     $termSlug = $term->slug;
-
-    //     while( !empty($term->parent) ) {
-    //         $term = get_term_by('id', $term->parent, 'silk_category');
-    //         $termSlug =  $term->slug . '/' . $termSlug;
-    //     }
-
-    //     if( $$termSlug ) {
-    //         // Category sort from Centra
-    //         if( !empty( $term ) ) {
-    //             $query_vars["orderby"] = "meta_value_num";
-    //             $query_vars['meta_key'] = 'category_order_' . $term->slug;
-    //             $query_vars["order"] = "asc";
-    //         }
-    //     }
-    // }
 
     return $query_vars;
 

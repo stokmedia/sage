@@ -63,71 +63,79 @@
             </div>
             <div class="filter-container">
               <div class="row ">
-                  <div class="column">
-                    <div class="h4 title js-accordion-toggle is-open">{{ $translation->size }}</div>
-                    <div class="js-accordion-body">
-                      <ul class="size-selector">
-                        @foreach ($product_size as $size)
-                          @php $checked = '' @endphp
-                          @if(isset($filter_data['size']) && in_array($size, $filter_data['size']))
-                            @php $checked = 'checked="checked"' @endphp
-                          @endif
-
-                          <li>
-                            <div class="custom-control custom-checkbox">
-                            <input name="size" {{ $checked }} type="checkbox"  id="sizeCheck{{ $size }}" class="custom-control-input silk-hash-filter" value="{{ strtolower($size) }}">
-                              <label class="custom-control-label" for="sizeCheck{{ $size }}">
-                                  <span>{{ $size }}</span>
-                              </label>
-                            </div>
-                          </li>
-                        @endforeach
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="h4 title js-accordion-toggle">{{ $translation->color }}</div>
-                    <div class="js-accordion-body">
-                      <ul class="color-selector">
-                        @foreach ($product_color as $color)
+                @if(sizeof($product_size) > 0)
+                <div class="column">
+                  <div class="h4 title js-accordion-toggle is-open">{{ $translation->size }}</div>
+                  <div class="js-accordion-body">
+                    <ul class="size-selector">
+                      @foreach ($product_size as $size)
                         @php $checked = '' @endphp
-                        @if(isset($filter_data['color']) && in_array($color['Name'], $filter_data['color']))
+                        @if(isset($filter_data['size']) && in_array($size, $filter_data['size']))
                           @php $checked = 'checked="checked"' @endphp
                         @endif
 
                         <li>
                           <div class="custom-control custom-checkbox">
-                            <input name="color" {{ $checked }} type="checkbox" id="colorCheck{{ $color['slug'] }}" value="{{ $color['slug'] }}" class="custom-control-input silk-hash-filter">
-                            <label class="custom-control-label" for="colorCheck{{ $color['slug'] }}" 
-                              style="{{ $color['Image'] ? 'background-image:url('.$color['Image'].')' : 'background-color:'.$color['Hex'] }};"></label>
-                          </div>
-                        </li>
-                        @endforeach
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="h4 title js-accordion-toggle">{{ $translation->category }}</div>
-                    <div class="js-accordion-body">
-                      <ul class="category-selector">
-                        @foreach ($category_list as $category)
-                        @php $checked = '' @endphp
-                        @if(isset($filter_data['category']) && in_array($category->slug, $filter_data['category']))
-                          @php $checked = 'checked="checked"' @endphp
-                        @endif
-
-                        <li>
-                          <div class="custom-control custom-control-lg custom-checkbox">
-                            <input name="category" {{ $checked }} id="customCheck{{ $category->term_id }}" value="{{ $category->slug }}" class="custom-control-input silk-hash-filter" type="checkbox">
-                            <label class="custom-control-label" for="customCheck{{ $category->term_id }}">
-                              <span>{{ $category->name }}</span>
+                          <input name="size" {{ $checked }} type="checkbox"  id="sizeCheck{{ $size }}" class="custom-control-input silk-hash-filter" value="{{ strtolower($size) }}">
+                            <label class="custom-control-label" for="sizeCheck{{ $size }}">
+                                <span>{{ $size }}</span>
                             </label>
                           </div>
                         </li>
-                        @endforeach
-                      </ul>
-                    </div>
+                      @endforeach
+                    </ul>
                   </div>
+                </div>
+                @endif
+
+                @if(sizeof($product_color) > 0)
+                <div class="column">
+                  <div class="h4 title js-accordion-toggle">{{ $translation->color }}</div>
+                  <div class="js-accordion-body">
+                    <ul class="color-selector">
+                      @foreach ($product_color as $color)
+                      @php $checked = '' @endphp
+                      @if(isset($filter_data['color']) && in_array($color['Name'], $filter_data['color']))
+                        @php $checked = 'checked="checked"' @endphp
+                      @endif
+
+                      <li>
+                        <div class="custom-control custom-checkbox">
+                          <input name="color" {{ $checked }} type="checkbox" id="colorCheck{{ $color['slug'] }}" value="{{ $color['slug'] }}" class="custom-control-input silk-hash-filter">
+                          <label class="custom-control-label" for="colorCheck{{ $color['slug'] }}" 
+                            style="{{ $color['Image'] ? 'background-image:url('.$color['Image'].')' : 'background-color:'.$color['Hex'] }};"></label>
+                        </div>
+                      </li>
+                      @endforeach
+                    </ul>
+                  </div>
+                </div>
+                @endif
+
+                @if(sizeof($category_list) > 0)
+                <div class="column">
+                  <div class="h4 title js-accordion-toggle">{{ $translation->category }}</div>
+                  <div class="js-accordion-body">
+                    <ul class="category-selector">
+                      @foreach ($category_list as $category)
+                      @php $checked = '' @endphp
+                      @if(isset($filter_data['category']) && in_array($category->slug, $filter_data['category']))
+                        @php $checked = 'checked="checked"' @endphp
+                      @endif
+
+                      <li>
+                        <div class="custom-control custom-control-lg custom-checkbox">
+                          <input name="category" {{ $checked }} id="customCheck{{ $category->term_id }}" value="{{ $category->slug }}" class="custom-control-input silk-hash-filter" type="checkbox">
+                          <label class="custom-control-label" for="customCheck{{ $category->term_id }}">
+                            <span>{{ $category->name }}</span>
+                          </label>
+                        </div>
+                      </li>
+                      @endforeach
+                    </ul>
+                  </div>
+                </div>
+                @endif
               </div>
             </div>
             <div class="sort-container">
@@ -146,7 +154,7 @@
                                 {{ $translation->sort['title_desc'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
-                              <input id="orderby_pop_asc--{{ $current_category->slug }}" value="pop_asc--{{ $current_category->slug }}" name="orderby" type="radio" class="silk-hash-orderby">
+                              <input id="orderby_pop_asc" value="pop_asc" name="orderby" type="radio" class="silk-hash-orderby">
                                 {{ $translation->sort['popular'] }}
                               </label>
                               <label class="btn btn-outline-primary silk-hash-filter">
