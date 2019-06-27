@@ -141,20 +141,17 @@ function display_sidebar()
  * Generate meta_query
  * @return array
  */
-function silk_product_filter($request) {
+function silk_product_filter() {
     if( is_admin() ) return;
 
     $meta = array();
     $filters = array();
-    $size = $request->get_param('size');
-    $color = $request->get_param('color');
-    $category = $request->get_param('category');
     $market = $_SESSION['esc_store']['market'];
     $priceList = $_SESSION['esc_store']['pricelist'];
 
     // Set Filter for Size
-    if (!empty($size)) {
-        $sizes = explode(',', $size);
+    if (isset($_GET['size']) && !empty($_GET['size'])) {
+        $sizes = explode(',', $_GET['size']);
         foreach ($sizes as $val) {
             $meta[] = array(
                 'key' => 'in_stock_' . $market . '_' . strtolower($val),
@@ -165,22 +162,22 @@ function silk_product_filter($request) {
     }
 
     // Set Filter for Color
-    if (!empty($color)) {
+    if (isset($_GET['color']) && !empty($_GET['color'])) {
         $meta[] = array(
             'key' => 'product_color',
-            'value' => $color,
+            'value' => $_GET['color'],
             'compare' => 'IN'
         );
     }
 
     // Set Filter for Category
-    if (!empty($category)) {
+    if (isset($_GET['category']) && !empty($_GET['category'])) {
         // $meta[] = array(
         //     'key' => 'canonical_category',
-        //     'value' => $category,
+        //     'value' => $_GET['category'],
         //     'compare' => 'IN'
         // );
-        $categoryList = explode(',', $category);
+        $categoryList = explode(',', $_GET['category']);
         $filters['tax_query'] = array(
             array(
                 'taxonomy'     => 'silk_category',
@@ -205,38 +202,38 @@ function silk_product_filter($request) {
  * Generate order by
  * @return array
  */
- function silk_product_orderby($request) {
+ function silk_product_orderby() {
     if( is_admin() ) return;
 
     $orderby = array();
     /** The taxonomy we want to parse */
     $taxonomy = "silk_category";
-    $term_id = $request->get_param('termid');
-    $orderBy = $request->get_param('orderBy');
     $market = $_SESSION['esc_store']['market'];
     $priceList = $_SESSION['esc_store']['pricelist'];
 
     /** Get current terms detail */
-    $term = get_term_by('id', $term_id, $taxonomy);
-    if(!empty($term)) {
-        /** Get terms that have children */
-        // $hierarchy = _get_term_hierarchy($taxonomy);
+    if (isset($_GET['termid']) && !empty($_GET['termid'])) {
+        $term = get_term_by('id', $_GET['termid'], $taxonomy);
+        if(!empty($term)) {
+            /** Get terms that have children */
+            // $hierarchy = _get_term_hierarchy($taxonomy);
 
-        $termSlug = $term->slug;
-        while( !empty($term->parent) ) {
-            $term = get_term_by('id', $term->parent, $taxonomy);
-            $termSlug =  $term->slug . '/' . $termSlug;
+            $termSlug = $term->slug;
+            while( !empty($term->parent) ) {
+                $term = get_term_by('id', $term->parent, $taxonomy);
+                $termSlug =  $term->slug . '/' . $termSlug;
+            }
+
+            // This will be the default sort or pop_asc is selected
+            $orderby['meta_key'] = 'category_order_' . $termSlug;
+            $orderby['orderby'] = 'meta_value';
+            $orderby['order'] = 'asc';
         }
-
-        // This will be the default sort or pop_asc is selected
-        $orderby['meta_key'] = 'category_order_' . $termSlug;
-        $orderby['orderby'] = 'meta_value';
-        $orderby['order'] = 'asc';
     }
 
     // Sort Products by Price, Title or ID
-    if (!empty($orderBy)) {
-        switch ( $orderBy ) {
+    if (isset($_GET['orderBy']) && !empty($_GET['orderBy'])) {
+        switch ( $_GET['orderBy'] ) {
             case 'price_desc':
                 $orderby['meta_key'] = 'price_' . $market . '_' . $priceList;
                 $orderby['orderby'] = 'meta_value';

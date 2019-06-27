@@ -121,10 +121,36 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
  */
 add_filter( 'pre_get_posts', function ( $query ) {
 
-    /**
-    *  Not being used anymore but still loading by default.
-    */
+    $taxonomy = 'silk_category';
+    if ( isset( $query->query[ $taxonomy ] ) && $query->is_main_query() ) {
 
+        $productListingCount = get_field('settings_product_listing_count', 'global');
+        $productListingCount = (!empty($productListingCount)) ? $productListingCount : '-1';
+        $query->set( 'posts_per_page', $productListingCount );
+
+        // Category filter from Centra
+        $filter_query = silk_product_filter();
+        // If no filter is selected default category to current one
+        // This will prevent inconsitency with Rest API
+        if (!is_array($filter_query)) {
+            $filter_query = array(
+                array(
+                    'taxonomy'     => 'silk_category',
+                    'field'     => 'slug',
+                    'terms'     => array(get_queried_object()->slug)
+                )
+            );
+        }
+        $query->set( 'tax_query', $filter_query );
+
+        
+        // Category sort from Centra
+        $orderby = silk_product_orderby();
+        if (is_array($orderby)) {
+            $query_vars = array_merge($query_vars, $orderby);
+        }
+        pr($orderby);
+    }
 });
 
 /**
@@ -178,13 +204,13 @@ add_filter( 'rest_query_vars', function ( $valid_vars ) {
 add_filter( 'rest_silk_products_query', function ( $query_vars, $request ) {
 
     // Category filter from Centra
-    $filter_query = silk_product_filter($request);
+    $filter_query = silk_product_filter();
     if (is_array($filter_query)) {
         $query_vars = array_merge($query_vars, $filter_query);
     }
 
     // Category sort from Centra
-    $orderby = silk_product_orderby($request);
+    $orderby = silk_product_orderby();
     if (is_array($orderby)) {
         $query_vars = array_merge($query_vars, $orderby);
     }

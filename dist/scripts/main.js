@@ -17883,7 +17883,7 @@ var Newsletter = {};
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {
-silkProductLoad(1, true);
+// silkProductLoad(1, true);
 $('.silk-loadmore').click(function () {
 	var currentPage = $(this).data('currentpage');
 	var nextPage = currentPage + 1;
