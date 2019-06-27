@@ -143,13 +143,16 @@ add_filter( 'pre_get_posts', function ( $query ) {
         }
         $query->set( 'tax_query', $filter_query );
 
-        
         // Category sort from Centra
+        $_GET['termid'] = get_queried_object()->term_id;
         $orderby = silk_product_orderby();
         if (is_array($orderby)) {
-            $query_vars = array_merge($query_vars, $orderby);
+            $query->set( 'orderby', $orderby['orderby'] );
+            $query->set( 'order', $orderby['order'] );   
+            if (isset($orderby['meta_key'])) {
+                $query->set( 'meta_key', $orderby['meta_key'] );
+            }
         }
-        pr($orderby);
     }
 });
 
