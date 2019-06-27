@@ -106,6 +106,14 @@ class App extends Controller
         return $checkoutPage ? get_permalink( $checkoutPage ) : '';
     }
 
+    public function checkoutLinkArray()
+    {
+        return (object) [
+            'title' => $this->siteTranslate()->selections['go_to_checkout'] ?? '',
+            'url' => $this->checkoutLink()
+        ];
+    }
+
     public function displayFooter()
     {
         return (get_page_template_slug() !== 'views/template-checkout.blade.php');

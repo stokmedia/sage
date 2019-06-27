@@ -25,8 +25,10 @@
             @endif
 
             <div class="navbar-nav-touch m-auto d-block d-lg-none">
-                @if($mobile_menu)
-                    <ul class="navbar-nav">
+
+                @if (!empty($mobile_menu) || (!empty($checkout_link_array->title) && !empty($checkout_link_array->url)))
+                <ul class="navbar-nav">
+                    @if($mobile_menu)
                         @foreach($mobile_menu as $menuItem)
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="{{ $menuItem->url  }}"
@@ -49,16 +51,22 @@
                                 @endif
                             </li>
                         @endforeach
+                    @endif
+                    
+                    {{-- Checkout button --}}
+                    @if (!empty($checkout_link_array->title) && !empty($checkout_link_array->url))
                         <li class="nav-item">
-                            <button class="btn btn-lg btn-outline-primary btn-checkout" type="button">Go to Check out
-                            </button>
+                            <a href="{{ $checkout_link_array->url }}">
+                                <button class="btn btn-lg btn-outline-primary btn-checkout" type="button">{{ $checkout_link_array->title }}</button>
+                            </a>
                         </li>
-                    </ul>
+                    @endif
+                </ul>
                 @endif
 
                 <div class="content-info">
                     <div class="brand-container">
-                        <a href="#" class="brand-footer">
+                        <a href="{{ $home_url }}" class="brand-footer">
                             {!! $logo['mobile_menu'] !!}
                         </a>
 
