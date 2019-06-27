@@ -3,7 +3,7 @@
         <li class="nav-item nav-item-cart js-cart-overlay">
             <a class="nav-link nav-link-cart" {{ !empty($checkout_link) ? 'href='. $checkout_link : '' }}>
                 <img src="@asset('images/icon/icon_cart.svg')" alt="" srcset="">
-                <span class="cart-item-count text-center js-item-count">{{ $selection['total_items'] ?? 0 }}</span>
+                <div class="cart-item-count text-center js-item-count"><span>{{ $selection['total_items'] ?? 0 }}</span></div>
             </a>
 
             <div id="js-selectedItems" class="cart js-cart-items">
