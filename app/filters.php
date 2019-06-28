@@ -132,7 +132,7 @@ add_filter( 'pre_get_posts', function ( $query ) {
         $filter_query = silk_product_filter();
         // If no filter is selected default category to current one
         // This will prevent inconsitency with Rest API
-        if (!is_array($filter_query)) {
+        if (!is_array($filter_query) && isset(get_queried_object()->slug)) {
             $filter_query = array(
                 array(
                     'taxonomy'     => 'silk_category',
@@ -144,13 +144,15 @@ add_filter( 'pre_get_posts', function ( $query ) {
         $query->set( 'tax_query', $filter_query );
 
         // Category sort from Centra
-        $_GET['termid'] = get_queried_object()->term_id;
-        $orderby = silk_product_orderby();
-        if (is_array($orderby)) {
-            $query->set( 'orderby', $orderby['orderby'] );
-            $query->set( 'order', $orderby['order'] );   
-            if (isset($orderby['meta_key'])) {
-                $query->set( 'meta_key', $orderby['meta_key'] );
+        if (isset(get_queried_object()->term_id)) {
+            $_GET['termid'] = get_queried_object()->term_id;
+            $orderby = silk_product_orderby();
+            if (is_array($orderby)) {
+                $query->set( 'orderby', $orderby['orderby'] );
+                $query->set( 'order', $orderby['order'] );   
+                if (isset($orderby['meta_key'])) {
+                    $query->set( 'meta_key', $orderby['meta_key'] );
+                }
             }
         }
     }
