@@ -87,4 +87,4 @@ class PopulateImagesHelper
     }
 }
 
-new PopulateImagesHelper();
+//new PopulateImagesHelper();
