@@ -31,14 +31,20 @@
             <div class="h4 d-inline-block mb-0">
               <div class="js-filter-toggle">
                   <div class="filter-open js-filter-open">
-                      {{ $translation->filter_and_sort_title }}
+                      {{ $translation->filter_and_sort_title ?? '' }}
                       <button class="btn btn-lg btn-icon btn-icon-lg btn-default" type="button">
                         <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                       </button>
                   </div>
                   <div class="filter-close">
-                      <a class="btn-clear silk-hash-clear" href="#" role="button">{{ $translation->clear_button }}</a>
-                      <button class="btn btn-primary text-uppercase js-filter-close" type="button">{{ $translation->update_button }}</button>
+                      @if (!empty($translation->clear_button))
+                      <a class="btn-clear silk-hash-clear" href="#" role="button">{{ $translation->clear_button ?? '' }}</a>
+                      @endif
+
+                      @if (!empty($translation->update_button))
+                      <button class="btn btn-primary text-uppercase js-filter-close" type="button">{{ $translation->update_button ?? '' }}</button>
+                      @endif
+
                       <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
                         <img src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
                       </button>
@@ -65,10 +71,13 @@
               <div class="row ">
                 @if(sizeof($product_size) > 0)
                 <div class="column">
-                  <div class="h4 title js-accordion-toggle is-open">{{ $translation->size }}</div>
+                  <div class="h4 title js-accordion-toggle is-open">{{ $translation->size ?? '' }}</div>
                   <div class="js-accordion-body">
                     <ul class="size-selector">
                       @foreach ($product_size as $size)
+                        @if (empty($size))
+                          @continue
+                        @endif
                         @php $checked = '' @endphp
                         @if(isset($filter_data['size']) && in_array($size, $filter_data['size']))
                           @php $checked = 'checked="checked"' @endphp
@@ -90,7 +99,7 @@
 
                 @if(sizeof($product_color) > 0)
                 <div class="column">
-                  <div class="h4 title js-accordion-toggle">{{ $translation->color }}</div>
+                  <div class="h4 title js-accordion-toggle">{{ $translation->color ?? '' }}</div>
                   <div class="js-accordion-body">
                     <ul class="color-selector">
                       @foreach ($product_color as $color)
@@ -114,7 +123,7 @@
 
                 @if(sizeof($category_list) > 0)
                 <div class="column">
-                  <div class="h4 title js-accordion-toggle">{{ $translation->category }}</div>
+                  <div class="h4 title js-accordion-toggle">{{ $translation->category ?? '' }}</div>
                   <div class="js-accordion-body">
                     <ul class="category-selector">
                       @foreach ($category_list as $category)
@@ -141,30 +150,50 @@
             <div class="sort-container">
               <div class="row">
                   <div class="column">
-                    <div class="h4 title d-block d-lg-inline-block js-accordion-toggle">{{ $translation->sort['sort_title'] }}</div>
+
+                    @if (!empty($translation->sort['sort_title']))
+                    <div class="h4 title d-block d-lg-inline-block js-accordion-toggle">{{ $translation->sort['sort_title'] ?? '' }}</div>
+                    @endif
+
                     <div class="js-accordion-body d-block d-lg-inline-block">
                         <div class="sort-selector text-center text-sm-left">
                             <div class="btn-group btn-group-toggle d-inline-block d-sm-inline-flex" data-toggle="buttons">
+
+                              @if (!empty($translation->sort['title_asc']))
                               <label class="btn btn-outline-primary silk-hash-filter">
                                 <input id="orderby_title_asc" value="title_asc" name="orderby" type="radio" class="silk-hash-orderby">
-                                {{ $translation->sort['title_asc'] }}
+                                {{ $translation->sort['title_asc'] ?? '' }}
                               </label>
+                              @endif
+                              
+                              @if (!empty($translation->sort['title_desc']))
                               <label class="btn btn-outline-primary silk-hash-filter">
                                 <input id="orderby_title_desc" value="title_desc" name="orderby" type="radio" class="silk-hash-orderby">
-                                {{ $translation->sort['title_desc'] }}
+                                {{ $translation->sort['title_desc'] ?? '' }}
                               </label>
+                              @endif
+
+                              @if (!empty($translation->sort['popular']))
                               <label class="btn btn-outline-primary silk-hash-filter">
-                              <input id="orderby_pop_asc" value="pop_asc" name="orderby" type="radio" class="silk-hash-orderby">
-                                {{ $translation->sort['popular'] }}
+                                <input id="orderby_pop_asc" value="pop_asc" name="orderby" type="radio" class="silk-hash-orderby">
+                                  {{ $translation->sort['popular']  ?? ''}}
                               </label>
+                              @endif
+
+                              @if (!empty($translation->sort['price_low_to_high']))
                               <label class="btn btn-outline-primary silk-hash-filter">
                                 <input id="orderby_price_desc" value="price_desc" name="orderby" type="radio" class="silk-hash-orderby">
-                                {{ $translation->sort['price_low_to_high'] }}
+                                {{ $translation->sort['price_low_to_high'] ?? '' }}
                               </label>
+                              @endif
+                              
+                              @if (!empty($translation->sort['price_high_to_low']))
                               <label class="btn btn-outline-primary silk-hash-filter">
                                 <input id="orderby_price_asc" value="price_asc" name="orderby" type="radio" class="silk-hash-orderby">
-                                {{ $translation->sort['price_high_to_low'] }}
+                                {{ $translation->sort['price_high_to_low'] ?? '' }}
                               </label>
+                              @endif
+
                             </div>
                         </div>
                     </div>

@@ -83,25 +83,27 @@ class SingleSilk_products extends Controller
 	{
 		$product = $this->productClass();
 		$labels = $this->productTranslations();
-		$infos = [];
 
-		// Description
-		$descriptionLabel = !empty($labels['description']) ? $labels['description'] : 'Description';
-		if (!empty($product->product_post->post_content)) {
-			array_push( $infos, [ 
-				'label' => $descriptionLabel, 
-				'content' => $product->product_post->post_content
-			]);
-		}
+		// Parse product content
+		$infos = Helper::sp_parse_product_details( $product->product_post->post_content );
 
-		// Details
-		$detailsLabel = !empty($labels['details']) ? $labels['details'] : 'Details';
-		if (!empty($product->product_post->post_excerpt)) {
-			array_push( $infos, [ 
-				'label' => $detailsLabel, 
-				'content' => $product->product_post->post_excerpt
-			]);
-		}
+		// // Description
+		// $descriptionLabel = !empty($labels['description']) ? $labels['description'] : 'Description';
+		// if (!empty($product->product_post->post_content)) {
+		// 	array_push( $infos, [ 
+		// 		'label' => $descriptionLabel, 
+		// 		'content' => $product->product_post->post_content
+		// 	]);
+		// }
+
+		// // Details
+		// $detailsLabel = !empty($labels['details']) ? $labels['details'] : 'Details';
+		// if (!empty($product->product_post->post_excerpt)) {
+		// 	array_push( $infos, [ 
+		// 		'label' => $detailsLabel, 
+		// 		'content' => $product->product_post->post_excerpt
+		// 	]);
+		// }
 
 		// Care
 		$careLabel = !empty($labels['care_instruction']) ? $labels['care_instruction'] : 'Care & washing instructions';

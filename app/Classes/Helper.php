@@ -123,4 +123,43 @@ class Helper {
         }, $functionName( $delimeter, $text) );
     }
 
+
+    public static function sp_parse_product_details( $subject ) {
+        if( empty($subject) ) {
+            return [];
+        }
+
+    	$details = array();
+
+    	// This regexp is a bit more felxible with withspace etc
+        $pattern = '/##(.*)##(<br \\/>|\s)([^#]*)/';
+		
+		//$pattern = '/###(.*)###(\\n|<br \\/>)\\n([^#]*)/';
+		$matches = array();
+		$result = preg_match_all($pattern, $subject, $matches);
+
+		if ($result) {
+
+			for( $i=0; $i < $result; $i++ ) { 
+				$key = $matches[ 1 ][ $i ];
+                $val = $matches[ 3 ][ $i ];
+                
+				$details[ strtolower($key) ] = [
+					'label' => $key,
+					'content' => $val
+				];
+            }
+            
+		} else {
+
+			$details['description'] = [
+				'label' => '',
+				'content' => $subject
+            ];
+            
+		}
+
+		return $details;
+    }    
+
 }
