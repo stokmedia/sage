@@ -87,19 +87,19 @@ class SingleSilk_products extends Controller
 
 		// Description
 		$descriptionLabel = !empty($labels['description']) ? $labels['description'] : 'Description';
-		if (!empty($product->product_meta['description'])) {
+		if (!empty($product->product_post->post_content)) {
 			array_push( $infos, [ 
 				'label' => $descriptionLabel, 
-				'content' => $product->product_meta['description']
+				'content' => $product->product_post->post_content
 			]);
 		}
 
 		// Details
 		$detailsLabel = !empty($labels['details']) ? $labels['details'] : 'Details';
-		if (!empty($product->product_meta['excerpt'])) {
+		if (!empty($product->product_post->post_excerpt)) {
 			array_push( $infos, [ 
 				'label' => $detailsLabel, 
-				'content' => $product->product_meta['excerpt']
+				'content' => $product->product_post->post_excerpt
 			]);
 		}
 
