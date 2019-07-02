@@ -1,13 +1,19 @@
-@if (!empty($isMobile))
-    <a href="{{ $image->link }}" class="col" target="_blank" rel="nofollow noreferrer">
-        <figure class="tile">
-            {!! !empty($isLarge) ? $image->image_large : $image->image_small !!}
-        </figure>
-    </a>
-@else
-    @if ($image)
-        <a href="{{ $image->link }}" class="tile {{ $tileClass ?? '' }}" target="_blank" rel="nofollow noreferrer">
-            {!! !empty($isLarge) ? $image->image_large : $image->image_small !!}
+
+@if ($image)
+
+    @if (!empty($isMobile))
+
+        <a href="{{ $image->link }}" class="col" target="_blank" rel="nofollow noreferrer">
+            <figure class="tile">
+                <img src="{!! !empty($isLarge) ? $image->image_large : $image->image_small !!}" alt="">
+            </figure>
         </a>
+
+    @else
+
+        <a href="{{ $image->link }}" class="tile {{ $tileClass ?? '' }}" target="_blank" rel="nofollow noreferrer">
+            <img class="lazy" data-src="{!! !empty($isLarge) ? $image->image_large : $image->image_small !!}" alt="">
+        </a>
+
     @endif
 @endif

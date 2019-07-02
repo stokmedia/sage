@@ -172,8 +172,8 @@ trait Content
         $allIDs = array_merge( $original, ( $fill ?? [ ]) );
         $instaImages = array_map( function ( $id ) {
             return (object)[
-                'image_small' => wp_get_attachment_image( get_post_thumbnail_id( $id ), 'square-small lazy' ),
-                'image_large' => wp_get_attachment_image( get_post_thumbnail_id( $id ), 'large lazy' ),
+                'image_small' => wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'square-small lazy' ),
+                'image_large' => wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'large lazy' ),
                 'link' => get_post_meta( $id, 'instagram_link', true )
             ];
         }, $allIDs );
