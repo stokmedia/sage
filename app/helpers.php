@@ -163,9 +163,15 @@ function silk_product_filter() {
 
     // Set Filter for Color
     if (isset($_GET['color']) && !empty($_GET['color'])) {
+        $color = array();
+        $colorTmp = explode(',', $_GET['color']);
+        foreach($colorTmp as $key => $val) {
+            $color[$key] = ucwords(str_replace('-', ' ', $val));
+        }
+
         $meta[] = array(
             'key' => 'product_color',
-            'value' => $_GET['color'],
+            'value' => $color,
             'compare' => 'IN'
         );
     }
