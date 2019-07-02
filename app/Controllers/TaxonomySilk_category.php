@@ -109,18 +109,29 @@ class TaxonomySilk_category extends Controller
 
     public function productSize()
     {
-        return  get_option('product_sizes');
+        $market = $_SESSION['esc_store']['market'];
+        $termId = get_queried_object()->term_id;
+        $size = get_term_meta($termId, 'category_sizes_'.$market);
+        // $size = get_option('product_sizes');
+        if (isset($size[0]) && is_array($size[0])) {
+            $size = $size[0];
+        }
+        
+        return  $size;
     }
 
     public function productColor()
     {
+        $termId = get_queried_object()->term_id;
         // This will reArrange Colors
         // So that All colors will be list first
         // before listing patterns
         $arrColors = array();
         $arrPattern = array();
         $colors = get_option('product_colors');
-        if (is_array($colors)) {
+        $colors = get_term_meta($termId, 'category_colors');
+        if (isset($colors[0]) && is_array($colors[0])) {
+            $colors = $colors[0];
             foreach ($colors as $key => $val) {
                 $val['slug'] = str_replace(' ', '-', strtolower($val['Name']));
                 if (!empty($val['Hex'])) {
