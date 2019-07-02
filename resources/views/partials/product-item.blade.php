@@ -33,6 +33,8 @@
 
 @endif
 
+@php ($productTitle = trim($post->post_title. ' ' .($product->product_meta->variantName ?: '' )))
+
 @if (!empty($isSlider))
 	<div class="grid-slider-item">
 		<a href="{{ get_the_permalink( $post ) }}" class="grid-item">
@@ -48,7 +50,7 @@
 					</figure>
 				</div>
 				<div class="product-details bg-white d-block text-center">
-					<div class="product-name h4">{{ $post->post_title }}</div>
+					<div class="product-name h4">{{ $productTitle }}</div>
 					@include('partials.product-price', ['priceInfo' => $product->display_price] )
 				</div>
 			</div>
@@ -70,7 +72,7 @@
 			</figure>
 		</a>
 		<a href="{{ get_the_permalink( $post ) }}" class="product-details bg-white d-block text-center">
-			<div class="product-name h4">{{ $post->post_title }}</div>
+			<div class="product-name h4">{{ $productTitle }}</div>
 			@include('partials.product-price', [ 'priceInfo' => $product->display_price] )
 		</a>
 	</div>

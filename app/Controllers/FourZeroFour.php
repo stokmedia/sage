@@ -20,6 +20,10 @@ class FourZeroFour extends Controller
     {
         $page = $this->get404Page();
 
+        if( empty($page) ) {
+            return;
+        }
+
         $breadcrumbs = new Breadcrumbs($page->ID);
 
         return $breadcrumbs->render_breadcumbs( [

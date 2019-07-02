@@ -123,7 +123,6 @@ class Helper {
         }, $functionName( $delimeter, $text) );
     }
 
-
     public static function sp_parse_product_details( $subject ) {
         if( empty($subject) ) {
             return [];
@@ -146,7 +145,7 @@ class Helper {
                 
 				$details[ strtolower($key) ] = [
 					'label' => $key,
-					'content' => $val
+					'content' => self::sp_render_list($val)
 				];
             }
             
@@ -154,12 +153,24 @@ class Helper {
 
 			$details['description'] = [
 				'label' => '',
-				'content' => $subject
+				'content' => self::sp_render_list($subject)
             ];
             
 		}
 
 		return $details;
-    }    
+    }
+    
+    public static function sp_render_list( $text ) 
+    {
+        if( empty($text)) {
+            return '';
+        }
+                                
+        $string = preg_replace( "/\*+(.*)?/i", "<ul><li>$1</li></ul>", strip_tags($text) );
+        $string = preg_replace( "/(\<\/ul\>\n(.*)\<ul\>*)+/", "", $string );
+
+        return $string;
+    }
 
 }
