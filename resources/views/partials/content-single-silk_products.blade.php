@@ -9,8 +9,13 @@
                         <div class="selected-product-slider overflow-hidden p-md-0 shadow-sm">
                             @if (!empty($product->images))
                                 @foreach ($product->images['standard'] as $item)
+                                    @php($srcset = $item['url'].' 720w, ')
+                                    @php($srcset .= $item['url'].' 1440w, ')
+                                    @if ($product->images['full'][0]['url'])
+                                        @php($srcset .= $product->images['full'][0]['url'].' 2880w')
+                                    @endif
                                     <figure class="item align-items-center mb-0">
-                                        <img src="{{ $item['url'] }}" alt="" srcset="">
+                                        <img data-src="{{ $item['url'] }}" alt="" class="lazy" data-srcset="{{ $srcset }}">
                                     </figure>
                                 @endforeach
                             @endif
@@ -23,7 +28,7 @@
                             @foreach ($product->images['thumb'] as $item)
                                 <div class="item bg-white">
                                     <figure>
-                                        <img src="{{ $item['url'] }}" alt="" srcset="">
+                                        <img src="{{ $item['url'] }}" alt="">
                                     </figure>
                                 </div>
                             @endforeach
