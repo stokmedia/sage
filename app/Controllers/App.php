@@ -6,6 +6,7 @@ use Sober\Controller\Controller;
 use App\Classes\Navigation;
 use App\Classes\Helper;
 use App\Classes\Breadcrumbs;
+use App\Classes\SectionHelper;
 
 class App extends Controller
 {
@@ -124,7 +125,7 @@ class App extends Controller
         $lang = Helper::current_lang();
         $newsletterEnable = get_field( 'newsletter_enable', $lang );
         $modalContent = (object) get_field( 'newsletter_modal_content', $lang );
-        $modalContent->title = self::hasTitle($modalContent) ? $modalContent->section_title : '';
+        $modalContent->title = SectionHelper::has_title($modalContent) ? $modalContent->section_title : '';
         $modalContent->image = !empty($modalContent->image) ? wp_get_attachment_image_url( $modalContent->image['ID'], 'newsletter' ) : null;      
 
         return (object) [

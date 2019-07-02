@@ -5,6 +5,7 @@ namespace App\Controllers\Partials;
 
 use App\Classes\VideoHelper;
 use App\Classes\Helper;
+use App\Classes\SectionHelper;
 
 trait Content
 {
@@ -22,7 +23,7 @@ trait Content
      */
     public static function get_content( $postID=null, $sectionID=0 )
     {
-        $data = [ ];
+        $data = [];
 
         if( empty(get_post()->ID) && empty($postID) ) {
             return $data;
@@ -48,7 +49,7 @@ trait Content
                 if ( !empty( $thisContent ) ) {
                     $thisContent->id = $id;
                     $thisContent->is_h1 = $id === 1;
-                    $thisContent->classes = self::section_layout_classes( 
+                    $thisContent->classes = SectionHelper::section_layout_classes( 
                         $thisContent, 
                         $key, 
                         $flexibleContent,
@@ -60,110 +61,15 @@ trait Content
             }
         }
 
-        return $data;        
-    }
-
-    public static function hasTitle( $data )
-    {
-        return ( !empty($data->section_title) && !empty($data->show_section_title) );
-    }
-
-    public static function getPromoData( $data )
-    {
-        $items = [ ];
-
-        if ( empty( $data->items ) ) {
-            return $items;
-        }
-
-        foreach ( $data->items as $item ) {
-            $item = (object)$item;
-
-            $cardImageSize = 'medium';
-            $postImage = null;
-            $postTitle = null;
-            $postText = null;
-            $postPreHeader = null;
-            $postLink = (object)[
-                'url' => null,
-                'title' => $data->item_link_text ?? '',
-                'target' => '',
-            ];
-
-            if ( $item->get_content_from === 'category' && $item->category ) {
-                $categoryImage = get_field( 'featured_image', $item->category->taxonomy . '_' . $item->category->term_id );
-                $postImage = $categoryImage ? wp_get_attachment_image( $categoryImage[ 'ID' ], $cardImageSize ) : null;
-                $postTitle = $item->category->name;
-                $postText = $item->category->description;
-                $postLink->url = get_term_link( $item->category, $item->category->taxonomy );
-
-
-            } elseif ( $item->get_content_from === 'post' && $item->post ) {
-                $postImage = has_post_thumbnail( $item->post ) ? get_the_post_thumbnail( $item->post->ID, $cardImageSize ) : null;
-                $postTitle = $item->post->post_title;
-                $postText = $item->post->post_content;
-                $postLink->url = get_permalink( $item->post->ID );
-
-                if ( $data->acf_fc_layout === 'promo-boxes' && get_post_type( $item->post ) === 'post' ) {
-                    $categoryNames = wp_list_pluck( get_the_category( $item->post->ID ), 'name' );
-                    $postPreHeader = !empty( $categoryNames ) ? $categoryNames[ 0 ] : null;
-                }
-
-                $postPreHeader = null;
-            }
-
-            $itemLink = !empty( $item->link ) ? (object)$item->link : $postLink;
-
-            if ( empty( $itemLink->title ) ) {
-                $itemLink->title = $data->item_link_text ?? '';
-            }
-
-            $newItem = [
-                'image' => !empty( $item->image ) ? wp_get_attachment_image( $item->image[ 'ID' ], $cardImageSize ) : $postImage,
-                'title' => !empty( $item->title ) ? $item->title : $postTitle,
-                'text' => !empty( $item->text ) ? $item->text : wp_trim_words( $postText, 50 ),
-                'link' => $itemLink,
-            ];
-
-            if ( $data->acf_fc_layout === 'promo-boxes' ) {
-                $newItem[ 'pre_header' ] = !empty( $item->pre_header ) ? $item->pre_header : $postPreHeader;
-            }
-
-            if ( empty( array_filter( $newItem ) ) ) {
-                continue;
-            }
-
-            array_push( $items, (object)$newItem );
-        }
-
-        return $items;
-    }
-
-    public static function getInstagramData( $options = [ ] )
-    {
-        $args = array(
-            'post_status' => 'publish',
-            'post_type' => 'instagram',
-            'orderby' => 'date',
-            'order' => 'DESC',
-        );
-
-        if ( $options ) {
-            foreach ( $options as $key => $item ) {
-                $args[ $key ] = $item;
-            }
-        }
-
-        $data = get_posts( $args );
-
-        return wp_list_pluck( $data, 'ID' );
+        return $data;
     }
 
     public static function cms_hero_banner( $data )
     {
         $newData = (object)$data;
         $lazyClass = '';
-        if($newData->id != 1) {
+
+        if ($newData->id != 1) {
             $lazyClass = ' lazy';
         }
 
@@ -176,7 +82,7 @@ trait Content
             'height' => null
         ];
 
-        $title = self::hasTitle( $newData ) ? $newData->section_title : '';
+        $title = SectionHelper::has_title( $newData ) ? $newData->section_title : '';
 
         if ( $newData->image_desktop ) {
             $imgAttr[ 'class' ] = 'hero-image d-none d-sm-none d-md-block';
@@ -248,7 +154,7 @@ trait Content
             ];
         }
 
-        $original = self::getInstagramData( [
+        $original = SectionHelper::get_instagram_data( [
             'posts_per_page' => $imageCount,
             'ignore_sticky_posts' => 1,
             'tax_query' => $taxQuery ?? []
@@ -256,7 +162,7 @@ trait Content
 
         // Add filler if original images is less than the $imageCount value
         if ( count( $original ) < $imageCount ) {
-            $fill = self::getInstagramData( [
+            $fill = SectionHelper::get_instagram_data( [
                 'posts_per_page' => $imageCount - count( $original ),
                 'ignore_sticky_posts' => 1,
                 'post__not_in' => $original
@@ -276,7 +182,7 @@ trait Content
         if ( $instagramLinkIndex ) {
             $instagramLink = [
                 'title' => self::getSiteTranslations()->general['follow_us'] ?? '',
-                'url' => self::getSocialLinks()[ $instagramLinkIndex ][ 'url' ],
+                'url' => self::getSocialLinks()[ $instagramLinkIndex ]['url'],
                 'target' => '_blank'
             ];
         }
@@ -285,7 +191,7 @@ trait Content
             'acf_fc_layout' => $data->acf_fc_layout,
             'instagram_images' => $instaImages,
             'instagram_link' => (object)$instagramLink ?? [ ],
-            'title' => self::hasTitle( $data ) ? $data->section_title : '',
+            'title' => SectionHelper::has_title( $data ) ? $data->section_title : '',
             'text' => $data->text,
             'image' => $data->image ? wp_get_attachment_image_url( $data->image[ 'ID' ], 'instagram-bg' ) : '',
         ];
@@ -294,7 +200,7 @@ trait Content
     public static function cms_newsletter_signup( $data )
     {
         $data = (object)$data;
-        $data->title = self::hasTitle( $data ) ? $data->section_title : '';
+        $data->title = SectionHelper::has_title( $data ) ? $data->section_title : '';
         $data->link = (object) (!empty($data->link) ? $data->link : []);
         $data->has_content = ( !empty($data->title) || !empty($data->preamble) || !empty($data->content) || !empty($data->link) );
         $data->image = $data->image ? wp_get_attachment_image_url( $data->image[ 'ID' ], 'newsletter' ) : null;
@@ -305,7 +211,7 @@ trait Content
     public static function cms_popular_products( $data )
     {
         $newData = (object)$data;
-        $products = [ ];
+        $products = [];
 
         if ( $newData->section_displays === 'handpick' ) {
             $products = $newData->handpicked_products;
@@ -356,7 +262,7 @@ trait Content
         }
 
         $hasContent = (
-            self::hasTitle( $newData )
+            SectionHelper::has_title( $newData )
             || $newData->preamble
             || $products
             || $newData->link
@@ -365,7 +271,7 @@ trait Content
         return (object)[
             'acf_fc_layout' => $newData->acf_fc_layout,
             'has_content' => $hasContent,
-            'title' => self::hasTitle( $newData ) ? $newData->section_title : '',
+            'title' => SectionHelper::has_title( $newData ) ? $newData->section_title : '',
             'preamble' => $newData->preamble ?? '',
             'products' => $products,
             'product_count' => count( $products ),
@@ -377,7 +283,8 @@ trait Content
     {
         $newData = (object)$data;
 
-        $items = self::getPromoData( $newData );
+        $items = SectionHelper::get_promo_data( $newData );
+
         // Add lazy load class
         foreach ($items as $key => $item) {
             $items[$key]->image = str_replace(array('class="', 'src="'), array('class="lazy ', 'data-src="'), $item->image);
@@ -392,7 +299,7 @@ trait Content
     public static function cms_text_and_image( $data )
     {
         $newData = (object)$data;
-        $hasContent = ( self::hasTitle( $newData )
+        $hasContent = ( SectionHelper::has_title( $newData )
             || $newData->text
             || $newData->link
             || $newData->image
@@ -401,7 +308,7 @@ trait Content
         return (object)[
             'acf_fc_layout' => $newData->acf_fc_layout,
             'hasContent' => $hasContent,
-            'title' => self::hasTitle( $newData ) ? $newData->section_title : '',
+            'title' => SectionHelper::has_title( $newData ) ? $newData->section_title : '',
             'text' => $newData->text ?? '',
             'link' => is_array( $newData->link ) ? (object)$newData->link : false,
             'image' => $newData->image ? wp_get_attachment_image_url( $newData->image[ 'ID' ], 'large' ) : '',
@@ -412,7 +319,7 @@ trait Content
     public static function cms_text_with_button( $data )
     {
         $data = (object)$data;
-        $data->title = self::hasTitle( $data ) ? $data->section_title : '';
+        $data->title = SectionHelper::has_title( $data ) ? $data->section_title : '';
         $data->link = $data->link ? (object)$data->link : $data->link;
         $data->has_content = ( $data->title || $data->preamble || $data->content || $data->link );
         $data->content = Helper::sp_render_text( [
@@ -426,11 +333,11 @@ trait Content
     {
         $newData = (object)$data;
 
-        $items = self::getPromoData( $newData );
+        $items = SectionHelper::get_promo_data( $newData );
 
         return (object)[
             'acf_fc_layout' => $newData->acf_fc_layout,
-            'title' => self::hasTitle( $newData ) ? $newData->section_title : '',
+            'title' => SectionHelper::has_title( $newData ) ? $newData->section_title : '',
             'items' => $items
         ];
     }
@@ -483,90 +390,11 @@ trait Content
 
         return (object)[
             'acf_fc_layout' => $newData->acf_fc_layout,
-            'title' => self::hasTitle( $newData ) ? $newData->section_title : '',
+            'title' => SectionHelper::has_title( $newData ) ? $newData->section_title : '',
             'preamble' => $newData->preamble,
             'items' => $newData->content,
             'count' => $newData->count,
             'view_all_btn' => self::getSiteTranslations()->general['view_all'] ?? ''
         ];
-    }
-
-    public static function section_layout_classes( $currentSection, $pos, $sections, $count )
-    {
-        $classes = [];
-        $sectionLists = wp_list_pluck( $sections, 'acf_fc_layout' );
-
-        $sectionsWithNoBottomAdjustment = [
-            'hero-banner',
-            'promo-boxes',
-            'instagram-grid',
-            'three-promo',
-            'text-and-image',
-            'usp',
-        ];
-
-        $sectionsWithPaddingTopAdjustment = [
-            'text-with-button',
-            'resellers'
-        ]; 
-        
-        $sectionsWithSmallPaddingTopAdjustment = [
-            'newsletter'
-        ];
-        
-        $sectionsWithBg = array_merge( $sectionsWithNoBottomAdjustment, ['popular-products'] );
-
-        // Get current section layout name
-        $current = $currentSection->acf_fc_layout;
-
-        // Get next section layout name
-        $nextSection = Helper::get_array_value_by_index( $sectionLists, $pos + 1 );
-
-        // Check if current section is the first section
-        $isFirst = ($currentSection->id === 1);
-
-        // Check if current section is the last section
-        $isLast = ($currentSection->id === $count);
-
-        // Check if current section in $sectionsWithNoBottomAdjustment
-        $isSectionsWithNoBottomAdjustment = in_array( $current, $sectionsWithNoBottomAdjustment );
-
-        // Check if current section in $sectionsWithNoBottomAdjustment
-        $nextSectionHasBg = in_array( $nextSection, $sectionsWithBg ); 
-        
-        // Check if current section is newsletter
-        $isNewsletter = ($current==='newsletter-signup');
-
-        // Has padding top
-        if ($isFirst && in_array($current, $sectionsWithPaddingTopAdjustment )) {
-            array_push( $classes, 'has-pt' );
-        
-        // Has small padding top
-        } elseif ($isFirst && in_array($current, $sectionsWithSmallPaddingTopAdjustment )) {
-            array_push( $classes, 'has-small-pt' );
-        }
-
-        // No margin bottom
-        if ( ($isLast && $isSectionsWithNoBottomAdjustment) || ($nextSectionHasBg && $isSectionsWithNoBottomAdjustment)) {
-            array_push( $classes, 'no-mb' );
-        
-        // Has small margin bottom
-        } elseif ( 
-            $nextSection === 'newsletter-signup' // Next section is newsletter      
-            || ($isLast && $isNewsletter) // Current section is newsletter and is last section
-            || ($isNewsletter && in_array( $nextSection, $sectionsWithBg )) // Current section is newsletter and next section has BG
-        ) {
-            array_push( $classes, 'has-small-mb' );
-        }
-
-        return implode( ' ', $classes );
-    }
-
-    // Delete this after dev
-    public static function pr( $data )
-    {
-        echo '<pre>';
-        var_dump( $data );
-        echo '</pre>';
     }
 }
