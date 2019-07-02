@@ -231,7 +231,7 @@
       </div>
       <div class="spinner text-center position-relative">
         <div class="spinner-btn">
-        <button class="btn btn-lg btn-primary silk-loadmore {{ ($show_load_more_button) ? null : 'd-none' }}" data-currentpage="1" data-currentcategory="{{ $current_category->slug }}" data-currentterm_id="{{ $current_category->term_id }}" type="button">{{ $translation->load_more }}</button>
+        <button class="btn btn-lg btn-primary silk-loadmore {{ (!empty($show_load_more_button)) ? null : 'd-none' }}" data-currentpage="1" data-currentcategory="{{ $current_category->slug }}" data-currentterm_id="{{ $current_category->term_id }}" type="button">{{ $translation->load_more ?? '' }}</button>
         </div>
         <div class="spinner-border silk-spinner d-none" role="status">
           <span class="sr-only">Loading...</span>

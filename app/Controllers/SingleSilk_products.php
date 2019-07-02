@@ -84,29 +84,25 @@ class SingleSilk_products extends Controller
 		$product = $this->productClass();
 		$labels = $this->productTranslations();
 
+		// Set default
+		$defaultLabels = [
+			'description' => 'Description',
+			'care_instruction' => 'Care & washing instructions',
+			'shipping_delivery' => 'Shipping & Delivery',
+		];
+		
+		// Add description default label
+		$descriptionLabel = !empty($labels['description']) ? $labels['description'] : $defaultLabels['description'];
+		$infos = [ 'description_label' => $descriptionLabel ];		
+
 		// Parse product content
-		$infos = Helper::sp_parse_product_details( $product->product_post->post_content );
-
-		// // Description
-		// $descriptionLabel = !empty($labels['description']) ? $labels['description'] : 'Description';
-		// if (!empty($product->product_post->post_content)) {
-		// 	array_push( $infos, [ 
-		// 		'label' => $descriptionLabel, 
-		// 		'content' => $product->product_post->post_content
-		// 	]);
-		// }
-
-		// // Details
-		// $detailsLabel = !empty($labels['details']) ? $labels['details'] : 'Details';
-		// if (!empty($product->product_post->post_excerpt)) {
-		// 	array_push( $infos, [ 
-		// 		'label' => $detailsLabel, 
-		// 		'content' => $product->product_post->post_excerpt
-		// 	]);
-		// }
+		$parseDescription = Helper::sp_parse_product_details( $product->product_post->post_content );
+		if (!empty($parseDescription)) {
+			$infos = array_merge( $infos, $parseDescription );
+		}
 
 		// Care
-		$careLabel = !empty($labels['care_instruction']) ? $labels['care_instruction'] : 'Care & washing instructions';
+		$careLabel = !empty($labels['care_instruction']) ? $labels['care_instruction'] : $defaultLabels['care_instruction'];
 		if (!empty($product->product_meta['care'])) {
 			array_push( $infos, [ 
 				'label' => $careLabel, 
@@ -116,7 +112,7 @@ class SingleSilk_products extends Controller
 		}		
 		
 		// Shipping
-		$shippingLabel = !empty($labels['shipping_delivery']) ? $labels['shipping_delivery'] : 'Shipping & Delivery';
+		$shippingLabel = !empty($labels['shipping_delivery']) ? $labels['shipping_delivery'] : $defaultLabels['shipping_delivery'];
 		$shippingContent = Helper::localize( 'product_shipping_content' );
 
 		if ($shippingContent) {
@@ -127,7 +123,7 @@ class SingleSilk_products extends Controller
 		}
 
 		return array_map( function ( $info ) {
-            return (object) $info;
+            return is_array($info) ? (object) $info : $info;
         }, $infos );
 	}
 

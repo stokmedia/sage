@@ -446,25 +446,6 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5d0b4ce0db7ae",
-                    "label": "Details",
-                    "name": "details",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
                     "key": "field_5d0b4ce4db7af",
                     "label": "Care Instruction",
                     "name": "care_instruction",
@@ -1585,5 +1566,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1561617543
+    "modified": 1562046759
 }
