@@ -17882,8 +17882,12 @@ var Newsletter = {};
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {
-// silkProductLoad(1, true);
+/* WEBPACK VAR INJECTION */(function($) {var hashQueryString = window.location.hash;
+if (hashQueryString != '') {
+	$('.silk-product-item-holder').html('');
+	silkProductLoad(1, true);
+}
+
 $('.silk-loadmore').click(function () {
 	var currentPage = $(this).data('currentpage');
 	var nextPage = currentPage + 1;
