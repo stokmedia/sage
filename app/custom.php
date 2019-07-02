@@ -107,7 +107,22 @@ add_filter( 'wp_get_attachment_image_attributes', function ( $attr ) {
     return $attr;
 } );
 
+// Added plugin dependency check 
+add_action( 'after_setup_theme', function() {
 
+    $plugins = array(
+        'ecommerce-silk-connection/ecommerce-silk-connection.php',
+        'advanced-custom-fields-pro-master/acf.php'
+    );
+
+    foreach ($plugins as $plugin) {
+     if(!is_admin() && ! in_array( $plugin, (array) get_option( 'active_plugins', array() ) ) ) {
+
+        wp_die( 'The following plugin is needed: ' . $plugin, 'Plugin Dependency Error' );
+
+     }   
+    }
+});
 
 /* STELLAR PoC , Plase leave this code for now
 // Testing to register own Taxonomy

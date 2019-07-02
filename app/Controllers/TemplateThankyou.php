@@ -4,7 +4,9 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-include_once( \Esc::directory() . '/modules/success.php' );
+if( class_exists('\Esc') ) {
+    include_once( \Esc::directory() . '/modules/success.php' );
+}
 
 class TemplateThankyou extends Controller
 {

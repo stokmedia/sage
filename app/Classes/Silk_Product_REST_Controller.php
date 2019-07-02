@@ -1,10 +1,14 @@
 <?php
+if( class_exists('Esc') ) {
+
 namespace App\Classes;
 
 use App\Classes\Helper;
 use App\Controllers\TaxonomySilk_category;
 
-include_once( \Esc::directory() . '/modules/product.php' );
+if( class_exists('\Esc') ) {
+	include_once( \Esc::directory() . '/modules/product.php' );
+}
 
 // TODO: Maybe move this class to the Esc Plugin insead
 class Silk_Product_REST_Controller extends \WP_REST_Posts_Controller {
@@ -118,4 +122,5 @@ class Silk_Product_REST_Controller extends \WP_REST_Posts_Controller {
 		//print_r( $this->get_collection_params() );
 	}
 */
+}
 }
