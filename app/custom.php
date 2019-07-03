@@ -112,7 +112,7 @@ add_action( 'after_setup_theme', function() {
 
     $plugins = array(
         'ecommerce-silk-connection/ecommerce-silk-connection.php',
-        'advanced-custom-fields-pro-master/acf.php'
+        'advanced-custom-fields-pro/acf.php'
     );
 
     foreach ($plugins as $plugin) {
