@@ -1,7 +1,9 @@
 <?php
-if( class_exists('Esc') ) {
-
 namespace App\Classes;
+
+if( !class_exists('Esc') ) {  
+	return;
+}
 
 use App\Classes\Helper;
 use App\Controllers\TaxonomySilk_category;
@@ -122,5 +124,4 @@ class Silk_Product_REST_Controller extends \WP_REST_Posts_Controller {
 		//print_r( $this->get_collection_params() );
 	}
 */
-}
 }
