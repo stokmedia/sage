@@ -8,7 +8,7 @@
 
 					@if ($item->image)
 						<div class="icon-block">
-							<img width="40" height="40" src="{{ wp_get_attachment_image_url( $item->image ) }}" class="lazy" alt=""/>
+							<img width="40" height="40" data-src="{{ wp_get_attachment_image_url( $item->image ) }}" class="lazy" alt=""/>
 						</div>
 					@endif
 
