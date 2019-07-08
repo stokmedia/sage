@@ -1,5 +1,5 @@
 <?php
-
+/* This is the 404 page Controller */
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
