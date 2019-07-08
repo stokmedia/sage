@@ -1,7 +1,7 @@
 var hashQueryString = window.location.hash;
 if (hashQueryString != '') {
 	$('.silk-product-item-holder').html('');
-	silkProductLoad(1, true);
+	silkProductLoad(1);
 }
 
 $('.silk-loadmore').click(function () {
@@ -89,10 +89,12 @@ $('.silk-hash-filter').click(function () {
 
 	filterUrl = '#' + filterUrl;
 	window.history.pushState('', 'Title', filterUrl);
-	silkProductLoad(1, true);
+	silkProductLoad(1);
+	// Reset Current Page Count upon Filter update
+	$('.silk-loadmore').data('currentpage', 1);
 });
 
-function silkProductLoad(nextPage, isFilter = '') {
+function silkProductLoad(nextPage) {
 	// this will set selected filter
 	silkSetFilterUsingHash();
 
@@ -101,7 +103,7 @@ function silkProductLoad(nextPage, isFilter = '') {
 	var currentTermId = $('.silk-loadmore').data('currentterm_id');
 	var hashQueryString = window.location.hash;
 	hashQueryString = hashQueryString.replace('#', '&');
-	if (hashQueryString != '' && isFilter == true) {
+	if (hashQueryString != '') {
 		ajaxUrl = ajaxUrl + hashQueryString + '&termid=' + currentTermId;
 	} else {
 		ajaxUrl = ajaxUrl + '&category=' + currentCategory + '&termid=' + currentTermId;
