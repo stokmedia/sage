@@ -71,7 +71,12 @@ $mobile-margin-top-menu: 3.75rem;
   }
 
   .nav-item-cart.is-open .cart {
+    padding-top: 0.8125rem;
     max-height: calc(100vh - 5rem);
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 0.625rem;
+    }
   }
 }
 
@@ -385,8 +390,10 @@ body:not(.AndroidOS):not(.isApple) {
   // Navigation Helper(Cart, Search, Etc...)
   .navbar-helper {
     .nav-item-cart:hover .cart {
+      padding-top: 0.8125rem;
       @include media-breakpoint-up(lg) {
         max-height: calc(100vh - 5rem);
+        padding-top: 0.625rem;
       }
     }
   }

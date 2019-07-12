@@ -79,7 +79,13 @@ class TaxonomySilk_category extends Controller
             $queryString .= '&';
         }
 
-        $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'per_page='.$productListingCount;
+        $lang = Helper::current_lang();
+        $queryLang = '';
+        if (!empty($lang)) {
+            $queryLang = '&lang='.$lang;
+        }
+
+        $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'per_page='.$productListingCount.$queryLang;
         return $url;
     }
 
