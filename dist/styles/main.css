@@ -23356,7 +23356,7 @@ body.isApple .product-filter {
 /* line 16, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .msie .selected-product-blur {
-  opacity: 0.8;
+  opacity: 0.3;
 }
 
 /* line 22, resources/assets/styles/skhoop/sections/_selected-product.scss */

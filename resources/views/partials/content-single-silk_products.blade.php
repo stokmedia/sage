@@ -21,6 +21,7 @@
                             @endif
                         </div>
                         <div class="selected-product-blur d-lg-block d-none rounded-circle" style="background: url({{ $product_background_image ?? '' }}) no-repeat center/cover transparent"></div>
+                        <div class="ie-blur"></div>
                     </div>
 
                     <div class="selected-product-thumbnail d-none d-lg-flex flex-column">
