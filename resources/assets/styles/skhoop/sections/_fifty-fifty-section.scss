@@ -32,6 +32,13 @@
   &-item {
     padding-left: 30px;
     padding-right: 30px;
+
+    &.image {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: $white;
+    }
   }
 
   &-content {
