@@ -3,11 +3,8 @@
 
         <div class='hero-background'>
             <!-- Image Tag -->
-            @if (wp_is_mobile())
-                {!! $section->image_mobile !!}
-            @else 
-                {!! $section->image !!}            
-            @endif
+            {!! $section->image_mobile !!}
+            {!! $section->image !!}
 
             @if($section->video_tag)
                 <!-- Play button -->
