@@ -176,6 +176,26 @@ add_filter( 'register_post_type_args', function ( $args, $post_type ) {
 }, 10, 2 );
 
 /**
+ * Add REST API support to poly lang language.
+ */
+add_action( 'rest_api_init', function() {
+    global $polylang;
+
+    $default = pll_default_language();
+    $langs = pll_languages_list();
+
+    $curLang = !empty($_GET['lang']) ? $_GET['lang'] : '';
+
+    if (!in_array($curLang, $langs)) {
+        $curLang = $default;
+    }
+
+    $polylang->curlang = $polylang->model->get_language( $curLang );
+
+    $GLOBALS['text_direction'] = $polylang->curlang->is_rtl ? 'rtl' : 'ltr';
+});
+
+/**
  * Add REST API support to an already registered taxonomy.
  */
 add_filter( 'register_taxonomy_args', function ( $args, $taxonomy ) {
