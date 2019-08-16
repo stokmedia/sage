@@ -16,10 +16,10 @@
                 @if ($section->product_count > 5)
                     <div class="section-nav d-none d-lg-block">
                         <button class="btn btn-lg btn-icon btn-icon-lg bg-white js-flickity-prev" type="button">
-                            <img src="@asset('images/icon/arrow-left.svg')" alt="" srcset="">
+                            <img class="lazy" data-src="@asset('images/icon/arrow-left.svg')" alt="" srcset="">
                         </button>
                         <button class="btn btn-lg btn-icon btn-icon-lg bg-white js-flickity-next" type="button">
-                            <img src="@asset('images/icon/arrow-right.svg')" alt="" srcset="">
+                            <img class="lazy" data-src="@asset('images/icon/arrow-right.svg')" alt="" srcset="">
                         </button>
                     </div>
                 @endif

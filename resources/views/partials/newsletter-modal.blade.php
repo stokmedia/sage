@@ -9,9 +9,9 @@
                 <div class="modal-body p-0">
                     <div class="container-fluid">
                         <div class="newsletter row px-0">
-                            <div class="col-lg-12 col-md-12 col-sm-12  newsletter-cover" style="background-image: url({{ $newsletter_data->newsletter_modal_content->image ?? '' }})">
+                            <div class="col-lg-12 col-md-12 col-sm-12 newsletter-cover lazy" data-bg="url({{ $newsletter_data->newsletter_modal_content->image ?? '' }})">
                                 <button type="button" class="close mr-3 mt-2" data-dismiss="modal" aria-label="Close">
-                                    <img src="@asset('images/icon/close.svg')" alt="" srcset="">
+                                    <img class="lazy" data-src="@asset('images/icon/close.svg')" alt="" srcset="">
                                 </button>
                             </div>
 

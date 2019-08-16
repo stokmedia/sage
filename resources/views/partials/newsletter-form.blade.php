@@ -14,7 +14,7 @@
             <span class="input-group-btn align-items-center">
                 <button type="submit" class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary shadow-sm border-0">
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    <img src="@asset('images/icon/arrow-right.svg')" alt="" srcset="">
+                    <img class="lazy" data-src="@asset('images/icon/arrow-right.svg')" alt="" srcset="">
                 </button>
             </span>
         </div>

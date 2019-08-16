@@ -84,7 +84,7 @@
                     <div class="header d-flex  justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse-{{ $loop->iteration }}" aria-expanded="false" aria-controls="collapse-{{ $loop->iteration }}">
                         <span class="text-uppercase">{{ $info->label ?: $product_information['description_label'] }}</span>
                         <button class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary bg-white border-0" type="button">
-                            <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+                            <img class="lazy" data-src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                         </button>
                     </div>
                     <div id="collapse-{{ $loop->iteration }}" class="collapse body text-left" aria-labelledby="headingOne" data-parent="#productAccordion">

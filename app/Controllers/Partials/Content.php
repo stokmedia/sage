@@ -350,9 +350,11 @@ trait Content
         }
 
         // Convert USP items to object
-        $data[ 'usp' ] = array_map( function ( $item ) {
-            return (object)$item;
-        }, $data[ 'usp' ] );
+        if ( !empty($data[ 'usp' ]) ) {
+            $data[ 'usp' ] = array_map( function ( $item ) {
+                return (object)$item;
+            }, $data[ 'usp' ] );
+        }
 
         return $data;
     }

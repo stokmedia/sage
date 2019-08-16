@@ -5,7 +5,7 @@
 
         <a href="{{ $image->link }}" class="col" target="_blank" rel="nofollow noreferrer">
             <figure class="tile">
-                <img src="{!! !empty($isLarge) ? $image->image_large : $image->image_small !!}" alt="">
+                <img class="lazy" data-src="{!! !empty($isLarge) ? $image->image_large : $image->image_small !!}" alt="">
             </figure>
         </a>
 

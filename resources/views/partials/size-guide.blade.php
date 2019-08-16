@@ -1,7 +1,7 @@
 <div class="size-guide d-md-flex">
     @if (!empty($size_guide->image))
         <div class="size-guide-image m-auto text-center">
-            <img src="{{ $size_guide->image }}" />
+            <img class="lazy" data-src="{{ $size_guide->image }}" />
         </div>
     @endif
 
