@@ -79,8 +79,17 @@ class TaxonomySilk_category extends Controller
             $queryString .= '&';
         }
 
-        $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'per_page='.$productListingCount;
-        return $url;
+        $lang = Helper::current_lang();
+        $queryLang = '';
+        if (!empty($lang)) {
+            $queryLang = '&lang='.$lang;
+        }
+
+        $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'per_page='.$productListingCount.$queryLang;
+        return $url;        
+
+        // $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'per_page='.$productListingCount;
+        // return $url;
     }
 
     public function currentCategory()
