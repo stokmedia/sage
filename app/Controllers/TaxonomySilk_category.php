@@ -33,17 +33,17 @@ class TaxonomySilk_category extends Controller
         return !empty($postID) ? App::get_content( $postID, 1 ) : false;
 	}     
 
-	public function breadcrumbs()
-	{
-        $breadcrumbs = new Breadcrumbs();
+	// public function breadcrumbs()
+	// {
+    //     $breadcrumbs = new Breadcrumbs();
 
-        return $breadcrumbs->render_breadcumbs( [
-            'container_tag'     => 'div',
-            'container_class'   => 'breadcrumb bg-white d-lg-inline-block d-none mb-0 ',
-            'template'          => '<a class="breadcrumb-item" href="{link}">{title}</a>',
-            'template_active'   => '<span class="breadcrumb-item active">{title}</span>',
-		]);
-	}    
+    //     return $breadcrumbs->render_breadcumbs( [
+    //         'container_tag'     => 'div',
+    //         'container_class'   => 'breadcrumb bg-white d-lg-inline-block d-none mb-0 ',
+    //         'template'          => '<a class="breadcrumb-item" href="{link}">{title}</a>',
+    //         'template_active'   => '<span class="breadcrumb-item active">{title}</span>',
+	// 	]);
+	// }    
 
     public function showLoadMoreButton()
     {
@@ -79,13 +79,7 @@ class TaxonomySilk_category extends Controller
             $queryString .= '&';
         }
 
-        $lang = Helper::current_lang();
-        $queryLang = '';
-        if (!empty($lang)) {
-            $queryLang = '&lang='.$lang;
-        }
-
-        $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'per_page='.$productListingCount.$queryLang;
+        $url = site_url().'/wp-json/wp/v2/products?'.$queryString.'per_page='.$productListingCount;
         return $url;
     }
 
@@ -152,6 +146,39 @@ class TaxonomySilk_category extends Controller
         }
         return $termList;
     }
+
+    public function subCategoryList()
+    {
+        $term = get_queried_object();
+        $categories = [ $term ];
+        $children = get_terms( $term->taxonomy, ['parent' => $term->term_id]);
+        $parentId = $term->term_id;
+
+        if (empty($children)) {
+            $children = get_terms( $term->taxonomy, ['parent' => $term->parent]);
+            $parentObject = get_term_by( 'id', $term->parent, $term->taxonomy );
+            $categories = [ $parentObject ];
+            $parentId = $term->parent;
+        }
+
+        // Merge the parent category and children categories
+        if (!empty($children)) {
+            $categories = array_merge( $categories, $children );
+        }
+
+        // Append category link and active state in categories
+        $categories = array_filter( array_map( function($item) use($term, $parentId) {
+            if (empty($item)) return;
+
+            $item->link = get_term_link( $item->term_id, $item->taxonomy ); 
+            $item->isActive = $item->term_id === $term->term_id;
+            $item->isParent = $item->term_id === $parentId;
+            
+            return $item;
+        }, $categories ));
+
+        return $categories;
+    }     
 
     public function heroBanner()
     {

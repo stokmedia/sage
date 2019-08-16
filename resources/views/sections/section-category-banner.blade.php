@@ -1,8 +1,10 @@
+@if ($breadcrumbs)
+    <section class="section breadcrumb-vertical no-mb d-none d-lg-block">
+    {!! $breadcrumbs !!}
+    </section>
+@endif
+
 @if ($hero_banner->image || $hero_banner->image_mobile)
-    {{-- <section class="section category-banner d-flex no-mb js-image-switch"
-        style="background-image:url( {{ $hero_banner->image }} );"
-        data-desktop-background="{{ $hero_banner->image }}"
-        data-mobile-background="{{ $hero_banner->image_mobile }}"> --}}
     <section class="section category-banner d-flex no-mb lazy"
         data-bg="url( {{ wp_is_mobile() ? $hero_banner->image_mobile : $hero_banner->image }} )">  
         <div class="box-wrapper d-flex align-self-end">

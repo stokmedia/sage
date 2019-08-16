@@ -127,6 +127,25 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_5d565560ba862",
+                    "label": "All",
+                    "name": "all",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -1501,5 +1520,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1562071894
+    "modified": 1565939052
 }

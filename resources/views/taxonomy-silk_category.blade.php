@@ -24,9 +24,19 @@
         @endif
 
         <div class="product-header-actionbox row align-items-center">
-          <div class="product-breadcrumbs col-lg-6 d-none d-lg-block">
-            {!! $breadcrumbs !!}
-          </div>
+
+          @if (!empty($sub_category_list))
+            <div class="product-breadcrumbs col-lg-6 d-none d-lg-block">
+              @foreach ($sub_category_list as $item)
+                @php $parentName = trim((App::getSiteTranslations()->general['all'] ?? '').' '.$item->name) @endphp
+                {{-- {{ pr($translation) }} --}}
+                <a href="{{ $item->link }}">
+                  <button class="btn btn-sm {{ $item->isActive ? 'btn-primary' : 'btn-outline-primary' }}" type="button">{!! !empty($item->isParent) ? $parentName : $item->name !!}</button>
+                </a>
+              @endforeach        
+            </div>
+          @endif
+
           <div class="product-filter-toggle col-lg-6 text-center text-lg-right">
             <div class="h4 d-inline-block mb-0">
               <div class="js-filter-toggle">
@@ -200,13 +210,17 @@
                   </div>
               </div>
             </div>
-            <div class="button-container d-block d-lg-none">
-              <div class="row text-center d-block d-lg-flex">
-                <div class="column">
-                  <a href="#" class="btn-clear">Rensa alla</a>
+
+            @if (!empty($translation->clear_button))
+              <div class="button-container d-block d-lg-none">
+                <div class="row text-center d-block d-lg-flex">
+                  <div class="column">
+                    <a href="#" class="btn-clear">{!! $translation->clear_button ?: '' !!}</a>
+                  </div>
                 </div>
               </div>
-            </div>
+            @endif            
+
         </div>
       </div>
     </form>
