@@ -39,7 +39,7 @@
   }
 
   .bg-image {
-    @include aspect-ratio(1,1);
+    @include aspect-ratio(1, 1);
     @include center(horizontal);
 
     top: 5.625rem;
@@ -59,12 +59,12 @@
 // Product Header Section
 .product-header {
   &-actionbox {
-    padding-top: 0.9375rem;
-    padding-bottom: 0.9375rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
 
     @include media-breakpoint-up(lg) {
-      padding-top: 1.25rem;
-      padding-bottom: 1.25rem;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
   }
 
@@ -76,7 +76,7 @@
     }
   }
 
-  & > .container {
+  &>.container {
     @include media-breakpoint-up(lg) {
       max-width: calc(100% - 3.75rem);
     }
@@ -110,9 +110,39 @@
   }
 
   .product-breadcrumbs {
+
+    >a {
+      margin: 0 6px;
+
+      @include media-breakpoint-up(lg){
+        margin: 0 8px;
+      }
+
+      // &:first-child {
+      //   @include media-breakpoint-up(lg) {
+      //     margin-left: 0;
+      //   }
+      // }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     .breadcrumb {
       @include media-breakpoint-up(lg) {
         margin-left: 0.4375rem;
+      }
+    }
+
+    .btn-sm {
+      min-width: 100px;
+      width: auto;
+      margin-bottom: 16px;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 10px;
+        margin-top: 10px;
       }
     }
   }
@@ -161,6 +191,7 @@
   }
 
   a {
+
     &:hover,
     &:focus {
       text-decoration: none;
@@ -168,7 +199,7 @@
   }
 
   &-image {
-    @include aspect-ratio(1330,1995);
+    @include aspect-ratio(1330, 1995);
 
     margin-bottom: 0;
     border-radius: 0.3125rem;

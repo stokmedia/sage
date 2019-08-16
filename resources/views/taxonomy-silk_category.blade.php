@@ -6,7 +6,7 @@
   @if ($hero_banner->image || $hero_banner->image_mobile)
     @include('sections.section-category-banner')
   @endif
-  
+
   <section class="section product-header no-mb">
   <form id="silkFilterForm" action="" data-ajaxurl="{{ $ajax_url_listing }}" method="GET">
       <div class="container">
@@ -26,18 +26,18 @@
         <div class="product-header-actionbox row align-items-center">
 
           @if (!empty($sub_category_list))
-            <div class="product-breadcrumbs col-lg-6 d-none d-lg-block">
+            <div class="product-breadcrumbs col-lg-8 text-lg-left text-center">
               @foreach ($sub_category_list as $item)
                 @php $parentName = trim((App::getSiteTranslations()->general['all'] ?? '').' '.$item->name) @endphp
                 {{-- {{ pr($translation) }} --}}
-                <a href="{{ $item->link }}">
-                  <button class="btn btn-sm {{ $item->isActive ? 'btn-primary' : 'btn-outline-primary' }}" type="button">{!! !empty($item->isParent) ? $parentName : $item->name !!}</button>
+                <a href="{{ $item->link }}" class="btn btn-sm {{ $item->isActive ? 'btn-primary' : 'btn-outline-primary' }}">
+                  {!! !empty($item->isParent) ? $parentName : $item->name !!}
                 </a>
-              @endforeach        
+              @endforeach
             </div>
           @endif
 
-          <div class="product-filter-toggle col-lg-6 text-center text-lg-right">
+          <div class="product-filter-toggle col-lg-4 text-center text-lg-right">
             <div class="h4 d-inline-block mb-0">
               <div class="js-filter-toggle">
                   <div class="filter-open js-filter-open">
@@ -121,7 +121,7 @@
                       <li>
                         <div class="custom-control custom-checkbox">
                           <input name="color" {{ $checked }} type="checkbox" id="colorCheck{{ $color['slug'] }}" value="{{ $color['slug'] }}" class="custom-control-input silk-hash-filter">
-                          <label class="custom-control-label" for="colorCheck{{ $color['slug'] }}" 
+                          <label class="custom-control-label" for="colorCheck{{ $color['slug'] }}"
                             style="{{ $color['Image'] ? 'background-image:url('.$color['Image'].')' : 'background-color:'.$color['Hex'] }};"></label>
                         </div>
                       </li>
@@ -175,7 +175,7 @@
                                 {{ $translation->sort['title_asc'] ?? '' }}
                               </label>
                               @endif
-                              
+
                               @if (!empty($translation->sort['title_desc']))
                               <label class="btn btn-outline-primary silk-hash-filter">
                                 <input id="orderby_title_desc" value="title_desc" name="orderby" type="radio" class="silk-hash-orderby">
@@ -196,7 +196,7 @@
                                 {{ $translation->sort['price_low_to_high'] ?? '' }}
                               </label>
                               @endif
-                              
+
                               @if (!empty($translation->sort['price_high_to_low']))
                               <label class="btn btn-outline-primary silk-hash-filter">
                                 <input id="orderby_price_asc" value="price_asc" name="orderby" type="radio" class="silk-hash-orderby">
@@ -219,7 +219,7 @@
                   </div>
                 </div>
               </div>
-            @endif            
+            @endif
 
         </div>
       </div>
