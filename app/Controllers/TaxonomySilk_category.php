@@ -33,17 +33,17 @@ class TaxonomySilk_category extends Controller
         return !empty($postID) ? App::get_content( $postID, 1 ) : false;
 	}     
 
-	// public function breadcrumbs()
-	// {
-    //     $breadcrumbs = new Breadcrumbs();
+	public function titleBreadcrumbs()
+	{
+        $breadcrumbs = new Breadcrumbs();
 
-    //     return $breadcrumbs->render_breadcumbs( [
-    //         'container_tag'     => 'div',
-    //         'container_class'   => 'breadcrumb bg-white d-lg-inline-block d-none mb-0 ',
-    //         'template'          => '<a class="breadcrumb-item" href="{link}">{title}</a>',
-    //         'template_active'   => '<span class="breadcrumb-item active">{title}</span>',
-	// 	]);
-	// }    
+        return $breadcrumbs->render_breadcumbs( [
+            'container_tag'     => 'div',
+            'container_class'   => 'breadcrumb bg-white d-lg-inline-block d-none mb-0 ',
+            'template'          => '<a class="breadcrumb-item" href="{link}">{title}</a>',
+            'template_active'   => '<span class="breadcrumb-item active">{title}</span>',
+		]);
+	}    
 
     public function showLoadMoreButton()
     {
