@@ -12,19 +12,20 @@
       <div class="container">
         {{-- TODO: Hide this if category banner is present --}}
         @if (!$hero_banner->image && !$hero_banner->image_mobile)
-        <div class="product-header-title text-button text-center">
-          <div class="container">
-              <div class="title h1 text-center mb-0">{{ get_queried_object()->name }}</div>
-              
-              @if (!empty($title_breadcrumbs))
-                {!! $title_breadcrumbs !!}
-              @endif
+          <div class="product-header-title text-button text-center {{ !$hero_banner->image && !$hero_banner->image_mobile ? 'mb-1' : '' }}">
+            <div class="container">
+                <div class="title h1 text-center mb-0">{{ get_queried_object()->name }}</div>
 
-              @if (get_queried_object()->description)
-                <div class="preamble text-center mb-3">{{ get_queried_object()->description }}</div>
-              @endif
+                @if (!empty($title_breadcrumbs))
+                  {!! $title_breadcrumbs !!}
+                @endif
+
+                @if (get_queried_object()->description)
+                  <div class="preamble text-center mb-3">{{ get_queried_object()->description }}</div>
+                @endif
+
+            </div>
           </div>
-        </div>
         @endif
 
         <div class="product-header-actionbox row align-items-center">
