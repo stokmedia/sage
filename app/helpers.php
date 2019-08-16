@@ -150,16 +150,32 @@ function silk_product_filter() {
     $priceList = $_SESSION['esc_store']['pricelist'];
 
     // Set Filter for Size
+    // if (isset($_GET['size']) && !empty($_GET['size'])) {
+    //     $sizes = explode(',', $_GET['size']);
+    //     foreach ($sizes as $val) {
+    //         $meta[] = array(
+    //             'key' => 'in_stock_' . $market . '_' . strtolower($val),
+    //             'value' => 1,
+    //             'compare' => '='
+    //         );
+    //     }
+    // }
+
+    // Set Filter for Size
     if (isset($_GET['size']) && !empty($_GET['size'])) {
         $sizes = explode(',', $_GET['size']);
-        foreach ($sizes as $val) {
-            $meta[] = array(
+        $sizeQuery = array( 'relation' => 'or' );
+
+		foreach( $sizes as $val ) {
+			$sizeQuery[] = array(
                 'key' => 'in_stock_' . $market . '_' . strtolower($val),
                 'value' => 1,
                 'compare' => '='
-            );
+			);			
         }
-    }
+        
+        $meta[] = $sizeQuery;
+    }    
 
     // Set Filter for Color
     if (isset($_GET['color']) && !empty($_GET['color'])) {
