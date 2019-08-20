@@ -19457,7 +19457,16 @@ html.is-flickity-fullscreen {
   padding-right: 30px;
 }
 
-/* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+/* line 36, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+
+.fifty-fifty-item.image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #fff;
+}
+
+/* line 44, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
 .fifty-fifty-content {
   width: 95%;
@@ -19466,7 +19475,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 768px) {
-  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+  /* line 44, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content {
     width: 100%;
@@ -19476,7 +19485,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+  /* line 44, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content {
     padding-bottom: 3rem;
@@ -19485,7 +19494,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 1240px) {
-  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+  /* line 44, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content {
     max-width: 31.25rem;
@@ -19493,14 +19502,14 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 1480px) {
-  /* line 37, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+  /* line 44, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content {
     max-width: 38.125rem;
   }
 }
 
-/* line 61, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+/* line 68, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
 .fifty-fifty-content h2 {
   font-family: "Source Serif Pro", serif;
@@ -19510,7 +19519,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 61, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+  /* line 68, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content h2 {
     font-size: 2.25rem;
@@ -19519,7 +19528,7 @@ html.is-flickity-fullscreen {
   }
 }
 
-/* line 74, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+/* line 81, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
 .fifty-fifty-content p {
   font-family: "Source Serif Pro", serif;
@@ -19531,7 +19540,7 @@ html.is-flickity-fullscreen {
 }
 
 @media (min-width: 992px) {
-  /* line 74, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
+  /* line 81, resources/assets/styles/skhoop/sections/_fifty-fifty-section.scss */
 
   .fifty-fifty-content p {
     font-size: 1.25rem;

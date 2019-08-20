@@ -1,7 +1,7 @@
 {{-- <pre>{{ var_dump($section) }}</pre> --}}
 
-<section class="section instagram  {{ $section->classes ?? '' }}">
-    <div class="instagram-gallery d-none d-md-block" style="background-image: url('{{ $section->image }}');">
+<section id="section-{{ $section->id }}" class="section instagram  {{ $section->classes ?? '' }}">
+    <div class="instagram-gallery d-none d-md-block lazy" data-bg="url('{{ $section->image }}')">
 
         @if ( ($section->instagram_link->url && $section->instagram_link->title) || $section->title || $section->text )
             <div class="col-wrap instagram-info-margin">
@@ -111,7 +111,7 @@
         @endif
     </div>
 
-    <div class="instagram-gallery-mobile d-block d-md-none" style="background-image: url(@asset('images/temp/instagram-bg.jpg')">
+    <div class="instagram-gallery-mobile d-block d-md-none lazy" data-bg="url('{{ $section->image }}')">
         @if ( ($section->instagram_link->url && $section->instagram_link->title) || $section->title || $section->text )
             <div class="instagram-info text-center">
                 <div class="btn-header">
