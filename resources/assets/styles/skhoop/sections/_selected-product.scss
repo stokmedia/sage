@@ -197,8 +197,11 @@
       }
 
       .header .btn-icon {
-        transform: rotate(180deg);
-        transition: transform 200ms ease-in;
+
+        &>img {
+          transform: rotate(180deg);
+          transition: transform 200ms ease-in;
+        }
 
         @include media-max(991px) {
           width: 25px;
@@ -206,7 +209,7 @@
         }
       }
 
-      .header.collapsed .btn-icon {
+      .header.collapsed .btn-icon>img {
         transform: rotate(0deg);
       }
 
