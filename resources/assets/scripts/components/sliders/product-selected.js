@@ -42,3 +42,6 @@ $slider.on('click', '.item.is-selected', function () {
 $slider.on('fullscreenChange.flickity', function () {
   $thumbnailGroup.hasClass('is-fullscreen') ? $thumbnailGroup.removeClass('is-fullscreen') : $thumbnailGroup.addClass('is-fullscreen');
 });
+
+// Accordion first child
+$('.js-selected-product-accordion .list-group-item .collapse:eq(0)').addClass('show');

@@ -74,14 +74,14 @@
 
     {{-- Product Information --}}
     @if ($product_information)
-        <ul class="list-group accordion mt-5" id="productAccordion">
+        <ul class="list-group accordion mt-5 js-selected-product-accordion" id="productAccordion">
             @foreach ($product_information as $info)
-                @if ( !isset($info->label) && !isset($info->content) ) 
+                @if ( !isset($info->label) && !isset($info->content) )
                     @continue;
                 @endif
 
                 <li class="list-group-item">
-                    <div class="header d-flex  justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse-{{ $loop->iteration }}" aria-expanded="false" aria-controls="collapse-{{ $loop->iteration }}">
+                    <div class="header d-flex justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse-{{ $loop->iteration }}" aria-expanded="false" aria-controls="collapse-{{ $loop->iteration }}">
                         <span class="text-uppercase">{{ $info->label ?: $product_information['description_label'] }}</span>
                         <button class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary bg-white border-0" type="button">
                             <img class="lazy" data-src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">

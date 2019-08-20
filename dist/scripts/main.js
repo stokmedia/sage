@@ -16727,6 +16727,9 @@ $slider.on('fullscreenChange.flickity', function () {
   $thumbnailGroup.hasClass('is-fullscreen') ? $thumbnailGroup.removeClass('is-fullscreen') : $thumbnailGroup.addClass('is-fullscreen');
 });
 
+// Accordion first child
+$('.js-selected-product-accordion .list-group-item .collapse:eq(0)').addClass('show');
+
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
