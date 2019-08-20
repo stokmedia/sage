@@ -23463,12 +23463,6 @@ body.isApple .product-filter {
   padding: 0.9375rem 1rem 0.9375rem 0.6875rem;
 }
 
-/* line 31, resources/assets/styles/skhoop/sections/_selected-product.scss */
-
-.selected-product-preview.is-oos .item {
-  opacity: 0.5;
-}
-
 /* line 36, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider {
@@ -23479,23 +23473,26 @@ body.isApple .product-filter {
   transition: all 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
   padding: 0 0.625rem;
   background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 43, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 45, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider-col {
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  /* line 43, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 45, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-slider-col {
     width: 575px;
   }
 }
 
-/* line 51, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 53, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .msie .selected-product-slider-col .ie-blur {
   /* Internet Explorer < v11  */
@@ -23516,19 +23513,19 @@ body.isApple .product-filter {
   border-radius: 50%;
 }
 
-/* line 70, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 72, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .flickity-viewport {
   height: 100%;
 }
 
-/* line 74, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 76, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .flickity-fullscreen-button-view {
   display: none;
 }
 
-/* line 78, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 80, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .flickity-prev-next-button,
 .selected-product-slider .flickity-prev-next-button {
@@ -23538,28 +23535,28 @@ body.isApple .product-filter {
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 85, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 87, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .flickity-prev-next-button.next {
   right: 0;
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0yMS40NDc2IDE0LjE4MDVDMjEuMjE2IDEzLjkzOTggMjAuODMwNSAxMy45Mzk4IDIwLjU5MDkgMTQuMTgwNUMyMC4zNTkzIDE0LjQxMyAyMC4zNTkzIDE0Ljc5OTkgMjAuNTkwOSAxNS4wMzE5TDI0LjkzNTEgMTkuMzkzTDEwLjU5OTggMTkuMzkzQzEwLjI2NTYgMTkuMzkzNiAxMCAxOS42NjAyIDEwIDE5Ljk5NTdDMTAgMjAuMzMxMSAxMC4yNjU2IDIwLjYwNjQgMTAuNTk5OCAyMC42MDY0TDI0LjkzNTEgMjAuNjA2NEwyMC41OTA5IDI0Ljk1OTRDMjAuMzU5MyAyNS4yMDAxIDIwLjM1OTMgMjUuNTg3NiAyMC41OTA5IDI1LjgxOTVDMjAuODMwNSAyNi4wNjAyIDIxLjIxNjUgMjYuMDYwMiAyMS40NDc2IDI1LjgxOTVMMjYuODIwMiAyMC40MjZDMjcuMDU5OSAyMC4xOTM1IDI3LjA1OTkgMTkuODA2NSAyNi44MjAyIDE5LjU3NDZMMjEuNDQ3NiAxNC4xODA1WiIgZmlsbD0iIzFFMjAxRCIvPg0KPC9zdmc+DQo=) no-repeat center/contain white;
 }
 
-/* line 90, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 92, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .flickity-prev-next-button.previous {
   left: 0;
   background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOC41NTI0IDI1LjgxOTVDMTguNzg0IDI2LjA2MDIgMTkuMTY5NSAyNi4wNjAyIDE5LjQwOTEgMjUuODE5NUMxOS42NDA3IDI1LjU4NyAxOS42NDA3IDI1LjIwMDEgMTkuNDA5MSAyNC45NjgxTDE1LjA2NDkgMjAuNjA3SDI5LjQwMDJDMjkuNzM0NCAyMC42MDY0IDMwIDIwLjMzOTggMzAgMjAuMDA0M0MzMCAxOS42Njg5IDI5LjczNDQgMTkuMzkzNiAyOS40MDAyIDE5LjM5MzZIMTUuMDY0OUwxOS40MDkxIDE1LjA0MDZDMTkuNjQwNyAxNC43OTk5IDE5LjY0MDcgMTQuNDEyNCAxOS40MDkxIDE0LjE4MDVDMTkuMTY5NSAxMy45Mzk4IDE4Ljc4MzUgMTMuOTM5OCAxOC41NTI0IDE0LjE4MDVMMTMuMTc5OCAxOS41NzRDMTIuOTQwMSAxOS44MDY1IDEyLjk0MDEgMjAuMTkzNSAxMy4xNzk4IDIwLjQyNTRMMTguNTUyNCAyNS44MTk1WiIgZmlsbD0iIzFFMjAxRCIvPg0KPC9zdmc+DQo=) no-repeat center/contain white;
 }
 
-/* line 95, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 97, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .flickity-prev-next-button > .flickity-button-icon,
 .selected-product-slider .flickity-prev-next-button > .flickity-button-icon {
   display: none;
 }
 
-/* line 100, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 102, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider .item {
   display: -webkit-box;
@@ -23570,8 +23567,7 @@ body.isApple .product-filter {
           justify-content: center;
   width: 100%;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
   position: relative;
   overflow: hidden;
 }
@@ -23628,14 +23624,14 @@ body.isApple .product-filter {
   min-width: 200%;
 }
 
-/* line 110, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 112, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider.is-fullscreen {
   padding-bottom: 0;
   border-radius: 0;
 }
 
-/* line 114, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 116, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider.is-fullscreen .item {
   height: 100%;
@@ -23645,7 +23641,7 @@ body.isApple .product-filter {
   opacity: 1;
 }
 
-/* line 121, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 123, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider.is-fullscreen .item > img {
   position: relative;
@@ -23662,19 +23658,19 @@ body.isApple .product-filter {
   object-fit: cover;
 }
 
-/* line 124, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 126, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .msie .selected-product-slider.is-fullscreen .item > img {
   position: absolute;
 }
 
-/* line 143, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 145, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-slider.is-fullscreen .item::before {
   display: none;
 }
 
-/* line 150, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 152, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .name {
   font-family: "Source Serif Pro", serif;
@@ -23683,14 +23679,14 @@ body.isApple .product-filter {
 }
 
 @media (min-width: 992px) {
-  /* line 150, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 152, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-options .name {
     line-height: 45px;
   }
 }
 
-/* line 160, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 162, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .price {
   font-size: 1.25rem;
@@ -23700,7 +23696,7 @@ body.isApple .product-filter {
 }
 
 @media (min-width: 992px) {
-  /* line 160, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 162, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-options .price {
     font-size: 1.25rem;
@@ -23710,7 +23706,7 @@ body.isApple .product-filter {
   }
 }
 
-/* line 174, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 176, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .info {
   font-size: 0.8125rem;
@@ -23719,14 +23715,14 @@ body.isApple .product-filter {
   line-height: 25px;
 }
 
-/* line 181, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 183, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .selectors {
   margin-top: 0.5625rem;
   margin-bottom: 0.625rem;
 }
 
-/* line 187, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 189, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .selectors .color-selector > .is-active .custom-control-label {
   border: 0.125rem solid #fff;
@@ -23734,14 +23730,14 @@ body.isApple .product-filter {
           box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 194, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 196, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .accordion .header {
   cursor: pointer;
   padding: 1.3125rem 0;
 }
 
-/* line 201, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 203, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .accordion .header .btn-icon > img {
   -webkit-transform: rotate(180deg);
@@ -23755,7 +23751,7 @@ body.isApple .product-filter {
 }
 
 @media screen and (max-width: 991px) {
-  /* line 199, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 201, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-options .accordion .header .btn-icon {
     width: 25px;
@@ -23763,7 +23759,7 @@ body.isApple .product-filter {
   }
 }
 
-/* line 212, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 214, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .accordion .header.collapsed .btn-icon > img {
   -webkit-transform: rotate(0deg);
@@ -23771,7 +23767,7 @@ body.isApple .product-filter {
           transform: rotate(0deg);
 }
 
-/* line 216, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 218, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .accordion .header span {
   font-size: 0.8125rem;
@@ -23779,7 +23775,7 @@ body.isApple .product-filter {
   letter-spacing: 1.86px;
 }
 
-/* line 222, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 224, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .accordion .body {
   font-size: 14px;
@@ -23788,7 +23784,7 @@ body.isApple .product-filter {
   line-height: 22px;
 }
 
-/* line 229, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 231, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .accordion .list-group-item {
   border: none;
@@ -23797,21 +23793,21 @@ body.isApple .product-filter {
   border-radius: 0;
 }
 
-/* line 236, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 238, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-options .accordion .list-group-item:first-child,
 .selected-product-options .accordion .list-group-item:last-child {
   border-top: 1px solid #979797;
 }
 
-/* line 243, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 245, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail {
   margin-left: 0.625rem;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 243, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 245, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail {
     margin-left: 0.625rem;
@@ -23829,7 +23825,7 @@ body.isApple .product-filter {
   }
 }
 
-/* line 254, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 256, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item {
   width: 70px;
@@ -23842,49 +23838,49 @@ body.isApple .product-filter {
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 254, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 256, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item {
     margin: 0.625rem 0.3125rem;
   }
 }
 
-/* line 267, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 269, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:first-child {
   margin-top: 0;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 267, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 269, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item:first-child {
     margin-top: 0.625rem;
   }
 }
 
-/* line 275, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 277, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 275, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 277, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item:last-child {
     margin-bottom: 0.625rem;
   }
 }
 
-/* line 283, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 285, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item.is-selected,
 .selected-product-thumbnail .item:hover {
   opacity: 0.6;
 }
 
-/* line 288, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 290, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item figure {
   position: relative;
@@ -23943,7 +23939,7 @@ body.isApple .product-filter {
   min-width: 200%;
 }
 
-/* line 294, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 296, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen {
   position: fixed;
@@ -23966,32 +23962,32 @@ body.isApple .product-filter {
           align-items: center;
 }
 
-/* line 307, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 309, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item {
   margin: 0.3125rem;
 }
 
-/* line 310, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 312, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:first-child {
   margin-top: 0.3125rem;
 }
 
-/* line 314, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 316, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:last-child {
   margin-bottom: 0.3125rem;
 }
 
-/* line 322, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 324, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product .custom-control .custom-control-label > span {
   margin-top: 0;
   margin-left: 0;
 }
 
-/* line 329, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 331, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .js-plus-item-btn {
   cursor: pointer;
