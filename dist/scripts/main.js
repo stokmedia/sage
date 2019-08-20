@@ -16736,13 +16736,14 @@ $slider.on('fullscreenChange.flickity', function () {
 /* WEBPACK VAR INJECTION */(function($) {var GridSlider = {};
 
 GridSlider.slider = function () {
-  var $gridSlider = $( '.js-grid-slider' );
+  var $gridSlider = $('.js-grid-slider');
 
-  $gridSlider.on( 'ready.flickity', function() {
+  $gridSlider.on('ready.flickity', function () {
     $gridSlider.css('visibility', 'visible');
   });
 
   var options = {
+    contain: true,
     cellAlign: 'left',
     groupCells: false,
     prevNextButtons: false,
@@ -16752,6 +16753,7 @@ GridSlider.slider = function () {
 
   if (matchMedia('screen and (min-width: 768px)').matches) {
     options = {
+      wrapAround: true,
       cellAlign: 'left',
       groupCells: true,
       prevNextButtons: false,
@@ -16765,18 +16767,18 @@ GridSlider.slider = function () {
   var $prevButton = $('.js-flickity-prev');
   var $nextButton = $('.js-flickity-next');
 
-  $prevButton.click(function() {
+  $prevButton.click(function () {
     $gridSlider.flickity('previous');
   });
 
-  $nextButton.click(function() {
+  $nextButton.click(function () {
     $gridSlider.flickity('next');
   });
 };
 
 GridSlider.slider();
 
-$(window).resize(function() {
+$(window).resize(function () {
   GridSlider.slider();
 });
 
