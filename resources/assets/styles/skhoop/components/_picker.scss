@@ -87,6 +87,10 @@
       box-shadow: 0 0 0.3125rem 0 rgba($black,0.25);
     }
   }
+
+  .item.is-active {
+    pointer-events: none;
+  }
 }
 
 // Size Selector
