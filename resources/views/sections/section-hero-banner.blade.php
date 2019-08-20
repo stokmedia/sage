@@ -1,4 +1,4 @@
-<section class='section hero-banner {{ $section->classes ?? '' }}'>
+<section id="section-{{ $section->id }}" class='section hero-banner {{ $section->classes ?? '' }}'>
     <div class='hero-wrap'>
 
         <div class='hero-background'>

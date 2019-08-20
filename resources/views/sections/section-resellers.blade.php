@@ -1,5 +1,5 @@
 @if ($section->title || $section->preamble || $section->items)
-    <section class="section resellers  {{ $section->classes ?? '' }}">
+    <section id="section-{{ $section->id }}" class="section resellers  {{ $section->classes ?? '' }}">
         <div class="resellers-container p-3 m-auto">
 
             @if ($section->title || $section->preamble)

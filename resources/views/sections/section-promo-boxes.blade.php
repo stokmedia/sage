@@ -1,5 +1,5 @@
 @if ($section->items)
-    <section class="section promo-box overflow-hidden  {{ $section->classes ?? '' }}">
+    <section id="section-{{ $section->id }}" class="section promo-box overflow-hidden  {{ $section->classes ?? '' }}">
         <div class="align-items-stretch row mx-0">
 
             @foreach ($section->items as $item)

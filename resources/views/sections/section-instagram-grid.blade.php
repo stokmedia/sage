@@ -1,6 +1,6 @@
 {{-- <pre>{{ var_dump($section) }}</pre> --}}
 
-<section class="section instagram  {{ $section->classes ?? '' }}">
+<section id="section-{{ $section->id }}" class="section instagram  {{ $section->classes ?? '' }}">
     <div class="instagram-gallery d-none d-md-block lazy" data-bg="url('{{ $section->image }}')">
 
         @if ( ($section->instagram_link->url && $section->instagram_link->title) || $section->title || $section->text )

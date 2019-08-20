@@ -1,6 +1,6 @@
 
 @if (!empty($section->has_content))
-    <section class="section popular-products  {{ $section->classes ?? '' }} @if ($section->link) has-button @endif">
+    <section id="section-{{ $section->id }}" class="section popular-products  {{ $section->classes ?? '' }} @if ($section->link) has-button @endif">
         <div class="container">
             <div class="section-header @if ($section->product_count <= 5)is-no-nav @endif">
                 @if (!empty($section->title))

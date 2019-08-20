@@ -1,7 +1,5 @@
-{{-- TODO: Custom image size --}}
-
 @if ($section->title || $section->items)
-    <section class="section three-promo  {{ $section->classes ?? '' }}">
+    <section id="section-{{ $section->id }}" class="section three-promo  {{ $section->classes ?? '' }}">
         @if ( $section->title )
             <div class="container text-center title">
                 <h2 class="h2">{{ $section->title }}</h2>
