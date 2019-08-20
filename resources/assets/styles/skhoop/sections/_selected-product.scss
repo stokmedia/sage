@@ -1,6 +1,16 @@
 .selected-product {
   &-blur {
     filter: blur(17.1828px);
+    height: 100%;
+    width: 100%;
+    ackface-visibility: hidden;
+
+    .msie & {
+      opacity: 0.3;
+    }
+  }
+
+  &-blur-wrapper {
     z-index: $zindex-dropdown;
     position: absolute;
     max-width: 700px;
@@ -9,13 +19,8 @@
     width: 100%;
     top: 0;
     right: auto;
-    bottom: 0;
     left: -170px;
     margin: auto;
-
-    .msie & {
-      opacity: 0.3;
-    }
   }
 
   &-preview {
@@ -178,7 +183,7 @@
       margin-bottom: 0.625rem;
     }
 
-    .selectors .color-selector > .is-active {
+    .selectors .color-selector>.is-active {
       .custom-control-label {
         border: 0.125rem solid $white;
         box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.25);
