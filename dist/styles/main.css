@@ -23454,7 +23454,7 @@ body.isApple .product-filter {
 /* line 27, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-preview .breadcrumb {
-  margin-top: 0.8125rem;
+  padding: 0.9375rem 1rem 0.9375rem 0.6875rem;
 }
 
 /* line 31, resources/assets/styles/skhoop/sections/_selected-product.scss */
