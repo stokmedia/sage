@@ -3493,6 +3493,16 @@ mark,
   opacity: 1;
 }
 
+.form-control::-moz-placeholder,
+.comment-form input[type="text"]::-moz-placeholder,
+.comment-form input[type="email"]::-moz-placeholder,
+.comment-form input[type="url"]::-moz-placeholder,
+.comment-form textarea::-moz-placeholder,
+.search-form .search-field::-moz-placeholder {
+  color: #031532;
+  opacity: 1;
+}
+
 .form-control::-ms-input-placeholder,
 .comment-form input[type="text"]::-ms-input-placeholder,
 .comment-form input[type="email"]::-ms-input-placeholder,
@@ -8389,8 +8399,10 @@ input[type="button"].btn-block {
 
   .card-columns {
     -webkit-column-count: 3;
+       -moz-column-count: 3;
             column-count: 3;
     -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
             column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
@@ -17551,7 +17563,16 @@ blockquote footer::before,
   }
 }
 
-/* line 39, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 37, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn:hover,
+.comment-form input:hover[type="submit"],
+.search-form .search-submit:hover {
+  -webkit-box-shadow: 0 5px 0.4125rem 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 0.4125rem 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 43, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn > [class*="spinner-"],
 .comment-form input[type="submit"] > [class*="spinner-"],
@@ -17559,7 +17580,7 @@ blockquote footer::before,
   display: none;
 }
 
-/* line 43, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 47, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn.is-loading > [class*="spinner-"],
 .comment-form input.is-loading[type="submit"] > [class*="spinner-"],
@@ -17567,7 +17588,7 @@ blockquote footer::before,
   display: inline-block;
 }
 
-/* line 47, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 51, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn.is-loading > img,
 .comment-form input.is-loading[type="submit"] > img,
@@ -17575,13 +17596,13 @@ blockquote footer::before,
   display: none;
 }
 
-/* line 56, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 60, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary {
   color: #fff;
 }
 
-/* line 60, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 64, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-primary:hover {
   color: #031532;
@@ -17589,20 +17610,20 @@ blockquote footer::before,
   border-color: #7e7e7e;
 }
 
-/* line 70, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 74, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary {
   border-color: #7e7e7e;
   color: #031532;
 }
 
-/* line 75, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 79, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary:hover {
   color: #fff;
 }
 
-/* line 82, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 86, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon {
   min-width: auto;
@@ -17614,27 +17635,27 @@ blockquote footer::before,
           box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 90, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 94, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-sm {
   height: 1.875rem;
   width: 1.875rem;
 }
 
-/* line 95, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 99, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-lg {
   height: 2.5rem;
   width: 2.5rem;
 }
 
-/* line 100, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 104, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > img {
   width: 100%;
 }
 
-/* line 104, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 108, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > svg {
   width: 100%;

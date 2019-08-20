@@ -33,6 +33,10 @@
       min-width: 145px;
     }
   }
+
+  &:hover {
+    box-shadow: 0 5px 0.4125rem 0 rgba($black, 0.1);
+  }
 }
 
 // loading
