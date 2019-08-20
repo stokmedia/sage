@@ -18123,12 +18123,23 @@ var Cart = {};
             success: function (result) {
 
                 // Update cart item count
-                cartItemCount.each( function () {
-                    $(this).text(result.totalItems);
-                });
+                if (cartItemCount) {
+                    cartItemCount.each( function () {
+                        $(this).text(result.totalItems);
 
-                cartItems.html(result.basket);
-                Cart.toggleCart( 'open' );
+                        // Hide / Show Cart count
+                        if (!result.totalItems) {
+                            $(this).addClass( 'd-none' );
+                        } else {
+                            $(this).removeClass( 'd-none' );
+                        }                         
+                    });                   
+                }
+
+                if (result.basket) {
+                    cartItems.html(result.basket);
+                    Cart.toggleCart( 'open' );
+                }
             },
             complete: function () {
                 setTimeout(function () {
@@ -18141,6 +18152,9 @@ var Cart = {};
 
                     cartAjaxRequestEnable = true;
                 }, 2000);
+
+                // Re initialize element events
+                Cart.init();                
             },
             error: function (request) {
                 console.debug(request);
@@ -18221,24 +18235,21 @@ var Cart = {};
     Cart.init = function () {
 
         // Add to bag
-        $(document).on( 'submit', cartForm, function(e) {
+        $(document).find( cartForm ).off( 'submit' ).on( 'submit', function(e) {
             e.preventDefault();
-
             Cart.add($(this));
         });
 
         // Remove product
-        $(document).on( 'click', removeItem, function (e) {
+        $(document).find( removeItem ).off( 'click' ).on( 'click', function (e) {
             e.preventDefault();
             var _this = $(this);
-
             Cart.ajaxCall( 'GET', null, _this.attr('href'), null );
         });
 
         // Has size selected
-        $(document).on( 'change', 'input[name="esc_product_item"], select[name="esc_product_item"]', function (e) {
+        $(document).find( 'input[name="esc_product_item"], select[name="esc_product_item"]' ).off( 'change' ).on( 'change', function (e) {
             e.preventDefault();
-
             Cart.updateButtonText( 'text', $(cartForm).find('button') );
         });
 
