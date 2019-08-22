@@ -22504,12 +22504,13 @@ body.isApple .product-filter {
 
 .resellers-table-cell {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
+  color: #031532;
   letter-spacing: 0.5px;
   padding: 0 0.75rem;
 }
 
-/* line 48, resources/assets/styles/skhoop/sections/_resellers.scss */
+/* line 49, resources/assets/styles/skhoop/sections/_resellers.scss */
 
 .resellers-table-cell.head {
   text-transform: uppercase;
@@ -22517,8 +22518,14 @@ body.isApple .product-filter {
   letter-spacing: 1px;
 }
 
+/* line 55, resources/assets/styles/skhoop/sections/_resellers.scss */
+
+.resellers-table-cell > a {
+  color: #031532;
+}
+
 @media (max-width: 991.98px) {
-  /* line 54, resources/assets/styles/skhoop/sections/_resellers.scss */
+  /* line 59, resources/assets/styles/skhoop/sections/_resellers.scss */
 
   .resellers-table-cell:first-child {
     padding-top: 0.5625rem;
@@ -22526,7 +22533,7 @@ body.isApple .product-filter {
 }
 
 @media (max-width: 991.98px) {
-  /* line 60, resources/assets/styles/skhoop/sections/_resellers.scss */
+  /* line 65, resources/assets/styles/skhoop/sections/_resellers.scss */
 
   .resellers-table-cell:last-child {
     padding-bottom: 0.5625rem;
