@@ -189,15 +189,12 @@ trait Content
             ];
         }, $allIDs );
 
-        $socialMediaLinks = self::getSocialLinks();
-        $siteTranslation = self::getSiteTranslations();
-
-        $instagramLinkIndex = array_search( 'instagram', array_column( $socialMediaLinks, 'media' ) );
+        $instagramLinkIndex = array_search( 'instagram', array_column( self::getSocialLinks(), 'media' ) );
         $instagramLink = [];
-        if ( $instagramLinkIndex ) {
+        if ( $instagramLinkIndex !== false ) {
             $instagramLink = [
-                'title' => !empty($siteTranslation->general['follow_us']) ? $siteTranslation->general['follow_us'] : '',
-                'url' => $socialMediaLinks[ $instagramLinkIndex ]['url'],
+                'title' => self::getSiteTranslations()->general['follow_us'] ?? '',
+                'url' => self::getSocialLinks()[ $instagramLinkIndex ]['url'],
                 'target' => '_blank'
             ];
         }
@@ -209,8 +206,6 @@ trait Content
             'title' => SectionHelper::has_title( $data ) ? $data->section_title : '',
             'text' => $data->text,
             'image' => $data->image ? wp_get_attachment_image_url( $data->image[ 'ID' ], 'instagram-bg' ) : '',
-            'follow_us' => !empty($siteTranslation->general['follow_us']) ? $siteTranslation->general['follow_us'] : '',
-            'instagram_pos' =>  $instagramLinkIndex
         ];
     }
 

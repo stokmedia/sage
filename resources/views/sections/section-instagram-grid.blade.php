@@ -3,23 +3,21 @@
 <section id="section-{{ $section->id }}" class="section instagram  {{ $section->classes ?? '' }}">
     <div class="instagram-gallery d-none d-md-block lazy" data-bg="url('{{ $section->image }}')">
 
-        @if ( ($section->instagram_link->url && $section->instagram_link->title) || $section->title || $section->text )
+        @if ( (!empty($section->instagram_link->url) && !empty($section->instagram_link->title)) || $section->title || $section->text )
             <div class="col-wrap instagram-info-margin">
                 <div class="col-group">
                     <div class="col-side"></div>
                     <div class="col-side">
                         <div class="instagram-info">
                             <div class="btn-header d-flex justify-content-center align-items-center">
-                                @if ($section->instagram_link->url && $section->instagram_link->title)
+                                @if (!empty($section->instagram_link->url) && !empty($section->instagram_link->title))
                                     <a href="{{ $section->instagram_link->url }}"
                                         class="btn btn-sm btn-primary text-uppercase"
                                         target="{{ $section->instagram_link->target }}">{{ $section->instagram_link->title }}</a>
                                 @endif
 
                                 @if ($section->title)
-                                    <h3 class="h3" data-data-social={{ json_encode($social_links) }}
-                                        data-pos="{{ $section->instagram_pos }}" 
-                                        data-trans="{{ $section->follow_us }}">{{ $section->title }}</h3>
+                                    <h3 class="h3">{{ $section->title }}</h3>
                                 @endif
                             </div>
 
