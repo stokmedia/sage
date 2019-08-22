@@ -178,6 +178,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5d5e87850e35a",
+                            "label": "Override sitewide content",
+                            "name": "override_sitewide_content",
+                            "type": "true_false",
+                            "instructions": "Enable to display this content instead of the default Instagram content from Site Options.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_5cf0f026752be",
                             "label": "Instagram grid",
                             "name": "instagram_grid",
@@ -365,5 +384,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1562071430
+    "modified": 1566476412
 }

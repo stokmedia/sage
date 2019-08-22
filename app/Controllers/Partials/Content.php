@@ -143,8 +143,18 @@ trait Content
 
     public static function cms_instagram_grid( $data )
     {
-        $data = (object)$data;
+        $defaultInstagram = get_field( 'default_instagram', Helper::current_lang() );
+
+        // Get data from sitewide
+        if (empty($data['override_sitewide_content']) && !empty($defaultInstagram)) {
+            foreach ($defaultInstagram as $key=>$item) {
+                $data[ $key ] = $item; 
+            }
+        }
+
+        $data = (object) $data;
         $imageCount = 13;
+        $taxQuery = [];
 
         if ( $hashtags = $data->filter_by_hashtag ) {
             $taxQuery = [
@@ -157,7 +167,7 @@ trait Content
         $original = SectionHelper::get_instagram_data( [
             'posts_per_page' => $imageCount,
             'ignore_sticky_posts' => 1,
-            'tax_query' => $taxQuery ?? []
+            'tax_query' => !empty($taxQuery) ? [ $taxQuery ]: []
         ] );
 
         // Add filler if original images is less than the $imageCount value
@@ -165,7 +175,8 @@ trait Content
             $fill = SectionHelper::get_instagram_data( [
                 'posts_per_page' => $imageCount - count( $original ),
                 'ignore_sticky_posts' => 1,
-                'post__not_in' => $original
+                'post__not_in' => $original,
+                'tax_query' => !empty($taxQuery) ? [ $taxQuery ]: []
             ] );
         }
 

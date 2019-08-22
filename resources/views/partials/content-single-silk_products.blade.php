@@ -28,7 +28,7 @@
 
                     <div class="selected-product-thumbnail d-none d-lg-flex flex-column">
                         @if (!empty($product->images))
-                            @foreach ($product->images['thumb'] as $item)
+                            @foreach ($product->images['mini'] as $item)
                                 <div class="item bg-white">
                                     <figure>
                                         <img src="{{ $item['url'] }}" alt="">

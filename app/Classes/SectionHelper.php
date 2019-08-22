@@ -92,6 +92,8 @@ class SectionHelper
 
         if ( $options ) {
             foreach ( $options as $key => $item ) {
+                if (empty($item)) continue;
+
                 $args[ $key ] = $item;
             }
         }

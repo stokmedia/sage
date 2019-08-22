@@ -895,6 +895,43 @@
             "prefix_name": 0
         },
         {
+            "key": "field_5d5e81cf903b5",
+            "label": "Instagram",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d5e81e9903b6",
+            "label": "Default Instagram Content",
+            "name": "default_instagram",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5cf0ec9e4e678"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5cf67f8130c28",
             "label": "Newsletter",
             "name": "",
@@ -1520,5 +1557,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1565939052
+    "modified": 1566475213
 }

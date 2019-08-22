@@ -2123,7 +2123,7 @@ module.exports = Alert;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(54);
+module.exports = __webpack_require__(55);
 
 
 /***/ }),
@@ -2182,6 +2182,7 @@ __webpack_require__(50);
 __webpack_require__(51);
 __webpack_require__(52);
 __webpack_require__(53);
+__webpack_require__(54);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -18656,6 +18657,76 @@ var Cart = {};
 
 /***/ }),
 /* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(jQuery) {( function ( $ ) {
+	var Scroll = {};
+
+	Scroll.To = function ( target, adjHeight ) {
+		target = $( target );
+
+		if( typeof adjHeight === 'undefined' || adjHeight === null ) { 
+			adjHeight = 0; 
+		}		
+
+		if ( target.length === 0 ) {
+			return;
+		}
+		var scrollTop = target.offset().top;
+
+		// Get nav height and subtract to top offset of target element
+		var navBar = $( 'nav' );
+		if ( navBar.length > 0 ) {
+			scrollTop -= parseInt( navBar.css( 'height' ) );
+		}	
+
+		// Get wpadminbar height and subtract to top offset of target element
+		var wpAdminBar = $( '#wpadminbar' );
+		if ( wpAdminBar.length > 0 ) {
+			scrollTop -= parseInt( wpAdminBar.css( 'height' ) );
+		}
+
+		if( adjHeight > 0 ) {
+			scrollTop -= parseInt( adjHeight );
+		}
+
+		// Call stop() to avoid shaking behavior in Chrome
+		$( 'html, body' ).stop( true ).animate( {
+			scrollTop: scrollTop,
+		}, 1000 );
+	};
+
+	$( window ).load( function() {
+
+		// Scroll to specific element id on page load
+		if( window.location.hash !== null && window.location.hash !== '' ) {
+			var hash = window.location.hash.substring(1);
+			var target = $( '#' + hash );
+
+			if (target.length) {
+				Scroll.To( target, 0 );
+			}
+		}
+
+		var links = $(document).find( 'a' );
+		if (links.length) {
+			links.off('click').on( 'click', function(e) {
+				var targetLink = $(this).attr('href');
+
+				if (targetLink && $( targetLink )) {
+					e.preventDefault();
+					Scroll.To( $( targetLink ), 0 );
+				}
+			} );
+		}
+
+
+	} );
+} )( jQuery );
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 55 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
