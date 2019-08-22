@@ -191,7 +191,7 @@ trait Content
 
         $socialMediaLinks = self::getSocialLinks();
         $siteTranslation = self::getSiteTranslations();
-        
+
         $instagramLinkIndex = array_search( 'instagram', array_column( $socialMediaLinks, 'media' ) );
         $instagramLink = [];
         if ( $instagramLinkIndex ) {
@@ -209,6 +209,8 @@ trait Content
             'title' => SectionHelper::has_title( $data ) ? $data->section_title : '',
             'text' => $data->text,
             'image' => $data->image ? wp_get_attachment_image_url( $data->image[ 'ID' ], 'instagram-bg' ) : '',
+            'follow_us' => !empty($siteTranslation->general['follow_us']) ? $siteTranslation->general['follow_us'] : '',
+            'instagram_pos' =>  $instagramLinkIndex
         ];
     }
 

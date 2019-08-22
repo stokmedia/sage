@@ -17,7 +17,9 @@
                                 @endif
 
                                 @if ($section->title)
-                                    <h3 class="h3">{{ $section->title }}</h3>
+                                    <h3 class="h3" data-data-social={{ json_encode($social_links) }}
+                                        data-pos="{{ $section->instagram_pos }}" 
+                                        data-trans="{{ $section->follow_us }}">{{ $section->title }}</h3>
                                 @endif
                             </div>
 
