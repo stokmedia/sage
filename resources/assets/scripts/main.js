@@ -35,6 +35,7 @@ require('./components/instagram');
 require('./components/newsletter');
 require('./components/alert');
 require('./components/category');
+require('./components/product-selected');
 require('./components/cart');
 require('./components/checkout');
 

@@ -2123,7 +2123,7 @@ module.exports = Alert;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(53);
+module.exports = __webpack_require__(54);
 
 
 /***/ }),
@@ -2181,6 +2181,7 @@ __webpack_require__(7);
 __webpack_require__(50);
 __webpack_require__(51);
 __webpack_require__(52);
+__webpack_require__(53);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -16727,9 +16728,6 @@ $slider.on('fullscreenChange.flickity', function () {
   $thumbnailGroup.hasClass('is-fullscreen') ? $thumbnailGroup.removeClass('is-fullscreen') : $thumbnailGroup.addClass('is-fullscreen');
 });
 
-// Accordion first child
-$('.js-selected-product-accordion .list-group-item .collapse:eq(0)').addClass('show');
-
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -18118,6 +18116,17 @@ function silkSetFilterUsingHash() {
 
 /***/ }),
 /* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {// Accordion first child
+$('.js-selected-product-accordion .list-group-item:eq(0) .collapse').addClass('show');
+$('.js-selected-product-accordion .list-group-item:eq(0) .header').removeClass('collapsed');
+
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18302,7 +18311,7 @@ var Cart = {};
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {(function($) {
@@ -18602,7 +18611,7 @@ var Cart = {};
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
