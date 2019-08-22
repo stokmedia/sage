@@ -17,7 +17,7 @@
                                 @endif
 
                                 @if ($section->title)
-                                    <h3 class="h3">{{ $section->title }}</h3>
+                                    <h3 class="h3" data-test="{{ json_encode( $section->instagram_link ) }}">{{ $section->title }}</h3>
                                 @endif
                             </div>
 
