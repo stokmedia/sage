@@ -189,11 +189,15 @@ trait Content
             ];
         }, $allIDs );
 
-        $instagramLinkIndex = array_search( 'instagram', array_column( self::getSocialLinks(), 'media' ) );
+        $socialMediaLinks = self::getSocialLinks();
+        $siteTranslation = self::getSiteTranslations();
+        
+        $instagramLinkIndex = array_search( 'instagram', array_column( $socialMediaLinks, 'media' ) );
+        $instagramLink = [];
         if ( $instagramLinkIndex ) {
             $instagramLink = [
-                'title' => self::getSiteTranslations()->general['follow_us'] ?? '',
-                'url' => self::getSocialLinks()[ $instagramLinkIndex ]['url'],
+                'title' => !empty($siteTranslation->general['follow_us']) ? $siteTranslation->general['follow_us'] : '',
+                'url' => $socialMediaLinks[ $instagramLinkIndex ]['url'],
                 'target' => '_blank'
             ];
         }
@@ -201,7 +205,7 @@ trait Content
         return (object)[
             'acf_fc_layout' => $data->acf_fc_layout,
             'instagram_images' => $instaImages,
-            'instagram_link' => (object)$instagramLink ?? [ ],
+            'instagram_link' => (object) $instagramLink,
             'title' => SectionHelper::has_title( $data ) ? $data->section_title : '',
             'text' => $data->text,
             'image' => $data->image ? wp_get_attachment_image_url( $data->image[ 'ID' ], 'instagram-bg' ) : '',
