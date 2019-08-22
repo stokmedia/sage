@@ -162,6 +162,23 @@ class App extends Controller
         ]);
     }
 
+    public function footerBreadcrumbs()
+    {
+        // Do not display breadcrumbs on index pages
+        if (is_front_page()) {
+            return false;
+        }
+
+        $breadcrumbs = new Breadcrumbs();     
+
+        return $breadcrumbs->render_breadcumbs( [
+            'container_tag'     => 'div',
+            'container_class'   => 'breadcrumb bg-white mb-0 justify-content-center',
+            'template'          => '<a class="breadcrumb-item" href="{link}">{title}</a>',
+            'template_active'   => '<span class="breadcrumb-item active">{title}</span>',
+        ]);
+    }    
+
     public function selection()
     {
         return \EscGeneral::getSelection();
