@@ -121,6 +121,9 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
  */
 add_filter( 'pre_get_posts', function ( $query ) {
 
+    // End process if wp admin
+    if( is_admin() ) { return; }
+
     $taxonomy = 'silk_category';
     if ( isset( $query->query[ $taxonomy ] ) && $query->is_main_query() ) {
 

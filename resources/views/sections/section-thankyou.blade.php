@@ -6,11 +6,11 @@
                 <h3 class="h3">{{ $page_info->product_label ?? '' }}</h3>
                 @endif
 
-                @php $selection = EscGeneral::getSelection(); @endphp
-                @if (isset($selection['items']) && is_array($selection['items']))
-                    @foreach($selection['items'] as $item)
+
+                @if (isset($receipt_info['receipt_items']) && is_array($receipt_info['receipt_items']))
+                    @foreach($receipt_info['receipt_items'] as $item)
                         @php $has_qty = $has_remove = true @endphp
-                        @php(include( locate_template( 'parts/shop/selection-item.php' ) ))
+                        @php (include( locate_template( 'parts/shop/receipt-selection.php' ) ))
                     @endforeach
                 @endif
             </div>
@@ -59,14 +59,22 @@
                 @endif
 
             </div>
-        </div>
+        </div>        
 
-        {{-- Klarna Snippet --}}
-        @if (!empty($receipt_info['paymentMethodData']['snippet']))
-            <div class="row">
+    </div>    
+</section>
+
+
+{{-- Klarna Snippet --}}
+@if (!empty($receipt_info['paymentMethodData']['snippet']))
+    <style>
+        .is-child-full { width: 100% !important }
+    </style>
+    <section class="section">
+        <div class="container">
+            <div class="row is-child-full">
                 {!! $receipt_info['paymentMethodData']['snippet'] !!}
             </div>
-        @endif            
-
-    </div>
-</section>
+        </div>
+    </section>        
+@endif       

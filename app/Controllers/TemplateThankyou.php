@@ -29,15 +29,65 @@ class TemplateThankyou extends Controller
             
         } elseif( isset($receiptInfo['order']) ) {
             $content = get_field( 'successful_checkout' );
+            
         }
+
+        if (isset($receiptInfo['items'])) {
+            $receiptInfo['receipt_items'] = self::getReceiptItems( $receiptInfo['items'] );
+        }
+
+        $receiptBg = '';
+        if (get_field( 'receipt_bg_image' )) {
+            $receiptBg = wp_get_attachment_image_url( get_field( 'receipt_bg_image' )['ID'], 'newsletter-bg' );
+        }
+
+        $content = empty($content) ? [] : $content;
         
         return (object) [
             'header' => $content,
-            'has_header' => !empty($content),
+            'has_header' => !empty(array_filter($content)),
             'product_label' => get_field( 'product_label' ),
             'summary_label' => get_field( 'summary_label' ),
             'summary_text' => get_field( 'summary_text' ),
             'info' => $receiptInfo
         ];
+    }
+
+    public static function getReceiptItems( $items ) 
+    {
+        if( empty($items) ) { return false; }
+        
+        $products = [];
+
+        foreach ($items as $item) {
+            $args = array(
+                'post_type' => 'silk_products',
+                'meta_key' => 'product_id',
+                'meta_value' =>  $item['product']
+            );
+    
+            $wpQuery = new \WP_Query( $args );
+    
+            if( empty($wpQuery->posts) ) {
+                continue;
+            }
+
+            $products[] = (object) [
+                'product_post' => $wpQuery->posts[0],
+                'product_data' => $item,
+            ];
+        }
+
+        return $products;
+
+    }
+    
+    public function clearSession() 
+    {
+        if( isset($_SESSION['esc_store']['selection_id']) ) {
+            setcookie('esc_id', $_SESSION['esc_store']['selection_id'], time()+(3600*3), '/', $_SERVER['SERVER_NAME'] );
+        }
+
+        \EscSuccess::clearSession();
     }    
 }
