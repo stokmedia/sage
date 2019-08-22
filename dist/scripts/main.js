@@ -17423,7 +17423,7 @@ Filter.for_color();
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$.fn.resellersTable = function () {
-  this.each(function() {
+  this.each(function () {
     var $tableRows = $(this).find((".resellers-table-row:gt(" + (($(this).data('limit') - 1)) + ")"));
     var $btnMore = $(this).find('.js-more');
 
@@ -17435,7 +17435,7 @@ Filter.for_color();
     }
 
     // On window resize
-    $(window).resize(function() {
+    $(window).resize(function () {
       if ($(window).innerWidth() < 768) {
         $tableRows.removeClass('d-md-table-row').addClass('d-none');
       } else {
@@ -17444,8 +17444,8 @@ Filter.for_color();
     });
 
     // Button more
-    $btnMore.click(function() {
-      $tableRows.each(function() {
+    $btnMore.click(function () {
+      $tableRows.each(function () {
         var this$1 = this;
 
         setTimeout(function () {
@@ -17456,6 +17456,16 @@ Filter.for_color();
     });
   });
 };
+
+var $sectionResellers = $('.section.resellers');
+
+$('.resellers .fifty-fifty:eq(0) .btn').on('click', function (e) {
+  e.preventDefault();
+
+  $('html, body').animate({
+    scrollTop: ($sectionResellers.offset().top - $('.js-header').height()) - parseInt($('html').css('margin-top')) + 'px',
+  });
+});
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
