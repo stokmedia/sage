@@ -38,6 +38,7 @@ require('./components/category');
 require('./components/product-selected');
 require('./components/cart');
 require('./components/checkout');
+require('./components/scroll');
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
