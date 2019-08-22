@@ -1,3 +1,17 @@
+<section class="section d-lg-none d-inline-block mb-0 w-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="breadcrumb bg-white mb-0 justify-content-center">
+          <a class="breadcrumb-item" href="#">Home</a>
+          <a class="breadcrumb-item" href="#">Level 2</a>
+          <span class="breadcrumb-item active">Level 3</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="content-info">
     <div class="container">
         <div class="row">
