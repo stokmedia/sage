@@ -1,44 +1,88 @@
-let $slider, $flkty, $thumbnailGroup, $thumbnailGroupItems, $productPeview;
+var $slider,
+    $thumbnailGroup,
+    $thumbnailGroupItems,
+    $productPeview,
+    $mobileOption,
+    $desktopOption,
+    $isInitialized,
+    ProductSelectedSlider;
 
 $slider = $('.selected-product-slider');
 $thumbnailGroup = $('.selected-product-thumbnail');
 $thumbnailGroupItems = $thumbnailGroup.find('.item');
 $productPeview = $('.selected-product-preview');
+$isInitialized = false;
 
-$slider.on('ready.flickity', function () {
-  $productPeview.removeClass('invisible');
-});
-
-$slider.flickity({
+$desktopOption = {
   pageDots: false,
   contain: true,
   cellAlign: 'left',
   percentPosition: false,
   dragThreshold: 10,
-  prevNextButtons: $(window).innerWidth() < 992,
-  fullscreen: $(window).innerWidth() > 991,
-});
+  prevNextButtons: false,
+  fullscreen: true,
+  on: {
+    ready: function () {
+      $productPeview.removeClass('invisible');
+      $isInitialized = true;
+    },
+    select: function (index) {
+      $thumbnailGroupItems.filter('.is-selected').removeClass('is-selected');
+      $thumbnailGroupItems.eq(index).addClass('is-selected');
+    },
+    fullscreenChange: function () {
+      $thumbnailGroup.hasClass('is-fullscreen') ? $thumbnailGroup.removeClass('is-fullscreen') : $thumbnailGroup.addClass('is-fullscreen');
+    },
+  },
+}
 
-$flkty = $slider.data('flickity');
+$mobileOption = {
+  pageDots: false,
+  contain: true,
+  cellAlign: 'left',
+  percentPosition: false,
+  dragThreshold: 10,
+  prevNextButtons: true,
+  fullscreen: false,
+  on: {
+    ready: function () {
+      $productPeview.removeClass('invisible');
+      $isInitialized = true;
+    },
+    select: function (index) {
+      $thumbnailGroupItems.filter('.is-selected').removeClass('is-selected');
+      $thumbnailGroupItems.eq(index).addClass('is-selected');
+    },
+  },
+}
 
-$slider.flickity('resize');
+ProductSelectedSlider = {
+  init(options) {
 
-// update selected cellButtons
-$slider.on('select.flickity', function () {
-  $thumbnailGroupItems.filter('.is-selected').removeClass('is-selected');
-  $thumbnailGroupItems.eq($flkty.selectedIndex).addClass('is-selected');
-});
+    $isInitialized && $slider.flickity('destroy');
 
-// select cell on button click
-$thumbnailGroup.on('click', '.item', function () {
-  let index = $(this).index();
-  $slider.flickity('select', index);
-});
+    if (window.innerWidth <= 991.98) {
+      $slider.flickity(options.$mobileOption);
+    } else {
+      $slider.flickity(options.$desktopOption);
 
-$slider.on('click', '.item.is-selected', function () {
-  $('.flickity-fullscreen-button-view').trigger('click');
-});
+      $slider.on('click', '.item.is-selected', function () {
+        window.innerWidth >= 991.98 && $slider.flickity('viewFullscreen');
+      });
 
-$slider.on('fullscreenChange.flickity', function () {
-  $thumbnailGroup.hasClass('is-fullscreen') ? $thumbnailGroup.removeClass('is-fullscreen') : $thumbnailGroup.addClass('is-fullscreen');
+      // select cell on button click
+      $thumbnailGroup.on('click', '.item', function () {
+        let index = $(this).index();
+        $slider.flickity('select', index);
+      });
+    }
+  },
+};
+
+ProductSelectedSlider.init({ $mobileOption, $desktopOption });
+
+$(window).resize(function () {
+  $slider.flickity('exitFullscreen');
+
+  ProductSelectedSlider.init({ $mobileOption, $desktopOption });
 });

@@ -34,6 +34,14 @@ html.is-flickity-fullscreen {
   width: 24px;
   height: 24px;
   border-radius: 4px;
+
+  .admin-bar & {
+    top: 46px;
+
+    @include media-min(782px) {
+      top: 32px;
+    }
+  }
 }
 
 /* right-to-left */
@@ -42,10 +50,17 @@ html.is-flickity-fullscreen {
   left: 10px;
 }
 
-.flickity-fullscreen-button-exit { display: none; }
+.flickity-fullscreen-button-exit {
+  display: none;
+}
 
-.flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit { display: block; }
-.flickity-enabled.is-fullscreen .flickity-fullscreen-button-view { display: none; }
+.flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit {
+  display: block;
+}
+
+.flickity-enabled.is-fullscreen .flickity-fullscreen-button-view {
+  display: none;
+}
 
 .flickity-fullscreen-button .flickity-button-icon {
   position: absolute;

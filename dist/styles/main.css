@@ -19131,34 +19131,48 @@ html.is-flickity-fullscreen {
   border-radius: 4px;
 }
 
+/* line 38, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
+
+.admin-bar .flickity-fullscreen-button {
+  top: 46px;
+}
+
+@media screen and (min-width: 782px) {
+  /* line 38, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
+
+  .admin-bar .flickity-fullscreen-button {
+    top: 32px;
+  }
+}
+
 /* right-to-left */
 
-/* line 40, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
+/* line 48, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
 
 .flickity-rtl .flickity-fullscreen-button {
   right: auto;
   left: 10px;
 }
 
-/* line 45, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
+/* line 53, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
 
 .flickity-fullscreen-button-exit {
   display: none;
 }
 
-/* line 47, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
+/* line 57, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
 
 .flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit {
   display: block;
 }
 
-/* line 48, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
+/* line 61, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
 
 .flickity-enabled.is-fullscreen .flickity-fullscreen-button-view {
   display: none;
 }
 
-/* line 50, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
+/* line 65, resources/assets/styles/skhoop/vendor/_flickity-fullscreen.scss */
 
 .flickity-fullscreen-button .flickity-button-icon {
   position: absolute;
