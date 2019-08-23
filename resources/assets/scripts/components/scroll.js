@@ -52,9 +52,13 @@
 			links.off('click').on( 'click', function(e) {
 				var targetLink = $(this).attr('href');
 
-				if (targetLink && $( targetLink )) {
-					e.preventDefault();
-					Scroll.To( $( targetLink ), 0 );
+				try {
+					if (targetLink && $( targetLink )) {
+						e.preventDefault();
+						Scroll.To( $( targetLink ), 0 );
+					}	
+				} catch (error) {
+					// Do nothing
 				}
 			} );
 		}
