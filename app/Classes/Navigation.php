@@ -37,6 +37,11 @@ class Navigation
 
                 $newMenu[ $menuItem->menu_item_parent ]->children[ ] = $menuItem;
             }
+
+            $target = get_field( 'open_in_new_tab', $menuItem->ID );
+            if ($target) {
+                $menuItem->target = '_blank';
+            }
         }
 
         return $newMenu;
