@@ -18473,8 +18473,6 @@ var Cart = {};
     
     Checkout.processItems = function( el ) {
         if ( !el ) { return; }
-
-        console.log( el, el.attr( 'href' ) );
         
         $.ajax({
             type: 'GET',
@@ -18489,7 +18487,6 @@ var Cart = {};
                     window.location.href = location.pathname;
                 } else {
                     Checkout.updateHtml( data );
-                    console.log( data );
                 }
 
             },

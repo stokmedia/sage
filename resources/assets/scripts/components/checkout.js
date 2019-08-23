@@ -137,8 +137,6 @@
     
     Checkout.processItems = function( el ) {
         if ( !el ) { return; }
-
-        console.log( el, el.attr( 'href' ) );
         
         $.ajax({
             type: 'GET',
@@ -153,7 +151,6 @@
                     window.location.href = location.pathname;
                 } else {
                     Checkout.updateHtml( data );
-                    console.log( data );
                 }
 
             },
