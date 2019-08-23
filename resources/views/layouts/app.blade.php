@@ -22,6 +22,7 @@
       @include('partials.footer')
     @endif
 
+    @include('partials.page-loader')
     @php wp_footer() @endphp
   </body>
 </html>

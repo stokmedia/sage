@@ -17499,6 +17499,32 @@ blockquote footer::before,
   content: "\2014\A0";
 }
 
+/* line 1, resources/assets/styles/skhoop/common/_global.scss */
+
+.page-loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1050;
+}
+
+/* line 12, resources/assets/styles/skhoop/common/_global.scss */
+
+.page-loader > .spinner-border {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: block;
+}
+
 /* line 7, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn,
