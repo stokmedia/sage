@@ -1,7 +1,7 @@
 
 <div class="selected-product-options text-lg-left text-center pt-lg-0 pt-4 col-xxl-6 col-lg-5 pl-md-4">
     {{-- Title --}}
-    <h1 class="h2 name mb-0">{{ $post->post_title }}</h1>
+    <h1 class="h2 name mb-0">{!! $post->post_title !!}</h1>
 
     {{-- Price --}}
     @include( 'partials.product-price', [
@@ -12,7 +12,7 @@
 
     {{-- Extra info --}}
     @if ($product_categories)
-        <div class="info text-uppercase d-lg-block d-none">{{ $product_categories }}</div>
+        <div class="info text-uppercase d-lg-block d-none">{!! $product_categories !!}</div>
     @endif
 
     {{-- Form Start --}}
@@ -64,7 +64,7 @@
 
         @if (!empty($addtocart_button->text))
             <button type="submit" class="btn btn-lg btn-primary text-uppercase" {!! $addtocart_button->attr ?? null !!}>
-                <span class="js-button-text">{{ $addtocart_button->text ?? null }}</span>
+                <span class="js-button-text">{!! $addtocart_button->text ?? null !!}</span>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <!-- Loading spinner, just add '.is-loading' class to '.btn' -->
             </button>
         @endif
@@ -82,7 +82,7 @@
 
                 <li class="list-group-item">
                     <div class="header d-flex justify-content-between align-items-center collapsed" data-toggle="collapse" data-target="#collapse-{{ $loop->iteration }}" aria-expanded="false" aria-controls="collapse-{{ $loop->iteration }}">
-                        <span class="text-uppercase">{{ $info->label ?: $product_information['description_label'] }}</span>
+                        <span class="text-uppercase">{!! $info->label ?: $product_information['description_label'] !!}</span>
                         <button class="btn btn-lg btn-icon btn-icon-lg btn-outline-primary bg-white border-0" type="button">
                             <img class="lazy" data-src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                         </button>

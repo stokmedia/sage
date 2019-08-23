@@ -2224,14 +2224,14 @@ jQuery(document).ready(function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_LOCAL_MODULE_1__, __WEBPACK_LOCAL_MODULE_1__factory, __WEBPACK_LOCAL_MODULE_1__module;var __WEBPACK_LOCAL_MODULE_2__, __WEBPACK_LOCAL_MODULE_2__factory, __WEBPACK_LOCAL_MODULE_2__module;var __WEBPACK_LOCAL_MODULE_3__, __WEBPACK_LOCAL_MODULE_3__factory, __WEBPACK_LOCAL_MODULE_3__module;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_4__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_5__;var __WEBPACK_LOCAL_MODULE_6__, __WEBPACK_LOCAL_MODULE_6__factory, __WEBPACK_LOCAL_MODULE_6__module;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_7__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_8__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_9__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_10__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_11__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_12__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_13__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_14__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_15__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_16__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_LOCAL_MODULE_17__;var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_19__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Flickity PACKAGED v2.2.1
+ * Flickity PACKAGED v2.2.0
  * Touch, responsive, flickable carousels
  *
  * Licensed GPLv3 for open source use
  * or Flickity Commercial License for commercial use
  *
  * https://flickity.metafizzy.co
- * Copyright 2015-2019 Metafizzy
+ * Copyright 2015-2018 Metafizzy
  */
 
 /**
@@ -6173,14 +6173,14 @@ return Flickity;
 }));
 
 /*!
- * Flickity v2.2.1
+ * Flickity v2.2.0
  * Touch, responsive, flickable carousels
  *
  * Licensed GPLv3 for open source use
  * or Flickity Commercial License for commercial use
  *
  * https://flickity.metafizzy.co
- * Copyright 2015-2019 Metafizzy
+ * Copyright 2015-2018 Metafizzy
  */
 
 ( function( window, factory ) {
@@ -6218,7 +6218,7 @@ return Flickity;
 });
 
 /*!
- * Flickity asNavFor v2.0.2
+ * Flickity asNavFor v2.0.1
  * enable asNavFor for Flickity
  */
 
@@ -6300,15 +6300,13 @@ proto.setNavCompanion = function( elem ) {
 };
 
 proto.navCompanionSelect = function( isInstant ) {
-  // wait for companion & selectedCells first. #8
-  var companionCells = this.navCompanion && this.navCompanion.selectedCells;
-  if ( !companionCells ) {
+  if ( !this.navCompanion ) {
     return;
   }
   // select slide that matches first cell of slide
-  var selectedCell = companionCells[0];
+  var selectedCell = this.navCompanion.selectedCells[0];
   var firstIndex = this.navCompanion.cells.indexOf( selectedCell );
-  var lastIndex = firstIndex + companionCells.length - 1;
+  var lastIndex = firstIndex + this.navCompanion.selectedCells.length - 1;
   var selectIndex = Math.floor( lerp( firstIndex, lastIndex,
     this.navCompanion.cellAlign ) );
   this.selectCell( selectIndex, false, isInstant );
@@ -7012,14 +7010,14 @@ return Flickity;
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Flickity v2.2.1
+ * Flickity v2.2.0
  * Touch, responsive, flickable carousels
  *
  * Licensed GPLv3 for open source use
  * or Flickity Commercial License for commercial use
  *
  * https://flickity.metafizzy.co
- * Copyright 2015-2019 Metafizzy
+ * Copyright 2015-2018 Metafizzy
  */
 
 ( function( window, factory ) {
@@ -13898,7 +13896,7 @@ return Flickity;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.15.0
+ * @version 1.14.7
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -15502,14 +15500,7 @@ function flip(data, options) {
 
     // flip the variation if required
     var isVertical = ['top', 'bottom'].indexOf(placement) !== -1;
-
-    // flips variation if reference element overflows boundaries
-    var flippedVariationByRef = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
-
-    // flips variation if popper content overflows boundaries
-    var flippedVariationByContent = !!options.flipVariationsByContent && (isVertical && variation === 'start' && overflowsRight || isVertical && variation === 'end' && overflowsLeft || !isVertical && variation === 'start' && overflowsBottom || !isVertical && variation === 'end' && overflowsTop);
-
-    var flippedVariation = flippedVariationByRef || flippedVariationByContent;
+    var flippedVariation = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
 
     if (overlapsRef || overflowsBoundaries || flippedVariation) {
       // this boolean to detect any flip loop
@@ -16116,23 +16107,7 @@ var modifiers = {
      * The popper will never be placed outside of the defined boundaries
      * (except if `keepTogether` is enabled)
      */
-    boundariesElement: 'viewport',
-    /**
-     * @prop {Boolean} flipVariations=false
-     * The popper will switch placement variation between `-start` and `-end` when
-     * the reference element overlaps its boundaries.
-     *
-     * The original placement should have a set variation.
-     */
-    flipVariations: false,
-    /**
-     * @prop {Boolean} flipVariationsByContent=false
-     * The popper will switch placement variation between `-start` and `-end` when
-     * the popper element overlaps its reference boundaries.
-     *
-     * The original placement should have a set variation.
-     */
-    flipVariationsByContent: false
+    boundariesElement: 'viewport'
   },
 
   /**
@@ -16349,8 +16324,8 @@ var Popper = function () {
   /**
    * Creates a new Popper.js instance.
    * @class Popper
-   * @param {Element|referenceObject} reference - The reference element used to position the popper
-   * @param {Element} popper - The HTML / XML element used as the popper
+   * @param {HTMLElement|referenceObject} reference - The reference element used to position the popper
+   * @param {HTMLElement} popper - The HTML element used as the popper
    * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
    * @return {Object} instance - The generated Popper.js instance
    */
@@ -18378,65 +18353,84 @@ var Cart = {};
 
 	Checkout.init = function() {
 
-		// Add/Remove product
-        $(document).on( 'click', editProduct, function (e) {
-            e.preventDefault();
-            Checkout.processItems( $(this) );
-        });
+        // Add/Remove product
+        if ($(document).find( editProduct )) {
+            $(document).find( editProduct ).off( 'click' ).on( 'click', function (e) {
+                e.preventDefault();
+                Checkout.processItems( $(this) );
+            });
+        }
 
         // Voucher
-		$(document).on( 'keydown', '#js-voucher-field #voucher', function(e) {
-            //If not enter pushed
-            if (e.keyCode !== 13) { return; }
+        var voucherField = $(document).find( '#js-voucher-field #voucher' );
+        if (voucherField) {
+            voucherField.off( 'keydown' ).on( 'keydown', function(e) {
+                if (e.keyCode !== 13) { return; }
+    
+                e.preventDefault();
+                Checkout.voucherProcess( $(this).parent().next() );
+            });
+        }
 
-            e.preventDefault();
-            Checkout.voucherProcess( $(this).parent().next() );
-		});
-
-		$(document).on( 'click', '#js-voucher-field button', function(e) {
-            e.preventDefault();
-            Checkout.voucherProcess( $(this) );
-		});
+        var voucherButton = $(document).find( '#js-voucher-field button' );
+        if (voucherButton) {
+            voucherButton.off( 'click' ).on( 'click', function(e) {
+                e.preventDefault();
+                Checkout.voucherProcess( $(this) );
+            });
+        }
 
         // Newsletter
-		newsletterContainer.find( ':checkbox' ).on( 'change', function(e) {
-            e.preventDefault();
-            Checkout.processNewsletter( 'click' );
-		});
+        if (newsletterContainer.find( ':checkbox' )) {
+            newsletterContainer.find( ':checkbox' ).off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.processNewsletter( 'click' );
+            });
+        }
 
         // Gift
-        giftContainer.find( ':checkbox' ).on( 'change', function(e) {
-            e.preventDefault();
-            Checkout.processComment( 'click' );
-        });
+        if (giftContainer.find( ':checkbox' )) {
+            giftContainer.find( ':checkbox' ).off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.processComment( 'click' );
+            });
+        }
 
         // Comment
-        commentContainer.find( 'textarea' ).on( 'blur', function(e) {
-            e.preventDefault();
-            Checkout.processComment( 'click' );
-        });
+        if (commentContainer.find( 'textarea' )) {
+            commentContainer.find( 'textarea' ).off( 'blur' ).on( 'blur', function(e) {
+                e.preventDefault();
+                Checkout.processComment( 'click' );
+            });
+        }
 
         // Payment Method
-		$(document).on( 'change', '#js-selectedPaymentMethod :radio', function(e) {
-            e.preventDefault();
-            Checkout.processPaymentMethod( paymentMethodContainer );
-		});
+        var paymentOptions = $(document).find('#js-selectedPaymentMethod :radio');
+        if (paymentOptions) {
+            paymentOptions.off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.processPaymentMethod( paymentMethodContainer );
+            });
+        }
 
         // Shipping Method
-        $(document).on( 'change', '#js-selectedShippingMethod :radio', function(e) {
-            e.preventDefault();
-            Checkout.processShippingMethod( shippingMethodContainer );
-        });
+        var shippingOptions = $(document).find('#js-selectedShippingMethod :radio');
+        if (shippingOptions) {
+            shippingOptions.off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.processShippingMethod( shippingMethodContainer );
+            });
+        }
 
         // Country
-		$(document).on( 'change', 'select#address_country', function(e) {
-            e.preventDefault();
-            Checkout.countryChangeProcess( this.value );
-		} );
+        var countryOptions = $(document).find( 'select#address_country' );
+        if (countryOptions) {
+            countryOptions.off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.countryChangeProcess( this.value );
+            } );
+        }
 
-    };
-
-    Checkout.ajaxCall = function() {
     };
 	
 	Checkout.updateHtml = function( data ) {
@@ -18455,10 +18449,27 @@ var Cart = {};
             selectedItemsContainer.html( data.items );
             selectedTotalsContainer.html( data.totals );
             voucherContainer.html( data.voucher );
+            Checkout.init();
             
         }
 
+        Checkout.showLoader( false );
     };
+
+    Checkout.showLoader = function( showLoader ) {
+        var loader = $(document).find('.js-loader');
+        var hiddenClass = 'd-none';
+
+        if (!loader) {
+            return;
+        }
+
+        if (showLoader) {
+            loader.removeClass( hiddenClass );
+        } else {
+            loader.addClass( hiddenClass );
+        }
+    };    
     
     Checkout.processItems = function( el ) {
         if ( !el ) { return; }
@@ -18469,6 +18480,9 @@ var Cart = {};
             type: 'GET',
             dataType: 'json',
             url: el.attr( 'href' ),
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function(data) {
 
                 if( data.totalItems === 0 ) {
@@ -18497,6 +18511,9 @@ var Cart = {};
                 action: 'get_payment_method_form',
                 payment_method: paymentValue,
             },
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function ( result ) {
                 if( result.html ) {
                     $( '#js-paymentFields' ).html( result.html );
@@ -18521,7 +18538,10 @@ var Cart = {};
 		$.ajax( {
 			data: sendData,
 			type: 'POST',
-			dataType: 'JSON',
+            dataType: 'JSON',
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
 			success: function(data) {
 				Checkout.updateHtml( data );
 			},
@@ -18543,7 +18563,10 @@ var Cart = {};
 		$.ajax( {
 			data: sendData,
 			type: 'POST',
-			dataType: 'JSON',
+            dataType: 'JSON',
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
 			success: function(data) {
 				Checkout.updateHtml( data );
 			},
@@ -18564,6 +18587,9 @@ var Cart = {};
             dataType: 'JSON',
             type: 'POST',
             data: sendData,
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function ( data ) {
                 Checkout.updateHtml( data );
             },
@@ -18602,6 +18628,9 @@ var Cart = {};
             data: sendData,
             type: 'POST',
             dataType: 'JSON',
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function( data ) {
                 if( action === 'click' ) {
                     Checkout.updateHtml( data );
@@ -18638,6 +18667,9 @@ var Cart = {};
             data: sendData,
             type: 'POST',
             dataType: 'JSON',
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function( data ) {
                 if( action === 'click' ) {
                     Checkout.updateHtml( data );
