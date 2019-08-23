@@ -12,17 +12,17 @@
             <button class="navbar-toggler order-0 js-nav-toggle" type="button" data-toggle="collapse"
                     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
                     aria-label="{{ $site_translate->general['toggle_navigation'] ?: 'Toggle navigation' }}">
-                {{-- <span class="navbar-toggler-icon"></span> --}}
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
             <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarNav">
                 @if($desktop_menu)
                     <ul class="navbar-nav m-auto">
                         @foreach($desktop_menu as $menuItem)
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ $menuItem->url  }}">{{ $menuItem->title }}</a>
+                                <a class="nav-link" href="{{ $menuItem->url  }}">{!! $menuItem->title !!}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -35,19 +35,21 @@
                         @if($mobile_menu)
                             @foreach($mobile_menu as $menuItem)
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="{{ $menuItem->url  }}"
-                                    role="button">{{ $menuItem->title }}</a>
+                                    <a class="nav-link dropdown-toggle" 
+                                        href="{{ $menuItem->url  }}"
+                                        role="button">{!! $menuItem->title !!}</a>
+
                                     @if( isset($menuItem->children) && count($menuItem->children) )
                                         <button class="btn btn-icon btn-icon-sm" type="button" data-toggle="dropdown">
                                             <img src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="btn-back">{{ $site_translate->general['back'] ?: 'Back' }}</a>
+                                            <a class="btn-back">{!! $site_translate->general['back'] ?: 'Back' !!}</a>
                                             <ul class="navbar-nav m-auto">
                                                 @foreach($menuItem->children as $subMenuItem)
                                                     <li class="nav-item">
                                                         <a class="nav-link"
-                                                        href="{{ $subMenuItem->url }}">{{ $subMenuItem->title }}</a>
+                                                        href="{{ $subMenuItem->url }}">{!! $subMenuItem->title !!}</a>
                                                     </li>
                                                 @endforeach
                                             </ul>
@@ -61,7 +63,7 @@
                         @if (!empty($checkout_link_array->title) && !empty($checkout_link_array->url))
                             <li class="nav-item">
                                 <a href="{{ $checkout_link_array->url }}">
-                                    <button class="btn btn-lg btn-outline-primary btn-checkout" type="button">{{ $checkout_link_array->title }}</button>
+                                    <button class="btn btn-lg btn-outline-primary btn-checkout" type="button">{!! $checkout_link_array->title !!}</button>
                                 </a>
                             </li>
                         @endif
@@ -103,13 +105,13 @@
         <div class="container nav-checkout">
             <div class="navbar-spacer">
                 @if (!empty($checkout_header->shop_link))
-                    <a href="{{ $checkout_header->shop_link['url'] }}" class="navbar-back" target="{{ $checkout_header->shop_link['target'] }}">{{ $checkout_header->shop_link['title'] }}</a>
+                    <a href="{{ $checkout_header->shop_link['url'] }}" class="navbar-back" target="{{ $checkout_header->shop_link['target'] }}">{!! $checkout_header->shop_link['title'] !!}</a>
                 @endif
             </div>
             
 
             @if (!empty($checkout_header->title))
-                <div class="navbar-checkout h1 m-auto">{{ $checkout_header->title }}</div>
+                <div class="navbar-checkout h1 m-auto">{!! $checkout_header->title !!}</div>
             @endif
 
             <div class="navbar-spacer d-none d-lg-block"></div>
