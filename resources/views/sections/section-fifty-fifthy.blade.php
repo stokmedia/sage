@@ -1,3 +1,5 @@
+{{-- TODO: Remove this file --}}
+
 <section class="section fifty-fifthy">
   <div class="row m-0">
     <!-- use `.order-md-*` to reorder the grid -->

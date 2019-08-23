@@ -1,5 +1,3 @@
-{{-- <pre>{{ var_dump($section) }}</pre> --}}
-
 <section id="section-{{ $section->id }}" class="section instagram  {{ $section->classes ?? '' }}">
     <div class="instagram-gallery d-none d-md-block lazy" data-bg="url('{{ $section->image }}')">
 
@@ -13,11 +11,11 @@
                                 @if (!empty($section->instagram_link->url) && !empty($section->instagram_link->title))
                                     <a href="{{ $section->instagram_link->url }}"
                                         class="btn btn-sm btn-primary text-uppercase"
-                                        target="{{ $section->instagram_link->target }}">{{ $section->instagram_link->title }}</a>
+                                        target="{{ $section->instagram_link->target }}">{!! $section->instagram_link->title !!}</a>
                                 @endif
 
                                 @if ($section->title)
-                                    <h3 class="h3">{{ $section->title }}</h3>
+                                    <h3 class="h3">{!! $section->title !!}</h3>
                                 @endif
                             </div>
 
@@ -116,13 +114,13 @@
             <div class="instagram-info text-center">
                 <div class="btn-header">
                     @if ($section->title)
-                        <h3 class="h3 mb-0">{{ $section->title }}</h3>
+                        <h3 class="h3 mb-0">{!! $section->title !!}</h3>
                     @endif
 
                     @if ($section->instagram_link->url && $section->instagram_link->title)
                         <a href="{{ $section->instagram_link->url }}"
                             class="btn btn-sm btn-primary text-uppercase"
-                            target="{{ $section->instagram_link->target }}">{{ $section->instagram_link->title }}</a>
+                            target="{{ $section->instagram_link->target }}">{!! $section->instagram_link->title !!}</a>
                     @endif
                 </div>
 

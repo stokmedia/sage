@@ -2,7 +2,7 @@
     <section id="section-{{ $section->id }}" class="section three-promo  {{ $section->classes ?? '' }}">
         @if ( $section->title )
             <div class="container text-center title">
-                <h2 class="h2">{{ $section->title }}</h2>
+                <h2 class="h2">{!! $section->title !!}</h2>
             </div>
         @endif
 
@@ -19,12 +19,12 @@
                                 </div>
 
                                 <div class="info">
-                                    <h3 class="h4">{{ $item->title }}</h3>
-                                    <p>{{ $item->text }}</p>
+                                    <h3 class="h4">{!! $item->title !!}</h3>
+                                    <p>{!! $item->text !!}</p>
                                 </div>
 
                                 @if ($item->link->title)
-                                    <div class="btn btn-primary text-uppercase">{{ $item->link->title }}</div>
+                                    <div class="btn btn-primary text-uppercase">{!! $item->link->title !!}</div>
                                 @endif
                             </a>
                         </div>

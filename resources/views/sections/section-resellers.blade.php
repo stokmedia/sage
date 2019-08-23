@@ -5,7 +5,7 @@
             @if ($section->title || $section->preamble)
                 <div class="d-block">
                     @if ($section->title)
-                        <h2 class="text-center">{{ $section->title }}</h2>
+                        <h2 class="text-center">{!! $section->title !!}</h2>
                     @endif
 
                     @if ($section->preamble)

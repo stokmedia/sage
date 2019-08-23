@@ -1,3 +1,5 @@
+{{-- TODO: Remove this file --}}
+
 <!-- Newsletter -->
 <section class="section newsletter-section">
   <div class="container">

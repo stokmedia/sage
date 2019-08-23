@@ -1,3 +1,5 @@
+{{-- TODO: Remove this file --}}
+
 <section class="section text-button">
   <div class="container">
     <div class="title h2 text-center text-lg-left">Textmodule</div>

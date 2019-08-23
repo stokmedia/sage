@@ -4,7 +4,7 @@
         <div class="container">
             
             @if (!empty($no_selected_item_content->title))
-                <h2 class="title h2 text-center">{{ $no_selected_item_content->title }}</h2>
+                <h2 class="title h2 text-center">{!! $no_selected_item_content->title !!}</h2>
             @endif
 
             @if (!empty($no_selected_item_content->text))
@@ -25,7 +25,7 @@
 
                     @if (!empty($page_content->order['title']))
                         @php ($ctr++)
-                        <h3 class="h3">{{ $ctr.'. '.$page_content->order['title'] }}</h3>
+                        <h3 class="h3">{!! $ctr.'. '.$page_content->order['title'] !!}</h3>
                     @endif
 
                     {{-- Cart items --}}
@@ -41,7 +41,7 @@
                     {{-- Voucher --}}
                     <div class="discount-code">
                         @if (!empty($page_content->order['voucher_collapse_text']))
-                        <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#js-voucher-field" aria-expanded="false" aria-controls="js-voucher-field">+ {{ $page_content->order['voucher_collapse_text'] }}</button>
+                        <button class="btn btn-sm btn-outline-primary" type="button" data-toggle="collapse" data-target="#js-voucher-field" aria-expanded="false" aria-controls="js-voucher-field">+ {!! $page_content->order['voucher_collapse_text'] !!}</button>
                         @endif
 
                         <div class="collapse" id="js-voucher-field">
@@ -51,7 +51,7 @@
 
                     @if (!empty($page_content->additional_options['title']))
                         @php ($ctr++)
-                        <h3 class="h3">{{ $ctr.'. '.$page_content->additional_options['title'] }}</h3>
+                        <h3 class="h3">{!! $ctr.'. '.$page_content->additional_options['title'] !!}</h3>
                     @endif
 
                     {{-- Newsletter --}}
@@ -61,7 +61,7 @@
 
                     @if (!empty($page_content->payment['title']))
                         @php ($ctr++)
-                        <h3 class="h3">{{ $ctr.'. '.$page_content->payment['title'] }}</h3>
+                        <h3 class="h3">{!! $ctr.'. '.$page_content->payment['title'] !!}</h3>
                     @endif
                     
                     {{-- Payment Method --}}
@@ -76,7 +76,7 @@
                 
                     @if (!empty($page_content->delivery['title']))
                         @php ($ctr++)
-                        <h3 class="h3">{{ $ctr.'. '.$page_content->delivery['title'] }}</h3>
+                        <h3 class="h3">{!! $ctr.'. '.$page_content->delivery['title'] !!}</h3>
                     @endif
 
                     <div id="js-paymentFields">

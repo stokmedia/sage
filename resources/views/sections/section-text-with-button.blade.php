@@ -2,7 +2,7 @@
     <section id="section-{{ $section->id }}" class="section text-button  {{ $section->classes ?? '' }}">
         <div class="container">
             @if ($section->title)
-                <div class="title h2 text-center text-lg-left">{{ $section->title }}</div>
+                <div class="title h2 text-center text-lg-left">{!! $section->title !!}</div>
             @endif
 
             @if ($section->preamble)
@@ -20,7 +20,7 @@
             @if ($section->link)
                 <div class="buttons text-center text-lg-left">
                     <a href="{{ $section->link->url }}" target="{{ $section->link->target }}">
-                        <button class="btn btn-lg btn-outline-primary" type="button">{{ $section->link->title }}</button>
+                        <button class="btn btn-lg btn-outline-primary" type="button">{!! $section->link->title !!}</button>
                     </a>
                 </div>
             @endif

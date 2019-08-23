@@ -1,3 +1,5 @@
+{{-- TODO: remove this file --}}
+
 <section class="section promo-box overflow-hidden">
   <div class="align-items-center row mx-0">
     @for ($i = 1; $i < 4; $i++)
