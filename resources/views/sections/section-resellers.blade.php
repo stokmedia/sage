@@ -5,7 +5,7 @@
             @if ($section->title || $section->preamble)
                 <div class="d-block">
                     @if ($section->title)
-                        <h2 class="text-center">{{ $section->title }}</h2>
+                        <h2 class="text-center">{!! $section->title !!}</h2>
                     @endif
 
                     @if ($section->preamble)
@@ -25,7 +25,7 @@
                                 <div class="resellers-table-cell d-md-table-cell head">{!! $post['city'] !!}</div>
                                 <div class="resellers-table-cell d-md-table-cell">{!! $post['title'] !!}</div>
                                 <div class="resellers-table-cell d-md-table-cell">
-                                    <a href="{!! $post['link']['url'] ?? null !!}" target="{!! $post['link']['target'] ?? null !!}">
+                                    <a class="js-section-link" href="{!! $post['link']['url'] ?? null !!}" target="{!! $post['link']['target'] ?? null !!}">
                                         {!! $post['link']['title'] ?? null !!}
                                     </a>
                                 </div>

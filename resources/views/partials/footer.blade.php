@@ -1,13 +1,13 @@
 @if ($footer_breadcrumbs)
-    <section class="section d-lg-none d-inline-block mb-0 w-100">
+<section class="section d-lg-none d-inline-block mb-0 w-100">
     <div class="container">
         <div class="row">
-        <div class="col-12">
-            {!! $footer_breadcrumbs !!}
-        </div>
+            <div class="col-12">
+                {!! $footer_breadcrumbs !!}
+            </div>
         </div>
     </div>
-    </section>
+</section>
 @endif
 
 <footer class="content-info">
@@ -41,16 +41,16 @@
                     <div class="link-list">
                         <h4 class="h4">
                             @if($desktop_footer_menu[0]->isLink)
-                                <a href="{{ $desktop_footer_menu[0]->url }}">{{ $desktop_footer_menu[0]->title }}</a>
+                                <a href="{{ $desktop_footer_menu[0]->url }}">{!! $desktop_footer_menu[0]->title !!}</a>
                             @else
-                                {{ $desktop_footer_menu[0]->title }}
+                                {!! $desktop_footer_menu[0]->title !!}
                             @endif
                         </h4>
 
                         @if(isset($desktop_footer_menu[0]->children) && count($desktop_footer_menu[0]->children))
                             <ul>
                                 @foreach($desktop_footer_menu[0]->children as $child)
-                                    <li><a href="{{ $child->url }}">{{ $child->title }}</a></li>
+                                    <li><a href="{{ $child->url }}">{!! $child->title !!}</a></li>
                                 @endforeach
                             </ul>
                         @endif
@@ -62,16 +62,16 @@
                     <div class="link-list d-none d-md-block">
                         <h4 class="h4">
                             @if($desktop_footer_menu[1]->isLink)
-                                <a href="{{ $desktop_footer_menu[1]->url }}">{{ $desktop_footer_menu[1]->title }}</a>
+                                <a href="{{ $desktop_footer_menu[1]->url }}">{!! $desktop_footer_menu[1]->title !!}</a>
                             @else
-                                {{ $desktop_footer_menu[1]->title }}
+                                {!! $desktop_footer_menu[1]->title !!}
                             @endif
                         </h4>
 
                         @if(isset($desktop_footer_menu[1]->children) && count($desktop_footer_menu[1]->children))
                             <ul>
                                 @foreach($desktop_footer_menu[1]->children as $child)
-                                    <li><a href="{{ $child->url }}">{{ $child->title }}</a></li>
+                                    <li><a href="{{ $child->url }}">{!! $child->title !!}</a></li>
                                 @endforeach
                             </ul>
                         @endif
@@ -83,16 +83,16 @@
                     <div class="link-list d-md-none d-lg-none">
                         <h4 class="h4">
                             @if($mobile_footer_menu[0]->isLink)
-                                <a href="{{ $mobile_footer_menu[0]->url }}">{{ $mobile_footer_menu[0]->title }}</a>
+                                <a href="{{ $mobile_footer_menu[0]->url }}">{!! $mobile_footer_menu[0]->title !!}</a>
                             @else
-                                {{ $mobile_footer_menu[0]->title }}
+                                {!! $mobile_footer_menu[0]->title !!}
                             @endif
                         </h4>
 
                         @if(isset($mobile_footer_menu[0]->children) && count($mobile_footer_menu[0]->children))
                             <ul>
                                 @foreach($mobile_footer_menu[0]->children as $child)
-                                    <li><a href="{{ $child->url }}">{{ $child->title }}</a></li>
+                                    <li><a href="{{ $child->url }}">{!! $child->title !!}</a></li>
                                 @endforeach
                             </ul>
                         @endif
@@ -121,16 +121,16 @@
                     <div class="link-list">
                         <h4 class="h4">
                             @if($desktop_footer_menu[2]->isLink)
-                                <a href="{{ $desktop_footer_menu[2]->url }}">{{ $desktop_footer_menu[2]->title }}</a>
+                                <a href="{{ $desktop_footer_menu[2]->url }}">{!! $desktop_footer_menu[2]->title !!}</a>
                             @else
-                                {{ $desktop_footer_menu[2]->title }}
+                                {!! $desktop_footer_menu[2]->title !!}
                             @endif
                         </h4>
 
                         @if(isset($desktop_footer_menu[2]->children) && count($desktop_footer_menu[2]->children))
                             <ul>
                                 @foreach($desktop_footer_menu[2]->children as $child)
-                                    <li><a href="{{ $child->url }}">{{ $child->title }}</a></li>
+                                    <li><a href="{{ $child->url }}">{!! $child->title !!}</a></li>
                                 @endforeach
                             </ul>
                         @endif

@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-5 offset-lg-1 col-md-6">
                 @if (!empty($page_info->product_label))
-                <h3 class="h3">{{ $page_info->product_label ?? '' }}</h3>
+                <h3 class="h3">{!! $page_info->product_label ?? '' !!}</h3>
                 @endif
 
 
@@ -63,7 +63,6 @@
 
     </div>
 </section>
-
 
 {{-- Klarna Snippet --}}
 @if (!empty($receipt_info['paymentMethodData']['snippet']))

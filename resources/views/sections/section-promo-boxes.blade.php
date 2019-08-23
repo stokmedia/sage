@@ -4,7 +4,7 @@
 
             @foreach ($section->items as $item)
                 @if ($item->link->url)
-                    <a href="{{ $item->link->url }}" class="promo-box-item col align-items-stretch" target="{{ $item->link->target }}">
+                    <a href="{{ $item->link->url }}" class="promo-box-item col align-items-stretch js-section-link" target="{{ $item->link->target }}">
                 @else
                     <div class="promo-box-item col align-items-stretch">
                 @endif

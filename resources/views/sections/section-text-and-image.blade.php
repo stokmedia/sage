@@ -7,18 +7,18 @@
             <div class="fifty-fifty-item bg-lightgreen d-flex align-items-center col-md-6 order-2 order-md-1 p-4 pb-5 p-md-0 {{ ($section->orderClass == 'order-md-2') ? 'justify-content-end' : 'justify-content-start'  }}">
                 <div class="fifty-fifty-content">
                     @if ($section->title)
-                        <h2>{{ $section->title }}</h2>
+                        <h2>{!! $section->title !!}</h2>
                     @endif
 
                     @if ($section->text)
-                        <p>{{ $section->text }}</p>
+                        <p>{!! $section->text !!}</p>
                     @endif
 
                     @if ($section->link)
                         <a href="{{ $section->link->url ?? null }}"
-                            class="btn btn-lg btn-primary d-block m-auto m-md-0"
+                            class="btn btn-lg btn-primary d-block m-auto m-md-0 js-section-link"
                             role="button"
-                            target="{{ $section->link->target ?? null }}">{{ $section->link->title ?? null }}</a>
+                            target="{{ $section->link->target ?? null }}">{!! $section->link->title ?? null !!}</a>
                     @endif
                 </div>
             </div>

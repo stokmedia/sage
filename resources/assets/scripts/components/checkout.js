@@ -17,65 +17,84 @@
 
 	Checkout.init = function() {
 
-		// Add/Remove product
-        $(document).on( 'click', editProduct, function (e) {
-            e.preventDefault();
-            Checkout.processItems( $(this) );
-        });
+        // Add/Remove product
+        if ($(document).find( editProduct )) {
+            $(document).find( editProduct ).off( 'click' ).on( 'click', function (e) {
+                e.preventDefault();
+                Checkout.processItems( $(this) );
+            });
+        }
 
         // Voucher
-		$(document).on( 'keydown', '#js-voucher-field #voucher', function(e) {
-            //If not enter pushed
-            if (e.keyCode !== 13) { return; }
+        var voucherField = $(document).find( '#js-voucher-field #voucher' );
+        if (voucherField) {
+            voucherField.off( 'keydown' ).on( 'keydown', function(e) {
+                if (e.keyCode !== 13) { return; }
+    
+                e.preventDefault();
+                Checkout.voucherProcess( $(this).parent().next() );
+            });
+        }
 
-            e.preventDefault();
-            Checkout.voucherProcess( $(this).parent().next() );
-		});
-
-		$(document).on( 'click', '#js-voucher-field button', function(e) {
-            e.preventDefault();
-            Checkout.voucherProcess( $(this) );
-		});
+        var voucherButton = $(document).find( '#js-voucher-field button' );
+        if (voucherButton) {
+            voucherButton.off( 'click' ).on( 'click', function(e) {
+                e.preventDefault();
+                Checkout.voucherProcess( $(this) );
+            });
+        }
 
         // Newsletter
-		newsletterContainer.find( ':checkbox' ).on( 'change', function(e) {
-            e.preventDefault();
-            Checkout.processNewsletter( 'click' );
-		});
+        if (newsletterContainer.find( ':checkbox' )) {
+            newsletterContainer.find( ':checkbox' ).off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.processNewsletter( 'click' );
+            });
+        }
 
         // Gift
-        giftContainer.find( ':checkbox' ).on( 'change', function(e) {
-            e.preventDefault();
-            Checkout.processComment( 'click' );
-        });
+        if (giftContainer.find( ':checkbox' )) {
+            giftContainer.find( ':checkbox' ).off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.processComment( 'click' );
+            });
+        }
 
         // Comment
-        commentContainer.find( 'textarea' ).on( 'blur', function(e) {
-            e.preventDefault();
-            Checkout.processComment( 'click' );
-        });
+        if (commentContainer.find( 'textarea' )) {
+            commentContainer.find( 'textarea' ).off( 'blur' ).on( 'blur', function(e) {
+                e.preventDefault();
+                Checkout.processComment( 'click' );
+            });
+        }
 
         // Payment Method
-		$(document).on( 'change', '#js-selectedPaymentMethod :radio', function(e) {
-            e.preventDefault();
-            Checkout.processPaymentMethod( paymentMethodContainer );
-		});
+        var paymentOptions = $(document).find('#js-selectedPaymentMethod :radio');
+        if (paymentOptions) {
+            paymentOptions.off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.processPaymentMethod( paymentMethodContainer );
+            });
+        }
 
         // Shipping Method
-        $(document).on( 'change', '#js-selectedShippingMethod :radio', function(e) {
-            e.preventDefault();
-            Checkout.processShippingMethod( shippingMethodContainer );
-        });
+        var shippingOptions = $(document).find('#js-selectedShippingMethod :radio');
+        if (shippingOptions) {
+            shippingOptions.off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.processShippingMethod( shippingMethodContainer );
+            });
+        }
 
         // Country
-		$(document).on( 'change', 'select#address_country', function(e) {
-            e.preventDefault();
-            Checkout.countryChangeProcess( this.value );
-		} );
+        var countryOptions = $(document).find( 'select#address_country' );
+        if (countryOptions) {
+            countryOptions.off( 'change' ).on( 'change', function(e) {
+                e.preventDefault();
+                Checkout.countryChangeProcess( this.value );
+            } );
+        }
 
-    };
-
-    Checkout.ajaxCall = function() {
     };
 	
 	Checkout.updateHtml = function( data ) {
@@ -94,27 +113,44 @@
             selectedItemsContainer.html( data.items );
             selectedTotalsContainer.html( data.totals );
             voucherContainer.html( data.voucher );
+            Checkout.init();
             
         }
 
+        Checkout.showLoader( false );
     };
+
+    Checkout.showLoader = function( showLoader ) {
+        var loader = $(document).find('.js-loader');
+        var hiddenClass = 'd-none';
+
+        if (!loader) {
+            return;
+        }
+
+        if (showLoader) {
+            loader.removeClass( hiddenClass );
+        } else {
+            loader.addClass( hiddenClass );
+        }
+    };    
     
     Checkout.processItems = function( el ) {
         if ( !el ) { return; }
-
-        console.log( el, el.attr( 'href' ) );
         
         $.ajax({
             type: 'GET',
             dataType: 'json',
             url: el.attr( 'href' ),
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function(data) {
 
                 if( data.totalItems === 0 ) {
                     window.location.href = location.pathname;
                 } else {
                     Checkout.updateHtml( data );
-                    console.log( data );
                 }
 
             },
@@ -136,6 +172,9 @@
                 action: 'get_payment_method_form',
                 payment_method: paymentValue,
             },
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function ( result ) {
                 if( result.html ) {
                     $( '#js-paymentFields' ).html( result.html );
@@ -160,7 +199,10 @@
 		$.ajax( {
 			data: sendData,
 			type: 'POST',
-			dataType: 'JSON',
+            dataType: 'JSON',
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
 			success: function(data) {
 				Checkout.updateHtml( data );
 			},
@@ -182,7 +224,10 @@
 		$.ajax( {
 			data: sendData,
 			type: 'POST',
-			dataType: 'JSON',
+            dataType: 'JSON',
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
 			success: function(data) {
 				Checkout.updateHtml( data );
 			},
@@ -203,6 +248,9 @@
             dataType: 'JSON',
             type: 'POST',
             data: sendData,
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function ( data ) {
                 Checkout.updateHtml( data );
             },
@@ -241,6 +289,9 @@
             data: sendData,
             type: 'POST',
             dataType: 'JSON',
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function( data ) {
                 if( action === 'click' ) {
                     Checkout.updateHtml( data );
@@ -277,6 +328,9 @@
             data: sendData,
             type: 'POST',
             dataType: 'JSON',
+            beforeSend: function() {
+                Checkout.showLoader( true );
+            },            
             success: function( data ) {
                 if( action === 'click' ) {
                     Checkout.updateHtml( data );
