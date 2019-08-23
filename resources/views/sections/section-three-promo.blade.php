@@ -11,7 +11,7 @@
                 <div class="row justify-content-md-center">
                     @foreach( $section->items as $item ) 
                         <div class="col-md-4">
-                            <a href="{{ $item->link->url }}" class="card-block is-inline" target="{{ $item->link->target }}">
+                            <a href="{{ $item->link->url }}" class="card-block is-inline js-section-link" target="{{ $item->link->target }}">
                                 <div class="image">
                                     <figure>
                                         {!! $item->image !!}

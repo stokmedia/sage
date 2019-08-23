@@ -16,7 +16,7 @@
 
                     @if ($section->link)
                         <a href="{{ $section->link->url ?? null }}"
-                            class="btn btn-lg btn-primary d-block m-auto m-md-0"
+                            class="btn btn-lg btn-primary d-block m-auto m-md-0 js-section-link"
                             role="button"
                             target="{{ $section->link->target ?? null }}">{!! $section->link->title ?? null !!}</a>
                     @endif

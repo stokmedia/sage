@@ -10,7 +10,7 @@
                             <div class="btn-header d-flex justify-content-center align-items-center">
                                 @if (!empty($section->instagram_link->url) && !empty($section->instagram_link->title))
                                     <a href="{{ $section->instagram_link->url }}"
-                                        class="btn btn-sm btn-primary text-uppercase"
+                                        class="btn btn-sm btn-primary text-uppercase js-section-link"
                                         target="{{ $section->instagram_link->target }}">{!! $section->instagram_link->title !!}</a>
                                 @endif
 
@@ -119,7 +119,7 @@
 
                     @if ($section->instagram_link->url && $section->instagram_link->title)
                         <a href="{{ $section->instagram_link->url }}"
-                            class="btn btn-sm btn-primary text-uppercase"
+                            class="btn btn-sm btn-primary text-uppercase js-section-link"
                             target="{{ $section->instagram_link->target }}">{!! $section->instagram_link->title !!}</a>
                     @endif
                 </div>

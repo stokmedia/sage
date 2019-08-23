@@ -34,12 +34,12 @@
             @if($section->link)
                 <div class='hero-btn'>
 
-                    <a href="{{ $section->link->url }}" target="{{ $section->link->target }}">
+                    <a class="js-section-link" href="{{ $section->link->url }}" target="{{ $section->link->target }}">
                         <button class="btn btn-outline-primary d-md-none"
                                 type="button">{!! $section->link->title !!}</button>
                     </a>
 
-                    <a href="{{ $section->link->url }}" target="{{ $section->link->target }}">
+                    <a class="js-section-link" href="{{ $section->link->url }}" target="{{ $section->link->target }}">
                         <button class="btn btn-lg btn-outline-primary d-none d-md-inline-block"
                                 type="button">{!! $section->link->title !!}</button>
                     </a>

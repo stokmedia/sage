@@ -19,7 +19,7 @@
 
             @if ($section->link)
                 <div class="buttons text-center text-lg-left">
-                    <a href="{{ $section->link->url }}" target="{{ $section->link->target }}">
+                    <a class="js-section-link" href="{{ $section->link->url }}" target="{{ $section->link->target }}">
                         <button class="btn btn-lg btn-outline-primary" type="button">{!! $section->link->title !!}</button>
                     </a>
                 </div>

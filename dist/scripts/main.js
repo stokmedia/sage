@@ -18737,18 +18737,14 @@ var Cart = {};
 			}
 		}
 
-		var links = $(document).find( 'a' );
+		var links = $(document).find( '.js-section-link' );
 		if (links.length) {
 			links.off('click').on( 'click', function(e) {
 				var targetLink = $(this).attr('href');
 
-				try {
-					if (targetLink && $( targetLink )) {
-						e.preventDefault();
-						Scroll.To( $( targetLink ), 0 );
-					}	
-				} catch (error) {
-					// Do nothing
+				if (targetLink && $( targetLink )) {
+					e.preventDefault();
+					Scroll.To( $( targetLink ), 0 );
 				}
 			} );
 		}
