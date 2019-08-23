@@ -40,7 +40,7 @@
                                 <div class="price">{!! $receipt_info['totals']['taxDeductedAsNumber'] !!}</div>
                             </div>
                             @endif
-                            
+
                             <div class="summary-item">
                                 <div class="title">{!! !empty( $translation['shipping'] ) ? $translation['shipping'] : null !!}</div>
                                 <div class="price">{!! $receipt_info['totals']['shippingPrice'] !!}</div>
@@ -59,22 +59,19 @@
                 @endif
 
             </div>
-        </div>        
+        </div>
 
-    </div>    
+    </div>
 </section>
 
 
 {{-- Klarna Snippet --}}
 @if (!empty($receipt_info['paymentMethodData']['snippet']))
-    <style>
-        .is-child-full { width: 100% !important }
-    </style>
     <section class="section">
         <div class="container">
             <div class="row is-child-full">
                 {!! $receipt_info['paymentMethodData']['snippet'] !!}
             </div>
         </div>
-    </section>        
-@endif       
+    </section>
+@endif

@@ -76,3 +76,9 @@
     }
   }
 }
+
+.is-child-full {
+  & > iframe {
+    width: 100%;
+  }
+}
