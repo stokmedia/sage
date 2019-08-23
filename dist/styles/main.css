@@ -23198,8 +23198,9 @@ body.isApple .product-filter {
 
 /* line 81, resources/assets/styles/skhoop/sections/_thankyou-details.scss */
 
-.is-child-full > iframe {
+.is-child-full > div:first-child {
   width: 100%;
+  height: 100%;
 }
 
 /* line 1, resources/assets/styles/skhoop/sections/_popular-products.scss */
