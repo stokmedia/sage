@@ -19,24 +19,17 @@
                     <div class="summary">
                         @if (!empty($page_info->summary_label))
                         <h3 class="h3">{!! $page_info->summary_label ?? '' !!}</h3>
-                        @endif
+                        @endif                      
 
                         <div class="summary-group">
                             <div class="summary-item">
-                                <div class="title">{!! !empty( $translation['sub_total'] ) ? $translation['sub_total'] : null !!}</div>
+                                <div class="title">{!! !empty( $translation['total_price'] ) ? $translation['total_price'] : null !!}</div>
                                 <div class="price">{!! $receipt_info['totals']['itemsTotalPrice'] !!}</div>
                             </div>
 
-                            @if( !empty($receipt_info['totals']['totalDiscountPriceAsNumber']) )
-                            <div class="summary-item">
-                                <div class="title">{!! !empty( $translation['discount'] ) ? $translation['discount'] : null !!}</div>
-                                <div class="price">{!! $receipt_info['totals']['totalDiscountPrice'] !!}</div>
-                            </div>
-                            @endif
-
                             @if( !empty($receipt_info['totals']['taxDeductedAsNumber']) )
                             <div class="summary-item">
-                                <div class="title">{!! !empty( $translation['vat_included'] ) ? $translation['vat_included'] : null !!}</div>
+                                <div class="title">{!! !empty( $translation['vat'] ) ? $translation['vat'] : null !!}</div>
                                 <div class="price">{!! $receipt_info['totals']['taxDeductedAsNumber'] !!}</div>
                             </div>
                             @endif
@@ -47,7 +40,7 @@
                             </div>
 
                             <div class="summary-item">
-                                <div class="title">{!! !empty( $translation['total'] ) ? $translation['total'] : null !!}</div>
+                                <div class="title">{!! !empty( $translation['sub_total'] ) ? $translation['sub_total'] : null !!}</div>
                                 <div class="price"><strong>{!! $receipt_info['totals']['grandTotalPrice'] !!}</strong></div>
                             </div>
                         </div>

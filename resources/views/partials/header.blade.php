@@ -22,7 +22,7 @@
                     <ul class="navbar-nav m-auto">
                         @foreach($desktop_menu as $menuItem)
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ $menuItem->url  }}">{!! $menuItem->title !!}</a>
+                                <a class="nav-link" href="{{ $menuItem->url  }}" target="{{ $menuItem->target  }}">{!! $menuItem->title !!}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -37,6 +37,7 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" 
                                         href="{{ $menuItem->url  }}"
+                                        target="{{ $menuItem->target }}"
                                         role="button">{!! $menuItem->title !!}</a>
 
                                     @if( isset($menuItem->children) && count($menuItem->children) )
@@ -49,7 +50,8 @@
                                                 @foreach($menuItem->children as $subMenuItem)
                                                     <li class="nav-item">
                                                         <a class="nav-link"
-                                                        href="{{ $subMenuItem->url }}">{!! $subMenuItem->title !!}</a>
+                                                        href="{{ $subMenuItem->url }}"
+                                                        target="{{ $subMenuItem->target }}">{!! $subMenuItem->title !!}</a>
                                                     </li>
                                                 @endforeach
                                             </ul>

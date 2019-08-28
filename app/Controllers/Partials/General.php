@@ -41,6 +41,9 @@ trait General
         $posts = get_posts([
             'post_type' => 'reseller',
             'posts_per_page'=> -1,
+            'meta_key' => 'city',
+            'orderby' => 'meta_value',
+            'order' => 'ASC'
         ]);
     
         return array_map( function ($post) {
