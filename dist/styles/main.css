@@ -23700,7 +23700,7 @@ body.isApple .product-filter {
 
 .selected-product-slider.is-fullscreen .item > img {
   position: relative;
-  top: initial;
+  top: -115px;
   left: initial;
   right: initial;
   bottom: initial;
