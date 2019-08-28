@@ -45,9 +45,9 @@
           <div class="product-filter-toggle col-lg-4 text-center text-lg-right">
             <div class="h4 d-inline-block mb-0">
               <div class="js-filter-toggle">
-                  <div class="filter-open js-filter-open">
+                  <div class="filter-open js-filter-open text-capitalize">
                       {!! $translation->filter_and_sort_title ?? '' !!}
-                      <button class="btn btn-lg btn-icon btn-icon-lg btn-default" type="button">
+                      <button class="btn btn-lg btn-icon btn-default" type="button">
                         <img class="lazy" data-src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
                       </button>
                   </div>
@@ -60,7 +60,7 @@
                       <button class="btn btn-primary text-uppercase js-filter-close" type="button">{!! $translation->update_button ?? '' !!}</button>
                       @endif
 
-                      <button class="btn btn-lg btn-icon btn-icon-lg btn-default js-filter-close" type="button">
+                      <button class="btn btn-lg btn-icon btn-default js-filter-close" type="button">
                         <img class="lazy" data-src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
                       </button>
                   </div>
@@ -250,10 +250,10 @@
       </div>
       <div class="spinner text-center position-relative">
         <div class="spinner-btn">
-        <button class="btn btn-lg btn-primary silk-loadmore {{ (!empty($show_load_more_button)) ? null : 'd-none' }}" 
-          data-currentpage="1" 
-          data-currentcategory="{{ $current_category->slug }}" 
-          data-currentterm_id="{{ $current_category->term_id }}" 
+        <button class="btn btn-lg btn-primary silk-loadmore {{ (!empty($show_load_more_button)) ? null : 'd-none' }}"
+          data-currentpage="1"
+          data-currentcategory="{{ $current_category->slug }}"
+          data-currentterm_id="{{ $current_category->term_id }}"
           type="button">{!! $translation->load_more ?? '' !!}</button>
         </div>
         <div class="spinner-border silk-spinner d-none" role="status">
