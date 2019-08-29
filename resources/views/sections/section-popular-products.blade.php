@@ -4,7 +4,11 @@
         <div class="container">
             <div class="section-header @if ($section->product_count <= 5)is-no-nav @endif">
                 @if (!empty($section->title))
-                    <div class="title h2 text-center text-lg-left">{!! $section->title !!}</div>
+                    @if($section->is_h1)
+                        <h1 class="title h2 text-center text-lg-left">{!! $section->title !!}</h1>
+                    @else
+                        <div class="title h2 text-center text-lg-left">{!! $section->title !!}</div>
+                    @endif                    
                 @endif
 
                 @if (!empty($section->preamble))

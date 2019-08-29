@@ -15,7 +15,11 @@
                                 @endif
 
                                 @if ($section->title)
-                                    <h3 class="h3">{!! $section->title !!}</h3>
+                                    @if($section->is_h1)
+                                        <h1 class="h3">{!! $section->title !!}</h1>
+                                    @else
+                                        <h3 class="h3">{!! $section->title !!}</h3>
+                                    @endif                                    
                                 @endif
                             </div>
 
@@ -114,7 +118,11 @@
             <div class="instagram-info text-center">
                 <div class="btn-header">
                     @if ($section->title)
-                        <h3 class="h3 mb-0">{!! $section->title !!}</h3>
+                        @if($section->is_h1)
+                            <h1 class="h3 mb-0">{!! $section->title !!}</h1>
+                        @else
+                            <h3 class="h3 mb-0">{!! $section->title !!}</h3>
+                        @endif                          
                     @endif
 
                     @if ($section->instagram_link->url && $section->instagram_link->title)
