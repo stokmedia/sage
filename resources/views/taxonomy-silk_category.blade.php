@@ -14,7 +14,7 @@
         @if (!$hero_banner->image && !$hero_banner->image_mobile)
           <div class="product-header-title text-button text-center {{ !$hero_banner->image && !$hero_banner->image_mobile ? 'mb-1' : '' }}">
             <div class="container">
-                <div class="title h1 text-center mb-0">{!! get_queried_object()->name !!}</div>
+                <h1 class="title h1 text-center mb-0">{!! get_queried_object()->name !!}</h1>
 
                 @if (!empty($title_breadcrumbs))
                   {!! $title_breadcrumbs !!}
