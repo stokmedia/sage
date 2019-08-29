@@ -2,7 +2,11 @@
     <section id="section-{{ $section->id }}" class="section three-promo  {{ $section->classes ?? '' }}">
         @if ( $section->title )
             <div class="container text-center title">
-                <h2 class="h2">{!! $section->title !!}</h2>
+                @if($section->is_h1)
+                    <h1 class="h2">{!! $section->title !!}</h1>
+                @else
+                    <h2 class="h2">{!! $section->title !!}</h2>
+                @endif                 
             </div>
         @endif
 

@@ -113,7 +113,7 @@
             
 
             @if (!empty($checkout_header->title))
-                <div class="navbar-checkout h1 m-auto">{!! $checkout_header->title !!}</div>
+                <h1 class="navbar-checkout h1 m-auto">{!! $checkout_header->title !!}</h1>
             @endif
 
             <div class="navbar-spacer d-none d-lg-block"></div>

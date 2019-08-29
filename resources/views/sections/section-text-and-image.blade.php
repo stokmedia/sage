@@ -7,7 +7,11 @@
             <div class="fifty-fifty-item bg-lightgreen d-flex align-items-center col-md-6 order-2 order-md-1 p-4 pb-5 p-md-0 {{ ($section->orderClass == 'order-md-2') ? 'justify-content-end' : 'justify-content-start'  }}">
                 <div class="fifty-fifty-content">
                     @if ($section->title)
-                        <h2>{!! $section->title !!}</h2>
+                        @if($section->is_h1)
+                            <h1>{!! $section->title !!}</h1>
+                        @else
+                            <h2>{!! $section->title !!}</h2>
+                        @endif                         
                     @endif
 
                     @if ($section->text)

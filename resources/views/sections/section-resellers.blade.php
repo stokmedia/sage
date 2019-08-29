@@ -5,8 +5,12 @@
             @if ($section->title || $section->preamble)
                 <div class="d-block">
                     @if ($section->title)
-                        <h2 class="text-center">{!! $section->title !!}</h2>
-                    @endif
+                        @if($section->is_h1)
+                            <h1 class="text-center">{!! $section->title !!}</h1>
+                        @else
+                            <h2 class="text-center">{!! $section->title !!}</h2>
+                        @endif 
+                    @endif                    
 
                     @if ($section->preamble)
                         <p  class="preamble text-center">{!! $section->preamble !!}</p>

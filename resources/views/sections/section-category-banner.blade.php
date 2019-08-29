@@ -12,7 +12,7 @@
                 <div class="category-banner-info text-center text-sm-left">
 
                     @if ($hero_banner->title)
-                        <div class="title h3">{!! $hero_banner->title !!}</div>
+                        <h1 class="title h3">{!! $hero_banner->title !!}</h1>
                     @endif
 
                     @if ($hero_banner->text)
