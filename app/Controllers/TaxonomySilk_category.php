@@ -163,6 +163,11 @@ class TaxonomySilk_category extends Controller
         $children = get_terms( $term->taxonomy, ['parent' => $term->term_id]);
         $parentId = $term->term_id;
 
+        // Return empty array if current category has no sub categories and parent id is equal to 0
+        if (empty($children) && $term->parent === 0) {
+            return [];
+        }        
+
         if (empty($children)) {
             $children = get_terms( $term->taxonomy, ['parent' => $term->parent]);
             $parentObject = get_term_by( 'id', $term->parent, $term->taxonomy );

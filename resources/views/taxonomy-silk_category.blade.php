@@ -30,8 +30,8 @@
 
         <div class="product-header-actionbox row align-items-center">
 
-          @if (!empty($sub_category_list))
-            <div class="product-breadcrumbs col-lg-8 text-lg-left text-center">
+          <div class="product-breadcrumbs col-lg-8 text-lg-left text-center">
+              @if (!empty($sub_category_list))
               @foreach ($sub_category_list as $item)
                 @php $parentName = trim((App::getSiteTranslations()->general['all'] ?? '').' '.$item->name) @endphp
                 {{-- {{ pr($translation) }} --}}
@@ -39,8 +39,9 @@
                   {!! !empty($item->isParent) ? $parentName : $item->name !!}
                 </a>
               @endforeach
-            </div>
-          @endif
+            @endif
+          </div>
+
 
           <div class="product-filter-toggle col-lg-4 text-center text-lg-right">
             <div class="h4 d-inline-block mb-0">
