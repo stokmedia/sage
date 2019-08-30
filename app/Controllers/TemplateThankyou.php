@@ -46,6 +46,7 @@ class TemplateThankyou extends Controller
         return (object) [
             'header' => $content,
             'has_header' => !empty(array_filter($content)),
+            'order_number_label' => get_field( 'order_number_label' ),
             'product_label' => get_field( 'product_label' ),
             'summary_label' => get_field( 'summary_label' ),
             'summary_text' => get_field( 'summary_text' ),

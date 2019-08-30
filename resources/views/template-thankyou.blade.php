@@ -17,6 +17,10 @@
                 <div class="preamble text-center">{!! $page_info->header['content'] !!}</div>
                 @endif
 
+                @if (isset($page_info->info['order']) && !empty($page_info->order_number_label))
+                <div class="preamble text-center mt-5">{!! $page_info->order_number_label !!}: {{ $page_info->info['order'] }}</div>
+                @endif
+
             </div>
         </section>
     @endif
