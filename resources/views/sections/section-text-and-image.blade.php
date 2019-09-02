@@ -8,9 +8,9 @@
                 <div class="fifty-fifty-content">
                     @if ($section->title)
                         @if($section->is_h1)
-                            <h1>{!! $section->title !!}</h1>
+                            <h1 class="h2">{!! $section->title !!}</h1>
                         @else
-                            <h2>{!! $section->title !!}</h2>
+                            <h2 class="h2">{!! $section->title !!}</h2>
                         @endif                         
                     @endif
 
