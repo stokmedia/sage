@@ -13,26 +13,7 @@ class App extends Controller
     use Partials\General;
     use Partials\Content;
 
-    protected $acf = true;
-
-    public function pageTitle()
-    {
-        if (is_tax() || is_category()) {
-            return get_queried_object()->name;
-
-        } elseif (is_404()) {
-            $site404Page = get_field( 'settings_404_page', Helper::current_lang() );
-            return $site404Page ? get_the_title( $site404Page ) : '404';
-        
-        } elseif (is_search()){
-            $title = get_field( 'search_page_title', Helper::current_lang() );
-            return $title ? $title : 'Search';
-
-        } else {
-            return get_the_title( get_the_ID() );
-
-        }
-    }    
+    protected $acf = true;  
 
     public function socialLinks()
     {
