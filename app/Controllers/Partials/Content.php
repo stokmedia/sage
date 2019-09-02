@@ -387,12 +387,13 @@ trait Content
                 }, $resellers ) )
             );
 
-            $newData->content[ 1 ] = (object)array(
-                'label' => $newData->global_label,
-                'posts' => (object)array_filter( array_map( function ( $post ) {
-                    return ( strtolower( $post[ 'country' ] ) !== 'sweden' ) ? $post : null;
-                }, $resellers ) )
-            );
+            // Global
+            // $newData->content[ 1 ] = (object)array(
+            //     'label' => $newData->global_label,
+            //     'posts' => (object)array_filter( array_map( function ( $post ) {
+            //         return ( strtolower( $post[ 'country' ] ) !== 'sweden' ) ? $post : null;
+            //     }, $resellers ) )
+            // );
 
             $newData->content[ 2 ] = (object)array(
                 'label' => $newData->agent_and_distributor_label,
