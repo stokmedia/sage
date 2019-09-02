@@ -76,4 +76,4 @@
 			@include('partials.product-price', [ 'priceInfo' => $product->display_price] )
 		</a>
 	</div>
-@endif
+@endif 
