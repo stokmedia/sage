@@ -1,4 +1,4 @@
-{{-- <h2><a href="{{ get_the_permalink( get_the_ID() ) }}">{{ $post->post_title }}</a></h2>
+{{-- <h2><a href="{{ get_the_permalink( get_the_ID() ) }}">{{ get_the_title() }}</a></h2>
 
 <div>
 	@include('partials.product-price', ['priceInfo' => $product->price] )
@@ -33,7 +33,7 @@
 
 @endif
 
-@php ($productTitle = trim($post->post_title. ' ' .($product->product_meta->variantName ?: '' )))
+@php ($productTitle = trim( get_the_title() . ' ' .($product->product_meta->variantName ?: '' )))
 
 @if (!empty($isSlider))
 	<div class="grid-slider-item">
