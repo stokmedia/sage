@@ -33,11 +33,11 @@
 
 @endif
 
-@php ($productTitle = trim( get_the_title() . ' ' .($product->product_meta->variantName ?: '' )))
+@php ($productTitle = trim( get_the_title( $post->ID ) . ' ' .($product->product_meta->variantName ?: '' )))
 
 @if (!empty($isSlider))
 	<div class="grid-slider-item">
-		<a href="{{ get_the_permalink( get_the_ID() ) }}" class="grid-item">
+		<a href="{{ get_the_permalink( $post->ID ) }}" class="grid-item">
 			<div class="product is-small p-0 {{ $productClass }}">
 				<div class="product-wrapper bg-white d-block">
 
@@ -61,7 +61,7 @@
 	@php ($productClass .= !empty($imageSize) ? ' '. $imageSize : ' is-small')
 
 	<div class="product {{ $productClass }}">
-		<a href="{{ get_the_permalink( get_the_ID() ) }}" class="product-wrapper bg-white d-block">
+		<a href="{{ get_the_permalink( $post->ID ) }}" class="product-wrapper bg-white d-block">
 
 			@if (!empty($status))
 			<div class="product-status text-center"><span>{{ $status }}</span></div>
@@ -71,7 +71,7 @@
 				@include('partials.product-images', $itemParam)
 			</figure>
 		</a>
-		<a href="{{ get_the_permalink( get_the_ID() ) }}" class="product-details bg-white d-block text-center">
+		<a href="{{ get_the_permalink( $post->ID ) }}" class="product-details bg-white d-block text-center">
 			<div class="product-name h4">{{ $productTitle }}</div>
 			@include('partials.product-price', [ 'priceInfo' => $product->display_price] )
 		</a>

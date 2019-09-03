@@ -243,9 +243,11 @@
             @else
               @php($imageSize = ' is-small')
             @endif
-            @include('partials.product-item',
-              ['product' => TaxonomySilk_category::get_product(), 'imageSize' => $imageSize ]
-            )
+            @include('partials.product-item', [
+              'product' => TaxonomySilk_category::get_product(), 
+              'imageSize' => $imageSize,
+              'post' => get_post()
+            ])
             @php($count++)
           @endwhile
       </div>
