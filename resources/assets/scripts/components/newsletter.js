@@ -104,6 +104,11 @@ var Newsletter = {};
 							button.classList.remove( Newsletter.elClasses.isLoading );	
 							Newsletter.formSuccess(form);
 						}, 1500 );
+
+						var targetEl = $( form.dataset.target );
+						if (targetEl && targetEl.attr('id') === 'js-newsletter-modal') {
+							Newsletter.forceCloseModal( targetEl );
+						}
 					}				
 				}
 			}
@@ -113,6 +118,16 @@ var Newsletter = {};
 		xhr.setRequestHeader( 'Accept', 'application/json, text/javascript, */*; q=0.01' );
 		xhr.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded;charset=UTF-8' );
 		xhr.send( sendData.join('&') );
+	};
+
+	Newsletter.forceCloseModal = function( el ) {
+		var displayTime = el.data('display_time');
+
+		if (displayTime) {
+			setTimeout( function () {
+				el.modal('hide');
+			}, displayTime * 1000 );
+		}
 	};
 
 	Newsletter.formSuccess = function(form) {
@@ -171,21 +186,13 @@ var Newsletter = {};
 
 		var cookieName = modal.data( 'cookie' );
 		var delay = modal.data( 'delay' );
-		var displayTime = modal.data( 'display_time' );
 		
 		if( !stokpress.getCookie( cookieName ) ) {
 			// Show modal
 			setTimeout( function () {
 				modal.modal('show');
 				stokpress.setCookie( cookieName, true, 365 );
-			}, delay * 1000 );	
-
-			// Close modal
-			if (displayTime) {
-				setTimeout( function () {
-					modal.modal('hide');
-				}, displayTime * 1000 );
-			}
+			}, delay * 1000 );
 		}
 	};
 
@@ -216,7 +223,9 @@ var Newsletter = {};
 
 		// Newsletter Modal
 		var modal = $( modalId );
-		Newsletter.modal( modal );
+		if (modal.length) {
+			Newsletter.modal( modal );
+		}
 	};
 
 	document.addEventListener( 'DOMContentLoaded', function () {	

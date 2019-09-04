@@ -1072,7 +1072,7 @@
                     "label": "Modal display time (seconds)",
                     "name": "modal_display_time",
                     "type": "number",
-                    "instructions": "This will determine how long the modal will be visible on the page. Leave it blank if you don't want to make the modal to automatically close.",
+                    "instructions": "This will determine how long the modal will be visible on the page after form success. Leave it blank if you don't want to make the modal to automatically close.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -1614,5 +1614,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1567575527
+    "modified": 1567577606
 }
