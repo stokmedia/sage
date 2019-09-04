@@ -16,8 +16,7 @@
 		$selection->inputFieldTemplate( '<input id="{id}" type="{type}" name="{name}" class="form-control form-control-md {class_0}" placeholder="'.$voucherPlaceholder.'">' );
         $hasError = isset($_SESSION['esc_store']['voucher']) && !$_SESSION['esc_store']['voucher']['success'];
         $vouchers = EscSelection::getVouchers();
-        $inputClass = $hasError ? 'is-invalid' : '';
-        
+        $inputClass = $hasError ? 'is-invalid' : '';        
 
 		if( EscSelection::isVoucherSet() ) { 
 			echo '<ul class="list-unstyled mt-3">';
@@ -30,7 +29,7 @@
 			?>
                 <li class="d-flex justify-content-between py-1">
                     <span><div class="voucher-fields-code"><strong><?php echo $voucherTitle; ?></strong> <?php echo $voucher['voucher']; ?></div></span>
-                    <?php $selection->renderField( 'remove_voucher_' . 'Stok30', $removeVoucher, false, array()); ?>
+                    <?php $selection->renderField( 'remove_voucher_' . $voucher['voucher'], $removeVoucher, false, array()); ?>
                 </li>              
             <?php
             
@@ -54,6 +53,5 @@
             ?>
             
             <?php
-        
 		endif;
-	endif;
+    endif; ?>
