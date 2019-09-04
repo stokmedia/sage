@@ -35,6 +35,7 @@
 
                     {{-- Totals --}}
                     <div id="js-selectedTotals">
+                        @php ($isHeaderCart = false)
                         @php (include( locate_template( 'parts/shop/totals-selection.php' ) ))
                     </div>
                     

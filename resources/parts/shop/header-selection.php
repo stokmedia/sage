@@ -19,6 +19,7 @@
 
     // Checkout page
     $checkoutPage = Helper::get_silk_architecture_page( 'selection' );
+    $isHeaderCart = true;
     ?>
 
     <div class="cart-wrapper d-none d-lg-block">

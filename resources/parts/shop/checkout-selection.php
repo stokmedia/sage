@@ -1,6 +1,7 @@
 <?php
 
     $selection = EscGeneral::getSelection();
+    $isHeaderCart = false;
     ?>
 
     <!-- Cart items -->

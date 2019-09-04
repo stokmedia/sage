@@ -23,46 +23,52 @@
         <?php if (!empty($selection['totals']['itemsTotalPrice'])) : ?>
             <div class="summary-item <?php echo $rowClass ?>">
                 <div class="title <?php echo $labelClass ?>"><?php echo $totalLabel ?></div>
-                <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['itemsTotalPrice']; ?></div>
+                <div class="price <?php echo $valueClass ?>">
+                    <?php if (!empty($isHeaderCart)) :?>
+                        <strong><?php echo $selection['totals']['itemsTotalPrice']; ?></strong>
+                    <?php else : ?>
+                        <?php echo $selection['totals']['itemsTotalPrice']; ?>
+                    <?php endif ?>
+                </div>
             </div>
         <?php endif ;?>
 
-        <?php if (!empty($selection['totals']['totalDiscountPrice'])) : ?>
+        <?php if (empty($isHeaderCart) && !empty($selection['totals']['totalDiscountPrice'])) : ?>
             <div class="summary-item <?php echo $rowClass ?>">
                 <div class="title <?php echo $labelClass ?>"><?php echo $discountLabel ?></div>
                 <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['totalDiscountPrice']; ?></div>
             </div>
         <?php endif ;?>    
 
-        <?php if (!empty($selection['totals']['shippingPriceAsNumber'])) : ?>
+        <?php if (empty($isHeaderCart) && !empty($selection['totals']['shippingPriceAsNumber'])) : ?>
             <div class="summary-item <?php echo $rowClass ?>">
                 <div class="title <?php echo $labelClass ?>"><?php echo $shippingLabel ?></div>
                 <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['shippingPrice']; ?></div>
             </div>
         <?php endif ;?>
 
-        <?php if (!empty($selection['totals']['handlingCostPriceAsNumber'])) : ?>
+        <?php if (empty($isHeaderCart) && !empty($selection['totals']['handlingCostPriceAsNumber'])) : ?>
             <div class="summary-item <?php echo $rowClass ?>">
                 <div class="title <?php echo $labelClass ?>"><?php echo $handlingCostLabel ?></div>
                 <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['handlingCostPrice']; ?></div>
             </div>
         <?php endif ;?>  
         
-        <?php if (!empty($selection['totals']['taxDeductedAsNumber'])) : ?>
+        <?php if (empty($isHeaderCart) && !empty($selection['totals']['taxDeductedAsNumber'])) : ?>
             <div class="summary-item <?php echo $rowClass ?>">
                 <div class="title <?php echo $labelClass ?>"><?php echo $vatLabel ?></div>
                 <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['taxDeducted']; ?></div>
             </div>
         <?php endif ;?>        
 
-        <?php if (!empty($selection['totals']['grandTotalPriceTaxAsNumber'])) : ?>
+        <?php if (empty($isHeaderCart) && !empty($selection['totals']['grandTotalPriceTaxAsNumber'])) : ?>
             <div class="summary-item <?php echo $rowClass ?>">
                 <div class="title <?php echo $labelClass ?>"><?php echo $vatIncludedLabel. ' ('. $selection['totals']['taxPercent'] .'%)'; ?></div>
                 <div class="price <?php echo $valueClass ?>"><?php echo $selection['totals']['grandTotalPriceTax']; ?></div>
             </div>
         <?php endif ;?>        
 
-        <?php if (!empty($selection['totals']['grandTotalPrice'])) : ?>
+        <?php if (empty($isHeaderCart) && !empty($selection['totals']['grandTotalPrice'])) : ?>
             <div class="summary-item <?php echo $rowClass ?>">
                 <div class="title <?php echo $labelClass ?>"><?php echo $subTotalLabel ?></div>
                 <div class="price <?php echo $valueClass ?>"><strong><?php echo $selection['totals']['grandTotalPrice']; ?></strong></div>
