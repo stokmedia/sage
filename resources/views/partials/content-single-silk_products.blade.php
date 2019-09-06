@@ -8,14 +8,14 @@
                     <div class="selected-product-slider-col p-md-0 m-0">
                         <div class="selected-product-slider overflow-hidden p-md-0">
                             @if (!empty($product->images))
-                                @foreach ($product->images['standard'] as $item)
+                                @foreach ($product->images['standard'] as $key=>$item)
                                     @php($srcset = $item['url'].' 720w, ')
                                     @php($srcset .= $item['url'].' 1440w, ')
-                                    @if ($product->images['full'][0]['url'])
-                                        @php($srcset .= $product->images['full'][0]['url'].' 2880w')
+                                    @if ($product->images['full'][ $key ]['url'])
+                                        @php($srcset .= $product->images['full'][ $key ]['url'].' 2880w')
                                     @endif
                                     <figure class="item align-items-center mb-0">
-                                        <img data-src="{{ $item['url'] }}" alt="" class="lazy" data-srcset="{{ $srcset }}">
+                                        <img data-src="{{ $item['url'] }}" alt="{!! $product->product_meta->name !!}" class="lazy" data-srcset="{{ $srcset }}">
                                     </figure>
                                 @endforeach
                             @endif
@@ -31,7 +31,7 @@
                             @foreach ($product->images['mini'] as $item)
                                 <div class="item bg-white">
                                     <figure>
-                                        <img src="{{ $item['url'] }}" alt="">
+                                        <img src="{{ $item['url'] }}" alt="{!! $product->product_meta->name !!}">
                                     </figure>
                                 </div>
                             @endforeach
