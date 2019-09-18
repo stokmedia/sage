@@ -173,4 +173,29 @@ class Helper {
         return $string;
     }
 
+    public static function get_unique_post_meta_value( $postType, $key )
+    {   
+        global $wpdb;
+
+        $query = "
+        SELECT DISTINCT pm.meta_value FROM {$wpdb->postmeta} pm
+        LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+        WHERE p.post_status = 'publish'";
+    
+        if (!empty($postType)) {
+            $cond = $wpdb->prepare(' AND p.post_type = %s', $postType);
+            $query .= $cond;
+        }
+    
+        if (!empty($key)) {
+            $cond = $wpdb->prepare(' AND pm.meta_key = %s', $key);
+            $query .= $cond;
+        } 
+    
+        $result = $wpdb->get_col( $query );
+
+        return $result;
+    }
+
+
 }

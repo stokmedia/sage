@@ -3,6 +3,7 @@
 namespace App;
 
 use Roots\Sage\Container;
+use App\Classes\Helper;
 
 /**
  * Get the sage container.
@@ -220,6 +221,36 @@ function silk_product_filter() {
     return false;
 }
 
+function get_parent_slug($term) {
+    if (empty($term) || $term->parent === 0) { 
+        return ''; 
+    }
+
+    $term = get_term_by( 'id', $term->parent, $term->taxonomy );
+    return $term->slug;
+}
+
+function get_term_slug_hierarchy($term, $reverseOrder=true) {
+    if (empty($term)) { return ''; }
+        
+    if ($reverseOrder) {
+        $categories = get_ancestors($term->term_id, $term->taxonomy);
+
+        krsort( $categories );
+
+        $categories[] = $term->term_id;
+
+    } else {
+        $categories = [ $term->term_id ];
+
+        $parents = get_ancestors($term->term_id, $term->taxonomy);
+
+        $categories = array_merge( $categories, $parents );
+    }
+
+    return $categories;
+} 
+
 /**
  * Generate order by
  * @return array
@@ -240,16 +271,49 @@ function silk_product_filter() {
             /** Get terms that have children */
             // $hierarchy = _get_term_hierarchy($taxonomy);
 
-            $termSlug = $term->slug;
-            while( !empty($term->parent) ) {
-                $term = get_term_by('id', $term->parent, $taxonomy);
-                $termSlug =  $term->slug . '/' . $termSlug;
+            // $termSlug = $term->slug;
+            // while( !empty($term->parent) ) {
+            //     $term = get_term_by('id', $term->parent, $taxonomy);
+            //     $termSlug =  $term->slug . '/' . $termSlug;
+            // }
+
+            // // This will be the default sort or pop_asc is selected
+            // $orderby['meta_key'] = 'category_order_' . $termSlug;
+            // $orderby['orderby'] = 'meta_value';
+            // $orderby['order'] = 'asc';
+
+            $parents = get_term_slug_hierarchy( $term );
+
+            $currentTermSlug = [];         
+            $termSlugs = array_map( function($id) use ($taxonomy, &$currentTermSlug){
+                $term = get_term_by( 'id', $id, $taxonomy );
+                $termSlug = $term->slug;
+                $tempSlug = !empty($currentTermSlug) ? implode('/', $currentTermSlug).'/'.$termSlug : $termSlug;
+
+                // Removed appended parent slug from termSlug if post_meta for the current termSlug does not exists
+                // Reason for this: Wordpress automatically appends the parent slug for terms with duplicated slug
+                $termSlugValue = Helper::get_unique_post_meta_value( 'silk_products', 'category_order_'. $tempSlug );
+                if (empty($termSlugValue)) {
+                    $toRemoveSlug = get_parent_slug( $term );
+                    $termSlug = str_replace_last( '-'.$toRemoveSlug, '', $term->slug );
+                }
+
+                $currentTermSlug[] = $termSlug;
+                return $termSlug;
+            }, $parents );
+
+            $termSlug = implode( '/', $termSlugs );
+
+            // Check if current term has category order post meta
+            $postMetaExists = Helper::get_unique_post_meta_value( 'silk_products', 'category_order_'. $termSlug );
+            
+            if ($taxonomy == 'silk_category' && $postMetaExists) {
+                // This will be the default sort or pop_asc is selected
+                $orderby['meta_key'] = 'category_order_' . $termSlug;
+                $orderby['orderby'] = 'meta_value';
+                $orderby['order'] = 'asc';
             }
 
-            // This will be the default sort or pop_asc is selected
-            $orderby['meta_key'] = 'category_order_' . $termSlug;
-            $orderby['orderby'] = 'meta_value';
-            $orderby['order'] = 'asc';
         }
     }
 
