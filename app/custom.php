@@ -135,6 +135,15 @@ add_action( 'after_setup_theme', function() {
     }
 });
 
+// Update product category slug to avoid conflict on saving category with duplicated slug
+add_filter( 'wp_unique_term_slug', function ( $slug, $term, $original_slug ) {
+	if( $term->taxonomy === 'silk_category' ) {
+		return $original_slug;
+	}
+
+	return $slug;
+}, 10, 3 );
+
 /* STELLAR PoC , Plase leave this code for now
 // Testing to register own Taxonomy
 $tax_args = array(
