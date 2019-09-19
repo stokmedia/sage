@@ -310,7 +310,7 @@ function get_term_slug_hierarchy($term, $reverseOrder=true) {
             if ($taxonomy == 'silk_category' && $postMetaExists) {
                 // This will be the default sort or pop_asc is selected
                 $orderby['meta_key'] = 'category_order_' . $termSlug;
-                $orderby['orderby'] = 'meta_value';
+                $orderby['orderby'] = 'meta_value_num';
                 $orderby['order'] = 'asc';
             }
 
@@ -322,12 +322,12 @@ function get_term_slug_hierarchy($term, $reverseOrder=true) {
         switch ( $_GET['orderBy'] ) {
             case 'price_desc':
                 $orderby['meta_key'] = 'price_' . $market . '_' . $priceList;
-                $orderby['orderby'] = 'meta_value';
+                $orderby['orderby'] = 'meta_value_num';
                 $orderby['order'] = 'desc';
                 break;
             case 'price_asc':
                 $orderby['meta_key'] = 'price_' . $market . '_' . $priceList;
-                $orderby['orderby'] = 'meta_value';
+                $orderby['orderby'] = 'meta_value_num';
                 $orderby['order'] = 'asc';
                 break;
             case 'title_desc':
