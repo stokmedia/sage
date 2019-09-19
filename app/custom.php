@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Classes\Product;
+
 // Disable search page
 add_action( 'parse_query', function( $query, $error = true ) {
     if ( is_search() ) {
@@ -31,6 +33,27 @@ add_filter( 'acf/fields/flexible_content/layout_title/name=sections', function( 
 	
 	return $title;
 }, 10, 4);
+
+
+// Update Product Acf Result
+function updateProductAcfResult( $title, $post, $field, $post_id ) {
+	if( !class_exists( 'Esc' ) ) {
+		return $title;
+	}
+
+	// add post type to each result
+	$product = new Product( $post->ID );
+	$variantName = !empty( $product->product_meta[ 'variantName' ] ) ? $product->product_meta[ 'variantName' ] : '';
+
+	if( !empty( $variantName ) ) {
+		$title .= ' ' . $variantName;
+	}
+
+	return $title;
+}
+
+add_filter( 'acf/fields/post_object/result/name=product', __NAMESPACE__ . '\\updateProductAcfResult', 10, 4 );
+add_filter( 'acf/fields/relationship/result/name=handpicked_products', __NAMESPACE__ . '\\updateProductAcfResult', 10, 4 );
 
 
 // Map section to specific template that they should appear.
