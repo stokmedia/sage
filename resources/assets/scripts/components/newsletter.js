@@ -21,14 +21,14 @@ var Newsletter = {};
 	Newsletter.removeErrors = function (wrapperEl) {
 		var inputs = wrapperEl.querySelectorAll( 'input' );
 
-		if (inputs.length === 0) { 
-			return; 
+		if (inputs.length === 0) {
+			return;
 		}
 
 		for (var i=0; i < inputs.length; i++) {
 			inputs[i].addEventListener( 'focus', Newsletter.updateErrorHtml );
 			inputs[i].addEventListener( 'click', Newsletter.updateErrorHtml );
-		}    
+		}
 	};
 
 	Newsletter.validateEmail = function( email ) {
@@ -64,7 +64,7 @@ var Newsletter = {};
 			if (errorEl) {
 				errorEl.innerText = errors[ key ];
 			}
-			
+
 			var elToAddClass = key === 'email' ? email : terms;
 			elToAddClass.classList.add( Newsletter.elClasses.error );
 		}
@@ -74,23 +74,23 @@ var Newsletter = {};
 
 	Newsletter.formSubmit = function ( form ) {
 		if ( !form ) { return; }
-		
+
 		var formData = new FormData( form );
 		formData.append( 'ajax', 1 );
-		
+
 		var button = form.querySelector('button[type="submit"]');
-		button.classList.add( Newsletter.elClasses.isLoading );	
+		button.classList.add( Newsletter.elClasses.isLoading );
 
 		var hasErrors = Newsletter.formValidation( form );
 		if (hasErrors) {
 			return setTimeout( function () {
 				button.classList.remove( Newsletter.elClasses.isLoading );
-			}, 500 );		
+			}, 500 );
 		}
-		
+
 		var sendData = [];
 		formData.forEach(function(value, key){
-			sendData.push( encodeURIComponent(key) + '=' + encodeURIComponent(value) );	    
+			sendData.push( encodeURIComponent(key) + '=' + encodeURIComponent(value) );
 		});
 
 		var xhr = new XMLHttpRequest();
@@ -98,10 +98,10 @@ var Newsletter = {};
 			if( xhr.readyState == XMLHttpRequest.DONE ) {
 				if (xhr.status == 200) {
 					var response = JSON.parse(xhr.response);
-					
+
 					if (response.success) {
 						setTimeout( function () {
-							button.classList.remove( Newsletter.elClasses.isLoading );	
+							button.classList.remove( Newsletter.elClasses.isLoading );
 							Newsletter.formSuccess(form);
 						}, 1500 );
 
@@ -109,11 +109,11 @@ var Newsletter = {};
 						if (targetEl && targetEl.attr('id') === 'js-newsletter-modal') {
 							Newsletter.forceCloseModal( targetEl );
 						}
-					}				
+					}
 				}
 			}
 		};
-		
+
 		xhr.open( 'POST', '/', true );
 		xhr.setRequestHeader( 'Accept', 'application/json, text/javascript, */*; q=0.01' );
 		xhr.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded;charset=UTF-8' );
@@ -141,18 +141,20 @@ var Newsletter = {};
 			var btn = document.getElementById( 'js-alert-button' );
 			var btnText = btn ? btn.dataset.text : '';
 
-			Alert.show( 'success', form.dataset.alert, btnText );
+      Alert.show( 'success', form.dataset.alert, btnText );
+      console.log($('#js-alert'));
+
 		}
 
-		Newsletter.resetForm(targetContainer, form, successType);	
+		Newsletter.resetForm(targetContainer, form, successType);
 	};
 
 	Newsletter.resetForm = function( targetContainer, form, successType ) {
 		form.querySelector( 'input[name="esc_email"]' ).value = '';
-		form.querySelector( 'input[name="accept_terms"]' ).checked = false;	
+		form.querySelector( 'input[name="accept_terms"]' ).checked = false;
 
 		if (successType === 'success-message') {
-			setTimeout( function () {				
+			setTimeout( function () {
 				Newsletter.displaySuccessMessage( targetContainer, '.js-newsletter-content', '.js-newsletter-success' );
 			}, 10000 );
 		}
@@ -170,7 +172,7 @@ var Newsletter = {};
 			Array.prototype.forEach.call( contentToHide, function ( element ) {
 				element.classList.add( Newsletter.elClasses.hidden );
 			} );
-		}	
+		}
 
 		if( contentToDisplay.length > 0 ) {
 			Array.prototype.forEach.call( contentToDisplay, function ( element ) {
@@ -180,13 +182,13 @@ var Newsletter = {};
 	};
 
 	Newsletter.modal = function( modal ) {
-		if( !modal ) { 
-			return; 
+		if( !modal ) {
+			return;
 		}
 
 		var cookieName = modal.data( 'cookie' );
 		var delay = modal.data( 'delay' );
-		
+
 		if( !stokpress.getCookie( cookieName ) ) {
 			// Show modal
 			setTimeout( function () {
@@ -201,11 +203,11 @@ var Newsletter = {};
 		// var btn = document.getElementById( 'js-alert-button' );
 		// var btnText = btn ? btn.dataset.text : '';
 
-		// Alert.show( 'success', form.dataset.alert, btnText );		
+		// Alert.show( 'success', form.dataset.alert, btnText );
 
 		var container = document.querySelectorAll( mainWrapper );
-		if (container.length === 0) { 
-			return; 
+		if (container.length === 0) {
+			return;
 		}
 
 		for (var i = 0; i < container.length; i++) {
@@ -228,7 +230,7 @@ var Newsletter = {};
 		}
 	};
 
-	document.addEventListener( 'DOMContentLoaded', function () {	
+	document.addEventListener( 'DOMContentLoaded', function () {
 		Newsletter.elClasses = {
 			hidden: 'd-none',
 			isLoading: 'is-loading',
