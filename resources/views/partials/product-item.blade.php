@@ -1,19 +1,19 @@
-{{-- <h2><a href="{{ get_the_permalink( get_the_ID() ) }}">{{ get_the_title() }}</a></h2>
+{{-- <h2><a href="{{ get_the_permalink( $post ) }}">{{ $post->post_title }}</a></h2>
 
 <div>
 	@include('partials.product-price', ['priceInfo' => $product->price] )
 </div>
 
 <div>
-	<a href="{{ get_the_permalink( get_the_ID() ) }}">@include('partials.product-images', ['images' => $product->images, 'size' => 'thumb', 'limit' => 2] )</a>
+	<a href="{{ get_the_permalink( $post ) }}">@include('partials.product-images', ['images' => $product->images, 'size' => 'thumb', 'limit' => 2] )</a>
 </div> --}}
 
 @php (
 	$itemParam = [
-		'images' => $product->images, 
-		'size' => 'standard', 
-		'limit' => 2, 
-		'class' => 'visible-on-hover', 
+		'images' => $product->images,
+		'size' => 'standard',
+		'limit' => 2,
+		'class' => 'visible-on-hover',
 		'img_pos_to_add_class' => 2
 	]
 )
