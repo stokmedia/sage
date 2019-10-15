@@ -240,6 +240,46 @@
         border-top: 1px solid #979797;
       }
     }
+
+    .usp-selected {
+      position: relative;
+      left: -5px;
+      padding-left: 0;
+      margin-top: 25px;
+      margin-bottom: 0;
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 1rem;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .image {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          display: inline-block;
+          margin-right: 4px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+
+          &.shipping {
+            background-image: url(../images/icon/shipping.svg);
+          }
+
+          &.return {
+            background-image: url(../images/icon/Returns.svg);
+          }
+        }
+      }
+    }
   }
 
   &-thumbnail {

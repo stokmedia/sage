@@ -3493,16 +3493,6 @@ mark,
   opacity: 1;
 }
 
-.form-control::-moz-placeholder,
-.comment-form input[type="text"]::-moz-placeholder,
-.comment-form input[type="email"]::-moz-placeholder,
-.comment-form input[type="url"]::-moz-placeholder,
-.comment-form textarea::-moz-placeholder,
-.search-form .search-field::-moz-placeholder {
-  color: #031532;
-  opacity: 1;
-}
-
 .form-control::-ms-input-placeholder,
 .comment-form input[type="text"]::-ms-input-placeholder,
 .comment-form input[type="email"]::-ms-input-placeholder,
@@ -8399,10 +8389,8 @@ input[type="button"].btn-block {
 
   .card-columns {
     -webkit-column-count: 3;
-       -moz-column-count: 3;
             column-count: 3;
     -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
             column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
@@ -17830,7 +17818,7 @@ blockquote footer::before,
   }
 }
 
-/* line 11, resources/assets/styles/skhoop/components/_alert.scss */
+/* line 13, resources/assets/styles/skhoop/components/_alert.scss */
 
 .alert-container {
   max-width: 900px;
@@ -17839,7 +17827,7 @@ blockquote footer::before,
 }
 
 @media screen and (max-width: 576px) {
-  /* line 17, resources/assets/styles/skhoop/components/_alert.scss */
+  /* line 19, resources/assets/styles/skhoop/components/_alert.scss */
 
   .iphone .alert-container > .col {
     display: inline-block !important;
@@ -17847,7 +17835,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 576px) {
-  /* line 11, resources/assets/styles/skhoop/components/_alert.scss */
+  /* line 13, resources/assets/styles/skhoop/components/_alert.scss */
 
   .alert-container {
     text-align: left;
@@ -17855,7 +17843,7 @@ blockquote footer::before,
   }
 }
 
-/* line 29, resources/assets/styles/skhoop/components/_alert.scss */
+/* line 31, resources/assets/styles/skhoop/components/_alert.scss */
 
 .alert-container img {
   width: 100%;
@@ -17864,7 +17852,7 @@ blockquote footer::before,
   max-height: 40px;
 }
 
-/* line 37, resources/assets/styles/skhoop/components/_alert.scss */
+/* line 39, resources/assets/styles/skhoop/components/_alert.scss */
 
 .alert-text {
   color: #031532;
@@ -17875,7 +17863,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 37, resources/assets/styles/skhoop/components/_alert.scss */
+  /* line 39, resources/assets/styles/skhoop/components/_alert.scss */
 
   .alert-text {
     font-size: 1.25rem;
@@ -17884,7 +17872,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 576px) {
-  /* line 37, resources/assets/styles/skhoop/components/_alert.scss */
+  /* line 39, resources/assets/styles/skhoop/components/_alert.scss */
 
   .alert-text {
     margin: 0 2.75rem;
@@ -17892,7 +17880,7 @@ blockquote footer::before,
 }
 
 @media screen and (max-width: 576px) {
-  /* line 53, resources/assets/styles/skhoop/components/_alert.scss */
+  /* line 55, resources/assets/styles/skhoop/components/_alert.scss */
 
   .iphone .alert-text {
     display: block !important;
@@ -17900,7 +17888,7 @@ blockquote footer::before,
   }
 }
 
-/* line 61, resources/assets/styles/skhoop/components/_alert.scss */
+/* line 63, resources/assets/styles/skhoop/components/_alert.scss */
 
 .alert .btn.btn-sm,
 .alert .btn-group-sm > .btn,
@@ -20303,7 +20291,7 @@ body.isApple .navbar .content-info .brand-container {
 
   .content-info {
     padding-top: 3.25rem;
-    padding-bottom: 2.0625rem;
+    padding-bottom: 3.25rem;
   }
 }
 
@@ -20445,7 +20433,28 @@ body.isApple .navbar .content-info .brand-container {
   background-color: #b7cad0;
 }
 
-/* line 101, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 100, resources/assets/styles/skhoop/layouts/_footer.scss */
+
+.content-info .klarna {
+  margin-top: 20px;
+}
+
+/* line 102, resources/assets/styles/skhoop/layouts/_footer.scss */
+
+.content-info .klarna img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991.98px) {
+  /* line 102, resources/assets/styles/skhoop/layouts/_footer.scss */
+
+  .content-info .klarna img {
+    max-width: 440px;
+  }
+}
+
+/* line 113, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar {
   background-color: #b7cad0;
@@ -20455,7 +20464,7 @@ body.isApple .navbar .content-info .brand-container {
 }
 
 @media (min-width: 768px) {
-  /* line 101, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 113, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar {
     padding-top: 1.25rem;
@@ -20463,7 +20472,7 @@ body.isApple .navbar .content-info .brand-container {
   }
 }
 
-/* line 112, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 124, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item {
   padding-left: 3.75rem;
@@ -20475,7 +20484,7 @@ body.isApple .navbar .content-info .brand-container {
 }
 
 @media (min-width: 768px) {
-  /* line 112, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 124, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item {
     display: inline-block;
@@ -20485,20 +20494,20 @@ body.isApple .navbar .content-info .brand-container {
 }
 
 @media (min-width: 992px) {
-  /* line 112, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 124, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item {
     width: 14.375rem;
   }
 }
 
-/* line 131, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 143, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item .info {
   text-align: left;
 }
 
-/* line 134, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 146, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item .info .h4 {
   margin-top: 0.1875rem;
@@ -20506,14 +20515,14 @@ body.isApple .navbar .content-info .brand-container {
   line-height: 1rem;
 }
 
-/* line 146, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 158, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .trust-item + .trust-item {
   margin-top: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  /* line 146, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 158, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item + .trust-item {
     margin-top: 0;
@@ -20522,14 +20531,14 @@ body.isApple .navbar .content-info .brand-container {
 }
 
 @media (min-width: 992px) {
-  /* line 146, resources/assets/styles/skhoop/layouts/_footer.scss */
+  /* line 158, resources/assets/styles/skhoop/layouts/_footer.scss */
 
   .trust-bar .trust-item + .trust-item {
     margin-left: 3.9375rem;
   }
 }
 
-/* line 160, resources/assets/styles/skhoop/layouts/_footer.scss */
+/* line 172, resources/assets/styles/skhoop/layouts/_footer.scss */
 
 .trust-bar .icon-block {
   width: 2.5rem;
@@ -23610,7 +23619,7 @@ body.isApple .product-filter {
 
 .selected-product-slider .flickity-prev-next-button.previous {
   left: 0;
-  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOC41NTI0IDI1LjgxOTVDMTguNzg0IDI2LjA2MDIgMTkuMTY5NSAyNi4wNjAyIDE5LjQwOTEgMjUuODE5NUMxOS42NDA3IDI1LjU4NyAxOS42NDA3IDI1LjIwMDEgMTkuNDA5MSAyNC45NjgxTDE1LjA2NDkgMjAuNjA3SDI5LjQwMDJDMjkuNzM0NCAyMC42MDY0IDMwIDIwLjMzOTggMzAgMjAuMDA0M0MzMCAxOS42Njg5IDI5LjczNDQgMTkuMzkzNiAyOS40MDAyIDE5LjM5MzZIMTUuMDY0OUwxOS40MDkxIDE1LjA0MDZDMTkuNjQwNyAxNC43OTk5IDE5LjY0MDcgMTQuNDEyNCAxOS40MDkxIDE0LjE4MDVDMTkuMTY5NSAxMy45Mzk4IDE4Ljc4MzUgMTMuOTM5OCAxOC41NTI0IDE0LjE4MDVMMTMuMTc5OCAxOS41NzRDMTIuOTQwMSAxOS44MDY1IDEyLjk0MDEgMjAuMTkzNSAxMy4xNzk4IDIwLjQyNTRMMTguNTUyNCAyNS44MTk1WiIgZmlsbD0iIzFFMjAxRCIvPg0KPC9zdmc+DQo=) no-repeat center/contain white;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4LjU1MjQgMjUuODE5NUMxOC43ODQgMjYuMDYwMiAxOS4xNjk1IDI2LjA2MDIgMTkuNDA5MSAyNS44MTk1QzE5LjY0MDcgMjUuNTg3IDE5LjY0MDcgMjUuMjAwMSAxOS40MDkxIDI0Ljk2ODFMMTUuMDY0OSAyMC42MDdIMjkuNDAwMkMyOS43MzQ0IDIwLjYwNjQgMzAgMjAuMzM5OCAzMCAyMC4wMDQzQzMwIDE5LjY2ODkgMjkuNzM0NCAxOS4zOTM2IDI5LjQwMDIgMTkuMzkzNkgxNS4wNjQ5TDE5LjQwOTEgMTUuMDQwNkMxOS42NDA3IDE0Ljc5OTkgMTkuNjQwNyAxNC40MTI0IDE5LjQwOTEgMTQuMTgwNUMxOS4xNjk1IDEzLjkzOTggMTguNzgzNSAxMy45Mzk4IDE4LjU1MjQgMTQuMTgwNUwxMy4xNzk4IDE5LjU3NEMxMi45NDAxIDE5LjgwNjUgMTIuOTQwMSAyMC4xOTM1IDEzLjE3OTggMjAuNDI1NEwxOC41NTI0IDI1LjgxOTVaIiBmaWxsPSIjMUUyMDFEIi8+Cjwvc3ZnPgo=) no-repeat center/contain white;
 }
 
 /* line 97, resources/assets/styles/skhoop/sections/_selected-product.scss */
@@ -23864,14 +23873,66 @@ body.isApple .product-filter {
   border-top: 1px solid #979797;
 }
 
-/* line 245, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 244, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .usp-selected {
+  position: relative;
+  left: -5px;
+  padding-left: 0;
+  margin-top: 25px;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* line 252, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .usp-selected li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 259, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .usp-selected li:last-child {
+  margin-right: 0;
+}
+
+/* line 263, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .usp-selected li .image {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* line 273, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .usp-selected li .image.shipping {
+  background-image: url(/wp-content/themes/stokpress/dist/images/icon/shipping.svg);
+}
+
+/* line 277, resources/assets/styles/skhoop/sections/_selected-product.scss */
+
+.selected-product-options .usp-selected li .image.return {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjBweCIgaGVpZ2h0PSI2MHB4IiB2aWV3Qm94PSIwIDAgNjAgNjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU4ICg4NDY2MykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+SWNvbi9SZXR1cm5zPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9Ikljb24vUmV0dXJucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4wMDAwMDAsIDEwLjAwMDAwMCkiPgogICAgICAgICAgICA8cGF0aCBkPSJNMjAsMCBDOC45NzIxNzM5MSwwIDAsOC45NzIxNzM5MSAwLDIwIEMwLDMxLjAyNzgyNjEgOC45NzIxNzM5MSw0MCAyMCw0MCBDMzEuMDI4Njk1Nyw0MCA0MCwzMS4wMjc4MjYxIDQwLDIwIEM0MCw4Ljk3MjE3MzkxIDMxLjAyODY5NTcsMCAyMCwwIFogTTIwLDM4LjI2MDg2OTYgQzkuOTMwNDM0NzgsMzguMjYwODY5NiAxLjczOTEzMDQzLDMwLjA2OTU2NTIgMS43MzkxMzA0MywyMCBDMS43MzkxMzA0Myw5LjkzMDQzNDc4IDkuOTMwNDM0NzgsMS43MzkxMzA0MyAyMCwxLjczOTEzMDQzIEMzMC4wNjg2OTU3LDEuNzM5MTMwNDMgMzguMjYwODY5Niw5LjkzMDQzNDc4IDM4LjI2MDg2OTYsMjAgQzM4LjI2MDg2OTYsMzAuMDY5NTY1MiAzMC4wNjg2OTU3LDM4LjI2MDg2OTYgMjAsMzguMjYwODY5NiBaIiBpZD0iU2hhcGUiIGZpbGw9IiMyOTI5MjkiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgICAgICA8ZyBpZD0iYmFjay0oMykiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkuMDAwMDAwLCAxMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04LjA5NzkwNzY2LDMuMTgxNzU0NjkgTDguMDk3OTA3NjYsMC4zMzYxOTg1MTUgQzguMDk3NzM5MDksMC4yMDAyMTA5MSA4LjAxMzYzNTE4LDAuMDc3NjkwNzM0NSA3Ljg4NDY5ODM1LDAuMDI1NjI3ODczNCBDNy43NTU3NjE1MiwtMC4wMjY0MzQ5ODc3IDcuNjA3MjczNDksMC4wMDIzMDYzMTM3IDcuNTA4Njc0NzQsMC4wOTgzODQ1MTUyIEwwLjEwMTEyNjkzMiw3LjMxNjcyOTE4IEMtMC4wMzM3MDg5Nzc0LDcuNDQ3OTUzOTEgLTAuMDMzNzA4OTc3NCw3LjY2MDk2ODIzIDAuMTAxMTI2OTMyLDcuNzkyMTkyOTYgTDcuNTA4Njc0NzQsMTUuMDEwMzczNCBDNy42MDcyNzM0OSwxNS4xMDY2MTU4IDcuNzU1NzYxNTIsMTUuMTM1MzU3MiA3Ljg4NDY5ODM1LDE1LjA4MzI5NDMgQzguMDEzNjM1MTgsMTUuMDMxMjMxNCA4LjA5NzczOTA5LDE0LjkwODcxMTIgOC4wOTc5MDc2NiwxNC43NzI3MjM3IEw4LjA5NzkwNzY2LDExLjkyNzAwMzIgTDguNjgxMjQxNTEsMTEuOTI3MDAzMiBDMTMuMjE0NzYxOSwxMS45MTUzNDI0IDE3LjM3MDIzNjEsMTQuMzg4MDgyNSAxOS40MzAwMjMxLDE4LjMyMzUxIEwyMC4yMTcxMjc4LDE5LjgxNjkwOTcgQzIwLjI4OTc3MDYsMTkuOTU1MzYwOCAyMC40NTAzOTM5LDIwLjAyNzEzMiAyMC42MDU0NTUyLDE5Ljk5MDUwNzMgQzIwLjc2MDUxNjUsMTkuOTU0MDQ2OSAyMC44Njk1NjUyLDE5LjgxODcxNjMgMjAuODY5NTY1MiwxOS42NjMxODQ2IEwyMC44Njk1NjUyLDE1LjYyNjkxNjEgQzIwLjg2MTQ3NDksOC43NTY5MTYzNCAxNS4xNDgxNDAzLDMuMTg5NjM4MDIgOC4wOTc5MDc2NiwzLjE4MTc1NDY5IFogTTIwLjE3OTIwNTIsMTguMjcyMTA0MSBMMjAuMDQ0MjAwNywxOC4wMTYzODg0IEMxNy44NjY3NjkzLDEzLjg1NTk1NzIgMTMuNDczOTgzOSwxMS4yNDE4MDk4IDguNjgxMjQxNTEsMTEuMjU0MjkxOCBMNy43NTI3Mjc3MywxMS4yNTQyOTE4IEM3LjU2MjEwMzQ2LDExLjI1NDI5MTggNy40MDc1NDc4MSwxMS40MDQ4OTY0IDcuNDA3NTQ3ODEsMTEuNTkwNjQ3NSBMNy40MDc1NDc4MSwxMy45NjA3Mzk5IEwwLjgzMzExNzM4Nyw3LjU1NDM3ODk2IEw3LjQwNzU0NzgxLDEuMTQ4MTgyMjMgTDcuNDA3NTQ3ODEsMy41MTgxMTA0IEM3LjQwNzU0NzgxLDMuNzA0MDI1NzYgNy41NjIxMDM0NiwzLjg1NDQ2NjExIDcuNzUyNzI3NzMsMy44NTQ0NjYxMSBMOC4wOTc5MDc2NiwzLjg1NDQ2NjExIEMxNC43NjcwNjAzLDMuODYyMDIwOTYgMjAuMTcxNDUyMSw5LjEyODI1NDM1IDIwLjE3OTIwNTIsMTUuNjI2OTE2MSBMMjAuMTc5MjA1MiwxOC4yNzIxMDQxIFoiIGlkPSJTaGFwZSIgZmlsbD0iIzAwMDAwMCIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cG9seWxpbmUgaWQ9IlBhdGgtMiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjAuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBwb2ludHM9IjMuMiA3LjI0OTIwNjU0IDUuMTAyNTU3MTIgNS40MjA4ODk0MiA2LjA2MDgzOTg0IDQuNSI+PC9wb2x5bGluZT4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBkPSJNMjguOTA3ODM2OSwyNS42NjYxMzc3IEMzMS45NTA4ODcsMjYuMDY3OTExOCAzNC40MDE0ODkzLDI3LjY1NDA5MzQgMzYuMjU5NjQzNiwzMC40MjQ2ODI2IiBpZD0iUGF0aC0zIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMC43IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+);
+}
+
+/* line 285, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail {
   margin-left: 0.625rem;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 245, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 285, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail {
     margin-left: 0.625rem;
@@ -23889,7 +23950,7 @@ body.isApple .product-filter {
   }
 }
 
-/* line 256, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 296, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item {
   width: 70px;
@@ -23902,49 +23963,49 @@ body.isApple .product-filter {
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 256, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 296, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item {
     margin: 0.625rem 0.3125rem;
   }
 }
 
-/* line 269, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 309, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:first-child {
   margin-top: 0;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 269, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 309, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item:first-child {
     margin-top: 0.625rem;
   }
 }
 
-/* line 277, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 317, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 277, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 317, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item:last-child {
     margin-bottom: 0.625rem;
   }
 }
 
-/* line 285, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 325, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item.is-selected,
 .selected-product-thumbnail .item:hover {
   opacity: 0.6;
 }
 
-/* line 290, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 330, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item figure {
   position: relative;
@@ -24003,7 +24064,7 @@ body.isApple .product-filter {
   min-width: 200%;
 }
 
-/* line 296, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 336, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen {
   position: fixed;
@@ -24026,32 +24087,32 @@ body.isApple .product-filter {
           align-items: center;
 }
 
-/* line 309, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 349, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item {
   margin: 0.3125rem;
 }
 
-/* line 312, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 352, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:first-child {
   margin-top: 0.3125rem;
 }
 
-/* line 316, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 356, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:last-child {
   margin-bottom: 0.3125rem;
 }
 
-/* line 324, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 364, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product .custom-control .custom-control-label > span {
   margin-top: 0;
   margin-left: 0;
 }
 
-/* line 331, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 371, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .js-plus-item-btn {
   cursor: pointer;

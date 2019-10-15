@@ -13,30 +13,18 @@
 <footer class="content-info">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-md-12">
+            <div class="col-lg-4 col-md-12">
                 <div class="brand-container">
                     <a href="{{ $home_url }}" class="brand-footer">
                         {!! $logo['footerLogo'] !!}
                     </a>
 
-                    @if($social_links)
-                        <ul class="group-links d-none d-md-block">
-                            @foreach($social_links as $link)
-                                <li>
-                                    <a href="{{ $link['url']  }}" target="_blank" rel="nofollow noreferrer">
-                                        @if($link['media'] === 'instagram')
-                                            <img data-src="@asset('images/icon/icon-insta.svg')" class="lazy" alt="">
-                                        @else
-                                            <img data-src="@asset('images/icon/icon-facebook.svg')" class="lazy" alt="">
-                                        @endif
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
+                    <div class="klarna">
+                        <img src="https://cdn.klarna.com/1.0/shared/image/generic/badge/sv_se/checkout/long-blue.png?width=440" />
+                    </div>
                 </div>
             </div>
-            <div class="offset-lg-4 col-lg-2 col-md-4 d-none d-md-block">
+            <div class="offset-lg-2 col-lg-2 col-md-4 d-none d-md-block">
                 @if(isset($desktop_footer_menu[0]))
                     <div class="link-list">
                         <h4 class="h4">
@@ -135,6 +123,25 @@
                             </ul>
                         @endif
                     </div>
+                @endif
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-2 offset-lg-10 text-center text-lg-left">
+                @if($social_links)
+                    <ul class="group-links d-none d-md-block">
+                        @foreach($social_links as $link)
+                            <li>
+                                <a href="{{ $link['url']  }}" target="_blank" rel="nofollow noreferrer">
+                                    @if($link['media'] === 'instagram')
+                                        <img data-src="@asset('images/icon/icon-insta.svg')" class="lazy" alt="">
+                                    @else
+                                        <img data-src="@asset('images/icon/icon-facebook.svg')" class="lazy" alt="">
+                                    @endif
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
                 @endif
             </div>
         </div>

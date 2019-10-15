@@ -97,6 +97,11 @@
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <!-- Loading spinner, just add '.is-loading' class to '.btn' -->
           </button>
 
+          <ul class="usp-selected">
+            <li><div class="d-flex align-items-center"><span class="image shipping"></span>Fri Frakt</div></li>
+            <li><div class="d-flex align-items-center"><span class="image return"></span>Fria Returer</div></li>
+          </ul>
+
           <ul class="list-group accordion mt-5" id="productAccordion">
             @for ($accordion = 0; $accordion < 4; $accordion++)
               <li class="list-group-item">
