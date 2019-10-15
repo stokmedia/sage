@@ -70,8 +70,8 @@
         @endif
 
         <ul class="usp-selected">
-            <li><div class="d-flex align-items-center"><span class="image ship"></span>Fri Frakt</div></li>
-            <li><div class="d-flex align-items-center"><span class="image return"></span>Fria Returer</div></li>
+            <li><div class="d-flex align-items-center"><span class="image"><img src="@asset('images/icon/shipping.svg')" alt="" srcset=""></span>Fri Frakt</div></li>
+            <li><div class="d-flex align-items-center"><span class="image"><img src="@asset('images/icon/Returns.svg')" alt="" srcset=""></span>Fria Returer</div></li>
         </ul>
 
     {{-- Form end --}}
