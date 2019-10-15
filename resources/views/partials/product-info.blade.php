@@ -70,7 +70,7 @@
         @endif
 
         <ul class="usp-selected">
-            <li><div class="d-flex align-items-center"><span class="image shipping"></span>Fri Frakt</div></li>
+            <li><div class="d-flex align-items-center"><span class="image ship"></span>Fri Frakt</div></li>
             <li><div class="d-flex align-items-center"><span class="image return"></span>Fria Returer</div></li>
         </ul>
 

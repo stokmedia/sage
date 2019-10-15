@@ -266,16 +266,11 @@
           height: 40px;
           display: inline-block;
           margin-right: 4px;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: cover;
 
-          &.shipping {
-            background-image: url(../images/icon/shippings.svg);
-          }
 
-          &.return {
-            background-image: url(../images/icon/Returns.svg);
+          img {
+            width: 100%;
+            height: auto;
           }
         }
       }

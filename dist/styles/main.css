@@ -23908,31 +23908,23 @@ body.isApple .product-filter {
   height: 40px;
   display: inline-block;
   margin-right: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
-/* line 273, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 271, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
-.selected-product-options .usp-selected li .image.shipping {
-  background-image: url(/wp-content/themes/stokpress/dist/images/icon/shippings.svg);
+.selected-product-options .usp-selected li .image img {
+  width: 100%;
+  height: auto;
 }
 
-/* line 277, resources/assets/styles/skhoop/sections/_selected-product.scss */
-
-.selected-product-options .usp-selected li .image.return {
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjBweCIgaGVpZ2h0PSI2MHB4IiB2aWV3Qm94PSIwIDAgNjAgNjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU4ICg4NDY2MykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+SWNvbi9SZXR1cm5zPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9Ikljb24vUmV0dXJucyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMC4wMDAwMDAsIDEwLjAwMDAwMCkiPgogICAgICAgICAgICA8cGF0aCBkPSJNMjAsMCBDOC45NzIxNzM5MSwwIDAsOC45NzIxNzM5MSAwLDIwIEMwLDMxLjAyNzgyNjEgOC45NzIxNzM5MSw0MCAyMCw0MCBDMzEuMDI4Njk1Nyw0MCA0MCwzMS4wMjc4MjYxIDQwLDIwIEM0MCw4Ljk3MjE3MzkxIDMxLjAyODY5NTcsMCAyMCwwIFogTTIwLDM4LjI2MDg2OTYgQzkuOTMwNDM0NzgsMzguMjYwODY5NiAxLjczOTEzMDQzLDMwLjA2OTU2NTIgMS43MzkxMzA0MywyMCBDMS43MzkxMzA0Myw5LjkzMDQzNDc4IDkuOTMwNDM0NzgsMS43MzkxMzA0MyAyMCwxLjczOTEzMDQzIEMzMC4wNjg2OTU3LDEuNzM5MTMwNDMgMzguMjYwODY5Niw5LjkzMDQzNDc4IDM4LjI2MDg2OTYsMjAgQzM4LjI2MDg2OTYsMzAuMDY5NTY1MiAzMC4wNjg2OTU3LDM4LjI2MDg2OTYgMjAsMzguMjYwODY5NiBaIiBpZD0iU2hhcGUiIGZpbGw9IiMyOTI5MjkiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgICAgICA8ZyBpZD0iYmFjay0oMykiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkuMDAwMDAwLCAxMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04LjA5NzkwNzY2LDMuMTgxNzU0NjkgTDguMDk3OTA3NjYsMC4zMzYxOTg1MTUgQzguMDk3NzM5MDksMC4yMDAyMTA5MSA4LjAxMzYzNTE4LDAuMDc3NjkwNzM0NSA3Ljg4NDY5ODM1LDAuMDI1NjI3ODczNCBDNy43NTU3NjE1MiwtMC4wMjY0MzQ5ODc3IDcuNjA3MjczNDksMC4wMDIzMDYzMTM3IDcuNTA4Njc0NzQsMC4wOTgzODQ1MTUyIEwwLjEwMTEyNjkzMiw3LjMxNjcyOTE4IEMtMC4wMzM3MDg5Nzc0LDcuNDQ3OTUzOTEgLTAuMDMzNzA4OTc3NCw3LjY2MDk2ODIzIDAuMTAxMTI2OTMyLDcuNzkyMTkyOTYgTDcuNTA4Njc0NzQsMTUuMDEwMzczNCBDNy42MDcyNzM0OSwxNS4xMDY2MTU4IDcuNzU1NzYxNTIsMTUuMTM1MzU3MiA3Ljg4NDY5ODM1LDE1LjA4MzI5NDMgQzguMDEzNjM1MTgsMTUuMDMxMjMxNCA4LjA5NzczOTA5LDE0LjkwODcxMTIgOC4wOTc5MDc2NiwxNC43NzI3MjM3IEw4LjA5NzkwNzY2LDExLjkyNzAwMzIgTDguNjgxMjQxNTEsMTEuOTI3MDAzMiBDMTMuMjE0NzYxOSwxMS45MTUzNDI0IDE3LjM3MDIzNjEsMTQuMzg4MDgyNSAxOS40MzAwMjMxLDE4LjMyMzUxIEwyMC4yMTcxMjc4LDE5LjgxNjkwOTcgQzIwLjI4OTc3MDYsMTkuOTU1MzYwOCAyMC40NTAzOTM5LDIwLjAyNzEzMiAyMC42MDU0NTUyLDE5Ljk5MDUwNzMgQzIwLjc2MDUxNjUsMTkuOTU0MDQ2OSAyMC44Njk1NjUyLDE5LjgxODcxNjMgMjAuODY5NTY1MiwxOS42NjMxODQ2IEwyMC44Njk1NjUyLDE1LjYyNjkxNjEgQzIwLjg2MTQ3NDksOC43NTY5MTYzNCAxNS4xNDgxNDAzLDMuMTg5NjM4MDIgOC4wOTc5MDc2NiwzLjE4MTc1NDY5IFogTTIwLjE3OTIwNTIsMTguMjcyMTA0MSBMMjAuMDQ0MjAwNywxOC4wMTYzODg0IEMxNy44NjY3NjkzLDEzLjg1NTk1NzIgMTMuNDczOTgzOSwxMS4yNDE4MDk4IDguNjgxMjQxNTEsMTEuMjU0MjkxOCBMNy43NTI3Mjc3MywxMS4yNTQyOTE4IEM3LjU2MjEwMzQ2LDExLjI1NDI5MTggNy40MDc1NDc4MSwxMS40MDQ4OTY0IDcuNDA3NTQ3ODEsMTEuNTkwNjQ3NSBMNy40MDc1NDc4MSwxMy45NjA3Mzk5IEwwLjgzMzExNzM4Nyw3LjU1NDM3ODk2IEw3LjQwNzU0NzgxLDEuMTQ4MTgyMjMgTDcuNDA3NTQ3ODEsMy41MTgxMTA0IEM3LjQwNzU0NzgxLDMuNzA0MDI1NzYgNy41NjIxMDM0NiwzLjg1NDQ2NjExIDcuNzUyNzI3NzMsMy44NTQ0NjYxMSBMOC4wOTc5MDc2NiwzLjg1NDQ2NjExIEMxNC43NjcwNjAzLDMuODYyMDIwOTYgMjAuMTcxNDUyMSw5LjEyODI1NDM1IDIwLjE3OTIwNTIsMTUuNjI2OTE2MSBMMjAuMTc5MjA1MiwxOC4yNzIxMDQxIFoiIGlkPSJTaGFwZSIgZmlsbD0iIzAwMDAwMCIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cG9seWxpbmUgaWQ9IlBhdGgtMiIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjAuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBwb2ludHM9IjMuMiA3LjI0OTIwNjU0IDUuMTAyNTU3MTIgNS40MjA4ODk0MiA2LjA2MDgzOTg0IDQuNSI+PC9wb2x5bGluZT4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBkPSJNMjguOTA3ODM2OSwyNS42NjYxMzc3IEMzMS45NTA4ODcsMjYuMDY3OTExOCAzNC40MDE0ODkzLDI3LjY1NDA5MzQgMzYuMjU5NjQzNiwzMC40MjQ2ODI2IiBpZD0iUGF0aC0zIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMC43IiBzdHJva2UtbGluZWNhcD0icm91bmQiPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+);
-}
-
-/* line 285, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 280, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail {
   margin-left: 0.625rem;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 285, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 280, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail {
     margin-left: 0.625rem;
@@ -23950,7 +23942,7 @@ body.isApple .product-filter {
   }
 }
 
-/* line 296, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 291, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item {
   width: 70px;
@@ -23963,49 +23955,49 @@ body.isApple .product-filter {
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 296, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 291, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item {
     margin: 0.625rem 0.3125rem;
   }
 }
 
-/* line 309, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 304, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:first-child {
   margin-top: 0;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 309, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 304, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item:first-child {
     margin-top: 0.625rem;
   }
 }
 
-/* line 317, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 312, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item:last-child {
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 1152px) {
-  /* line 317, resources/assets/styles/skhoop/sections/_selected-product.scss */
+  /* line 312, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
   .selected-product-thumbnail .item:last-child {
     margin-bottom: 0.625rem;
   }
 }
 
-/* line 325, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 320, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item.is-selected,
 .selected-product-thumbnail .item:hover {
   opacity: 0.6;
 }
 
-/* line 330, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 325, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail .item figure {
   position: relative;
@@ -24064,7 +24056,7 @@ body.isApple .product-filter {
   min-width: 200%;
 }
 
-/* line 336, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 331, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen {
   position: fixed;
@@ -24087,32 +24079,32 @@ body.isApple .product-filter {
           align-items: center;
 }
 
-/* line 349, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 344, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item {
   margin: 0.3125rem;
 }
 
-/* line 352, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 347, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:first-child {
   margin-top: 0.3125rem;
 }
 
-/* line 356, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 351, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product-thumbnail.is-fullscreen .item:last-child {
   margin-bottom: 0.3125rem;
 }
 
-/* line 364, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 359, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .selected-product .custom-control .custom-control-label > span {
   margin-top: 0;
   margin-left: 0;
 }
 
-/* line 371, resources/assets/styles/skhoop/sections/_selected-product.scss */
+/* line 366, resources/assets/styles/skhoop/sections/_selected-product.scss */
 
 .js-plus-item-btn {
   cursor: pointer;
