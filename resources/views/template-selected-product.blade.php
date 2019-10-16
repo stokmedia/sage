@@ -62,19 +62,6 @@
           NOTE: Static looping
         -->
           <div class="selectors">
-            <ul class="size-selector d-lg-inline-block d-flex  flex-wrap justify-content-center align-items-center w-100">
-              @foreach (['XS', 'S', 'M', 'L', 'XL'] as $size)
-                <li class="mx-2">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" id="sizeCheck[{{ $size }}]" class="custom-control-input" {{ $size == 'L' ? 'disabled="disabled"' : '' }}>
-                      <label class="custom-control-label" for="sizeCheck[{{ $size }}]">
-                          <span>{{ $size }}</span>
-                      </label>
-                    </div>
-                </li>
-              @endforeach
-            </ul>
-
             <ul class="color-selector js-plus-item d-lg-inline-block d-flex flex-wrap justify-content-center align-items-center w-100">
               @for ($color = 0; $color < 10; $color++)
                 <li class="mx-2 item d-none is-active">
@@ -90,9 +77,21 @@
                   </div>
                 </li>
             </ul>
+            <ul class="size-selector d-lg-inline-block d-flex  flex-wrap justify-content-center align-items-center w-100">
+              @foreach (['XS', 'S', 'M', 'L', 'XL'] as $size)
+                <li class="mx-2">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" id="sizeCheck[{{ $size }}]" class="custom-control-input" {{ $size == 'L' ? 'disabled="disabled"' : '' }}>
+                      <label class="custom-control-label" for="sizeCheck[{{ $size }}]">
+                          <span>{{ $size }}</span>
+                      </label>
+                    </div>
+                </li>
+              @endforeach
+            </ul>
           </div>
 
-          <button type="button" class="btn btn-lg btn-primary text-uppercase is-loading">
+          <button type="button" class="btn btn-lg btn-tersiary text-uppercase is-loading">
             Lägg i kundkorg
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <!-- Loading spinner, just add '.is-loading' class to '.btn' -->
           </button>

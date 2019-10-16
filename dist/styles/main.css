@@ -32,6 +32,7 @@
   --danger: #dab4b4;
   --light: #f8f9fa;
   --dark: #343a40;
+  --tersiary: #E99191;
   --ash: #f1f1f1;
   --lightgreen: #dbe4e7;
   --red: #d45656;
@@ -3152,6 +3153,36 @@ mark,
 
 /* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
 
+.table-tersiary,
+.table-tersiary > th,
+.table-tersiary > td {
+  background-color: #f9e0e0;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-tersiary th,
+.table-tersiary td,
+.table-tersiary thead th,
+.table-tersiary tbody + tbody {
+  border-color: #f4c6c6;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.table-hover .table-tersiary:hover {
+  background-color: #f5cbcb;
+}
+
+/* line 32, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
+.table-hover .table-tersiary:hover > td,
+.table-hover .table-tersiary:hover > th {
+  background-color: #f5cbcb;
+}
+
+/* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
+
 .table-ash,
 .table-ash > th,
 .table-ash > td {
@@ -4910,6 +4941,58 @@ fieldset:disabled .search-form a.search-submit,
 
 /* line 60, node_modules/bootstrap/scss/_buttons.scss */
 
+.btn-tersiary {
+  color: #212529;
+  background-color: #E99191;
+  border-color: #E99191;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-tersiary:hover {
+  color: #fff;
+  background-color: #e37171;
+  border-color: #e16767;
+}
+
+/* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-tersiary:focus,
+.btn-tersiary.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(203, 129, 129, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(203, 129, 129, 0.5);
+}
+
+/* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-tersiary.disabled,
+.btn-tersiary:disabled {
+  color: #212529;
+  background-color: #E99191;
+  border-color: #E99191;
+}
+
+/* line 40, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-tersiary:not(:disabled):not(.disabled):active,
+.btn-tersiary:not(:disabled):not(.disabled).active,
+.show > .btn-tersiary.dropdown-toggle {
+  color: #fff;
+  background-color: #e16767;
+  border-color: #de5c5c;
+}
+
+/* line 50, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-tersiary:not(:disabled):not(.disabled):active:focus,
+.btn-tersiary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-tersiary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(203, 129, 129, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(203, 129, 129, 0.5);
+}
+
+/* line 60, node_modules/bootstrap/scss/_buttons.scss */
+
 .btn-ash {
   color: #212529;
   background-color: #f1f1f1;
@@ -5462,6 +5545,56 @@ fieldset:disabled .search-form a.search-submit,
 .show > .btn-outline-dark.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+/* line 66, node_modules/bootstrap/scss/_buttons.scss */
+
+.btn-outline-tersiary {
+  color: #E99191;
+  border-color: #E99191;
+}
+
+/* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.btn-outline-tersiary:hover {
+  color: #212529;
+  background-color: #E99191;
+  border-color: #E99191;
+}
+
+/* line 71, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-tersiary:focus,
+.btn-outline-tersiary.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(233, 145, 145, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(233, 145, 145, 0.5);
+}
+
+/* line 76, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-tersiary.disabled,
+.btn-outline-tersiary:disabled {
+  color: #E99191;
+  background-color: transparent;
+}
+
+/* line 82, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-tersiary:not(:disabled):not(.disabled):active,
+.btn-outline-tersiary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-tersiary.dropdown-toggle {
+  color: #212529;
+  background-color: #E99191;
+  border-color: #E99191;
+}
+
+/* line 89, node_modules/bootstrap/scss/mixins/_buttons.scss */
+
+.btn-outline-tersiary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-tersiary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-tersiary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(233, 145, 145, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(233, 145, 145, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -8692,6 +8825,26 @@ input[type="button"].btn-block {
 
 /* line 48, node_modules/bootstrap/scss/_alert.scss */
 
+.alert-tersiary {
+  color: #794b4b;
+  background-color: #e99191;
+  border-color: #f9e0e0;
+}
+
+/* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-tersiary hr {
+  border-top-color: #f5cbcb;
+}
+
+/* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
+
+.alert-tersiary .alert-link {
+  color: #5a3737;
+}
+
+/* line 48, node_modules/bootstrap/scss/_alert.scss */
+
 .alert-ash {
   color: #7d7d7d;
   background-color: #f1f1f1;
@@ -9250,6 +9403,29 @@ input[type="button"].btn-block {
   color: #fff;
   background-color: #1b1e21;
   border-color: #1b1e21;
+}
+
+/* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-tersiary {
+  color: #794b4b;
+  background-color: #f9e0e0;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+.list-group-item-tersiary.list-group-item-action:hover,
+.list-group-item-tersiary.list-group-item-action:focus {
+  color: #794b4b;
+  background-color: #f5cbcb;
+}
+
+/* line 14, node_modules/bootstrap/scss/mixins/_list-group.scss */
+
+.list-group-item-tersiary.list-group-item-action.active {
+  color: #fff;
+  background-color: #794b4b;
+  border-color: #794b4b;
 }
 
 /* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
@@ -9947,6 +10123,21 @@ button.bg-dark:focus {
 
 /* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
 
+.bg-tersiary {
+  background-color: #E99191 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.bg-tersiary:hover,
+a.bg-tersiary:focus,
+button.bg-tersiary:hover,
+button.bg-tersiary:focus {
+  background-color: #e16767 !important;
+}
+
+/* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
+
 .bg-ash {
   background-color: #f1f1f1 !important;
 }
@@ -10108,6 +10299,12 @@ button.bg-red:focus {
 
 .border-dark {
   border-color: #343a40 !important;
+}
+
+/* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
+
+.border-tersiary {
+  border-color: #E99191 !important;
 }
 
 /* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -16596,6 +16793,19 @@ a.text-dark:focus {
 
 /* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 
+.text-tersiary {
+  color: #E99191 !important;
+}
+
+/* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
+
+a.text-tersiary:hover,
+a.text-tersiary:focus {
+  color: #dc5151 !important;
+}
+
+/* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
+
 .text-ash {
   color: #f1f1f1 !important;
 }
@@ -17624,20 +17834,36 @@ blockquote footer::before,
   border-color: #7e7e7e;
 }
 
-/* line 74, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 60, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-tersiary {
+  color: #fff;
+  background-color: #E99191;
+  border-color: #E99191;
+}
+
+/* line 76, resources/assets/styles/skhoop/components/_buttons.scss */
+
+.btn-tersiary:hover {
+  color: #031532;
+  background-color: #fff;
+  border-color: #7e7e7e;
+}
+
+/* line 86, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary {
   border-color: #7e7e7e;
   color: #031532;
 }
 
-/* line 79, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 91, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-outline-primary:hover {
   color: #fff;
 }
 
-/* line 86, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 98, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon {
   min-width: auto;
@@ -17649,27 +17875,27 @@ blockquote footer::before,
           box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 94, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 106, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-sm {
   height: 1.875rem;
   width: 1.875rem;
 }
 
-/* line 99, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 111, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon-lg {
   height: 2.5rem;
   width: 2.5rem;
 }
 
-/* line 104, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 116, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > img {
   width: 100%;
 }
 
-/* line 108, resources/assets/styles/skhoop/components/_buttons.scss */
+/* line 120, resources/assets/styles/skhoop/components/_buttons.scss */
 
 .btn-icon > svg {
   width: 100%;

@@ -19,21 +19,6 @@
     @php ($product_class->renderStartPurchaseForm())
 
         <div class="selectors">
-            {{-- Selector: Sizes --}}
-            <ul class="size-selector d-lg-inline-block d-flex  flex-wrap justify-content-center align-items-center w-100">
-                @php ( $product_class->renderSizesLoop( '
-                    <li class="mx-2">
-                        <div class="custom-control custom-checkbox">
-                            <input type="radio" id="size-check-{value}" class="custom-control-input" name="{selector}" value="{value}" {disabled} {selected}>
-                            <label class="custom-control-label" for="size-check-{value}">
-                                <span>{name}</span>
-                            </label>
-                        </div>
-                    </li>'
-                    )
-                )
-            </ul>
-
             {{-- Selector: Color --}}
             @if (!empty($product->colors))
                 <ul class="color-selector js-plus-item d-lg-inline-block d-flex flex-wrap justify-content-center align-items-center w-100">
@@ -60,10 +45,25 @@
                     @endif
                 </ul>
             @endif
+
+            {{-- Selector: Sizes --}}
+            <ul class="size-selector d-lg-inline-block d-flex  flex-wrap justify-content-center align-items-center w-100">
+                @php ( $product_class->renderSizesLoop( '
+                    <li class="mx-2">
+                        <div class="custom-control custom-checkbox">
+                            <input type="radio" id="size-check-{value}" class="custom-control-input" name="{selector}" value="{value}" {disabled} {selected}>
+                            <label class="custom-control-label" for="size-check-{value}">
+                                <span>{name}</span>
+                            </label>
+                        </div>
+                    </li>'
+                    )
+                )
+            </ul>
         </div>
 
         @if (!empty($addtocart_button->text))
-            <button type="submit" class="btn btn-lg btn-primary text-uppercase" {!! $addtocart_button->attr ?? null !!}>
+            <button type="submit" class="btn btn-lg btn-tersiary text-uppercase" {!! $addtocart_button->attr ?? null !!}>
                 <span class="js-button-text">{!! $addtocart_button->text ?? null !!}</span>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <!-- Loading spinner, just add '.is-loading' class to '.btn' -->
             </button>

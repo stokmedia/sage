@@ -24,11 +24,11 @@
 
     <div class="cart-wrapper d-none d-lg-block">
         <div class="cart-title h3 text-center"><?php echo $cartTitle; ?></div>
-        
-        <?php if ($selection['total_items'] > 0) : ?> 
+
+        <?php if ($selection['total_items'] > 0) : ?>
             <div class="cart-list">
                 <ul class="cart-items p-0">
-                    
+
                     <?php foreach ($selection['items'] as $item) :
                         // Get recently added item in the cart
                         if ( !empty($_REQUEST) && $item['item'] == $_REQUEST['esc_product_item'] && $item['post_id'] == $_REQUEST['esc_post'] ) {
@@ -46,7 +46,7 @@
             </div>
             <div class="cart-summary">
                 <div class="summary">
-                    <?php 
+                    <?php
                     $rowClass = 'd-flex';
                     $labelClass = 'w-50';
                     $valueClass = 'w-50 text-right';
@@ -81,7 +81,7 @@
             <div class="cart-list">
                 <ul class="cart-items p-0">
                     <li class="item">
-                        <?php 
+                        <?php
                         $has_qty = $has_remove = false;
                         include( locate_template( 'parts/shop/selection-item.php' ) );
                         ?>
@@ -93,16 +93,16 @@
         <div class="cart-buttons">
             <?php if ( $goToCheckout && $checkoutPage ) :?>
                 <a href="<?php echo get_permalink($checkoutPage) ?>">
-                    <button class="btn btn-lg btn-primary" type="button">
+                    <button class="btn btn-lg btn-tersiary" type="button">
                         <?php echo $goToCheckout ?>
                     </button>
                 </a>
             <?php endif ?>
-            
+
             <?php if ($shopLink) :?>
                 <a href="<?php echo $shopLink['url'] ? $shopLink['url'] : '' ?>" target="<?php echo $shopLink['target'] ? $shopLink['target'] : '' ?>">
                     <button class="btn btn-lg btn-outline-primary" type="button"><?php echo $shopLink['title'] ? $shopLink['title'] : '' ?></button>
                 </a>
             <?php endif ?>
         </div>
-    </div>    
+    </div>
