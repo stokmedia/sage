@@ -58,7 +58,7 @@
             <div class="cart-buttons">
                 <?php if ( $goToCheckout && $checkoutPage ) :?>
                     <a href="<?php echo get_permalink($checkoutPage) ?>">
-                        <button class="btn btn-lg btn-primary" type="button">
+                        <button class="btn btn-lg btn-tersiary" type="button">
                             <?php echo $goToCheckout ?>
                         </button>
                     </a>
