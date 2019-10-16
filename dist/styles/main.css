@@ -32,7 +32,7 @@
   --danger: #dab4b4;
   --light: #f8f9fa;
   --dark: #343a40;
-  --tersiary: #E99191;
+  --tersiary: #dab3b4;
   --ash: #f1f1f1;
   --lightgreen: #dbe4e7;
   --red: #d45656;
@@ -3156,7 +3156,7 @@ mark,
 .table-tersiary,
 .table-tersiary > th,
 .table-tersiary > td {
-  background-color: #f9e0e0;
+  background-color: #f5eaea;
 }
 
 /* line 14, node_modules/bootstrap/scss/mixins/_table-row.scss */
@@ -3165,20 +3165,20 @@ mark,
 .table-tersiary td,
 .table-tersiary thead th,
 .table-tersiary tbody + tbody {
-  border-color: #f4c6c6;
+  border-color: #ecd7d8;
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
 
 .table-hover .table-tersiary:hover {
-  background-color: #f5cbcb;
+  background-color: #edd9d9;
 }
 
 /* line 32, node_modules/bootstrap/scss/mixins/_table-row.scss */
 
 .table-hover .table-tersiary:hover > td,
 .table-hover .table-tersiary:hover > th {
-  background-color: #f5cbcb;
+  background-color: #edd9d9;
 }
 
 /* line 7, node_modules/bootstrap/scss/mixins/_table-row.scss */
@@ -4943,24 +4943,24 @@ fieldset:disabled .search-form a.search-submit,
 
 .btn-tersiary {
   color: #212529;
-  background-color: #E99191;
-  border-color: #E99191;
+  background-color: #dab3b4;
+  border-color: #dab3b4;
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
 
 .btn-tersiary:hover {
-  color: #fff;
-  background-color: #e37171;
-  border-color: #e16767;
+  color: #212529;
+  background-color: #cd999b;
+  border-color: #c99192;
 }
 
 /* line 18, node_modules/bootstrap/scss/mixins/_buttons.scss */
 
 .btn-tersiary:focus,
 .btn-tersiary.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(203, 129, 129, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(203, 129, 129, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(190, 158, 159, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(190, 158, 159, 0.5);
 }
 
 /* line 29, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -4968,8 +4968,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-tersiary.disabled,
 .btn-tersiary:disabled {
   color: #212529;
-  background-color: #E99191;
-  border-color: #E99191;
+  background-color: #dab3b4;
+  border-color: #dab3b4;
 }
 
 /* line 40, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -4977,9 +4977,9 @@ fieldset:disabled .search-form a.search-submit,
 .btn-tersiary:not(:disabled):not(.disabled):active,
 .btn-tersiary:not(:disabled):not(.disabled).active,
 .show > .btn-tersiary.dropdown-toggle {
-  color: #fff;
-  background-color: #e16767;
-  border-color: #de5c5c;
+  color: #212529;
+  background-color: #c99192;
+  border-color: #c5888a;
 }
 
 /* line 50, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -4987,8 +4987,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-tersiary:not(:disabled):not(.disabled):active:focus,
 .btn-tersiary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-tersiary.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(203, 129, 129, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(203, 129, 129, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(190, 158, 159, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(190, 158, 159, 0.5);
 }
 
 /* line 60, node_modules/bootstrap/scss/_buttons.scss */
@@ -5550,31 +5550,31 @@ fieldset:disabled .search-form a.search-submit,
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
 
 .btn-outline-tersiary {
-  color: #E99191;
-  border-color: #E99191;
+  color: #dab3b4;
+  border-color: #dab3b4;
 }
 
 /* line 13, node_modules/bootstrap/scss/mixins/_hover.scss */
 
 .btn-outline-tersiary:hover {
   color: #212529;
-  background-color: #E99191;
-  border-color: #E99191;
+  background-color: #dab3b4;
+  border-color: #dab3b4;
 }
 
 /* line 71, node_modules/bootstrap/scss/mixins/_buttons.scss */
 
 .btn-outline-tersiary:focus,
 .btn-outline-tersiary.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(233, 145, 145, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(233, 145, 145, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 179, 180, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(218, 179, 180, 0.5);
 }
 
 /* line 76, node_modules/bootstrap/scss/mixins/_buttons.scss */
 
 .btn-outline-tersiary.disabled,
 .btn-outline-tersiary:disabled {
-  color: #E99191;
+  color: #dab3b4;
   background-color: transparent;
 }
 
@@ -5584,8 +5584,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-tersiary:not(:disabled):not(.disabled).active,
 .show > .btn-outline-tersiary.dropdown-toggle {
   color: #212529;
-  background-color: #E99191;
-  border-color: #E99191;
+  background-color: #dab3b4;
+  border-color: #dab3b4;
 }
 
 /* line 89, node_modules/bootstrap/scss/mixins/_buttons.scss */
@@ -5593,8 +5593,8 @@ fieldset:disabled .search-form a.search-submit,
 .btn-outline-tersiary:not(:disabled):not(.disabled):active:focus,
 .btn-outline-tersiary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-tersiary.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(233, 145, 145, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(233, 145, 145, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(218, 179, 180, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(218, 179, 180, 0.5);
 }
 
 /* line 66, node_modules/bootstrap/scss/_buttons.scss */
@@ -8826,21 +8826,21 @@ input[type="button"].btn-block {
 /* line 48, node_modules/bootstrap/scss/_alert.scss */
 
 .alert-tersiary {
-  color: #794b4b;
-  background-color: #e99191;
-  border-color: #f9e0e0;
+  color: #715d5e;
+  background-color: #dab3b4;
+  border-color: #f5eaea;
 }
 
 /* line 6, node_modules/bootstrap/scss/mixins/_alert.scss */
 
 .alert-tersiary hr {
-  border-top-color: #f5cbcb;
+  border-top-color: #edd9d9;
 }
 
 /* line 10, node_modules/bootstrap/scss/mixins/_alert.scss */
 
 .alert-tersiary .alert-link {
-  color: #5a3737;
+  color: #554647;
 }
 
 /* line 48, node_modules/bootstrap/scss/_alert.scss */
@@ -9408,24 +9408,24 @@ input[type="button"].btn-block {
 /* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
 
 .list-group-item-tersiary {
-  color: #794b4b;
-  background-color: #f9e0e0;
+  color: #715d5e;
+  background-color: #f5eaea;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 
 .list-group-item-tersiary.list-group-item-action:hover,
 .list-group-item-tersiary.list-group-item-action:focus {
-  color: #794b4b;
-  background-color: #f5cbcb;
+  color: #715d5e;
+  background-color: #edd9d9;
 }
 
 /* line 14, node_modules/bootstrap/scss/mixins/_list-group.scss */
 
 .list-group-item-tersiary.list-group-item-action.active {
   color: #fff;
-  background-color: #794b4b;
-  border-color: #794b4b;
+  background-color: #715d5e;
+  border-color: #715d5e;
 }
 
 /* line 4, node_modules/bootstrap/scss/mixins/_list-group.scss */
@@ -10124,7 +10124,7 @@ button.bg-dark:focus {
 /* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
 
 .bg-tersiary {
-  background-color: #E99191 !important;
+  background-color: #dab3b4 !important;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
@@ -10133,7 +10133,7 @@ a.bg-tersiary:hover,
 a.bg-tersiary:focus,
 button.bg-tersiary:hover,
 button.bg-tersiary:focus {
-  background-color: #e16767 !important;
+  background-color: #c99192 !important;
 }
 
 /* line 6, node_modules/bootstrap/scss/mixins/_background-variant.scss */
@@ -10304,7 +10304,7 @@ button.bg-red:focus {
 /* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
 
 .border-tersiary {
-  border-color: #E99191 !important;
+  border-color: #dab3b4 !important;
 }
 
 /* line 20, node_modules/bootstrap/scss/utilities/_borders.scss */
@@ -16794,14 +16794,14 @@ a.text-dark:focus {
 /* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
 
 .text-tersiary {
-  color: #E99191 !important;
+  color: #dab3b4 !important;
 }
 
 /* line 17, node_modules/bootstrap/scss/mixins/_hover.scss */
 
 a.text-tersiary:hover,
 a.text-tersiary:focus {
-  color: #dc5151 !important;
+  color: #c18081 !important;
 }
 
 /* line 6, node_modules/bootstrap/scss/mixins/_text-emphasis.scss */
@@ -17838,8 +17838,8 @@ blockquote footer::before,
 
 .btn-tersiary {
   color: #fff;
-  background-color: #E99191;
-  border-color: #E99191;
+  background-color: #dab3b4;
+  border-color: #dab3b4;
 }
 
 /* line 76, resources/assets/styles/skhoop/components/_buttons.scss */
