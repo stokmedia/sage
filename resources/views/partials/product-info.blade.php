@@ -29,7 +29,7 @@
                             @php ($is_active = $color->product === $product->product_meta->product)
                             <li class="mx-2 item d-none {{ $is_active ? 'is-active' : '' }}">
                                 <a {{ !$is_active ? 'href='. $color->product_uri : '' }} class="custom-control custom-checkbox" title="{{ $color->swatch->desc ?? '' }}">
-                                    <input id="color-check[{{ $loop->iteration }}]" class="custom-control-input">
+                                    {{-- <input id="color-check[{{ $loop->iteration }}]" class="custom-control-input"> --}}
                                     <label class="custom-control-label" for="color-check[{{ $loop->iteration }}]" style="{{ $color->swatch->background ?? '' }}"></label>
                                 </a>
                             </li>
