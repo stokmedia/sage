@@ -37,6 +37,7 @@ require('./components/alert');
 require('./components/category');
 require('./components/product-selected');
 require('./components/cart');
+require('./components/search');
 require('./components/checkout');
 require('./components/scroll');
 

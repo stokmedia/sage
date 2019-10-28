@@ -10,14 +10,30 @@
             </a>
 
             <button class="navbar-toggler order-0 js-nav-toggle" type="button" data-toggle="collapse"
-                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="{{ $site_translate->general['toggle_navigation'] ?: 'Toggle navigation' }}">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarNav">
+            <div class="collapse navbar-collapse dont-collapse-lg order-3 order-lg-1" id="navbarNav">
+                {{--
+                    NOTE:
+                    If you want to display search by default add class .show to div.js-search-form
+                --}}
+                <div class="search js-search-form">
+                    <button class="btn btn-icon btn-icon-sm btn-primary-outline d-none d-lg-block search-close js-search-close" type="button">
+                        <img src="@asset('images/icon/close.svg')" alt="" srcset="">
+                    </button>
+                    <form action="" method="get" class="m-0">
+                        <input id="js-search-input" type="search" name="s" class="search-input" placeholder="Search...">
+                        <button type="submit" class="search-submit border-0">
+                            <img src="@asset('images/icon/search.svg')" alt="" srcset="">
+                        </button>
+                    </form>
+                </div>
+
                 @if($desktop_menu)
                     <ul class="navbar-nav m-auto">
                         @foreach($desktop_menu as $menuItem)
@@ -35,7 +51,7 @@
                         @if($mobile_menu)
                             @foreach($mobile_menu as $menuItem)
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" 
+                                    <a class="nav-link dropdown-toggle"
                                         href="{{ $menuItem->url  }}"
                                         target="{{ $menuItem->target }}"
                                         role="button">{!! $menuItem->title !!}</a>
@@ -60,7 +76,7 @@
                                 </li>
                             @endforeach
                         @endif
-                        
+
                         {{-- Checkout button --}}
                         @if (!empty($checkout_link_array->title) && !empty($checkout_link_array->url))
                             <li class="nav-item">
@@ -97,7 +113,7 @@
                     </div>
                 </div>
             </div>
-            
+
             @include( 'partials.cart' )
         </div>
 
@@ -110,7 +126,7 @@
                     <a href="{{ $checkout_header->shop_link['url'] }}" class="navbar-back" target="{{ $checkout_header->shop_link['target'] }}">{!! $checkout_header->shop_link['title'] !!}</a>
                 @endif
             </div>
-            
+
 
             @if (!empty($checkout_header->title))
                 <h1 class="navbar-checkout h1 m-auto">{!! $checkout_header->title !!}</h1>

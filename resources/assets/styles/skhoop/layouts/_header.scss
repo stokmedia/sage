@@ -188,6 +188,19 @@ $mobile-margin-top-menu: 3.75rem;
       }
     }
 
+    &-search {
+      .nav-link {
+        @include media-breakpoint-up(lg) {
+          padding: 0 1.5625rem !important;
+        }
+
+        img {
+          width: 28px;
+          height: auto;
+        }
+      }
+    }
+
     .nav-link {
       padding: 0.75rem 0.625rem;
       color: $body-color;
@@ -269,6 +282,16 @@ $mobile-margin-top-menu: 3.75rem;
   @include media-breakpoint-up(lg) {
     margin-top: 0 !important;
   }
+
+  &.dont-collapse-lg {
+    @include media-breakpoint-up(lg) {
+        display: block;
+        height: auto !important;
+        visibility: visible;
+        position: initial;
+    }
+  }
+
 
   .navbar-nav-touch {
     padding-bottom: 1.875rem;

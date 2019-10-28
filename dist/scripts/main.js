@@ -2123,7 +2123,7 @@ module.exports = Alert;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-module.exports = __webpack_require__(55);
+module.exports = __webpack_require__(56);
 
 
 /***/ }),
@@ -2183,6 +2183,7 @@ __webpack_require__(51);
 __webpack_require__(52);
 __webpack_require__(53);
 __webpack_require__(54);
+__webpack_require__(55);
 
 /** Populate Router instance with DOM routes */
 var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
@@ -18346,6 +18347,40 @@ var Cart = {};
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/* WEBPACK VAR INJECTION */(function($) {var Search = {};
+
+Search.init = function() {
+  var searchOpen = $('.js-search-open');
+  var searchClose = $('.js-search-close');
+  var searchForm = $('.js-search-form');
+
+  searchOpen.on( 'click', function() {
+    searchForm.addClass('show');
+    $('body').addClass('search-active');
+
+    var targetEl = $( $(this).data('focus') );
+
+    if (targetEl) {
+      setTimeout(function() {
+        targetEl.focus();
+      }, 100);
+    }
+  });
+
+  searchClose.click(function() {
+    searchForm.removeClass('show');
+    $('body').removeClass('search-active');
+  });
+}
+
+Search.init();
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* WEBPACK VAR INJECTION */(function(jQuery) {(function($) {
     var Checkout = {};
 
@@ -18697,7 +18732,7 @@ var Cart = {};
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {( function ( $ ) {
@@ -18767,7 +18802,7 @@ var Cart = {};
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
