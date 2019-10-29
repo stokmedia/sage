@@ -1,4 +1,8 @@
-var hashQueryString = window.location.hash;
+var hashQueryString = window.location.hash,
+	loadMore = $( '.silk-loadmore' ),
+	language = loadMore.data( 'language' ),
+	search = loadMore.data( 'search' );
+
 if (hashQueryString != '') {
 	$('.silk-product-item-holder').html('');
 	silkProductLoad(1);
@@ -107,6 +111,14 @@ function silkProductLoad(nextPage) {
 		ajaxUrl = ajaxUrl + hashQueryString + '&termid=' + currentTermId;
 	} else {
 		ajaxUrl = ajaxUrl + '&category=' + currentCategory + '&termid=' + currentTermId;
+	}
+
+    if (search) {
+        ajaxUrl += '&search=' + encodeURIComponent( search );
+	}
+	
+    if (language) {
+        ajaxUrl += '&lang=' + language;
 	}
 
 	console.log(ajaxUrl + '&page=' + nextPage);

@@ -122,7 +122,7 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
 add_filter( 'pre_get_posts', function ( $query ) {
 
     // End process if wp admin
-    if( is_admin() ) { return; }
+    if( !is_search() && is_admin() ) { return; }
 
     $taxonomy = 'silk_category';
     if ( isset( $query->query[ $taxonomy ] ) && $query->is_main_query() ) {
@@ -159,6 +159,10 @@ add_filter( 'pre_get_posts', function ( $query ) {
             }
         }
     }
+
+	if( is_search() ) {
+		$query->set( 'post_type', array( 'silk_products' ) );
+	}
 });
 
 /**
