@@ -19132,7 +19132,15 @@ blockquote footer::before,
   }
 }
 
-/* line 18, resources/assets/styles/skhoop/components/_search.scss */
+@media (min-width: 992px) {
+  /* line 15, resources/assets/styles/skhoop/components/_search.scss */
+
+  .search-active .navbar .navbar-main {
+    visibility: hidden;
+  }
+}
+
+/* line 24, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search {
   position: relative;
@@ -19141,34 +19149,34 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 18, resources/assets/styles/skhoop/components/_search.scss */
+  /* line 24, resources/assets/styles/skhoop/components/_search.scss */
 
   .navbar .search {
     padding: 0;
     position: absolute;
     top: 0;
-    right: 80px;
+    right: 83px;
     z-index: 1;
     display: none;
-    width: calc(100% - 296px);
+    width: calc(50% - 148px);
   }
 }
 
-/* line 33, resources/assets/styles/skhoop/components/_search.scss */
+/* line 39, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search.show {
   display: block;
 }
 
 @media (max-width: 991.98px) {
-  /* line 37, resources/assets/styles/skhoop/components/_search.scss */
+  /* line 43, resources/assets/styles/skhoop/components/_search.scss */
 
   .navbar .search form {
     position: relative;
   }
 }
 
-/* line 43, resources/assets/styles/skhoop/components/_search.scss */
+/* line 49, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-close {
   position: absolute;
@@ -19186,7 +19194,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 51, resources/assets/styles/skhoop/components/_search.scss */
+  /* line 57, resources/assets/styles/skhoop/components/_search.scss */
 
   .navbar .search-close:hover {
     background-color: transparent;
@@ -19195,7 +19203,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 58, resources/assets/styles/skhoop/components/_search.scss */
+  /* line 64, resources/assets/styles/skhoop/components/_search.scss */
 
   .navbar .search-close img {
     width: 16px;
@@ -19203,7 +19211,7 @@ blockquote footer::before,
   }
 }
 
-/* line 66, resources/assets/styles/skhoop/components/_search.scss */
+/* line 72, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-input {
   width: 100%;
@@ -19220,7 +19228,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 66, resources/assets/styles/skhoop/components/_search.scss */
+  /* line 72, resources/assets/styles/skhoop/components/_search.scss */
 
   .navbar .search-input {
     height: 80px;
@@ -19232,13 +19240,13 @@ blockquote footer::before,
   }
 }
 
-/* line 88, resources/assets/styles/skhoop/components/_search.scss */
+/* line 94, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-input:focus {
   outline: none;
 }
 
-/* line 92, resources/assets/styles/skhoop/components/_search.scss */
+/* line 98, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-input::-webkit-input-placeholder {
   /* Edge */
@@ -19246,7 +19254,7 @@ blockquote footer::before,
   color: #031532;
 }
 
-/* line 97, resources/assets/styles/skhoop/components/_search.scss */
+/* line 103, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
@@ -19254,7 +19262,7 @@ blockquote footer::before,
   color: #031532;
 }
 
-/* line 102, resources/assets/styles/skhoop/components/_search.scss */
+/* line 108, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-input::-webkit-input-placeholder {
   text-transform: uppercase;
@@ -19271,7 +19279,7 @@ blockquote footer::before,
   color: #031532;
 }
 
-/* line 107, resources/assets/styles/skhoop/components/_search.scss */
+/* line 113, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-input::-ms-clear {
   display: none;
@@ -19279,7 +19287,7 @@ blockquote footer::before,
   height: 0;
 }
 
-/* line 113, resources/assets/styles/skhoop/components/_search.scss */
+/* line 119, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-input::-ms-reveal {
   display: none;
@@ -19287,7 +19295,7 @@ blockquote footer::before,
   height: 0;
 }
 
-/* line 119, resources/assets/styles/skhoop/components/_search.scss */
+/* line 125, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-input::-webkit-search-decoration,
 .navbar .search-input::-webkit-search-cancel-button,
@@ -19296,11 +19304,11 @@ blockquote footer::before,
   display: none;
 }
 
-/* line 127, resources/assets/styles/skhoop/components/_search.scss */
+/* line 133, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-submit {
   position: absolute;
-  top: -1px;
+  top: 0;
   right: 0;
   z-index: 1;
   width: 52px;
@@ -19309,28 +19317,28 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 127, resources/assets/styles/skhoop/components/_search.scss */
+  /* line 133, resources/assets/styles/skhoop/components/_search.scss */
 
   .navbar .search-submit {
-    width: 85px;
+    width: 78px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 140, resources/assets/styles/skhoop/components/_search.scss */
+  /* line 146, resources/assets/styles/skhoop/components/_search.scss */
 
   .navbar .search-submit:hover {
     background-color: #dbe4e7;
   }
 }
 
-/* line 146, resources/assets/styles/skhoop/components/_search.scss */
+/* line 152, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-submit:focus {
   outline: none;
 }
 
-/* line 150, resources/assets/styles/skhoop/components/_search.scss */
+/* line 156, resources/assets/styles/skhoop/components/_search.scss */
 
 .navbar .search-submit img {
   width: 16px;
@@ -19338,7 +19346,7 @@ blockquote footer::before,
 }
 
 @media (min-width: 992px) {
-  /* line 150, resources/assets/styles/skhoop/components/_search.scss */
+  /* line 156, resources/assets/styles/skhoop/components/_search.scss */
 
   .navbar .search-submit img {
     position: relative;
@@ -24168,7 +24176,7 @@ body.isApple .product-filter {
 
 .selected-product-slider .flickity-prev-next-button.previous {
   left: 0;
-  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xOC41NTI0IDI1LjgxOTVDMTguNzg0IDI2LjA2MDIgMTkuMTY5NSAyNi4wNjAyIDE5LjQwOTEgMjUuODE5NUMxOS42NDA3IDI1LjU4NyAxOS42NDA3IDI1LjIwMDEgMTkuNDA5MSAyNC45NjgxTDE1LjA2NDkgMjAuNjA3SDI5LjQwMDJDMjkuNzM0NCAyMC42MDY0IDMwIDIwLjMzOTggMzAgMjAuMDA0M0MzMCAxOS42Njg5IDI5LjczNDQgMTkuMzkzNiAyOS40MDAyIDE5LjM5MzZIMTUuMDY0OUwxOS40MDkxIDE1LjA0MDZDMTkuNjQwNyAxNC43OTk5IDE5LjY0MDcgMTQuNDEyNCAxOS40MDkxIDE0LjE4MDVDMTkuMTY5NSAxMy45Mzk4IDE4Ljc4MzUgMTMuOTM5OCAxOC41NTI0IDE0LjE4MDVMMTMuMTc5OCAxOS41NzRDMTIuOTQwMSAxOS44MDY1IDEyLjk0MDEgMjAuMTkzNSAxMy4xNzk4IDIwLjQyNTRMMTguNTUyNCAyNS44MTk1WiIgZmlsbD0iIzFFMjAxRCIvPg0KPC9zdmc+DQo=) no-repeat center/contain white;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4LjU1MjQgMjUuODE5NUMxOC43ODQgMjYuMDYwMiAxOS4xNjk1IDI2LjA2MDIgMTkuNDA5MSAyNS44MTk1QzE5LjY0MDcgMjUuNTg3IDE5LjY0MDcgMjUuMjAwMSAxOS40MDkxIDI0Ljk2ODFMMTUuMDY0OSAyMC42MDdIMjkuNDAwMkMyOS43MzQ0IDIwLjYwNjQgMzAgMjAuMzM5OCAzMCAyMC4wMDQzQzMwIDE5LjY2ODkgMjkuNzM0NCAxOS4zOTM2IDI5LjQwMDIgMTkuMzkzNkgxNS4wNjQ5TDE5LjQwOTEgMTUuMDQwNkMxOS42NDA3IDE0Ljc5OTkgMTkuNjQwNyAxNC40MTI0IDE5LjQwOTEgMTQuMTgwNUMxOS4xNjk1IDEzLjkzOTggMTguNzgzNSAxMy45Mzk4IDE4LjU1MjQgMTQuMTgwNUwxMy4xNzk4IDE5LjU3NEMxMi45NDAxIDE5LjgwNjUgMTIuOTQwMSAyMC4xOTM1IDEzLjE3OTggMjAuNDI1NEwxOC41NTI0IDI1LjgxOTVaIiBmaWxsPSIjMUUyMDFEIi8+Cjwvc3ZnPgo=) no-repeat center/contain white;
 }
 
 /* line 97, resources/assets/styles/skhoop/sections/_selected-product.scss */

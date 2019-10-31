@@ -35,7 +35,7 @@
                 </div>
 
                 @if($desktop_menu)
-                    <ul class="navbar-nav m-auto">
+                    <ul class="navbar-nav navbar-main m-auto">
                         @foreach($desktop_menu as $menuItem)
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ $menuItem->url  }}" target="{{ $menuItem->target  }}">{!! $menuItem->title !!}</a>

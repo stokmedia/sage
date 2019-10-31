@@ -11,6 +11,12 @@ $search-inputplaceholder-color:        #292929;
         background-color: $search-active-bgColor;
       }
     }
+
+    .navbar-main {
+      @include media-breakpoint-up(lg) {
+        visibility: hidden;
+      }
+    }
   }
 }
 
@@ -24,10 +30,10 @@ $search-inputplaceholder-color:        #292929;
       padding: 0;
       position: absolute;
       top: 0;
-      right: 80px;
+      right: 83px;
       z-index: 1;
       display: none;
-      width: calc(100% - 296px);
+      width: calc(50% - 148px);
     }
 
     &.show {
@@ -126,7 +132,7 @@ $search-inputplaceholder-color:        #292929;
 
     &-submit {
       position: absolute;
-      top: -1px;
+      top: 0;
       right: 0;
       z-index: 1;
       width: 52px;
@@ -134,7 +140,7 @@ $search-inputplaceholder-color:        #292929;
       background-color: transparent;
 
       @include media-breakpoint-up(lg) {
-        width: 85px;
+        width: 78px;
       }
 
       &:hover {
