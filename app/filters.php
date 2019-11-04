@@ -120,7 +120,7 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
  * Order Centra Products for Category
  */
 add_filter( 'pre_get_posts', function ( $query ) {
-
+    // pr($query);die;
     // End process if wp admin
     if( !is_search() && is_admin() ) { return; }
 
@@ -160,7 +160,7 @@ add_filter( 'pre_get_posts', function ( $query ) {
         }
     }
 
-	if( is_search() ) {
+	if( is_search() && $query->is_main_query() ) {
 		$query->set( 'post_type', array( 'silk_products' ) );
 	}
 });

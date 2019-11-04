@@ -25,31 +25,34 @@
               @endforeach
             @endif
           </div>
-          <div class="product-filter-toggle col-lg-4 text-center text-lg-right">
-            <div class="h4 d-inline-block mb-0">
-              <div class="js-filter-toggle">
-                  <div class="filter-open js-filter-open text-capitalize">
-                      {!! $translation->filter_and_sort_title ?? '' !!}
-                      <button class="btn btn-lg btn-icon btn-default" type="button">
-                        <img class="lazy" data-src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
-                      </button>
-                  </div>
-                  <div class="filter-close">
-                      @if (!empty($translation->clear_button))
-                      <a class="btn-clear silk-hash-clear" href="#" role="button">{!! $translation->clear_button ?? '' !!}</a>
-                      @endif
 
-                      @if (!empty($translation->update_button))
-                      <button class="btn btn-primary text-uppercase js-filter-close" type="button">{!! $translation->update_button ?? '' !!}</button>
-                      @endif
+          @if (!empty($search_count))
+            <div class="product-filter-toggle col-lg-4 text-center text-lg-right">
+              <div class="h4 d-inline-block mb-0">
+                <div class="js-filter-toggle">
+                    <div class="filter-open js-filter-open text-capitalize">
+                        {!! $translation->filter_and_sort_title ?? '' !!}
+                        <button class="btn btn-lg btn-icon btn-default" type="button">
+                          <img class="lazy" data-src="@asset('images/icon/arrow-down.svg')" alt="" srcset="">
+                        </button>
+                    </div>
+                    <div class="filter-close">
+                        @if (!empty($translation->clear_button))
+                        <a class="btn-clear silk-hash-clear" href="#" role="button">{!! $translation->clear_button ?? '' !!}</a>
+                        @endif
 
-                      <button class="btn btn-lg btn-icon btn-default js-filter-close" type="button">
-                        <img class="lazy" data-src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
-                      </button>
-                  </div>
+                        @if (!empty($translation->update_button))
+                        <button class="btn btn-primary text-uppercase js-filter-close" type="button">{!! $translation->update_button ?? '' !!}</button>
+                        @endif
+
+                        <button class="btn btn-lg btn-icon btn-default js-filter-close" type="button">
+                          <img class="lazy" data-src="@asset('images/icon/filter-close.svg')" alt="" srcset="">
+                        </button>
+                    </div>
+                </div>
               </div>
             </div>
-          </div>
+          @endif
         </div>
       </div>
       <div class="product-filter js-filter-collapse">
