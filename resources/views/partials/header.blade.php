@@ -26,7 +26,7 @@
                     <button class="btn btn-icon btn-icon-sm btn-primary-outline d-none d-lg-block search-close js-search-close" type="button">
                         <img src="@asset('images/icon/close.svg')" alt="" srcset="">
                     </button>
-                    <form action="{{ $home_url }}" method="get" class="m-0">
+                    <form action="{{ $home_url }}" method="get" class="m-0" onsubmit="return document.getElementById('js-search-input').value !== ''">
                         <input id="js-search-input" type="search" name="s" class="search-input" placeholder="Search...">
                         <button type="submit" class="search-submit border-0">
                             <img src="@asset('images/icon/search.svg')" alt="" srcset="">
