@@ -2,13 +2,13 @@
 {{-- Notification Message --}}
 
 <div class="nav-fixed js-header">
-    <div class="fine-print">
+    <div id="js-main-nav-msg" class="fine-print">
         <div class="container-fluid">
             <div class="message">BLACK FRIDAY TODAY 20% OFF</div>
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg {{(get_page_template_slug() == 'views/template-checkout.blade.php') ? 'is-checkout': ''}}">
+    <nav id="js-nav-menu" class="navbar navbar-expand-lg {{(get_page_template_slug() == 'views/template-checkout.blade.php') ? 'is-checkout': ''}}">
 
         @if (get_page_template_slug() !== 'views/template-checkout.blade.php')
 

@@ -26,6 +26,7 @@ require('./util/ellipsis');
 
 // Require Components
 require('./components/nav');
+require('./components/headroom');
 require('./components/cookie');
 require('./components/filter');
 require('./components/picker');
