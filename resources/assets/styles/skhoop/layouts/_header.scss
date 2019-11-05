@@ -1,5 +1,13 @@
 $mobile-margin-top-menu: 3.75rem;
 
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
 // Navigation Bar
 .navbar {
   background-color: $white;
@@ -396,16 +404,26 @@ $mobile-margin-top-menu: 3.75rem;
 
 // Has admin bar
 .admin-bar {
-  .navbar {
-    &.fixed-top {
-      top: 2.875rem;
+  // .navbar {
+  //   &.fixed-top {
+  //     top: 46px;
 
-      @include media-min(783px) {
-        top: 2rem;
-      }
+  //     @include media-min(783px) {
+  //       top: 32px;
+  //     }
+  //   }
+  // }
+  .nav-fixed {
+    top: 46px;
+
+    @include media-min(783px) {
+      top: 32px;
     }
   }
 }
+
+
+
 
 // Navigation Touch Queries
 body:not(.AndroidOS):not(.isApple) {
@@ -428,6 +446,30 @@ body.isApple {
       .brand-container {
         margin-bottom: 5rem;
       }
+    }
+  }
+}
+
+
+// Top Banner
+.fine-print {
+  display: block;
+  padding: 2px 0;
+  background-color: $primary;
+
+  @include media-breakpoint-up(lg) {
+    padding: 4px 0;
+  }
+
+  .message {
+    color: $body-color;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.05px;
+    line-height: 20px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 14px;
     }
   }
 }
