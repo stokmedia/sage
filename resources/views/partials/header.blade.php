@@ -2,11 +2,13 @@
 {{-- Notification Message --}}
 
 <div class="nav-fixed js-header">
+    @if($site_translate->general['top_banner'])
     <div id="js-main-nav-msg" class="fine-print">
         <div class="container-fluid">
-            <div class="message">BLACK FRIDAY TODAY 20% OFF</div>
+            <div class="message">{!! $site_translate->general['top_banner'] !!}</div>
         </div>
     </div>
+    @endif
 
     <nav id="js-nav-menu" class="navbar navbar-expand-lg {{(get_page_template_slug() == 'views/template-checkout.blade.php') ? 'is-checkout': ''}}">
 
