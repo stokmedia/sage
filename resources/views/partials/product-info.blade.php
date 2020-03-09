@@ -68,11 +68,15 @@
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <!-- Loading spinner, just add '.is-loading' class to '.btn' -->
             </button>
         @endif
-
-        <ul class="usp-selected">
-            <li><div class="d-flex align-items-center"><span class="image"><img src="@asset('images/icon/shipping.svg')" alt="" srcset=""></span>Fri Frakt</div></li>
-            <li><div class="d-flex align-items-center"><span class="image"><img src="@asset('images/icon/returns.svg')" alt="" srcset=""></span>Fria Returer</div></li>
-        </ul>
+        
+        @if ($product_usp ?? false)
+            <ul class="usp-selected">
+                @foreach ($product_usp as $item)
+                <li><div class="d-flex align-items-center"><span class="image">{!! $item->icon ?? '' !!}</span>{!! $item->text ?? '' !!}</div></li>
+                @endforeach
+                {{-- <li><div class="d-flex align-items-center"><span class="image"><img src="@asset('images/icon/returns.svg')" alt="" srcset=""></span>Fria Returer</div></li> --}}
+            </ul>
+        @endif
 
     {{-- Form end --}}
     @php ($product_class->renderEndForm())

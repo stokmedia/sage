@@ -140,4 +140,24 @@ class SingleSilk_products extends Controller
 		return implode( '  |  ', $categories );
 	}
 
+	public function productUsp()
+	{
+		$enableUsp = Helper::localize( 'product_enable_usp' );
+		
+		if (empty($enableUsp)) return false;
+
+		$usps = Helper::localize( 'product_usp_items' );
+		$items = [];
+		if (!empty($usps)) {
+			$items = array_map(function($item) {
+				return (object) [
+					'icon' => wp_get_attachment_image( $item['icon'] ),
+					'text' => $item['text'],
+				];
+			}, $usps);
+		}
+
+		return $items;
+	}
+
 }
