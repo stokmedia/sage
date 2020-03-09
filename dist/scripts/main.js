@@ -16792,43 +16792,56 @@ $(window).resize(function () {
 /* WEBPACK VAR INJECTION */(function($) {var GridSlider = {};
 
 GridSlider.slider = function () {
-  var $gridSlider = $('.js-grid-slider');
+  var $gridSliders = $('.js-grid-slider');
 
-  $gridSlider.on('ready.flickity', function () {
-    $gridSlider.css('visibility', 'visible');
-  });
+  if (!$gridSliders) { return; }
 
-  var options = {
-    contain: true,
-    cellAlign: 'left',
-    groupCells: false,
-    prevNextButtons: false,
-    pageDots: false,
-    dragThreshold: 15,
-  };
+  $gridSliders.each(function() {
+    var $gridSlider = $(this);
 
-  if (matchMedia('screen and (min-width: 768px)').matches) {
-    options = {
-      wrapAround: true,
+    $gridSlider.on('ready.flickity', function () {
+      $gridSlider.css('visibility', 'visible');
+    });
+  
+    var options = {
+      contain: true,
       cellAlign: 'left',
-      groupCells: true,
+      groupCells: false,
       prevNextButtons: false,
       pageDots: false,
       dragThreshold: 15,
+    };
+  
+    if (matchMedia('screen and (min-width: 768px)').matches) {
+      options = {
+        wrapAround: true,
+        cellAlign: 'left',
+        groupCells: true,
+        prevNextButtons: false,
+        pageDots: false,
+        dragThreshold: 15,
+      }
     }
-  }
+  
+    $gridSlider.flickity(options);
 
-  $gridSlider.flickity(options);
+    var $prevButton = $gridSlider.parent().find('.js-flickity-prev');
+    if ($gridSlider.data('target')) {
+      $prevButton = $($gridSlider.data('target')).find('.js-flickity-prev');
+    }
 
-  var $prevButton = $('.js-flickity-prev');
-  var $nextButton = $('.js-flickity-next');
-
-  $prevButton.click(function () {
-    $gridSlider.flickity('previous');
-  });
-
-  $nextButton.click(function () {
-    $gridSlider.flickity('next');
+    var $nextButton = $gridSlider.parent().find('.js-flickity-next');
+    if ($gridSlider.data('target')) {
+      $nextButton = $($gridSlider.data('target')).find('.js-flickity-next');
+    }  
+  
+    $prevButton.on('click', function () {
+      $gridSlider.flickity('previous');
+    });
+  
+    $nextButton.on('click', function () {
+      $gridSlider.flickity('next');
+    });
   });
 };
 
