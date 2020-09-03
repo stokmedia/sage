@@ -104,10 +104,16 @@ class SingleSilk_products extends Controller
 		// Care
 		$careLabel = !empty($labels['care_instruction']) ? $labels['care_instruction'] : $defaultLabels['care_instruction'];
 		if (!empty($product->product_meta['care'])) {
+			$imageAttr = $product->product_meta['care']['image'] ?? [];
+
+			$image = '';
+			if (isset($imageAttr['url']) && $imageAttr['url']) {
+				$image = "<img class='mb-3 lazy' data-src='{$imageAttr['url']}' alt='{$careLabel}'>";
+			}
 			array_push( $infos, [ 
 				'label' => $careLabel, 
 				'content' => $product->product_meta['care']['desc'] ?? '',
-				'image' => $product->product_meta['care']['image'] ?? '',
+				'image' => $image,
 			]);
 		}		
 		
