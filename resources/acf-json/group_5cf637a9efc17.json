@@ -592,6 +592,26 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_5fc645c37d2bc",
+                            "label": "Pre-Order",
+                            "name": "pre_order",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
                         }
                     ]
                 },
@@ -1548,7 +1568,7 @@
             "multiple": 0,
             "return_format": "object",
             "ui": 1
-        },        
+        },
         {
             "key": "field_5d0a3096ae5bd",
             "label": "Selected Product",
@@ -1865,5 +1885,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1583758214
+    "modified": 1606829599
 }

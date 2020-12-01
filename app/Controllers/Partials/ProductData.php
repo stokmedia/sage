@@ -22,7 +22,8 @@ trait ProductData
 		$data->product_meta = (object) $product->product_meta;
 		$data->display_price = self::get_display_price( $data->price );
 		$data->is_sold_out = self::is_sold_out( $postID ) || $data->sizes_available === 0;
-
+		$data->is_pre_order = self::isPreOrder( $postID );
+		
 		// Product colors
 		$colors = $product->getProductColors( 'variant' );
 		if (!empty($colors)) {
@@ -105,6 +106,15 @@ trait ProductData
 		$isAvailable = \EscGeneral::isAvailable( $postID );
 
 		return !empty($isAvailable[ 'info' ]) ? ($isAvailable[ 'info' ][ 'stockOfAllItems' ] === 0) : false;
+	}
+
+	public static function isPreOrder($postID)
+	{
+		$availability = \EscGeneral::isAvailable($postID);
+		if ($availability['success'] && isset($availability['info']['stockOfAllItems']) && $availability['info']['stockOfAllItems'] === 'infinite') {
+			return true;
+		}
+		return false;
 	}
 
 }

@@ -60,6 +60,10 @@ class SingleSilk_products extends Controller
 			$buttonText = !empty($translations['product_states']['out_of_stock']) ? $translations['product_states']['out_of_stock'] : 'Out of stock';
 			array_push( $buttonAttr, 'disabled' );
 		
+		// Pre-order
+		} elseif ($product->is_pre_order) {
+			$buttonText = !empty($translations['product_states']['pre_order']) ? $translations['product_states']['pre_order'] : 'Pre-order';
+		
 		// Add to cart
 		} else {
 			$buttonText = !empty($translations['buy_button']) ? $translations['buy_button'] : 'Add to cart';
