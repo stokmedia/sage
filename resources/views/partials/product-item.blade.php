@@ -31,6 +31,11 @@
 	@php ($productClass = 'is-oos')
 	@php ($status = App::getSiteTranslations()->selected_product['product_states']['out_of_stock'] ?? '')
 
+@elseif (!empty($product->is_pre_order))
+
+	@php ($productClass = 'is-pre-order')
+	@php ($status = App::getSiteTranslations()->selected_product['product_states']['pre_order'] ?? 'Pre-Order')
+
 @endif
 
 @php ($productTitle = trim( get_the_title( $post->ID ) . ' ' .($product->product_meta->variantName ?: '' )))
