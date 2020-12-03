@@ -21997,6 +21997,13 @@ body#tinymce {
   opacity: 0.5;
 }
 
+/* line 367, resources/assets/styles/skhoop/sections/_product-listing.scss */
+
+.product.is-pre-order .product-status {
+  background-color: #b7cad0;
+  color: #fff;
+}
+
 /* line 2, resources/assets/styles/skhoop/sections/_product-filter.scss */
 
 .category-selector {

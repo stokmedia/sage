@@ -114,7 +114,7 @@
     >a {
       margin: 0 6px;
 
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         margin: 0 8px;
       }
 
@@ -360,6 +360,13 @@
 
     .product-image {
       opacity: 0.5;
+    }
+  }
+
+  &.is-pre-order {
+    .product-status {
+      background-color: $oosColor;
+      color: $white;
     }
   }
 }
